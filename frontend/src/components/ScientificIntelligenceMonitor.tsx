@@ -4,6 +4,7 @@ import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { intelligenceHealthLabel, scientificDate, scientificSourceUrl, type IntelligenceStatus } from "../lib/scientificIntelligence";
 import Icone from "./Icone";
+const BotaoFavorito = lazy(() => import("./BotaoFavorito"));
 const ScientificReadingAccess = lazy(() => import("./ScientificReadingAccess"));
 import "../styles/scientific-intelligence-monitor.css";
 
@@ -70,6 +71,7 @@ export default function ScientificIntelligenceMonitor({ compact = false }: { com
               {compact ? <Link to={`/intelligence#descoberta-${item.id}`}>{item.title}</Link> : <strong>{item.title}</strong>}
               {!compact && <><small>Identificado em {scientificDate(item.discovered_at)}</small>
                 {url && <a href={url} target="_blank" rel="noopener noreferrer">Abrir publicação original ↗</a>}
+                {item.slug && <Suspense fallback={null}><BotaoFavorito itemType="descoberta" itemSlug={item.slug} /></Suspense>}
                 {item.slug && <Suspense fallback={<p role="status">Carregando opções de leitura…</p>}><ScientificReadingAccess entityType="descoberta" slug={item.slug} lazy /></Suspense>}</>}
             </li>;
           })}</ul> : <p>Nenhuma descoberta recente registrada.</p>}

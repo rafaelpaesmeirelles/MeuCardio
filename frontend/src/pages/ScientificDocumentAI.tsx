@@ -1,5 +1,8 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { useAuth } from "../lib/auth";
+import BotaoFavorito from "../components/BotaoFavorito";
+import PrivateScientificOriginal from "../components/PrivateScientificOriginal";
 import { formatBRL } from "../lib/commercialPlans";
 import { api, ApiError } from "../lib/api";
 import { ClinicalPageHeader, ClinicalSection } from "../components/ClinicalCommandPrimitives";
@@ -59,6 +62,18 @@ function erroTexto(error: unknown) {
 }
 
 export default function ScientificDocumentAI() {
+  const { usuario } = useAuth();
+  return <ScientificDocumentWorkspace key={usuario?.id ?? "anonymous"} />;
+}
+
+function ScientificDocumentWorkspace() {
+  const [params, setParams] = useSearchParams();
+  const rawDocument = params.get("document");
+  const parsedDocument = rawDocument && /^[1-9]\d*$/.test(rawDocument) ? Number(rawDocument) : null;
+  const requestedDocument = parsedDocument !== null && Number.isSafeInteger(parsedDocument) ? parsedDocument : null;
+  const reading = params.get("leitura");
+  const requestedRef = useRef(requestedDocument);
+  requestedRef.current = requestedDocument;
   const [items, setItems] = useState<ScientificDocument[]>([]);
   const [selected, setSelected] = useState<ScientificDocument | null>(null);
   const [file, setFile] = useState<File | null>(null);
@@ -71,11 +86,38 @@ export default function ScientificDocumentAI() {
     setItems(rows);
     if (documentId) {
       const detail = await api.get<ScientificDocument>(`/documentos-cientificos-ia/${documentId}`);
-      setSelected(detail);
+      if (requestedRef.current === documentId) setSelected(detail);
     }
   }
 
-  useEffect(() => { void refresh().catch((error) => setMessage(erroTexto(error))); }, []);
+  useEffect(() => {
+    let active = true;
+    api.get<ScientificDocument[]>("/documentos-cientificos-ia").then(rows => { if (active) setItems(rows); })
+      .catch(error => { if (active) setMessage(erroTexto(error)); });
+    return () => { active = false; };
+  }, []);
+
+  useEffect(() => {
+    let active = true;
+    setSelected(null); setQuote(null); setMessage("");
+    if (rawDocument !== null && requestedDocument === null) {
+      setBusy(false); setMessage("O endereço do documento é inválido.");
+    } else if (requestedDocument !== null) {
+      setBusy(true);
+      api.get<ScientificDocument>(`/documentos-cientificos-ia/${requestedDocument}`).then(detail => {
+        if (active) setSelected(detail);
+      }).catch(error => { if (active) setMessage(erroTexto(error)); })
+        .finally(() => { if (active) setBusy(false); });
+    } else setBusy(false);
+    return () => { active = false; };
+  }, [rawDocument, requestedDocument]);
+
+  useEffect(() => {
+    if (!selected || selected.id !== requestedDocument || !["original", "resumo", "traduzido"].includes(reading ?? "")) return;
+    const section = document.getElementById(`leitura-privada-${reading}`);
+    section?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    section?.focus({ preventScroll: true });
+  }, [selected?.id, requestedDocument, reading]);
 
   async function upload() {
     if (!file) return;
@@ -85,6 +127,7 @@ export default function ScientificDocumentAI() {
       setFile(null);
       const detail = await api.get<ScientificDocument>(`/documentos-cientificos-ia/${row.id}`);
       setSelected(detail);
+      setParams({ document: String(row.id) });
       await refresh(row.id);
       setMessage("Arquivo salvo de forma privada. Agora você pode solicitar a análise da IA.");
     } catch (error) { setMessage(erroTexto(error)); }
@@ -126,12 +169,9 @@ export default function ScientificDocumentAI() {
     finally { setBusy(false); }
   }
 
-  async function selectDocument(id: number) {
+  function selectDocument(id: number) {
     if (busy) return;
-    setBusy(true); setQuote(null); setMessage("");
-    try { setSelected(await api.get<ScientificDocument>(`/documentos-cientificos-ia/${id}`)); }
-    catch (error) { setMessage(erroTexto(error)); }
-    finally { setBusy(false); }
+    setParams({ document: String(id) });
   }
 
   async function incorporate() {
@@ -148,14 +188,8 @@ export default function ScientificDocumentAI() {
     finally { setBusy(false); }
   }
 
-  async function openOriginal() {
-    if (!selected) return;
-    try {
-      const blob = await api.blob(`/documentos-cientificos-ia/${selected.id}/arquivo`);
-      const url = URL.createObjectURL(blob);
-      window.open(url, "_blank", "noopener,noreferrer");
-      window.setTimeout(() => URL.revokeObjectURL(url), 60_000);
-    } catch (error) { setMessage(erroTexto(error)); }
+  function selectReading(variant: string) {
+    if (selected) setParams({ document: String(selected.id), leitura: variant });
   }
 
   return (
@@ -189,15 +223,21 @@ export default function ScientificDocumentAI() {
           </div>
         </ClinicalSection>
 
-        <ClinicalSection eyebrow="Análise" title={selected?.title ?? "Selecione um documento"}>
-          {!selected ? <p className="texto-secundario">Abra um item da sua biblioteca para analisar ou revisar depois.</p> : (
+        <ClinicalSection eyebrow="Análise" title={selected?.id === requestedDocument ? selected.title : "Selecione um documento"}>
+          {!selected || selected.id !== requestedDocument ? <p className="texto-secundario">Abra um item da sua biblioteca para analisar ou revisar depois.</p> : (
             <div className="stack">
               <div className="acoes-linha">
-                <button className="btn" type="button" onClick={() => void openOriginal()}>Abrir original</button>
+                <BotaoFavorito itemType="documento_cientifico_privado" itemId={selected.id} />
+                <button className="btn" type="button" onClick={() => selectReading("original")}>Abrir original</button>
+                <button className="btn" type="button" onClick={() => selectReading("resumo")}>Resumo em português</button>
+                <button className="btn" type="button" onClick={() => selectReading("traduzido")}>Tradução em português</button>
                 <button className="btn primario" type="button" disabled={busy || selected.analysis_status === "processando"} onClick={() => void estimate()}>{quote ? "Atualizar orçamento" : "Calcular orçamento de IA"}</button>
                 {selected.incorporation_recommended && selected.incorporation_status === "aguardando_consentimento" && <button className="btn" type="button" disabled={busy} onClick={() => void incorporate()}>Autorizar incorporação ao CorVIA</button>}
               </div>
 
+              {reading === "original" && <div id="leitura-privada-original" tabIndex={-1}><PrivateScientificOriginal key={selected.id} documentId={selected.id} title={selected.title} /></div>}
+              <article id="leitura-privada-resumo" className="card" tabIndex={-1}><h3>Resumo clínico em português</h3><p>{selected.summary_pt || selected.analysis?.summary_pt || "O resumo em português ainda não está disponível. Você pode solicitar uma análise mediante orçamento e confirmação."}</p></article>
+              {reading === "traduzido" && !selected.translation_available && <article id="leitura-privada-traduzido" className="card" tabIndex={-1}><h3>Tradução em português</h3><p>{selected.language?.toLowerCase().startsWith("pt") ? "O documento já está em português. Consulte o original." : "A tradução ainda não está disponível. Abrir esta seção não inicia uma análise nem consome créditos."}</p></article>}
               {quote && quote.documentId === selected.id && <article className="card" aria-label="Orçamento da análise">
                 <h3>Até {formatBRL(quote.maximum_credit_centavos)} em créditos</h3>
                 <p>Saldo disponível: {formatBRL(quote.available_credit_centavos)}. O teto inclui a análise e eventual tradução integral. Uso efetivo debitado; restante liberado.</p>
@@ -209,12 +249,11 @@ export default function ScientificDocumentAI() {
               </article>}
 
               {selected.analysis_status === "concluido" && selected.analysis && <>
-                <article className="card"><h3>Resumo clínico</h3><p>{selected.analysis.summary_pt}</p></article>
                 <article className="card"><h3>Pontos-chave</h3><ul>{(selected.analysis.key_points_pt ?? []).map((x) => <li key={x}>{x}</li>)}</ul></article>
                 <article className="card"><h3>Metodologia e população</h3><p>{selected.analysis.methodology_pt}</p><p>{selected.analysis.population_pt}</p></article>
                 <article className="card"><h3>Resultados e implicações</h3><p>{selected.analysis.results_pt}</p><ul>{(selected.analysis.clinical_implications_pt ?? []).map((x) => <li key={x}>{x}</li>)}</ul></article>
                 <article className="card"><h3>Limitações</h3><ul>{(selected.analysis.limitations_pt ?? []).map((x) => <li key={x}>{x}</li>)}</ul></article>
-                <article className="card"><h3>Texto {selected.translation_available ? "traduzido" : "extraído"}</h3><pre style={{ whiteSpace: "pre-wrap", fontFamily: "inherit", maxHeight: "34rem", overflow: "auto" }}>{selected.translated_text || selected.extracted_text}</pre></article>
+                <article id={selected.translation_available ? "leitura-privada-traduzido" : "leitura-privada-extraido"} tabIndex={-1} className="card"><h3>Texto {selected.translation_available ? "traduzido" : "extraído"}</h3><pre style={{ whiteSpace: "pre-wrap", fontFamily: "inherit", maxHeight: "34rem", overflow: "auto" }}>{selected.translated_text || selected.extracted_text}</pre></article>
                 {selected.incorporation_reason_pt && <article className="card"><h3>Comparação com o acervo CorVIA</h3><p>{selected.incorporation_reason_pt}</p></article>}
               </>}
             </div>

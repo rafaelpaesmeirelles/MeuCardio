@@ -41,7 +41,7 @@ export default function Exame() {
           <p className="eyebrow">{RÓTULO_CATEGORIA[t.category] ?? t.category} · {t.theme}</p>
           <h1 style={{ margin: 0 }}>{t.name}</h1>
         </div>
-        <BotaoFavorito itemType="exame" itemId={t.id} />
+        <BotaoFavorito itemType="exame" itemSlug={slug} />
       </div>
 
       <div className="cartao" style={{ marginTop: "1rem" }}>

@@ -6,7 +6,7 @@ import { api } from "../lib/api";
 import "../styles/scientific-reading-access.css";
 
 type ReadingText = { status: string; text?: string | null; origin?: string };
-type ReadingArtifact = { status: string; url?: string | null; media_type?: string | null; reason?: string | null; coverage?: { scope?: string; figures?: string; supplements?: string }; notice?: string | null };
+type ReadingArtifact = { status: string; url?: string | null; read_url?: string | null; media_type?: string | null; reason?: string | null; coverage?: { scope?: string; figures?: string; tables?: string; supplements?: string; complete_text?: boolean }; notice?: string | null };
 type ReadingSource = {
   key: string; title?: string; doi?: string | null; url?: string | null;
   original: ReadingArtifact; translation_pt: ReadingArtifact; summary_pt: ReadingText;
@@ -24,7 +24,7 @@ function externalUrl(value?: string | null): string | undefined {
 function safeScientificSlug(value: unknown): value is string {
   return typeof value === "string" && Boolean(value) && !/[\\/?#%]/.test(value) && ![".", ".."].includes(value);
 }
-function artifactPath(value: string | null | undefined, entityType: string, slug: string | undefined, key: string | undefined, variant: "original" | "translation"): string | undefined {
+function artifactPath(value: string | null | undefined, entityType: string, slug: string | undefined, key: string | undefined, variant: "original" | "original-text" | "translation"): string | undefined {
   if (!value || !safeScientificSlug(slug) || !key || !/^[a-z_]+$/.test(entityType) || !/^[a-zA-Z0-9_-]+$/.test(key) || /[\\/?#]/.test(slug) || [".", ".."].includes(slug)) return undefined;
   const expected = `/scientific-reading/${entityType}/${encodeURIComponent(slug)}/sources/${key}/${variant}`;
   return value === expected || value === `/api${expected}` ? expected : undefined;
@@ -47,7 +47,7 @@ export default function ScientificReadingAccess({ entityType, slug, lazy = false
   const [loadedIdentity, setLoadedIdentity] = useState("");
   const [error, setError] = useState("");
   const [sourceKey, setSourceKey] = useState("");
-  const [reading, setReading] = useState<{ title: string; text: string } | null>(null);
+  const [reading, setReading] = useState<{ title: string; text: string; original?: boolean; coverage?: ReadingArtifact["coverage"] } | null>(null);
   const [busy, setBusy] = useState(false);
   const generation = useRef(0);
   const currentIdentity = useRef(identity);
@@ -75,8 +75,8 @@ export default function ScientificReadingAccess({ entityType, slug, lazy = false
 
   const current = loadedIdentity === identity ? data : null;
 
-  async function openArtifact(artifact: ReadingArtifact, translation: boolean) {
-    const path = artifactPath(artifact.url, entityType, current?.slug, sourceKey, translation ? "translation" : "original");
+  async function openArtifact(artifact: ReadingArtifact, variant: "original" | "original-text" | "translation") {
+    const path = artifactPath(variant === "original-text" ? artifact.read_url : artifact.url, entityType, current?.slug, sourceKey, variant);
     if (!path || busy) return;
     const requestIdentity = identity;
     const requestGeneration = generation.current;
@@ -84,10 +84,10 @@ export default function ScientificReadingAccess({ entityType, slug, lazy = false
     try {
       const blob = await api.blob(path);
       if (requestIdentity !== currentIdentity.current || requestGeneration !== generation.current) return;
-      if (translation) {
+      if (variant !== "original") {
         const text = await blob.text();
         if (requestIdentity === currentIdentity.current && requestGeneration === generation.current) {
-          setReading({ title: "Tradução integral em português", text });
+          setReading({ title: variant === "translation" ? "Tradução integral em português" : "Original no CorVIA", text, original: variant === "original-text", coverage: artifact.coverage });
         }
       } else {
         const url = URL.createObjectURL(blob);
@@ -106,6 +106,7 @@ export default function ScientificReadingAccess({ entityType, slug, lazy = false
   const source = current?.sources.find(item => item.key === sourceKey);
   const originalExternal = externalUrl(source?.original.url ?? source?.url);
   const originalStored = source?.original.status === "available" && artifactPath(source.original.url, entityType, current?.slug, source.key, "original");
+  const originalReadable = source && originalStored && artifactPath(source.original.read_url, entityType, current?.slug, source.key, "original-text");
   const translationReady = source?.translation_pt.status === "available" && artifactPath(source.translation_pt.url, entityType, current?.slug, source.key, "translation");
   return <section className="scientific-reading-access cartao" aria-label="Leitura científica: resumo, tradução integral e original">
     <h2>Leitura científica</h2>
@@ -121,8 +122,9 @@ export default function ScientificReadingAccess({ entityType, slug, lazy = false
           {(source.authors || source.journal || source.year) && <p>{[Array.isArray(source.authors) ? source.authors.join(", ") : source.authors, source.journal, source.year].filter(Boolean).join(" · ")}</p>}
           <div className="scientific-reading-access__options">
             <div><button className="btn" type="button" disabled={source.summary_pt.status !== "available" || !source.summary_pt.text} onClick={() => setReading({ title: "Resumo da fonte em português", text: source.summary_pt.text! })}>Resumo em português</button><small>{statusText(source.summary_pt)}</small></div>
-            <div><button className="btn" type="button" disabled={!translationReady || busy} onClick={() => void openArtifact(source.translation_pt, true)}>Tradução integral em português</button><small>{statusText(source.translation_pt)}</small></div>
-            <div>{originalStored ? <button className="btn" type="button" disabled={busy} onClick={() => void openArtifact(source.original, false)}>Baixar original{source.original.media_type?.includes("xml") ? " (XML)" : ""}</button>
+            <div><button className="btn" type="button" disabled={!translationReady || busy} onClick={() => void openArtifact(source.translation_pt, "translation")}>Tradução integral em português</button><small>{statusText(source.translation_pt)}</small></div>
+            <div>{originalReadable && <button className="btn primario" type="button" disabled={busy} onClick={() => void openArtifact(source.original, "original-text")}>Ler original no CorVIA</button>}
+              {originalStored ? <button className="btn" type="button" disabled={busy} onClick={() => void openArtifact(source.original, "original")}>Baixar original{source.original.media_type?.includes("xml") ? " (XML)" : ""}</button>
               : originalExternal ? <a className="btn" href={originalExternal} target="_blank" rel="noopener noreferrer">Original na fonte ↗</a>
                 : <button className="btn" disabled type="button">Original</button>}
               <small>{originalStored ? "Arquivo disponível no CorVIA" : originalExternal ? "Acesso no site da publicação" : statusText(source.original)}</small>
@@ -135,7 +137,7 @@ export default function ScientificReadingAccess({ entityType, slug, lazy = false
         </div> : <p>Nenhuma fonte externa identificada neste conteúdo. O texto editorial em português permanece disponível nesta página.</p>}
       </>}
       {busy && <p role="status">Abrindo arquivo…</p>}
-      {reading && current && <article className="scientific-reading-access__reader"><h3>{reading.title}</h3><button className="btn" type="button" onClick={() => setReading(null)}>Fechar leitura</button><div><Markdown remarkPlugins={[remarkGfm]}>{reading.text}</Markdown></div></article>}
+      {reading && current && <article className="scientific-reading-access__reader"><h3>{reading.title}</h3>{reading.original && <p>Texto da publicação no idioma original, extraído do arquivo armazenado no CorVIA. A diagramação da publicação não é reproduzida.{reading.coverage?.figures === "captions_only" && " As legendas estão incluídas; consulte as figuras na publicação original."}{["text", "text_only"].includes(reading.coverage?.tables ?? "") && " As tabelas são apresentadas em texto."}{reading.coverage?.supplements === "not_included" && " Materiais suplementares não estão incluídos."}</p>}<button className="btn" type="button" onClick={() => setReading(null)}>Fechar leitura</button><div><Markdown remarkPlugins={[remarkGfm]}>{reading.text}</Markdown></div></article>}
     </>}
     {error && <p role="alert">{error} <button className="btn" type="button" onClick={() => setAttempt(value => value + 1)}>Tentar novamente</button></p>}
   </section>;

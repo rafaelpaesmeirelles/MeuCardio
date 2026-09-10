@@ -55,6 +55,22 @@ EDITORIAL_DECISION = "editorial-classifications-20260910"
 EDITORIAL_MANIFEST = "docs/ci/editorial-classifications-no-backend-ci.json"
 EDITORIAL_REPOSITORY = "rafaelpaesmeirelles/MeuCardio"
 
+FAVORITES_BRANCH = "codex/universal-favorites-20260910"
+FAVORITES_BASE = "97270582d93cac6327c9d843395fa704be831373"
+FAVORITES_DECISION = "universal-favorites-20260910"
+FAVORITES_MANIFEST = "docs/ci/universal-favorites-no-backend-ci.json"
+FAVORITES_REPOSITORY = "rafaelpaesmeirelles/MeuCardio"
+
+FAVORITES_SCOPE = {
+    "manifest": FAVORITES_MANIFEST, "head_branch": FAVORITES_BRANCH,
+    "repository": FAVORITES_REPOSITORY, "decision_id": FAVORITES_DECISION,
+    "base_sha": FAVORITES_BASE, "minimum_pull_request": 922,
+    "local_evidence": "docs/universal-favorites-audit-20260910.md",
+    "decision_document": "docs/ci/universal-favorites-owner-decision.md",
+    "suite_key": "backend-risk-v1-authorized-no-backend-ci-universal-favorites-20260910",
+}
+
+
 FEATURE_BRANCH = "codex/fix-feature-discovery-20260910"
 FEATURE_BASE = "db0a3ff71a184e2d6711168427e7565d6e0c9e48"
 FEATURE_DECISION = "feature-discovery-20260910"
@@ -99,6 +115,10 @@ def editorial_classification_owner_decision(root: Path, **context):
 
 def feature_discovery_owner_decision(root: Path, **context):
     return scoped_owner_decision(root, scope=FEATURE_SCOPE, **context)
+
+
+def universal_favorites_owner_decision(root: Path, **context):
+    return scoped_owner_decision(root, scope=FAVORITES_SCOPE, **context)
 
 
 def scoped_owner_decision(root: Path, *, event: str, number: str,
@@ -190,7 +210,9 @@ def main() -> int:
     event, number = os.environ.get("EVENT_NAME", ""), os.environ.get("PR_NUMBER", "")
     context = dict(event=event, number=number, head_ref=os.environ.get("PR_HEAD_REF", ""),
                    repository=os.environ.get("REPOSITORY", ""))
-    decision = feature_discovery_owner_decision(root, **context)
+    decision = universal_favorites_owner_decision(root, **context)
+    if decision is None:
+        decision = feature_discovery_owner_decision(root, **context)
     if decision is None:
         decision = editorial_classification_owner_decision(root, **context)
     if decision is None:

@@ -55,9 +55,17 @@ def source_identity(value):
 
 def published_query(db, model):
     query = db.query(model)
-    return query.filter(model.detection_status.in_(VISIBLE_GUIDELINES)) if model is Guideline else query.filter(model.published.is_(True))
+    if model is Guideline: return query.filter(model.detection_status.in_(VISIBLE_GUIDELINES))
+    query = query.filter(model.published.is_(True))
+    if model is StudyTrack: query = query.filter(model.review_status == 'revisado')
+    return query
 
 def get_entity(db, entity_type, slug):
+    if entity_type == 'publicacao_original':
+        from app.services.scientific_publication_catalog import public_asset_query, public_asset_entity
+        row = public_asset_query(db).filter(ScientificPublicationAsset.source_key == slug).first()
+        if row is None: raise HTTPException(404, 'Publicação original não disponível no acervo público.')
+        return public_asset_entity(row)
     if entity_type == 'descoberta':
         from app.services.guideline_source_trust import is_trusted_official_guideline
         row = db.query(Guideline).filter(Guideline.slug == slug).first()
@@ -144,7 +152,7 @@ def reading_manifest(db, entity_type, slug):
         complete = bool(asset and asset.status == 'ready' and asset.translated_storage_key and asset.coverage.get('complete_text'))
         status = 'available' if complete else ('blocked_license' if asset and asset.status == 'blocked_license' else 'pending' if asset and asset.status in ('pending', 'downloaded', 'translating', 'budget_wait') else 'unavailable')
         source.update({
-            'original': {'status': 'available' if has_original else 'source_only', 'url': base + '/original' if has_original else source['url'], 'media_type': 'application/xml' if has_original else None, 'filename': 'original-' + source['key'][:12] + '.xml' if has_original else None},
+            'original': {'read_url': base + '/original-text' if has_original else None, 'coverage': {**asset.coverage, 'complete_text': True} if has_original else {}, 'status': 'available' if has_original else 'source_only', 'url': base + '/original' if has_original else source['url'], 'media_type': 'application/xml' if has_original else None, 'filename': 'original-' + source['key'][:12] + '.xml' if has_original else None},
             'translation_pt': {'coverage': asset.coverage if asset else {}, 'status': status, 'url': base + '/translation' if complete else None, 'reason': asset.reason if asset else 'Tradução integral ainda não preparada para esta fonte.', 'media_type': 'text/plain; charset=utf-8', 'filename': 'traducao-' + source['key'][:12] + '.txt'},
             'summary_pt': {'status': 'available' if asset and asset.summary_pt else 'unavailable', 'text': asset.summary_pt if asset else None, 'origin': 'fulltext_ai'},
             'license_url': asset.license_url if asset else None, 'coverage': asset.coverage if asset else {},

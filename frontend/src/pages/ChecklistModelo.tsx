@@ -1,3 +1,4 @@
+import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -104,6 +105,8 @@ export default function ChecklistModelo() {
       {modelo.documento_origem && (
         <p><Link to={`/biblioteca/${modelo.documento_origem}`}>Ver protocolo de origem</Link></p>
       )}
+
+      <BotaoFavorito itemType="checklist" itemSlug={modelo.slug} />
 
       <ScientificReadingAccess entityType="checklist" slug={modelo.slug} />
 

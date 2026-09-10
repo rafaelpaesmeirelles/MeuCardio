@@ -1,0 +1,2 @@
+.favorite-control { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
+.favorite-control [role="alert"] { font-size: .86rem; }

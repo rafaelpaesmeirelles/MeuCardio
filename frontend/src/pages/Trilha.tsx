@@ -1,3 +1,4 @@
+import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -160,6 +161,8 @@ export default function Trilha() {
           </li>
         ))}
       </ol>
+
+      <BotaoFavorito itemType="trilha" itemSlug={d.slug} />
 
       <ScientificReadingAccess entityType="trilha" slug={d.slug} />
 

@@ -1,3 +1,5 @@
+import ClinicalChangeApprovalNotice from "./ClinicalChangeApprovalNotice";
+import FavoriteFunctionControl from "./FavoriteFunctionControl";
 import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
@@ -442,6 +444,7 @@ export default function CardiologySpacesAppFrame() {
             </nav>
 
             <main className={`cv-content${nativePage ? "" : " clinical-os"}`} id="conteudo-principal" tabIndex={-1}>
+              <ClinicalChangeApprovalNotice /><FavoriteFunctionControl />
               {nativePage ? (
                 <Outlet />
               ) : (

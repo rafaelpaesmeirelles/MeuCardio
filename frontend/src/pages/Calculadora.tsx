@@ -1,3 +1,4 @@
+import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { Fragment, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -380,6 +381,8 @@ export default function Calculadora() {
           </ul>
         )}
       </div>
+
+      <BotaoFavorito itemType="calculadora" itemSlug={slug} />
 
       <ScientificReadingAccess entityType="calculadora" slug={slug} />
 

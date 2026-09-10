@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "decision_id": "universal-favorites-20260910",
+  "repository": "rafaelpaesmeirelles/MeuCardio",
+  "head_branch": "codex/universal-favorites-20260910",
+  "base_sha": "97270582d93cac6327c9d843395fa704be831373",
+  "pull_request": 922,
+  "authorization": {
+    "date": "2026-09-10",
+    "instruction": "Sem novo ci backend",
+    "mode": "authorized-no-backend-ci",
+    "source": "Explicit user instruction recorded earlier in this session remains in force. The subsequent request after PR921 deployment to extend Meus Favoritos to any site content and expose original, Portuguese summary and translation where applicable did not revoke it; the user did not repeat the CI instruction in this subtask.",
+    "scope": "Only PR922 on codex/universal-favorites-20260910 and its exact confirmed main integration: extend private Meus Favoritos compatibly to any authorized site content and collect original, Portuguese summary and translation accesses where applicable, including private deep-link authorization and published/reviewed scientific-study guards; correct AI-processing counts; implement the subsequently explicitly requested Intelligence original download for reading inside CorVIA and incorporation into the Tudo com Tudo collection, with an in-app notification to the owner and individual item approval required for each clinical change, gated on the owner approval in the admin menu Mudanças de Conduta Baseadas em Novas Evidências para Aprovação. Opening or favoriting never invokes paid AI. Existing access, privacy, usage, corpus and scientific-publication controls remain; this CI decision does not grant clinical-change approval or relax corpus/release gates. No authorization inherited from PR918, PR919, PR920 or PR921."
+  },
+  "local_evidence": [
+    "docs/universal-favorites-audit-20260910.md"
+  ]
+}

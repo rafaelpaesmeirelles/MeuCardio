@@ -1,0 +1,20 @@
+.favorites-page, .favorites-page__item { min-width: 0; }
+.favorites-page__filters { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 1rem; margin: 1.2rem 0; }
+.favorites-page__filters label { display: grid; gap: .4rem; min-width: 0; }
+.favorites-page__filters input, .favorites-page__filters select { width: 100%; max-width: 100%; min-width: 0; min-height: 44px; }
+.favorites-page__items { display: grid; gap: 1rem; }
+.favorites-page__item-header { display: flex; justify-content: space-between; align-items: start; gap: 1rem; }
+.favorites-page__item-header > div { min-width: 0; }
+.favorites-page__item h2 { font-size: 1.1rem; overflow-wrap: anywhere; margin: .25rem 0; }
+.favorites-page__item .eyebrow { margin: 0 0 .4rem; }
+.favorites-page button { min-height: 44px; flex-shrink: 0; }
+@media (max-width: 600px) { .favorites-page__filters { grid-template-columns: minmax(0, 1fr); } .favorites-page__item-header { flex-wrap: wrap; } }
+
+.favorites-page__private-reading { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .8rem; }
+
+/* Light surfaces need ink-colored links and enabled controls, not luminous cyan. */
+html[data-corvia-theme="light"] #root .favorites-page :is(a,h2 a,button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled)) { color:var(--texto,#18354b) !important; opacity:1 !important; }
+html[data-corvia-theme="light"] #root .favorites-page :is(button:not(:disabled),a.botao,input:not(:disabled),select:not(:disabled),textarea:not(:disabled)) { background:var(--cv-panel,#e1eff6) !important; border-color:var(--texto-secundario,#49677b) !important; box-shadow:none !important; }
+html[data-corvia-theme="light"] #root .favorites-page :is(input,textarea)::placeholder { color:var(--texto-secundario,#49677b) !important; opacity:1 !important; }
+
+html[data-corvia-theme="dark"] #root .favorites-page .scientific-reading-access > button.btn:not(:disabled) { color:var(--cv-text,#e4edf3) !important; background:#061725 !important; }

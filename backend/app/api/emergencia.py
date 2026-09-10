@@ -34,6 +34,8 @@ def _documento(d: Document) -> dict:
         "title": d.title,
         "theme": d.theme,
         "kind": d.kind,
+        "version": d.version,
+        "updated_at": d.updated_at,
         "summary": clinical_text_without_internal_overrides(d.summary),
         "body_md": d.body_md,
         "source_refs": list(d.source_refs or []),

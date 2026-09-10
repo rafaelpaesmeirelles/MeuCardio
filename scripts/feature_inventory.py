@@ -20,6 +20,7 @@ MOBILE_NAV = ROOT / "frontend/src/components/ClinicalMobileNav.tsx"
 MAIN = ROOT / "backend/app/main.py"
 
 EXPECTED_APP_ROUTES = {
+    "/admin/mudancas-clinicas",
     "/intelligence",
     "/", "/produto", "/entrar", "/solicitar-acesso", "/esqueci-senha", "/redefinir-senha",
     "/privacidade", "/termos", "/validar", "/validar/:codigo",
@@ -59,6 +60,7 @@ EXPECTED_NAV_ROUTES = {
 }
 
 EXPECTED_BACKEND_ROUTERS = {
+    "clinical_change_approvals.router",
     "health.router", "auth.router", "identity_profile.router", "browser_session.router", "social_login.router", "password_reset.router",
     "sessions.router", "billing.router", "account_access_admin.router", "admin.router", "admin_user_management.router", "service_orders.router",
     "partner_courses.router", "email_multibox.router", "email_api.router", "email_session.router", "documentos_publicos.router",
@@ -78,6 +80,19 @@ EXPECTED_BACKEND_ROUTERS = {
 }
 
 EXPECTED_SUPPORT_FILES = {
+    "frontend/src/pages/AdminClinicalChanges.tsx",
+    "frontend/src/components/ClinicalChangeApprovalNotice.tsx",
+    "frontend/src/styles/clinical-change-notice.css",
+    "frontend/src/components/FavoriteFunctionControl.tsx",
+    "frontend/src/components/PrivateScientificOriginal.tsx",
+    "backend/app/api/clinical_change_approvals.py",
+    "backend/app/models/clinical_change_proposal.py",
+    "backend/app/services/clinical_change_approvals.py",
+    "backend/app/services/clinical_change_authorization.py",
+    "backend/app/services/favorite_catalog.py",
+    "backend/app/services/scientific_publication_catalog.py",
+    "backend/migrations/versions/c2fv20260910_universal_favorites.py",
+    "backend/migrations/versions/c3ca20260910_clinical_change_approvals.py",
     ".github/workflows/release-final-dispatch.yml",
     "docs/ambiente-cientifico-aprendizagem-ensino.md",
     "frontend/scripts/check-scientific-learning-environment-contract.test.mjs",

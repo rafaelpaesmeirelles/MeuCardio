@@ -184,8 +184,10 @@ def publication_queue_status(db):
             'ready_full_pt': counts.get('ready', 0),
             'ready_original': db.query(Asset).filter(Asset.original_storage_key.isnot(None)).count(),
             'blocked_license': counts.get('blocked_license', 0), 'blocked_fulltext': counts.get('blocked_fulltext', 0),
-            'budget_wait': counts.get('budget_wait', 0), 'failed': sum(counts.get(s, 0) for s in ('failed', 'blocked_quality', 'cost_unknown', 'ai_processing')),
+            'budget_wait': counts.get('budget_wait', 0), 'failed': sum(counts.get(s, 0) for s in ('failed', 'blocked_quality', 'cost_unknown')),
             'processing_or_reconciliation': counts.get('ai_processing', 0) + counts.get('cost_unknown', 0),
+            'processing': counts.get('ai_processing', 0),
+            'reconciliation_pending': counts.get('cost_unknown', 0),
             'cost_center': 'editorial', 'automatic_ai_limit_unchanged': True}
 
 def _segments(chunk, maximum=400):

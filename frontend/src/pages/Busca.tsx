@@ -32,6 +32,7 @@ const SECOES = {
   conduta: ["Condutas e protocolos", "Manejo, tratamento e aplicação prática", "/biblioteca", 11],
   diretriz: ["Diretrizes e consensos", "Guidelines, consensos e posicionamentos", "/biblioteca", 12],
   fluxo: ["Fluxogramas", "Algoritmos e caminhos de decisão", "/biblioteca", 13],
+  publicacao_original: ["Publicações originais", "Fontes científicas armazenadas no acervo", "/intelligence", 25],
   estudo: ["Estudos", "Literatura original e trabalhos científicos", "/estudos", 20],
   evidencia: ["Evidências", "Recomendações e níveis de evidência", "/evidencias", 30],
   exame: ["Exames", "Diagnóstico, indicação e interpretação", "/exames", 40],
@@ -61,12 +62,14 @@ const ORDEM_DOENCA: Record<Secao, number> = {
   diretriz: 110,
   evidencia: 120,
   estudo: 130,
+  publicacao_original: 135,
   geral: 140,
   caso_clinico: 150,
   trilha: 160,
   material_paciente: 170,
 };
 const ROTULOS: Record<string, string> = {
+  publicacao_original: "Original científico",
   documento: "Documento", estudo: "Estudo", evidencia: "Evidência", exame: "Exame",
   galeria: "Imagem", fluxograma: "Fluxograma", protocolo: "Protocolo",
   medicamento: "Medicamento", doenca: "Doença", triagem_sintoma: "Triagem",
@@ -81,6 +84,7 @@ const GRAPH_ENTITY: Record<string, string> = {
   calculadora: "calculadora",
 };
 const REL_LABELS: Record<string, string> = {
+  publicacao_original: "Publicações originais",
   documento: "Documentos", fluxograma: "Fluxogramas", evidencia: "Evidências",
   estudo: "Estudos", medicamento: "Medicamentos", exame: "Exames",
   caso_clinico: "Casos clínicos", trilha: "Trilhas", galeria: "Galeria clínica",
@@ -104,6 +108,7 @@ function secao(r: Res): Secao {
 }
 function rota(r: Res): string {
   const frente = r.frente || "documento";
+  if (frente === "publicacao_original") return `/intelligence?fonte=${encodeURIComponent(r.slug)}`;
   if (frente === "estudo") return `/estudos/${encodeURIComponent(r.slug)}`;
   if (frente === "documento") return `/biblioteca/${encodeURIComponent(r.slug)}`;
   if (frente === "medicamento") return `/medicamentos?slug=${encodeURIComponent(r.slug)}`;

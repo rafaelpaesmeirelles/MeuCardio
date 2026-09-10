@@ -1,0 +1,24 @@
+.admin-clinical-changes { display:grid; gap:20px; max-width:1500px; margin-inline:auto; min-width:0; }
+.admin-clinical-changes nav { display:flex; flex-wrap:wrap; gap:8px; }
+.admin-clinical-changes__layout { display:grid; grid-template-columns:minmax(220px,.75fr) minmax(0,2fr); gap:24px; }
+.admin-clinical-changes__layout > section { min-width:0; }
+.admin-clinical-changes__list { list-style:none; padding:0; display:grid; gap:10px; }
+.admin-clinical-changes__list button { width:100%; display:grid; gap:8px; text-align:left; white-space:normal; }
+.admin-clinical-changes [aria-pressed="true"] { outline:2px solid var(--cor-primaria,#298a9b); outline-offset:2px; }
+.admin-clinical-changes__change { border:1px solid var(--borda,rgba(127,150,160,.3)); padding:16px; border-radius:12px; margin-block:16px; }
+.admin-clinical-changes__comparison { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.admin-clinical-changes pre { font:inherit; font-size:.9rem; white-space:pre-wrap; overflow-wrap:anywhere; max-height:30rem; overflow:auto; }
+.admin-clinical-changes__decision { display:grid; gap:14px; padding:16px; border:1px solid var(--borda,rgba(127,150,160,.3)); border-radius:12px; }
+.admin-clinical-changes__decision label { display:block; }
+.admin-clinical-changes__decision input { width:auto; margin-right:8px; }
+.admin-clinical-changes__decision textarea { display:block; width:100%; margin-top:8px; }
+.admin-clinical-changes a { overflow-wrap:anywhere; text-decoration:underline; }
+@media (max-width:900px) { .admin-clinical-changes__layout,.admin-clinical-changes__comparison { grid-template-columns:minmax(0,1fr); } }
+
+.admin-clinical-changes__comparison dt { font-weight:600; margin-top:12px; }
+.admin-clinical-changes__comparison dd { margin:4px 0 0; }
+
+/* Light surfaces need ink-colored links and enabled controls, not luminous cyan. */
+html[data-corvia-theme="light"] #root .admin-clinical-changes :is(a,h2 a,button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled)) { color:var(--texto,#18354b) !important; opacity:1 !important; }
+html[data-corvia-theme="light"] #root .admin-clinical-changes :is(button:not(:disabled),a.botao,input:not(:disabled),select:not(:disabled),textarea:not(:disabled)) { background:var(--cv-panel,#e1eff6) !important; border-color:var(--texto-secundario,#49677b) !important; box-shadow:none !important; }
+html[data-corvia-theme="light"] #root .admin-clinical-changes :is(input,textarea)::placeholder { color:var(--texto-secundario,#49677b) !important; opacity:1 !important; }

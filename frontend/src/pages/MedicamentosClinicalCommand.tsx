@@ -1,3 +1,4 @@
+import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -257,6 +258,8 @@ function DetalheMedicamento({ drug, onClose }: { drug: Insight; onClose: () => v
           <ClinicalContextLink to="/assistente" icon="assistente" title="Assistente Clínica" detail="Discutir o contexto" />
         </div>
       </ClinicalSection>
+
+      <BotaoFavorito itemType="medicamento" itemSlug={drug.slug} />
 
       <ScientificReadingAccess entityType="medicamento" slug={drug.slug} />
 

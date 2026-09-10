@@ -93,7 +93,7 @@ jobs:
 
       - name: Test risk classification and exact-suite reuse before trusting them
         if: steps.classify.outputs.backend_mode != 'authorized-no-backend-ci'
-        run: python -m unittest scripts.tests.test_ci_backend_policy scripts.tests.test_ci_section_owner_decision scripts.tests.test_ci_editorial_owner_decision scripts.tests.test_ci_feature_owner_decision -v
+        run: python -m unittest scripts.tests.test_ci_backend_policy scripts.tests.test_ci_section_owner_decision scripts.tests.test_ci_editorial_owner_decision scripts.tests.test_ci_feature_owner_decision scripts.tests.test_ci_favorites_owner_decision -v
 
       - name: Record the release owner decision without a backend test certificate
         if: steps.classify.outputs.backend_mode == 'authorized-no-backend-ci'
@@ -566,7 +566,8 @@ jobs:
               [[ "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-pr918 ||
                  "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-tct-section-visibility-20260910 ||
                  "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-editorial-classifications-20260910 ||
-                 "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-feature-discovery-20260910 ]] || exit 1
+                 "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-feature-discovery-20260910 ||
+                 "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-universal-favorites-20260910 ]] || exit 1
               echo "backend CI não executado por decisão do responsável"
               if [[ "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-pr918 ]]; then
                 echo "Initial full run remains failed (84 failed, 3038 passed); local evidence is recorded separately."

@@ -1,3 +1,4 @@
+import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { CSSProperties, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -133,6 +134,8 @@ export default function CasoClinico() {
           </div>
         )}
       </div>
+
+      <BotaoFavorito itemType="caso_clinico" itemSlug={slug} />
 
       <ScientificReadingAccess entityType="caso_clinico" slug={slug} />
 
