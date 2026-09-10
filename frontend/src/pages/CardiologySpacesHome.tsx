@@ -1,3 +1,4 @@
+import ClinicalChangeApprovalNotice from "../components/ClinicalChangeApprovalNotice";
 import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CardiologySpaceScene from "../components/CardiologySpaceScene";
@@ -381,6 +382,7 @@ const CATALOG: Array<{ title: string; actions: Action[] }> = [
     { to: "/excluir-conta", label: "Excluir conta e dados", icon: "conta" },
     { to: "/admin", label: "Painel administrativo", icon: "gestao", adminOnly: true },
     { to: "/admin/usuarios", label: "Usuários & Permissões", icon: "pacientes", adminOnly: true },
+    { to: "/admin/mudancas-clinicas", label: "Mudanças de Conduta Baseadas em Novas Evidências para Aprovação", icon: "evidencia", adminOnly: true },
     { to: "/fila-telediagnostico", label: "Fila de telediagnóstico", icon: "evidencia", adminOnly: true },
     { to: "/receitas-para-assinatura", label: "Receitas para assinatura", icon: "prescricao", adminOnly: true },
   ] },
@@ -1549,6 +1551,7 @@ export default function CardiologySpacesHome() {
       </section>
 
       <aside className="spaces-day">
+        <ClinicalChangeApprovalNotice />
         <h2>{mode === "scientific" ? "Minha jornada científica" : "Meu dia entre espaços"}</h2>
         {mode === "scientific" ? <>
           <Link to="/busca?modo=tudo-com-tudo" className="spaces-day__item spaces-day__item--cyan"><i /><span><strong>Tudo com Tudo</strong><small>Explorar relações</small></span></Link>

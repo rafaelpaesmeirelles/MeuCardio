@@ -296,3 +296,17 @@ test('formal ScientificStudy in guidance retains its studies URL and trial names
   assert.equal(section(renderer, 'diretriz').findByType('a').props.href, '/estudos/sepsis');
   assert.equal(section(renderer, 'estudo').findByType('a').props.href, '/estudos/consensus');
 });
+
+test('stored scientific originals have their own section, pagination and internal source route', async t => {
+  const sourceKey = 'a'.repeat(64);
+  const { renderer, calls } = await mount(t, 'publicacao', async url => {
+    if (url.startsWith('/drugs?')) return { items: [] };
+    if (url.includes('secao=publicacao_original')) return page([{ ...item(sourceKey, 'Original armazenado', 'publicacao_original'), kind: 'original científico', secao: 'publicacao_original' }]);
+    return page([], 1, 0, { por_secao: { publicacao_original: 1 } });
+  });
+  assert.match(nodeText(section(renderer, 'publicacao_original')), /Publicações originais/);
+  await click(sectionMore(renderer, 'publicacao_original'));
+  assert.equal(section(renderer, 'publicacao_original').findByType('a').props.href, `/intelligence?fonte=${sourceKey}`);
+  assert.ok(calls.some(url => url.includes('secao=publicacao_original')));
+  assert.doesNotMatch(nodeText(section(renderer, 'publicacao_original')), /Revisado|revisão clínica/);
+});

@@ -1,4 +1,4 @@
-"""Catálogo léxico transversal das 13 frentes científicas + calculadoras.
+"""Catálogo das 13 frentes científicas, calculadoras e originais bibliográficos.
 
 Extraído de `app/api/search.py` (Parte 2 da correção coordenada de
 02/09/2026) para ser reaproveitado também pela busca léxica da IA
@@ -19,6 +19,7 @@ from sqlalchemy import text
 
 from app.services import calculators as calc
 from app.services.document_editorial_taxonomy import document_section_sql, study_section_sql
+from app.services.scientific_publication_catalog import ORIGINAL_CATALOG_SQL, ORIGINAL_BRIDGES_SQL, ELIGIBLE_ORIGINALS_SQL, CANONICAL_ORIGINAL_RELATIONS_SQL
 
 # O corpus científico canônico possui 13 frentes persistidas. As calculadoras
 # clínicas vivem num registro validado em memória e entram como uma 14ª frente
@@ -199,6 +200,23 @@ CATALOG_SQL = """
   FROM symptom_triage_guides WHERE published = true
 """
 
+# Acquired originals form a bibliographic section; no clinical review is inferred.
+CATALOG_SQL = f"""
+  WITH eligible_publication_originals AS MATERIALIZED ({ELIGIBLE_ORIGINALS_SQL}),
+  canonical_original_relations AS MATERIALIZED ({CANONICAL_ORIGINAL_RELATIONS_SQL})
+  SELECT base.frente, base.slug, base.title, base.kind, base.theme, base.source_tier,
+    base.ano, base.corpo,
+    coalesce(base.v, ''::tsvector) || to_tsvector('portuguese', coalesce(bridge.metadata, '')) AS v,
+    base.pesquisavel || ' ' || coalesce(bridge.metadata, '') AS pesquisavel
+  FROM ({CATALOG_SQL}) base
+  LEFT JOIN (
+    SELECT frente, slug, string_agg(DISTINCT metadata, ' ') AS metadata
+    FROM ({ORIGINAL_BRIDGES_SQL}) source_bridge GROUP BY frente, slug
+  ) bridge ON bridge.frente = base.frente AND bridge.slug = base.slug
+  UNION ALL
+  {ORIGINAL_CATALOG_SQL}
+"""
+
 # Remova envelopes internos antes de o PostgreSQL produzir fragmentos. Se a
 # limpeza acontecesse depois de `ts_headline`, o fragmento poderia conter só o
 # marcador inicial ou receber `<mark>` dentro do próprio token, tornando o
@@ -243,6 +261,9 @@ def _search_sql(match_predicate: str, *, disease: bool = False, include_counts: 
   WHERE CAST(:secao AS text) IS NULL OR secao = CAST(:secao AS text)
 )""" if paged else "")
     section_column = "secao, " if paged else ""
+    # Clinical RAG keeps its reviewed-source contract; acquired originals are
+    # discoverable in the user catalog without becoming clinical guidance.
+    original_filter = "" if paged else "AND frente <> 'publicacao_original'"
     query = f"""
 WITH cmed_atual AS (
   SELECT apresentacao.drug_id,
@@ -267,6 +288,7 @@ WITH cmed_atual AS (
   FROM achados CROSS JOIN consulta
   WHERE (CAST(:frente AS text) IS NULL OR frente = CAST(:frente AS text))
     AND ({match_predicate})
+    {original_filter}
 ){section_ctes}, ordenados AS (
   {selection}
 ), paginados AS (
@@ -332,6 +354,7 @@ SELECT frente, count(*) AS total
 FROM achados CROSS JOIN consulta
 WHERE (CAST(:frente AS text) IS NULL OR frente = CAST(:frente AS text))
   AND ({match_predicate})
+  AND frente <> 'publicacao_original'
 GROUP BY frente
 ORDER BY frente
 """)

@@ -1,3 +1,4 @@
+import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -283,6 +284,7 @@ export default function Emergencia() {
               <Link to="/diretrizes"><Icone nome="evidencia" /><span>Diretrizes</span></Link>
             </aside>
           </div>
+          <BotaoFavorito itemType="emergencia" itemSlug={protocolo.slug} />
           <ScientificReadingAccess entityType="emergencia" slug={protocolo.slug} />
           <GrafoRelacionados entityType="protocolo_emergencia" slug={protocolo.slug} />
           <footer className="emerg-command__footer"><strong>Emergência é tempo. Aja rápido.</strong><span className="emerg-command__ecg" aria-hidden="true" /></footer>

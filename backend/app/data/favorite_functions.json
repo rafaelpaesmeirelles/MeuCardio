@@ -1,0 +1,313 @@
+{
+  "source": "frontend/src/lib/clinicalRouteRegistry.ts",
+  "entries": [
+    {
+      "slug": "doencas",
+      "path": "/doencas",
+      "title": "Guia de Doenças",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "triagem-sintomas",
+      "path": "/triagem-sintomas",
+      "title": "Triagem de sintomas",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "calculadoras",
+      "path": "/calculadoras",
+      "title": "Calculadoras",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "medicamentos",
+      "path": "/medicamentos",
+      "title": "Medicamentos",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "interacoes",
+      "path": "/interacoes",
+      "title": "Interações medicamentosas",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "condicoes",
+      "path": "/condicoes",
+      "title": "Condições especiais",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "exames",
+      "path": "/exames",
+      "title": "Exames",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "assistente",
+      "path": "/assistente",
+      "title": "Apoio CorVIA",
+      "group": "assistente",
+      "gate": null
+    },
+    {
+      "slug": "prontuario",
+      "path": "/prontuario",
+      "title": "Prontuário",
+      "group": "pacientes",
+      "gate": null
+    },
+    {
+      "slug": "agenda",
+      "path": "/agenda",
+      "title": "Agenda",
+      "group": "agenda",
+      "gate": null
+    },
+    {
+      "slug": "documentos",
+      "path": "/documentos",
+      "title": "Documentos & Solicitações",
+      "group": "documentos",
+      "gate": null
+    },
+    {
+      "slug": "avaliacao-preoperatoria",
+      "path": "/avaliacao-preoperatoria",
+      "title": "Avaliação pré-operatória",
+      "group": "documentos",
+      "gate": null
+    },
+    {
+      "slug": "receituario",
+      "path": "/receituario",
+      "title": "Prescrição",
+      "group": "prescricao",
+      "gate": null
+    },
+    {
+      "slug": "cardiologia-intensiva",
+      "path": "/cardiologia-intensiva",
+      "title": "Cardiologia Intensiva & UCO",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "emergencia",
+      "path": "/emergencia",
+      "title": "Emergência cardiovascular",
+      "group": "emergencia",
+      "gate": null
+    },
+    {
+      "slug": "checklists",
+      "path": "/checklists",
+      "title": "Checklists",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "heart-team",
+      "path": "/heart-team",
+      "title": "Heart Team Virtual",
+      "group": "assistente",
+      "gate": "heart-team"
+    },
+    {
+      "slug": "exames-ia",
+      "path": "/exames-ia",
+      "title": "IA para Exames",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "round",
+      "path": "/round",
+      "title": "Round hospitalar",
+      "group": "pacientes",
+      "gate": null
+    },
+    {
+      "slug": "apresentacao",
+      "path": "/apresentacao",
+      "title": "Modo Apresentação",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "trilhas",
+      "path": "/trilhas",
+      "title": "Trilhas",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "trilhas-timeline",
+      "path": "/trilhas/timeline",
+      "title": "Timeline do conhecimento",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "material-paciente",
+      "path": "/material-paciente",
+      "title": "Material para paciente",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "galeria",
+      "path": "/galeria",
+      "title": "Atlas & Galeria",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "casos-clinicos",
+      "path": "/casos-clinicos",
+      "title": "Casos clínicos",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "intelligence",
+      "path": "/intelligence",
+      "title": "CorVIA Intelligence",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "biblioteca",
+      "path": "/biblioteca",
+      "title": "Biblioteca científica",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "documentos-cientificos-ia",
+      "path": "/documentos-cientificos-ia",
+      "title": "Documento científico IA",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "diretrizes",
+      "path": "/diretrizes",
+      "title": "Diretrizes & Guidelines",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "busca",
+      "path": "/busca",
+      "title": "Tudo com Tudo / Busca avançada",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "fluxogramas",
+      "path": "/fluxogramas",
+      "title": "Fluxogramas clínicos",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "evidencias",
+      "path": "/evidencias",
+      "title": "Evidências",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "estudos",
+      "path": "/estudos",
+      "title": "Estudos clínicos",
+      "group": "conhecimento",
+      "gate": null
+    },
+    {
+      "slug": "exportar",
+      "path": "/exportar",
+      "title": "Exportar conteúdo",
+      "group": "ferramentas",
+      "gate": null
+    },
+    {
+      "slug": "indicadores",
+      "path": "/indicadores",
+      "title": "Indicadores & Métricas",
+      "group": "conta",
+      "gate": null
+    },
+    {
+      "slug": "whatsapp-assistant",
+      "path": "/whatsapp-assistant",
+      "title": "Assistente pelo WhatsApp",
+      "group": "integracoes",
+      "gate": "whatsapp"
+    },
+    {
+      "slug": "minha-conta",
+      "path": "/minha-conta",
+      "title": "Minha conta",
+      "group": "conta",
+      "gate": null
+    },
+    {
+      "slug": "sincronizacao",
+      "path": "/sincronizacao",
+      "title": "Contas conectadas",
+      "group": "integracoes",
+      "gate": null
+    },
+    {
+      "slug": "telediagnostico",
+      "path": "/telediagnostico",
+      "title": "Telediagnóstico & Consultoria",
+      "group": "telediagnostico",
+      "gate": null
+    },
+    {
+      "slug": "corvia-mail",
+      "path": "/corvia-mail",
+      "title": "CorVIA Mail",
+      "group": "mail",
+      "gate": null
+    },
+    {
+      "slug": "usuarios-online",
+      "path": "/usuarios-online",
+      "title": "Rede profissional",
+      "group": "rede",
+      "gate": null
+    },
+    {
+      "slug": "privacidade",
+      "path": "/privacidade",
+      "title": "Segurança & Privacidade",
+      "group": "geral",
+      "gate": null
+    },
+    {
+      "slug": "excluir-conta",
+      "path": "/excluir-conta",
+      "title": "Excluir conta e dados",
+      "group": "conta",
+      "gate": null
+    },
+    {
+      "slug": "termos",
+      "path": "/termos",
+      "title": "Termos de uso",
+      "group": "geral",
+      "gate": null
+    }
+  ]
+}

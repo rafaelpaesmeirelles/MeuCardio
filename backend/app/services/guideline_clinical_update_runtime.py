@@ -95,13 +95,7 @@ def _guarded_apply_override(db, guideline, impact: dict, *, record: bool = True)
 
 
 def _ensure_summary_published(db, guideline, analysis: dict, impacts: list[dict]):
-    doc = _ORIGINAL_ENSURE_SUMMARY(db, guideline, analysis, impacts)
-    doc.published = True
-    doc.review_status = "revisado"
-    doc.source_tier = "A"
-    doc.reviewed_at = doc.reviewed_at or datetime.now(timezone.utc)
-    db.flush()
-    return doc
+    raise PermissionError("Síntese editorial aguardando aprovação clínica do proprietário.")
 
 
 def install_runtime_guards() -> None:
@@ -172,7 +166,8 @@ def process_pending_guidelines(db, *, limit: int = COMPLETE_PUBLICATION_LIMIT) -
                 db.commit()
             try:
                 result = core.process_guideline(db, guideline)
-                _reopen_in_app_alerts(db, guideline.id)
+                if not result.get("human_approval_required"):
+                    _reopen_in_app_alerts(db, guideline.id)
                 items.append(result)
             except Exception as exc:
                 db.rollback()

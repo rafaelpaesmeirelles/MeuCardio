@@ -48,7 +48,7 @@ export default function Evidencia() {
       <Link to="/evidencias" style={{ fontSize: "0.86rem" }}>← Voltar para evidências</Link>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginTop: "0.8rem" }}>
         <p className="eyebrow">{evidencia.society} {evidencia.year} · {evidencia.theme}</p>
-        <BotaoFavorito itemType="evidencia" itemId={evidencia.id} />
+        <BotaoFavorito itemType="evidencia" itemSlug={slug} />
       </div>
 
       <section className="cartao" style={{ marginTop: "0.4rem" }}>

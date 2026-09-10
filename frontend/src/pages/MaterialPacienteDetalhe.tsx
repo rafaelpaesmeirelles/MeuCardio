@@ -1,3 +1,4 @@
+import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -113,6 +114,8 @@ export default function MaterialPacienteDetalhe() {
       {material.documento_slug && (
         <p><Link to={`/biblioteca/${material.documento_slug}`}>Ver conteúdo técnico de origem</Link></p>
       )}
+
+      <BotaoFavorito itemType="material_paciente" itemSlug={material.slug} />
 
       <ScientificReadingAccess entityType="material_paciente" slug={material.slug} />
 

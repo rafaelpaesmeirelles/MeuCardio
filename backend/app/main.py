@@ -7,7 +7,7 @@ from app.api import (
     account_access_admin, account_sync, admin, admin_user_delete as _admin_user_delete, admin_user_management, ai, appointments, assinatura, auth, avaliacao_preoperatoria, browser_session,
     calculators, chat, chat_session,
     cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, email_multibox, email_session, evidence,
-    favorites, gallery, guideline_updates, health, identity_profile, kyc, lab_tests, library, mail360_status,
+    clinical_change_approvals, favorites, gallery, guideline_updates, health, identity_profile, kyc, lab_tests, library, mail360_status,
     partner_courses, password_reset, prescriptions, presence, round as round_api, search,
     service_orders, sessions, social_login, specialty_guides, studies, timeline, billing, guidelines, indicadores,
     checklists, study_tracks, exportacao, exportacao_universal, emergencia, receituario, prescricao_especial, clinical_cases, agenda_integrada, agenda_clinica,
@@ -106,7 +106,7 @@ ROUTERS_LIVRES = (
     sessions.router, billing.router, ai_credits.router, ai_wallet.router,
     # Precisa preceder admin.router: substitui somente /users/{id}/decidir para
     # acrescentar a notificação transacional sem quebrar o frontend existente.
-    account_access_admin.router, admin.router, ADMIN_USER_DELETE_ROUTER, admin_user_management.router,
+    clinical_change_approvals.router, account_access_admin.router, admin.router, ADMIN_USER_DELETE_ROUTER, admin_user_management.router,
     # email_multibox precede o router legado para substituir apenas os
     # contratos /contas, /conta-padrao-envio e /mensagens/todas, mantendo
     # todas as demais rotas canônicas no módulo email existente.

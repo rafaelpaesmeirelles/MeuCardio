@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import BotaoFavorito from "../components/BotaoFavorito";
 import EditorialDocumentList from "../components/EditorialDocumentList";
 import ScientificIntelligenceMonitor from "../components/ScientificIntelligenceMonitor";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
@@ -162,6 +163,7 @@ function CardAtualizacao({ item }: { item: Atualizacao }) {
         <ScientificReadingAccess entityType="diretriz" slug={item.slug} lazy />
       </div>
       <div className="cc-guideline-row__side">
+        <BotaoFavorito itemType="diretriz" itemSlug={item.slug} />
         <span className={`selo ${statusClass(item.status)}`}>{statusLabel(item.status)}</span>
         {item.summary_document_slug ? (
           <Link to={`/biblioteca/${item.summary_document_slug}`}>Resumo CorVIA</Link>
@@ -216,7 +218,7 @@ export default function Diretrizes({ intelligenceOnly = false }: { intelligenceO
       <ClinicalPageHeader
         eyebrow="CorVIA Intelligence"
         title={intelligenceOnly ? "CorVIA Intelligence" : "Diretrizes e alertas clínicos"}
-        description="Acompanhe novas publicações identificadas nas fontes científicas monitoradas e as sínteses clínicas disponíveis em português. Em cada trabalho, você pode abrir o Resumo CorVIA, uma leitura clínica em português dentro do próprio CorVIA ou a publicação original. Mudanças clínicas só são aplicadas automaticamente quando a fonte primária sustenta explicitamente a mudança e uma segunda verificação independente confirma o override; situações ambíguas permanecem sinalizadas para revisão."
+        description="Acompanhe novas publicações identificadas nas fontes científicas monitoradas e as sínteses clínicas disponíveis em português. Em cada trabalho, você pode abrir o Resumo CorVIA, uma leitura clínica em português dentro do próprio CorVIA ou a publicação original. Sugestões de mudança de conduta são encaminhadas para aprovação clínica administrativa. A orientação publicada só é alterada após autorização explícita, com fonte e histórico registrados."
         icon="documento"
         actions={[
           { to: "/evidencias", label: "Evidências", icon: "evidencia" },

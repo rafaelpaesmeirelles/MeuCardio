@@ -38,6 +38,9 @@ const iaECobrancaSomenteOnline = /(?:^|\/)(?:Assinatura|Assistente|HeartTeamVirt
 // para seus chunks; os documentos e APIs permanecem NetworkOnly. O monitor
 // compartilhado pela Home continua no precache, preservando o shell visual.
 const leituraCientificaSomenteOnline = /(?:^|\/)(?:ScientificReadingAccess|CorviaIntelligence)-[^/]*\.(?:js|css)$/;
+// A decisão clínica administrativa requer uma comparação atual e autorização
+// do proprietário no servidor; este chunk não oferece operação offline.
+const aprovacaoClinicaSomenteOnline = /(?:^|\/)(?:AdminClinicalChanges)-[^/]*\.(?:js|css)$/;
 
 export default defineConfig({
   plugins: [
@@ -102,6 +105,7 @@ export default defineConfig({
               if (operacaoClinicaSomenteOnline.test(entry.url)) return false;
               if (iaECobrancaSomenteOnline.test(entry.url)) return false;
               if (leituraCientificaSomenteOnline.test(entry.url)) return false;
+              if (aprovacaoClinicaSomenteOnline.test(entry.url)) return false;
               if (!entry.url.endsWith(".js")) return true;
               if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;

@@ -1,3 +1,4 @@
+import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -51,6 +52,8 @@ export default function Documento() {
         <SeloRevisao status={doc.review_status} />
         <span className="selo">versão {doc.version}</span>
       </div>
+
+      <BotaoFavorito itemType="documento" itemSlug={slug} />
 
       <ScientificReadingAccess entityType="documento" slug={slug} />
 

@@ -1,3 +1,5 @@
+import ClinicalChangeApprovalNotice from "./ClinicalChangeApprovalNotice";
+import FavoriteFunctionControl from "./FavoriteFunctionControl";
 import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { api, assetUrl } from "../lib/api";
@@ -366,7 +368,7 @@ export default function ShellClinicalOSLaunch() {
           </div>
         </header>
         <div className={`cos-workspace${foco ? " cos-workspace--focus" : ""}`}>
-          <main className="conteudo cos-content" id="conteudo-principal" tabIndex={-1}><Outlet /><Credito compacto /></main>
+          <main className="conteudo cos-content" id="conteudo-principal" tabIndex={-1}><ClinicalChangeApprovalNotice /><FavoriteFunctionControl /><Outlet /><Credito compacto /></main>
           {!foco && <Intelligence pathname={location.pathname} />}
         </div>
       </div>

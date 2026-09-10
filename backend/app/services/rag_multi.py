@@ -426,9 +426,12 @@ def buscar_lexico_multi(db: Session, pergunta: str, limite: int) -> list[dict]:
 
     slugs_documento = [linha["slug"] for linha in linhas if linha["frente"] == "documento"]
     slugs_com_chunk_atual: set[str] = set()
+    documentos_atuais = {}
     if slugs_documento:
         from app.models.content import Document  # import tardio: evita ciclo no boot do pacote
 
+        documentos_atuais = {doc.slug: doc for doc in db.query(Document).filter(
+            Document.slug.in_(slugs_documento), Document.published.is_(True)).populate_existing().all()}
         candidatos = db.execute(
             select(Document.slug, Document.title, Document.body_md,
                    DocumentChunk.content_hash, DocumentChunk.embedding_model)
@@ -448,10 +451,13 @@ def buscar_lexico_multi(db: Session, pergunta: str, limite: int) -> list[dict]:
         if linha["frente"] == "documento":
             if linha["slug"] in slugs_com_chunk_atual:
                 continue  # já coberto por SQL_LEXICO/semântico com conteúdo atual — evita citação duplicada
+            atual = documentos_atuais.get(linha["slug"])
+            if atual is None:
+                continue
             resultados.append({
-                "slug": linha["slug"], "titulo": linha["title"], "tema": linha["theme"],
-                "secao": None, "conteudo": linha["snippet"],
-                "review_status": "revisado", "gaps": [],
+                "slug": atual.slug, "titulo": atual.title, "tema": atual.theme,
+                "secao": None, "conteudo": (atual.body_md or atual.summary or "")[:6000],
+                "review_status": atual.review_status, "gaps": list(atual.gaps or []),
                 "rota": f"/biblioteca/{linha['slug']}", "entity_type": "documento",
             })
             continue

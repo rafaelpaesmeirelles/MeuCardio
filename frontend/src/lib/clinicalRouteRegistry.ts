@@ -192,6 +192,7 @@ export const CLINICAL_ROUTES = [
   route({ path: "/termos", name: "Termos de uso", shortName: "Termos", space: "gestao", group: "geral", icon: "documento", layout: "reading", intelligence: false, catalog: true }),
 
   // Administração
+  route({ path: "/admin/mudancas-clinicas", name: "Mudanças de Conduta Baseadas em Novas Evidências para Aprovação", shortName: "Mudanças clínicas", space: "gestao", group: "admin", icon: "evidencia", layout: "data", intelligence: false, gate: "admin", catalog: true }),
   route({ path: "/admin/atividade", name: "Atividade e crescimento", shortName: "Atividade", space: "gestao", group: "admin", icon: "indicadores", layout: "data", intelligence: false, gate: "admin", catalog: true }),
   route({ path: "/admin", name: "Painel administrativo", shortName: "Administração", space: "gestao", group: "admin", icon: "gestao", layout: "data", intelligence: false, gate: "admin", catalog: true }),
   route({ path: "/admin/usuarios", name: "Usuários & Permissões", shortName: "Usuários", space: "gestao", group: "admin", icon: "pacientes", layout: "data", intelligence: false, gate: "admin", catalog: true }),

@@ -1,0 +1,27 @@
+# Mudanças de Conduta Baseadas em Novas Evidências para Aprovação
+
+## Decisão e comportamento
+
+Pedido do proprietário em 10/09/2026: toda sugestão clínica produzida pelo Intelligence deve ir para sua revisão, com aviso no menu administrativo, e os itens devem poder ser aprovados individualmente. Isso não equivale a afirmar que todos os conteúdos do acervo foram analisados ou que toda mudança existente na literatura foi identificada.
+
+Cada alvo e cada síntese editorial recebem proposta persistida separada (`pending`, `approved`, `rejected`). O radar guarda sugestões cujo verificador de IA foi inconclusivo; qualidade/verificação e contagens ficam explícitas. Sugestões sem alvo ou fonte confirmáveis continuam visíveis, mas não são aplicáveis até resolução. Conteúdo sem diferença real não gera proposta de conduta. Original bibliográfico autorizado e seus artefatos seguem a biblioteca científica independente desta decisão clínica.
+
+O proprietário autenticado vê o aviso pela contagem de pendências exclusivamente autorizada em `GET /api/clinical-change-approvals/count`. A criação de proposta é idempotente e auditada, sem enviar e-mail ou WhatsApp. Lista paginada (`limit<=50`, `offset`) é leve; detalhe inclui os campos completos antes/depois, fonte, escopo, classificação da mudança e histórico.
+
+Aprovar aplica somente o item apresentado, sem nova consulta à IA. API e serviço exigem o mecanismo existente de `owner_admin`. A transação bloqueia proposta, fonte e alvo; recarrega a identidade ORM antes do CAS; valida identidade/vigência da fonte, ID/slug, fingerprint imutável, versão da proposta e snapshot clínico atual. Qualquer divergência retorna 409 e rollback. Rejeitar não altera conteúdo. A repetição de uma aprovação já concluída não aplica nem cobra novamente e exige prova de aprovação em auditoria.
+
+O registro aplicado distingue conteúdo clínico, referências/metadados e síntese editorial. Alteração apenas em referências não é anunciada como mudança de tratamento. Novos resumos não recebem `revisado` nem publicação pelo radar: somente após decisão do proprietário, com seu identificador e data. A síntese não afirma que propostas clínicas ainda pendentes já foram aplicadas.
+
+A análise usada para uma nova proposta fica vinculada à identidade bibliográfica capturada antes da chamada de IA. A fonte é recarregada e bloqueada depois da análise e novamente após a verificação; se mudar durante qualquer etapa, nenhum resultado antigo é autorizado para a nova identidade. O cache guarda identidade, fingerprint e data de vinculação. Resumos históricos continuam legíveis, mas caches legados sem proveniência ou divergentes não são reutilizados para novas propostas; eventual nova análise obedece ao orçamento existente. Itens aguardando decisão humana não retornam à fila de análise paga.
+
+## Proteção do corpus e consumidores
+
+As funções antigas de aplicação direta, inclusive referências capturadas pelo runtime e chamadas `record=False`, rejeitam escrita real. Sua execução em prévia só aceita uma sessão em memória sem SQL. Reaplicação pós-reconciliação considera exclusivamente snapshots aprovados com reviewer, data e evento de aprovação vinculados a fingerprint/versão; revalida fonte, ID e estado exato, audita reaplicação e não retargeta documentos recriados. Vínculos legados `confirmado=True` não constituem autorização humana. Nenhum arquivo canônico, aprovação de corpus ou hash científico foi alterado por este fluxo.
+
+Documentos mantêm `DocumentRevision` e incremento de versão. Trechos RAG antigos são invalidados na mesma transação; o fallback léxico usa imediatamente o corpo publicado atual, sem exigir chamada paga. Reindexação vetorial permanece no mecanismo incremental e nos limites existentes; não é disparada dentro da aprovação. Há rollback transacional e histórico técnico; não foi criado botão de desfazer uma decisão já concluída.
+
+O Modo Emergência referencia `Document` por `documento_slug`, `fluxograma_slug` e relacionados: conteúdo aprovado aparece no próximo pacote online, que inclui versão/data dos documentos. O cliente já substitui a cópia offline ao recarregar conectado. Não é possível atualizar uma cópia enquanto o dispositivo está desconectado. Proposta textual para `Document.kind=fluxograma` não implica redesenho automático de nós Mermaid; o antes/depois mostra exatamente a mudança disponível.
+
+## Validação local
+
+Banco exclusivo `corvia_clinical_approval_20260910_backend`; nenhuma simulação em produção. Migrações c1sp -> c2fv -> c3ca aplicadas em QA. Sete testes iniciais passaram em 24,73s; após refinamento para aprovação individual, 14 testes focais passaram em 66,34s: proprietário versus outro admin, itens/síntese independentes, CAS de fonte/alvo e identidade ORM antiga em duas conexões, rejeição/idempotência, rollback após escrita, funções legadas bloqueadas, prova de aprovação na reaplicação, ID recriado, verificação IA inconclusiva e texto novo no contexto léxico após remover chunks antigos. A listagem leve recebeu ajuste posterior; seu teste focal passou em 8,35s. A vinculação de proveniência recebeu cinco testes focais adicionais (três novos e duas regressões), todos aprovados em 30,44s, incluindo mudança concorrente da fonte durante análise/verificação e preservação da leitura histórica sem reutilização indevida. A revisão independente final de código foi favorável. AST dos arquivos alterados e `git diff --check` foram validados. Nenhum CI de backend ou chamada paga de teste executado.

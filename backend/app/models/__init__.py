@@ -51,3 +51,5 @@ from app.models.ai_credit_purchase import AICreditPurchase  # noqa: F401
 from app.models.ai_wallet import AIWalletAccount, AIWalletPeriod, AIWalletOperation, AIWalletCreditGrant  # noqa: F401
 
 from app.models.scientific_publication_asset import ScientificPublicationAsset  # noqa: F401
+
+from app.models.clinical_change_proposal import ClinicalChangeProposal  # noqa: F401

@@ -1,3 +1,4 @@
+import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -269,6 +270,7 @@ export default function TriagemSintomas() {
         </section>
       )}
 
+      {detail && <BotaoFavorito itemType="triagem" itemSlug={detail.slug} />}
       {detail && <ScientificReadingAccess entityType="triagem" slug={detail.slug} />}
 
       {detail && <GrafoRelacionados entityType="triagem_sintoma" slug={detail.slug} />}

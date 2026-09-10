@@ -11,6 +11,7 @@ nunca tradução/reprodução integral do documento.
 """
 
 import json
+import hashlib
 import logging
 import re
 import threading
@@ -251,7 +252,20 @@ def get_analysis(db: Session, guideline: Guideline) -> dict | None:
     return payload if isinstance(payload, dict) else None
 
 
-def _save_analysis(db: Session, guideline: Guideline, analysis: dict) -> None:
+def _analysis_source_identity(guideline):
+    fields = ("id", "slug", "org", "titulo", "ano", "doi", "url", "published_at", "source_fingerprint", "superseded_by_id")
+    return json.loads(json.dumps({field: getattr(guideline, field) for field in fields}, default=str, sort_keys=True))
+
+
+def _confirm_analysis_source(db, guideline_id, expected):
+    current = db.query(Guideline).filter(Guideline.id == guideline_id).populate_existing().with_for_update().one()
+    if _analysis_source_identity(current) != expected:
+        db.rollback()
+        raise ValueError("A fonte mudou durante a análise; nenhum resultado foi autorizado para a nova identidade.")
+    return current
+
+
+def _save_analysis(db: Session, guideline: Guideline, analysis: dict, *, source_identity=None) -> None:
     link = _analysis_link(db, guideline.id)
     if link is None:
         link = GuidelineLink(
@@ -262,7 +276,11 @@ def _save_analysis(db: Session, guideline: Guideline, analysis: dict) -> None:
             confirmado=True,
         )
         db.add(link)
-    link.trecho = json.dumps(analysis, ensure_ascii=False, sort_keys=True)
+    identity = source_identity or _analysis_source_identity(guideline)
+    payload = {**analysis, "source_identity": identity,
+               "source_identity_sha256": hashlib.sha256(json.dumps(identity, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()).hexdigest(),
+               "source_bound_at": datetime.now(timezone.utc).isoformat()}
+    link.trecho = json.dumps(payload, ensure_ascii=False, sort_keys=True)
     link.origem = ORIGIN
     link.confirmado = True
 
@@ -462,18 +480,18 @@ Responda somente no JSON solicitado."""
     impacts = []
     for impact in payload.get("impacts") or []:
         key = (impact.get("item_type"), int(impact.get("item_id") or 0))
+        issues = []
         if key not in valid_ids:
-            continue
-        if impact.get("confidence") != "alta" or not impact.get("explicit_support"):
-            continue
+            issues.append("unconfirmed_target")
         source_url = str(impact.get("source_url") or "")
         if not _trusted_url(source_url, domains):
-            continue
+            issues.append("unconfirmed_source")
+        impact["_validation_issues"] = issues
         impact["override_pt"] = re.sub(r"\s+", " ", str(impact.get("override_pt") or "")).strip()[:2400]
         impact["change_summary_pt"] = re.sub(r"\s+", " ", str(impact.get("change_summary_pt") or "")).strip()[:900]
         if impact["override_pt"]:
             impacts.append(impact)
-    return impacts[:20], sources
+    return impacts, sources
 
 
 def _verify_impacts(guideline: Guideline, analysis: dict, impacts: list[dict]) -> list[dict]:
@@ -575,6 +593,8 @@ def _get_target(db: Session, item_type: str, item_id: int) -> Any | None:
 
 
 def _apply_override(db: Session, guideline: Guideline, impact: dict, *, record: bool = True) -> bool:
+    from app.services.clinical_change_authorization import require_preview_session
+    require_preview_session(db)
     item_type = str(impact["item_type"])
     item_id = int(impact["item_id"])
     target = _get_target(db, item_type, item_id)
@@ -716,7 +736,7 @@ def _summary_body(guideline: Guideline, analysis: dict, impacts: list[dict]) -> 
     applied = "\n".join(
         f"- {item.get('change_summary_pt')}"
         for item in impacts
-    ) or "- Nenhum override clínico automático foi necessário ou pôde ser confirmado com segurança."
+    ) or "- A publicação desta síntese não autoriza mudanças de conduta. Cada sugestão clínica depende de decisão individual do proprietário na fila de aprovação."
     source = guideline.url or (f"https://doi.org/{guideline.doi}" if guideline.doi else "")
     return f"""# {analysis.get('title_pt') or guideline.titulo}
 
@@ -747,110 +767,47 @@ def _summary_body(guideline: Guideline, analysis: dict, impacts: list[dict]) -> 
 
 
 def _ensure_summary_document(db: Session, guideline: Guideline, analysis: dict, impacts: list[dict]) -> Document:
-    slug = f"corvia-intelligence-{guideline.slug}"[:255]
-    verified_kind = runtime_document_kind(guideline)
-    body = _summary_body(guideline, analysis, impacts)
-    doc = db.query(Document).filter(Document.slug == slug).first()
-    source_refs = [x for x in [guideline.url, f"https://doi.org/{guideline.doi}" if guideline.doi else None] if x]
-    tags = list(dict.fromkeys(["corvia-intelligence", "atualizacao-clinica", *(analysis.get("topics") or [])]))[:30]
-    if doc is None:
-        doc = Document(
-            slug=slug,
-            title=str(analysis.get("title_pt") or guideline.titulo)[:500],
-            kind=verified_kind,
-            theme=str(analysis.get("theme") or guideline.tema or TEMA_PADRAO)[:80],
-            summary=str(analysis.get("summary_pt") or "")[:12000],
-            body_md=body,
-            tags=tags,
-            source_refs=source_refs,
-            source_tier="A",
-            review_status="revisado",
-            published=True,
-            reviewed_by=None,
-            reviewed_at=datetime.now(timezone.utc),
-            gaps=[],
-        )
-        db.add(doc)
-        db.flush()
-    elif doc.body_md != body:
-        db.add(DocumentRevision(document_id=doc.id, version=doc.version,
-                                body_md=doc.body_md, author_id=None))
-        doc.title = str(analysis.get("title_pt") or guideline.titulo)[:500]
-        doc.theme = str(analysis.get("theme") or guideline.tema or TEMA_PADRAO)[:80]
-        doc.summary = str(analysis.get("summary_pt") or "")[:12000]
-        doc.body_md = body
-        doc.tags = tags
-        doc.source_refs = source_refs
-        doc.source_tier = "A"
-        doc.review_status = "revisado"
-        doc.published = True
-        doc.version += 1
-        doc.reviewed_at = datetime.now(timezone.utc)
-    # Editorial metadata is refreshed even when the generated body is identical.
-    doc.kind = verified_kind
-    link = db.query(GuidelineLink).filter(
-        GuidelineLink.guideline_id == guideline.id,
-        GuidelineLink.item_type == SUMMARY_ITEM_TYPE,
-        GuidelineLink.item_id == doc.id,
-    ).first()
-    if link is None:
-        db.add(GuidelineLink(guideline_id=guideline.id, item_type=SUMMARY_ITEM_TYPE,
-                             item_id=doc.id, origem=ORIGIN, confirmado=True,
-                             trecho="Síntese em português publicada no conhecimento CorVIA."))
-    return doc
+    raise PermissionError("Sínteses editoriais exigem proposta aprovada pelo proprietário.")
 
 
 @ai_operation("editorial", owner=None, cost_center="editorial")
 def process_guideline(db: Session, guideline: Guideline) -> dict:
+    captured_source = _analysis_source_identity(guideline)
     existing = get_analysis(db, guideline)
+    # O getter público preserva sínteses históricas. Para uma NOVA proposta,
+    # porém, cache sem vínculo de fonte ou de outra identidade não é reutilizado.
+    if existing and existing.get("source_identity") != captured_source:
+        existing = None
     analysis = existing or _analyze_source(guideline)
+    guideline = _confirm_analysis_source(db, guideline.id, captured_source)
     if not existing:
         guideline.tema = str(analysis.get("theme") or guideline.tema or "")[:120] or guideline.tema
-        _save_analysis(db, guideline, analysis)
-        db.commit()
+        _save_analysis(db, guideline, analysis, source_identity=captured_source)
+    db.commit()  # libera lock antes das próximas chamadas do provedor
 
     candidates = _candidate_items(db, analysis)
     proposed, _ = _propose_impacts(guideline, analysis, candidates)
-    verified = _verify_impacts(guideline, analysis, proposed)
-
-    applied: list[dict] = []
-    for impact in verified:
-        if _apply_override(db, guideline, impact, record=True):
-            applied.append(impact)
-
-    _ensure_summary_document(db, guideline, analysis, applied)
-    if applied:
-        guideline.detection_status = "aplicada_auto"
-    elif analysis.get("requires_site_update"):
-        guideline.detection_status = "revisao_necessaria"
-    else:
-        guideline.detection_status = "analisada"
-    db.commit()
-
-    # Documento de síntese é novo/alterado e precisa entrar no RAG imediatamente.
     try:
-        from app.services import rag
-        summary_doc = db.query(Document).filter(Document.slug == f"corvia-intelligence-{guideline.slug}"[:255]).first()
-        if summary_doc:
-            rag.indexar_documento(db, summary_doc)
-    except Exception as exc:  # conteúdo/alerta continuam válidos mesmo se embedding falhar
-        log.warning("Falha ao indexar síntese da diretriz %s: %s", guideline.slug, type(exc).__name__)
-
-    return {
-        "guideline_id": guideline.id,
-        "slug": guideline.slug,
-        "status": guideline.detection_status,
-        "candidates": len(candidates),
-        "proposed": len(proposed),
-        "verified": len(verified),
-        "applied": len(applied),
-    }
+        verified = _verify_impacts(guideline, analysis, proposed)
+    except Exception as exc:
+        log.warning("Verificação inconclusiva: %s; sugestões preservadas para revisão humana", type(exc).__name__)
+        verified = []
+    guideline = _confirm_analysis_source(db, guideline.id, captured_source)
+    from app.services.clinical_change_approvals import build_proposals
+    proposals = build_proposals(db, guideline, analysis, proposed, verified_impacts=verified, candidates_count=len(candidates))
+    guideline.detection_status = "revisao_necessaria" if proposals else "analisada"
+    db.commit()
+    return {"guideline_id": guideline.id, "slug": guideline.slug,
+            "status": guideline.detection_status, "candidates": len(candidates),
+            "proposed": len(proposed), "verified": len(verified), "uncertain": max(0, len(proposed)-len(verified)), "applied": 0,
+            "approval_proposal_ids": [proposal.id for proposal in proposals],
+            "human_approval_required": bool(proposals)}
 
 
 def process_pending_guidelines(db: Session, *, limit: int = PROCESS_LIMIT) -> dict:
     if not settings.ai_enabled or settings.ai_provider != "openai" or not settings.openai_api_key.strip():
         return {"processed": 0, "skipped": "ai_unavailable", "items": [], "failures": []}
-    statuses = ("detected", "aguardando_revisao", "revisao_necessaria")
+    statuses = ("detected", "aguardando_revisao", "oficial_aprovada")
     guidelines = db.query(Guideline).filter(Guideline.detection_status.in_(statuses)).order_by(
         Guideline.published_at.desc().nullslast(), Guideline.discovered_at.asc()
     ).limit(limit).all()
@@ -871,7 +828,7 @@ def process_pending_guidelines(db: Session, *, limit: int = PROCESS_LIMIT) -> di
 def list_impacts(db: Session, guideline: Guideline) -> list[dict]:
     links = db.query(GuidelineLink).filter(
         GuidelineLink.guideline_id == guideline.id,
-        GuidelineLink.origem == ORIGIN,
+        GuidelineLink.origem.in_((ORIGIN, "human_approval")),
         GuidelineLink.confirmado.is_(True),
         GuidelineLink.item_type.in_(tuple(UPDATEABLE_TYPES)),
     ).order_by(GuidelineLink.item_type, GuidelineLink.item_id).all()
@@ -890,44 +847,12 @@ def list_impacts(db: Session, guideline: Guideline) -> list[dict]:
             "source_url": payload.get("source_url"),
             "applied_at": payload.get("applied_at"),
             "mode": payload.get("mode"),
+            "effect_kind": payload.get("effect_kind", "legacy_unclassified"),
+            "clinical_content_changed": payload.get("effect_kind") == "clinical_content",
         })
     return items
 
 
 def reapply_confirmed_updates(db: Session) -> dict:
-    """Restaura overrides depois que o deploy reconciliou arquivos -> PostgreSQL."""
-    links = (
-        db.query(GuidelineLink)
-        .join(Guideline, Guideline.id == GuidelineLink.guideline_id)
-        .filter(
-            GuidelineLink.origem == ORIGIN,
-            GuidelineLink.confirmado.is_(True),
-            GuidelineLink.item_type.in_(tuple(UPDATEABLE_TYPES)),
-            # Uma diretriz substituída permanece no histórico, mas nunca deve
-            # restaurar metadados/recomendações como se ainda fosse vigente.
-            Guideline.superseded_by_id.is_(None),
-        )
-        .order_by(GuidelineLink.guideline_id, GuidelineLink.id)
-        .all()
-    )
-    reapplied = 0
-    missing = 0
-    for link in links:
-        guideline = db.get(Guideline, link.guideline_id)
-        if not guideline:
-            missing += 1
-            continue
-        try:
-            impact = json.loads(link.trecho or "{}")
-        except json.JSONDecodeError:
-            missing += 1
-            continue
-        if _apply_override(db, guideline, impact, record=False):
-            reapplied += 1
-    # Sínteses também podem ser removidas pela reconciliação por não existirem em /content.
-    for guideline in db.query(Guideline).all():
-        analysis = get_analysis(db, guideline)
-        if analysis:
-            _ensure_summary_document(db, guideline, analysis, list_impacts(db, guideline))
-    db.commit()
-    return {"reapplied": reapplied, "missing": missing}
+    from app.services.clinical_change_approvals import reapply_approved
+    return reapply_approved(db)

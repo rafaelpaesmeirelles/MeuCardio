@@ -37,7 +37,7 @@ export default function Estudo() {
           <h1 style={{ margin: 0 }}>{s.title}</h1>
           {s.authors && <p style={{ color: "var(--texto-secundario)", marginTop: 4 }}>{s.authors}</p>}
         </div>
-        <BotaoFavorito itemType="estudo" itemId={s.id} />
+        <BotaoFavorito itemType="estudo" itemSlug={slug} />
       </div>
 
       <ScientificReadingAccess entityType="estudo" slug={slug} />

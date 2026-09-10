@@ -27,7 +27,7 @@ router = APIRouter(prefix="/api/search", tags=["busca"])
 SearchSection = Literal[
     "geral", "conduta", "diretriz", "fluxo", "galeria", "exame", "evidencia",
     "estudo", "medicamento", "caso_clinico", "trilha", "checklist",
-    "material_paciente", "emergencia", "doenca", "triagem_sintoma", "calculadora",
+    "material_paciente", "emergencia", "doenca", "triagem_sintoma", "calculadora", "publicacao_original",
 ]
 
 
@@ -57,7 +57,7 @@ def search(
         None, description=(
             "documento|galeria|exame|evidencia|estudo|medicamento|caso_clinico|"
             "trilha|checklist|material_paciente|emergencia|doenca|triagem_sintoma|"
-            "calculadora — vazio traz todas"
+            "calculadora|publicacao_original — vazio traz todas"
         )),
     secao: Annotated[SearchSection | None, Query(
         description="Seção editorial; combinada com frente por interseção")] = None,

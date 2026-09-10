@@ -74,7 +74,8 @@ def _guideline(db: Session, guideline: Guideline) -> dict:
         "limitations": analysis.get("limitations") or [],
         "impacts": impacts,
         "summary_document_slug": summary_slug,
-        "clinical_content_changed": bool(impacts),
+        "clinical_content_changed": any(item.get("clinical_content_changed") for item in impacts),
+        "references_metadata_changed": any(item.get("effect_kind") == "references_metadata" for item in impacts),
         "translation_mode": analysis.get("translation_mode"),
         "analyzed_at": analysis.get("analyzed_at"),
         "analysis_complete": bool(

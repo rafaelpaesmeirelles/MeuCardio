@@ -8,8 +8,8 @@ const read = (relative) => fs.readFileSync(path.join(root, relative), "utf8");
 const app = read("src/App.tsx");
 const context = read("src/components/ClinicalRouteContext.tsx");
 const registry = read("src/lib/clinicalRouteRegistry.ts");
-// Inventário explícito: App.tsx e registro possuem os mesmos 77 padrões autenticados.
-const EXPECTED_AUTHENTICATED_PATTERNS = 77;
+// Inventário explícito: App.tsx e registro possuem os mesmos 78 padrões autenticados (incluindo a aprovação clínica administrativa).
+const EXPECTED_AUTHENTICATED_PATTERNS = 78;
 
 const shellStart = app.indexOf('<Route element={<Shell />}>');
 if (shellStart < 0) throw new Error("Não foi possível localizar o bloco autenticado <Shell /> em App.tsx.");
@@ -48,6 +48,7 @@ const registryRoutes = [...registry.matchAll(/route\(\{([\s\S]*?)\}\)/g)].map((m
     path: field(body, "path"),
     space: field(body, "space"),
     group: field(body, "group"),
+    gate: field(body, "gate"),
     kind: field(body, "kind") ?? "page",
     parent: field(body, "parent"),
     redirectTo: field(body, "redirectTo"),
@@ -78,10 +79,16 @@ if (missingFromRegistry.length || missingFromApp.length) {
   ].filter(Boolean).join("\n"));
 }
 
-for (const requiredPath of ["/", "/tour", "/tour/cardiology-spaces", "/em-breve"]) {
+for (const requiredPath of ["/", "/tour", "/tour/cardiology-spaces", "/em-breve", "/admin/mudancas-clinicas"]) {
   if (!appPathSet.has(requiredPath) || !registryPathSet.has(requiredPath)) {
     throw new Error(`Padrão autenticado obrigatório ausente: ${requiredPath}`);
   }
+}
+
+// The added owner-review page must remain an administrative destination.
+const clinicalApprovalRoute = registryRoutes.find(definition => definition.path === "/admin/mudancas-clinicas");
+if (!clinicalApprovalRoute || clinicalApprovalRoute.gate !== "admin" || clinicalApprovalRoute.group !== "admin" || clinicalApprovalRoute.space !== "gestao") {
+  throw new Error("A aprovação de mudanças clínicas deve permanecer no menu administrativo com gate admin.");
 }
 
 // A assinatura voltou a ser uma página de gestão vinculada à conta.

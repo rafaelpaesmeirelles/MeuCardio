@@ -56,6 +56,7 @@ const ROTULO_TIPO: Record<string, string> = {
   galeria: "Galeria de imagens",
   checklist: "Checklists de alta",
   material_paciente: "Material do paciente",
+  publicacao_original: "Publicações originais",
   protocolo_emergencia: "Protocolos de emergência",
   calculadora: "Calculadoras",
   doenca: "Doenças",

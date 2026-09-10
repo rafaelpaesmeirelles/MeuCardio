@@ -1,3 +1,4 @@
+import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -76,6 +77,8 @@ export default function ImagemGaleria() {
           ))}
         </div>
       )}
+
+      <BotaoFavorito itemType="imagem" itemSlug={slug} />
 
       <ScientificReadingAccess entityType="imagem" slug={slug} />
 

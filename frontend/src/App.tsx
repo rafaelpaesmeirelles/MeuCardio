@@ -51,6 +51,7 @@ const Prontuario = lazy(() => import("./pages/Prontuario"));
 const CardiovascularExamAI = lazy(() => import("./pages/CardiovascularExamAI"));
 const Round = lazy(() => import("./pages/RoundGerenciavel"));
 const Assistente = lazy(() => import("./pages/Assistente"));
+const AdminClinicalChanges = lazy(() => import("./pages/AdminClinicalChanges"));
 const Admin = lazy(() => import("./pages/Admin"));
 const AdminAtividade = lazy(() => import("./pages/AdminAtividade"));
 const AdminAssinantes = lazy(() => import("./pages/AdminAssinantes"));
@@ -255,6 +256,7 @@ export default function App() {
           <Route path="excluir-conta" element={<ExcluirConta />} />
           <Route path="termos" element={<TermosUso />} />
           {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
+          {usuario.role === "admin" && <Route path="admin/mudancas-clinicas" element={<AdminClinicalChanges />} />}
           {usuario.role === "admin" && <Route path="admin/atividade" element={<AdminAtividade />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios" element={<AdminAssinantes />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios/:id" element={<AdminFichaAssinante />} />}

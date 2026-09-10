@@ -122,3 +122,42 @@ test('canonical identity cannot switch entity type or introduce encoded traversa
     assert.deepEqual(blobs, []);
   }
 });
+
+
+test('stored original is read inside CorVIA from its authenticated canonical source without claiming PDF layout', async t => {
+  const f = fixture('canonical-study');
+  f.sources = [{ ...f.sources[1], url: 'https://publisher.test/original', original: { status: 'available', media_type: 'application/xml', url: '/api/scientific-reading/estudo/canonical-study/sources/b/original', read_url: '/api/scientific-reading/estudo/canonical-study/sources/b/original-text', coverage: { scope: 'full_article_text', figures: 'captions_only', tables: 'text', supplements: 'not_included', complete_text: true } } }];
+  const { renderer, blobs } = await mount(t, async () => f, { slug: 'legacy-alias' }, async () => new Blob(['# Original article\n\nOriginal methods and results.\n\n<script>alert(1)</script>'], { type: 'text/plain' }));
+  assert.equal(blobs.length, 0);
+  assert.match(text(renderer.toJSON()), /Baixar original \(XML\)/);
+  assert.ok(renderer.root.findAllByType('a').some(node => node.props.href === 'https://publisher.test/original'));
+  await act(async () => { await button(renderer, 'Ler original no CorVIA').props.onClick(); });
+  assert.deepEqual(blobs, ['/scientific-reading/estudo/canonical-study/sources/b/original-text']);
+  assert.match(text(renderer.toJSON()), /Original methods and results/);
+  assert.match(text(renderer.toJSON()), /diagramação da publicação não é reproduzida/);
+  assert.match(text(renderer.toJSON()), /tabelas são apresentadas em texto/);
+  assert.match(text(renderer.toJSON()), /Materiais suplementares não estão incluídos/);
+  assert.equal(renderer.root.findAllByType('script').length, 0);
+});
+
+test('internal original refuses a read URL for another source and preserves archive download', async t => {
+  const f = fixture();
+  f.sources = [{ ...f.sources[1], original: { ...f.sources[1].original, read_url: '/api/scientific-reading/estudo/trial/sources/other/original-text' } }];
+  const { renderer, blobs } = await mount(t, async () => f);
+  assert.equal(button(renderer, 'Ler original no CorVIA'), undefined);
+  assert.ok(button(renderer, 'Baixar original'));
+  assert.deepEqual(blobs, []);
+});
+
+test('an original response cannot cross a source selection while its file is loading', async t => {
+  const f = fixture();
+  f.sources[1].original.read_url = '/api/scientific-reading/estudo/trial/sources/b/original-text';
+  let finish;
+  const pending = new Promise(resolve => { finish = resolve; });
+  const { renderer } = await mount(t, async () => f, {}, async () => pending);
+  await act(async () => { renderer.root.findByType('select').props.onChange({ target: { value: 'b' } }); });
+  await act(async () => { button(renderer, 'Ler original no CorVIA').props.onClick(); });
+  await act(async () => { renderer.root.findByType('select').props.onChange({ target: { value: 'a' } }); });
+  await act(async () => { finish(new Blob(['OBSOLETE ORIGINAL'])); });
+  assert.doesNotMatch(text(renderer.toJSON()), /OBSOLETE ORIGINAL/);
+});

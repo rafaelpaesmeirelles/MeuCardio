@@ -181,6 +181,7 @@ jobs:
           import path from 'node:path';
 
           const { measureMobileSpaces, validateMobileSpaces } = await import(`file://${process.env.GITHUB_WORKSPACE}/frontend/scripts/mobile-spaces-geometry.mjs`);
+          const { inspectFavoritesAndApprovals } = await import(`file://${process.env.GITHUB_WORKSPACE}/frontend/scripts/visual-favorites-approvals.mjs`);
           const base = 'http://127.0.0.1:8080';
           const out = path.join(process.env.GITHUB_WORKSPACE, 'visual-qa', 'screenshots');
           const reportPath = path.join(process.env.GITHUB_WORKSPACE, 'visual-qa', 'report.json');
@@ -504,6 +505,8 @@ jobs:
             const moreVisible = await mobile.page.locator('.spaces-catalog').isVisible();
             if (!moreVisible) report.failures.push('mobile/catálogo: catálogo de funções não abriu');
             await inspectMobileSpacesMatrix(mobile.page);
+            await inspectFavoritesAndApprovals({ page: mobile.page, base, out, report,
+              approvalTitle: 'Mudanças de Conduta Baseadas em Novas Evidências para Aprovação' });
             await mobile.context.close();
             if (report.scientificIntelligenceSurfaces?.length !== 10) report.failures.push(`scientific intelligence surfaces incomplete: ${report.scientificIntelligenceSurfaces?.length || 0}/10`);
           } catch (error) {
