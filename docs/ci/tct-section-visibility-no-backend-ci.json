@@ -4,12 +4,12 @@
   "repository": "rafaelpaesmeirelles/MeuCardio",
   "head_branch": "codex/fix-tct-section-visibility-20260910",
   "base_sha": "02ad2d6a38301667a82eb60444b531d1e1fcd4e1",
-  "pull_request": null,
+  "pull_request": 919,
   "authorization": {
     "date": "2026-09-10",
     "instruction": "Sem novo ci backend",
     "mode": "authorized-no-backend-ci",
-    "source": "Persistent explicit user instruction, reaffirmed during the general Tudo com Tudo section-visibility correction.",
+    "source": "Explicit user instruction recorded earlier in this session and still in force; the subsequent section-visibility correction request did not revoke it. The user did not repeat the instruction in this subtask.",
     "scope": "Only this correction PR once sealed and its exact confirmed main integration; no automatic inheritance from PR918."
   },
   "local_evidence": [
