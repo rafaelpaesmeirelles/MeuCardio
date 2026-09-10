@@ -44,7 +44,10 @@ const Carregando = () => <p role="status">Carregando</p>;
 const Erro = ({ mensagem }) => <p role="alert">{mensagem}</p>;
 const Vazio = ({ titulo }) => <p>{titulo}</p>;
 `);
-source = source.replace('"../lib/searchAnchors"', '"./searchAnchors.mjs"');
+source = source.replace('import TctDiseaseOverview from "../components/TctDiseaseOverview";', `
+const TctDiseaseOverview = ({ disease }) => <aside>{disease.name}</aside>;
+`);
+source = source.replace('"../lib/searchAnchors"' , '"./searchAnchors.mjs"');
 await writeFile(path.join(temp, 'Busca.mjs'), transpile(source, 'Busca.tsx'));
 const { default: Busca } = await import(pathToFileURL(path.join(temp, 'Busca.mjs')));
 
@@ -155,4 +158,113 @@ test('a primary drug uses the paginated search and does not request a second eco
   assert.match(nodeText(renderer.toJSON()), /Medicamento identificado/);
   assert.equal(calls.filter(url => url === '/drug-insights/olmesartana').length, 1);
   assert.equal(calls.filter(url => url.startsWith('/relacionados/') || url.startsWith('/grafo/')).length, 0);
+});
+
+const section = (renderer, key) => renderer.root.findByProps({ id: `secao-${key}` });
+const sectionMore = (renderer, key) => section(renderer, key).findByType('button');
+const click = async button => act(async () => { void button.props.onClick(); await tick(); });
+
+test('principal disease stays in its section and absent initial sections expose their exact totals', async t => {
+  const disease = { slug: 'fibrilacao-atrial', name: 'Fibrilação atrial', summary: 'Resumo', area: 'Arritmias', category: 'Arritmia' };
+  const { renderer, calls } = await mount(t, 'fibrilação atrial', async url => {
+    if (url.startsWith('/drugs?')) return { items: [] };
+    const p = new URL(url, 'https://test.invalid').searchParams;
+    if (p.has('secao')) return page([
+      { ...item('sbc-2025', 'Diretriz brasileira 2025'), secao: 'diretriz' },
+      { ...item('esc-2024', 'ESC 2024'), secao: 'diretriz' },
+    ], 2, null, { por_secao: { diretriz: 2 } });
+    return page([item(disease.slug, disease.name, 'doenca'), item('fa-idoso', 'FA no idoso', 'doenca')], 4, 2,
+      { primary_disease: disease, supplementary_groups: [], por_secao: { doenca: 2, diretriz: 2 } });
+  });
+  assert.equal(section(renderer, 'doenca').findAllByType('a').length, 2);
+  assert.match(nodeText(section(renderer, 'doenca')), /Doença principal/);
+  assert.match(nodeText(section(renderer, 'diretriz')), /0 de 2 resultados carregados/);
+  assert.equal(calls.filter(url => url.includes('secao=')).length, 0, 'sections load only when requested');
+  await click(sectionMore(renderer, 'diretriz'));
+  assert.match(nodeText(section(renderer, 'diretriz')), /2 de 2 resultados carregados/);
+  assert.match(nodeText(section(renderer, 'diretriz')), /ESC 2024/);
+  assert.match(nodeText(section(renderer, 'doenca')), /2 de 2 resultados carregados/);
+  assert.equal(section(renderer, 'diretriz').findAllByType('button').length, 0);
+  assert.ok(calls.some(url => /secao=diretriz/.test(url) && /offset=0/.test(url)));
+});
+
+test('section and global pagination merge concurrently without duplicates and keep independent cursors', async t => {
+  const globalPage = deferred(), sectionPage = deferred();
+  const initial = { ...item('a', 'Diretriz inicial'), secao: 'diretriz' };
+  const shared = { ...item('b', 'Diretriz compartilhada'), secao: 'diretriz' };
+  const { renderer, calls } = await mount(t, 'tema', async url => {
+    if (url.startsWith('/drugs?')) return { items: [] };
+    const p = new URL(url, 'https://test.invalid').searchParams;
+    if (p.has('secao')) return p.get('offset') === '0' ? sectionPage.promise
+      : page([{ ...item('c', 'Diretriz final'), secao: 'diretriz' }], 3);
+    if (p.has('offset')) return globalPage.promise;
+    return page([initial], 4, 1, { por_secao: { diretriz: 3, exame: 1 } });
+  });
+  await click(sectionMore(renderer, 'diretriz'));
+  await click(more(renderer));
+  await act(async () => {
+    globalPage.resolve(page([shared, item('eco', 'Eco', 'exame')], 4, 3));
+    sectionPage.resolve(page([initial, shared], 3, 2, { por_secao: { diretriz: 3 } }));
+    await tick();
+  });
+  assert.equal(section(renderer, 'diretriz').findAllByType('a').length, 2);
+  assert.match(nodeText(section(renderer, 'exame')), /1 de 1 resultados carregados/);
+  assert.match(nodeText(section(renderer, 'diretriz')), /2 de 3 resultados carregados/);
+  await click(sectionMore(renderer, 'diretriz'));
+  assert.equal(section(renderer, 'diretriz').findAllByType('a').length, 3);
+  assert.ok(calls.some(url => url.includes('secao=diretriz') && url.includes('offset=2')));
+  assert.ok(calls.some(url => !url.includes('secao=') && url.includes('offset=1')));
+  assert.equal(more(renderer), undefined, 'all unique results already loaded through either path');
+});
+
+test('a stale section response cannot enter a new subject or unlock its pending section', async t => {
+  const old = deferred(), current = deferred();
+  const { renderer } = await mount(t, 'alfa', async url => {
+    if (url.startsWith('/drugs?')) return { items: [] };
+    const p = new URL(url, 'https://test.invalid').searchParams;
+    if (p.has('secao')) return p.get('q') === 'alfa' ? old.promise : current.promise;
+    return page([item(`${p.get('q')}-eco`, 'Ecocardiografia', 'exame')], 2, 1,
+      { por_secao: { exame: 1, diretriz: 1 } });
+  });
+  await click(sectionMore(renderer, 'diretriz'));
+  await submit(renderer, 'beta');
+  assert.equal(Boolean(sectionMore(renderer, 'diretriz').props.disabled), false);
+  await click(sectionMore(renderer, 'diretriz'));
+  await act(async () => { old.resolve(page([{ ...item('old', 'Diretriz obsoleta'), secao: 'diretriz' }])); await tick(); });
+  assert.doesNotMatch(nodeText(renderer.toJSON()), /Diretriz obsoleta/);
+  assert.equal(sectionMore(renderer, 'diretriz').props.disabled, true);
+  await act(async () => { current.resolve(page([{ ...item('new', 'Diretriz beta'), secao: 'diretriz' }])); await tick(); });
+  assert.match(nodeText(section(renderer, 'diretriz')), /Diretriz beta/);
+});
+
+test('server sections take precedence and legacy underscore fronts retain their destinations', async t => {
+  const { renderer } = await mount(t, 'tema', async url => url.startsWith('/drugs?') ? { items: [] } : page([
+    { ...item('classificado', 'Título sem palavras de classificação'), secao: 'diretriz' },
+    item('caso', 'Tratamento em caso clínico', 'caso_clinico'),
+    item('paciente', 'Tratamento para pacientes', 'material_paciente'),
+    item('triagem', 'Protocolo de triagem', 'triagem_sintoma'),
+  ]));
+  assert.equal(section(renderer, 'diretriz').findByType('a').props.href, '/biblioteca/classificado');
+  assert.equal(section(renderer, 'caso_clinico').findByType('a').props.href, '/casos-clinicos/caso');
+  assert.equal(section(renderer, 'material_paciente').findByType('a').props.href, '/material-paciente/paciente');
+  assert.equal(section(renderer, 'triagem_sintoma').findByType('a').props.href, '/triagem-sintomas?slug=triagem');
+});
+
+test('a failed section request keeps its cursor and can retry without duplicate in-flight calls', async t => {
+  let requests = 0;
+  const { renderer, calls } = await mount(t, 'tema', async url => {
+    if (url.startsWith('/drugs?')) return { items: [] };
+    if (url.includes('secao=')) {
+      if (++requests === 1) throw Error('temporary');
+      return page([{ ...item('d', 'Diretriz recuperada'), secao: 'diretriz' }]);
+    }
+    return page([], 1, 0, { por_secao: { diretriz: 1 } });
+  });
+  const first = sectionMore(renderer, 'diretriz');
+  await act(async () => { first.props.onClick(); first.props.onClick(); await tick(); });
+  assert.equal(requests, 1);
+  assert.equal(section(renderer, 'diretriz').findAllByProps({ role: 'alert' }).length, 1);
+  await click(sectionMore(renderer, 'diretriz'));
+  assert.match(nodeText(section(renderer, 'diretriz')), /Diretriz recuperada/);
+  assert.equal(calls.filter(url => url.includes('secao=') && url.includes('offset=0')).length, 2);
 });

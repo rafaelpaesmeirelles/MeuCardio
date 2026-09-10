@@ -3,10 +3,11 @@ import { Link, useSearchParams } from "react-router-dom";
 import { api, ApiError, PaginaDe } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 import { exactSearchAnchors } from "../lib/searchAnchors";
+import TctDiseaseOverview from "../components/TctDiseaseOverview";
 
-type Res = { slug: string; title: string; kind: string; frente?: string; theme: string | null; snippet: string; ano?: number; rank?: number; relation_type?: string | null; context_only?: boolean };
+type Res = { slug: string; title: string; kind: string; frente?: string; secao?: Secao; theme: string | null; snippet: string; ano?: number; rank?: number; relation_type?: string | null; context_only?: boolean };
 type PrimaryDisease = { slug: string; name: string; summary: string; area: string; category: string };
-type SearchResponse = { results: Res[]; total: number; next_offset?: number | null; por_frente: Record<string, number>; primary_disease?: PrimaryDisease | null; primary_drug?: { slug: string; generic_name: string } | null; supplementary_groups?: Rel[] };
+type SearchResponse = { results: Res[]; total: number; next_offset?: number | null; por_frente: Record<string, number>; por_secao?: Partial<Record<Secao, number>>; primary_disease?: PrimaryDisease | null; primary_drug?: { slug: string; generic_name: string } | null; supplementary_groups?: Rel[] };
 type Drug = { slug: string; generic_name: string; drug_class: string; brand_names?: string[]; commercial_names?: string[] };
 type Insight = Drug & {
   mechanism: string | null; presentations: string[]; dosing: Record<string, unknown>;
@@ -88,7 +89,10 @@ const REL_LABELS: Record<string, string> = {
 };
 const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 function secao(r: Res): Secao {
-  const f = norm(r.frente || r.kind);
+  if (r.secao && r.secao in SECOES) return r.secao;
+  const exact = r.frente || r.kind;
+  if (exact in SECOES) return exact as Secao;
+  const f = norm(exact);
   if (f in SECOES) return f as Secao;
   if (/^(estudo|estudos|study)$/.test(f)) return "estudo";
   if (/^(evidencia|evidencias|evidence)$/.test(f)) return "evidencia";
@@ -194,34 +198,30 @@ function PainelDrug({ d }: { d: Insight }) {
   </section>;
 }
 
-function PainelDoenca({ disease }: { disease: PrimaryDisease }) {
-  return <section className="cartao">
-    <header className="tct-head"><div><p className="eyebrow">Definição clínica</p><h2>{disease.name}</h2><p>{disease.category} · {disease.area}</p></div><Link to={`/doencas/${encodeURIComponent(disease.slug)}`}>Abrir guia completo →</Link></header>
-    <article className="cartao tct-topic"><p className="eyebrow">O que é</p><h3>Definição da doença</h3><p>{disease.summary}</p></article>
-  </section>;
-}
-
 export default function Busca() {
   const [params, setParams] = useSearchParams();
   const inicial = params.get("q") ?? params.get("tema")?.replaceAll("-", " ") ?? "";
   const [q, setQ] = useState(inicial), [assunto, setAssunto] = useState(inicial.trim());
   const [res, setRes] = useState<Res[] | null>(null), [drug, setDrug] = useState<Insight | null>(null), [primaryDisease, setPrimaryDisease] = useState<PrimaryDisease | null>(null), [rel, setRel] = useState<Rel[]>([]);
   const [total, setTotal] = useState(0), [nextOffset, setNextOffset] = useState<number | null>(null);
-  const [porFrente, setPorFrente] = useState<Record<string, number>>({});
+  const [porSecao, setPorSecao] = useState<Partial<Record<Secao, number>>>({});
+  const [sectionPages, setSectionPages] = useState<Partial<Record<Secao, { next: number | null; loading: boolean; error?: string }>>>({});
+  const pendingSections = useRef(new Set<Secao>());
+  const pendingGlobal = useRef(false);
   const [loading, setLoading] = useState(false), [loadingMore, setLoadingMore] = useState(false), [erro, setErro] = useState(""), [aviso, setAviso] = useState("");
   const seq = useRef(0);
 
   async function buscar(valor: string) {
     const termo = valor.trim(); if (termo.length < 2) return;
     const id = ++seq.current;
-    setLoading(true); setLoadingMore(false); setErro(""); setAviso(""); setDrug(null); setPrimaryDisease(null); setRel([]); setTotal(0); setNextOffset(null); setPorFrente({}); setAssunto(termo); setParams({ q: termo }, { replace: true });
+    setLoading(true); setLoadingMore(false); setErro(""); setAviso(""); setDrug(null); setPrimaryDisease(null); setRel([]); setTotal(0); setNextOffset(null); setPorSecao({}); setSectionPages({}); pendingSections.current.clear(); pendingGlobal.current = false; setAssunto(termo); setParams({ q: termo }, { replace: true });
     const [s, ds] = await Promise.allSettled([
       api.get<SearchResponse>(`/search?q=${encodeURIComponent(termo)}&limit=100`),
       api.get<PaginaDe<Drug>>(`/drugs?q=${encodeURIComponent(termo)}`),
     ]);
     if (id !== seq.current) return;
     if (s.status === "rejected") { setRes(null); setErro(s.reason instanceof ApiError ? s.reason.message : "Não foi possível consultar o conteúdo."); setLoading(false); return; }
-    const itens = s.value.results; const disease = s.value.primary_disease ?? null; setRes(itens); setPrimaryDisease(disease); setTotal(s.value.total ?? itens.length); setNextOffset(s.value.next_offset ?? null); setPorFrente(s.value.por_frente ?? {});
+    const itens = s.value.results; const disease = s.value.primary_disease ?? null; setRes(itens); setPrimaryDisease(disease); setTotal(s.value.total ?? itens.length); setNextOffset(s.value.next_offset ?? null); setPorSecao(s.value.por_secao ?? Object.fromEntries(Object.entries(s.value.por_frente ?? {}).filter(([key]) => key in SECOES)));
     let medicamentoSlug: string | null = s.value.primary_drug?.slug ?? null;
     if (ds.status === "rejected") setAviso("Conteúdo carregado; catálogo de medicamentos indisponível.");
     else {
@@ -289,8 +289,9 @@ export default function Busca() {
   }
 
   async function carregarMais() {
-    if (nextOffset == null || loadingMore || assunto.length < 2) return;
+    if (nextOffset == null || pendingGlobal.current || assunto.length < 2) return;
     const id = seq.current;
+    pendingGlobal.current = true;
     setLoadingMore(true);
     try {
       const pagina = await api.get<SearchResponse>(`/search?q=${encodeURIComponent(assunto)}&limit=100&offset=${nextOffset}`);
@@ -305,13 +306,40 @@ export default function Busca() {
     } catch (e) {
       if (id === seq.current) setAviso(e instanceof ApiError ? e.message : "Não foi possível carregar a próxima página.");
     } finally {
-      if (id === seq.current) setLoadingMore(false);
+      if (id === seq.current) { pendingGlobal.current = false; setLoadingMore(false); }
+    }
+  }
+  async function carregarSecao(section: Secao) {
+    const offset = sectionPages[section]?.next;
+    if (offset === null || pendingSections.current.has(section) || assunto.length < 2) return;
+    const id = seq.current;
+    pendingSections.current.add(section);
+    setSectionPages((current) => ({ ...current, [section]: { next: offset ?? 0, loading: true } }));
+    try {
+      const query = new URLSearchParams({ q: assunto, secao: section, limit: "50", offset: String(offset ?? 0) });
+      const page = await api.get<SearchResponse>(`/search?${query}`);
+      if (id !== seq.current) return;
+      setRes((current) => {
+        const items = new Map((current ?? []).map((item) => [`${item.frente || item.kind}:${item.slug}`, item]));
+        page.results.forEach((item) => items.set(`${item.frente || item.kind}:${item.slug}`, item));
+        return [...items.values()];
+      });
+      setRel((current) => mergeGraphGroups([{ grupos: current, total: 0 }], page.results));
+      setSectionPages((current) => ({ ...current, [section]: { next: page.next_offset ?? null, loading: false } }));
+    } catch (error) {
+      if (id === seq.current) setSectionPages((current) => ({ ...current, [section]: {
+        next: offset ?? 0, loading: false,
+        error: error instanceof ApiError ? error.message : "Não foi possível carregar esta seção. Tente novamente.",
+      } }));
+    } finally {
+      if (id === seq.current) pendingSections.current.delete(section);
     }
   }
   useEffect(() => { if (inicial.trim().length > 1) void buscar(inicial); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, []);
 
   const grupos = new Map<Secao, Res[]>();
-  (res ?? []).filter((r) => !primaryDisease || r.frente !== "doenca" || r.slug !== primaryDisease.slug).forEach((r) => { const s = secao(r); grupos.set(s, [...(grupos.get(s) ?? []), r]); });
+  (Object.keys(SECOES) as Secao[]).forEach((section) => { if ((porSecao[section] ?? 0) > 0) grupos.set(section, []); });
+  (res ?? []).forEach((r) => { const s = secao(r); grupos.set(s, [...(grupos.get(s) ?? []), r]); });
   const ordenados = [...grupos].sort((a, b) => primaryDisease ? ORDEM_DOENCA[a[0]] - ORDEM_DOENCA[b[0]] : Number(SECOES[a[0]][3]) - Number(SECOES[b[0]][3]));
   const timeline = (res ?? []).filter((r) => ["estudo", "evidencia"].includes(secao(r)) && r.ano).sort((a, b) => (b.ano ?? 0) - (a.ano ?? 0));
 
@@ -320,18 +348,31 @@ export default function Busca() {
       <form className="tct-search" role="search" onSubmit={(e) => { e.preventDefault(); void buscar(q); }}><input type="search" aria-label="Assunto" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ex.: olmesartana, fibrilação atrial…" /><button className="botao" disabled={q.trim().length < 2 || loading}>{loading ? "Buscando…" : "Conectar"}</button></form>
     </header>
     {erro && <Erro mensagem={erro} />}{aviso && <p className="cartao" role="status">{aviso}</p>}{loading && <Carregando texto="Conectando o conhecimento…" />}
-    {!loading && primaryDisease && <PainelDoenca disease={primaryDisease} />}
+    {!loading && primaryDisease && <TctDiseaseOverview disease={primaryDisease} />}
     {!loading && drug && <PainelDrug d={drug} />}
-    {!loading && res && (res.length > 0 || rel.length > 0) && <section className="cartao">
-      <header className="tct-head"><div><p className="eyebrow">{primaryDisease ? "Sequência clínica" : "Mapa do assunto"}</p><h2>{primaryDisease ? "Da definição à decisão" : "Conteúdo conectado"}</h2><p>{res.length}{total > res.length ? ` de ${total}` : ""} resultados por frente de conhecimento</p></div></header>
-      <nav className="tct-nav" aria-label="Frentes de conhecimento">{ordenados.map(([s, xs]) => <a className="selo" href={`#secao-${s}`} key={s}>{SECOES[s][0]} · {porFrente[s] ?? xs.length}</a>)}</nav>
+    {!loading && res && (total > 0 || res.length > 0 || rel.length > 0) && <section className="cartao">
+      <header className="tct-head"><div><p className="eyebrow">{primaryDisease ? "Sequência clínica" : "Mapa do assunto"}</p><h2>{primaryDisease ? "Da definição à decisão" : "Conteúdo conectado"}</h2><p>{res.length} de {total} resultados carregados por frente de conhecimento</p></div></header>
+      <nav className="tct-nav" aria-label="Frentes de conhecimento">{ordenados.map(([s, xs]) => <a className="selo" href={`#secao-${s}`} key={s}>{SECOES[s][0]} · {porSecao[s] ?? xs.length}</a>)}</nav>
       <div className="grade grade--2 tct-grid">
-        {ordenados.map(([s, xs]) => <section className="cartao tct-group" id={`secao-${s}`} key={s}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{SECOES[s][0]}</h3><p>{SECOES[s][1]}</p></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.frente || r.kind}-${r.slug}`}><small>{r.theme || SECOES[s][0]} · {ROTULOS[r.frente || r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{connectionLabel(r) && <small>{connectionLabel(r)}</small>}{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
+        {ordenados.map(([s, xs]) => {
+          const count = porSecao[s] ?? xs.length;
+          const page = sectionPages[s];
+          return <section className="cartao tct-group" id={`secao-${s}`} key={s} aria-busy={page?.loading || undefined}>
+            <header><p className="eyebrow">{xs.length} de {count} resultados carregados</p><h3>{SECOES[s][0]}</h3><p>{SECOES[s][1]}</p></header>
+            <div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.frente || r.kind}-${r.slug}`}>
+              <small>{r.theme || SECOES[s][0]} · {ROTULOS[r.frente || r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small>
+              <strong>{r.title}</strong>{r.frente === "doenca" && r.slug === primaryDisease?.slug && <span className="selo">Doença principal</span>}
+              {connectionLabel(r) && <small>{connectionLabel(r)}</small>}{r.snippet && <p><Snippet texto={r.snippet} /></p>}
+            </Link>)}</div>
+            {page?.error && <p role="alert">{page.error}</p>}
+            {xs.length < count && page?.next !== null && <button className="botao botao--secundario" type="button" disabled={page?.loading} aria-label={`Ver mais nesta seção: ${SECOES[s][0]}`} onClick={() => void carregarSecao(s)}>{page?.loading ? "Carregando seção…" : "Ver mais nesta seção"}</button>}
+          </section>;
+        })}
         {rel.map((g) => <section className="cartao tct-group" key={`grafo-${g.tipo}`}><header><p className="eyebrow">Conteúdo conectado</p><h3>{g.rotulo || REL_LABELS[g.tipo] || g.tipo}</h3>{g.rota_lista && <Link to={g.rota_lista}>Ver área →</Link>}</header><div>{g.itens.map((x) => <Link className="tct-row" to={x.rota} key={`${g.tipo}-${x.slug}`}><small>{x.context_only || x.relation_scope === "structured_clinical_topic" ? "Mesmo tema clínico" : x.relation_scope === "clinical_match" ? "Relação contextual determinística" : "Relação direta"}</small><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>)}</div></section>)}
       </div>
-      {nextOffset != null && <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}><button className="botao botao--secundario" type="button" disabled={loadingMore} onClick={() => void carregarMais()}>{loadingMore ? "Conectando mais conteúdo…" : `Carregar mais · ${Math.max(total - res.length, 0)} restantes`}</button></div>}
+      {nextOffset != null && res.length < total && <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}><button className="botao botao--secundario" type="button" disabled={loadingMore} onClick={() => void carregarMais()}>{loadingMore ? "Conectando mais conteúdo…" : `Carregar mais · ${Math.max(total - res.length, 0)} restantes`}</button></div>}
     </section>}
     {!loading && timeline.length > 0 && <section className="cartao tct-time"><p className="eyebrow">Timeline</p><h2>Estudos e evidências ao longo do tempo</h2><ol>{timeline.map((r) => <li key={`${r.kind}-${r.slug}`}><time>{r.ano}</time><Link to={rota(r)}><small>{SECOES[secao(r)][0]}</small><strong>{r.title}</strong></Link></li>)}</ol></section>}
-    {!loading && res?.length === 0 && rel.length === 0 && !drug && !primaryDisease && <Vazio titulo="Nada encontrado" acao="Tente o princípio ativo ou um sinônimo clínico." />}
+    {!loading && res?.length === 0 && total === 0 && rel.length === 0 && !drug && !primaryDisease && <Vazio titulo="Nada encontrado" acao="Tente o princípio ativo ou um sinônimo clínico." />}
   </main>;
 }
