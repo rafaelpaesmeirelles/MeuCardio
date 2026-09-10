@@ -1,0 +1,590 @@
+{
+  "release_id": "scientific-20260910-benzatina",
+  "prepared_at": "2026-09-10T21:41:54.457296+00:00",
+  "authorization": "Publicação emergencial de todo o conteúdo revisado autorizada pelo proprietário na tarefa.",
+  "source_count": 7,
+  "ready_source_count": 7,
+  "ready": true,
+  "pending_source_indices": [],
+  "errors": [],
+  "items": [
+    {
+      "kind": "documento",
+      "data": {
+        "title": "Segurança da Penicilina Benzatina na Cardiopatia Reumática Grave: Diferenciando Reação Alérgica, Resposta Vasovagal e Comprometimento Cardiovascular",
+        "slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+        "theme": "Febre reumática",
+        "kind": "protocolo",
+        "summary": "Reações graves após penicilina benzatina são raras. Relatos em cardiopatia reumática avançada levantam a hipótese de comprometimento cardiovascular precipitado por resposta vasovagal, mas não excluem anafilaxia. A síntese integra estratificação AHA 2022, OMS 2024 e reconhecimento WAO 2020: suspeita de anafilaxia exige adrenalina IM sem atraso, inclusive na valvopatia grave.",
+        "review_status": "revisado",
+        "source_refs": [
+          "Sanyahumbi A, Ali S, Benjamin IJ, Karthikeyan G, Okello E, Sable CA, Taubert K, Wyber R, Zuhlke L, Carapetis JR, Beaton AZ; on behalf of the American Heart Association. Penicillin Reactions in Patients With Severe Rheumatic Heart Disease: A Presidential Advisory From the American Heart Association. J Am Heart Assoc. 2022 Mar 1;11(5):e024517. DOI: 10.1161/JAHA.121.024517. PMID: 35049336. PMCID: PMC9075066.",
+          "Marantelli S, Hand R, Carapetis J, Beaton A, Wyber R. Severe adverse events following benzathine penicillin G injection for rheumatic heart disease prophylaxis: cardiac compromise more likely than anaphylaxis. Heart Asia. 2019;11:e011191. DOI: 10.1136/heartasia-2019-011191. PMID: 31297163. PMCID: PMC6590992.",
+          "Birru EM, Alene KA, Manning L, Batty KT, Moore BR. Severe adverse reactions to benzathine penicillin G in rheumatic heart disease: A systematic review and meta-analysis. PLoS One. 2025 May 7;20(5):e0322873. DOI: 10.1371/journal.pone.0322873. PMID: 40333929. PMCID: PMC12057857.",
+          "Weldegerima AH, Yadeta D, Yemane M, Wehr G, Leuner C, Berhane S, Leul A, Dukessa T, Haileamlak A. Clinical and echocardiographic characteristics of patients who developed adverse events following Benzathine penicillin G injection for secondary prophylaxis of rheumatic heart disease: a cross-sectional study from three university hospitals in Ethiopia. Cardiovasc J Afr. 2025 Oct 27;36(4):590-600. DOI: 10.5830/CVJA-2025-080. PMID: 41718701.",
+          "Bray JJ, Thompson S, Seitler S, Ali SA, Yiu J, Salehi M, Ahmad M, Pelone F, Gashau H, Shokraneh F, Ahmed N, Cassandra M, Marijon E, Celermajer DS, Providencia R. Long-term antibiotic prophylaxis for prevention of rheumatic fever recurrence and progression to rheumatic heart disease. Cochrane Database Syst Rev. 2024 Sep 23;9(9):CD015779. DOI: 10.1002/14651858.CD015779. PMID: 39312290. PMCID: PMC11418974.",
+          "Yantie NPVK, Gunawijaya E. Utility of lidocaine in reducing pain of intramuscular benzathine penicillin G in children with rheumatic heart disease: A randomized, double-blind crossover study. Ann Pediatr Cardiol. 2024 Nov-Dec;17(6):420-424. DOI: 10.4103/apc.apc_161_24. PMID: 40352419. PMCID: PMC12063984.",
+          "Pelone F, Kwok B, Ahmed S, Kilic Y, Ali SA, Ahmed N, Ahmad M, Bray JJ, Shokraneh F, Cassandra M, Celermajer DS, Marijon E, Providencia R. Local anaesthetic to reduce injection pain in patients who are prescribed intramuscular benzathine penicillin G: a systematic review and meta-analysis. EClinicalMedicine. 2024 Sep 4;76:102817. DOI: 10.1016/j.eclinm.2024.102817. PMID: 39290636. PMCID: PMC11404083.",
+          "Cardona V et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13:100472. DOI 10.1016/j.waojou.2020.100472. https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/",
+          "World Health Organization. WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. 2024. Section 4.7. https://www.ncbi.nlm.nih.gov/books/NBK609686/",
+          "Ralph AP, Noonan S, Boardman C, Halkon C, Currie BJ. Prescribing for people with acute rheumatic fever. Aust Prescr. 2017;40:70–75. DOI 10.18773/austprescr.2017.011. PMID 28507400. https://australianprescriber.tg.org.au/articles/prescribing-for-people-with-acute-rheumatic-fever.html"
+        ],
+        "tags": [],
+        "source_tier": "A",
+        "gaps": [],
+        "published": true,
+        "body_md": "# Segurança da Penicilina Benzatina na Cardiopatia Reumática Grave: Diferenciando Reação Alérgica, Resposta Vasovagal e Comprometimento Cardiovascular\n\n## Por que este documento existe\n\nA penicilina G benzatina (BPG) intramuscular é a primeira escolha da OMS para profilaxia secundária da febre reumática. A prevenção de recorrências complementa o cuidado da cardiopatia reumática (CR). O problema que este documento aborda é distinto: **óbitos que ocorrem nos minutos seguintes a uma aplicação de BPG foram historicamente atribuídos a anafilaxia — e um corpo crescente de evidência, revisado formalmente pela American Heart Association (AHA) em um *advisory* presidencial de 2022, descreve eventos sem características clássicas de anafilaxia em pacientes com valvopatia reumática grave, levantando uma hipótese cardiovascular alternativa.**\n\nO medo de reações graves já levou à suspensão ou proibição do uso de BPG em partes da Índia e da África, dificultando a manutenção da profilaxia nessas regiões. Entender a diferença clínica entre reação alérgica, resposta vasovagal e comprometimento cardiovascular hemodinâmico é o que permite tratar cada uma corretamente — sem atrasar adrenalina intramuscular quando há suspeita de anafilaxia. **Ausência de urticária ou de sibilos não exclui anafilaxia; colapso ou hipotensão após alérgeno conhecido ou altamente provável podem ser sua apresentação. Cardiopatia grave não contraindica adrenalina IM nessa situação.** [WAO 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/).\n\n## O que a evidência mostra: não é sempre anafilaxia\n\nPublicações descrevendo óbitos após BPG em pacientes com CR datam de mais de 50 anos, e já deixavam claro que nem toda reação grave é anafilática. Uma série de 2019 reuniu **10 relatos de reações**, dos quais **8 foram fatais**, um teve ressuscitação bem-sucedida e outro não necessitou tratamento; três preencheram critérios de Brighton nível 1 para anafilaxia. A seleção retrospectiva de relatos não permite estimar a proporção de todas as reações à BPG que é alérgica. Não preencher Brighton nível 1 tampouco exclui anafilaxia: esse nível expressa certeza para classificação de casos, não uma exigência para iniciar tratamento. Uma revisão do registro de cardiopatia reumática de Cartum (Sudão), com mais de 800 crianças acompanhadas, descreveu 3 óbitos súbitos e imediatos após BPG em poucos meses — nenhuma criança apresentou sintoma de anafilaxia além do colapso, e as três tinham insuficiência mitral grave com insuficiência cardíaca associada.\n\nUm estudo transversal mais recente, publicado em 2025 a partir de três hospitais universitários etíopes, revisou 5 casos de eventos adversos com BPG (4 fatais): todos eram do sexo feminino, todos tinham evidência clínica de insuficiência cardíaca e cardiopatia reumática ecocardiograficamente avançada — incluindo regurgitação tricúspide grave e hipertensão pulmonar moderada a grave, além da lesão valvar principal (estenose mitral grave, regurgitação mitral grave, ou combinações de lesões aórtica e mitral). **Nenhum dos 5 casos preencheu critério de nível 1 de Brighton para anafilaxia**, o que não exclui diagnóstico clínico com menor certeza documental. Os autores propõem, como hipótese — não como fato estabelecido —, que a combinação de lesão valvar grave **com** insuficiência cardíaca manifesta, e não a gravidade da lesão valvar isoladamente, possa ser o fator de risco central; essa é uma refinação do modelo de risco do *advisory* de 2022, que já apontava a gravidade valvar como o principal fator, mas sem essa ênfase específica na descompensação concomitante.\n\n### O mecanismo proposto — plausível, não comprovado\n\nO *advisory* da AHA propõe que dor ou medo relacionados à aplicação desencadeiam uma cascata de resposta vasovagal — hipotensão, em alguns casos bradicardia, síncope — que leva rapidamente à queda de perfusão coronariana, arritmia ventricular e morte súbita cardíaca, em um coração sem reserva hemodinâmica para tolerar essa queda de pré-carga e pós-carga. **Os próprios autores afirmam explicitamente que não há ainda evidência direta que comprove esse mecanismo** — a proposta se apoia em quatro argumentos indiretos: (1) concentração dos desfechos fatais relatados em CR grave; (2) discrepância entre a raridade de eventos adversos em BPG administrada para sífilis (predominantemente em mulheres, sem cardiopatia estrutural) e os relatos concentrados em CR; (3) resposta frequentemente ausente ao tratamento padrão de anafilaxia, incluindo adrenalina, nos casos graves relatados; (4) ausência de outros sinais clássicos descritos nos relatos selecionados (respiratórios, cutâneos, gastrointestinais além de náusea) nos relatos de óbito súbito em CR grave.\n\n## Diferenciação clínica: alergia, vasovagal e comprometimento cardiovascular\n\nA tabela abaixo resume padrões clínicos que podem auxiliar a diferenciação, descritos pelo *advisory* da AHA (2022), que por sua vez adapta critérios já usados para diferenciar síncope vasovagal de anafilaxia após vacinação.\n\n| Domínio | Resposta vasovagal | Anafilaxia |\n|---|---|---|\n| Início | Geralmente imediato, em minutos ou durante a própria administração | Geralmente em até 15 minutos, mas pode ocorrer em horas |\n| Respiratório | Respiração geralmente normal (pode estar superficial, mas não é trabalhosa) | Tosse, sibilo, rouquidão, estridor, sinais de desconforto respiratório (taquipneia, cianose, tiragem) ou edema de via aérea superior |\n| Cardiovascular | Bradicardia possível, pulso periférico fraco ou ausente **com pulso carotídeo forte**, hipotensão geralmente transitória que melhora em decúbito, perda de consciência que melhora ao deitar | Taquicardia, pulso carotídeo fraco ou ausente, hipotensão sustentada que não melhora apenas com mudança postural, perda de consciência sem melhora ao deitar |\n| Pele | Palidez generalizada, pele fria e úmida | Prurido, eritema generalizado, urticária ou angioedema |\n| Gastrointestinal | Náusea e vômito (achado que **não discrimina** entre os dois quadros) | Náusea e vômito, podendo associar cólica e diarreia mais proeminentes |\n| Neurológico | Sensação de desmaio ou tontura | Ansiedade intensa e sensação de morte iminente |\n\n**Esses padrões não são critérios de exclusão nem devem ser usados como uma pontuação.** Pulso carotídeo palpável, frequência cardíaca ou resposta postural isolados não descartam anafilaxia. Urticária isolada também não basta para classificá-la. A WAO considera altamente provável anafilaxia com manifestação cutânea/mucosa associada a comprometimento respiratório, circulatório ou gastrointestinal grave; ou com hipotensão, broncoespasmo ou comprometimento laríngeo após alérgeno conhecido ou altamente provável, mesmo sem sinais de pele. Se a reação sugere anafilaxia em evolução, tratar prontamente, sem aguardar certeza laboratorial ou classificação de Brighton.\n\nA gravidade dos desfechos, porém, não demonstra a etiologia: doença cardíaca também pode agravar uma reação anafilática. A ausência de resposta à ressuscitação e a falta de sinais documentados não provam um mecanismo vasovagal. Essas limitações impedem usar a hipótese para adiar o tratamento da anafilaxia.\n\n### O terceiro cenário: quando o vasovagal evolui para comprometimento cardiovascular\n\nEm pacientes com reserva cardiovascular já esgotada — valvopatia grave, disfunção sistólica de ventrículo esquerdo, ou sintomas de insuficiência cardíaca (classe funcional NYHA III ou IV) —, o mesmo estímulo vasovagal que em um paciente de baixo risco resolveria espontaneamente em decúbito pode precipitar queda de perfusão coronariana e colapso hemodinâmico verdadeiro. O mecanismo proposto pode se sobrepor a outras causas de choque. **Recuperação incompleta, hipotensão persistente ou deterioração exigem avaliação de emergência, incluindo anafilaxia e arritmia, sem presumir vasovagal benigno.** A preocupação do advisory com taquicardia e enchimento ventricular se refere a adrenalina administrada sem indicação; não justifica retê-la na suspeita de anafilaxia. Na parada cardiorrespiratória, aplicar protocolo de ressuscitação; a contraindicação de uso reflexo no vasovagal não se aplica à adrenalina indicada em RCP.\n\n## Estratificação de risco (Tabela 1 do *advisory*, AHA 2022)\n\n| Risco baixo | Risco elevado * |\n|---|---|\n| Cardiopatia reumática *borderline* | Insuficiência aórtica grave |\n| Insuficiência aórtica leve a moderada | Estenose mitral grave |\n| Insuficiência mitral grave, **assintomática**, com função ventricular preservada † | Estenose aórtica grave |\n| Insuficiência mitral leve a moderada; estenose mitral leve a moderada | Disfunção ventricular (FE < 50%) |\n| Pós-cirúrgico/pós-intervenção, com no máximo doença residual moderada e função de VE preservada | Sintomas graves (NYHA III ou IV) ‡ |\n\n\\* A seleção de risco deve se basear no componente valvar mais grave (ex.: insuficiência mitral leve, mas insuficiência aórtica grave → categorizar pelo risco elevado). Classificação de gravidade valvar conforme ACC/AHA.\n† Pacientes com insuficiência mitral grave isolada formam o maior e mais heterogêneo grupo, frequentemente oscilando entre as duas categorias — decisão individualizada, caso a caso.\n‡ Inclui sintomas por fatores não estruturais associados, como fibrilação atrial e anemia.\n\n**Conduta recomendada pelo advisory**: pacientes de risco baixo, sem história de alergia ou anafilaxia à penicilina, continuam com BPG intramuscular como primeira escolha, dada sua eficácia superior. Para pacientes de risco elevado, o *advisory* propõe pela primeira vez que **a profilaxia oral deve ser fortemente considerada**, quando disponível e acessível de forma confiável — os autores julgam que, neste subgrupo específico, o risco de comprometimento cardiovascular relacionado à injeção pode superar o benefício teórico adicional da via intramuscular, já que o próprio objetivo da profilaxia (evitar progressão para doença valvar grave) já não se aplica da mesma forma quando a doença grave já está instalada.\n\n### O custo em eficácia da troca para via oral — e por que essa comparação é incompleta\n\nA revisão Cochrane 2024 encontrou menor recorrência com penicilina IM do que com antibiótico oral (RR 0,07; IC 95%0,02–0,26; dois ensaios, 395 participantes; certeza moderada). Grande parte da evidência é antiga e tem limitações metodológicas. Essa comparação não é um ensaio específico de segurança em cardiopatia reumática avançada; a escolha de via nesse grupo exige ponderação de risco, acesso e adesão.\n\nA OMS 2024 mantém BPG IM como primeira escolha, mas aceita penicilina oral como alternativa, incluindo situações de doença grave, barreiras de acesso, dor que ameaça adesão ou preferência informada. A via oral exige esquema contínuo e apoio à adesão; não corresponde a abandonar a profilaxia. [OMS 2024, seção 4.7](https://www.ncbi.nlm.nih.gov/books/NBK609686/).\n\n## O que a evidência mais recente (após 2022) acrescenta\n\nUma revisão sistemática e metanálise publicada em 2025 (PLoS One), reunindo 9 estudos (8 coortes e 1 ensaio clínico randomizado), com 11.587 participantes; seis dos nove estudos informaram o denominador de aplicações, totalizando 154.760 injeções, estimou a incidência agregada de reações graves:\n\n- Incidência combinada de eventos adversos graves: **9,7 por 10.000 pacientes** (IC 95%: 0,1–29,2) e **1,1 por 10.000 injeções** (IC 95%: 0,4–2,2);\n- **6 reações fatais foram descritas no total** — 0,05% dos pacientes e 24% de todos os eventos adversos graves relatados — **e todas ocorreram em pacientes com cardiopatia reumática grave**, identificando um grupo que merece atenção, sem estabelecer incidência própria por gravidade ou provar o mecanismo dos óbitos.\n\nDos 25 eventos graves, 19 foram classificados como anafiláticos nos estudos originais. Portanto, a metanálise não sustenta afirmar que a maioria de todas as reações graves seja vasovagal. Há heterogeneidade, subnotificação potencial e estudos de diferentes épocas; os valores não são uma taxa definitiva para um serviço ou para o Brasil.\n\nOs próprios autores dessa metanálise de 2025 concluem que os eventos são raros, mas que a raridade não deve ser usada para minimizar o risco concentrado no subgrupo de doença grave — e pedem pesquisa longitudinal de melhor qualidade e sistemas formais de notificação de eventos adversos, exatamente a mesma prioridade de pesquisa que o *advisory* de 2022 já havia identificado como não atendida.\n\n### As estratégias de redução de dor ganharam evidência de maior qualidade\n\nO *advisory* de 2022 recomendava, com base em evidência indireta (extrapolada de estudos sobre síncope pós-vacinal e doação de sangue), reduzir a dor e a ansiedade da aplicação como estratégia de mitigação vasovagal — sem demonstrar diretamente prevenção de colapso ou morte. Duas publicações posteriores fornecem evidência direta, específica para BPG:\n\n- Um ensaio randomizado, duplo-cego, cruzado, publicado em 2024 com 42 crianças, mostrou que a lidocaína como diluente reduziu a dor aos 5 minutos após a aplicação de BPG de forma estatisticamente significativa (escala visual analógica: mediana 2 versus 5, p = 0,001), sem qualquer evento adverso relatado.\n- Uma revisão sistemática e metanálise de 2024 (EClinicalMedicine, financiada pela OMS), reunindo 8 ensaios e 489 pacientes (151 com cardiopatia reumática), confirmou com evidência de qualidade moderada (GRADE) que lidocaína misturada à BPG reduz a dor imediatamente após a injeção (diferença de médias -3,84 pontos; IC 95% -6,19 a -1,48; quatro estudos; I² 98%). A estimativa com mepivacaína veio de um ensaio em sífilis e não deve receber o mesmo valor numérico — sem nenhum evento adverso grave relatado nos ensaios incluídos, embora as amostras individuais sejam pequenas demais para avaliar formalmente segurança cardiovascular.\n\nA evidência direta sustenta redução de dor, **não prevenção comprovada de síncope, colapso ou morte**. A mistura deve respeitar bula, apresentação e compatibilidade do produto, alergias e protocolo farmacêutico; não alterar automaticamente seringas pré-cheias. A OMS 2024 faz recomendação condicional para anestésico local, com baixa certeza.\n\n## Boas práticas de administração e redução do risco vasovagal (Tabela 2 do *advisory*, AHA 2022)\n\n**Prática padrão para toda aplicação de BPG:**\n- Aplicação por profissional treinado em técnica intramuscular e no reconhecimento e tratamento de anafilaxia e de reações vasovagais;\n- Uso de técnicas de redução de dor e tranquilização, com orientação prévia ao paciente/responsável sobre sinais e sintomas de reação vasovagal;\n- Volume de diluente no mínimo recomendado pelo fabricante;\n- Adrenalina e recursos de atendimento à anafilaxia acessíveis, com equipe treinada; se o serviço não consegue responder a uma reação grave, reavaliar local/via antes da aplicação;\n- Se o paciente ou o profissional reconhecer sinais/sintomas de pré-síncope, deitar o paciente imediatamente e, **apenas em pacientes de baixo risco**, considerar manobras de contrapressão isométrica (cruzar as pernas, contrair as mãos);\n- Monitorização por, no mínimo, 30 minutos após a aplicação, observando sinais de anafilaxia ou síncope vasovagal;\n- Sistema local de notificação de eventos adversos relacionados à BPG.\n\n**Estratégias adicionais específicas para redução de risco vasovagal** (a impossibilidade de implementar todas elas em determinado serviço não deve, por si só, impedir a administração de BPG):\n- Minimizar a dor da aplicação (pressão firme no local por 10 segundos antes da injeção, compressa fria antes, analgésico simples como paracetamol antes da injeção, e anestésico local somente conforme compatibilidade da apresentação e protocolo);\n- Evitar desidratação; o advisory cita ingestão de água 30–60 minutos antes. Volume deve ser individualizado para idade, peso, função ventricular e restrição hídrica; não prescrever carga fixa de líquido a crianças ou pacientes congestos;\n- Garantir que o paciente tenha se alimentado, ao menos uma pequena quantidade, na hora anterior à aplicação;\n- Aplicar a BPG com o paciente em decúbito dorsal, o que limita o acúmulo venoso em membros inferiores ajustando a posição à tolerância respiratória; não manter em pé alguém com tontura ou pré-síncope;\n- Manter o paciente em decúbito por 5 a 10 minutos após a aplicação, com retorno lento à posição em pé.\n\n**Reconhecimento de sintomas pré-sincopais**: os profissionais que aplicam BPG devem ser treinados a reconhecer sudorese, tontura, náusea, zumbido, visão turva ou reduzida, sensação súbita de calor ou frio, palidez e dilatação pupilar — e orientar os pacientes a reconhecê-los também. Diante desses sintomas: deitar imediatamente, elevar as pernas quando possível, e aplicar compressa fria e úmida na face e no pescoço. **Manobras de contrapressão isométrica (handgrip, cruzar as pernas) são geralmente contraindicadas em pacientes com insuficiência cardíaca e em pacientes com estenose valvar crítica, e devem ficar reservadas ao grupo de baixo risco.**\n\n## Testagem de alergia — o que o advisory esclarece\n\nO teste cutâneo com BPG diluída antes de cada aplicação é uma prática amplamente difundida em partes da África, no Irã e no Nepal, possivelmente decorrente de uma recomendação da OMS de 2001. **O *advisory* de 2022 é explícito: não há evidência de que essa prática seja útil, e ela não pode ser recomendada como rotina.** O teste cutâneo formal (com benzilpeniciloil-polilisina e determinantes menores) tem alto valor preditivo negativo para anafilaxia, mas normalmente não está disponível em serviços de atenção primária ou secundária em contextos de poucos recursos — e mesmo onde disponível, não é recomendado como rotina para pacientes sem história de sensibilidade prévia à penicilina.\n\n## Aplicação prática — reconhecimento e conduta inicial\n\n1. Antes de qualquer aplicação, classificar o paciente como risco baixo ou elevado usando a Tabela 1 acima — isto já deveria estar refletido na escolha de via/esquema (ver o [documento de duração da profilaxia secundária por categoria de risco](/biblioteca/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco) e o [fluxograma de escolha do antibiótico e duração](/biblioteca/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema)).\n2. Adotar as boas práticas padrão de administração e as estratégias de redução de dor/ansiedade em toda aplicação, inclusive em pacientes de baixo risco, ajustando cada medida à condição clínica.\n3. Diante de sintoma agudo, avaliar via aérea, respiração, circulação e consciência. Se houver suspeita de anafilaxia, administrar adrenalina IM sem demora e acionar emergência; não esperar urticária, piora ou confirmação laboratorial. Ver o [fluxograma de reação aguda](/biblioteca/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta).\n4. Um episódio vasovagal típico, com recuperação rápida e completa, requer decúbito e observação. Em alto risco, evitar contrapressão isométrica. Recuperação incompleta não é motivo para aguardar passivamente: monitorizar e tratar causas de choque, incluindo anafilaxia.\n5. Após qualquer evento adverso significativo, reavaliar com a equipe se a via oral de profilaxia é mais segura para aquele paciente especificamente, documentar e notificar o evento conforme o sistema local disponível.\n\n## Tudo com Tudo\n\n- [Fluxograma: reação aguda à penicilina benzatina na cardiopatia reumática — diferenciação e conduta](/biblioteca/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta) — Operacionaliza em árvore de decisão a diferenciação clínica descrita neste documento.\n- [Profilaxia Secundária Antibiótica na Febre Reumática: Duração por Categoria de Risco](/biblioteca/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco) — Define esquema e duração por gravidade; este documento detalha e fundamenta a frase sobre reação adversa rara que aquele documento já continha.\n- [Fluxograma: Profilaxia secundária da febre reumática — escolha do antibiótico e duração por gravidade](/biblioteca/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema) — Árvore de escolha de fármaco/duração por gravidade; este documento cobre o momento clínico seguinte, a segurança da própria aplicação.\n- [Adesão à profilaxia da febre reumática e estudos de penicilina subcutânea](/biblioteca/adesao-a-profilaxia-secundaria-barreiras-e-a-injecao-subcutanea-de-longo-intervalo-scip) — A dor e o medo da aplicação intramuscular, discutidos ali como barreira de adesão, também são abordados nas estratégias de mitigação vasovagal descritas aqui.\n- [Fluxograma: síncope reflexa versus cardíaca — diagnóstico diferencial](/biblioteca/fluxograma-sincope-reflexa-versus-cardiaca-diagnostico-diferencial) — Amplia o diagnóstico diferencial de síncope; não substitui os critérios de anafilaxia no contexto da injeção.\n- [Síndrome de Kounis: síndrome coronariana aguda alérgica](/biblioteca/sindrome-de-kounis-sindrome-coronariana-aguda-alergica) — Descreve outro mecanismo em que uma reação de hipersensibilidade produz comprometimento cardiovascular direto (vasoespasmo coronariano), diagnóstico diferencial a considerar quando o quadro não se encaixa integralmente em vasovagal simples nem em anafilaxia clássica.\n- [Epinefrina (adrenalina)](/biblioteca/epinefrina-adrenalina) — Fármaco de primeira linha na suspeita de anafilaxia; valvopatia grave não autoriza atrasar a dose IM. Vasovagal simples não é indicação de adrenalina."
+      }
+    },
+    {
+      "kind": "documento",
+      "data": {
+        "title": "Fluxograma: Reação Aguda à Penicilina Benzatina na Cardiopatia Reumática — Diferenciação e Conduta",
+        "slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+        "theme": "Febre reumática",
+        "kind": "fluxograma",
+        "summary": "Reconhecimento imediato de reação após penicilina benzatina, com avaliação de parada, anafilaxia e recuperação vasovagal. Anafilaxia pode ocorrer sem sinais cutâneos; suspeita clínica exige adrenalina IM sem atraso, inclusive em valvopatia grave. Recuperação incompleta requer suporte de emergência.",
+        "review_status": "revisado",
+        "source_refs": [
+          "Sanyahumbi A et al. J Am Heart Assoc. 2022;11:e024517. DOI 10.1161/JAHA.121.024517. PMID 35049336. https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/",
+          "Cardona V et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13:100472. DOI 10.1016/j.waojou.2020.100472. https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/"
+        ],
+        "tags": [],
+        "source_tier": "A",
+        "gaps": [],
+        "published": true,
+        "body_md": "# Fluxograma: Reação Aguda à Penicilina Benzatina na Cardiopatia Reumática — Diferenciação e Conduta\n\nA prioridade é reconhecer comprometimento de via aérea, respiração e circulação. **Ausência de urticária não exclui anafilaxia; urticária isolada não a confirma.** Os padrões vasovagais da AHA 2022 auxiliam a avaliação, mas não substituem os critérios clínicos e o tratamento precoce descritos pela WAO 2020.\n\n## Árvore de decisão\n\n```mermaid\nflowchart TD\n  R0[\"Sintoma agudo durante ou após BPG:<br/>interromper aplicação, chamar ajuda,<br/>avaliar consciência, respiração e circulação\"] --> D0{\"Parada cardiorrespiratória?\"}\n  D0 -->|\"Sim\"| C0([\"Iniciar RCP e usar DEA/desfibrilador;<br/>acionar suporte avançado.<br/>Seguir protocolo de parada, incluindo<br/>adrenalina quando indicada em RCP.\"])\n  D0 -->|\"Não\"| D1{\"Suspeita de anafilaxia?<br/>Pele/mucosa + comprometimento respiratório,<br/>circulatório ou gastrointestinal grave;<br/>OU hipotensão, broncoespasmo ou alteração<br/>laríngea após alérgeno conhecido/provável,<br/>mesmo SEM manifestação cutânea\"}\n  D1 -->|\"Sim ou reação sugestiva em evolução\"| C1([\"Adrenalina IM na face anterolateral da coxa,<br/>sem demora; acionar emergência.<br/>Monitorizar, ofertar O2 quando indicado<br/>e apoiar circulação com reavaliação frequente.<br/>Valvopatia grave não é motivo para reter<br/>adrenalina IM na suspeita de anafilaxia.\"])\n  D1 -->|\"Não há suspeita clínica neste momento\"| D2{\"Episódio típico vasovagal,<br/>com recuperação rápida e COMPLETA<br/>da consciência e da pressão ao deitar?\"}\n  D2 -->|\"Não, recuperação incompleta ou piora\"| C2([\"Não classificar como vasovagal simples.<br/>Suporte de emergência, ECG/monitorização,<br/>avaliação de anafilaxia, arritmia e outras<br/>causas de choque. Se suspeita de anafilaxia<br/>surgir, adrenalina IM imediatamente.<br/>Não esperar rash ou exame confirmatório.\"])\n  D2 -->|\"Sim\"| D3{\"Alto risco: EM/EA/IA graves,<br/>FEVE menor que 50% ou NYHA III/IV?\"}\n  D3 -->|\"Não\"| C3([\"Manter decúbito, elevar pernas se tolerado<br/>e observar por pelo menos 30 min.<br/>Contrapressão apenas se consciente e capaz.<br/>Não indicar adrenalina para vasovagal simples;<br/>reavaliar se sintomas voltarem ou mudarem.\"])\n  D3 -->|\"Sim\"| C4([\"Monitorização e avaliação médica;<br/>evitar contrapressão em IC/estenose crítica.<br/>Deterioração exige suporte de emergência.<br/>Após estabilização, discutir segurança<br/>da via IM e possibilidade de profilaxia oral.\"])\n  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;\n  class C0,C1,C2,C3,C4 conduta;\n```\n\n## Adrenalina e reconhecimento clínico\n\nNa suspeita de anafilaxia, a dose profissional é **0,01 mg/kg IM, máximo 0,5 mg por dose**, usando solução de **1 mg/mL**, na face anterolateral da coxa. Repetir em **5–15 min** se necessário, com monitorização e suporte. A via intravenosa em bolus não é o tratamento inicial da anafilaxia e traz risco de arritmia; infusão para anafilaxia refratária exige equipe experiente e ambiente monitorizado. Na parada cardíaca, segue-se o protocolo próprio de RCP.\n\nOs critérios auxiliam o diagnóstico, sem exigir espera por todos os sinais. Comprometimento circulatório após alérgeno altamente provável pode ser anafilaxia mesmo sem urticária ou broncoespasmo. Não aguardar confirmação de Brighton, triptase ou resposta a medidas posturais para iniciar adrenalina quando a suspeita já existe.\n\nUrticária isolada, com respiração e circulação preservadas, requer avaliação e observação de possível evolução, mas não é automaticamente anafilaxia. Pulso carotídeo palpável e melhora parcial ao deitar também não a excluem.\n\n## Cuidados com a posição e a observação\n\nManter posição segura, ajustada à respiração e ao nível de consciência; não permitir levantar ou caminhar durante instabilidade. Decúbito costuma ser adequado, mas dispneia intensa ou inconsciência exigem posicionamento e proteção de via aérea apropriados. Reposição de volume deve ser individualizada, sobretudo na cardiopatia com congestão.\n\nOs **30 min** correspondem à observação de rotina após BPG e não a uma regra de alta após anafilaxia, choque ou reação prolongada. Esses quadros exigem observação e atendimento conforme gravidade, resposta e risco de recorrência.\n\nA estratificação cardíaca deve ocorrer antes da aplicação. O alto risco muda a prevenção e o nível de suporte necessário; não altera a indicação de adrenalina IM quando há suspeita de anafilaxia.\n\n## Tudo com Tudo\n\n- [Segurança da Penicilina Benzatina na Cardiopatia Reumática Grave: Diferenciando Reação Alérgica, Resposta Vasovagal e Comprometimento Cardiovascular](/biblioteca/seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular) — Síntese clínica completa da qual esta árvore deriva, com a tabela de diferenciação e a estratificação de risco na íntegra.\n- [Fluxograma: Profilaxia secundária da febre reumática — escolha do antibiótico e duração por gravidade](/biblioteca/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema) — Decisão pré-injeção entre via intramuscular e oral, que D3 nesta árvore pressupõe já ter sido considerada.\n- [Fluxograma: síncope reflexa versus cardíaca — diagnóstico diferencial](/biblioteca/fluxograma-sincope-reflexa-versus-cardiaca-diagnostico-diferencial) — Amplia a avaliação de síncope fora do contexto de injeção; não substitui os critérios de anafilaxia.\n- [Síndrome de Kounis: síndrome coronariana aguda alérgica](/biblioteca/sindrome-de-kounis-sindrome-coronariana-aguda-alergica) — Diagnóstico diferencial a considerar na folha C2, quando o padrão não se encaixa integralmente em vasovagal nem em anafilaxia clássica.\n- [Epinefrina (adrenalina)](/biblioteca/epinefrina-adrenalina) — Tratamento de primeira linha quando há suspeita de anafilaxia, inclusive com doença valvar grave."
+      }
+    },
+    {
+      "kind": "caso_clinico",
+      "data": {
+        "slug": "sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta",
+        "titulo": "Tontura e desmaio logo após a injeção de penicilina benzatina: é alergia?",
+        "tema": "Febre reumática",
+        "nivel": "básico",
+        "enunciado": "Menino de 12 anos, em profilaxia secundária regular de febre reumática há 2 anos, sem lesão valvar residual ao ecocardiograma mais recente, com função ventricular normal e assintomático. Cerca de 2 minutos após receber a injeção intramuscular de penicilina G benzatina, fica pálido, sua frio e refere tontura, perdendo brevemente a consciência. O pulso carotídeo é palpável e cheio. Não há tosse, sibilo, rouquidão, urticária ou edema de face. Ao ser colocado em decúbito dorsal com as pernas elevadas, recupera a consciência em menos de um minuto e a pressão arterial normaliza.",
+        "pergunta": "Qual é a conduta mais adequada neste momento?",
+        "opcoes": [
+          "Administrar adrenalina intramuscular imediatamente, por suspeita de anafilaxia",
+          "Manter decúbito e observação, com reavaliação clínica; considerar contrapressão somente após recuperação da consciência, sem indicação atual de adrenalina para o episódio vasovagal completamente resolvido",
+          "Suspender definitivamente a penicilina benzatina e trocar para eritromicina, por reação adversa confirmada",
+          "Não é necessária nenhuma conduta adicional nem observação, já que os sintomas já melhoraram ao deitar"
+        ],
+        "resposta_correta": 1,
+        "explicacao": "O conjunto do episódio favorece síncope vasovagal: palidez, sudorese, breve perda de consciência e recuperação rápida e completa da consciência e da pressão ao deitar. A ausência de urticária isoladamente não exclui anafilaxia, e o pulso carotídeo não é um teste de exclusão. Neste caso, sem comprometimento persistente, cabe decúbito, observação por pelo menos 30 min e reavaliação. Contrapressão só pode ser tentada por paciente consciente e capaz. Se surgir suspeita de anafilaxia, hipotensão recorrente ou nova deterioração, acionar emergência e administrar adrenalina IM sem esperar sinais de pele. O episódio resolvido não demonstra alergia à penicilina nem exige troca definitiva de fármaco. AHA 2022 e WAO 2020 fundamentam a diferenciação e essas precauções.",
+        "source_refs": [
+          "Sanyahumbi A et al. J Am Heart Assoc. 2022;11:e024517. DOI 10.1161/JAHA.121.024517. PMID 35049336. https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/",
+          "Cardona V et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13:100472. DOI 10.1016/j.waojou.2020.100472. https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/"
+        ],
+        "review_status": "revisado",
+        "published": true,
+        "revisao": "Caso lido integralmente. Corrigida contradição sem lesão residual/borderline; contrapressão somente após despertar. Resposta mantém vasovagal pela recuperação completa, sem usar ausência de rash como exclusão de anafilaxia. Incluída reavaliação e adrenalina imediata se suspeita surgir; vínculos a síntese/fluxo/profilaxia revisados."
+      }
+    },
+    {
+      "kind": "caso_clinico",
+      "data": {
+        "slug": "colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica",
+        "titulo": "Recuperação incompleta após colapso na aplicação de penicilina benzatina: como agir na estenose mitral grave?",
+        "tema": "Febre reumática",
+        "nivel": "avançado",
+        "enunciado": "Mulher de 22 anos com cardiopatia reumática mitral grave (estenose mitral grave, área valvar 0,9 cm², em fila para cirurgia valvar), classe funcional NYHA III, em uso de penicilina G benzatina intramuscular a cada 21 dias. Minutos após a aplicação, apresenta palidez súbita, sudorese fria e perde a consciência. O exame mostra pulso carotídeo cheio e preservado, sem estridor, sibilo, urticária ou angioedema. Ao ser colocada em decúbito, a pressão arterial melhora parcialmente, mas a recuperação é mais lenta que o esperado, e a equipe discute se deve administrar adrenalina empiricamente \"por segurança\", dado o histórico de óbitos súbitos descritos na literatura após BPG em cardiopatia reumática grave.",
+        "pergunta": "Qual é a conduta mais apropriada diante de recuperação incompleta, considerando AHA 2022 e os critérios de anafilaxia WAO 2020?",
+        "opcoes": [
+          "Administrar adrenalina intramuscular imediatamente, já que a paciente tem cardiopatia reumática grave e histórico de óbito súbito é bem descrito nesse grupo",
+          "Acionar suporte de emergência, monitorizar e avaliar imediatamente anafilaxia, arritmia e outras causas de choque; administrar adrenalina IM sem atraso se houver suspeita de anafilaxia, mesmo sem rash, e evitar contrapressão isométrica neste contexto",
+          "Realizar manobra de contrapressão isométrica (handgrip) imediatamente, como em qualquer síncope vasovagal, para acelerar a recuperação",
+          "Reduzir a dose da próxima aplicação de penicilina benzatina pela metade, para minimizar o risco de nova reação"
+        ],
+        "resposta_correta": 1,
+        "explicacao": "Recuperação apenas parcial não permite fechar o diagnóstico de síncope vasovagal simples. Valvopatia grave e NYHA III aumentam a vulnerabilidade hemodinâmica, mas ausência de urticária ou sibilos não exclui anafilaxia. Hipotensão após alérgeno conhecido ou altamente provável pode bastar para suspeitá-la. A paciente precisa de avaliação de emergência, monitorização e suporte, incluindo ECG e investigação de causas de choque. Se há suspeita de anafilaxia, adrenalina IM é primeira linha e não deve ser retida pelo receio de taquicardia ou pela estenose mitral; não esperar confirmação de Brighton ou aparecimento de rash. A advertência da AHA contra adrenalina sem indicação não é contraindicação ao tratamento da anafilaxia nem da parada cardíaca. Contrapressão isométrica deve ser evitada em insuficiência cardíaca/estenose valvar crítica. Depois de estabilizar, revisar o episódio, alergia, condições de aplicação e possibilidade de profilaxia oral, sem reduzir por conta própria a dose de BPG.",
+        "source_refs": [
+          "Sanyahumbi A et al. J Am Heart Assoc. 2022;11:e024517. DOI 10.1161/JAHA.121.024517. PMID 35049336. https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/",
+          "Cardona V et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13:100472. DOI 10.1016/j.waojou.2020.100472. https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/"
+        ],
+        "review_status": "revisado",
+        "published": true,
+        "revisao": "Corrigido ponto crítico do caso: recuperação parcial e ausência de rash não excluem anafilaxia. Resposta correta agora exige avaliação emergencial e adrenalina IM sem atraso na suspeita, em vez de a proibir por falta de sinais cutâneos/respiratórios. Ressalva da AHA sobre uso sem indicação preservada sem atrasar tratamento salvador. Título atualizado e vínculos reais adicionados."
+      }
+    },
+    {
+      "kind": "documento",
+      "data": {
+        "title": "Profilaxia Secundária Antibiótica na Febre Reumática: Duração por Categoria de Risco",
+        "slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+        "theme": "Febre reumática",
+        "kind": "protocolo",
+        "review_status": "revisado",
+        "source_refs": [
+          "Menzies School of Health Research (ARF/RHD Writing Group). Australian guideline for the prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease. Edition 3.3, August 2025. Chapter 10, Tables 10.2–10.3, pages 155–157 and 160. https://www.rhdaustralia.org.au/wp-content/uploads/2025/09/Australian-ARF-RHD-Guideline-2025_August_1.pdf",
+          "World Health Organization. WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. 2024. Section 4.7. https://www.ncbi.nlm.nih.gov/books/NBK609686/",
+          "Sanyahumbi A et al. J Am Heart Assoc. 2022;11:e024517. DOI 10.1161/JAHA.121.024517. PMID 35049336. https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/",
+          "Cardona V et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13:100472. DOI 10.1016/j.waojou.2020.100472. https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/",
+          "Sociedade Brasileira de Cardiologia et al. Diretrizes brasileiras para o diagnóstico, tratamento e prevenção da febre reumática. Arq Bras Cardiol. 2009;93(3 supl.4):1–18. Seção de profilaxia secundária. https://www.scielo.br/j/abc/a/BgMJ45rh8cKSsHpK7bTbjwM/?format=html"
+        ],
+        "summary": "Escolha da via, do intervalo e da duração da profilaxia secundária, distinguindo ausência de envolvimento cardíaco, cardite prévia e gravidade atual da cardiopatia reumática.",
+        "published": true,
+        "gaps": [],
+        "source_tier": "A",
+        "tags": [],
+        "body_md": "# Profilaxia secundária antibiótica na febre reumática: duração por categoria de risco\n\n## Três decisões distintas\n\nA profilaxia secundária previne novos episódios de febre reumática e ajuda a limitar o agravamento valvar. O episódio inicial também pode causar dano importante. A prevenção de recorrência complementa o tratamento da valvopatia e da insuficiência cardíaca.\n\nÉ preciso escolher **fármaco e via**, **intervalo entre doses** e **duração total**. A duração depende da história de febre reumática, do envolvimento cardíaco durante o episódio e da doença atual. Não deve ser definida apenas pelo termo “cardite leve/moderada” anotado anos antes.\n\nAs tabelas de duração abaixo sintetizam a diretriz australiana de agosto de 2025, atualizando a referência australiana de 2017 usada neste documento. São uma referência identificada; a prescrição no Brasil deve ser conciliada com o protocolo local e a avaliação clínica. A OMS de 2024 não estabelece um único prazo para todos os pacientes.\n\n## Escolha do esquema\n\nA penicilina G benzatina intramuscular é a primeira opção na diretriz da OMS. No esquema australiano de 2025, são **1.200.000 UI se peso ≥20 kg** ou **600.000 UI se <20 kg**, por aplicação intramuscular profunda. Crianças muito pequenas exigem planejamento pediátrico da administração. Confirmar a apresentação, técnica e dose prescrita; não converter automaticamente uma regra de erradicação estreptocócica aguda em regra de profilaxia.\n\nO intervalo australiano habitual é **28 dias**. A diretriz admite **21 dias** em recorrência apesar de adesão completa ao esquema de 28 dias ou quando uma recorrência teria consequências particularmente graves, como doença reumática grave ou cirurgia valvar prévia. Já a diretriz brasileira de 2009 utiliza o intervalo de **21 dias**. Registrar explicitamente o protocolo e o intervalo escolhidos; não alternar entre eles sem reavaliação.\n\nA **penicilina V oral** é uma alternativa aceitável quando a via intramuscular não é adequada, inclusive por acesso, dor que ameaça a adesão, preferência informada ou risco cardiovascular elevado. A tabela australiana usa **250 mg a cada 12 horas**. É necessário planejar a adesão diária; a alternativa oral não significa interromper a prevenção.\n\nUma história de alergia deve ser caracterizada, sem presumir que toda reação após injeção seja alérgica. Em alergia grave confirmada, a tabela australiana apresenta **eritromicina 250 mg a cada 12 horas**. A seleção do antibiótico alternativo deve considerar protocolo local, faixa etária, interações e tolerância; os esquemas alternativos brasileiros não são idênticos aos australianos. Não usar penicilina oral para contornar uma alergia verdadeira à penicilina.\n\n## Duração quando há episódio documentado de febre reumática\n\nUsar o prazo que terminar **mais tarde** entre tempo após o último episódio e idade mínima, seguido de reavaliação:\n\n| Situação clínica | Referência australiana de 2025 |\n| --- | --- |\n| Febre reumática definida, sem envolvimento cardíaco: ECG e ecocardiograma normais durante o episódio e seguimento apropriado | Pelo menos 5 anos após o último episódio ou até 21 anos |\n| Envolvimento cardíaco documentado, ainda que sem lesão valvar persistente; ou cardiopatia reumática leve estabelecida | Pelo menos 10 anos após o último episódio ou até 21 anos |\n| Cardiopatia reumática moderada, sem complicações clínicas que a classifiquem como estágio D | Pelo menos 10 anos após o último episódio ou até 35 anos |\n| Doença grave ou estágio D, incluindo complicações como insuficiência cardíaca, arritmia ou cirurgia valvar | Pelo menos 10 anos após o último episódio ou até 40 anos; considerar prolongamento individual |\n\nA categoria “moderada” descreve doença reumática atual; **não significa cardite moderada sem lesão residual**. Da mesma forma, doença leve estabelecida não deve ser agrupada com um episódio que nunca apresentou envolvimento cardíaco. Na classificação australiana atual, alterações de condução atrioventricular durante a febre reumática também influenciam essa distinção.\n\nO quadro não abrange diagnóstico apenas possível/provável de febre reumática nem alterações ecocardiográficas limítrofes detectadas em rastreamento; essas situações têm critérios próprios na diretriz. Cardiopatia descoberta **sem episódio reconhecido** também segue outra contagem, a partir do diagnóstico da doença. Não presumir um episódio agudo inexistente nem aplicar automaticamente “10 anos desde o último surto”.\n\n## Segurança e reavaliação\n\nEm valvopatia grave, disfunção ventricular ou sintomas avançados, discutir a via oral e o local seguro de administração, conforme AHA 2022 e OMS 2024. A doença grave pode aumentar simultaneamente a importância da prevenção e o risco de uma reação à injeção; não impõe automaticamente a via intramuscular.\n\nAnafilaxia e colapso cardiovascular são possibilidades distintas. **A ausência de manifestações cutâneas não exclui anafilaxia. Na suspeita, administrar adrenalina intramuscular prontamente**, inclusive em valvopatia grave, e acionar atendimento de emergência. A hipótese de mecanismo vasovagal não deve atrasar essa conduta.\n\nA data calculada é um marco de reavaliação, não uma ordem automática de suspensão. Rever exame clínico, ecocardiograma, recorrências, estabilidade da lesão, exposição ao estreptococo, adesão e preferências. Cirurgia valvar não elimina por si só a indicação. Em doença avançada e após cirurgia, a duração pode precisar ser estendida; em adultos com diagnóstico tardio sem febre reumática reconhecida, a decisão é individualizada.\n\n## Tudo com Tudo\n\n- [Segurança da penicilina benzatina na cardiopatia reumática grave](/biblioteca/seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular) — seleção da via e prevenção de reações.\n- [Reação aguda: diferenciação e conduta](/biblioteca/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta) — reconhecimento de anafilaxia e resposta à instabilidade.\n- [Fluxograma de esquema e duração](/biblioteca/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema) — aplicação das decisões de profilaxia."
+      }
+    },
+    {
+      "kind": "documento",
+      "data": {
+        "title": "Fluxograma: Profilaxia secundária da febre reumática — escolha do antibiótico e duração por gravidade",
+        "slug": "fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema",
+        "theme": "Febre reumática",
+        "kind": "fluxograma",
+        "review_status": "revisado",
+        "source_refs": [
+          "Menzies School of Health Research (ARF/RHD Writing Group). Australian guideline for the prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease. Edition 3.3, August 2025. Chapter 10, Tables 10.2–10.3, pages 155–157 and 160. https://www.rhdaustralia.org.au/wp-content/uploads/2025/09/Australian-ARF-RHD-Guideline-2025_August_1.pdf",
+          "World Health Organization. WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. 2024. Section 4.7. https://www.ncbi.nlm.nih.gov/books/NBK609686/",
+          "Sanyahumbi A et al. J Am Heart Assoc. 2022;11:e024517. DOI 10.1161/JAHA.121.024517. PMID 35049336. https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/",
+          "Cardona V et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13:100472. DOI 10.1016/j.waojou.2020.100472. https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/",
+          "Sociedade Brasileira de Cardiologia et al. Diretrizes brasileiras para o diagnóstico, tratamento e prevenção da febre reumática. Arq Bras Cardiol. 2009;93(3 supl.4):1–18. Seção de profilaxia secundária. https://www.scielo.br/j/abc/a/BgMJ45rh8cKSsHpK7bTbjwM/?format=html"
+        ],
+        "summary": "Fluxo para escolher uma via segura e definir o marco de reavaliação da profilaxia secundária após febre reumática documentada, conforme referência australiana de 2025.",
+        "published": true,
+        "gaps": [],
+        "source_tier": "A",
+        "tags": [],
+        "body_md": "# Fluxograma: profilaxia secundária da febre reumática — esquema e duração\n\nOrganizar a profilaxia exige duas decisões: **qual esquema o paciente pode manter com segurança** e **por quanto tempo**. O fluxo utiliza a diretriz australiana de agosto de 2025, com a recomendação da OMS de 2024 sobre a alternativa oral. Conciliar a aplicação no Brasil com o protocolo assistencial local.\n\n## 1. Escolher fármaco e via\n\n```mermaid\nflowchart TD\n  R0[\"Confirmar indicação de profilaxia secundária\"] --> D1{\"Há alergia verdadeira à penicilina?\"}\n  D1 -->|\"Sim ou história de reação grave a esclarecer\"| A1[\"Avaliação especializada e alternativa não penicilínica apropriada; não fazer teste ou reexposição improvisados\"]\n  D1 -->|\"Não\"| D2{\"A via intramuscular é adequada considerando risco cardiovascular, acesso, dor, adesão e preferência?\"}\n  D2 -->|\"Sim\"| A2[\"Penicilina G benzatina intramuscular em local preparado para reconhecer e tratar reações\"]\n  D2 -->|\"Não ou risco elevado\"| A3[\"Discutir penicilina V oral e planejar adesão diária; individualizar com o especialista\"]\n  A1 --> R1[\"Definir duração separadamente, conforme história e doença atual\"]\n  A2 --> R1\n  A3 --> R1\n```\n\nNa referência australiana, a benzatina é aplicada em **1.200.000 UI para peso ≥20 kg** ou **600.000 UI para <20 kg**, por via intramuscular profunda, habitualmente a cada **28 dias**. A dose e a técnica em crianças muito pequenas precisam de planejamento pediátrico. O esquema pode ser de **21 dias** em recorrência apesar de adesão completa ao de 28 dias ou quando o impacto de uma recorrência seria especialmente grave. A diretriz brasileira de 2009 utiliza **21 dias**; documentar o protocolo adotado.\n\nQuando escolhida a alternativa oral, a tabela australiana apresenta penicilina V **250 mg a cada 12 horas**; em alergia grave confirmada, apresenta eritromicina **250 mg a cada 12 horas**. Não misturar automaticamente alternativas de diferentes diretrizes: confirmar faixa etária, alergia, interações e protocolo local. A via oral não elimina a necessidade de adesão nem muda sozinha a duração.\n\n## 2. Definir o marco de reavaliação\n\nEste segundo fluxo se aplica a **episódio documentado de febre reumática**. A classificação considera ECG, ecocardiograma e evolução clínica, não apenas a descrição antiga da intensidade da cardite.\n\n```mermaid\nflowchart TD\n  R0[\"Há episódio documentado de febre reumática?\"] -->|\"Não\"| A0[\"Usar critérios específicos para cardiopatia diagnosticada sem episódio reconhecido ou para rastreamento; avaliação especializada\"]\n  R0 -->|\"Sim\"| D1{\"Houve envolvimento cardíaco no episódio ou há cardiopatia reumática estabelecida?\"}\n  D1 -->|\"Não; ECG e eco normais e seguimento apropriado\"| A1[\"Pelo menos 5 anos após o último episódio ou até 21 anos, o que terminar mais tarde\"]\n  D1 -->|\"Sim\"| D2{\"Qual é a doença atual?\"}\n  D2 -->|\"Cardite prévia sem lesão persistente ou doença leve\"| A2[\"Pelo menos 10 anos após o último episódio ou até 21 anos, o que terminar mais tarde\"]\n  D2 -->|\"Doença moderada, sem complicações de estágio D\"| A3[\"Pelo menos 10 anos após o último episódio ou até 35 anos, o que terminar mais tarde\"]\n  D2 -->|\"Doença grave ou estágio D, incluindo complicações ou cirurgia valvar\"| A4[\"Pelo menos 10 anos após o último episódio ou até 40 anos, o que terminar mais tarde; considerar prolongamento\"]\n  A1 --> R1[\"Antes de suspender: reavaliar clínica, ecocardiograma, recorrências, estabilidade valvar e exposição ao estreptococo\"]\n  A2 --> R1\n  A3 --> R1\n  A4 --> R1\n```\n\nUm episódio aos 25 anos, com ECG e ecocardiograma normais durante a doença e seguimento apropriado, não permite suspender imediatamente por já ter ultrapassado 21 anos: na referência utilizada, ainda é necessário cumprir o prazo mínimo de cinco anos. Havendo envolvimento cardíaco, essa regra muda. A data calculada nunca dispensa a reavaliação antes da suspensão.\n\n## Pontos que mudam a decisão\n\n**Doença grave não impõe a via intramuscular.** A AHA de 2022 e a OMS de 2024 orientam considerar a alternativa oral em pacientes selecionados com risco cardiovascular elevado. Essa escolha ocorre antes do ramo de duração; não é uma exceção escondida após a prescrição.\n\n**Ausência de rash não exclui anafilaxia.** Se ocorrer reação com suspeita de anafilaxia, adrenalina intramuscular deve ser administrada prontamente, inclusive em valvopatia grave. A possibilidade de colapso vasovagal ou cardiovascular não justifica esperar por manifestações cutâneas.\n\n**Erradicação aguda e profilaxia são indicações diferentes.** Não transportar automaticamente dose, faixa de peso ou duração de uma para a outra. O esquema preventivo é repetido pelo prazo definido; não se resume à dose usada durante o episódio agudo.\n\n**Há situações fora desta árvore.** Diagnóstico possível/provável, alterações de rastreamento e cardiopatia sem história reconhecida de febre reumática têm critérios próprios. Cirurgia não elimina automaticamente a profilaxia; em doença avançada, a duração pode ser prolongada conforme risco e estabilidade.\n\n## Tudo com Tudo\n\n- [Profilaxia secundária: duração por categoria de risco](/biblioteca/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco) — fundamentos e limites dos prazos.\n- [Segurança da penicilina benzatina](/biblioteca/seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular) — seleção da via e avaliação do risco.\n- [Reação aguda: diferenciação e conduta](/biblioteca/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta) — conduta diante de instabilidade após a aplicação."
+      }
+    },
+    {
+      "kind": "material_paciente",
+      "data": {
+        "slug": "profilaxia-com-penicilina-na-febre-reumatica-por-que-a-injecao-regular",
+        "titulo": "Por que a injeção de penicilina precisa continuar por anos",
+        "subtitulo": "Por que manter as doses em dia e como tornar o tratamento mais seguro e confortável",
+        "tema": "Febre reumática",
+        "documento_slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+        "review_status": "revisado",
+        "resumo": "Explica como a profilaxia regular ajuda a prevenir novos episódios de febre reumática, por que manter as doses em dia e quando discutir outra forma de tratamento com a equipe. Inclui cuidados com a aplicação e sinais para pedir ajuda imediata.",
+        "secoes": [
+          {
+            "titulo": "Por que essa injeção existe",
+            "paragrafos": [
+              "A febre reumática pode voltar após novas infecções pelo estreptococo. Tanto o primeiro episódio quanto as recorrências podem afetar as válvulas do coração. A profilaxia é um tratamento regular para diminuir o risco de novos episódios.",
+              "A penicilina regular é uma das medidas centrais para evitar recorrências. Ela complementa as consultas, os exames e os outros tratamentos necessários; não substitui o acompanhamento do coração."
+            ],
+            "itens": []
+          },
+          {
+            "titulo": "Por que a injeção costuma ser a primeira escolha",
+            "paragrafos": [
+              "A penicilina usada na prevenção é aplicada no músculo (via intramuscular) porque, nessa forma, ela libera o medicamento aos poucos na corrente sanguínea, mantendo uma proteção contínua durante várias semanas com uma única aplicação. É esse efeito prolongado que permite espaçar as doses.",
+              "A injeção costuma ser a primeira escolha por sua eficácia e porque permite doses espaçadas. Comprimidos também podem ser uma alternativa em situações específicas, como dificuldade de acesso, dor que impede manter o tratamento, preferência discutida com a equipe ou maior risco relacionado à aplicação. A troca precisa ser planejada com o médico e exige tomar as doses orais regularmente."
+            ],
+            "itens": []
+          },
+          {
+            "titulo": "Por que o intervalo entre as doses é tão importante",
+            "paragrafos": [
+              "A injeção costuma ser repetida a cada 3 ou 4 semanas, conforme a prescrição. A quantidade de medicamento no corpo diminui com o tempo; manter as datas ajuda a preservar a proteção. Não altere sozinho o intervalo.",
+              "É por isso que atrasar a aplicação, mesmo por poucos dias, pode deixar uma janela de tempo com proteção insuficiente. Se a data da aplicação não puder ser cumprida exatamente, entre em contato com a equipe de saúde o quanto antes para reagendar, em vez de esperar a próxima data planejada."
+            ],
+            "itens": []
+          },
+          {
+            "titulo": "Sobre a dor da aplicação",
+            "paragrafos": [
+              "A dor da injeção é uma queixa real e merece cuidado. A equipe pode orientar medidas para reduzi-la. Em algumas apresentações, é possível usar anestésico local conforme a bula e o protocolo do serviço. Pergunte sobre as opções disponíveis; não adicione substâncias nem modifique a medicação por conta própria."
+            ],
+            "itens": []
+          },
+          {
+            "titulo": "O que fazer se houver mal-estar durante ou após a aplicação",
+            "paragrafos": [
+              "Tontura, palidez, suor frio ou sensação de desmaio podem ocorrer por uma resposta ao medo ou à dor, chamada reação vasovagal. Avise a equipe imediatamente e não se levante sozinho. A equipe deve avaliar a causa; não tente decidir por conta própria se é alergia ou apenas uma reação à agulha.",
+              "Falta de ar, chiado, mudança na voz, inchaço na boca ou garganta, desmaio ou piora rápida exigem atendimento imediato. Uma reação alérgica grave pode acontecer mesmo sem manchas ou coceira na pele. Não espere aparecerem todos os sinais para pedir ajuda.",
+              "Permaneça no serviço pelo período de observação orientado, em geral pelo menos 30 minutos após a aplicação. Se ocorrer uma reação importante, pode ser necessário observar por mais tempo ou encaminhar para emergência. O tempo de rotina não é uma autorização para ir embora ainda com sintomas.",
+              "Se há doença importante das válvulas, falta de ar aos pequenos esforços, desmaio anterior ou mudança recente nos sintomas, avise antes da próxima aplicação. O médico pode ajustar as condições de segurança ou avaliar profilaxia oral. Não suspenda o tratamento sem combinar uma alternativa."
+            ],
+            "itens": []
+          },
+          {
+            "titulo": "Sobre o teste de alergia antes da aplicação",
+            "paragrafos": [
+              "Quem nunca teve suspeita de alergia à penicilina não precisa fazer teste de rotina antes de cada dose. Um teste negativo não garante que nunca haverá reação. Se já houve alergia ou uma reação cuja causa não ficou clara, conte os detalhes à equipe: a avaliação depende do tipo e da gravidade do episódio, e pode precisar de especialista. Não faça teste ou nova exposição por conta própria."
+            ],
+            "itens": []
+          },
+          {
+            "titulo": "Por quanto tempo é preciso continuar",
+            "paragrafos": [
+              "O tempo total depende da história de febre reumática, de alterações nas válvulas, dos exames atuais, da idade e do risco de novas infecções. Pode durar anos e, em algumas pessoas com doença importante, ser mantido por toda a vida. A decisão de parar exige reavaliação; a cirurgia de uma válvula não significa que a profilaxia deva terminar automaticamente.",
+              "Esse prazo exato é definido pelo seu médico, com base na gravidade do seu caso, e pode ser reavaliado com o tempo — vale perguntar sempre que houver dúvida, em vez de decidir sozinho quando parar."
+            ],
+            "itens": []
+          },
+          {
+            "titulo": "Um cuidado que ainda está em pesquisa",
+            "paragrafos": [
+              "Há pesquisas para melhorar formulações e reduzir o número de aplicações. O estudo farmacocinético citado neste material avaliou penicilina intravenosa em adultos saudáveis para ajudar esse desenvolvimento; ele não testou um novo intervalo de injeções em pessoas com febre reumática e não muda sua prescrição."
+            ],
+            "itens": []
+          }
+        ],
+        "sinais_de_alerta": [
+          "Tontura, suor frio, palidez ou sensação de desmaio durante ou após a aplicação: avise a equipe imediatamente e não se levante sozinho.",
+          "Falta de ar, chiado, mudança na voz, inchaço na boca ou garganta, desmaio ou piora rápida: atendimento de emergência, mesmo que não haja manchas na pele.",
+          "Manchas ou coceira generalizadas após a medicação: avise imediatamente para avaliar uma possível reação e sua evolução.",
+          "Desmaio que não melhora rapidamente ou volta a acontecer: peça atendimento de emergência.",
+          "Febre, dor de garganta importante, feridas de pele ou dor e inchaço nas juntas: procure avaliação para identificar a causa.",
+          "Dose atrasada: fale com a equipe o quanto antes; não espere simplesmente a próxima data nem dobre a dose.",
+          "Vermelhidão intensa, calor ou secreção no local da injeção: procure avaliação."
+        ],
+        "perguntas": [
+          "Por quanto tempo eu (ou meu filho) vou precisar dessa aplicação, considerando o meu caso específico?",
+          "O serviço onde faço a aplicação tem a opção de anestésico local para reduzir a dor?",
+          "Preciso de algum teste antes da primeira aplicação?",
+          "O que eu faço se perdermos a data programada?",
+          "Existe algum risco em trocar a injeção por comprimido no meu caso?",
+          "Meu coração (ou o do meu filho) está muito afetado pela febre reumática — isso muda alguma coisa na forma como a injeção deve ser aplicada?"
+        ],
+        "fontes": [
+          "World Health Organization. WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. 2024. Section 4.7. https://www.ncbi.nlm.nih.gov/books/NBK609686/",
+          "Sanyahumbi A et al. J Am Heart Assoc. 2022;11:e024517. DOI 10.1161/JAHA.121.024517. PMID 35049336. https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/",
+          "Cardona V et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13:100472. DOI 10.1016/j.waojou.2020.100472. https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/",
+          "Ralph AP, Noonan S, Boardman C, Halkon C, Currie BJ. Prescribing for people with acute rheumatic fever. Aust Prescr. 2017;40:70–75. DOI 10.18773/austprescr.2017.011. PMID 28507400. https://australianprescriber.tg.org.au/articles/prescribing-for-people-with-acute-rheumatic-fever.html",
+          "Yoo O et al. Population pharmacokinetics of penicillin G. Antimicrob Agents Chemother. 2025;69:e0026925. PMID 40391929. DOI 10.1128/aac.00269-25. https://pubmed.ncbi.nlm.nih.gov/40391929/"
+        ],
+        "review_note": "Material integral conferido. Retiradas afirmações de que o episódio inicial não importa, que profilaxia supera qualquer outro tratamento e que comprimido nunca pode substituir. Atualizado OMS 2024: escolha compartilhada e alternativa oral em cenários definidos. Sintomas sem rash também exigem ajuda; observação de 30 min não é regra de alta após reação. Testagem formal diferenciada de teste rotineiro e estudo de Yoo, intravenoso, em adultos saudáveis não extrapolado como ensaio de intervalo intramuscular.",
+        "published": true
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source_type": "documento",
+      "source_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "target_type": "documento",
+      "target_slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "relation_type": "associated_with",
+      "reason": "Operacionaliza em árvore de decisão a diferenciação clínica descrita neste documento."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "target_type": "documento",
+      "target_slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+      "relation_type": "associated_with",
+      "reason": "Define esquema e duração por gravidade; este documento detalha e fundamenta a frase sobre reação adversa rara que aquele documento já continha."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "target_type": "documento",
+      "target_slug": "fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema",
+      "relation_type": "associated_with",
+      "reason": "Árvore de escolha de fármaco/duração por gravidade; este documento cobre o momento clínico seguinte, a segurança da própria aplicação."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "target_type": "documento",
+      "target_slug": "adesao-a-profilaxia-secundaria-barreiras-e-a-injecao-subcutanea-de-longo-intervalo-scip",
+      "relation_type": "associated_with",
+      "reason": "A dor e o medo da aplicação intramuscular, discutidos ali como barreira de adesão, também são abordados nas estratégias de mitigação vasovagal descritas aqui."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "target_type": "documento",
+      "target_slug": "fluxograma-sincope-reflexa-versus-cardiaca-diagnostico-diferencial",
+      "relation_type": "associated_with",
+      "reason": "Amplia o diagnóstico diferencial de síncope; não substitui os critérios de anafilaxia no contexto da injeção."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "target_type": "documento",
+      "target_slug": "sindrome-de-kounis-sindrome-coronariana-aguda-alergica",
+      "relation_type": "associated_with",
+      "reason": "Descreve outro mecanismo em que uma reação de hipersensibilidade produz comprometimento cardiovascular direto (vasoespasmo coronariano), diagnóstico diferencial a considerar quando o quadro não se encaixa integralmente em vasovagal simples nem em anafilaxia clássica."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "target_type": "documento",
+      "target_slug": "epinefrina-adrenalina",
+      "relation_type": "associated_with",
+      "reason": "Fármaco de primeira linha na suspeita de anafilaxia; valvopatia grave não autoriza atrasar a dose IM. Vasovagal simples não é indicação de adrenalina."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "target_type": "documento",
+      "target_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "relation_type": "derived_from",
+      "reason": "Síntese clínica completa da qual esta árvore deriva, com a tabela de diferenciação e a estratificação de risco na íntegra."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "target_type": "documento",
+      "target_slug": "fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema",
+      "relation_type": "associated_with",
+      "reason": "Decisão pré-injeção entre via intramuscular e oral, que D3 nesta árvore pressupõe já ter sido considerada."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "target_type": "documento",
+      "target_slug": "fluxograma-sincope-reflexa-versus-cardiaca-diagnostico-diferencial",
+      "relation_type": "associated_with",
+      "reason": "Amplia a avaliação de síncope fora do contexto de injeção; não substitui os critérios de anafilaxia."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "target_type": "documento",
+      "target_slug": "sindrome-de-kounis-sindrome-coronariana-aguda-alergica",
+      "relation_type": "associated_with",
+      "reason": "Diagnóstico diferencial a considerar na folha C2, quando o padrão não se encaixa integralmente em vasovagal nem em anafilaxia clássica."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "target_type": "documento",
+      "target_slug": "epinefrina-adrenalina",
+      "relation_type": "associated_with",
+      "reason": "Tratamento de primeira linha quando há suspeita de anafilaxia, inclusive com doença valvar grave."
+    },
+    {
+      "source_type": "caso_clinico",
+      "source_slug": "sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta",
+      "target_type": "documento",
+      "target_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "relation_type": "supported_by",
+      "reason": "O documento fundamenta a avaliação de segurança e a revisão do esquema de profilaxia após a reação apresentada neste caso."
+    },
+    {
+      "source_type": "caso_clinico",
+      "source_slug": "sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta",
+      "target_type": "documento",
+      "target_slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "relation_type": "uses_flowchart",
+      "reason": "O caso aplica o reconhecimento de anafilaxia, a distinção entre recuperação completa e incompleta e as condutas detalhadas no fluxo."
+    },
+    {
+      "source_type": "caso_clinico",
+      "source_slug": "sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta",
+      "target_type": "documento",
+      "target_slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+      "relation_type": "supported_by",
+      "reason": "O documento fundamenta a avaliação de segurança e a revisão do esquema de profilaxia após a reação apresentada neste caso."
+    },
+    {
+      "source_type": "caso_clinico",
+      "source_slug": "colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica",
+      "target_type": "documento",
+      "target_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "relation_type": "supported_by",
+      "reason": "O documento fundamenta a avaliação de segurança e a revisão do esquema de profilaxia após a reação apresentada neste caso."
+    },
+    {
+      "source_type": "caso_clinico",
+      "source_slug": "colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica",
+      "target_type": "documento",
+      "target_slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "relation_type": "uses_flowchart",
+      "reason": "O caso aplica o reconhecimento de anafilaxia, a distinção entre recuperação completa e incompleta e as condutas detalhadas no fluxo."
+    },
+    {
+      "source_type": "caso_clinico",
+      "source_slug": "colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica",
+      "target_type": "documento",
+      "target_slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+      "relation_type": "supported_by",
+      "reason": "O documento fundamenta a avaliação de segurança e a revisão do esquema de profilaxia após a reação apresentada neste caso."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+      "target_type": "documento",
+      "target_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "relation_type": "associated_with",
+      "reason": "seleção da via e prevenção de reações."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+      "target_type": "documento",
+      "target_slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "relation_type": "associated_with",
+      "reason": "reconhecimento de anafilaxia e resposta à instabilidade."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+      "target_type": "documento",
+      "target_slug": "fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema",
+      "relation_type": "associated_with",
+      "reason": "aplicação das decisões de profilaxia."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema",
+      "target_type": "documento",
+      "target_slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+      "relation_type": "derived_from",
+      "reason": "fundamentos e limites dos prazos."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema",
+      "target_type": "documento",
+      "target_slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "relation_type": "associated_with",
+      "reason": "seleção da via e avaliação do risco."
+    },
+    {
+      "source_type": "documento",
+      "source_slug": "fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema",
+      "target_type": "documento",
+      "target_slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "relation_type": "associated_with",
+      "reason": "conduta diante de instabilidade após a aplicação."
+    },
+    {
+      "source_type": "material_paciente",
+      "source_slug": "profilaxia-com-penicilina-na-febre-reumatica-por-que-a-injecao-regular",
+      "target_type": "documento",
+      "target_slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+      "relation_type": "derived_from",
+      "reason": "A explicação ao paciente traduz a indicação, continuidade, escolha segura da via e reavaliação da profilaxia secundária descritas no documento profissional."
+    }
+  ],
+  "source_inventory": [
+    {
+      "index": 0,
+      "kind": "documento",
+      "slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "path": "content/Febre_reumática/seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular.md",
+      "action": "create",
+      "current_equals_frozen_source": false,
+      "current_body_equals_frozen_source": null,
+      "current_file_sha256": null,
+      "published_file_sha256": "d6179fed465d3933d5264c7c9a2eb71608ca46c8f9d1f7c85e8c5d1e82dc13f6",
+      "reviewed_input_sha256": "6890cafc47e6860df67aa84340a6d3761603cb2d56eb21f6646e5bb8d7540ab0"
+    },
+    {
+      "index": 1,
+      "kind": "documento",
+      "slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "path": "content/Febre_reumática/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta.md",
+      "action": "create",
+      "current_equals_frozen_source": false,
+      "current_body_equals_frozen_source": null,
+      "current_file_sha256": null,
+      "published_file_sha256": "d7535df1624f795f1bd15bf69bc6f93965e5211256bb779093109a2c569a4960",
+      "reviewed_input_sha256": "6c851ad1f417ace3375e09d586c7caa419ed9675b05ebdda79720a41072f8e6f"
+    },
+    {
+      "index": 2,
+      "kind": "caso_clinico",
+      "slug": "sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta",
+      "path": "casos-clinicos/metadados.json",
+      "action": "append fragment",
+      "current_equals_frozen_source": false,
+      "changed_fields_from_current": [
+        "enunciado",
+        "explicacao",
+        "nivel",
+        "opcoes",
+        "pergunta",
+        "published",
+        "resposta_correta",
+        "review_status",
+        "revisao",
+        "slug",
+        "source_refs",
+        "tema",
+        "titulo"
+      ],
+      "prior_fragment_sha256": null,
+      "published_fragment_sha256": "f3ffa9472f4ae34243165f69ba16f75f2caa9beea7123e942196204742b1b704",
+      "reviewed_input_sha256": "3974a3484ed069920047efd60b4b5cccc776c6612f664e3c3bffa3d0a40db4e5",
+      "published_file_sha256": "06f17fb93a7f755a06d5c2100a7961714d80b370a5cb149be5a89a60ce594014"
+    },
+    {
+      "index": 3,
+      "kind": "caso_clinico",
+      "slug": "colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica",
+      "path": "casos-clinicos/metadados.json",
+      "action": "append fragment",
+      "current_equals_frozen_source": false,
+      "changed_fields_from_current": [
+        "enunciado",
+        "explicacao",
+        "nivel",
+        "opcoes",
+        "pergunta",
+        "published",
+        "resposta_correta",
+        "review_status",
+        "revisao",
+        "slug",
+        "source_refs",
+        "tema",
+        "titulo"
+      ],
+      "prior_fragment_sha256": null,
+      "published_fragment_sha256": "e0b731db3f69799e96834962e2814b472a530f87860e6c39632875e73a10f53e",
+      "reviewed_input_sha256": "52900e55ba962c371e36fd9bab9e8695c5a1ca02d31db08915800b777184f0e5",
+      "published_file_sha256": "06f17fb93a7f755a06d5c2100a7961714d80b370a5cb149be5a89a60ce594014"
+    },
+    {
+      "index": 4,
+      "kind": "documento",
+      "slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+      "path": "content/Febre_reumática/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco.md",
+      "action": "replace",
+      "current_equals_frozen_source": false,
+      "current_body_equals_frozen_source": false,
+      "current_file_sha256": "d668edf92bd466965ca4f4003a8bdf568e238c7d0e410ec267e59808164e812b",
+      "published_file_sha256": "d172f96cf1121da40f2cfb1ac0db724c77a62ff167a8e43c3c57a2ab79728411",
+      "reviewed_input_sha256": "88fb15451820c344a5507470d0656e41c23f1c3b7280d7bb8c2ae5c36d8d6b48"
+    },
+    {
+      "index": 5,
+      "kind": "documento",
+      "slug": "fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema",
+      "path": "content/Febre_reumática/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema.md",
+      "action": "replace",
+      "current_equals_frozen_source": false,
+      "current_body_equals_frozen_source": false,
+      "current_file_sha256": "ef576175773fe1326a3c133d2f725cff106e21ce592351c4313c6bdeba8eb1cc",
+      "published_file_sha256": "dbd8e8f5c4f09081cc7570bc38b4824c00fa2187b6060c93ce2db642aabe09a5",
+      "reviewed_input_sha256": "ed910802e654d9bf430eb19b4b03646b146f27d864d95bd053836d7c24dbdea9"
+    },
+    {
+      "index": 6,
+      "kind": "material_paciente",
+      "slug": "profilaxia-com-penicilina-na-febre-reumatica-por-que-a-injecao-regular",
+      "path": "material-paciente/metadados.json",
+      "action": "replace fragment",
+      "current_equals_frozen_source": false,
+      "changed_fields_from_current": [
+        "fontes",
+        "perguntas",
+        "published",
+        "resumo",
+        "review_note",
+        "secoes",
+        "sinais_de_alerta",
+        "subtitulo"
+      ],
+      "prior_fragment_sha256": "6381fe87bd003d9e76e0373e0064e09bbe0aab1573b5595ad19eb55c105312e1",
+      "published_fragment_sha256": "8e47361bd8b0b43481e915dffa8209f6654bd59e9d1996fa603f6383b66618e1",
+      "reviewed_input_sha256": "ec46f19e56570843de9114c84a942ecdc5d16f6185448dc39b90fa8742dfa43c",
+      "published_file_sha256": "1fb706dd0943bc4084af762280b62d8d37abd89b3d3978be4826bde864f96ff8"
+    }
+  ],
+  "note": "Dados limitados às colunas atuais dos modelos Document, ClinicalCase e PatientMaterial; review_note dos casos mapeado para revisao. Metadados auxiliares permanecem no snapshot/ledger."
+}

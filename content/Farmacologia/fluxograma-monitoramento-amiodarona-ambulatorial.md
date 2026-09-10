@@ -1,0 +1,95 @@
+---
+slug: fluxograma-monitoramento-amiodarona-ambulatorial
+title: 'Fluxograma: monitoramento ambulatorial da amiodarona'
+kind: fluxograma
+theme: Farmacologia
+summary: Árvore prática do retorno ambulatorial em uso crônico de amiodarona — sintomas sentinela, eixos tireoide/fígado/pulmão/olho/ECG,
+  e desfechos manter-com-reforço / pausar / referenciar. Complementa o protocolo textual de monitoramento.
+tags: []
+source_refs:
+- Van Gelder IC, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45(36):3314-3414.
+- 'Joglar JA, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. Circulation.
+  2024;149(1):e1-e156. DOI: 10.1161/CIR.0000000000001193. PMID: 38033089. Table 24: monitoring oral amiodarone.'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# Fluxograma: monitoramento ambulatorial da amiodarona
+
+Uso crônico de amiodarona exige vigilância multissistêmica. Este fluxograma traduz o protocolo textual irmão em árvore de decisão para o retorno ambulatorial. Intervalos de laboratório/imagem seguem a lógica qualitativa alinhada a diretrizes de FA (ESC/AHA) e à avaliação multissistêmica — **sem inventar cortes percentuais de ensaio**.
+
+## Árvore de decisão
+
+```mermaid
+flowchart TD
+  R0["Retorno ambulatorial: paciente em uso crônico de amiodarona"]
+  D0{"Há sintoma sentinela?<br/>dispneia/tosse nova · visual · tireoidiano ·<br/>icterícia/dor HD · síncope/bradicardia"}
+
+  Dpulm{"Predomínio respiratório?"}
+  Cpulm["Avaliação rápida; discutir suspensão se toxicidade plausível/grave;<br/>RX/TC ± PFR; referenciar pneumologia;<br/>diferenciar IC/infecção/TEP"]
+
+  Dolho{"Predomínio visual grave<br/>ou suspeita de neuropatia óptica?"}
+  Colho["Pausar; oftalmologia urgente"]
+
+  Dtir{"Sinais de hipertireoidismo<br/>ou instabilidade arrítmica tireoidiana?"}
+  Ctir["Laboratório tireoidiano urgente;<br/>endocrinologia; discutir pausa/troca<br/>com o responsável pelo ritmo"]
+
+  Dhep{"Icterícia, sintomas hepáticos<br/>ou enzimas em alta progressiva?"}
+  Chep["Pausar; repetir enzimas ± bilirrubina/INR;<br/>considerar hepatologia"]
+
+  Decg{"Bradicardia sintomática, BAV alto grau<br/>ou QT muito prolongado com risco?"}
+  Cecg["Avaliação urgente/monitorizada se BAV avançado,<br/>síncope ou bradicardia com repercussão;<br/>ECG/interações; equipe decide pausa/redução"]
+
+  Dcal{"Calendário de vigilância em dia?<br/>TSH e enzimas basais, 3–6 meses e depois semestrais;<br/>RX basal ou por sintomas; ECG anual"}
+  Catraso["Completar exames pendentes<br/>antes de reiniciar intervalo longo"]
+  Cok["Manter amiodarona;<br/>reforçar educação de sintomas sentinela;<br/>revisar interações digoxina/varfarina/estatina;<br/>agendar próximo laboratório"]
+
+  Dlab{"Achado laboratorial/imagem<br/>anormal no check de rotina?"}
+  Cleve["Alteração leve, estável, assintomática<br/>ex.: enzimas levemente ↑ ou TSH limítrofe:<br/>manter com reforço — repetir em intervalo curto;<br/>hipotireoidismo: frequentemente manter + T4<br/>com endocrino"]
+  Cgrave["Alteração progressiva/grave ou sintomática:<br/>pausar e referenciar o eixo correspondente"]
+
+  R0 --> D0
+  D0 -->|Sim| Dpulm
+  Dpulm -->|Sim| Cpulm
+  Dpulm -->|Não| Dolho
+  Dolho -->|Sim| Colho
+  Dolho -->|Não| Dtir
+  Dtir -->|Sim| Ctir
+  Dtir -->|Não| Dhep
+  Dhep -->|Sim| Chep
+  Dhep -->|Não| Decg
+  Decg -->|Sim| Cecg
+  Decg -->|Não — sintoma atípico| Catip["Avaliar clinicamente o sintoma persistente;<br/>não considerar normal só pelo laboratório;<br/>reavaliar necessidade e segurança da amiodarona"]
+
+  D0 -->|Não| Dcal
+  Dcal -->|Não| Catraso
+  Dcal -->|Sim| Dlab
+  Dlab -->|Não — tudo ok| Cok
+  Dlab -->|Sim — leve/estável| Cleve
+  Dlab -->|Sim — progressivo/grave| Cgrave
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class Cpulm,Colho,Ctir,Chep,Cecg,Catraso,Cok,Cleve,Cgrave conduta;
+```
+
+## O que a árvore não mostra
+
+- **Posologia** de ataque/manutenção — ver monografia e bulas.
+- **Percentuais de incidência** — não são necessários para decidir pausar vs reforçar.
+- **Toxicidade pulmonar** pode apresentar-se de forma subaguda; ausência de febre não afasta.
+- **Após pausa**, a meia-vida longa implica que melhora clínica/laboratorial pode ser lenta.
+- Interação **amiodarona–digoxina**: se houver sinalizadores de digitálico, seguir [toxicidade digitálica](/biblioteca/intoxicacao-digitalica-manejo-agudo-e-anticorpo-antidigoxina-fab) em paralelo.
+
+## Fonte do calendário e interação prospectiva
+
+Tabela 24, ACC/AHA/ACCP/HRS 2023 (DOI 10.1161/CIR.0000000000001193): TSH e AST/ALT basais, em 3–6 meses e depois semestralmente; ECG basal e anual; RX basal e por sintomas; TC conforme indicação. Ao iniciar amiodarona em usuário de digoxina, revisar prospectivamente esquema, nível e monitorização com o prescritor; não esperar toxicidade. A pausa da amiodarona não reverte imediatamente seus efeitos por sua meia-vida longa.
+
+## Conteúdo CorVIA conectado
+
+- [Protocolo de monitoramento ambulatorial da amiodarona](/biblioteca/monitoramento-ambulatorial-da-amiodarona-tireoide-figado-pulmao-e-olho)
+- [Amiodarona: monografia clínica](/biblioteca/amiodarona-cloridrato)
+- [Disfunção tireoidiana associada à amiodarona](/biblioteca/disfuncao-tireoidiana-associada-a-amiodarona-diferenciar-tipo-1-de-tipo-2-e-decidir-sobre-suspender)
+Dispneia intensa/hipoxemia, síncope, instabilidade, bradicardia com repercussão ou bloqueio AV avançado exigem atendimento urgente monitorizado; a sequência por órgãos não deve atrasar esse atendimento. Pausas e ajustes são decisões da equipe, considerando indicação antiarrítmica e gravidade.

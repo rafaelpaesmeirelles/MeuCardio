@@ -1,0 +1,59 @@
+---
+slug: imunizacao-do-cardiopata-pni-sbim-2026-versus-acc-2026
+title: Imunização do cardiopata no Brasil — PNI/SBIm 2026-27 versus ACC 2026
+kind: documento
+theme: Geral
+summary: null
+tags: []
+source_refs:
+- 'Heidenreich PA, Vardeny O, et al. Adult Immunizations as Part of Cardiovascular Care: 2026 ACC Concise Clinical
+  Guidance. J Am Coll Cardiol. 2026. DOI: 10.1016/j.jacc.2026.07.004. PMID: 42554529.'
+- SBIm. Calendários de vacinação de pacientes especiais 2026-2027 (cardiopatia e/ou pneumopatia crônicas; diabetes).
+  https://sbim.org.br/images/calend-vacinacao-pacientes-especiais-2026-27-260626.pdf_2026-06-29.pdf
+- Ministério da Saúde. Calendário Nacional de Vacinação do Adulto 2026. https://www.gov.br/saude/pt-br/vacinacao/arquivos/calendario-nacional-de-vacinacao-adulto
+- Ministério da Saúde. Nota Técnica nº 52/2026-CGICI/DPNI/SVSA/MS (VPC20 em estratégias especiais na RIE, incluindo
+  cardiopatias crônicas). https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-52-2026-cgici-dpni-svsa-ms.pdf
+- CDC. RSV Vaccine Guidance for Adults. Atualização de 24/02/2026. https://www.cdc.gov/rsv/hcp/vaccine-clinical-guidance/adults.html
+- 'Ministério da Saúde. Vacinação: atualização de doses e ausência do cartão. https://www.gov.br/saude/pt-br/vacinacao/vacinacao/'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# Imunização do cardiopata no Brasil — PNI/SBIm 2026-27 e ACC 2026
+
+O statement ACC 2026 trata vacina como parte do cuidado cardiovascular. No consultório brasileiro isso só vira ato se cruzar **PNI (SUS/CRIE)** e **SBIm (particular / pacientes especiais 2026-27)**.
+
+## O que o cardiopata deve ouvir nesta consulta
+
+| Vacina | ACC 2026 (cuidado CV) | PNI / CRIE 2026 | SBIm especial 2026-27 |
+|---|---|---|---|
+| Influenza anual | Sim, cardiopata é grupo-alvo | Campanha: 3V nos grupos de risco; HD3V **não** é rotina SUS | Anual; ≥60 anos preferir HD3V; 2ª dose possível após 3 meses se risco + epidemiologia |
+| COVID-19 | Atualizar conforme estação / grupo | Grupos do PNI (consultar MS) | Idem + rede privada |
+| Pneumococo | Prioridade no CV crônico | VPC20 em estratégias especiais da RIE; cardiopatia crônica é uma das indicações da NT 52/2026. Via de acesso e transição dependem do esquema prévio | VPC20 e esquemas de transição conforme idade, condição e histórico; não repetir sem reconstruir o cartão |
+| dT / dTpa | Reforço do adulto | dT no calendário do adulto; dTpa em gestante e alguns profissionais | Preferir dTpa a cada 10 anos |
+| VSR (RSV) | Integrar ao cuidado cardiovascular conforme recomendação CDC/ACIP: todos ≥75 anos; 50–74 anos se risco aumentado | Não é rotina para cardiopata adulto não gestante; vacinação materna tem indicação própria no PNI | Em cardiopatia crônica clinicamente relevante, recomendada a partir de 18 anos no calendário de pacientes especiais; uma dose, sem evidência atual para reforço. Priorizar maior risco e confirmar licenciamento/bula |
+| Zóster | Relevante no idoso CV | Não é rotina PNI do adulto | VZR em duas doses a partir dos 50 anos; considerar a partir dos 18 anos em pessoas com cardiopatia/pneumopatia crônica, conforme avaliação e bula |
+| Hepatite B / SCR / febre amarela | Completar o calendário aplicável à população local | Conforme idade, histórico, indicação e contraindicações | Seguir calendário por idade e condições clínicas |
+
+Norte: campanha de influenza antecipada (nov–fev) com cepa do Hemisfério Norte.
+
+## Frase para o prontuário
+
+“Cardiopata crônico: revisar influenza anual, COVID da temporada, histórico pneumocócico e elegibilidade para VSR e zóster. Para VPC20, reconstruir o esquema prévio e encaminhar à RIE quando elegível; registrar produto e datas.”
+
+## O que não fazer
+
+- Não escrever “ACC manda VPC20 no SUS” — manda o CRIE / NT vigente.
+- Não atrasar iSGLT2 / estatina / IECA esperando a vacina.
+- Não reiniciar uma série com doses válidas documentadas. Se o histórico permanecer desconhecido, aplicar as orientações de atualização do PNI para cada vacina; ausência de cartão não deve impedir vacinação indicada. Reconstruir especialmente o histórico pneumocócico antes de definir transição.
+
+## Tudo com Tudo
+
+Revisar a vacinação durante o acompanhamento e planejar acesso para pessoas com mobilidade reduzida; as recomendações clínicas e as regras de oferta pública precisam ser consideradas em conjunto.
+
+- [Fluxograma de imunização do cardiopata adulto](/biblioteca/fluxograma-imunizacao-do-cardiopata-adulto-acc-2026)
+- [Imunizações do adulto no cuidado cardiovascular](/biblioteca/imunizacoes-do-adulto-como-parte-do-cuidado-cardiovascular-acc-2026)
+- [Vacinação contra influenza como prevenção cardiovascular](/biblioteca/vacinacao-contra-influenza-como-prevencao-cardiovascular-iami-e-metanalise-de-udell)

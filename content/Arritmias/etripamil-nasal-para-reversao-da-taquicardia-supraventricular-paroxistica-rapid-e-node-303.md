@@ -1,13 +1,49 @@
 ---
-title: "Etripamil Nasal para Reversão da Taquicardia Supraventricular Paroxística: os Ensaios RAPID e NODE-303 e a Aprovação da FDA"
+title: 'Etripamil Nasal para Reversão da Taquicardia Supraventricular Paroxística: os Ensaios RAPID e NODE-303 e
+  a Aprovação da FDA'
 slug: etripamil-nasal-para-reversao-da-taquicardia-supraventricular-paroxistica-rapid-e-node-303
-theme: "Arritmias"
+theme: Arritmias
 kind: documento
 review_status: revisado
 published: true
-review_note: "Revisão clínica e editorial concluída em 08/09/2026; todos os PMIDs foram confirmados diretamente no registro do PubMed e os abstracts completos (RAPID, NODE-303, aprovação da FDA e a análise post hoc de FA) foram lidos na íntegra nesta sessão. A exceção declarada é o estudo de efeito pressórico (PMID 42269477), cujo abstract não está disponível em texto no PubMed — citado apenas para registrar sua existência, sem uso de nenhum número dele no corpo do texto."
-source_refs: ["Stambler BS, Camm AJ, Alings M, Dorian P, Heidbuchel H, Houtgraaf J, et al; RAPID Investigators. Self-administered intranasal etripamil using a symptom-prompted, repeat-dose regimen for atrioventricular-nodal-dependent supraventricular tachycardia (RAPID): a multicentre, randomised trial. Lancet. 2023;402(10396):118-128. DOI: 10.1016/S0140-6736(23)00776-6. PMID: 37331368 — NCT03464019 (parte 2 do NODE-301), 692 randomizados, 184 com evento confirmado tratado (99 etripamil/85 placebo); abstract lido na íntegra via PubMed nesta sessão", "Ip JE, Coutu B, Ip JH, Noseworthy PA, Parody ML, Rafii F, et al. Etripamil Nasal Spray for Recurrent Paroxysmal Supraventricular Tachycardia Conversion: Results From the NODE-303 Open-Label Study. J Cardiovasc Electrophysiol. 2025;36(11):2990-3003. DOI: 10.1111/jce.70086. PMID: 40931676 — NCT04072835, estudo aberto de braço único, 1116 pacientes incluídos, 503 autoadministraram ≥1 dose para 1054 episódios percebidos de TSV; abstract lido na íntegra via PubMed nesta sessão", "Brown MB. Etripamil: First Approval. Drugs. 2026;86(7):1147-1152. DOI: 10.1007/s40265-026-02321-1. PMID: 42068525 — artigo regulatório de resumo de desenvolvimento; aprovação nos EUA em 12/12/2025 (CARDAMYST); abstract lido na íntegra via PubMed nesta sessão", "Dorian P, Alings M, Coutu B, Ip JE, Martinez FA, Piccini JP, et al. Self-Administered Etripamil Nasal Spray Slows Ventricular Rate in Patients With Atrial Fibrillation: A Post Hoc Analysis of the NODE-303 Study. J Cardiovasc Electrophysiol. 2026;37(4):859-863. DOI: 10.1111/jce.70287. PMID: 41668514 — subanálise post hoc, n=18 episódios de FA identificados dentro da coorte NODE-303; abstract lido na íntegra via PubMed nesta sessão", "Ip JE, Noseworthy P, Rafii F, Piccini JP, Singh N, Stambler B, et al. Minimal Blood Pressure Effects of Intranasal Etripamil for Paroxysmal Supraventricular Tachycardia. JACC Adv. 2026;5(7):102868. DOI: 10.1016/j.jacadv.2026.102868. PMID: 42269477 — citado apenas para registrar que existe análise dedicada de segurança pressórica; abstract em texto não disponível no PubMed nesta sessão, nenhum número deste estudo foi usado no corpo do texto"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A pasta Arritmias já cobria taquicardia supraventricular (TSV) em profundidade — diagnóstico e manejo agudo pelo algoritmo ESC 2019, ablação por cateter versus fármacos e escolha de energia na AVNRT, WPW assintomático, taquicardia por reentrada sinoatrial e taquicardia atrial focal — mas nenhum documento tratava de uma opção terapêutica genuinamente nova: um fármaco autoadministrado por spray nasal para reversão aguda da TSV fora do ambiente hospitalar. Etripamil recebeu sua primeira aprovação regulatória mundial (FDA, 12/12/2025) depois do encerramento deste documento na maioria dos textos de referência da pasta — é o primeiro bloqueador de canal de cálcio intranasal aprovado para essa indicação, com dado de eficácia populacional publicado no The Lancet em 2023 e dado de segurança em uso real (sem dose-teste supervisionada) publicado em 2025. Não duplica os documentos existentes sobre ablação da AVNRT: aqui a pergunta clínica é sobre tratamento farmacológico agudo autoadministrado, não sobre a decisão de curar a arritmia por cateter."
+source_refs:
+- 'Stambler BS, Camm AJ, Alings M, Dorian P, Heidbuchel H, Houtgraaf J, et al; RAPID Investigators. Self-administered
+  intranasal etripamil using a symptom-prompted, repeat-dose regimen for atrioventricular-nodal-dependent supraventricular
+  tachycardia (RAPID): a multicentre, randomised trial. Lancet. 2023;402(10396):118-128. DOI: 10.1016/S0140-6736(23)00776-6.
+  PMID: 37331368 — NCT03464019 (parte 2 do NODE-301), 692 randomizados, 184 com evento confirmado tratado (99 etripamil/85
+  placebo); abstract lido na íntegra via PubMed nesta sessão'
+- 'Ip JE, Coutu B, Ip JH, Noseworthy PA, Parody ML, Rafii F, et al. Etripamil Nasal Spray for Recurrent Paroxysmal
+  Supraventricular Tachycardia Conversion: Results From the NODE-303 Open-Label Study. J Cardiovasc Electrophysiol.
+  2025;36(11):2990-3003. DOI: 10.1111/jce.70086. PMID: 40931676 — NCT04072835, estudo aberto de braço único, 1116
+  pacientes incluídos, 503 autoadministraram ≥1 dose para 1054 episódios percebidos de TSV; abstract lido na íntegra
+  via PubMed nesta sessão'
+- 'Brown MB. Etripamil: First Approval. Drugs. 2026;86(7):1147-1152. DOI: 10.1007/s40265-026-02321-1. PMID: 42068525
+  — artigo regulatório de resumo de desenvolvimento; aprovação nos EUA em 12/12/2025 (CARDAMYST); abstract lido
+  na íntegra via PubMed nesta sessão'
+- 'Dorian P, Alings M, Coutu B, Ip JE, Martinez FA, Piccini JP, et al. Self-Administered Etripamil Nasal Spray Slows
+  Ventricular Rate in Patients With Atrial Fibrillation: A Post Hoc Analysis of the NODE-303 Study. J Cardiovasc
+  Electrophysiol. 2026;37(4):859-863. DOI: 10.1111/jce.70287. PMID: 41668514 — subanálise post hoc, n=18 episódios
+  de FA identificados dentro da coorte NODE-303; abstract lido na íntegra via PubMed nesta sessão'
+- 'Ip JE, Noseworthy P, Rafii F, Piccini JP, Singh N, Stambler B, et al. Minimal Blood Pressure Effects of Intranasal
+  Etripamil for Paroxysmal Supraventricular Tachycardia. JACC Adv. 2026;5(7):102868. DOI: 10.1016/j.jacadv.2026.102868.
+  PMID: 42269477 — citado apenas para registrar que existe análise dedicada de segurança pressórica; abstract em
+  texto não disponível no PubMed nesta sessão, nenhum número deste estudo foi usado no corpo do texto'
+- 'Bula FDA/DailyMed CARDAMYST, revisada 12/2025: https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a92170b9-4f93-4b83-b2cd-cb85c52821cd&type=display'
+legacy_source: 'Documento novo, escrito em 08/09/2026. A pasta Arritmias já cobria taquicardia supraventricular
+  (TSV) em profundidade — diagnóstico e manejo agudo pelo algoritmo ESC 2019, ablação por cateter versus fármacos
+  e escolha de energia na AVNRT, WPW assintomático, taquicardia por reentrada sinoatrial e taquicardia atrial focal
+  — mas nenhum documento tratava de uma opção terapêutica genuinamente nova: um fármaco autoadministrado por spray
+  nasal para reversão aguda da TSV fora do ambiente hospitalar. Etripamil recebeu sua primeira aprovação regulatória
+  mundial (FDA, 12/12/2025) depois do encerramento deste documento na maioria dos textos de referência da pasta
+  — é o primeiro bloqueador de canal de cálcio intranasal aprovado para essa indicação, com dado de eficácia populacional
+  publicado no The Lancet em 2023 e dado de segurança em uso real (sem dose-teste supervisionada) publicado em 2025.
+  Não duplica os documentos existentes sobre ablação da AVNRT: aqui a pergunta clínica é sobre tratamento farmacológico
+  agudo autoadministrado, não sobre a decisão de curar a arritmia por cateter.'
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
 ---
 
 # Etripamil Nasal para Reversão da Taquicardia Supraventricular Paroxística: os Ensaios RAPID e NODE-303 e a Aprovação da FDA
@@ -26,7 +62,7 @@ Etripamil é um bloqueador do canal de cálcio tipo L não-diidropiridínico, ad
 - Desfecho primário: **tempo até a conversão da TSV a ritmo sinusal por pelo menos 30 segundos, dentro de 30 minutos**, medido em todos os pacientes com evento confirmado como dependente do nó AV
 - **692 pacientes randomizados**; **184 tiveram episódio espontâneo tratado com a droga cega e confirmado, por adjudicação eletrocardiográfica, como TSV dependente do nó AV** (99 no grupo etripamil, 85 no grupo placebo) — essa é a população de eficácia primária
 
-**NODE-303 (Ip JE et al., J Cardiovasc Electrophysiol 2025, PMID 40931676; NCT04072835)** foi o ensaio de confirmação em vida real: aberto, braço único, desenhado especificamente para testar o uso **sem dose-teste supervisionada** antes da primeira aplicação e ao longo de **múltiplos episódios** autoadministrados em casa.
+**NODE-303 (Ip JE et al., J Cardiovasc Electrophysiol 2025, PMID 40931676; NCT04072835)** foi um estudo aberto, de braço único, de uso domiciliar, desenhado especificamente para testar o uso **sem dose-teste supervisionada** antes da primeira aplicação e ao longo de **múltiplos episódios** autoadministrados em casa.
 - **1.116 pacientes incluídos**; **503 autoadministraram pelo menos uma dose** para um total de **1.054 episódios percebidos de TSV**
 - Protocolo: monitor de ECG aplicado ao início dos sintomas, manobra vagal tentada primeiro, depois etripamil 70 mg; dose de repetição de 70 mg permitida se os sintomas persistissem após 10 minutos
 
@@ -35,10 +71,10 @@ Etripamil é um bloqueador do canal de cálcio tipo L não-diidropiridínico, ad
 **RAPID (eficácia contra placebo)**:
 - Conversão a ritmo sinusal em 30 min (estimativa de Kaplan-Meier): **64% (63/99) com etripamil vs. 31% (26/85) com placebo** — razão de risco **2,62** (IC95% 1,66-4,15; **p<0,0001**)
 - **Tempo mediano até a conversão**: **17,2 min** (IC95% 13,4-26,5) com etripamil vs. **53,5 min** (38,7-87,3) com placebo
-- Eventos adversos emergentes do tratamento: **68/99 (50%) com etripamil vs. 12/85 (11%) com placebo**, a maioria localizada no sítio de administração, leve ou moderada, transitória e resolvida sem intervenção — **desconforto nasal 23%, congestão nasal 13%, rinorreia 9%**
+- Os eventos adversos foram predominantemente locais, leves ou moderados e transitórios: **desconforto nasal 23%, congestão nasal 13%, rinorreia 9%**. Não se devem usar os denominadores da população de eficácia para calcular a frequência de eventos adversos na população tratada
 - **Nenhum evento adverso grave relacionado ao etripamil nem óbito**
 
-**NODE-303 (segurança e efetividade em vida real, sem dose-teste prévia, múltiplos episódios)**:
+**NODE-303 (uso domiciliar sem comparador, sem dose-teste prévia, múltiplos episódios)**:
 - Eventos adversos emergentes dentro de 24h, predominantemente leves a moderados e localizados: **desconforto nasal em 30,2%**, congestão nasal em **13,9%**, rinorreia em **13,1%**, epistaxe em **7,4%** — frequência **decrescente** ao longo de episódios repetidos e semelhante entre dose única e dose de repetição
 - No primeiro episódio tratado: **70,5% converteram a ritmo sinusal em até 60 minutos**, com **tempo mediano até a conversão de 18,3 min** (14,2-25,6)
 - **Conversão em episódios anteriores foi preditiva de conversão em episódios subsequentes** — quem responde uma vez tende a responder de novo
@@ -49,18 +85,24 @@ Etripamil é um bloqueador do canal de cálcio tipo L não-diidropiridínico, ad
 
 ## O que isso muda na prática
 
-- Para pacientes com **TSV dependente do nó AV já documentada por ECG** (AVNRT ou AVRT ortodrômica por via oculta), o etripamil nasal passa a ser uma opção de **tratamento agudo autoadministrado em casa**, com taxa de conversão e tempo até a conversão favoráveis frente a placebo (RAPID) e efetividade sustentada em uso real com múltiplos episódios, sem necessidade de dose-teste supervisionada prévia (NODE-303)
-- O perfil de eventos adversos é consistentemente **local, leve a moderado e transitório** (queixas nasais), sem sinal de evento adverso cardiovascular grave atribuível ao fármaco nos dois estudos
+- Para pacientes com **TSV dependente do nó AV já documentada por ECG** (AVNRT ou AVRT ortodrômica por via oculta), o etripamil nasal passa a ser uma opção de **tratamento agudo autoadministrado em casa**, com taxa de conversão e tempo até a conversão favoráveis frente a placebo (RAPID) e respostas observadas em múltiplos episódios no estudo aberto NODE-303, que não exigiu dose-teste prévia
+- As queixas nasais predominaram nos estudos. Isso não exclui risco hemodinâmico: a bula alerta para tontura/síncope e recomenda monitoramento apropriado ao iniciar em pessoas com hipotensão prévia ou risco de instabilidade
 - **A indicação aprovada é para TSV já diagnosticada**, não para taquicardia de início indeterminado: o paciente precisa ter documentação eletrocardiográfica prévia do mecanismo antes de receber a prescrição para uso autônomo em casa
-- O achado em fibrilação atrial é **exploratório, de subgrupo pequeno (n=18) identificado post hoc**, e não constitui indicação aprovada — o ensaio fase 3 dedicado a FA-RVR está em andamento; a exata exigência (ou não) de dose-teste supervisionada em bula, bem como o texto integral de contraindicações e a posologia final aprovada, não foram lidos nesta sessão — `VERIFICAÇÃO HUMANA NECESSÁRIA` quanto ao texto de bula/prescribing information
+- O achado em fibrilação atrial é **exploratório, de subgrupo pequeno (n=18) identificado post hoc**, e não constitui indicação aprovada — o ensaio fase 3 dedicado a FA-RVR está em andamento
 
 ## Armadilhas clínicas
 
 - **Prescrever para taquicardia de mecanismo não confirmado**: os ensaios pivotais selecionaram especificamente TSV dependente do nó AV — taquicardia atrial focal, flutter atrial ou taquicardia sinusal inapropriada não têm o mesmo racional fisiopatológico de resposta ao bloqueio nodal AV (ver `taquicardia-atrial-focal-diagnostico-morfologia-da-onda-p-manejo-e-ablacao-por-cateter.md` e `taquicardia-sinusal-inapropriada-e-ivabradina-o-ensaio-de-cappato.md`, nesta mesma pasta, para os diagnósticos diferenciais que não se beneficiam do mesmo mecanismo)
-- **Extrapolar para fibrilação atrial pré-excitada (via acessória com condução anterógrada)**: por analogia mecanística com outros bloqueadores do nó AV (verapamil, diltiazem, digoxina — contraindicados nesse cenário porque podem acelerar a condução pela via acessória), a cautela deveria se aplicar também ao etripamil; isso não foi confirmado nesta sessão a partir da bula específica do produto — `VERIFICAÇÃO HUMANA NECESSÁRIA` antes de extrapolar a contraindicação de classe
+- **Extrapolar para pré-excitação**: a bula contraindica expressamente o uso em WPW, LGL ou pré-excitação manifesta; o pequeno subgrupo de FA não modifica essa restrição
 - **Ignorar que o achado em FA é post hoc e de amostra pequena (n=18)**: útil como sinal para gerar hipótese, não como base para uso rotineiro em controle de frequência da FA fora de protocolo de pesquisa
 - **Minimizar as queixas nasais como “só efeito local sem importância”**: cerca de 30% dos pacientes relatam desconforto nasal em uso real (NODE-303) — vale antecipar isso na conversa com o paciente para não comprometer a adesão ao autotratamento
-- **Achar que dose-teste supervisionada deixou de ser necessária em todo lugar**: NODE-303 testou o uso sem dose-teste prévia e mostrou segurança e efetividade nesse desenho, mas a exigência regulatória final de bula pode diferir — `VERIFICAÇÃO HUMANA NECESSÁRIA` antes de dispensar a etapa de dose-teste em prática clínica fora do contexto de pesquisa
+- **Generalizar o desenho sem dose-teste**: a bula dos EUA não exige teste universal, mas prevê monitoramento apropriado na iniciação para quem tem episódios hipotensivos ou maior risco de instabilidade
+
+## Posologia e restrições da bula dos EUA
+
+Uma dose corresponde a **70 mg no total: dois jatos, um em cada narina**. Persistindo sintomas, repetir 70 mg após 10 minutos; máximo 140 mg em 24 horas. Administrar sentado. Sem melhora até 20 minutos depois da segunda dose, contatar o médico ou procurar emergência; instabilidade exige atendimento imediato.
+
+Além de hipersensibilidade, as contraindicações incluem insuficiência cardíaca NYHA II–IV, WPW/LGL ou pré-excitação manifesta, doença do nó sinusal sem marca-passo e bloqueio AV Mobitz II ou de maior grau. A aprovação para adultos com TSV não abrange FA. Estas informações descrevem a bula norte-americana, sem afirmar registro ou disponibilidade no Brasil. [Bula oficial, seções 1–5](https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a92170b9-4f93-4b83-b2cd-cb85c52821cd&type=display).
 
 ## Tudo com Tudo
 

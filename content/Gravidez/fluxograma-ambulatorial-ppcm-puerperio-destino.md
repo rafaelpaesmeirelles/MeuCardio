@@ -1,0 +1,73 @@
+---
+slug: fluxograma-ambulatorial-ppcm-puerperio-destino
+title: 'Fluxograma ambulatorial: PPCM / suspeita no puerpério — PS agora vs. retorno precoce vs. pregnancy heart
+  team'
+kind: fluxograma
+theme: Gravidez
+summary: 'Destino da puérpera com cardiomiopatia periparto conhecida ou suspeita: sinais de alarme exigem emergência;
+  sintomas novos precisam de avaliação inicial rápida antes de programar retorno. Inclui coordenação com equipe
+  especializada em cardiologia e gestação.'
+tags: []
+source_refs:
+- 'De Backer J, Haugaa KH, Hasselberg NE, et al. 2025 ESC Guidelines for the management of cardiovascular disease
+  and pregnancy. Eur Heart J. 2025. DOI: 10.1093/eurheartj/ehaf193'
+- 'Bauersachs J, König T, van der Meer P, et al. Pathophysiology, diagnosis and management of peripartum cardiomyopathy:
+  a position statement from the Heart Failure Association of the European Society of Cardiology Study Group on PPCM.
+  Eur J Heart Fail. 2019;21(7):827-843. DOI: 10.1002/ejhf.1493. PMID: 31243866'
+- 'Lindley KJ, Bello NA, Berlacher KL, et al. Optimization of Postpartum Care for Patients With and at Risk for
+  Premature and Long-Term Cardiovascular Disease: 2026 ACC Expert Consensus Decision Pathway. J Am Coll Cardiol.
+  Published online May 22, 2026. DOI: 10.1016/j.jacc.2025.11.001. PMID: 42171544'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# Fluxograma ambulatorial: PPCM / suspeita no puerpério — destino
+
+Prosa: [sinalizadores-ambulatoriais-ppcm-puerperio-quando-encaminhar](/biblioteca/sinalizadores-ambulatoriais-ppcm-puerperio-quando-encaminhar). Checklist: [ppcm-checklist-ambulatorial-alarme-pos-parto](/biblioteca/ppcm-checklist-ambulatorial-alarme-pos-parto). Emergência: [fluxograma-cardiomiopatia-periparto-descompensada-e-choque-no-puerperio-esc-2025](/biblioteca/fluxograma-cardiomiopatia-periparto-descompensada-e-choque-no-puerperio-esc-2025).
+
+## Árvore de decisão
+
+```mermaid
+flowchart TD
+  R0["Consulta ambulatorial / contato<br/>puérpera com PPCM conhecida<br/>ou suspeita de IC periparto"] --> D1{"Há alarme de PS?<br/>dispneia em repouso / ortopneia grave<br/>hipoperfusão / síncope<br/>hipoxemia súbita / TEP suspeito<br/>dor torácica / SCAD suspeita<br/>FEVE reduzida com piora rápida<br/>TV suspeita / arritmia instável<br/>pré-síncope com palpitações<br/>edema unilateral novo / TVP suspeita<br/>PAS ≥160 OU PAD ≥110 mmHg<br/>mesmo sem sintomas; cefaleia grave<br/>ou visão alterada"}
+
+  D1 -->|"Sim ou dúvida fundamentada"| C1(["Encaminhar AGORA ao PS<br/>Usar fluxograma PPCM descompensada/choque<br/>Diferencial: TEP / SCAD / pré-eclâmpsia"])
+
+  D1 -->|"Não"| D2{"Sintoma cardiovascular equívoco<br/>sem hipoperfusão?<br/>dispneia leve / edema simétrico<br/>fadiga desproporcional"}
+
+  D2 -->|"Sim"| P1["Exame focado + ECG<br/>± BNP/NT-proBNP<br/>Eco rápido se suspeita nova/piora<br/>Checar rede de suporte"]
+  P1 --> DP{"Estabilidade confirmada e<br/>sem novo alarme após exame/ECG/eco?"}
+  DP -->|"Não / incerta"| C1
+  DP -->|"Sim"| C2(["Reavaliação definida pela equipe<br/>após confirmar segurança e investigar<br/>Orientação escrita de alarmes"])
+
+  D2 -->|"Não / estável"| D3{"PPCM/suspeita sem pregnancy<br/>heart team / cardiologia ativa<br/>ou transição do 1º ano incompleta?"}
+
+  D3 -->|"Sim"| C3(["Referência pregnancy heart team<br/>/ cardiologia + plano ACC 2026<br/>Contato pronto e seguimento<br/>durante o primeiro ano"])
+  D3 -->|"Não"| C4(["Plano usual + educação de alarmes<br/>Manter janela crítica das 2 primeiras<br/>semanas do puerpério em mente"])
+
+  C2 --> D4{"Acesso e suporte garantidos?"}
+  D4 -->|"Piora / instabilidade / novo alarme"| C1
+  D4 -->|"Sem acesso/suporte"| C5(["Avaliação presencial imediata<br/>Garantir investigação e destino seguro"])
+  D4 -->|"Sim"| C6(["Manter reavaliação precoce definida<br/>Não protocolar doses neste fluxograma"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;
+  class C1,C5 alerta;
+  class C2,C3,C4,C6 conduta;
+```
+
+## Notas
+
+- **D1** = gate de segurança (congestão grave, hipoperfusão, arritmia, TEP/SCAD — Bauersachs 2019 + ESC 2025 + ACC 2026).
+- **D2** = sintoma equívoco ambulatorial → destino clínico precoce (primeiras semanas do puerpério).
+- **D3** = ponte para pregnancy heart team / transição do 1º ano (ACC 2026), **sem** decidir fármaco aqui.
+- Não decide doses de GDMT, bromocriptina, anticoagulação nem suporte avançado.
+
+## Antes de programar retorno
+
+Ausência de hipoperfusão relatada por telefone não confirma estabilidade. Se houver dúvida, avaliação presencial imediata; emergência se suspeita de instabilidade. Na suspeita nova de PPCM/IC, obter ECG, peptídeos e ecocardiograma rapidamente conforme disponibilidade, sem aguardar a consulta de retorno para iniciar investigação. Reaplicar o gate de urgência se exame ou teste revelar hipoxemia, congestão, arritmia ou disfunção importante/progressiva.
+
+Retornos de 24–72 h ou até sete dias só se aplicam após avaliação que confirme segurança, com sintomas leves em melhora, plano definido e acesso garantido. Não usar esses prazos para postergar diagnóstico de IC, TVP/TEP, SCAD/SCA, síndrome aórtica, sepse ou pré-eclâmpsia/HELLP. Cefaleia intensa, alteração visual, dor epigástrica importante ou PA gravemente elevada requerem avaliação obstétrica urgente. Edema unilateral novo exige investigação urgente de TVP independentemente de hipoxemia.

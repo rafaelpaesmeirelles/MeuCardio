@@ -1,11 +1,29 @@
 ---
-title: "Escore de Risco NCDR CathPCI (ACC): Predição de Mortalidade Após Intervenção Coronária Percutânea"
+title: 'Escore de Risco NCDR CathPCI (ACC): Predição de Mortalidade Após Intervenção Coronária Percutânea'
 slug: escore-ncdr-cathpci-predicao-de-mortalidade-apos-intervencao-coronaria-percutanea
-theme: "Calculadoras"
+theme: Calculadoras
 kind: calculadora
 review_status: revisado
-source_refs: ["Brennan JM, Curtis JP, Dai D, Fitzgerald S, Khandelwal AK, Spertus JA, Rao SV, Singh M, Shaw RE, Ho KK, Krone RJ, Weintraub WS, Weaver WD, Peterson ED. Enhanced mortality risk prediction with a focus on high-risk percutaneous coronary intervention: results from 1,208,137 procedures in the NCDR (National Cardiovascular Data Registry). JACC Cardiovasc Interv. 2013;6(8):790-799. DOI: 10.1016/j.jcin.2013.03.020. PMID: 23968699 — registro nacional americano CathPCI (ACC/NCDR), 1.208.137 procedimentos de intervenção coronária percutânea em 1.252 hospitais, julho/2009 a junho/2011, com validação em amostra de split-sample"]
-legacy_source: "Documento novo, escrito nesta sessão. A pasta já cobre escores de risco pós-angioplastia primária no IAM com supra de ST (CADILLAC), pós-choque cardiogênico já estabelecido (IABP-SHOCK II), risco cirúrgico (EuroSCORE II, STS Risk Score) e a decisão anatômica entre PCI e CABG (SYNTAX, SYNTAX II) — mas nenhum documento existente cobria o modelo de risco de mortalidade da própria ICP como procedimento, aplicável ao universo geral de pacientes submetidos a cateterismo intervencionista (eletivos e de urgência/emergência, com ou sem choque), que é o papel equivalente ao STS Risk Score do lado cirúrgico. Esse é o modelo do registro CathPCI do American College of Cardiology/NCDR que sustenta a calculadora de risco de ICP de uso corrente à beira do leito nos EUA."
+source_refs:
+- 'Brennan JM, Curtis JP, Dai D, Fitzgerald S, Khandelwal AK, Spertus JA, Rao SV, Singh M, Shaw RE, Ho KK, Krone
+  RJ, Weintraub WS, Weaver WD, Peterson ED. Enhanced mortality risk prediction with a focus on high-risk percutaneous
+  coronary intervention: results from 1,208,137 procedures in the NCDR (National Cardiovascular Data Registry).
+  JACC Cardiovasc Interv. 2013;6(8):790-799. DOI: 10.1016/j.jcin.2013.03.020. PMID: 23968699 — registro nacional
+  americano CathPCI (ACC/NCDR), 1.208.137 procedimentos de intervenção coronária percutânea em 1.252 hospitais,
+  julho/2009 a junho/2011, com validação em amostra de split-sample'
+legacy_source: Documento novo, escrito nesta sessão. A pasta já cobre escores de risco pós-angioplastia primária
+  no IAM com supra de ST (CADILLAC), pós-choque cardiogênico já estabelecido (IABP-SHOCK II), risco cirúrgico (EuroSCORE
+  II, STS Risk Score) e a decisão anatômica entre PCI e CABG (SYNTAX, SYNTAX II) — mas nenhum documento existente
+  cobria o modelo de risco de mortalidade da própria ICP como procedimento, aplicável ao universo geral de pacientes
+  submetidos a cateterismo intervencionista (eletivos e de urgência/emergência, com ou sem choque), que é o papel
+  equivalente ao STS Risk Score do lado cirúrgico. Esse é o modelo do registro CathPCI do American College of Cardiology/NCDR
+  que sustenta a calculadora de risco de ICP de uso corrente à beira do leito nos EUA.
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Escore de Risco NCDR CathPCI (ACC): Predição de Mortalidade Após Intervenção Coronária Percutânea
@@ -16,7 +34,7 @@ Assim como o STS Risk Score estima mortalidade cirúrgica antes de uma cirurgia 
 O objetivo declarado foi permitir **consentimento informado individualizado antes do procedimento** e comparação de qualidade ajustada por risco entre hospitais — a mesma lógica de uso do STS Risk Score, aplicada à ICP em vez da cirurgia.
 
 ## Como foi derivado
-- População: todos os procedimentos de ICP registrados no CathPCI Registry no período do estudo, sem restrição a subgrupo clínico (diferente do CADILLAC, restrito a angioplastia primária no IAM com supra de ST, ou do IABP-SHOCK II Risk Score, restrito a choque cardiogênico já estabelecido);
+- População: procedimentos de ICP registrados no CathPCI Registry no período do estudo, incluindo diferentes níveis de gravidade clínica (diferente do CADILLAC, restrito a angioplastia primária no IAM com supra de ST, ou do IABP-SHOCK II Risk Score, restrito a choque cardiogênico já estabelecido);
 - Desfecho: **mortalidade intra-hospitalar**;
 - Método: regressão, com avaliação de **discriminação e calibração em amostra de validação separada (split-sample)**;
 - Três modelos foram desenvolvidos e comparados: um **modelo completo**, um **modelo pré-cateterismo** (variáveis disponíveis antes do procedimento) e um **escore simplificado para uso à beira do leito** (*simplified bedside risk score*).
@@ -25,12 +43,12 @@ O objetivo declarado foi permitir **consentimento informado individualizado ante
 Citado diretamente do resumo indexado:
 - **Mortalidade intra-hospitalar geral**: **1,4%** na coorte completa;
 - **Variação por apresentação clínica**: de **0,2% nos casos eletivos** a **65,9% nos pacientes com choque e parada cardíaca recente**;
-- **C-estatística na amostra de validação**: **0,930** (modelo completo), **0,928** (modelo pré-cateterismo) e **0,925** (escore simplificado à beira do leito) — discriminação excelente e muito próxima entre os três modelos, inclusive o mais simples;
+- **C-estatística na amostra de validação**: **0,930** (modelo completo), **0,928** (modelo pré-cateterismo) e **0,925** (escore simplificado à beira do leito) — discriminação elevada e próxima entre os três modelos. Houve leve superestimação no extremo de maior risco;
 - **Preditores mais fortes de mortalidade**: **choque cardiogênico** e **urgência do procedimento** (eletivo vs. urgente/emergente/de resgate);
 - **Fatores angiográficos significativos**: **oclusão total crônica**, **trombose subaguda de stent** e **localização em tronco de coronária esquerda**.
 
-## VERIFICAÇÃO HUMANA NECESSÁRIA
-O resumo indexado consultado nesta sessão **não traz a tabela variável-a-variável com os pesos/pontos exatos do escore simplificado à beira do leito**, nem a lista completa de todas as variáveis incluídas em cada um dos três modelos, nem os pontos de corte de categorias de risco (baixo/intermediário/alto) do escore simplificado com a mortalidade observada em cada categoria — apenas a variação de mortalidade por **apresentação clínica** (0,2% a 65,9%), que não é o mesmo que estratificação por faixa de pontuação do escore. Essas tabelas completas estão no texto integral do artigo (Brennan JM et al., *JACC Cardiovasc Interv*. 2013;6(8):790-799, DOI 10.1016/j.jcin.2013.03.020), ao qual não houve acesso nesta pesquisa (paywall da editora). Antes de aplicar o escore ponto a ponto em decisão clínica real, consulte o texto completo do artigo ou a calculadora oficial do ACC/NCDR — não reconstrua os pesos a partir de fonte terciária não conferida.
+## Escopo desta síntese
+Este documento analisa o estudo de 2013 e não implementa uma calculadora. Não fornece pesos para cálculo manual nem deve ser usado para gerar risco individual. A versão histórica aqui estudada não deve ser confundida com atualizações posteriores do registro.
 
 ## O que este documento NÃO reproduz
 Este documento confirma diretamente do resumo: a coorte de derivação (tamanho, número de hospitais, período), o desfecho, a estrutura de três modelos, as três c-estatísticas de validação, a mortalidade geral e por apresentação clínica extrema, e os preditores mais fortes citados nominalmente. **Não reproduz** a tabela de pontos por variável do escore simplificado, nem os intervalos de confiança das c-estatísticas, nem estatística de calibração (ex.: Hosmer-Lemeshow) — ausentes do resumo indexado.
@@ -52,7 +70,7 @@ Este documento confirma diretamente do resumo: a coorte de derivação (tamanho,
 | C-estatística (validação) | 0,930 / 0,928 / 0,925, respectivamente |
 | Preditores mais fortes | Choque cardiogênico, urgência do procedimento |
 | Fatores angiográficos significativos | Oclusão total crônica, trombose subaguda de stent, tronco de coronária esquerda |
-| Tabela de pontos por variável | Não confirmada no resumo — VERIFICAÇÃO HUMANA NECESSÁRIA |
+| Cálculo individual | Não implementado neste documento |
 
 ## Tudo com Tudo
 

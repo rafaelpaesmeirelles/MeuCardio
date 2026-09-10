@@ -1,11 +1,32 @@
 ---
-title: "Milvexian na SCA: o Ensaio LIBREXIA-ACS, Interrompido por Futilidade"
+title: 'Milvexian na SCA: o Ensaio LIBREXIA-ACS, Interrompido por Futilidade'
 slug: milvexian-sca-ensaio-librexia-acs-interrompido-por-futilidade
-theme: "Farmacologia"
+theme: Farmacologia
 kind: farmacologia
 review_status: revisado
-source_refs: ["Gibson CM, Steg PG, Bahit MC, et al; LIBREXIA ACS Investigators. Milvexian with Antiplatelet Therapy after Acute Coronary Syndrome Event. N Engl J Med. 2026 Aug 29. DOI: 10.1056/NEJMoa2608717. PMID: 42670965 — resumo completo conferido no PubMed (efetch) em 09/09/2026; apresentado simultaneamente no ESC Congress 2026 (Hot Line, Munique, 29/08/2026).", "Rationale and design of the phase 3 Librexia ACS trial of oral factor XIa inhibitor milvexian after a recent acute coronary syndrome. PMID: 39986336 — artigo de desenho do ensaio, título/resumo conferidos via PubMed E-utilities.", "ClinicalTrials.gov NCT05754957 — patrocinador Janssen Research & Development, LLC; status concluído, data de conclusão primária 06/02/2026; 14.194 participantes.", "Comunicado de imprensa ESC: 'Milvexian did not reduce cardiovascular events in the LIBREXIA ACS trial' (escardio.org, 29/08/2026) — usado apenas para números operacionais do ensaio (data de interrupção, número de centros/países, nome do investigador principal) que não constam no abstract indexado."]
-legacy_source: "Documento novo, 09/09/2026. Busca por grep em todo o content/ confirmou que 'milvexian' só aparecia citado de passagem em dois documentos (a metanálise 2026 de inibidores do fator XI/XIa na FA, que registrava o LIBREXIA-AF apenas pelo desenho do protocolo, sem resultado; e um documento de farmacogenômica), nenhum dedicado à molécula. O resultado do LIBREXIA-ACS (NEJM, 29/08/2026 — há menos de duas semanas da data desta sessão) é o primeiro desfecho de fase 3 publicado para o milvexian e ainda não tinha documento próprio nesta base."
+source_refs:
+- 'Gibson CM, Steg PG, Bahit MC, et al; LIBREXIA ACS Investigators. Milvexian with Antiplatelet Therapy after Acute
+  Coronary Syndrome Event. N Engl J Med. 2026 Aug 29. DOI: 10.1056/NEJMoa2608717. PMID: 42670965 — resumo completo
+  conferido no PubMed (efetch) em 09/09/2026; apresentado simultaneamente no ESC Congress 2026 (Hot Line, Munique,
+  29/08/2026).'
+- 'Rationale and design of the phase 3 Librexia ACS trial of oral factor XIa inhibitor milvexian after a recent
+  acute coronary syndrome. PMID: 39986336 — artigo de desenho do ensaio, título/resumo conferidos via PubMed E-utilities.'
+- ClinicalTrials.gov NCT05754957 — patrocinador Janssen Research & Development, LLC; status concluído, data de conclusão
+  primária 06/02/2026; 14.194 participantes.
+- 'Comunicado de imprensa ESC: ''Milvexian did not reduce cardiovascular events in the LIBREXIA ACS trial'' (escardio.org,
+  29/08/2026) — usado apenas para números operacionais do ensaio (data de interrupção, número de centros/países,
+  nome do investigador principal) que não constam no abstract indexado.'
+legacy_source: Documento novo, 09/09/2026. Busca por grep em todo o content/ confirmou que 'milvexian' só aparecia
+  citado de passagem em dois documentos (a metanálise 2026 de inibidores do fator XI/XIa na FA, que registrava o
+  LIBREXIA-AF apenas pelo desenho do protocolo, sem resultado; e um documento de farmacogenômica), nenhum dedicado
+  à molécula. O resultado do LIBREXIA-ACS (NEJM, 29/08/2026 — há menos de duas semanas da data desta sessão) é o
+  primeiro desfecho de fase 3 publicado para o milvexian e ainda não tinha documento próprio nesta base.
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Milvexian na SCA: o Ensaio LIBREXIA-ACS, Interrompido por Futilidade
@@ -43,25 +64,19 @@ Fast Track Designation da FDA em 2023.
 - **resultado de eficácia**: desfecho primário em **5,4% (milvexian) vs. 5,1% (placebo)** — **HR 1,05
   (IC95% 0,91-1,21; p=0,50)** — **sem diferença estatística**, ou seja, **milvexian não reduziu**
   eventos cardiovasculares maiores em relação a placebo.
-- **resultado de segurança**: sangramento maior (BARC 3c/5) em **0,3% em ambos os grupos** — **HR 1,04
-  (IC95% 0,58-1,87; p=0,88)** — **sem excesso de sangramento grave**, mas essa ausência de sinal de
+- **resultado de segurança**: sangramento maior (BARC 3c/5) em **0,3% em ambos os grupos** (23 vs. 22 pacientes; p=0,88) — **sem diferença estatisticamente detectada nesse desfecho de sangramento**, mas essa ausência de sinal de
   segurança não compensa a falta de eficácia.
 - **interrupção precoce**: o ensaio foi **encerrado por futilidade em novembro de 2025**, após análise
   interina pré-especificada indicar baixa probabilidade de atingir o desfecho primário de eficácia.
 - **investigador principal**: Prof. P. Gabriel Steg (Hôpital Bichat, Paris).
 - **conclusão dos autores**: em pacientes com SCA recente, milvexian somado à antiagregação **não
   reduziu** o risco de morte cardiovascular, infarto do miocárdio ou AVC isquêmico em comparação a
-  placebo, sem aumento do risco de sangramento grave.
+  placebo, sem aumento estatisticamente detectado no desfecho BARC 3c/5.
 
 ## Por que este resultado é relevante para a classe — e o que ele NÃO significa
 
-- **É a segunda leitura desfavorável de eficácia da classe em população aterotrombótica não puramente
-  cerebrovascular** (a primeira foi o OCEANIC-AF, com asundexian, interrompido por inferioridade de
-  eficácia em fibrilação atrial). O padrão que emerge — inibição do fator XIa sem excesso de
-  sangramento, mas também sem redução de eventos isquêmicos fora do contexto específico do AVC não
-  cardioembólico — reforça a leitura já registrada no documento da metanálise 2026 de que **o benefício
-  parece depender fortemente da indicação e da população estudada**, não ser uma propriedade genérica
-  da molécula ou da classe.
+- **O resultado depende da indicação e do comparador.** OCEANIC-AF estudou prevenção de embolia associada à FA, não uma população definida por aterotrombose, e comparou asundexian com apixabana. LIBREXIA-ACS avaliou milvexian contra placebo sobre antiagregação após SCA. Os dois resultados não demonstram uma regra de ausência de benefício de toda a classe fora do AVC.
+
 - **Não invalida o resultado positivo do OCEANIC-STROKE** (asundexian, AVC não cardioembólico) — são
   moléculas, doses e populações diferentes. Este documento não deve ser lido como prova de que "a
   classe inteira falhou"; SCA e AVC não cardioembólico são racionais fisiopatológicos distintos.
@@ -77,9 +92,8 @@ Fast Track Designation da FDA em 2023.
 
 - **Nada muda na conduta clínica atual** — milvexian nunca foi aprovado para uso comercial em nenhuma
   indicação; o resultado apenas encerra uma via de desenvolvimento específica (SCA).
-- **Reforça que a terapia antiplaquetária dupla/simples estabelecida permanece o padrão** para redução
-  de eventos isquêmicos recorrentes pós-SCA — nenhum anticoagulante oral adicional (de qualquer classe)
-  tem hoje evidência de fase 3 positiva para adição rotineira à antiagregação nesta população.
+- **O resultado não sustenta acrescentar milvexian à antiagregação pós-SCA.** Não significa que nenhum anticoagulante tenha ensaio positivo nessa população: ATLAS ACS 2–TIMI 51 encontrou menos eventos isquêmicos com rivaroxabana em baixa dose, acompanhados de mais sangramento maior e intracraniano. Isso não autoriza adição rotineira a todos os pacientes. [Ensaio primário](https://www.nejm.org/doi/full/10.1056/NEJMoa1112277).
+
 - **Não deve ser extrapolado para a decisão sobre outros inibidores do fator XI/XIa** em outras
   indicações (FA, AVC) — cada ensaio, população e desenho tem seu próprio corpo de evidência, como os
   documentos individuais desta base já registram.
@@ -97,24 +111,16 @@ Fast Track Designation da FDA em 2023.
 - **Presumir disponibilidade comercial ou uso fora de protocolo de pesquisa** — milvexian é fármaco de
   investigação clínica, não aprovado por FDA ou ANVISA em nenhuma indicação até a data desta sessão.
 
-## Verificação humana necessária
+## Limites da síntese
 
-Os números deste documento vêm do abstract completo indexado no PubMed (via E-utilities, efetch) e do
-comunicado de imprensa oficial da ESC, ambos consultados nesta sessão — não do texto integral do
-artigo. Não foi possível obter nesta sessão: (1) os valores absolutos/percentuais dos componentes
-individuais do desfecho primário (morte cardiovascular, infarto do miocárdio e AVC isquêmico separados);
-(2) detalhamento por subgrupo (idade, função renal, estratégia de revascularização); (3) qualquer
-posição oficial da BMS/Janssen sobre o futuro comercial do milvexian após este resultado. Duas tentativas
-de buscar essas informações em fontes secundárias (Medscape, comunicado da BMS de 2025) retornaram erro
-de acesso (HTTP 429 e 402) e não puderam ser lidas nesta sessão — quem precisar desses detalhes deve
-consultar o texto completo do NEJM (DOI 10.1056/NEJMoa2608717) diretamente.
+Os resultados globais foram conferidos no artigo indexado do LIBREXIA-ACS. Esta síntese não atribui efeitos a componentes ou subgrupos não apresentados. O comunicado da BMS de novembro de 2025 registrou continuidade de AF/STROKE; essa expectativa não constitui resultado desses ensaios. [Comunicado oficial](https://news.bms.com/news/details/2025/Update-on-Phase-3-Librexia-ACS-Trial/default.aspx).
 
 ## Tudo com Tudo
 
-- [Inibidores do Fator XIa: Asundexian e o Ensaio OCEANIC-STROKE](inibidores-do-fator-xia-asundexian-e-o-ensaio-oceanic-stroke.md)
-- [Metanálise 2026: Inibidores do Fator XI/XIa versus DOAC na FA](../Fibrilação_atrial/metanalise-2026-inibidores-do-fator-xi-xia-versus-doac-na-fa-menos-sangramento-mais-avc.md)
-- [Inibidores do Fator XI (Abelacimabe): o Ensaio AZALEA-TIMI 71](../Fibrilação_atrial/inibidores-do-fator-xi-abelacimabe-o-ensaio-azalea-timi-71.md)
-- [ROXI-VTE I e II: anticorpos anti-fator XI na profilaxia de TEV pós-artroplastia de joelho](../Tromboembolismo/roxi-vte-i-e-ii-anticorpos-anti-fator-xi-na-profilaxia-de-tev-pos-artroplastia-de-joelho.md)
-- [Antiagregantes orais na SCA — árvore de dose ACC/AHA 2025](antiagregantes-orais-sca-acc-aha-2025-arvore-de-dose.md)
-- [Anticoagulação parenteral na SCA — árvore de dose ACC/AHA 2025](anticoagulacao-parenteral-sca-acc-aha-2025-arvore-de-dose.md)
-- [Cangrelor](cangrelor.md)
+- [Inibidores do Fator XIa: Asundexian e o Ensaio OCEANIC-STROKE](/biblioteca/inibidores-do-fator-xia-asundexian-e-o-ensaio-oceanic-stroke)
+- [Metanálise 2026: Inibidores do Fator XI/XIa versus DOAC na FA](/biblioteca/metanalise-2026-inibidores-do-fator-xi-xia-versus-doac-na-fa-menos-sangramento-mais-avc)
+- [Inibidores do Fator XI (Abelacimabe): o Ensaio AZALEA-TIMI 71](/biblioteca/inibidores-do-fator-xi-abelacimabe-o-ensaio-azalea-timi-71)
+- [ROXI-VTE I e II: anticorpos anti-fator XI na profilaxia de TEV pós-artroplastia de joelho](/biblioteca/roxi-vte-i-e-ii-anticorpos-anti-fator-xi-na-profilaxia-de-tev-pos-artroplastia-de-joelho)
+- [Antiagregantes orais na SCA — árvore de dose ACC/AHA 2025](/biblioteca/antiagregantes-orais-sca-acc-aha-2025-arvore-de-dose)
+- [Anticoagulação parenteral na SCA — árvore de dose ACC/AHA 2025](/biblioteca/anticoagulacao-parenteral-sca-acc-aha-2025-arvore-de-dose)
+- [Cangrelor](/biblioteca/cangrelor)

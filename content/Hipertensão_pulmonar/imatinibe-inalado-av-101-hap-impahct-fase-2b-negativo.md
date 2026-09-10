@@ -1,11 +1,25 @@
 ---
-title: "Imatinibe Inalado (AV-101) na HAP: o Ensaio IMPAHCT (Fase 2b, Negativo)"
+title: 'Imatinibe Inalado (AV-101) na HAP: o Ensaio IMPAHCT (Fase 2b, Negativo)'
 slug: imatinibe-inalado-av-101-hap-impahct-fase-2b-negativo
-theme: "Hipertensão pulmonar"
+theme: Hipertensão pulmonar
 kind: estudo
-review_status: pendente_revisao
-source_refs: ["Hill NS, Gillies H, Chakinala MM, et al. Phase 2b trial of inhaled imatinib for treatment of pulmonary arterial hypertension. Am J Respir Crit Care Med. 2026;212(4):802-812. DOI: 10.1093/ajrccm/aamaf128. PMID: 41738079. NCT05036135"]
-legacy_source: "Documento novo, sessão de expansão de conteúdo. Fonte primária conferida no PubMed via E-utilities nesta sessão (PMID 41738079) em três formatos independentes — abstract estruturado, XML e MEDLINE — com título, revista, volume, páginas, DOI e registro NCT05036135 cruzados e coincidentes nas três consultas. review_status = pendente_revisao porque o abstract publicado no PubMed não traz intervalos de confiança nem valores de p por braço para o desfecho primário, nem os números exatos dos desfechos secundários (apenas a conclusão qualitativa de ausência de benefício) — esses pontos estão sinalizados como VERIFICAÇÃO HUMANA NECESSÁRIA no corpo do texto, não inventados. A direção do resultado (negativo, com descontinuação da fase 3) está confirmada com segurança."
+review_status: revisado
+source_refs:
+- 'Hill NS, Gillies H, Chakinala MM, et al. Phase 2b trial of inhaled imatinib for treatment of pulmonary arterial
+  hypertension. Am J Respir Crit Care Med. 2026;212(4):802-812. DOI: 10.1093/ajrccm/aamaf128. PMID: 41738079. NCT05036135'
+legacy_source: Documento novo, sessão de expansão de conteúdo. Fonte primária conferida no PubMed via E-utilities
+  nesta sessão (PMID 41738079) em três formatos independentes — abstract estruturado, XML e MEDLINE — com título,
+  revista, volume, páginas, DOI e registro NCT05036135 cruzados e coincidentes nas três consultas. review_status
+  = pendente_revisao porque o abstract publicado no PubMed não traz intervalos de confiança nem valores de p por
+  braço para o desfecho primário, nem os números exatos dos desfechos secundários (apenas a conclusão qualitativa
+  de ausência de benefício) — esses pontos estão sinalizados como VERIFICAÇÃO HUMANA NECESSÁRIA no corpo do texto,
+  não inventados. A direção do resultado (negativo, com descontinuação da fase 3) está confirmada com segurança.
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Imatinibe Inalado (AV-101) na HAP: o Ensaio IMPAHCT (Fase 2b, Negativo)
@@ -26,21 +40,21 @@ Ensaio randomizado, duplo-cego, controlado por placebo, multicêntrico e multina
 | AV-101 35 mg 2×/dia | **−5,5** |
 | AV-101 70 mg 2×/dia | **−57,0** |
 
-Os próprios autores concluem, em texto direto do abstract: o imatinibe inalado em pó seco (AV-101), como terapia adicional, **"não foi eficaz em reduzir a RVP em nenhuma das doses estudadas"** em pacientes com HAP. Vale notar que a dose de 70 mg foi a única numericamente favorável ao fármaco ativo (redução de RVP versus aumento no braço placebo) — mas o abstract estruturado disponível no PubMed não traz intervalos de confiança nem valores de p por braço para essa comparação. A magnitude da incerteza estatística em torno do resultado de 70 mg é **VERIFICAÇÃO HUMANA NECESSÁRIA** (consultar o texto completo do artigo). Mesmo assim, a conclusão dos próprios investigadores foi de ausência de eficácia em qualquer dose testada.
+Os próprios autores concluem, em texto direto do abstract: o imatinibe inalado em pó seco (AV-101), como terapia adicional, **"não foi eficaz em reduzir a RVP em nenhuma das doses estudadas"** em pacientes com HAP. As doses de 35 e 70 mg tiveram variações numericamente menores que o placebo, sem superioridade estatística demonstrada. Não se apresentam aqui intervalos ou valores de p por dose que não foram confirmados. Ainda assim, a conclusão dos próprios investigadores foi de ausência de eficácia em qualquer dose testada.
 
 ## Desfechos secundários
-Segundo o abstract, não houve benefício demonstrado para distância no teste de caminhada de 6 minutos, classe funcional ou outras medidas hemodinâmicas secundárias, em nenhuma das três doses. Os valores numéricos específicos desses desfechos não constam do abstract estruturado disponível no PubMed — **VERIFICAÇÃO HUMANA NECESSÁRIA** para quem precisar dos números exatos (consultar o texto completo do artigo).
+Segundo o abstract, não houve benefício demonstrado para distância no teste de caminhada de 6 minutos, classe funcional ou outras medidas hemodinâmicas secundárias, em nenhuma das três doses. Esta síntese se limita ao resultado global; não atribui magnitudes aos desfechos secundários não discriminados no resumo primário.
 
 ## Segurança
 - Dados farmacocinéticos confirmaram a chegada do fármaco ao pulmão pela via inalatória (entrega pulmonar comprovada).
 - **Tosse aumentou de forma dose-dependente** com as doses mais altas de AV-101.
 - Fora esse achado, os autores relatam não ter identificado sinais de segurança adicionais relevantes no período do estudo.
-- Frequências exatas de eventos adversos por braço não constam do abstract estruturado — **VERIFICAÇÃO HUMANA NECESSÁRIA** no texto completo, caso necessário para decisão clínica ou regulatória.
+- A ausência de novos sinais neste ensaio não exclui eventos raros ou tardios.
 
 ## Interpretação clínica
 O IMPAHCT é um resultado negativo robusto o bastante para motivar decisão de programa: com base nestes achados de fase 2b, **o estudo de fase 3 subsequente do mesmo programa foi descontinuado**. Essa é informação do próprio resumo do artigo, não interpretação deste documento — e indica que o patrocinador considerou a base de evidência insuficiente para justificar continuidade, leitura mais consistente com "negativo" do que com "neutro, pode virar positivo com mais poder estatístico".
 
-A via inalatória, neste desenho e nestas doses, não resolveu o problema que motivou o abandono do imatinibe oral como terapia de HAP: o efeito hemodinâmico buscado não apareceu de forma consistente e dose-dependente nas três doses testadas (a relação dose-resposta não foi monotônica — a dose intermediária de 35 mg ficou entre as doses de 10 mg e 70 mg, mas sem gradiente limpo), e a única dose com sinal numericamente favorável (70 mg) não foi suficiente, na avaliação dos próprios autores, para caracterizar eficácia.
+Nas doses ativas, as variações médias de RVP foram numericamente ordenadas com a dose: +42,8, −5,5 e −57,0 dyn·s·cm⁻⁵. Isso não demonstra, por si só, uma relação dose–resposta estatisticamente estabelecida nem eficácia clínica. Nenhuma dose superou significativamente o placebo.
 
 ### O que não deve ser concluído
 - Este resultado não encerra, por si só, toda a hipótese de que a inibição de tirosina-quinase tem papel terapêutico na HAP: o seralutinibe, também inibidor de quinase inalado mas com alvo distinto (PDGFR-α/β, CSF1R e c-KIT) e molécula diferente, mostrou sinal positivo de redução de RVP no ensaio TORREY (ver documento relacionado) — mecanismo aparentado em espírito, mas seletividade de alvo, molécula e desenho diferentes do IMPAHCT.

@@ -1,0 +1,83 @@
+---
+slug: sinalizadores-ambulatoriais-de-bradicardia-e-bloqueio-av-quando-escalar
+title: 'Sinalizadores ambulatoriais de bradicardia e bloqueio AV: quando escalar'
+kind: protocolo
+theme: Arritmias
+summary: 'Bradicardia ou bloqueio AV no consultório: quais sinais pedem PS agora, quais permitem via eletiva de
+  marca-passo definitivo e como não confundir com bradicardia fisiológica do atleta ou efeito farmacológico reversível.'
+tags: []
+source_refs:
+- 'Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization
+  therapy. Eur Heart J. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430'
+- 'Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of
+  Patients With Bradycardia and Cardiac Conduction Delay. Circulation. 2019;140(8):e382-e482. DOI: 10.1161/CIR.0000000000000628.
+  PMID: 30586772'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# Sinalizadores ambulatoriais de bradicardia e bloqueio AV: quando escalar
+
+Pergunta de **consultório**: diante de bradicardia sinusal, pausas, doença do nó sinusal ou bloqueio atrioventricular no ECG/Holter, **quando mandar ao PS agora** e quando completar avaliação **eletiva** para marca-passo definitivo?
+
+Não substitui:
+- manejo agudo da bradicardia instável — [`fluxograma-bradicardia-sintomatica-manejo-agudo`](/biblioteca/fluxograma-bradicardia-sintomatica-manejo-agudo);
+- indicação operacional de marca-passo (ESC 2021) — [`fluxograma-bradiarritmia-indicacao-de-marcapasso-esc-2021`](/biblioteca/fluxograma-bradiarritmia-indicacao-de-marcapasso-esc-2021);
+- bifascicular no consultório — [`bloqueio-bifascicular-no-consultorio-sinais-vermelhos-quando-escalar`](/biblioteca/bloqueio-bifascicular-no-consultorio-sinais-vermelhos-quando-escalar);
+- árvore irmã — [`fluxograma-sinalizadores-ambulatoriais-bradicardia-e-bloqueio-av`](/biblioteca/fluxograma-sinalizadores-ambulatoriais-bradicardia-e-bloqueio-av);
+- disfunção de eletrodo / choque CDI — [disfunção de eletrodo](/biblioteca/fluxograma-disfuncao-de-eletrodo-fratura-e-falha-de-isolamento-conduta).
+
+## Princípio
+
+BAV 2:1 não pode ser classificado automaticamente como Mobitz II: localizar o bloqueio e avaliar QRS, sintomas e contexto. Mobitz II, BAV de alto grau ou total não reversível/fisiológico e bloqueio de ramo alternante indicam avaliação para pacing mesmo sem sintomas. Achado recém-detectado, mesmo intermitente, precisa avaliação urgente segura, com monitorização conforme risco; indicação de implante não equivale por si só a PS em todo caso crônico já acompanhado. Instabilidade/escape precário exige emergência.
+
+
+**Frequência isolada não decide destino.** O que decide é **sintoma atribuível**, **nível do bloqueio**, **evidência de escape precário** e **reversibilidade** (fármaco, eletrólito, isquemia, hipertonia vagal).
+
+- ESC 2021 (PMID 34455430): marca-passo permanente quando bradicardia/bloqueio é **com correlação sintoma-traçado, mesmo intermitente**, ou quando há bloqueio AV de alto grau / 3º grau com risco de progressão — mesmo em alguns assintomáticos selecionados.
+- ACC/AHA/HRS 2018 (PMID 30586772): correlacionar sintoma com bradiarritmia documentada; tratar causas reversíveis; não implantar por bradicardia fisiológica (sono, atleta treinado) sem sintoma.
+
+## Sinalizadores → PS agora
+
+| Domínio | Sinalizador |
+|---|---|
+| Hemodinâmico / neurológico | Síncope atual com repercussão/recuperação inadequada, pré-síncope grave, confusão nova, hipotensão sintomática, choque, dor torácica isquêmica, edema agudo |
+| Elétrico de alto risco | Achado novo/não avaliado de BAV 2º grau Mobitz II, BAV 2:1 com QRS largo / suspeita infra-His, BAV 3º grau, pausas longas com escape lento ou ausente |
+| Escape precário | Escape ventricular amplo e lento, escapes instáveis, pausas com recuperação ruim |
+| Isquemia / tóxico | SCA suspeita + bradiarritmia; hipercalemia clínica; intoxicação (betabloqueador, BCC, digoxina) com repercussão |
+| Pós-evento | Parada recuperada, necessidade recente de estimulação temporária, síncope recorrente nas últimas horas |
+
+**Conduta no consultório:** não “esperar o Holter de retorno” se há linha da tabela. Documentar ECG de 12 derivações, monitorizar se seguro até o transporte, encaminhar ao PS. Manejo medicamentoso/estimulação aguda = fluxo ACLS — **sem doses neste protocolo**.
+
+## Sem sinalizador de alarme → via eletiva
+
+1. **Confirmar o mecanismo** (sinusal vs. nó vs. AV; pausas vs. BAV) com ECG e, se pontual, Holter/monitor de eventos.
+2. **Correlacionar sintoma ↔ bradiarritmia** (diário de sintomas + traçado) — ESC 2021 / ACC/AHA/HRS 2018.
+3. **Reversíveis óbvios:** revisar betabloqueador/BCC/digoxina/ivabradina/antiarrítmicos; eletrólitos; tireoide se contexto; isquemia conforme perfil — sem atrasar o PS se já há alarme.
+4. **Ecocardiograma** se cardiopatia estrutural suspeita, IC ou dúvida de FEVE (afeta estratégia de dispositivo).
+5. Encaminhar à **eletrofisiologia / dispositivos eletiva** se: bradicardia sintomática documentada, mesmo intermitente, doença do nó sinusal sintomática,  ou dúvida de indicação Classe I/IIa.
+6. Atleta / sono / vagotonia: ver [`bradicardia-sinusal-do-atleta-versus-doenca-do-no-sinusal-criterios-de-diferenciacao`](/biblioteca/bradicardia-sinusal-do-atleta-versus-doenca-do-no-sinusal-criterios-de-diferenciacao) — não rotular como “indicação de MP” só pela FC de repouso.
+
+## Checklist de 90 segundos
+
+1. Síncope atual com repercussão, instabilidade ou BAV avançado novo / escape precário? → **PS agora**.
+2. Sintoma leve + bradicardia documentada sem alarme elétrico? → **via eletiva** (correlacionar + causa reversível + EP/dispositivos).
+3. Assintomático + FC baixa no sono/atleta + ECG sem BAV avançado? → **não escalar**; educar alarmes.
+4. Bifascicular + síncope? → protocolo irmão de bifascicular (não “só observar”).
+
+## Armadilhas
+
+- Liberar Mobitz II / BAV total “porque o paciente está falando agora”.
+- Implantar mentalmente marca-passo por FC <50 sem sintoma nem documentação.
+- Ignorar fármacos/eletrólitos e chamar tudo de “degenerativo”.
+- Confundir com disfunção de eletrodo já implantado.
+- Inventar doses de atropina/cronotrópicos neste documento ambulatorial.
+
+Síncope recuperada com bifascicular requer EP prioritária, estudo eletrofisiológico/ILR conforme contexto; pacing empírico pode ser considerado em idosos/frágeis selecionados com eventos recorrentes imprevisíveis. Pausas no sono, FA ou vagotonia exigem contexto. Rever isquemia, fármacos, eletrólitos, miocardite, sarcoidose e Lyme quando epidemiologicamente pertinente. Atleta com bradicardia atípica, incompetência cronotrópica ou pausa incomum não recebe liberação automática.
+
+## Limite da evidência
+
+ESC 2021 e ACC/AHA/HRS 2018 definem **indicação e correlação sintoma-traçado**, não um limiar único de “batimentos por minuto no consultório” que separe sempre PS de eletivo. A decisão combina sintoma, morfologia do bloqueio e reversibilidade.

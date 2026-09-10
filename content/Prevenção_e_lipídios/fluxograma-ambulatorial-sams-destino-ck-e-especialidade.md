@@ -1,0 +1,58 @@
+---
+slug: fluxograma-ambulatorial-sams-destino-ck-e-especialidade
+title: 'Fluxograma ambulatorial: SAMS — destino (suspender/labs vs. reexposição vs. especialidade)'
+kind: fluxograma
+theme: Prevenção e lipídios
+summary: 'SAMS: reconhecer gravidade, interpretar CK com risco cardiovascular e definir acompanhamento, reexposição
+  segura ou avaliação neuromuscular.'
+tags: []
+source_refs:
+- 'Stroes ES, Thompson PD, Corsini A, et al. Statin-associated muscle symptoms: EAS Consensus Panel. Eur Heart J.
+  2015;36(17):1012-1022. DOI: 10.1093/eurheartj/ehv043. PMID: 25694464'
+- 'Mach F, Koskinas KC, Roeters van Lennep J, et al. 2025 focused update of the 2019 ESC/EAS Guidelines for the
+  management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190'
+- 'Herrett E, Williamson E, Brack K, et al. StatinWISE. BMJ. 2021;372:n135. DOI: 10.1136/bmj.n135. PMID: 33627334'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# Fluxograma ambulatorial: SAMS — destino
+
+Prosa: [`sinalizadores-ambulatoriais-sams-quando-suspender-e-escalar-labs`](/biblioteca/sinalizadores-ambulatoriais-sams-quando-suspender-e-escalar-labs).
+
+## Árvore de decisão
+
+```mermaid
+flowchart TD
+  R0["Sintoma muscular em uso de estatina"] --> D1{"Fraqueza grave, urina escura,<br/>oligúria, instabilidade ou suspeita<br/>de rabdomiólise?"}
+  D1 -->|Sim| C1["Suspender estatina; avaliação urgente<br/>CK, creatinina, eletrólitos e urina<br/>PS se suspeita de rabdomiólise,<br/>lesão renal, instabilidade ou sem acesso seguro"]
+  D1 -->|Não| P1["Avaliar intensidade, interações,<br/>exercício, tireoide e risco CV;<br/>medir CK conforme suspeita clínica"]
+  P1 --> D2{"CK muito elevada<br/>acima de 10 vezes o limite,<br/>sem causa transitória esclarecida?"}
+  D2 -->|Sim| C2["Suspender; avaliar dano renal<br/>e acompanhar CK e sintomas<br/>Não reiniciar se suspeita de rabdomiólise"]
+  D2 -->|Não| D3{"CK entre 4 e 10 vezes<br/>o limite ou sintomas relevantes?"}
+  D3 -->|Sim| C3["Individualizar pausa ou manutenção<br/>conforme risco CV e tolerabilidade<br/>Manter somente com monitorização segura;<br/>reavaliar prontamente se piora"]
+  D3 -->|Não| C4["Sintoma tolerável e sem alarme:<br/>discutir manutenção ou pausa planejada;<br/>preservar controle do LDL-C"]
+  C2 --> D4{"Após suspensão/avaliação:<br/>fraqueza ou CK persistentes?"}
+  C3 --> D4
+  D4 -->|Sim| C5["Investigar outra miopatia;<br/>encaminhar à especialidade neuromuscular<br/>Anti-HMGCR apenas se fenótipo compatível"]
+  D4 -->|Não| D5{"Sem rabdomiólise ou miopatia imune,<br/>sintomas resolvidos e CK normalizada?"}
+  D5 -->|Sim| C6["Considerar reexposição estruturada<br/>com esquema alternativo e acompanhamento"]
+  D5 -->|Não| C7["Continuar investigação e proteção lipídica<br/>com equipe assistente; não reexpor automaticamente"]
+  C4 --> C8["Reavaliar resposta e acesso ao retorno;<br/>após pausa, reexpor somente se seguro"]
+```
+
+## Notas
+
+- Os múltiplos de CK usam o limite superior de normalidade do laboratório. CK não elevada não descarta SAMS, mas elevação importante impede tratar o caso como mialgia leve apenas pela aparência clínica.
+- Pela EAS 2015, CK >4 e <10 vezes o limite pode permitir manutenção com monitorização em pacientes de alto risco CV; em baixo risco, interromper e reavaliar a indicação. Não manter se a monitorização necessária não estiver acessível.
+- Fraqueza progressiva importante exige investigação pronta; não esperar semanas para reconhecer gravidade. Persistência após suspensão sugere causa neuromuscular, incluindo miopatia imune em fenótipo apropriado.
+- Suspeita de rabdomiólise não segue reexposição ambulatorial automática. A árvore não determina doses nem a escolha do hipolipemiante alternativo.
+
+## Conteúdo CorVIA conectado
+
+- [Sinalizadores de SAMS: quando suspender e escalar exames](/biblioteca/sinalizadores-ambulatoriais-sams-quando-suspender-e-escalar-labs)
+- [Intolerância a estatina: definição e protocolo de reexposição](/biblioteca/intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015)
+- [SAMS no consultório: sinais vermelhos](/biblioteca/sams-no-consultorio-sinais-vermelhos-quando-ir-ao-ps)

@@ -631,3 +631,14 @@ html[data-corvia-theme="dark"] #root .spaces-brand strong b { color: #5f8fe8 !im
 @media (max-width: 600px) {
   #root .spaces-home__topbar { grid-template-rows: minmax(84px, auto) 44px 46px !important; }
 }
+
+/* 10/09 — no desktop escuro, o miniuniverso fica sob a marca.
+   A coluna de 184px não comporta marca + botão; a busca mantém sua posição. */
+@media (min-width: 901px) {
+  html[data-corvia-theme="dark"] #root .spaces-home__topbar .spaces-home__brand-cluster .galaxy-theme-toggle {
+    position: absolute !important;
+    top: calc(100% + 2px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}

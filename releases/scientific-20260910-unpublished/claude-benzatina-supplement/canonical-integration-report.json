@@ -1,0 +1,165 @@
+{
+  "prepared_at": "2026-09-10T21:41:54.332953+00:00",
+  "base_commit": "6cc599ae5f8cd37e41a030762d9795d97390a011",
+  "scope": "Somente sete registros revisados do suplemento Claude benzatina. Autorização do proprietário para publicação emergencial. Nenhuma atribuição de revisão humana.",
+  "identities": [
+    {
+      "index": 0,
+      "kind": "documento",
+      "slug": "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+      "path": "content/Febre_reumática/seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular.md",
+      "action": "create",
+      "current_equals_frozen_source": false,
+      "current_body_equals_frozen_source": null,
+      "current_file_sha256": null,
+      "published_file_sha256": "22ce683c04e0908301863c01b093cfbb866b62353613e402dc115324e09d51e4",
+      "reviewed_input_sha256": "6890cafc47e6860df67aa84340a6d3761603cb2d56eb21f6646e5bb8d7540ab0"
+    },
+    {
+      "index": 1,
+      "kind": "documento",
+      "slug": "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+      "path": "content/Febre_reumática/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta.md",
+      "action": "create",
+      "current_equals_frozen_source": false,
+      "current_body_equals_frozen_source": null,
+      "current_file_sha256": null,
+      "published_file_sha256": "1d455e2bb01ca6384c949c1eecdb3b0ba0657a15d8d92887103676871efc1ac0",
+      "reviewed_input_sha256": "6c851ad1f417ace3375e09d586c7caa419ed9675b05ebdda79720a41072f8e6f"
+    },
+    {
+      "index": 2,
+      "kind": "caso_clinico",
+      "slug": "sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta",
+      "path": "casos-clinicos/metadados.json",
+      "action": "append fragment",
+      "current_equals_frozen_source": false,
+      "changed_fields_from_current": [
+        "enunciado",
+        "explicacao",
+        "nivel",
+        "opcoes",
+        "pergunta",
+        "published",
+        "resposta_correta",
+        "review_status",
+        "revisao",
+        "slug",
+        "source_refs",
+        "tema",
+        "titulo"
+      ],
+      "prior_fragment_sha256": null,
+      "published_fragment_sha256": "f3ffa9472f4ae34243165f69ba16f75f2caa9beea7123e942196204742b1b704",
+      "reviewed_input_sha256": "3974a3484ed069920047efd60b4b5cccc776c6612f664e3c3bffa3d0a40db4e5"
+    },
+    {
+      "index": 3,
+      "kind": "caso_clinico",
+      "slug": "colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica",
+      "path": "casos-clinicos/metadados.json",
+      "action": "append fragment",
+      "current_equals_frozen_source": false,
+      "changed_fields_from_current": [
+        "enunciado",
+        "explicacao",
+        "nivel",
+        "opcoes",
+        "pergunta",
+        "published",
+        "resposta_correta",
+        "review_status",
+        "revisao",
+        "slug",
+        "source_refs",
+        "tema",
+        "titulo"
+      ],
+      "prior_fragment_sha256": null,
+      "published_fragment_sha256": "e0b731db3f69799e96834962e2814b472a530f87860e6c39632875e73a10f53e",
+      "reviewed_input_sha256": "52900e55ba962c371e36fd9bab9e8695c5a1ca02d31db08915800b777184f0e5"
+    },
+    {
+      "index": 4,
+      "kind": "documento",
+      "slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+      "path": "content/Febre_reumática/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco.md",
+      "action": "replace",
+      "current_equals_frozen_source": false,
+      "current_body_equals_frozen_source": false,
+      "current_file_sha256": "d668edf92bd466965ca4f4003a8bdf568e238c7d0e410ec267e59808164e812b",
+      "published_file_sha256": "e28afe297aa33667bcc8bdcc3fb4d13c7ab7ca804e4cf6f13b37f5f7d1a9778c",
+      "reviewed_input_sha256": "88fb15451820c344a5507470d0656e41c23f1c3b7280d7bb8c2ae5c36d8d6b48"
+    },
+    {
+      "index": 5,
+      "kind": "documento",
+      "slug": "fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema",
+      "path": "content/Febre_reumática/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema.md",
+      "action": "replace",
+      "current_equals_frozen_source": false,
+      "current_body_equals_frozen_source": false,
+      "current_file_sha256": "ef576175773fe1326a3c133d2f725cff106e21ce592351c4313c6bdeba8eb1cc",
+      "published_file_sha256": "5000dd1ba9cc030a5d2f62f94a10dbe222d578911e0ff8215a922d915912126a",
+      "reviewed_input_sha256": "ed910802e654d9bf430eb19b4b03646b146f27d864d95bd053836d7c24dbdea9"
+    },
+    {
+      "index": 6,
+      "kind": "material_paciente",
+      "slug": "profilaxia-com-penicilina-na-febre-reumatica-por-que-a-injecao-regular",
+      "path": "material-paciente/metadados.json",
+      "action": "replace fragment",
+      "current_equals_frozen_source": false,
+      "changed_fields_from_current": [
+        "fontes",
+        "perguntas",
+        "published",
+        "resumo",
+        "review_note",
+        "secoes",
+        "sinais_de_alerta",
+        "subtitulo"
+      ],
+      "prior_fragment_sha256": "6381fe87bd003d9e76e0373e0064e09bbe0aab1573b5595ad19eb55c105312e1",
+      "published_fragment_sha256": "8e47361bd8b0b43481e915dffa8209f6654bd59e9d1996fa603f6383b66618e1",
+      "reviewed_input_sha256": "ec46f19e56570843de9114c84a942ecdc5d16f6185448dc39b90fa8742dfa43c"
+    }
+  ],
+  "collisions": [],
+  "files": [
+    {
+      "path": "content/Febre_reumática/seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular.md",
+      "before_sha256": null,
+      "after_sha256": "22ce683c04e0908301863c01b093cfbb866b62353613e402dc115324e09d51e4"
+    },
+    {
+      "path": "content/Febre_reumática/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta.md",
+      "before_sha256": null,
+      "after_sha256": "1d455e2bb01ca6384c949c1eecdb3b0ba0657a15d8d92887103676871efc1ac0"
+    },
+    {
+      "path": "content/Febre_reumática/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco.md",
+      "before_sha256": "d668edf92bd466965ca4f4003a8bdf568e238c7d0e410ec267e59808164e812b",
+      "after_sha256": "e28afe297aa33667bcc8bdcc3fb4d13c7ab7ca804e4cf6f13b37f5f7d1a9778c"
+    },
+    {
+      "path": "content/Febre_reumática/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema.md",
+      "before_sha256": "ef576175773fe1326a3c133d2f725cff106e21ce592351c4313c6bdeba8eb1cc",
+      "after_sha256": "5000dd1ba9cc030a5d2f62f94a10dbe222d578911e0ff8215a922d915912126a"
+    },
+    {
+      "path": "casos-clinicos/metadados.json",
+      "before_sha256": "f4ade0f583413d157071791fd5676185ed19288d329dc7d5262405a40a2ee1b8",
+      "after_sha256": "06f17fb93a7f755a06d5c2100a7961714d80b370a5cb149be5a89a60ce594014"
+    },
+    {
+      "path": "material-paciente/metadados.json",
+      "before_sha256": "9e049bfaa1ecb5cdd9425cd6321086909734117aee844fc3efda9ed5a9b62aaf",
+      "after_sha256": "1fb706dd0943bc4084af762280b62d8d37abd89b3d3978be4826bde864f96ff8"
+    }
+  ],
+  "applied": true,
+  "publication_package_sha256": "d57db39f9cfebecedd7dc464f5880a2bc999aea2cef36fdbea4c9a3f77300937",
+  "publication_items": 7,
+  "publication_relations": 25
+}

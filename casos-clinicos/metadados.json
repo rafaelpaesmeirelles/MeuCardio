@@ -19161,5 +19161,51 @@
     "review_status": "revisado",
     "review_note": "Produção científica assistida por IA em 09/09/2026; Revisão cruzada concluída. Não representa revisão humana independente. Casos e roteiros originais; limites de acesso às fontes documentados na auditoria da rodada 2.",
     "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta",
+    "titulo": "Tontura e desmaio logo após a injeção de penicilina benzatina: é alergia?",
+    "tema": "Febre reumática",
+    "nivel": "básico",
+    "enunciado": "Menino de 12 anos, em profilaxia secundária regular de febre reumática há 2 anos, sem lesão valvar residual ao ecocardiograma mais recente, com função ventricular normal e assintomático. Cerca de 2 minutos após receber a injeção intramuscular de penicilina G benzatina, fica pálido, sua frio e refere tontura, perdendo brevemente a consciência. O pulso carotídeo é palpável e cheio. Não há tosse, sibilo, rouquidão, urticária ou edema de face. Ao ser colocado em decúbito dorsal com as pernas elevadas, recupera a consciência em menos de um minuto e a pressão arterial normaliza.",
+    "pergunta": "Qual é a conduta mais adequada neste momento?",
+    "opcoes": [
+      "Administrar adrenalina intramuscular imediatamente, por suspeita de anafilaxia",
+      "Manter decúbito e observação, com reavaliação clínica; considerar contrapressão somente após recuperação da consciência, sem indicação atual de adrenalina para o episódio vasovagal completamente resolvido",
+      "Suspender definitivamente a penicilina benzatina e trocar para eritromicina, por reação adversa confirmada",
+      "Não é necessária nenhuma conduta adicional nem observação, já que os sintomas já melhoraram ao deitar"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O conjunto do episódio favorece síncope vasovagal: palidez, sudorese, breve perda de consciência e recuperação rápida e completa da consciência e da pressão ao deitar. A ausência de urticária isoladamente não exclui anafilaxia, e o pulso carotídeo não é um teste de exclusão. Neste caso, sem comprometimento persistente, cabe decúbito, observação por pelo menos 30 min e reavaliação. Contrapressão só pode ser tentada por paciente consciente e capaz. Se surgir suspeita de anafilaxia, hipotensão recorrente ou nova deterioração, acionar emergência e administrar adrenalina IM sem esperar sinais de pele. O episódio resolvido não demonstra alergia à penicilina nem exige troca definitiva de fármaco. AHA 2022 e WAO 2020 fundamentam a diferenciação e essas precauções.",
+    "source_refs": [
+      "Sanyahumbi A et al. J Am Heart Assoc. 2022;11:e024517. DOI 10.1161/JAHA.121.024517. PMID 35049336. https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/",
+      "Cardona V et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13:100472. DOI 10.1016/j.waojou.2020.100472. https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "revisao": "Caso lido integralmente. Corrigida contradição sem lesão residual/borderline; contrapressão somente após despertar. Resposta mantém vasovagal pela recuperação completa, sem usar ausência de rash como exclusão de anafilaxia. Incluída reavaliação e adrenalina imediata se suspeita surgir; vínculos a síntese/fluxo/profilaxia revisados."
+  },
+  {
+    "slug": "colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica",
+    "titulo": "Recuperação incompleta após colapso na aplicação de penicilina benzatina: como agir na estenose mitral grave?",
+    "tema": "Febre reumática",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 22 anos com cardiopatia reumática mitral grave (estenose mitral grave, área valvar 0,9 cm², em fila para cirurgia valvar), classe funcional NYHA III, em uso de penicilina G benzatina intramuscular a cada 21 dias. Minutos após a aplicação, apresenta palidez súbita, sudorese fria e perde a consciência. O exame mostra pulso carotídeo cheio e preservado, sem estridor, sibilo, urticária ou angioedema. Ao ser colocada em decúbito, a pressão arterial melhora parcialmente, mas a recuperação é mais lenta que o esperado, e a equipe discute se deve administrar adrenalina empiricamente \"por segurança\", dado o histórico de óbitos súbitos descritos na literatura após BPG em cardiopatia reumática grave.",
+    "pergunta": "Qual é a conduta mais apropriada diante de recuperação incompleta, considerando AHA 2022 e os critérios de anafilaxia WAO 2020?",
+    "opcoes": [
+      "Administrar adrenalina intramuscular imediatamente, já que a paciente tem cardiopatia reumática grave e histórico de óbito súbito é bem descrito nesse grupo",
+      "Acionar suporte de emergência, monitorizar e avaliar imediatamente anafilaxia, arritmia e outras causas de choque; administrar adrenalina IM sem atraso se houver suspeita de anafilaxia, mesmo sem rash, e evitar contrapressão isométrica neste contexto",
+      "Realizar manobra de contrapressão isométrica (handgrip) imediatamente, como em qualquer síncope vasovagal, para acelerar a recuperação",
+      "Reduzir a dose da próxima aplicação de penicilina benzatina pela metade, para minimizar o risco de nova reação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Recuperação apenas parcial não permite fechar o diagnóstico de síncope vasovagal simples. Valvopatia grave e NYHA III aumentam a vulnerabilidade hemodinâmica, mas ausência de urticária ou sibilos não exclui anafilaxia. Hipotensão após alérgeno conhecido ou altamente provável pode bastar para suspeitá-la. A paciente precisa de avaliação de emergência, monitorização e suporte, incluindo ECG e investigação de causas de choque. Se há suspeita de anafilaxia, adrenalina IM é primeira linha e não deve ser retida pelo receio de taquicardia ou pela estenose mitral; não esperar confirmação de Brighton ou aparecimento de rash. A advertência da AHA contra adrenalina sem indicação não é contraindicação ao tratamento da anafilaxia nem da parada cardíaca. Contrapressão isométrica deve ser evitada em insuficiência cardíaca/estenose valvar crítica. Depois de estabilizar, revisar o episódio, alergia, condições de aplicação e possibilidade de profilaxia oral, sem reduzir por conta própria a dose de BPG.",
+    "source_refs": [
+      "Sanyahumbi A et al. J Am Heart Assoc. 2022;11:e024517. DOI 10.1161/JAHA.121.024517. PMID 35049336. https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/",
+      "Cardona V et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13:100472. DOI 10.1016/j.waojou.2020.100472. https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "revisao": "Corrigido ponto crítico do caso: recuperação parcial e ausência de rash não excluem anafilaxia. Resposta correta agora exige avaliação emergencial e adrenalina IM sem atraso na suspeita, em vez de a proibir por falta de sinais cutâneos/respiratórios. Ressalva da AHA sobre uso sem indicação preservada sem atrasar tratamento salvador. Título atualizado e vínculos reais adicionados."
   }
 ]

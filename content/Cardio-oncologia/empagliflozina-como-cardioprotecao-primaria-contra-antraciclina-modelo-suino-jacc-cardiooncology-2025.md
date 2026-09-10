@@ -1,11 +1,24 @@
 ---
-title: "Empagliflozina como Cardioproteção Primária contra Antraciclina: Modelo Suíno de Grande Porte, JACC: CardioOncology 2025"
+title: 'Empagliflozina como Cardioproteção Primária contra Antraciclina: Modelo Suíno de Grande Porte, JACC: CardioOncology
+  2025'
 slug: empagliflozina-como-cardioprotecao-primaria-contra-antraciclina-modelo-suino-jacc-cardiooncology-2025
-theme: "Cardio-oncologia"
+theme: Cardio-oncologia
 kind: estudo
 review_status: revisado
-source_refs: ["PMID:39967204", "DOI:10.1016/j.jaccao.2024.12.004"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A pasta Cardio-oncologia já cobria cardioproteção por betabloqueador (carvedilol/CECCY), estatina (STOP-CA), dexrazoxano, e vigilância guiada por troponina, NT-proBNP e strain — mas nenhum documento tratava de inibidores de SGLT2 como estratégia de cardioproteção primária contra cardiotoxicidade por antraciclina, uma linha de pesquisa pré-clínica que ganhou tração entre 2024 e 2026."
+source_refs:
+- PMID:39967204
+- DOI:10.1016/j.jaccao.2024.12.004
+- 'Métodos completos: https://pmc.ncbi.nlm.nih.gov/articles/PMC11866421/; estudo humano não randomizado: https://pmc.ncbi.nlm.nih.gov/articles/PMC11375926/'
+legacy_source: Documento novo, escrito em 08/09/2026. A pasta Cardio-oncologia já cobria cardioproteção por betabloqueador
+  (carvedilol/CECCY), estatina (STOP-CA), dexrazoxano, e vigilância guiada por troponina, NT-proBNP e strain — mas
+  nenhum documento tratava de inibidores de SGLT2 como estratégia de cardioproteção primária contra cardiotoxicidade
+  por antraciclina, uma linha de pesquisa pré-clínica que ganhou tração entre 2024 e 2026.
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Pergunta clínica
@@ -18,10 +31,10 @@ Medina-Hernández D, Cádiz L, Mastrangelo A, et al. (grupo do CNIC, Madri, e Ib
 
 Estudo pré-clínico, não é ensaio em humanos:
 
-- Fase 1 (n = 36 porcas fêmeas de grande porte, *large white*): usada para definir o regime mais translacional de AIC — **6 injeções intravenosas trissemanais de doxorrubicina (1,8 mg/kg cada)**.
+- Fase 1 (n = 36 porcas fêmeas de grande porte, *large white*): usada para definir o regime mais translacional de AIC — **6 injeções intravenosas a intervalos de três semanas de doxorrubicina (1,8 mg/kg cada)**.
 - Fase 2 (n = 32 porcas): randomização **1:1:2** entre três braços —
-  - Doxorrubicina + **empagliflozina 20 mg**
-  - Doxorrubicina + **empagliflozina 10 mg**
+  - Doxorrubicina + **empagliflozina 20 mg/dia**
+  - Doxorrubicina + **empagliflozina 10 mg/dia**
   - Doxorrubicina isolada (controle)
 - Seguimento de **21 semanas**, com ressonância magnética cardíaca multiparamétrica seriada e espectroscopia por ressonância magnética (para avaliar metabolismo energético miocárdico in vivo).
 - Ao final, amostras de sangue para extração de substrato metabólico miocárdico; o ventrículo esquerdo foi coletado e processado para metabolômica, microscopia eletrônica de transmissão, respirometria mitocondrial e histopatologia.
@@ -42,15 +55,15 @@ O mecanismo proposto — preservação da energética mitocondrial via maior uti
 
 # Por que este estudo é relevante
 
-A cardioproteção primária contra antraciclina já conta, nesta biblioteca, com estratégias farmacológicas testadas em humanos: betabloqueador (carvedilol, ensaio CECCY), estatina (atorvastatina, ensaio STOP-CA) e dexrazoxano. SGLT2i é a classe farmacológica mais recentemente investigada nessa indicação, e o presente estudo é, até a data desta síntese, o dado pré-clínico de maior qualidade metodológica (modelo de grande porte, desenho randomizado, desfecho de imagem pré-especificado) a sustentar a hipótese — o que justifica acompanhar a transição para ensaios clínicos em humanos.
+A cardioproteção primária contra antraciclina já conta, nesta biblioteca, com estratégias farmacológicas testadas em humanos: betabloqueador (carvedilol, ensaio CECCY), estatina (atorvastatina, ensaio STOP-CA) e dexrazoxano. SGLT2i é a classe farmacológica mais recentemente investigada nessa indicação, e o presente estudo é, até a data desta síntese, um estudo pré-clínico com características metodológicas relevantes (modelo de grande porte, desenho randomizado, desfecho de imagem pré-especificado) a sustentar a hipótese — o que justifica acompanhar a transição para ensaios clínicos em humanos.
 
 # Aplicação prática
 
-**Não há indicação clínica atual** para uso de SGLT2i como cardioproteção primária em pacientes recebendo antraciclina fora de um ensaio clínico ou de indicação cardiológica já estabelecida (insuficiência cardíaca, diabetes tipo 2 com doença cardiovascular, doença renal crônica). A extrapolação direta de modelo suíno para prática clínica **não é apropriada** neste momento. O papel deste documento é de vigilância de linha de pesquisa: monitorar o registro de ensaios clínicos prospectivos em humanos (três identificados como em andamento pela revisão de Simela et al., PMID: 39934910, sem resultado publicado até a data desta síntese) para reavaliação futura.
+**Este experimento não estabelece indicação** para uso de SGLT2i como cardioproteção primária em pacientes recebendo antraciclina fora de um ensaio clínico ou de indicação cardiológica já estabelecida (insuficiência cardíaca, diabetes tipo 2 com doença cardiovascular, doença renal crônica). A extrapolação direta de modelo suíno para prática clínica **não é apropriada** neste momento. O papel deste documento é de vigilância de linha de pesquisa: monitorar o registro de ensaios clínicos prospectivos em humanos (três identificados como em andamento pela revisão de Simela et al., PMID: 39934910, sem resultado na data de corte daquela revisão) para reavaliação futura.
 
 # Limites da evidência
 
-Modelo animal, não humano — o efeito em pacientes oncológicos pode diferir por espécie, comorbidade, idade e interação com outros fármacos antineoplásicos e cardioprotetores. Amostra pequena (32 porcas na fase de randomização), com desfecho primário de imagem (FEVE), não desfecho clínico duro (insuficiência cardíaca sintomática, interrupção de tratamento oncológico ou mortalidade). Não há, até a data desta síntese, ensaio clínico randomizado prospectivo concluído em humanos testando SGLT2i para prevenção de cardiotoxicidade por antraciclina — a afirmação de ausência de tal ensaio segue a revisão sistemática de Simela et al. (PMID: 39934910), com busca em outubro de 2024; um ensaio humano concluído após essa data poderia não estar refletido aqui. VERIFICAÇÃO HUMANA NECESSÁRIA quanto à existência de resultados de ensaios clínicos randomizados em humanos publicados após a data de fechamento desta síntese.
+Modelo animal, não humano — o efeito em pacientes oncológicos pode diferir por espécie, comorbidade, idade e interação com outros fármacos antineoplásicos e cardioprotetores. Amostra pequena (32 porcas na fase de randomização), com desfecho primário de imagem (FEVE), não desfecho clínico duro (insuficiência cardíaca sintomática, interrupção de tratamento oncológico ou mortalidade). A ausência de ensaios randomizados na revisão citada refere-se à busca encerrada em outubro de 2024, não a uma afirmação universal atual. O EMPACARD-PILOT humano publicado é um estudo prospectivo caso-controle, não randomizado (PMC11375926). O presente texto permanece uma análise do experimento suíno, sem converter esse sinal em recomendação preventiva humana.
 
 ## Tudo com Tudo
 

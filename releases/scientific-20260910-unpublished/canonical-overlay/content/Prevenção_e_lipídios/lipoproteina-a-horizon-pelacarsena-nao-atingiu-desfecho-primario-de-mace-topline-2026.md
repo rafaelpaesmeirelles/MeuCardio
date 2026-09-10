@@ -1,0 +1,100 @@
+---
+title: 'Lp(a)HORIZON: Pelacarsena Não Atingiu o Desfecho Primário de MACE — o Topline de Setembro de 2026'
+slug: lipoproteina-a-horizon-pelacarsena-nao-atingiu-desfecho-primario-de-mace-topline-2026
+theme: Prevenção e lipídios
+kind: estudo
+review_status: revisado
+source_refs:
+- 'Novartis. Novartis announces Lp(a)HORIZON Phase III topline results for pelacarsen in patients with elevated
+  Lp(a) and established cardiovascular disease (CVD). Comunicado ad hoc conforme Art. 53 LR (regra de divulgação
+  da bolsa suíça SIX). Basileia, 4 de setembro de 2026. URL: https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd
+  — texto integral conferido nesta sessão em 09/09/2026: o estudo NÃO atingiu o desfecho primário de MACE de 4 pontos;
+  Lp(a) foi reduzida; HR, IC95%, valor de p e resultado do subgrupo com Lp(a)≥90mg/dL NÃO foram divulgados neste
+  comunicado, que registra explicitamente que os dados completos serão apresentados em congresso médico futuro'
+- 'Cho L, Nicholls SJ, Nordestgaard BG, Landmesser U, Tsimikas S, Blaha MJ, et al. Design and Rationale of Lp(a)HORIZON
+  Trial: Assessing the Effect of Lipoprotein(a) Lowering With Pelacarsen on Major Cardiovascular Events in Patients
+  With CVD and Elevated Lp(a). Am Heart J. 2025;287:1-9. DOI: 10.1016/j.ahj.2025.03.019. PMID: 40185318 — artigo
+  de desenho e racional, publicado antes do topline, NCT04023552'
+- 'Tsimikas S, Karwatowska-Prokopczuk E, Gouni-Berthold I, Tardif JC, Baum SJ, Steinhagen-Thiessen E, et al; AKCEA-APO(a)-LRx
+  Study Investigators. Lipoprotein(a) Reduction in Persons with Cardiovascular Disease. N Engl J Med. 2020;382(3):244-255.
+  DOI: 10.1056/NEJMoa1905239. PMID: 31893580 — ensaio de fase 2, busca de dose, que embasou a seleção da dose de
+  80mg mensal usada no Lp(a)HORIZON'
+- 'ClinicalTrials.gov NCT04023552. Assessing the Impact of Lipoprotein(a) Lowering With Pelacarsen (TQJ230) on Major
+  Cardiovascular Events in Patients With CVD (Lp(a)HORIZON). Consulta em 09/09/2026: status Completed; data de conclusão
+  (primária e do estudo) 16/07/2026; última atualização do registro em 28/08/2026; nenhuma seção de resultados (results
+  section) publicada no registro até a data desta consulta — consistente com o próprio comunicado da patrocinadora,
+  que anuncia dados completos apenas em congresso futuro'
+legacy_source: 'Documento novo, escrito em 09/09/2026. A pasta já tinha (a) o ensaio de fase 2 da pelacarsena (Tsimikas
+  2020), (b) o artigo de desenho do Lp(a)HORIZON (Cho 2025) citado dentro do documento de conduta prática, e (c)
+  um documento de conduta prática que tratava a leitura de Lp(a) enquanto nenhum desfecho de RNA/ASO havia sido
+  publicado — mas nenhum documento registrava, com fonte primária conferida, o fato novo que muda esse cenário:
+  em 04/09/2026 a Novartis anunciou, em comunicado ad hoc regulatório (não em artigo revisado por pares), que a
+  pelacarsena NÃO atingiu o desfecho primário de MACE do Lp(a)HORIZON. Este é o primeiro resultado de desfecho cardiovascular
+  já divulgado de qualquer terapia dirigida à lipoproteína(a) — e é negativo. Verificado nesta sessão por leitura
+  direta do texto integral do comunicado da Novartis (não apenas o título) e por consulta ao ClinicalTrials.gov,
+  que confirma o estudo como concluído (16/07/2026) e ainda sem seção de resultados publicada. Nenhum número de
+  HR, IC ou p foi inventado: o próprio comunicado não os divulga, e isso está registrado explicitamente no corpo
+  do documento.'
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: false
+---
+
+# Lp(a)HORIZON: Pelacarsena Não Atingiu o Desfecho Primário de MACE — o Topline de Setembro de 2026
+
+## Definição
+Lp(a)HORIZON (NCT04023552) é o primeiro grande ensaio de desfecho cardiovascular (CVOT) de uma terapia dirigida à lipoproteína(a) — Lp(a), fator de risco cardiovascular causal, fortemente influenciado pela genética. Concentrações elevadas, e não a presença da lipoproteína em si, afetam parcela importante da população. Pelacarsena permanece experimental. A molécula testada, pelacarsena, é um oligonucleotídeo antisenso (ASO) que inibe a produção hepática de apolipoproteína(a), reduzindo a concentração circulante de Lp(a) — mecanismo já bem demonstrado em fase 2 (Tsimikas et al., NEJM 2020, PMID 31893580: reduções de até 80% com a dose semanal, dose-dependentes). **Em 4 de setembro de 2026, a Novartis anunciou, em comunicado ad hoc regulatório, que o ensaio de fase 3 não atingiu seu desfecho primário.**
+
+## O ensaio (desenho, já publicado antes do topline)
+Cho L et al.; Am Heart J. 2025;287:1-9 (PMID 40185318), NCT04023552. Fase 3, randomizado, duplo-cego, controlado por placebo, multinacional:
+- **8.323 pacientes** com doença cardiovascular aterosclerótica estabelecida (infarto do miocárdio, AVC isquêmico ou doença arterial periférica sintomática prévios) e Lp(a) **≥70 mg/dL** (aproximação de 149 nmol/L utilizada no artigo; não é fator universal de conversão) no rastreio
+- Randomização 1:1 para **pelacarsena 80 mg subcutânea mensal** ou placebo, sobre tratamento otimizado de base para DCV (incluindo hipolipemiante e anti-hipertensivo)
+- **Desfecho primário, avaliado em duas populações com controle de multiplicidade**: tempo até o primeiro evento cardiovascular adverso maior (MACE) de 4 pontos — morte cardiovascular, infarto do miocárdio não fatal, AVC não fatal ou revascularização coronariana urgente com hospitalização — testado tanto na população geral do estudo (Lp(a)≥70 mg/dL) quanto no subgrupo pré-especificado com Lp(a)≥90 mg/dL (aproximação de 192 nmol/L utilizada no artigo)
+- Estudo orientado por eventos: encerramento previsto após acúmulo de 993 eventos primários confirmados por comitê
+
+## O comunicado da patrocinadora (topline, 04/09/2026)
+Texto conferido integralmente nesta sessão, direto na página da Novartis (comunicado obrigatório sob a regra de divulgação da bolsa suíça, Art. 53 LR — não é nota de imprensa promocional comum, é divulgação regulatória obrigatória de resultado material):
+- **"O ensaio de fase 3 Lp(a)HORIZON... não atingiu seu desfecho primário de redução do risco de eventos cardiovasculares... comparado a placebo."**
+- **Lp(a) foi reduzida** com a pelacarsena nesta população (já em tratamento guiado por diretriz, incluindo hipolipemiante e anti-hipertensivo) — ou seja, o mecanismo de redução do biomarcador funcionou, mas **não demonstrou a redução de risco proposta no desfecho primário da população geral**
+- Citação direta do Dr. Shreeram Aradhye (Presidente de Desenvolvimento e Diretor Médico da Novartis): **"Embora níveis mais baixos de Lp(a) tenham sido observados com a pelacarsena, os achados não demonstraram que isso se traduziu em redução do risco cardiovascular na população geral do estudo."**
+- **O comunicado não divulga**: hazard ratio, intervalo de confiança, valor de p, resultado específico do subgrupo pré-especificado com Lp(a)≥90 mg/dL, magnitude de redução de Lp(a) alcançada neste ensaio de fase 3, nem dados detalhados de segurança
+- Os dados completos serão apresentados **"em um congresso médico futuro"** — data não especificada no comunicado
+
+## Limites do anúncio de resultados
+Este documento registra exclusivamente o que o comunicado ad hoc confirma. Os itens abaixo **não estão disponíveis nesta fonte** e não devem ser assumidos, estimados ou extrapolados até publicação do artigo revisado por pares ou apresentação em congresso:
+- Hazard ratio e intervalo de confiança do desfecho primário (população geral e subgrupo ≥90 mg/dL)
+- Valor de p e se o subgrupo ≥90 mg/dL — desfecho coprimário do desenho — atingiu significância isoladamente, mesmo com a população geral neutra
+- Magnitude percentual de redução de Lp(a) alcançada no braço pelacarsena versus placebo neste ensaio de fase 3 (distinta da fase 2, já registrada nesta biblioteca)
+- Resultados dos desfechos secundários (MACE de 3 pontos, desfecho coronariano composto, mortalidade por todas as causas)
+- Perfil de segurança detalhado (o ensaio de fase 2 não mostrou sinal relevante além de reação no local da injeção; o perfil de fase 3 ainda não foi divulgado)
+- Data e local do congresso onde os dados completos serão apresentados
+- Se o registro do ClinicalTrials.gov (NCT04023552) será atualizado com seção de resultados antes ou depois dessa apresentação — na consulta desta sessão (09/09/2026), o registro segue sem seção de resultados
+
+## Síntese prática
+Este é o **primeiro resultado de desfecho cardiovascular já divulgado de qualquer terapia dirigida especificamente à Lp(a)** — e é neutro/negativo no desfecho primário da população geral. O achado é relevante mesmo sem os números completos, por duas razões que já podem ser fixadas hoje:
+1. **Reduzir a concentração de Lp(a) com um ASO potente não bastou, por si só, para reduzir MACE nesta população** (DCV estabelecida, já otimizada em hipolipemiante e anti-hipertensivo) — o que reabre, e não fecha, a pergunta se a intensidade ou a via mecanística (ASO versus siRNA versus inibição da formação da partícula) determina o resultado clínico, ou se a própria hipótese causal de Lp(a) como alvo modificável de risco residual precisa de refinamento.
+2. **O resultado é específico da pelacarsena e deste desenho.** Olpasirana (OCEAN(a) Outcomes), lepodisirana, zerlasirana e muvalaplina — já registradas nesta biblioteca — são moléculas e, em alguns casos, mecanismos distintos (siRNA ou inibidor oral da formação da partícula, não ASO), em programas de desenvolvimento com estágios diferentes; não se afirma que todas já tenham CVOT em curso. **O resultado da pelacarsena não permite antecipar o resultado dessas outras terapias antes dos respectivos CVOTs.**
+
+Na prática de consultório, isso **reforça, não reduz**, a mensagem que já estava registrada no documento de conduta prática desta pasta: continuar medindo Lp(a) pelo menos uma vez na vida (recomendação de rastreio, não de tratamento, permanece válida), e continuar tratando o risco cardiovascular residual com o que já tem desfecho comprovado — LDL na meta da categoria de risco, com estatina de alta intensidade, ezetimiba, inibidor de PCSK9 ou ácido bempedoico conforme indicado.
+
+## Armadilhas clínicas
+- **Concluir que "reduzir Lp(a) não importa"** a partir de um único comunicado, de uma única molécula, sem os números completos — o próprio comunicado da Novartis enquadra o achado como "evidência importante que avança a compreensão científica", não como encerramento da hipótese Lp(a)
+- **Extrapolar o resultado neutro da pelacarsena (ASO) para olpasirana, lepodisirana, zerlasirana (siRNA) ou muvalaplina (inibidor oral da formação da partícula)** — mecanismos moleculares distintos, programas clínicos distintos e resultados que não podem ser antecipados
+- **Inventar hazard ratio, intervalo de confiança ou resultado do subgrupo Lp(a)≥90 mg/dL** — nenhum desses números foi divulgado no comunicado consultado; qualquer número citado como "resultado do HORIZON" antes da apresentação em congresso ou publicação revisada por pares deve ser tratado como não verificado
+- **Interromper a recomendação de dosar Lp(a) pelo menos uma vez na vida** — o valor prognóstico e a causalidade genética da Lp(a) elevada (estudos de Copenhague, já registrados nesta biblioteca) não dependem do resultado de um fármaco específico
+- **Usar este resultado para justificar suspender ou não intensificar hipolipemiante já indicado (estatina, ezetimiba, iPCSK9, ácido bempedoico) em paciente com Lp(a) alta** — essas terapias têm desfecho cardiovascular próprio e já comprovado, independente da via de Lp(a)
+- **Tratar comunicado ad hoc de patrocinadora como equivalente a artigo revisado por pares** — é uma declaração verificável da patrocinadora sobre o resultado, ainda sem avaliação independente dos dados completos, mas não substitui o artigo completo (que trará HR, IC, subgrupos e segurança) quando publicado
+
+## Tudo com Tudo
+- [Lipoproteína(a) elevada: conduta prática diante de Lp(a) elevada](/biblioteca/lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam)
+- [Lipoproteína(a): Rastreamento Populacional ao Menos uma Vez na Vida — Consenso EAS 2022](/biblioteca/lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022)
+- [Lipoproteína(a) e Olpasirana: o Ensaio OCEAN(a)-DOSE](/biblioteca/lipoproteina-a-e-olpasirana-o-ensaio-ocean-a-dose)
+- [Lepodisiran e Fosfolipídios Oxidados na Lipoproteína(a): Análise Post-Hoc do Ensaio ALPACA](/biblioteca/lepodisiran-e-fosfolipidios-oxidados-na-lipoproteina-a-analise-post-hoc-do-ensaio-alpaca)
+- [Zerlasirana: Inibição de Lp(a) por siRNA — o Ensaio ALPACAR-360](/biblioteca/zerlasirana-inibicao-de-lpa-por-sirna-o-ensaio-alpacar-360)
+- [Muvalaplin: Inibidor Oral da Formação de Lipoproteína(a) — Ensaio de Fase 2](/biblioteca/muvalaplin-inibidor-oral-da-formacao-de-lipoproteina-a-ensaio-de-fase-2)
+- [Fluxograma: Lp(a) Elevada — Rastreio, Risco Residual e o que Não Esperar do Fármaco](/biblioteca/fluxograma-lpa-elevada-rastreio-risco-residual-e-o-que-nao-esperar-do-farmaco)
+
+[Fonte primária do anúncio, Novartis, 04/09/2026](https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd).

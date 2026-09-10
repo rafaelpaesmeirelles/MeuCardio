@@ -3,6 +3,14 @@
 # Rodar no servidor, dentro da pasta do projeto (/opt/meucardio).
 set -Eeuo pipefail
 
+# Opção explícita desta execução; não persiste o escopo no .env do servidor.
+CORVIA_SCOPED_RELEASE_MODE="${CORVIA_SCOPED_RELEASE:-}"
+case "$CORVIA_SCOPED_RELEASE_MODE" in
+  ""|scientific-20260910) ;;
+  *) echo "CORVIA_SCOPED_RELEASE inválida; use somente scientific-20260910 ou deixe ausente." >&2; exit 1 ;;
+esac
+readonly CORVIA_SCOPED_RELEASE_MODE
+
 # Fast path operacional: reanexa o Remote Desktop Commander após reboot do host.
 # Só é ativado por commit explicitamente marcado com [rdc-recovery]; não toca
 # frontend, backend, banco, migrations ou conteúdo científico.
@@ -82,9 +90,29 @@ TRAFEGO_ABERTO=0
 BACKUP_PRE_DEPLOY=""
 COMMIT_ATUAL=""
 ARVORE_ATUAL=""
+SCOPED_RELEASE_PACK="releases/scientific-20260910/publication-package.json"
+SCOPED_RELEASE_CHECKSUM="releases/scientific-20260910/publication-package.sha256"
+SCOPED_RELEASE_PUBLISHER="scripts/publish_scientific_release_20260910.py"
+SCOPED_RELEASE_SHA=""
 
 log() { printf '[%s] %s\n' "$(date -Is)" "$*"; }
 backend_exec() { "${COMPOSE[@]}" exec -T backend "$@"; }
+validar_pacote_release_escopado() {
+  [[ -n "$CORVIA_SCOPED_RELEASE_MODE" ]] || return 0
+  local arquivo checksum_calculado
+  for arquivo in "$SCOPED_RELEASE_PACK" "$SCOPED_RELEASE_CHECKSUM" "$SCOPED_RELEASE_PUBLISHER"; do
+    [[ -f "$arquivo" ]] || { echo "Artefato obrigatório da publicação ausente: $arquivo" >&2; return 1; }
+  done
+  SCOPED_RELEASE_SHA="$(tr -d '\r\n' < "$SCOPED_RELEASE_CHECKSUM")"
+  [[ "$SCOPED_RELEASE_SHA" =~ ^[0-9a-f]{64}$ ]] || {
+    echo "Checksum inválido em $SCOPED_RELEASE_CHECKSUM." >&2; return 1;
+  }
+  checksum_calculado="$(sha256sum "$SCOPED_RELEASE_PACK")"
+  [[ "${checksum_calculado%% *}" == "$SCOPED_RELEASE_SHA" ]] || {
+    echo "O pacote scientific-20260910 não corresponde ao checksum autorizado." >&2; return 1;
+  }
+  log "Pacote scientific-20260910 conferido antes do build: $SCOPED_RELEASE_SHA."
+}
 mostrar_diagnostico() {
   "${COMPOSE[@]}" ps || true
   "${COMPOSE[@]}" logs --tail=200 \
@@ -414,6 +442,7 @@ COMMIT_ATUAL="$(git rev-parse --verify HEAD 2>/dev/null || true)"
 [[ "$COMMIT_ATUAL" =~ ^[0-9a-f]{40}$ ]] || { echo "Não foi possível identificar um commit Git completo." >&2; exit 1; }
 ARVORE_ATUAL="$(git rev-parse "${COMMIT_ATUAL}^{tree}")"
 validar_checkout_imutavel
+validar_pacote_release_escopado
 export DEPLOY_COMMIT="$COMMIT_ATUAL"
 log "Iniciando deploy do commit $COMMIT_ATUAL para $DOMAIN."
 
@@ -470,10 +499,21 @@ done
 
 log "Confirmando migrations de forma idempotente."
 backend_exec python -m app.commands.migrate
-log "Reconciliando as 13 frentes científicas e publicando somente conteúdo revisado."
-backend_exec python -m app.commands.reconcile_content --publish-reviewed
-log "Aplicando somente reclassificações editoriais runtime vinculadas a identidade e evidência. Texto e publicação permanecem preservados."
-backend_exec python -m app.commands.apply_editorial_classifications --apply
+if [[ "$CORVIA_SCOPED_RELEASE_MODE" == "scientific-20260910" ]]; then
+  log "Publicando somente o pacote revisado scientific-20260910, com guardas por registro."
+  validar_checkout_imutavel
+  "${COMPOSE[@]}" cp "$SCOPED_RELEASE_PACK" backend:/tmp/corvia-scientific-20260910-publication-package.json
+  "${COMPOSE[@]}" cp "$SCOPED_RELEASE_PUBLISHER" backend:/tmp/publish_scientific_release_20260910.py
+  backend_exec env PYTHONPATH=/app python /tmp/publish_scientific_release_20260910.py \
+    /tmp/corvia-scientific-20260910-publication-package.json --sha256 "$SCOPED_RELEASE_SHA" --check
+  backend_exec env PYTHONPATH=/app python /tmp/publish_scientific_release_20260910.py \
+    /tmp/corvia-scientific-20260910-publication-package.json --sha256 "$SCOPED_RELEASE_SHA" --apply
+else
+  log "Reconciliando as 13 frentes científicas e publicando somente conteúdo revisado."
+  backend_exec python -m app.commands.reconcile_content --publish-reviewed
+  log "Aplicando somente reclassificações editoriais runtime vinculadas a identidade e evidência. Texto e publicação permanecem preservados."
+  backend_exec python -m app.commands.apply_editorial_classifications --apply
+fi
 # O reconciliador aplica a autorização do snapshot e suas exclusões.
 # Não executar promoção genérica depois dele: ela poderia republicar quarentena.
 # Correção coordenada de 03/09/2026 (seção "arquitetura de deploy"): a indexação
@@ -600,7 +640,9 @@ validar_checkout_imutavel
 # Responsável único pela indexação incremental: `app.commands.
 # reindex_rag_completo_20260902` — cobre documentos E as 12 frentes de
 # `rag_sources` + calculadoras num só comando, idempotente por content_hash.
-if [[ "${AI_ENABLED:-false}" == "true" ]]; then
+if [[ "$CORVIA_SCOPED_RELEASE_MODE" == "scientific-20260910" ]]; then
+  log "Indexação global não disparada neste modo; o pacote scientific-20260910 terá indexação específica após o deploy."
+elif [[ "${AI_ENABLED:-false}" == "true" ]]; then
   log "Disparando indexação RAG incremental em segundo plano (não bloqueia nem reverte o deploy)."
   "${COMPOSE[@]}" exec -d backend python -m app.commands.reindex_rag_completo_20260902 \
     || log "AVISO: não foi possível disparar a indexação RAG incremental agora; rode manualmente: docker compose -f docker-compose.prod.yml exec backend python -m app.commands.reindex_rag_completo_20260902"
@@ -608,4 +650,8 @@ fi
 
 "${COMPOSE[@]}" ps
 TRAFEGO_ABERTO=0
-log "Deploy certificado concluído: commit $COMMIT_ATUAL, migrations aplicadas, corpus reconciliado e HTTPS pronto."
+if [[ "$CORVIA_SCOPED_RELEASE_MODE" == "scientific-20260910" ]]; then
+  log "Deploy certificado concluído: commit $COMMIT_ATUAL, migrations aplicadas, pacote scientific-20260910 publicado e HTTPS pronto."
+else
+  log "Deploy certificado concluído: commit $COMMIT_ATUAL, migrations aplicadas, corpus reconciliado e HTTPS pronto."
+fi

@@ -1,0 +1,55 @@
+---
+slug: hiperpotassemia-ambulatorial-na-ic-com-drc-quando-escalar
+title: 'Hiperpotassemia ambulatorial na IC com DRC: quando escalar'
+kind: protocolo
+theme: Insuficiência cardíaca
+summary: K ≥6,5 mmol/L requer avaliação emergencial mesmo com ECG normal. K 6,0–6,4 sem alarme exige contato rápido,
+  decisão terapêutica e repetição em até um dia; doença aguda, LRA, sintomas ou acesso inseguro antecipam avaliação
+  hospitalar.
+tags: []
+source_refs:
+- UK Kidney Association. Hyperkalaemia guideline, atualização julho 2026; recomendações 1.2.2 e 1.2.3.
+- KDIGO. Acute Kidney Injury guideline 2012; estadiamento por creatinina e diurese.
+- 'McDonagh TA, Metra M, Adamo M, et al. ESC HF 2021. PMID: 34447992'
+- 'McDonagh TA, Metra M, Adamo M, et al. ESC HF Focused Update 2023. PMID: 37622666'
+- 'Butler J, Anker SD, Lund LH, et al. DIAMOND. PMID: 35900838'
+- 'KDIGO 2024 CKD Guideline. PMID: 38490803'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# Hiperpotassemia ambulatorial na IC com DRC: quando escalar
+
+## Emergência
+**Potássio >=6,5 mmol/L → avaliação emergencial/PS mesmo sem sintomas e mesmo com ECG normal ou indisponível.** ECG pode ser pouco sensível para a gravidade da hiperpotassemia.
+
+Também é PS se houver:
+- fraqueza grave/paralisia;
+- bradicardia sintomática, síncope ou instabilidade;
+- alterações ECG compatíveis;
+- oligúria/IRA, choque ou outra deterioração sistêmica importante.
+
+Se houver suspeita de hemólise com resultado grave, repetir a amostra em paralelo à avaliação urgente, sem aguardar confirmação ambulatorial para encaminhar paciente em risco.
+
+## Abaixo do limiar grave e sem alarme
+1. confirmar resultado se hemólise/dúvida;
+2. rever tendência, creatinina/TFGe e volume;
+3. procurar causas reversíveis/interações;
+4. revisar fármacos que elevam K sem automatizar suspensão permanente;
+5. definir rechecagem proporcional à gravidade e suporte da rede.
+
+**Não interromper permanentemente RAASi/MRA sem avaliação e plano**, mas discutir redução ou pausa temporária conforme gravidade. UKKA orienta suspender temporariamente RAASi em doença intercorrente aguda com sepse, hipovolemia ou LRA; K≥6 exige decisão imediata sobre tratamento/pausa e estratégia de redução de potássio, não manutenção automática. Após correção, reavaliar reintrodução quando apropriada.
+
+**K 6,0–6,4 mmol/L exige contato clínico rápido e repetição em até 1 dia**, conforme UKKA; antecipar avaliação hospitalar se houver doença aguda, LRA, ascensão rápida, sintomas ou impossibilidade de reavaliação segura.
+
+## Recorrência
+Hiperpotassemia recorrente que limita terapia prognóstica apesar de correção de fatores reversíveis → discussão cardio-nefro e estratégia específica, sem doses neste documento.
+
+
+
+## Conteúdo relacionado
+- [Hiperpotassemia grave: segurança](/biblioteca/hipercalemia-na-uco-gravidade-ecg-e-gates-de-seguranca).
+- [LRA: critérios KDIGO](/biblioteca/lesao-renal-aguda-na-uco-criterios-kdigo-creatinina-e-diurese).

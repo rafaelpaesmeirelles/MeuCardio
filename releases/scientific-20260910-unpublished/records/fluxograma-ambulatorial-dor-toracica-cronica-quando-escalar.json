@@ -1,0 +1,20 @@
+{
+  "slug": "fluxograma-ambulatorial-dor-toracica-cronica-quando-escalar",
+  "title": "Fluxograma ambulatorial: dor torácica crônica — quando escalar ao PS",
+  "kind": "fluxograma",
+  "theme": "Doença coronariana",
+  "summary": "Árvore de consultório para dor torácica em seguimento de SCC/DAC: gate de instabilização → PS; padrão estável → plano ambulatorial e retorno; sem reabrir algoritmo 0/1 h de troponina da emergência.",
+  "body_md": "# Fluxograma ambulatorial: dor torácica crônica — quando escalar\n\nProsa: [sinalizadores-ambulatoriais-de-angina-instabilizando-quando-encaminhar](/biblioteca/sinalizadores-ambulatoriais-de-angina-instabilizando-quando-encaminhar). Pós-IAM: [pos-iam-ambulatorial-sinais-de-alarme-nas-primeiras-semanas](/biblioteca/pos-iam-ambulatorial-sinais-de-alarme-nas-primeiras-semanas). Vias agudas: [fluxograma-sindrome-coronariana-aguda-esc-2023](/biblioteca/fluxograma-sindrome-coronariana-aguda-esc-2023).\n\n## Árvore de decisão\n\n```mermaid\nflowchart TD\n  R0[\"Consulta ambulatorial<br/>dor torácica / angina em SCC ou DAC\"] --> D1{\"Há sinal de instabilização?<br/>repouso/crescendo novos ou agravados<br/>equivalentes isquêmicos novos<br/>ECG isquêmico novo\"}\n\n  D1 -->|\"Sim ou dúvida fundamentada\"| C1([\"Encaminhar AGORA ao PS / emergência<br/>ECG na porta · via SCA<br/>Não teste ergométrico ambulatorial\"])\n\n  D1 -->|\"Não\"| D2{\"Padrão ainda limitado ao esforço<br/>e previsível?\"}\n\n  D2 -->|\"Não / padrão incerto com suspeita aguda\"| C2([\"Reavaliar suspeita de SCA e outras emergências<br/>PS/observação se suspeita aguda;<br/>se excluída, investigação ambulatorial com plano\"])\n\n  D2 -->|\"Sim\"| D3{\"Há necessidade de otimização<br/>sem mudança do padrão anginoso?\"}\n\n  D3 -->|\"Sim\"| C3[\"Revisar adesão e gatilhos<br/>Intensificar antianginoso conforme plano<br/>Retorno em dias + orientação escrita\"]\n  D3 -->|\"Não\"| C4([\"Manter terapia de SCC<br/>Retorno usual<br/>Reforçar sinais de alarme\"])\n\n  C3 --> D4{\"Acesso a medicação<br/>e retorno garantidos?\"}\n  D4 -->|\"Não / fragilidade\"| C5([\"Antecipar retorno 24–72 h<br/>ou encaminhar se insegurança\"])\n  D4 -->|\"Sim\"| C6([\"Plano ambulatorial + alarmes escritos\"])\n\n  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;\n  classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;\n  class C1,C2,C5 alerta;\n  class C3,C4,C6 conduta;\n```\n\n## Notas\n\n- **D1** = gate de segurança (ESC 2023 ACS / ESC 2024 CCS): decide PS vs. consultório.\n- **D2–D3** = braço estável: não reabre 0/1 h de troponina nem timing invasivo de NSTE.\n- **D4** = segurança do plano (acesso/fragilidade), não nova classe terapêutica.\n- Não decide doses, escolha de P2Y12 nem estratégia de reperfusão.\n\n## Segurança diagnóstica\n\nAlívio ou ausência de alívio com nitrato não confirma nem exclui SCA. ECG normal também não a exclui. Suspeita razoável exige via aguda com ECG/troponina seriados e observação; não teste ergométrico nem espera domiciliar por troponina. No pós-IAM considerar reinfarto/trombose de stent, pericardite, complicação mecânica, IC, arritmia e causas não cardíacas. Sangramento menor pede avaliação e não suspensão empírica de DAPT; cefaleia súbita grave sob antitrombótico é alarme neurológico, não diagnóstico de hemorragia sem imagem.",
+  "tags": [],
+  "source_refs": [
+    "Vrints C; Andreotti F; Koskinas KC. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45:3415. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710.",
+    "Byrne RA; Rossello X; Coughlan JJ. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44:3720. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654."
+  ],
+  "evidence_level": null,
+  "source_tier": "A",
+  "review_status": "revisado",
+  "gaps": [],
+  "version": 1,
+  "updated_at": "2026-09-10 01:53:04.465188+00:00",
+  "published": false
+}

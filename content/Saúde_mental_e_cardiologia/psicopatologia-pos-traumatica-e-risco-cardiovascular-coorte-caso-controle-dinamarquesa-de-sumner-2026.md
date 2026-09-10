@@ -1,14 +1,35 @@
 ---
-title: "Psicopatologia Pós-Traumática e Risco Cardiovascular: a Coorte Caso-Controle Dinamarquesa de Sumner 2026 (Diferenças por Sexo)"
+title: 'Psicopatologia Pós-Traumática e Risco Cardiovascular: a Estudo Caso-Controle Dinamarquesa de Sumner 2026
+  (Diferenças por Sexo)'
 slug: psicopatologia-pos-traumatica-e-risco-cardiovascular-coorte-caso-controle-dinamarquesa-de-sumner-2026
-theme: "Saúde mental e cardiologia"
+theme: Saúde mental e cardiologia
 kind: estudo
-review_status: pendente_revisao
-source_refs: ["Sumner JA, Rosellini AJ, Szentkúti P, Horváth-Puhó E, Bøtker HE, Lash TL, Schnurr PP, Galea S, Sørensen HT, Gradus JL. Post-traumatic Psychopathology and Cardiovascular Risk: A Danish Case-Control Study of Sex-Specific Associations. J Am Heart Assoc. 2026 Sep 2:e049492. DOI: 10.1161/JAHA.126.049492. PMID: 42684053 — publicação eletrônica antecipada ('online ahead of print'), sem volume/fascículo/paginação definitivos até a data de consulta"]
-legacy_source: "Documento novo, escrito em 09/09/2026. Esta pasta já documenta o transtorno de estresse pós-traumático (TEPT) isolado como fator de risco coronariano (metanálise de Edmondson et al. 2013, PMID 24176435, seis estudos e 402.274 participantes), mas nenhum documento cobria este estudo dinamarquês de 2026, que muda a pergunta central: em vez de isolar o TEPT, aplica aprendizado de máquina (XGBoost + valores SHAP) para comparar a importância relativa de um espectro amplo de transtornos psiquiátricos pós-trauma como preditores de eventos cardiovasculares e cerebrovasculares adversos maiores (MACCE), com modelos treinados e testados separadamente por sexo. Busca confirmada por grep no repositório inteiro antes de escrever ('42684053', 'Sumner', 'MACCE', 'psychopathology', 'Danish case-control'): nenhuma cobertura prévia do PMID ou do estudo em content/. O PMID foi lido na íntegra (abstract) via E-utilities do PubMed nesta sessão, complementado por matérias de imprensa oficiais da American Heart Association e do News-Medical sobre o mesmo estudo — sem acesso ao texto completo do artigo, ainda em publicação eletrônica antecipada na data de consulta; nenhum dado numérico entrou no texto sem confirmação em uma dessas fontes."
+review_status: revisado
+source_refs:
+- 'Sumner JA, Rosellini AJ, Szentkúti P, Horváth-Puhó E, Bøtker HE, Lash TL, Schnurr PP, Galea S, Sørensen HT, Gradus
+  JL. Post-traumatic Psychopathology and Cardiovascular Risk: A Danish Case-Control Study of Sex-Specific Associations.
+  J Am Heart Assoc. 2026 Sep 2:e049492. DOI: 10.1161/JAHA.126.049492. PMID: 42684053 — publicação eletrônica antecipada
+  (''online ahead of print''), sem volume/fascículo/paginação definitivos até a data de consulta'
+legacy_source: 'Documento novo, escrito em 09/09/2026. Esta pasta já documenta o transtorno de estresse pós-traumático
+  (TEPT) isolado como fator de risco coronariano (metanálise de Edmondson et al. 2013, PMID 24176435, seis estudos
+  e 402.274 participantes), mas nenhum documento cobria este estudo dinamarquês de 2026, que muda a pergunta central:
+  em vez de isolar o TEPT, aplica aprendizado de máquina (XGBoost + valores SHAP) para comparar a importância relativa
+  de um espectro amplo de transtornos psiquiátricos pós-trauma como preditores de eventos cardiovasculares e cerebrovasculares
+  adversos maiores (MACCE), com modelos treinados e testados separadamente por sexo. Busca confirmada por grep no
+  repositório inteiro antes de escrever (''42684053'', ''Sumner'', ''MACCE'', ''psychopathology'', ''Danish case-control''):
+  nenhuma cobertura prévia do PMID ou do estudo em content/. O PMID foi lido na íntegra (abstract) via E-utilities
+  do PubMed nesta sessão, complementado por matérias de imprensa oficiais da American Heart Association e do News-Medical
+  sobre o mesmo estudo — sem acesso ao texto completo do artigo, ainda em publicação eletrônica antecipada na data
+  de consulta; nenhum dado numérico entrou no texto sem confirmação em uma dessas fontes.'
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Psicopatologia Pós-Traumática e Risco Cardiovascular: a Coorte Caso-Controle Dinamarquesa de Sumner 2026
+# Psicopatologia Pós-Traumática e Risco Cardiovascular: a Estudo Caso-Controle Dinamarquesa de Sumner 2026
 
 ## A pergunta que este documento responde
 Esta pasta já registra que o TEPT, isoladamente, é fator de risco coronariano independente mesmo após ajuste para depressão (metanálise de Edmondson et al., 2013, PMID 24176435: HR 1,55 bruto e 1,27 após ajuste para depressão). Esse desenho clássico compara "TEPT" versus "sem TEPT". O estudo de Sumner, Gradus e colaboradores (Journal of the American Heart Association, publicado eletronicamente em 02/09/2026) faz uma pergunta diferente e mais ampla: entre **todo o espectro de transtornos psiquiátricos que podem surgir após um evento traumático** — não só o TEPT, mas também transtornos por uso de álcool, depressão, ansiedade, transtorno de personalidade, esquizofrenia, transtorno bipolar e quadros confusionais —, **qual deles pesa mais** na predição de eventos cardiovasculares e cerebrovasculares adversos maiores (MACCE)? E essa importância relativa **difere entre homens e mulheres**?
@@ -28,20 +49,20 @@ Sumner JA et al. J Am Heart Assoc. 2026 Sep 2:e049492 (PMID 42684053; DOI 10.116
 - Outros preditores psiquiátricos de alta importância, em ambos os sexos: **transtornos depressivos**, **TEPT/transtornos relacionados a estresse**, **condições cerebrais/fisiológicas** (quadros psiquiátricos atribuídos a causa orgânica) e **delirium não induzido por substância**.
 - A cobertura de imprensa oficial da American Heart Association sobre o mesmo estudo acrescenta que, entre os 15 preditores mais importantes, também apareceram **transtorno de personalidade, esquizofrenia, transtorno bipolar, outros transtornos por uso de substância e transtornos de ansiedade** — sem posição exata de ranqueamento numérico disponível no resumo indexado nem nas matérias consultadas.
 - **Achado sexo-específico central:** episódios depressivos tiveram importância relativa **maior em mulheres do que em homens** como preditor de MACCE.
-- **Conclusão quantitativa do próprio resumo:** nos conjuntos de treinamento e de teste, as razões de chances (*odds ratios*) indicaram que a chance de MACCE foi maior entre quem tinha (versus quem não tinha) transtorno psiquiátrico pós-trauma — **o resumo consultado não traz o valor numérico agregado dessa razão de chances**, nem valores de SHAP ou de OR/HR individuais por transtorno; esses números específicos, se necessários, exigem leitura do artigo completo (`VERIFICAÇÃO HUMANA NECESSÁRIA`).
+- O resumo informa maior chance de MACCE nos grupos com transtornos psiquiátricos. Esta síntese não atribui OR ou HR individuais que não foram apresentados nem usa SHAP como tamanho de efeito.
 
 **Conclusão dos próprios autores, no resumo:** "Results emphasize the importance of considering a range of psychiatric disorders when assessing cardiovascular risk following trauma" — os achados reforçam a importância de considerar um espectro amplo de transtornos psiquiátricos ao avaliar o risco cardiovascular após um trauma.
 
-## Por que isso importa na prática cardiológica
-O valor prático deste estudo para o cardiologista não está em substituir o que já se sabe sobre TEPT e risco coronariano (documento já registrado nesta pasta), mas em **recalibrar onde apontar a triagem** depois de um evento traumático. O achado de que **transtorno por uso de álcool** — não o TEPT — foi o preditor mais importante em ambos os sexos é clinicamente acionável: sugere que, na consulta pós-trauma, perguntar sobre padrão de consumo de álcool pode ter tanto ou mais valor preditivo cardiovascular do que rastrear sintomas específicos de TEPT isoladamente. A autora principal, em entrevista à imprensa da American Heart Association, propôs um mecanismo plausível e não fabricado aqui como dado do estudo: after trauma, algumas pessoas passam a usar álcool como estratégia de enfrentamento, e esse padrão pode evoluir para transtorno por uso de álcool ao longo do tempo — uma via comportamental adicional às vias fisiológicas de estresse crônico já discutidas nos documentos desta pasta sobre TEPT e sobre fator psicossocial geral (INTERHEART). O achado de que depressão pesa mais como preditor em mulheres do que em homens também é acionável: reforça a necessidade de rastreio ativo de sintomas depressivos pós-trauma especificamente em pacientes do sexo feminino, sem que isso signifique dispensar o rastreio em homens, para os quais outros preditores (uso de álcool, TEPT) permanecem centrais.
+## Interpretação clínica
+O estudo apoia considerar um espectro amplo de necessidades de saúde mental após trauma. A posição de uma variável no modelo não prova que seu rastreio previna mais eventos nem estabelece prioridade clínica por sexo. Uso de álcool, depressão e sintomas de trauma devem ser abordados conforme contexto, sem negligenciar os demais transtornos. Não foi comparada uma estratégia de triagem com outra, nem foi validado um escore de risco absoluto para uso no consultório.
 
-## Limitações, declaradas com honestidade
+## Limitações
 - **Desenho observacional caso-controle**, não um ensaio clínico — o estudo estabelece associação preditiva, não causalidade; os próprios materiais de imprensa consultados destacam que o estudo **não explorou por que** as condições psiquiátricas pós-traumáticas aumentam o risco cardiovascular.
-- **Método de aprendizado de máquina com ranqueamento por importância relativa (SHAP), não razões de risco clássicas** — o resumo indexado e as matérias de imprensa consultadas não trazem valores numéricos de odds ratio, hazard ratio ou magnitude de efeito por transtorno individual; apenas a ordem de importância. Qualquer necessidade de magnitude de efeito exata exige leitura do artigo completo, ainda em publicação eletrônica antecipada na data de consulta (`VERIFICAÇÃO HUMANA NECESSÁRIA`).
+- **SHAP descreve a contribuição de variáveis neste modelo**, não causalidade ou risco absoluto. A divisão treino/teste é validação interna, não validação externa em outro sistema de saúde.
 - **Contexto do sistema de saúde dinamarquês (universal, gratuito)** — a generalização para sistemas de saúde com barreiras de acesso diferentes (incluindo o Brasil) deve ser feita com cautela, ressalva citada explicitamente na cobertura de imprensa da American Heart Association sobre o próprio estudo.
 - **Janela de ascertainment de 3 anos pós-trauma** — transtornos psiquiátricos diagnosticados após esse período não entraram como preditores no modelo; a arquitetura do estudo não captura psicopatologia de início tardio.
 - **Diagnóstico psiquiátrico por registro administrativo de saúde**, sujeito a subdiagnóstico ou a viés de quem busca e recebe atendimento psiquiátrico formal — limitação inerente a estudos de base em registro, não específica deste estudo.
-- **Publicação em estágio de "online ahead of print"** na data de consulta (09/09/2026) — texto integral, tabelas com valores numéricos completos e eventual errata pós-publicação formal ainda não conferidos nesta sessão.
+- Não são utilizados aqui estimadores individuais ou limiares operacionais ausentes da fonte consultada. Um título de publicação antecipada não implica que o artigo esteja sem revisão por pares.
 
 ## Armadilhas clínicas
 - Tratar este estudo como substituto do documento já registrado nesta pasta sobre TEPT e risco coronariano (Edmondson et al., 2013) — são desenhos diferentes (metanálise clássica com HR agregado vs. estudo único de aprendizado de máquina com ranqueamento SHAP) respondendo a perguntas complementares, não a mesma pergunta; a leitura correta é de adição de camada, não de substituição.
@@ -58,3 +79,5 @@ O valor prático deste estudo para o cardiologista não está em substituir o qu
 - [Fator Psicossocial como Risco de Infarto: o Estudo INTERHEART](/biblioteca/fator-psicossocial-como-risco-de-infarto-o-estudo-interheart)
 - [Transtorno Bipolar e Síndrome Metabólica: o Risco Cardiovascular Além do Lítio e do Antipsicótico Isolado](/biblioteca/transtorno-bipolar-e-sindrome-metabolica-risco-cardiovascular-nas-metanalises-de-vancampfort-e-correll)
 - [Saúde mental e doença cardiovascular: consenso clínico ESC 2025](/biblioteca/saude-mental-e-doenca-cardiovascular-consenso-clinico-esc-2025)
+
+[Estudo primário, PMID42684053](https://pubmed.ncbi.nlm.nih.gov/42684053/); [divulgação da sociedade editora com entrevista à investigadora](https://newsroom.heart.org/news/mental-health-conditions-after-trauma-linked-to-higher-cardiovascular-risk).

@@ -1,11 +1,30 @@
 ---
-title: "Denervação Renal por Radiofrequência aos 3 Anos: o Seguimento Final do SPYRAL HTN-ON MED"
+title: 'Denervação Renal por Radiofrequência aos 3 Anos: o Seguimento Final do SPYRAL HTN-ON MED'
 slug: denervacao-renal-por-radiofrequencia-aos-3-anos-seguimento-final-do-spyral-htn-on-med
-theme: "Hipertensão"
+theme: Hipertensão
 kind: estudo
 review_status: revisado
-source_refs: ["Kandzari DE, Mahfoud F, Townsend RR, Kario K, Weber MA, Schmieder RE, Tsioufis K, Pocock S, Yang G, Brar S, Böhm M. Three-Year Durability of Radiofrequency Renal Denervation: SPYRAL HTN-ON MED. J Am Heart Assoc. 2026;15(12):e049081. DOI: 10.1161/JAHA.126.049081. PMID: 42294771 — NCT02439775. Abstract completo conferido no PubMed via E-utilities em 09/09/2026.", "Kandzari DE, Böhm M, Schmieder RE, Townsend RR, Schlaich MP, Kario K, Whitbourn R, Gilbertson M, Mahfoud F. Long-term clinical benefit after radiofrequency renal denervation: pooled 36-month results from the SPYRAL Clinical Program. EuroIntervention. 2026;22(10):585-593. DOI: 10.4244/EIJ-D-26-00161. PMID: 42137915. Abstract completo conferido no PubMed via E-utilities em 09/09/2026 — citado apenas como dado complementar de coorte agrupada, não como o ensaio principal deste documento."]
-legacy_source: "Documento novo, escrito em 09/09/2026. Esta biblioteca já cobre o ensaio pivotal do SPYRAL HTN-ON MED com seu desfecho primário de 6 meses (JACC 2023, PMID 37914510, resultado negativo no desfecho primário) e a durabilidade em coorte de mundo real de 30 meses (Kuwait, observacional, sem sham). Faltava o dado que só o próprio ensaio randomizado, com sham, pode responder sobre longo prazo: o que aconteceu nos braços originais do SPYRAL HTN-ON MED até o final pré-especificado de seguimento, 3 anos depois da randomização."
+source_refs:
+- 'Kandzari DE, Mahfoud F, Townsend RR, Kario K, Weber MA, Schmieder RE, Tsioufis K, Pocock S, Yang G, Brar S, Böhm
+  M. Three-Year Durability of Radiofrequency Renal Denervation: SPYRAL HTN-ON MED. J Am Heart Assoc. 2026;15(12):e049081.
+  DOI: 10.1161/JAHA.126.049081. PMID: 42294771 — NCT02439775. Abstract completo conferido no PubMed via E-utilities
+  em 09/09/2026.'
+- 'Kandzari DE, Böhm M, Schmieder RE, Townsend RR, Schlaich MP, Kario K, Whitbourn R, Gilbertson M, Mahfoud F. Long-term
+  clinical benefit after radiofrequency renal denervation: pooled 36-month results from the SPYRAL Clinical Program.
+  EuroIntervention. 2026;22(10):585-593. DOI: 10.4244/EIJ-D-26-00161. PMID: 42137915. Abstract completo conferido
+  no PubMed via E-utilities em 09/09/2026 — citado apenas como dado complementar de coorte agrupada, não como o
+  ensaio principal deste documento.'
+legacy_source: 'Documento novo, escrito em 09/09/2026. Esta biblioteca já cobre o ensaio pivotal do SPYRAL HTN-ON
+  MED com seu desfecho primário de 6 meses (JACC 2023, PMID 37914510, resultado negativo no desfecho primário) e
+  a durabilidade em coorte de mundo real de 30 meses (Kuwait, observacional, sem sham). Faltava o dado que só o
+  próprio ensaio randomizado, com sham, pode responder sobre longo prazo: o que aconteceu nos braços originais do
+  SPYRAL HTN-ON MED até o final pré-especificado de seguimento, 3 anos depois da randomização.'
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Denervação Renal por Radiofrequência aos 3 Anos: o Seguimento Final do SPYRAL HTN-ON MED
@@ -27,12 +46,13 @@ Comparando os grupos originais (RDN desde o início vs. sham, com a imputação 
 
 - **PAS ambulatorial de 24h**: diferença de tratamento de **-4,7 mmHg** a favor da RDN (**p=0,0028**)
 - **PAS em consultório**: diferença de **-7,5 mmHg** a favor da RDN (**p=0,0002**)
-- **Carga de anti-hipertensivos aos 36 meses**: equilibrada entre os grupos — **5,2 ± 5,0** (RDN) vs. **5,5 ± 9,9** (sham/crossover) medicamentos, **p=0,63** (números e desvios-padrão exatamente como relatados no abstract; a magnitude do desvio-padrão no grupo sham/crossover é grande e não foi decomposta no resumo consultado)
+- **Carga de anti-hipertensivos aos 36 meses:** índice que considera número, classe e dose: 5,2 ± 5,0 versus 5,5 ± 9,9 (p=0,63). **Não é contagem de medicamentos**; esta foi 2,5 ± 1,2 versus 2,3 ± 1,2 (p=0,23).
 - **Pacientes que cruzaram para RDN após os 6 meses tiveram controle pressórico de consultório significativamente melhor após o procedimento** — dado direcional, sem a cifra exata no abstract consultado
-- **Eventos clínicos adversos foram raros** ao longo dos 3 anos, sem detalhamento numérico no resumo indexado — `VERIFICAÇÃO HUMANA NECESSÁRIA` para quem precisar da taxa exata de eventos adversos maiores, a partir do texto completo do artigo
+- **Segurança:** não se identificou sinal de complicações tardias no relato; os controles foram censurados para segurança no momento do crossover. Isso limita a comparação de eventos ao longo de três anos entre os grupos originais.
+- **Sensibilidade sem imputação:** não houve diferença pressórica significativa aos 36 meses entre RDN e controles que não cruzaram; estes usavam mais medicação. O resultado depende, portanto, de disponibilidade de dados, tratamento concomitante e método de análise.
 
 ## Dado complementar: coorte agrupada de 36 meses do programa SPYRAL (não é este ensaio)
-Uma publicação distinta e simultânea (Kandzari DE et al., EuroIntervention. 2026;22(10):585-593, PMID 42137915) reúne dados de **2.137 pacientes** tratados com RDN pelo cateter Symplicity Spyral, agrupando o Global SYMPLICITY Registry DEFINE, o SPYRAL First-In-Human e os braços OFF MED e ON MED — **todos tratados com RDN, sem grupo comparador sham nesta análise agrupada**. Aos 36 meses: PAS de consultório caiu **-18,1 ± 23,4 mmHg** e PAS ambulatorial de 24h caiu **-13,3 ± 17,6 mmHg** (ambos p<0,0001) frente ao basal (PAS de consultório basal 163±23 mmHg), com **88% dos pacientes apresentando algum benefício clínico** (redução de PAS de consultório ≥10 mmHg, PAS ambulatorial ≥5 mmHg e/ou uso de ao menos 1 medicamento a menos) (fonte: PMID 42137915, seção Results).
+Uma publicação distinta e simultânea (Kandzari DE et al., EuroIntervention. 2026;22(10):585-593, PMID 42137915) reúne dados de **2.137 pacientes** tratados com RDN pelo cateter Symplicity Spyral, agrupando o Global SYMPLICITY Registry DEFINE, o SPYRAL First-In-Human e os braços OFF MED e ON MED — **todos tratados com RDN, sem grupo comparador sham nesta análise agrupada**. Aos 36 meses: PAS de consultório caiu **-18,1 ± 23,4 mmHg** e PAS ambulatorial de 24h caiu **-13,3 ± 17,6 mmHg** (ambos p<0,0001) frente ao basal (PAS de consultório basal 163±23 mmHg), com **88% dos pacientes atingindo o critério pressórico/medicamentoso definido pelo estudo** (redução de PAS de consultório ≥10 mmHg, PAS ambulatorial ≥5 mmHg e/ou uso de ao menos 1 medicamento a menos) (fonte: PMID 42137915, seção Results).
 
 Este segundo estudo **não substitui nem confirma independentemente** o resultado do SPYRAL HTN-ON MED com sham — é uma coorte de pacientes já tratados, sem comparador não tratado, e serve apenas para situar a magnitude bruta de queda pressórica (sem controle de placebo/procedimento) num N muito maior. Os dois estudos foram publicados por grupos de autores parcialmente sobrepostos, com Medtronic (fabricante do dispositivo) como financiador/coautor institucional em ambos — relevante para ponderar o grau de independência da fonte.
 
@@ -43,9 +63,9 @@ O desenho após crossover cria uma armadilha de interpretação que precisa ser 
 - Os próprios autores classificam essas análises como **exploratórias**, não confirmatórias — uma qualificação que deve acompanhar qualquer citação deste resultado aos 36 meses.
 
 ## O que isso muda na prática
-- O programa SPYRAL HTN-ON MED, no seu seguimento mais longo já publicado (3 anos), mantém uma diferença pressórica estatisticamente significativa a favor da RDN sobre o grupo controle original, com **perfil de segurança preservado e carga de medicação equivalente entre os grupos**.
+- O programa SPYRAL HTN-ON MED, no seu seguimento mais longo já publicado (3 anos), mantém uma diferença pressórica estatisticamente significativa a favor da RDN sobre o grupo controle original, com **perfil de segurança preservado e carga de medicação sem diferença estatística na análise imputada**.
 - Isso reforça, com dados do próprio ensaio randomizado (ainda que em análise exploratória pós-crossover), o que a coorte de mundo real do Kuwait já sugeria de forma observacional: o efeito pressórico da RDN não parece ser um fenômeno de curto prazo que se dissipa com o tempo.
-- Não muda a recomendação de Classe IIb já registrada nesta biblioteca para RDN em hipertensão resistente — este é um dado de durabilidade em análise exploratória, não um novo ensaio confirmatório de desfecho primário.
+- Não constitui, isoladamente, uma nova recomendação de diretriz para RDN — este é um dado de durabilidade em análise exploratória, não um novo ensaio confirmatório de desfecho primário.
 
 ## Armadilhas de leitura
 - Tratar a diferença de 36 meses como comparação "tratado vs. nunca tratado por 3 anos" — não é: 74% do grupo controle recebeu RDN após o 6º mês, e seus dados pós-crossover foram imputados, não medidos.
@@ -55,8 +75,8 @@ O desenho após crossover cria uma armadilha de interpretação que precisa ser 
 
 ## Síntese prática
 - **PMID 42294771** (JAHA 2026): seguimento pré-especificado de 3 anos do SPYRAL HTN-ON MED pivotal — diferença de -4,7 mmHg (PA ambulatorial 24h, p=0,0028) e -7,5 mmHg (PA de consultório, p=0,0002) a favor da RDN, com carga de medicação equilibrada e segurança mantida; análise exploratória, com 74% de crossover do grupo sham e imputação por LOCF.
-- **PMID 42137915** (EuroIntervention 2026): dado complementar, não comparativo — 2.137 pacientes tratados com RDN em 4 estudos agrupados do programa SPYRAL, queda de PA sustentada aos 36 meses e benefício clínico em 88% dos pacientes, sem grupo controle nesta análise.
-- Juntos, reforçam a durabilidade do efeito pressórico da RDN por radiofrequência além dos 24 meses já estabelecidos no ensaio pivotal — sem alterar a força da recomendação clínica atual (Classe IIb).
+- **PMID 42137915** (EuroIntervention 2026): dado complementar, não comparativo — 2.137 pacientes tratados com RDN em 4 estudos agrupados do programa SPYRAL, queda de PA sustentada aos 36 meses e critério pressórico/medicamentoso atingido em 88% dos pacientes, sem grupo controle nesta análise.
+- Juntos, reforçam a durabilidade do efeito pressórico da RDN por radiofrequência além dos 24 meses já estabelecidos no ensaio pivotal — sem estabelecer uma nova indicação por si só.
 
 ## Tudo com Tudo
 

@@ -1,11 +1,29 @@
 ---
-title: "Perda de Peso no Idoso com Fibrilação Atrial Persistente: o Ensaio LOSE-AF"
+title: 'Perda de Peso no Idoso com Fibrilação Atrial Persistente: o Ensaio LOSE-AF'
 slug: perda-de-peso-no-idoso-com-fibrilacao-atrial-persistente-o-ensaio-lose-af
-theme: "Fibrilação atrial"
+theme: Fibrilação atrial
 kind: estudo
 review_status: revisado
-source_refs: ["Sclafani M, Spartera M, Esmati Y, Baynham-Williams O, Khan I, Brigoli M, et al. Weight Loss in Older Patients With Persistent Atrial Fibrillation: The LOSE-AF Randomized Clinical Trial. JAMA. 2026;336(3):205-214. DOI: 10.1001/jama.2026.5787. PMID: 42160044. NCT03713775, PMCID PMC13191454. Ensaio randomizado, paralelo, aberto (unblinded), 118 pacientes, 2 hospitais no Reino Unido. Comentário editorial associado no mesmo número (JAMA. 2026;336(3):197-199, DOI: 10.1001/jama.2026.6094) existe e NÃO foi lido nesta redação, declarado em vez de omitido. Abstract completo lido via PubMed E-utilities esearch/efetch em 09/09/2026 — texto integral do artigo NÃO foi lido nesta redação, só o abstract estruturado indexado no PubMed"]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta já cobre perda de peso e condicionamento cardiorrespiratório em FA (LEGACY, CARDIO-FIT e ACTIVE-AF), mas essa evidência vem de coortes majoritariamente não randomizadas (LEGACY e CARDIO-FIT) ou de uma população mais jovem e sem corte etário superior (ACTIVE-AF). Nenhum documento tratava da pergunta específica levantada por essas diretrizes quando aplicadas ao idoso: perder peso é seguro e eficaz especificamente entre 60 e 85 anos, faixa em que perda de peso pode teoricamente precipitar fragilidade e sarcopenia? O LOSE-AF é o primeiro ensaio randomizado desenhado para essa pergunta, publicado em julho de 2026."
+source_refs:
+- 'Sclafani M, Spartera M, Esmati Y, Baynham-Williams O, Khan I, Brigoli M, et al. Weight Loss in Older Patients
+  With Persistent Atrial Fibrillation: The LOSE-AF Randomized Clinical Trial. JAMA. 2026;336(3):205-214. DOI: 10.1001/jama.2026.5787.
+  PMID: 42160044. NCT03713775, PMCID PMC13191454. Ensaio randomizado, paralelo, aberto (unblinded), 118 pacientes,
+  2 hospitais no Reino Unido. Comentário editorial associado no mesmo número (JAMA. 2026;336(3):197-199, DOI: 10.1001/jama.2026.6094)
+  existe e NÃO foi lido nesta redação, declarado em vez de omitido. Abstract completo lido via PubMed E-utilities
+  esearch/efetch em 09/09/2026 — texto integral do artigo NÃO foi lido nesta redação, só o abstract estruturado
+  indexado no PubMed'
+legacy_source: 'Documento novo, escrito em 09/09/2026. A pasta já cobre perda de peso e condicionamento cardiorrespiratório
+  em FA (LEGACY, CARDIO-FIT e ACTIVE-AF), mas essa evidência vem de coortes majoritariamente não randomizadas (LEGACY
+  e CARDIO-FIT) ou de uma população mais jovem e sem corte etário superior (ACTIVE-AF). Nenhum documento tratava
+  da pergunta específica levantada por essas diretrizes quando aplicadas ao idoso: perder peso é seguro e eficaz
+  especificamente entre 60 e 85 anos, faixa em que perda de peso pode teoricamente precipitar fragilidade e sarcopenia?
+  O LOSE-AF é o primeiro ensaio randomizado desenhado para essa pergunta, publicado em julho de 2026.'
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Perda de Peso no Idoso com Fibrilação Atrial Persistente: o Ensaio LOSE-AF
@@ -30,20 +48,20 @@ Ensaio randomizado, paralelo, **aberto** (sem cegamento), conduzido em **2 hospi
 - **Sem diferença significativa entre grupos** em: desempenho físico, carga de FA, parâmetros de imagem cardíaca, pressão arterial, perfil lipídico, ou incidência de nova cardioversão ou ablação de FA no seguimento
 - **Nenhum evento adverso grave relacionado à participação no ensaio** foi relatado em nenhum dos dois grupos
 
-## O achado central: perda de peso foi segura, mas não mudou a FA
-Este é um ensaio **negativo para o desfecho de eficácia e positivo para o desfecho de segurança**, e as duas leituras têm peso prático diferente:
-- **Segurança**: a hipótese de que perda de peso induzida por dieta poderia prejudicar o idoso — por exemplo, deteriorando desempenho físico — **não se confirmou**. Não houve diferença significativa em desempenho físico entre os grupos, e nenhum evento adverso grave atribuído à participação
-- **Eficácia**: apesar de a intervenção ter conseguido uma diferença real e expressiva de peso (-6,9 kg, quase 10% do peso corporal), isso **não se traduziu** em menos sintomas de FA, menos carga de arritmia, menos remodelamento cardíaco ou menos necessidade de nova intervenção de ritmo
+## O achado central: emagrecimento sem benefício demonstrado nos sintomas de FA
+O ensaio **não demonstrou benefício no desfecho primário e não identificou preocupação de segurança atribuída ao programa**, e as duas leituras têm peso prático diferente:
+- **Segurança**: a hipótese de que perda de peso induzida por dieta poderia prejudicar o idoso — por exemplo, deteriorando desempenho físico — **não foi detectada nos resultados deste pequeno ensaio**. Não houve diferença significativa em desempenho físico entre os grupos, e nenhum evento adverso grave atribuído à participação
+- **Eficácia**: apesar de a intervenção ter conseguido uma diferença real e expressiva de peso (-6,9 kg, com perda intragrupo de 9,7% versus 3,1% no controle), isso **não se traduziu** em menos sintomas de FA, menos carga de arritmia, menos remodelamento cardíaco ou menos necessidade de nova intervenção de ritmo
 - Isso contrasta com LEGACY e CARDIO-FIT (coortes mais jovens, não randomizadas, nesta mesma pasta em `peso-condicionamento-e-exercicio-na-fibrilacao-atrial-legacy-cardio-fit-e-active-af.md`), onde perda de peso ≥10% associou-se a benefício expressivo sobre carga arrítmica. O LOSE-AF não necessariamente contradiz esses achados — mas mostra que o mesmo efeito **não se replicou, com desenho randomizado, na faixa etária de 60-85 anos**
 
 ## Por que o desenho limita o alcance da conclusão
 - **Amostra pequena (118 pacientes, 59 por braço)**: o ensaio foi desenhado e tem poder estatístico para o desfecho de sintomas (AFSS), não para desfechos duros como mortalidade, AVC ou hospitalização — o abstract não relata esses desfechos, e este documento não afirma nada sobre eles
-- **Estudo aberto (sem cegamento)**: desfechos subjetivos como escore de sintomas relatados pelo paciente são mais suscetíveis a viés em ensaios não cegados — o resultado nulo aqui, paradoxalmente, torna esse viés menos preocupante (um viés a favor da intervenção tenderia a inflar benefício, não a produzir um resultado neutro)
+- **Estudo aberto (sem cegamento)**: desfechos subjetivos como escore de sintomas relatados pelo paciente são mais suscetíveis a viés em ensaios não cegados; ausência de significância não elimina esse risco de viés
 - **Taxa de conversão de elegibilidade para randomização foi baixa**: de ~500 convidados, só 119 consentiram — o perfil de quem aceita participar de um programa de 8 meses de dieta supervisionada pode não representar o idoso típico com FA e sobrepeso na prática clínica
-- **VERIFICAÇÃO HUMANA NECESSÁRIA**: o abstract não detalha a ferramenta usada para "desempenho físico" (se um teste validado de fragilidade/sarcopenia, como velocidade de marcha ou SPPB, ou outra medida), não informa taxa de adesão/abandono ao programa de dieta, não relata fração de ejeção basal nem comorbidades da amostra, e não relata desfechos de mortalidade ou hospitalização. Quem precisar desses detalhes deve consultar o texto completo do artigo (PMID 42160044), não lido nesta redação
+- O texto integral informa avaliação por **Physical Performance Testing (PPT), máximo de 36 pontos**, e monitorização de FA com patch de ECG por 14 dias aos 8 meses. Excluiu condições que limitam a generalização, como diabetes tratado com insulina, doença renal estágios 4/5 e comorbidades importantes. Ausência de eventos atribuídos ao estudo não garante segurança em idosos frágeis excluídos ou em longo prazo. [Métodos publicados](https://jamanetwork.com/journals/jama/fullarticle/2849335).
 
 ## O que isso muda na prática
-- No idoso (60-85 anos) com FA persistente e sobrepeso/obesidade, um programa estruturado de perda de peso **pode ser oferecido com razoável segurança** — não há sinal, neste ensaio, de que emagrecer prejudique desempenho físico nessa faixa etária
+- No idoso (60-85 anos) com FA persistente e sobrepeso/obesidade, um programa estruturado de perda de peso **exige avaliação individual de estado nutricional, função física e comorbidades** — não há sinal, neste ensaio, de que emagrecer prejudique desempenho físico nessa faixa etária
 - Mas a expectativa de que essa perda de peso **reduza sintomas de FA, carga de arritmia ou necessidade de nova cardioversão/ablação não é sustentada** pelos dados deste ensaio — o benefício sintomático observado em coortes mais jovens (LEGACY, CARDIO-FIT) não se confirmou aqui
 - Perda de peso no idoso com FA continua sendo justificável por outros motivos cardiovasculares e metabólicos gerais (a própria diretriz não se apoia só no efeito sobre a FA) — mas **não deve ser apresentada ao paciente idoso como estratégia capaz de reduzir sua carga de FA**, com base neste ensaio especificamente
 - Este documento não avalia GLP-1 ou outras intervenções farmacológicas de perda de peso — ver os documentos específicos sobre agonistas de GLP-1 e FA, nesta mesma pasta, para essa pergunta distinta
@@ -51,7 +69,7 @@ Este é um ensaio **negativo para o desfecho de eficácia e positivo para o desf
 ## Armadilhas clínicas
 - **Extrapolar o benefício de LEGACY/CARDIO-FIT (coortes mais jovens, não randomizadas) para o idoso** — o LOSE-AF é justamente o teste randomizado dessa extrapolação, e o resultado foi neutro para os desfechos de FA
 - **Ler "sem diferença significativa" no desfecho primário como "perda de peso é inútil no idoso com FA"** — o ensaio tem amostra pequena (118 pacientes) e não teve poder para desfechos duros; ausência de significância em amostra pequena não é o mesmo que ausência de efeito real
-- **Confundir "seguro" com "eficaz para a FA"** — os dois desfechos deste ensaio apontam em direções diferentes, e tratar o resultado como uma coisa só (positivo ou negativo) perde a informação clinicamente mais útil, que é a dissociação entre os dois
+- **Confundir ausência de sinal de segurança com garantia de segurança ou eficácia** — os dois desfechos deste ensaio apontam em direções diferentes, e tratar o resultado como uma coisa só (positivo ou negativo) perde a informação clinicamente mais útil, que é a dissociação entre os dois
 - **Aplicar este resultado a perda de peso induzida por GLP-1 ou por cirurgia bariátrica** — a intervenção testada aqui foi dieta hipocalórica com suporte comportamental; mecanismo, velocidade e magnitude de perda de peso diferem de outras estratégias, cobertas em documentos próprios desta pasta
 - **Ignorar que o próprio ensaio é aberto (sem cegamento)** — isso pesa na interpretação do desfecho subjetivo de sintomas relatados, ainda que aqui o resultado tenha sido nulo, não inflado a favor da intervenção
 

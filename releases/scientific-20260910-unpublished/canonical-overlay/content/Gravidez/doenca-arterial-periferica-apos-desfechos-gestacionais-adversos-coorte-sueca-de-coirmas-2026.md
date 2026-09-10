@@ -1,0 +1,116 @@
+---
+title: 'Doença Arterial Periférica Após Desfechos Gestacionais Adversos: Coorte Sueca de Coirmãs (2026)'
+slug: doenca-arterial-periferica-apos-desfechos-gestacionais-adversos-coorte-sueca-de-coirmas-2026
+theme: Gravidez
+kind: estudo
+review_status: revisado
+source_refs:
+- 'Crump C, Wei J, Sundquist J, Sundquist K. Adverse pregnancy outcomes and long-term risk of peripheral artery
+  disease: a cohort study. PLoS Med. 2026;23(7):e1004821. DOI: 10.1371/journal.pmed.1004821. PMID: 42479723 — texto
+  integral em acesso aberto (CC BY 4.0), PMCID PMC13387525, lido na íntegra nesta sessão via XML completo do PubMed
+  Central (eutils efetch, db=pmc); coorte nacional sueca de nascimentos únicos 1973-2015, 2.201.446 mulheres, 54
+  milhões de pessoas-ano de seguimento até 2018, análise de coirmãs para confundimento familiar'
+legacy_source: Documento novo, escrito em 09/09/2026. A pasta já tem um documento dedicado ao AVC como desfecho
+  isolado a partir da mesma linhagem de estudos de coorte sueca de coirmãs de Crump/Sundquist (Eur Heart J 2025,
+  PMID 40569854) e vários documentos sobre risco cardiovascular agregado ou sobre subtipos de distúrbio hipertensivo.
+  Nenhum documento desta pasta isolava a doença arterial periférica (DAP) como desfecho vascular próprio — leito
+  vascular distinto do coronariano e do cerebrovascular, historicamente sub-estudado, e que este novo artigo de
+  2026 do mesmo grupo (mesma base de dados sueca, desenho de coirmãs) trata com o mesmo rigor metodológico já usado
+  para AVC nesta pasta. A busca em PubMed E-utilities (esearch) confirmou que não há artigo equivalente já coberto
+  aqui, e o texto integral foi lido diretamente da fonte primária (PMC, acesso aberto) nesta sessão, não de resumo.
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: false
+---
+
+# Doença Arterial Periférica Após Desfechos Gestacionais Adversos: Coorte Sueca de Coirmãs (2026)
+
+## Por que este documento existe
+A doença arterial periférica (DAP) afeta mais de 230 milhões de pessoas no mundo e é forte preditora de AVC, doença isquêmica do coração e mortalidade precoce — mas, ao contrário de outros desfechos cardiovasculares, é historicamente sub-estudada em relação a desfechos gestacionais adversos. A pasta já cobre o AVC como desfecho isolado a partir da mesma linhagem de estudos suecos de coirmãs (Crump C, Sundquist J, Sundquist K. Eur Heart J. 2025, PMID 40569854) e cobre risco cardiovascular agregado após hipertensão gestacional/pré-eclâmpsia, mas nenhum documento tratava da DAP como leito vascular próprio. Crump C, Wei J, Sundquist J, Sundquist K. (PLoS Med. 2026;23(7):e1004821, PMID 42479723) preenche essa lacuna, usando a mesma base de dados nacional sueca e o mesmo desenho de coirmãs já validado nesta pasta para o AVC, agora aplicado à DAP.
+
+## Desenho do estudo
+Coorte nacional de base populacional: todas as **2.201.446 mulheres com parto único na Suécia entre 1973 e 2015** (192 mulheres com diagnóstico prévio de DAP foram excluídas), seguidas para DAP através dos registros hospitalares, ambulatoriais especializados e de atenção primária suecos até 31/12/2018 — **54 milhões de pessoas-ano**, seguimento máximo de **46 anos** (mediana de 27 anos entre as sobreviventes até o fim do seguimento) após o parto. Cinco desfechos gestacionais adversos foram avaliados no mesmo modelo: **parto pré-termo, pequeno para idade gestacional (PIG), pré-eclâmpsia, outros distúrbios hipertensivos (hipertensão gestacional ou crônica sem pré-eclâmpsia) e diabetes gestacional (DMG)**. Regressão de Cox estimou razões de risco (HR) ajustadas para fatores sociodemográficos maternos, paridade e fatores de risco tradicionais de DAP (tabagismo, IMC, hipertensão/diabetes/dislipidemia prévios), com um segundo modelo ajustando adicionalmente para os demais desfechos gestacionais entre si. Uma análise de **coirmãs** (1.198.476 mulheres, 54% da coorte, com pelo menos uma irmã completa também com parto único registrado) comparou o risco dentro da mesma família, controlando por fatores genéticos e ambientais compartilhados.
+
+Diferença metodológica importante em relação ao estudo sueco anterior sobre DAP (Täufer Cederlöf et al., 2022, citado no próprio artigo): aquele usava apenas dados de internação e óbito, capturando só os casos mais graves. Este estudo captura diagnóstico de DAP também em **ambulatório especializado e atenção primária** — e **50,9% dos 13.211 diagnósticos de DAP** desta coorte vieram exclusivamente da atenção primária, uma diferença de captura que pode contribuir para discrepâncias entre estudos, sem explicar sozinha sua magnitude.
+
+## Resultados principais — risco ao longo de todo o seguimento (até 46 anos)
+Na coorte total de 2.201.446 mulheres, 667.774 (30,4%) tiveram pelo menos um desfecho gestacional adverso e **13.211 (0,6%) foram diagnosticadas com DAP** ao longo do seguimento (idade mediana ao diagnóstico de DAP: 62 anos). Todos os cinco desfechos se associaram, de forma independente (modelo ajustado para os demais desfechos entre si), a maior risco de DAP:
+
+| Desfecho gestacional | HR ajustado (IC95%) — seguimento completo |
+|---|---|
+| Diabetes gestacional | **2,87** (2,51-3,29) |
+| Parto pré-termo | **1,73** (1,64-1,83) |
+| Pequeno para idade gestacional | **1,72** (1,65-1,79) |
+| Pré-eclâmpsia | **1,39** (1,32-1,46) |
+| Outros distúrbios hipertensivos | **1,31** (1,11-1,55) |
+
+**Diabetes gestacional teve, de longe, a maior magnitude de associação com DAP entre os cinco desfechos** — quase o dobro do HR da pré-eclâmpsia, e o mesmo padrão de destaque da DMG já registrado no documento desta pasta sobre AVC na mesma linhagem de estudos.
+
+## O padrão temporal: o risco começa cedo, mas se aprofunda com décadas
+Dentro dos primeiros 10 anos após o parto, apenas três dos cinco desfechos tinham associação significativa com DAP: parto pré-termo (HR 2,02; IC95% 1,55-2,64), diabetes gestacional (HR 1,84; IC95% 1,01-3,35) e PIG (HR 1,53; IC95% 1,20-1,94). Pré-eclâmpsia e outros distúrbios hipertensivos **ainda não mostravam associação significativa nessa janela inicial**.
+
+Entre **30 e 46 anos** após o parto, porém, todos os cinco desfechos alcançaram significância, sem aumento uniforme dos HRs em relação à primeira década:
+
+| Desfecho gestacional | HR ajustado (IC95%) — 30-46 anos após o parto |
+|---|---|
+| Diabetes gestacional | **3,83** (3,20-4,59) |
+| Pequeno para idade gestacional | **1,74** (1,65-1,83) |
+| Outros distúrbios hipertensivos | **1,61** (1,21-2,15) |
+| Parto pré-termo | **1,58** (1,48-1,70) |
+| Pré-eclâmpsia | **1,28** (1,20-1,37) |
+
+As diferenças de incidência absoluta (risco em excesso) também **aumentaram com o tempo de seguimento** para todos os desfechos — o achado não é um pico inicial que se dilui, o excesso absoluto cresce com a idade, mas os HRs não aumentam uniformemente. O próprio estudo pondera que, por ser uma coorte ainda relativamente jovem (mediana de idade ao fim do seguimento: 53 anos), o risco real de DAP associado a esses desfechos pode ser ainda maior conforme essas mulheres envelhecem e a DAP se torna mais prevalente.
+
+## Coorte de coirmãs: o achado sobrevive ao controle por parentesco — exceto para "outros distúrbios hipertensivos"
+Na análise de coirmãs (comparando irmãs entre si, controlando fatores genéticos e ambientais compartilhados), os HRs do seguimento completo foram:
+
+| Desfecho gestacional | HR não estratificado | HR estratificado por irmãs |
+|---|---|---|
+| Diabetes gestacional | 2,62 (2,17-3,16) | **2,97** (1,93-4,57) |
+| Parto pré-termo | 1,70 (1,58-1,83) | **1,62** (1,40-1,89) |
+| Pequeno para idade gestacional | 1,70 (1,60-1,80) | **1,56** (1,39-1,75) |
+| Pré-eclâmpsia | 1,41 (1,31-1,52) | **1,32** (1,13-1,55) |
+| Outros distúrbios hipertensivos | 1,39 (1,11-1,74) | **1,06** (0,68-1,65) — perdeu significância |
+
+Quatro dos cinco desfechos **mantiveram associação significativa** mesmo comparando irmãs entre si — o achado não é explicado, na maior parte, por predisposição familiar compartilhada. A associação com diabetes gestacional, em particular, **não se atenuou** na análise de coirmãs (chegou a ficar numericamente maior, 2,97 vs. 2,87 no modelo principal), reduzindo a plausibilidade de explicação exclusivamente por fatores familiares compartilhados, sem excluir confusão residual.
+
+**Exceção que este documento registra com precisão, para não generalizar demais**: a associação entre **"outros distúrbios hipertensivos" (hipertensão gestacional ou crônica sem pré-eclâmpsia) e DAP perdeu significância estatística** na análise de coirmãs (HR 1,06; IC95% 0,68-1,65) — diferente dos outros quatro desfechos. Isso sugere que, especificamente para esse subtipo de distúrbio hipertensivo e especificamente para o desfecho DAP, uma parcela maior do risco aparente pode refletir fatores genéticos/ambientais de família compartilhados, não um efeito causal direto da gestação sobre a doença arterial periférica.
+
+## Achados secundários: tipo de parto pré-termo e efeito cumulativo de múltiplos desfechos
+- **Parto pré-termo por indicação médica** associou-se a DAP (HR ajustado 2,16; IC95% 1,82-2,56), mas **parto pré-termo espontâneo não** (HR 1,23; IC95% 0,99-1,53; p=0,06) — distinção clinicamente relevante que o desfecho agregado "parto pré-termo" esconde.
+- Mulheres com **múltiplos desfechos gestacionais adversos** tiveram risco progressivamente maior de DAP na janela de 30–46 anos: 1 desfecho, HR 1,40 (1,34-1,47); 2 desfechos, HR 1,83 (1,69-1,98); ≥3 desfechos, HR 2,77 (2,32-3,30) — tendência linear significativa (p<0,001).
+
+## Síntese prática
+Lida em conjunto com o documento já existente desta pasta sobre AVC na mesma coorte, esta análise amplia o mapa de risco vascular de longo prazo após desfecho gestacional adverso para um terceiro leito vascular (arterial periférico, além do cerebrovascular e do coronariano/agregado já cobertos). Os pontos que merecem entrar na prática clínica:
+1. **Todos os cinco desfechos gestacionais adversos são fatores de risco independentes e de longo prazo para DAP** — não apenas para AVC, insuficiência cardíaca ou doença coronariana, os desfechos já mais lembrados na anamnese cardiovascular.
+2. **Diabetes gestacional se destaca com a maior magnitude de risco entre os cinco**, quase dobrando o HR da pré-eclâmpsia — o mesmo padrão já visto no documento desta pasta sobre AVC, reforçando que DMG merece peso pelo menos equivalente ao de pré-eclâmpsia na anamnese vascular, e não deveria ser tratado como antecedente "só metabólico".
+3. **PIG (pequeno para idade gestacional) entra como antecedente vascular materno**, não apenas neonatal — HR de 1,72 a 1,74 ao longo do seguimento, semelhante em magnitude ao do próprio parto pré-termo.
+4. **A associação persiste por décadas.** O excesso absoluto aumenta, mas isso não significa aumento do HR para todos os antecedentes; parto pré-termo, por exemplo, apresenta HR menor na última janela que na primeira.
+5. **A análise de irmãs reduz parte do confundimento familiar**, sem estabelecer causalidade; fatores não compartilhados, classificações incorretas e diferenças ao longo da vida permanecem possíveis.
+
+## Armadilhas clínicas
+- **Não perguntar sobre desfecho gestacional adverso ao investigar claudicação ou DAP em mulher de meia-idade ou mais velha** — a associação persiste e se intensifica até 46 anos após o parto, uma janela de tempo que ultrapassa a memória clínica habitual da anamnese obstétrica.
+- **Tratar bebê PIG como desfecho exclusivamente neonatal** — ele carrega HR de 1,72-1,74 para DAP materna a longo prazo, e teve a maior fração atribuível populacional estimada entre os cinco desfechos (12% dos casos de DAP nesta coorte, comparada a 9% para parto pré-termo; essa estimativa depende de pressupostos causais).
+- **Assumir que pré-eclâmpsia tem a mesma magnitude de risco de DAP que diabetes gestacional** — o HR da DMG é aproximadamente o dobro do da pré-eclâmpsia, no seguimento completo; na janela de 30–46 anos a razão entre essas estimativas é aproximadamente três.
+- **Tratar todo "parto pré-termo" como risco vascular equivalente** — a associação foi significativa para pré-termo por indicação médica (HR 2,16), mas não para pré-termo espontâneo (HR 1,23, não significativo); a causa do parto pré-termo importa.
+- **Assumir que a associação é inteiramente explicada por predisposição familiar** — a análise de coirmãs manteve significância para quatro dos cinco desfechos; a exceção documentada é "outros distúrbios hipertensivos" isolados.
+- **Extrapolar as taxas absolutas suecas (0,6% de incidência de DAP na coorte) diretamente para a população brasileira** sem ajuste — a coorte é sueca, de base populacional e seguimento por registro nacional; o achado de maior valor universal é o padrão de associação, sua persistência e o crescimento do excesso absoluto com a idade, não a taxa absoluta isolada.
+
+## Limites
+- DAP foi identificada por código diagnóstico (CID), sem validação clínica direta neste estudo, embora os registros suecos tenham valor preditivo positivo documentado alto para DAP internada (98%, citado pelos próprios autores a partir de outro estudo de validação).
+- **Registro ambulatorial especializado sueco só tem cobertura nacional a partir de 2001** — diagnósticos de DAP em anos anteriores tendem a estar sub-registrados, o que pode subestimar o risco absoluto real associado a cada desfecho gestacional.
+- IMC e tabagismo só foram aferidos no início do pré-natal (não em momentos posteriores da vida), e história prévia de hipertensão/diabetes/dislipidemia veio de diagnósticos administrativos, sujeitos a subnotificação.
+- Estudo limitado à Suécia — os próprios autores registram a necessidade de replicação em outras populações, inclusive para avaliar diferenças raciais/étnicas não capturadas nesta coorte.
+- Coorte ainda relativamente jovem ao fim do seguimento (idade mediana 53 anos) — o risco absoluto de DAP tende a ficar mais evidente com o envelhecimento da coorte além do que este seguimento já capturou.
+
+## Tudo com Tudo
+
+- [AVC de longo prazo após desfechos gestacionais adversos: coorte sueca de coirmãs (2025)](/biblioteca/avc-de-longo-prazo-apos-desfechos-gestacionais-adversos-coorte-sueca-de-coirmas-2025)
+- [Hipertensão Gestacional e Pré-eclâmpsia: Risco Cardiovascular Materno de Longo Prazo](/biblioteca/hipertensao-gestacional-e-pre-eclampsia-risco-cardiovascular-materno-de-longo-prazo)
+- [Distúrbios hipertensivos da gestação: o subtipo modifica o risco cardiovascular de longo prazo](/biblioteca/disturbios-hipertensivos-gestacao-subtipos-risco-cardiovascular-longo-prazo-2026)
+- [Duração da Pré-Eclâmpsia como Preditor de Risco Cardiovascular de Longo Prazo](/biblioteca/duracao-da-pre-eclampsia-como-preditor-de-risco-cardiovascular-de-longo-prazo)
+- [Bomba de Insulina e Monitorização Contínua de Glicose na Gestante Diabética: Desfechos Obstétricos, Neonatais e a Lacuna Cardiovascular](/biblioteca/bomba-de-insulina-e-monitorizacao-continua-de-glicose-na-gestante-diabetica-desfechos-e-a-lacuna-cardiovascular)
+- [ACC 2026: cuidado cardiovascular pós-parto do hospital ao primeiro ano](/biblioteca/acc-2026-cuidado-cardiovascular-pos-parto-primeiro-ano)

@@ -1,0 +1,330 @@
+[
+  {
+    "index": 24,
+    "slug": "etripamil-nasal-para-reversao-da-taquicardia-supraventricular-paroxistica-rapid-e-node-303",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Conferidos RAPID, NODE-303 e subgrupo FA pelos abstracts primários; conferida integralmente posologia/contraindicações/advertências na bula oficial. Resolvidas 3 pendências de bula. Removida combinação impossível de denominadores e percentuais de segurança do abstract RAPID, sem inventar denominadores. Corrigido estudo aberto como sem comparador e acrescentadas restrições hemodinâmicas."
+  },
+  {
+    "index": 25,
+    "slug": "fibrilacao-ventricular-mediada-por-purkinje-ablacao-de-gatilho-versus-substrato",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Texto e abstracts primários Kerley/Sanhueza conferidos. Preservados eventos/HR e numeradores de lesão de condução; removido p incompatível com comparação simples 5/24 versus 1/19 e não reconstruído. Corrigida superioridade causal para associação; retirados parâmetros operacionais, resolvendo a pendência técnica por limitação explícita do escopo."
+  },
+  {
+    "index": 30,
+    "slug": "mtmr4-gene-modificador-na-sindrome-do-qt-longo-efeito-oposto-em-lqt1-e-lqt2",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Conferidos os dois estudos primários. Resolvida definição de sintomas graves e resultado nulo do subgrupo sueco, ambos presentes no abstract. Retirada explicação molecular especulativa e afirmação não verificada de indisponibilidade comercial; mantida distinção pesquisa versus validação clínica."
+  },
+  {
+    "index": 38,
+    "slug": "risco-nao-modificavel-na-sindrome-de-brugada-sexo-mutacao-scn5a-e-escore-poligenico",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Conferidos coorte primária 39387761 e revisão metodológica 40314213. Acrescentada validação interna expressamente relatada; removidas comparação direta de HRs entre modelos, inferioridade não demonstrada de escores em subgrupo e pendência artificial de validação externa. Não apresentado como calculadora ou critério isolado de CDI."
+  },
+  {
+    "index": 45,
+    "slug": "cadillac-risk-score-predicao-de-mortalidade-apos-angioplastia-primaria-no-iam",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Conferida derivação e estudos comparativos; leitura integral de métodos e abstract da avaliação primária independente PMC8588705. Resolvidos cortes renal/anemia/TIMI, corrigida alegação falsa de ausência de avaliação externa e inferência não sustentada sobre choque/suporte mecânico. Não transcrita unidade errada de Hb da tabela2021."
+  },
+  {
+    "index": 46,
+    "slug": "escore-iabp-shock-ii-estratificacao-de-risco-de-mortalidade-no-choque-cardiogenico-pos-iam",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Lido primário integral (PDF repositório dos autores), ilustração central pesos1/2/1/1/2/2. Resolvidas pendências; corrigida mistura da derivação480/AUC0,74 com primeira validação98/AUC0,79 e CardShock137/AUC0,73. Restrito a IAM com choque submetido a PCI."
+  },
+  {
+    "index": 47,
+    "slug": "escore-ncdr-cathpci-predicao-de-mortalidade-apos-intervencao-coronaria-percutanea",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Conferido estudo primário23968699. Mantido como documento de análise da versão2013, retirado enquadramento de ferramenta incompleta e toda expectativa de cálculo manual; não inventados pesos. Acrescentada superestimação no extremo alto do risco, expressa no abstract. Sem calculadora executável."
+  },
+  {
+    "index": 48,
+    "slug": "qrisk3-risco-cardiovascular-em-10-anos-derivacao-e-validacao-na-coorte-qresearch",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Texto e três estudos conferidos; limiar e dose NICE resolvidos em fonte oficialNG238. Removida superioridade não demonstrada e alegação falsa de que PREVENT ignora função renal. Mantida síntese sem coeficientes/reimplementação; falta de validação brasileira nas fontes é limite de aplicabilidade, não afirmação de inexistência mundial."
+  },
+  {
+    "index": 89,
+    "slug": "cardiotoxicidade-do-osimertinibe-insuficiencia-cardiaca-e-eixo-gata4-mylk3",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Conferidas cinco publicações e bula oficial. Erro crítico corrigido:45,46%vs26,11% são hipertensão emergente versus atribuída ao tratamento, não combinação versus monoterapia. Corrigidas independência de TriNetX, causalidade/subgrupo jovem e extrapolação da reversibilidade animal. Monitorização resolvida em bula; linksMD convertidos para rotas."
+  },
+  {
+    "index": 91,
+    "slug": "empagliflozina-como-cardioprotecao-primaria-contra-antraciclina-modelo-suino-jacc-cardiooncology-2025",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Texto, abstract e métodos primários integrais conferidos. Corrigida tradução potencialmente perigosa de triweekly: injeções a cada3semanas, não3vezes/semana. Doses identificadas como diárias e experimentais. Retirada superlatividade e afirmação temporal universal de ausência de RCT; contextualizado EMPACARD não randomizado."
+  },
+  {
+    "index": 96,
+    "slug": "pirtobrutinibe-btk-nao-covalente-versus-ibrutinibe-o-ensaio-bruin-cll-314",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Conferidos integralmente métodos estatísticos e tabelas2–3 do ensaio, além da indicação FDA atual. Corrigido p de não inferioridade apresentado como superioridade; SLP intermediária descritiva, IC R/R cruza1. Removidos ranking entre ensaios e mecanismo causal não demonstrado; preservados numeradores CV655segurança."
+  },
+  {
+    "index": 97,
+    "slug": "radioterapia-da-mama-dose-a-descendente-anterior-versus-dose-media-ao-coracao",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Texto e quatro fontes conferidos, com métodos/tabela2 do RCT integral. Corrigido desfecho composto predominantemente subclínico descrito como clínico e intervençãoMHD+V10+V30 comoMHDapenas. Corrigido MEDIRAD: parâmetrosDA foram testados. Removida conclusão que descartaMHD e uso12Gycomoalvo validado; resultadoexploratório preservado."
+  },
+  {
+    "index": 110,
+    "slug": "decisao-compartilhada-entre-tavi-e-troca-cirurgica-da-valva-aortica-o-estudo-impact-sdm",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Texto e dois primários conferidos. Preservado piloto59 e protocolo8centros; removida inferência causal/equivalência sobre consulta com2especialistas e alegação temporal universal de ausência de resultados. Artigo39696639 claramente protocolo sem resultados; linksTCTviraram rotas reais."
+  },
+  {
+    "index": 128,
+    "slug": "retatrutida-agonista-triplo-gip-glp-1-glucagon-e-risco-cardiovascular-transcend-t2d-1",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Texto e6primários conferidos. Resolvida correspondênciaNCT diretamente nos abstracts e status experimental emAnvisa/FDA. Corrigidas reduçõesbiomarcadores comoajustadasporplacebo, removida superioridade indireta entreclasses; FCmantidaqualitativa seminventarvalor. Desfechos glicemia/peso nãoMACE; CVOTnão temresultadosnasfontes."
+  },
+  {
+    "index": 135,
+    "slug": "carga-de-fibrilacao-atrial-detectada-por-cied-apos-inicio-de-antiarritmico-uma-analise-multicentrica",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Lidos texto e primário completo métodos. Resolvida exclusão de ablação/cardioversão/outroAAD: explicitamente excluídos na fonte. Corrigida aplicação inadequada de NOAH/ARTESiA a retirada de anticoagulação emFAclínica. Preservada associação pré/pós sem causalidade."
+  },
+  {
+    "index": 141,
+    "slug": "inicio-espontaneo-de-taquiarritmia-ventricular-na-sindrome-de-brugada-o-registro-start-brs",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Texto e primário41979546 conferidos. Mantidos154pacientes/234episódios e distribuição; removida inferência de que nenhum paciente semCDI foi incluído. Associaçõesdemográficasexplicitamentedescritivas, semrecomendaçãoATP/programação; pendênciastransformadasemlimitesdoescopo,nãoemaprovaçãoterapêutica."
+  },
+  {
+    "index": 144,
+    "slug": "sensor-implantavel-de-veia-cava-inferior-para-monitorizacao-de-congestao-o-programa-future-hf",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Conferidos quatro relatos primários: corrigida falsa independência das coortes e monitorização contínua; removida percentagem de redução inconsistente com taxas; atualizado pivotal registrado e caráter investigacional por fabricante. Preservados limites observacionais e vínculos clínicos."
+  },
+  {
+    "index": 146,
+    "slug": "sistema-modular-marca-passo-sem-eletrodo-e-cdi-subcutaneo-em-comunicacao-sem-fio-o-ensaio-modular-atp",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Resultados dos dois artigos conferidos. Corrigida comunicação unidirecional, interpretação das taxas livres de complicações e comparação não demonstrada com CDI transvenoso. Status investigacional consultado no fabricante; mantida síntese de ensaio e ausência de autorização comercial inferida."
+  },
+  {
+    "index": 183,
+    "slug": "vutrisiran",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Revisão HELIOS-B e bulas integrais EUA/Brasil: retirado efeito aditivo comprovado com tafamidis; pacientes com evento separados do total de eventos recorrentes; dose de bula corrigida para cada 3 meses; incluídos vitamina A, cautelas e ajustes. Confirmada indicação brasileira ATTR-CM na bula de 31/03/2025."
+  },
+  {
+    "index": 190,
+    "slug": "closure-af-oclusao-do-apendice-atrial-esquerdo-versus-terapia-medica-em-alto-risco",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Confirmado primário CLOSURE-AF. Corrigidos pacientes com primeiro evento versus total de eventos, faixa possível dos escores e caracterização falsa de PRAGUE-17 como menor risco. Removida explicação causal não demonstrada de diferenças entre ensaios e extrapolação de indicação por preferência. Síntese limitada a resultados globais verificáveis."
+  },
+  {
+    "index": 196,
+    "slug": "perda-de-peso-no-idoso-com-fibrilacao-atrial-persistente-o-ensaio-lose-af",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Conferidos resultados LOSE-AF e métodos integrais JAMA. Incluídos PPT, ECG prolongado e exclusões; retirada declaração de segurança comprovada e falsa interpretação de ausência de viés em resultado nulo; diferenciada perda intragrupo da diferença de peso entre braços."
+  },
+  {
+    "index": 203,
+    "slug": "timing-de-doac-apos-avc-por-fibrilacao-atrial-optimas-e-a-metanalise-catalyst",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Resultados OPTIMAS/CATALYST conferidos e critérios de exclusão verificados no registro primário. Corrigida universalização da janela até 4 dias e falsa atribuição da diferença exclusivamente a poder: desfecho e horizonte distintos. PH2 e outras contraindicações explicitados; neutralidade de hemorragia não tratada como garantia."
+  },
+  {
+    "index": 206,
+    "slug": "exposicao-a-luz-artificial-a-noite-e-incidencia-de-doenca-cardiovascular-uk-biobank",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Leitura integral PMC12550636, métodos e tabelas 1–3: corrigida luz noturna de 426,48 para105,30 lux (coluna diurna confundida), unidade log versus DP, ajustes separados e ausência de interação genética. Mantidos HR do Modelo3 corretos; removida causalidade/benefício clínico de blackout não testado."
+  },
+  {
+    "index": 207,
+    "slug": "exposicao-a-pfas-quimicos-eternos-e-incidencia-de-doenca-cardiovascular-o-estudo-dppos",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Leitura integral DPPOS/PMC12909047: definição MACE corrigida, coleta basal e ausência de EtFOSAA no painel metformina explícitas; persistência não confundida com ausência absoluta de eliminação. Acrescentada multiplicidade e removidos superlativos/ausência universal de estudos ou diretrizes não demonstrados."
+  },
+  {
+    "index": 230,
+    "slug": "denervacao-renal-por-radiofrequencia-aos-3-anos-seguimento-final-do-spyral-htn-on-med",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Métodos/resultados integrais PMC13323591 conferidos. Corrigido índice de carga medicamentosa confundido com número de fármacos; incluída análise sem imputação sem diferença de PA e censura de segurança no crossover. Removida classe de diretriz sem fonte específica e equivalência não testada."
+  },
+  {
+    "index": 243,
+    "slug": "labetalol-versus-nifedipina-na-hipertensao-pos-parto-risco-de-reinternacao",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Revisão integral PMC13344731: desfecho inclui4casos sem internação efetiva (3/1), omissão crítica corrigida. OR0,12 não éRR; título e mensagem corrigidos. Ajuste pós-randomização e interrupção precoce explicitados. Esquemas200mg8/8h e XR30mg12/12h confirmados como intervenção do ensaio."
+  },
+  {
+    "index": 251,
+    "slug": "tirzepatida-e-semaglutida-efeito-sobre-a-pressao-arterial-metanalise-de-32-ensaios",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Números e desenho da metanálise conferidos. Retirada comparação direta implícita entre moléculas e afirmação de semaglutida hemodinamicamente neutra; significância diferente não prova diferença. Excluída dispensa de monitorização para semaglutida e ajuste preventivo não testado. Preservados RR de TEAEs."
+  },
+  {
+    "index": 252,
+    "slug": "vicadrostat-terceiro-inibidor-da-aldosterona-sintase-da-drc-a-hipertensao",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Seis fontes confrontadas; UACR explicitada como desfecho substituto, sem inferir proteção clínica; removidos terceira molécula/contagem universal e necessidade de cifra pressórica inexistente. Seletividade cortisol e eventos individuais diferenciados. Caráter experimental e EASi-KIDNEY confirmados no site primário Oxford."
+  },
+  {
+    "index": 253,
+    "slug": "denervacao-da-arteria-pulmonar-na-hipertensao-pulmonar-do-grupo-2-ensaio-padn-hf-ph",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Confirmados randomização, composto, Kaplan–Meier e segurança no primário. Corrigida interpretação de Kaplan–Meier como extrapolação, retirada primazia histórica não demonstrada e generalização indevida do SIOVAC. Escopo descritivo; sem inferir mortalidade isolada ou indicação universal."
+  },
+  {
+    "index": 256,
+    "slug": "hipertensao-pulmonar-persistente-do-recem-nascido-metanalise-em-rede-terapias-2024",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Reformulado substancialmente como leitura crítica. Confirmados desenho, 23 ensaios/902 neonatos e comparadores no primário; retirados doses, OR não auditáveis e recomendação de combinações como padrão. Corrigida interpretação de SUCRA e falsa inferência de comparação contra iNO isolado. Repetição numérica da mortalidade descrita como limite de relato, sem alegar erro demonstrado nem manter conclusão terapêutica dependente dela."
+  },
+  {
+    "index": 257,
+    "slug": "imatinibe-inalado-av-101-hap-impahct-fase-2b-negativo",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Confrontados números e conclusão com primário. Corrigido erro aritmético: 35 e 70 mg foram numericamente favoráveis, e valores médios das doses ativas são ordenados; isso não prova dose–resposta. Retiradas pendências de números não utilizados e mantido escopo negativo descritivo."
+  },
+  {
+    "index": 284,
+    "slug": "terapia-de-ativacao-barorreflexa-barostim-na-icfer-beat-hf-e-o-ensaio-confirmatorio-benefit-hf",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Confrontados três primários e IFU atual do fabricante. Corrigidos periódico do seguimento, interpretação confirmatória do win ratio e atribuição falsa de randomização do CDI ao EMPEROR-Reduced. Aprovação delimitada aos EUA; separados critérios históricos de CRT da indicação atual e ressalvado ensaio aberto."
+  },
+  {
+    "index": 311,
+    "slug": "corcal-outcomes-escore-de-calcio-versus-pooled-cohort-equation-para-guiar-estatina-em-prevencao-primaria",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Corrigida desatualização central: resultados já apresentados no ESC em 31/08/2026, sem não inferioridade demonstrada. Fonte oficial da apresentação consultada; separado do artigo de desenho. Comparação ativo/passivo do Vanguard não randomizada. Retiradas inferências de DSMB, causas de diferença de recrutamento e falsa ausência atual de resultado."
+  },
+  {
+    "index": 322,
+    "slug": "lepodisiran-e-fosfolipidios-oxidados-na-lipoproteina-a-analise-post-hoc-do-ensaio-alpaca",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Todos números confrontados com ALPACA e análise OxPL. Corrigido −94,8 como média ponderada dias30–360, não medida isolada final; duração contada da primeira aplicação; ausência de correlação não prova ausência de inflamação. Registro ACCLAIM-Lp(a) confirmado, dose explicitamente experimental."
+  },
+  {
+    "index": 325,
+    "slug": "lipoproteina-a-horizon-pelacarsena-nao-atingiu-desfecho-primario-de-mace-topline-2026",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Confrontados topline oficial de 04/09/2026, desenho e fase2. Não inferidos HR, subgrupo ou segurança ausentes do anúncio. Corrigida prevalência da elevação (não presença) de Lp(a), conversão não universal mg/dL–nmol/L e afirmação indevida de CVOT em curso para todas as moléculas. Pendências são limites explícitos da notícia, sem dados inventados."
+  },
+  {
+    "index": 346,
+    "slug": "isolamento-social-solidao-e-risco-de-doenca-cardiovascular-incidente-metanalise-de-wang-2025",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Reformulação substancial após leitura integral PMC12462301 tabelas1/3 e confronto LiPMID34752807: pessoas-ano confundidas com pessoas, UKBiobank classificado China e HR fora do próprioIC. Retirados total5.2milhões, estimativas agrupadas e hierarquia clínica dos subgrupos. Mantido estudo como leitura crítica metodológica, sem recalcular meta nem alegar que a associação inexiste; título e resumo coerentes."
+  },
+  {
+    "index": 347,
+    "slug": "psicopatologia-pos-traumatica-e-risco-cardiovascular-coorte-caso-controle-dinamarquesa-de-sumner-2026",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Métodos, amostras e preditores conferidos no primário e entrevista oficial. Corrigida interpretação de SHAP como prioridade de rastreio por sexo ou tamanho de risco. Retiradas pendências de magnitudes não apresentadas; síntese restrita a associações e validação interna, sem algoritmo clínico."
+  },
+  {
+    "index": 356,
+    "slug": "angiotensina-ii-guiada-por-renina-na-vasoplegia-pos-cirurgia-cardiaca-o-estudo-piloto-de-munster",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Primário e números confrontados. Corrigida fisiologia: angiotensinaII não alivia resistência eferente por vasodilatação. Ausência de significância não elimina risco renal; retirado critério de índice cardíaco com unidade inconsistente no abstract e posição fixa quarta linha. Biomarcador distinto de LRA clínica; sem dose operacional inventada."
+  },
+  {
+    "index": 364,
+    "slug": "transporte-intra-parada-precoce-versus-rcp-prolongada-na-cena-para-parada-refrataria-o-ensaio-evidence",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Primário completo no resumo confrontado; corrigido texto perigoso que sugeria interromper reanimação antes do transporte. Removida simplificação falsa de INCEPTION como randomização apenas hospitalar e generalização negativa de toda eCPR. Escopo global sem subgrupos inventados; retirada atribuição dos critérios australianos à SBC2019."
+  },
+  {
+    "index": 368,
+    "slug": "roxi-vte-i-e-ii-anticorpos-anti-fator-xi-na-profilaxia-de-tev-pos-artroplastia-de-joelho",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Primário e denominadores conferidos. Corrigido 10/58 como controle concorrente do estudoII, não grupo combinado; ORbayesiano incorpora estudoI com desconto. Intervalo identificado como credibilidade90%. Removida inferência mecanística causal/head-to-head e pendência de programa futuro não utilizado; summary também corrigido."
+  },
+  {
+    "index": 372,
+    "slug": "tep-subsegmentar-isolado-anticoagular-ou-vigiar-stopape-e-metanalise-2026",
+    "previous_gaps": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA"
+    ],
+    "resolution": "Conferidos STOPAPE, numeradores/RR da metanálise e diretriz AHA/ACC2026, classificação de TEP subsegmentar e tabela de anticoagulação. Retiradas alegações baseadas em cartas não lidas e meta de recrutamento não necessária. Ausência de significância não é equivalência; síntese observacional não autoriza suspensão rotineira. Atualizados resumo e referências."
+  }
+]

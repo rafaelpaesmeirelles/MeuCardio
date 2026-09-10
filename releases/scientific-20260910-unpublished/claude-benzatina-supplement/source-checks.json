@@ -1,0 +1,84 @@
+{
+  "reviewed_at": "2026-09-10T21:02:08.566258+00:00",
+  "review_method": "Leitura integral dos sete registros; confronto de recomendações com fontes primárias, conferência de números, doses e desenho dos estudos. Nenhuma assinatura de revisão humana atribuída.",
+  "primary_sources": [
+    {
+      "source": "AHA 2022, PMID 35049336",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/",
+      "read": "Texto integral e tabelas 1–4; hipótese cardiovascular não comprovada, estratificação de risco, escolha de via e mitigação vasovagal.",
+      "cache": "sources/PMC9075066.xml"
+    },
+    {
+      "source": "WAO 2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/",
+      "read": "Critérios diagnósticos e tratamento agudo, incluindo tabela 6. Adrenalina IM 0,01 mg/kg, máximo 0,5 mg, solução 1 mg/mL; repetição a cada 5–15 minutos conforme necessidade. Via IV em bolus não é tratamento inicial da anafilaxia. Ausência de manifestações cutâneas não exclui o diagnóstico.",
+      "cache": "sources/PMC7607509.xml"
+    },
+    {
+      "source": "OMS 2024, capítulo 4.7",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK609686/",
+      "read": "BPG IM como primeira escolha e penicilina oral como alternativa aceitável; decisão compartilhada, risco cardiovascular, dor, acesso, preferências; teste não indicado rotineiramente sem história de alergia."
+    },
+    {
+      "source": "Diretriz australiana, edição 3.3, agosto de 2025",
+      "url": "https://www.rhdaustralia.org.au/wp-content/uploads/2025/09/Australian-ARF-RHD-Guideline-2025_August_1.pdf",
+      "read": "Texto indexado oficial das tabelas 10.2–10.3 nas páginas 155–157 e discussão da página 160. Doses, intervalos selecionados de 21 dias, separação sem envolvimento cardíaco versus cardite prévia, idade e duração mínima nas categorias de gravidade. Limites de aplicação registrados nos textos. O PDF integral não foi armazenado por falha de transporte."
+    },
+    {
+      "source": "Diretriz brasileira de febre reumática 2009",
+      "url": "https://www.scielo.br/j/abc/a/BgMJ45rh8cKSsHpK7bTbjwM/?format=html",
+      "read": "Seção de profilaxia secundária, intervalo brasileiro de 21 dias; distinguido do esquema australiano, sem misturar tabelas de duração de jurisdições diferentes."
+    },
+    {
+      "source": "Metanálise Birru 2025, PMID 40333929",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12057857/",
+      "read": "Resultados e tabelas conferidos no integral: 9 estudos, 11.587 participantes, 6 estudos com denominador de aplicações; 25 reações graves, 19 classificadas anafiláticas, 6 fatais. Não permite inferir que a maioria das reações seja vasovagal.",
+      "cache": "sources/PMC12057857.xml"
+    },
+    {
+      "source": "Marantelli 2019, PMID 31297163",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31297163/",
+      "read": "Resumo primário: 10 relatos de reações, 8 fatais, 1 ressuscitado e 1 sem tratamento. Três Brighton nível 1; ausência desse nível não exclui anafilaxia clínica.",
+      "cache": "sources/pubmed-extra.xml"
+    },
+    {
+      "source": "Weldegerima 2025, PMID 41718701",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41718701/",
+      "read": "Resumo primário: cinco casos, quatro fatais, doença avançada e insuficiência cardíaca. Hipótese, não demonstração causal; inconsistência descritiva da idade não foi reproduzida.",
+      "cache": "sources/pubmed.json"
+    },
+    {
+      "source": "Cochrane 2024, PMID 39312290",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39312290/",
+      "read": "Resumo completo: comparação IM versus oral em dois ensaios/395 participantes, RR 0,07, IC 95% 0,02–0,26, certeza moderada. Não constitui ensaio específico de segurança em cardiopatia reumática avançada.",
+      "cache": "sources/pubmed.json"
+    },
+    {
+      "source": "Lidocaína pediátrica, PMID 40352419",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40352419/",
+      "read": "Resumo primário: estudo cruzado, 42 crianças; benefício da dor aos 5 minutos, não prevenção comprovada de colapso.",
+      "cache": "sources/PMC12063984.xml"
+    },
+    {
+      "source": "Metanálise de anestésico local, PMID 39290636",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39290636/",
+      "read": "Resumo completo: oito ensaios/489 participantes; lidocaína em quatro estudos com diferença média -3,84, IC -6,19 a -1,48, I² 98%. Mepivacaína não compartilha essa estimativa.",
+      "cache": "sources/pubmed.json"
+    },
+    {
+      "source": "Ralph 2017, PMID 28507400",
+      "url": "https://australianprescriber.tg.org.au/articles/prescribing-for-people-with-acute-rheumatic-fever.html",
+      "read": "Artigo integral do editor; confirmada autoria e ressalva de compatibilidade das apresentações. Duração antiga substituída pela diretriz de 2025.",
+      "cache": "sources/pubmed-extra.xml"
+    },
+    {
+      "source": "Yoo 2025, PMID 40391929",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40391929/",
+      "read": "Estudo farmacocinético intravenoso em adultos saudáveis; não é ensaio de novo intervalo IM em pessoas com febre reumática.",
+      "cache": "sources/pubmed-extra.xml"
+    }
+  ],
+  "tct_links_checked": 28,
+  "unresolved_links": [],
+  "publication_status": "Preparado e revisado, publicado=false. Fora do inventário de 391; publicação não executada por este agente."
+}

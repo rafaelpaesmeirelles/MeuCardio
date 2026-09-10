@@ -124,6 +124,20 @@ def relation_extra(digest, edge):
     return {'release_id': RELEASE_ID, 'pack_sha256': digest,
             'clinical_reason': edge['reason'], 'review_method': REVIEW_METHOD}
 
+
+def automatically_deactivated_source(relation):
+    """Only a documented missing-source backfill tombstone, never a clinical rejection."""
+    extra = relation.extra
+    return (
+        relation.review_status == 'rejeitado'
+        and relation.provenance_type == 'structured_metadata'
+        and relation.confidence == 'derived'
+        and isinstance(extra, dict)
+        and extra.get('_producer') == 'tudo_com_tudo_v2'
+        and extra.get('_inactive_reason') == 'source_removed'
+    )
+
+
 def validate_item(kind, data):
     model = MODELS[kind]
     columns = {c.key: c for c in model.__table__.columns}
@@ -281,8 +295,10 @@ def main():
             if not component & anchors:
                 raise ValueError(f'Release component without a currently published anchor: {sorted(component)}')
 
-        # Capture only graph rows this package may change; reject previously
-        # rejected edges rather than silently reviving editorial rejections.
+        # Capture only graph rows this package may change. A missing-source
+        # tombstone is eligible only for an exact audited edge whose two
+        # endpoints are explicitly published/reviewed in the guarded final state.
+        # All other rejected edges remain an unconditional publication blocker.
         entity_keys = {(node_type(key[0], projected[key]), row.id): key
                        for key, row in existing.items()}
         entities_before, entity_by_content, relations_before = [], {}, []
@@ -296,11 +312,17 @@ def main():
                 key = entity_keys[(entity.entity_type, entity.canonical_id)]
                 entity_by_content[key] = entity
         relation_keys = set()
+        relation_endpoints = {}
         for edge in edges:
             source = entity_by_content.get((edge['source_type'], edge['source_slug']))
             target = entity_by_content.get((edge['target_type'], edge['target_slug']))
             if source is not None and target is not None:
-                relation_keys.add((source.id, target.id, edge['relation_type']))
+                identity = (source.id, target.id, edge['relation_type'])
+                relation_keys.add(identity)
+                relation_endpoints[identity] = (
+                    (edge['source_type'], edge['source_slug']),
+                    (edge['target_type'], edge['target_slug']))
+        reactivable_relation_ids = set()
         if relation_keys:
             query = select(KnowledgeRelation).where(tuple_(
                 KnowledgeRelation.source_entity_id, KnowledgeRelation.target_entity_id,
@@ -309,12 +331,21 @@ def main():
                 query = query.with_for_update()
             for relation in db.execute(query).scalars():
                 if relation.review_status == 'rejeitado':
-                    raise ValueError(f'Explicit edge was previously rejected: relation_id={relation.id}')
+                    endpoints = relation_endpoints[(relation.source_entity_id,
+                        relation.target_entity_id, relation.relation_type)]
+                    final_sources_ready = all(projected[key].get('published') is True
+                        and projected[key].get('review_status') == 'revisado' for key in endpoints)
+                    if not automatically_deactivated_source(relation) or not final_sources_ready:
+                        raise ValueError(f'Explicit edge was previously rejected: relation_id={relation.id}')
+                    reactivable_relation_ids.add(relation.id)
                 relations_before.append(row_data(relation))
         result = {'release_id': RELEASE_ID, 'pack_sha256': digest,
                   'mode': 'apply' if args.apply else 'check', 'records': len(items),
                   'source_files': pack.get('source_count', len(items)), 'stats': dict(stats),
                   'verified_relations': len(edges), 'unlinked': 0,
+                  'previously_deactivated_relations': len(reactivable_relation_ids),
+                  'planned_reactivations': len(reactivable_relation_ids),
+                  'reactivated_relations': 0,
                   'backup': str(backup_path) if args.apply else None}
         if args.check:
             db.rollback()
@@ -378,8 +409,20 @@ def main():
                 provenance_type='imported', confidence='explicit', review_status='revisado',
                 relevance_score=0.95, evidence_source=evidence_source,
                 extra=relation_extra(digest, edge))
-            if relation is None or relation.review_status == 'rejeitado':
-                raise ValueError('Relationship unavailable or rejected during application.')
+            if relation is None:
+                raise ValueError('Relationship unavailable during application.')
+            if relation.review_status == 'rejeitado':
+                if relation.id not in reactivable_relation_ids or not automatically_deactivated_source(relation):
+                    raise ValueError('Relationship clinically rejected or changed during application.')
+                previous = {'review_status': relation.review_status,
+                    'provenance_type': relation.provenance_type, 'confidence': relation.confidence,
+                    'evidence_source': relation.evidence_source, 'extra': dict(relation.extra)}
+                relation.extra = {
+                    **{key: value for key, value in relation.extra.items() if not key.startswith('_inactive')},
+                    'source_restoration_audit': {'release_id': RELEASE_ID, 'pack_sha256': digest,
+                        'reactivated_at': now.isoformat(), 'previous': previous,
+                        'reason': 'Fonte editorial restaurada e revisada; mesma aresta explícita auditada, com ambos os destinos publicados.'}}
+                result['reactivated_relations'] += 1
             if relation.review_status != 'revisado':
                 relation.review_status = 'revisado'
                 relation.provenance_type = 'imported'

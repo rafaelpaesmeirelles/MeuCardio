@@ -1,0 +1,24 @@
+{
+  "slug": "piora-de-creatinina-sob-gdmt-ambulatorial-quando-encaminhar-nefrologia",
+  "title": "Piora de creatinina sob GDMT ambulatorial: quando chamar nefrologia e quando escalar",
+  "kind": "protocolo",
+  "theme": "Insuficiência cardíaca",
+  "summary": "IC+DRC sob GDMT: interpretar creatinina subindo/TFGe caindo, reconhecer AKI grave mesmo sem oligúria e separar rechecagem ambulatorial de nefrologia/PS.",
+  "body_md": "# Piora de creatinina sob GDMT ambulatorial\n\nPergunta correta: após início/otimização de GDMT, a **creatinina subiu e/ou a TFGe caiu**. Isso é variação hemodinâmica esperável, AKI relevante ou progressão de DRC?\n\n## Avaliação urgente / PS\n- oligúria/anúria, hipotensão/hipoperfusão, edema pulmonar ou hiperpotassemia grave;\n- **AKI grave mesmo sem oligúria**, por exemplo aumento agudo de creatinina de grande magnitude compatível com estágio 3 KDIGO (incluindo >=3x o basal) ou deterioração rápida que sugira lesão renal severa;\n- suspeita de obstrução, doença renal intrínseca rapidamente progressiva ou outra causa que exija investigação imediata.\n\nA avaliação da LRA grave deve ocorrer no mesmo dia; usar PS se houver complicações, deterioração rápida ou ausência de via urgente segura. A TFGe estimada é pouco confiável durante alterações agudas de creatinina e não substitui o estadiamento da LRA.\n\nNão usar ausência de oligúria como garantia de baixo risco.\n\n## Paciente estável com pequena/moderada variação após GDMT\nInterpretar volume, congestão, perfusão, PA, AINE/contraste/desidratação/infecção e tendência. Uma alteração modesta isolada não deve gerar abandono automático de terapia prognóstica; precisa de rechecagem e contexto.\n\n## Nefrologia\nDiscutir/encaminhar quando houver declínio persistente da TFGe, DRC avançada/complexa, albuminúria/proteinúria/hematúria relevantes, dúvida de doença renal intrínseca, hiperpotassemia recorrente limitando terapia ou necessidade de plano conjunto cardio-renal.\n\n## Armadilhas\n- escrever “creatinina e TFGe subiram” para piora renal;\n- mandar AKI estágio grave não oligúrica para simples retorno em dias;\n- suspender todo GDMT por um único ponto sem avaliação de trajetória/volume;\n\n\n## Conteúdo relacionado\n- [Hiperpotassemia grave: segurança](/biblioteca/hipercalemia-na-uco-gravidade-ecg-e-gates-de-seguranca).\n- [LRA: critérios KDIGO](/biblioteca/lesao-renal-aguda-na-uco-criterios-kdigo-creatinina-e-diurese).",
+  "tags": [],
+  "source_refs": [
+    "UK Kidney Association. Hyperkalaemia guideline, atualização julho 2026; recomendações 1.2.2 e 1.2.3.",
+    "KDIGO. Acute Kidney Injury guideline 2012; estadiamento por creatinina e diurese.",
+    "McDonagh TA, Metra M, Adamo M, et al. ESC HF 2021. PMID: 34447992",
+    "McDonagh TA, Metra M, Adamo M, et al. ESC HF Focused Update 2023. PMID: 37622666",
+    "KDIGO 2024 CKD Guideline. PMID: 38490803",
+    "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA HF Guideline. PMID: 35363499"
+  ],
+  "evidence_level": null,
+  "source_tier": "A",
+  "review_status": "revisado",
+  "gaps": [],
+  "version": 1,
+  "updated_at": "2026-09-10 01:53:04.465188+00:00",
+  "published": false
+}

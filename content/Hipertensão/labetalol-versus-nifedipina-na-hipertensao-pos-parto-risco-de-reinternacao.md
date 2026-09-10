@@ -1,14 +1,25 @@
 ---
-title: "Labetalol Versus Nifedipina na Hipertensão Pós-Parto: Ensaio Randomizado Mostra Redução de 88% na Reinternação"
+title: 'Labetalol versus Nifedipina na Hipertensão Pós-Parto: Ensaio de Eventos Hipertensivos Após a Alta'
 slug: labetalol-versus-nifedipina-na-hipertensao-pos-parto-risco-de-reinternacao
-theme: "Hipertensão"
+theme: Hipertensão
 kind: estudo
 review_status: revisado
-source_refs: ["Lovgren T, Yao R, Connealy B, Bonebrake R, Satpathy H, Patel E, Dahlke JD. Impact of labetalol versus nifedipine treatment on readmission risk in postpartum hypertension: A randomized controlled trial. Pregnancy (Hoboken). 2025;1(3):e70005. DOI: 10.1002/pmf2.70005. PMID: 42597172. PMCID: PMC13344731. NCT05309460."]
-legacy_source: "Documento novo, 09/09/2026. Tópico ausente nesta biblioteca — hipertensão pós-parto (puerpério) não tinha nenhum documento dedicado até esta produção. Abstract e texto completo (JATS/XML via PMC) conferidos nesta sessão via NCBI E-utilities (esearch/esummary/efetch)."
+source_refs:
+- 'Lovgren T, Yao R, Connealy B, Bonebrake R, Satpathy H, Patel E, Dahlke JD. Impact of labetalol versus nifedipine
+  treatment on readmission risk in postpartum hypertension: A randomized controlled trial. Pregnancy (Hoboken).
+  2025;1(3):e70005. DOI: 10.1002/pmf2.70005. PMID: 42597172. PMCID: PMC13344731. NCT05309460.'
+legacy_source: Documento novo, 09/09/2026. Tópico ausente nesta biblioteca — hipertensão pós-parto (puerpério) não
+  tinha nenhum documento dedicado até esta produção. Abstract e texto completo (JATS/XML via PMC) conferidos nesta
+  sessão via NCBI E-utilities (esearch/esummary/efetch).
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Labetalol Versus Nifedipina na Hipertensão Pós-Parto: Ensaio Randomizado Mostra Redução de 88% na Reinternação
+# Labetalol versus Nifedipina na Hipertensão Pós-Parto: Ensaio de Eventos Hipertensivos Após a Alta
 
 ## Pergunta clínica
 Em puérperas com hipertensão diagnosticada durante a internação para o parto, o uso de **nifedipina de liberação prolongada** é superior ao **labetalol** para reduzir o risco de reinternação hospitalar por complicação hipertensiva nas seis semanas seguintes ao parto?
@@ -35,7 +46,7 @@ Um Comitê Independente de Monitorização de Segurança e Dados (DSMB) foi cons
 **Cálculo amostral:** baseado em taxas de reinternação observacionais prévias da própria instituição (~1% nifedipina, ~7% labetalol), com poder de 80% e alfa de 0,05, indicando necessidade de 166 pacientes por braço; a estimativa final, ajustada para diluição esperada de efeito, previa até 600 pacientes no total.
 
 ## Resultados
-As duas coortes tinham desequilíbrios basais relevantes, todos incorporados na análise ajustada:
+Havia diferenças entre grupos, algumas basais e outras medidas após a randomização:
 - braço labetalol: mais hipertensão crônica prévia (17/161, 10,6% vs. 7/162, 4,3%; P=0,03), maior IMC pré-gestacional (mediana 31 vs. 29 kg/m², P=0,01) e maior IMC na admissão para o parto (mediana 34,9 vs. 32,4 kg/m², P=0,01), e idade gestacional de parto discretamente maior (38 vs. 37 semanas, P=0,019);
 - braço nifedipina: mais medidas de PA elevada durante a internação (mediana 12 vs. 9, P=0,02) e maior diurese até a alta (balanço hídrico −786 mL vs. −138 mL, P=0,03).
 
@@ -46,20 +57,21 @@ O DSMB interrompeu o recrutamento após atingir o limiar pré-especificado de si
 - nifedipina: **2/162 (1,2%)**;
 - **P=0,003**;
 - **razão de chances ajustada (nifedipina vs. labetalol) = 0,12 (IC95% 0,02–0,56)**, ajustada para IMC pré-gestacional, idade gestacional no parto, hipertensão crônica, número de medidas de PA elevada e balanço hídrico na alta;
-- **NNT = 14,6 (IC95% 8,8–43,5)** — ou seja, aproximadamente 15 puérperas precisariam receber nifedipina em vez de labetalol para evitar 1 reinternação hipertensiva.
+- **NNT = 14,6 (IC95% 8,8–43,5)** — ou seja, aproximadamente 15 puérperas por evento do desfecho definido pelos autores neste estudo, incluindo os casos sem internação efetiva.
 
-Das 24 reinternações totais registradas por qualquer causa, 15 (63%) foram classificadas como relacionadas à hipertensão e compuseram o desfecho primário. Nas reinternações do braço labetalol havia sinais de sobrecarga cardíaca em ao menos um caso (pró-BNP médio elevado, 905 pg/mL) associados a hipertensão grave apesar de referida adesão; as duas reinternações do braço nifedipina foram atribuídas a colecistite aguda e a não adesão medicamentosa relatada no dia da alta.
+Dos 24 eventos pós-parto identificados em consultas ou avaliações de emergência, 15 (63%) foram classificados como relacionadas à hipertensão e compuseram o desfecho primário. **Quatro desses 15 casos (três labetalol, um nifedipina) não foram efetivamente internados**, mas foram contados pelos autores como casos que deveriam ter sido reinternados pelos critérios institucionais. Portanto, o desfecho não equivale estritamente a reinternações hospitalares realizadas. Nas reinternações do braço labetalol havia sinais de sobrecarga cardíaca em ao menos um caso (pró-BNP médio elevado, 905 pg/mL) associados a hipertensão grave apesar de referida adesão; as duas reinternações do braço nifedipina foram atribuídas a colecistite aguda e a não adesão medicamentosa relatada no dia da alta.
 
 **Desfechos secundários sem diferença estatística entre os grupos:** frequência de hipertensão grave (47,2% vs. 53,7%; P=0,24), tratamento agudo de hipertensão durante a internação (23,6% vs. 24,1%), uso de sulfato de magnésio (23,6% vs. 24,1%) e hipertensão nas 12 horas antes da alta (38,5% vs. 35,2%).
 
 **Eventos adversos:** 2 casos de tontura no braço labetalol; 1 caso de edema facial e cefaleia no braço nifedipina. Nenhum evento adverso grave atribuído à medicação do estudo.
 
 ## Interpretação clínica
-Este é o primeiro ensaio randomizado, com desfecho clinicamente duro (reinternação hospitalar) e poder estatístico suficiente para significância, comparando diretamente labetalol e nifedipina no tratamento da hipertensão diagnosticada durante a internação do parto. Os próprios autores contextualizam que ensaios randomizados anteriores no puerpério eram subdimensionados, usavam desfechos compostos ou avaliavam apenas resultados de curto prazo dentro da própria internação-índice — não a janela de 6 semanas pós-parto, que é onde recai a maior parte da mortalidade materna relacionada a hipertensão nos EUA (o artigo cita que 60% das mortes relacionadas à gravidez por causa hipertensiva ocorrem no período pós-parto).
+Este ensaio randomizado usou um desfecho de eventos hipertensivos pós-alta, que incluiu internações e casos adjudicados como necessitando de internação, comparando diretamente labetalol e nifedipina no tratamento da hipertensão diagnosticada durante a internação do parto. Os próprios autores contextualizam que ensaios randomizados anteriores no puerpério eram subdimensionados, usavam desfechos compostos ou avaliavam apenas resultados de curto prazo dentro da própria internação-índice — não a janela de 6 semanas pós-parto, que é onde recai a maior parte da mortalidade materna relacionada a hipertensão nos EUA (o artigo cita que 60% das mortes relacionadas à gravidez por causa hipertensiva ocorrem no período pós-parto).
 
-O achado confirma, agora com desenho randomizado, o que dados observacionais prévios da mesma instituição já sugeriam: nifedipina associa-se a menor risco de reinternação por complicação hipertensiva do que labetalol. Os autores propõem como mecanismo plausível a maior diurese observada no braço nifedipina até a alta (diferença de 650 mL), citando literatura prévia que associa o efeito diurético/natriurético da nifedipina a melhor desfecho pós-parto — mas isso é hipótese mecanística dos próprios autores, não um achado testado diretamente neste ensaio.
+O achado confirma, agora com desenho randomizado, a direção sugerida por dados observacionais prévios da mesma instituição: nifedipina associa-se a menor risco de reinternação por complicação hipertensiva do que labetalol. Os autores propõem como mecanismo plausível a maior diurese observada no braço nifedipina até a alta (diferença de 650 mL), citando literatura prévia que associa o efeito diurético/natriurético da nifedipina a melhor desfecho pós-parto — mas isso é hipótese mecanística dos próprios autores, não um achado testado diretamente neste ensaio.
 
 ## Limitações e armadilhas de leitura
+- **Ajuste após randomização:** número de medidas elevadas e balanço hídrico são variáveis posteriores à alocação e possíveis mediadores; a OR ajustada não deve ser confundida com risco relativo ou estimativa livre de viés.
 - **Estudo aberto, sem cegamento** — vieses de manejo e de decisão de reinternação pelo médico assistente não podem ser excluídos, ainda que os critérios de reinternação hipertensiva tenham sido pré-definidos (critérios ACOG).
 - **Unicêntrico e população pouco diversa** — coorte majoritariamente caucasiana (>90%) e com alta cobertura por seguro privado (~86%); a validade externa para outras populações, sistemas de saúde e perfis étnico-raciais não pode ser presumida sem confirmação em outros centros.
 - **Interrupção precoce por eficácia** — o DSMB encerrou o recrutamento após 323 pacientes (não as ~600 originalmente estimadas), ao atingir o limiar pré-especificado de significância (p≤0,01). Ensaios interrompidos precocemente por benefício tendem a superestimar a magnitude do efeito real.
@@ -69,7 +81,7 @@ O achado confirma, agora com desenho randomizado, o que dados observacionais pr�
 - **Ainda não há dado randomizado equivalente para fármacos de segunda linha** — os próprios autores apontam que, dada a superioridade demonstrada da nifedipina, um vazio prático imediato é saber que agente usar como segunda linha em pacientes com contraindicação ou intolerância à nifedipina (ex.: IECA, diuréticos), pergunta que este ensaio não responde.
 
 ## Mensagem prática
-**Neste ensaio randomizado unicêntrico, nifedipina de liberação prolongada (30 mg de 12/12h) reduziu em 88% o risco ajustado de reinternação hospitalar por complicação hipertensiva pós-parto, em comparação a labetalol (200 mg de 8/8h), em puérperas com hipertensão diagnosticada durante a internação do parto (NNT ≈ 15).** O achado corrobora dados observacionais prévios e sustenta a nifedipina como agente de primeira linha preferencial no tratamento da hipertensão pós-parto — mas trata-se de evidência unicêntrica, aberta, com encerramento precoce por eficácia, ainda pendente de replicação multicêntrica antes de se traduzir em recomendação formal de diretriz de sociedade. `VERIFICAÇÃO HUMANA NECESSÁRIA` quanto à posologia fracionada de nifedipina (12/12h) empregada no estudo, distinta da dose única diária mais habitual na prática brasileira, antes de qualquer extrapolação direta de conduta.
+**Neste ensaio randomizado unicêntrico, nifedipina de liberação prolongada (30 mg de 12/12h) teve odds ajustadas 88% menores do desfecho hipertensivo pós-alta definido pelos autores, em comparação a labetalol (200 mg de 8/8h), em puérperas com hipertensão diagnosticada durante a internação do parto (NNT ≈ 15).** O achado corrobora dados observacionais prévios e sustenta a nifedipina como agente de primeira linha preferencial no tratamento da hipertensão pós-parto — mas trata-se de evidência unicêntrica, aberta, com encerramento precoce por eficácia, ainda pendente de replicação multicêntrica antes de se traduzir em recomendação formal de diretriz de sociedade. O esquema estudado foi confirmado no texto integral e é descrito como intervenção do ensaio; sua formulação de liberação prolongada e intervalo de 12 horas não devem ser generalizados a toda apresentação comercial.
 
 ## Tudo com Tudo
 

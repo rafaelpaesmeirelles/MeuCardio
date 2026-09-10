@@ -1,0 +1,69 @@
+---
+slug: fluxograma-ambulatorial-hipertensao-por-vegf-tki-destino
+title: 'Fluxograma ambulatorial: hipertensão por VEGF/TKI — PS agora vs. pausa vs. retorno precoce'
+kind: fluxograma
+theme: Cardio-oncologia
+summary: 'Árvore ambulatorial sob inibidores da via VEGF: gate de lesão aguda/PRES, pausa por PA grave, ramo específico
+  PAS>=160 E PAD>=100 e avaliação separada de sintomas cardiovasculares.'
+tags: []
+source_refs:
+- 'Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361.
+  DOI: 10.1093/eurheartj/ehac244. PMID: 36017568'
+- 'Maitland ML, Bakris GL, Black HR, et al. Initial Assessment, Surveillance, and Management of Blood Pressure in
+  Patients Receiving Vascular Endothelial Growth Factor Signaling Pathway Inhibitors. J Natl Cancer Inst. 2010;102(9):596-604.
+  DOI: 10.1093/jnci/djq091. PMID: 20351338'
+- 'Steingart RM, Bakris GL, Chen HX, et al. Management of cardiac toxicity in patients receiving vascular endothelial
+  growth factor signaling pathway inhibitors. Am Heart J. 2012;163(2):156-163. DOI: 10.1016/j.ahj.2011.10.018. PMID:
+  22305831'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# Fluxograma ambulatorial: hipertensão por VEGF/TKI — destino
+
+Prosa: [sinalizadores-ambulatoriais-hipertensao-por-vegf-tki-quando-encaminhar](/biblioteca/sinalizadores-ambulatoriais-hipertensao-por-vegf-tki-quando-encaminhar). Checklist: [hipertensao-por-vegf-tki-checklist-ambulatorial-de-alarme](/biblioteca/hipertensao-por-vegf-tki-checklist-ambulatorial-de-alarme). Crise/TKI: [fluxograma-hipertensao-grave-e-crise-hipertensiva-induzida-por-tki](/biblioteca/fluxograma-hipertensao-grave-e-crise-hipertensiva-induzida-por-tki).
+
+```mermaid
+flowchart TD
+  R0["Consulta/contato sob inibidor da via VEGF<br/>PA elevada e/ou sintoma"] --> D1{"Lesão aguda de órgão-alvo ou PRES?<br/>SCA · IC aguda · síndrome aórtica<br/>déficit/convulsão/alteração visual<br/>oligúria/IRA ou rápida piora renal"}
+
+  D1 -->|"Sim ou dúvida fundamentada"| C1(["PS / emergência AGORA<br/>Suspender temporariamente agente causal<br/>Manejo conforme órgão-alvo / PRES"])
+
+  D1 -->|"Não"| D2{"PAS >=180 OU PAD >=110 mmHg?"}
+
+  D2 -->|"Sim"| C2(["Pausar TEMPORARIAMENTE terapia associada à HTN<br/>Otimizar anti-HTA oral<br/>Contato urgente oncologia/cardio-oncologia<br/>Reinício somente após controle e decisão conjunta"])
+
+  D2 -->|"Não"| D3{"PAS >=160 E PAD >=100 mmHg?"}
+
+  D3 -->|"Sim"| C3(["IECA ou BRA + BCC di-hidropiridínico<br/>salvo contraindicação/interação<br/>Monitorização e retorno precoce"])
+
+  D3 -->|"Não"| D4{"Há sintoma cardiovascular novo<br/>sem critério de emergência?"}
+
+  D4 -->|"Sim"| C4(["Investigar sintoma: ECG +/- biomarcador/eco<br/>CTRCD/isquemia conforme apresentação<br/>NÃO intensificar anti-HTA apenas pelo sintoma"])
+
+  D4 -->|"Não"| C5(["Tratar PA conforme risco/contexto oncológico<br/>MRPA/diário também para outros inibidores VEGF<br/>Reforçar adesão e alarmes"])
+
+  C1 --> D5{"Bevacizumabe: PRES, crise hipertensiva<br/>ou encefalopatia hipertensiva confirmada?"}
+  D5 -->|"Sim"| C6(["Descontinuar bevacizumabe<br/>segurança de reinício desconhecida"])
+  D5 -->|"Não / suspeita"| C7(["Manter suspensão enquanto investiga<br/>seguir protocolo específico"])
+
+  classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C6 alerta;
+  class C2,C3,C4,C5,C7 conduta;
+```
+
+## Notas
+
+- **D1**: lesão aguda/PRES define urgência; o número isolado da PA não.
+- **D2**: pausa da terapia associada à hipertensão em **PAS >=180 OU PAD >=110 mmHg**.
+- **D3**: recomendação ESC específica para **PAS >=160 E PAD >=100 mmHg** exige ambos os componentes.
+- **D4**: sintoma cardiovascular tem investigação própria; não é sinônimo de necessidade de mais anti-hipertensivo.
+- O fluxograma não define doses nem redução percentual da terapia oncológica.
+
+Sintomas cardiovasculares novos devem ser investigados também quando coexistem com PA elevada: os ramos de tratamento pressórico não substituem ECG/biomarcadores/eco conforme a hipótese. Após pausa por hipertensão grave sem complicação, a ESC orienta controle abaixo de PAS 160 e PAD 100 antes de considerar reinício coordenado; isso não é a meta definitiva de PA nem autoriza reiniciar após PRES confirmado. Sem avaliação/monitorização ambulatorial rápida e segura, usar serviço de urgência. A equipe deve ser avisada imediatamente sobre qualquer suspensão; não atrasar atendimento emergencial enquanto aguarda contato.
+
+A bula do bevacizumabe determina descontinuação também em crise hipertensiva ou encefalopatia hipertensiva confirmada, além de PRES. O reinício após simples hipertensão grave controlada não se aplica a essas complicações. Fonte: https://www.gene.com/download/pdf/avastin_prescribing.pdf.

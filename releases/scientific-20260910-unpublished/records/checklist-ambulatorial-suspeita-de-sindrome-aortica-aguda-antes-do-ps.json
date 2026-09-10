@@ -1,0 +1,21 @@
+{
+  "slug": "checklist-ambulatorial-suspeita-de-sindrome-aortica-aguda-antes-do-ps",
+  "title": "Checklist ambulatorial: suspeita de síndrome aórtica aguda antes do PS",
+  "kind": "checklist",
+  "theme": "Aorta e doença arterial periférica",
+  "summary": "Checklist de transferência para SAA: registrar categorias ADD-RS corretamente sem pontuar localização de dor, síncope isolada ou déficit focal sem dor como itens indevidos.",
+  "body_md": "# Checklist ambulatorial: suspeita de SAA antes do PS\n\nUsar apenas para organizar **handoff/transferência**. Não usar para excluir SAA no consultório.\n\n## Categorias ADD-RS\n\nO escore conta categorias positivas, não número de itens.\n\n### A) Predisposição de alto risco\n- síndrome de Marfan/outra doença do tecido conjuntivo;\n- história familiar de doença aórtica;\n- doença valvar aórtica conhecida/bicúspide;\n- aneurisma torácico conhecido;\n- manipulação aórtica recente.\n\n### B) Dor de alto risco\nA categoria é positiva por **característica da dor**, não por localização isolada:\n- início abrupto;\n- intensidade grave/máxima desde o início;\n- qualidade rasgante/dilacerante.\n\nRegistrar se a dor é torácica/dorsal/abdominal, mas **localização sozinha não pontua**.\n\n### C) Exame de alto risco\n- déficit de pulso ou diferencial de PA;\n- **déficit neurológico focal associado à dor**;\n- novo sopro de insuficiência aórtica associado à dor;\n- hipotensão/choque.\n\n**Síncope não é item independente da categoria C do ADD-RS.** Registrar como alerta clínico geral e contextualizar.\n\n## Alertas fora do ADD-RS\n\n- Déficit focal súbito/persistente sem dor aórtica → via AVC agudo imediata.\n- Síncope de alto risco → avaliação urgente própria, ainda que não pontue no ADD-RS.\n- AAA doloroso/massa pulsátil dolorosa → emergência vascular.\n- Isquemia aguda de membro → emergência vascular.\n\n## Handoff\n\nTransmitir horário de início, características da dor, categorias ADD-RS positivas, sinais vitais, anticoagulantes/antiagregantes em uso, alergia a contraste/função renal conhecida e ECG disponível — **sem atrasar a transferência**.\n\n## Não fazer\n\n- usar ADD-RS baixo como autorização de alta ambulatorial;\n- pedir D-dímero para “ver amanhã”;\n- pontuar qualquer dor torácica/dorsal/abdominal só pela localização;\n- pontuar síncope isolada como categoria C.\n\nSAA pode ocorrer sem predisposição conhecida e, raramente, sem dor: o conjunto clínico prevalece sobre a pontuação. Na suspeita concomitante de dissecção e AVC, comunicar ambos imediatamente à equipe de emergência para avaliação coordenada antes de terapias que possam agravar a dissecção. CLTI requer avaliação vascular urgente mesmo quando crônica; deterioração aguda muda o destino para emergência.\n\n- [AVC agudo](/biblioteca/fluxograma-suspeita-de-avc-agudo-primeira-hora).",
+  "tags": [],
+  "source_refs": [
+    "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for peripheral arterial and aortic diseases. PMID: 39210722",
+    "Rogers AM, Hermann LK, Booher AM, et al. Aortic dissection detection risk score. PMID: 21555704",
+    "Nazerian P, Mueller C, Soeiro AM, et al. ADvISED. PMID: 29030346"
+  ],
+  "evidence_level": null,
+  "source_tier": "A",
+  "review_status": "revisado",
+  "gaps": [],
+  "version": 1,
+  "updated_at": "2026-09-10 01:53:04.465188+00:00",
+  "published": false
+}

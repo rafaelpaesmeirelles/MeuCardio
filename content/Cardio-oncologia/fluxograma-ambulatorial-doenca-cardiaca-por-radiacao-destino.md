@@ -1,0 +1,70 @@
+---
+slug: fluxograma-ambulatorial-doenca-cardiaca-por-radiacao-destino
+title: 'Fluxograma ambulatorial: doença cardíaca por radiação — PS agora vs. retorno precoce vs. especialidade'
+kind: fluxograma
+theme: Cardio-oncologia
+summary: 'Árvore ambulatorial de destino no sobrevivente com RT cardíaca/mediastinal: gate de alarme (SCA, IC aguda,
+  pericárdio de risco, valvopatia crítica, condução), braço de sintoma controlável com retorno precoce, e braço
+  de progressão estrutural para cardio-oncologia.'
+tags: []
+source_refs:
+- 'Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration
+  with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO)
+  and the International Cardio-Oncology Society (IC-OS). Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.
+  PMID: 36017568'
+- 'Desai MY, Windecker S, Lancellotti P, et al. Prevention, Diagnosis, and Management of Radiation-Associated Cardiac
+  Disease: JACC Scientific Expert Panel. J Am Coll Cardiol. 2019;74(7):905-927. DOI: 10.1016/j.jacc.2019.07.006.
+  PMID: 31416535'
+- 'Mitchell JD, Cehic DA, Morgia M, et al. Cardiovascular Manifestations From Therapeutic Radiation: A Multidisciplinary
+  Expert Consensus Statement From the International Cardio-Oncology Society. JACC CardioOncol. 2021;3(3):360-380.
+  DOI: 10.1016/j.jaccao.2021.06.003. PMID: 34604797'
+- 'van Nimwegen FA, Schaapveld M, Janus CP, et al. Cardiovascular Disease After Hodgkin Lymphoma Treatment: 40-Year
+  Follow-up Study. JAMA Intern Med. 2015;175(6):1007-1017. DOI: 10.1001/jamainternmed.2015.1180. PMID: 25915855'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# Fluxograma ambulatorial: doença cardíaca por radiação — destino
+
+Prosa: [`sinalizadores-ambulatoriais-doenca-cardiaca-por-radiacao-quando-encaminhar`](/biblioteca/sinalizadores-ambulatoriais-doenca-cardiaca-por-radiacao-quando-encaminhar). Checklist: [`doenca-cardiaca-por-radiacao-checklist-ambulatorial-de-alarme`](/biblioteca/doenca-cardiaca-por-radiacao-checklist-ambulatorial-de-alarme). Rastreio assintomático Hodgkin: [`rastreio-de-doenca-arterial-coronariana-tardia-pos-radioterapia-mediastinal-em-linfoma-de-hodgkin`](/biblioteca/rastreio-de-doenca-arterial-coronariana-tardia-pos-radioterapia-mediastinal-em-linfoma-de-hodgkin).
+
+## Árvore de decisão
+
+```mermaid
+flowchart TD
+  R0["Consulta ambulatorial / contato<br/>sobrevivente com RT torácica/mediastinal<br/>ou campo cardíaco"] --> D1{"Há alarme de PS?<br/>angina/SCA, IC aguda/hipoxemia<br/>tamponamento / constricção descompensada<br/>valvopatia crítica / síncope de esforço<br/>BAV avançado / arritmia grave"}
+
+  D1 -->|"Sim ou dúvida fundamentada"| C1(["Encaminhar AGORA ao PS / emergência<br/>Não atrasar por 'aguardar rastreio'<br/>ou retorno de rotina"])
+
+  D1 -->|"Não"| D2{"Sintoma cardiovascular novo<br/>sem hipoperfusão?<br/>dispneia de esforço, edema, fadiga<br/>sopro novo, dor atípica, pré-síncope"}
+
+  D2 -->|"Sim"| P1["ECG ± eco ± biomarcadores<br/>PA bilateral; revisar FRCV<br/>Comparar com eco/ECG basais se houver"]
+  P1 --> DT{"Exames revelam alarme agudo?"}
+  DT -->|"Sim"| C1
+  DT -->|"Não"| C2(["Reavaliação conforme síndrome e risco<br/>Orientação escrita de alarmes"])
+
+  D2 -->|"Não há sintoma novo"| D3{"Achado estrutural progressivo<br/>ou anatomia complexa pós-RT?<br/>valva, pericárdio, FE/strain, CAC/CTA<br/>necessidade de heart team"}
+
+  D3 -->|"Sim"| C3(["Referência cardio-oncologia / especialidade<br/>Discutir via percutânea vs cirurgia<br/>quando intervenção for necessária"])
+  D3 -->|"Não"| C4(["Plano usual de vigilância<br/>Otimizar FRCV (ESC 2022 / IC-OS)<br/>Retorno conforme risco/MHD"])
+
+  C2 --> D4{"Acesso e suporte garantidos?"}
+  D4 -->|"Acesso insuficiente sem piora"| C5(["Garantir avaliação em prazo seguro<br/>Urgência se acesso insuficiente"])
+  D4 -->|"Piora rápida ou angina recorrente"| C1
+  D4 -->|"Sim"| C6(["Manter plano individualizado<br/>Não substituir PS por CAC agendado"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;
+  class C1,C5 alerta;
+  class C2,C3,C4,C6 conduta;
+```
+
+## Notas
+
+- **D1** = gate de segurança (isquemia, IC aguda, pericárdio de risco, valvopatia crítica, condução — Desai 2019 / ESC 2022).
+- **D2** = sintoma ambulatorial controlável → destino clínico precoce + imagem.
+- **D3** = ponte para cardio-oncologia / heart team (anatomia hostil, aorta porcelana — Desai 2019; vigilância por domínio — IC-OS 2021).
+- Não decide doses de anti-isquêmicos, diuréticos nem anticoagulação; não substitui o algoritmo de rastreio assintomático de Hodgkin.

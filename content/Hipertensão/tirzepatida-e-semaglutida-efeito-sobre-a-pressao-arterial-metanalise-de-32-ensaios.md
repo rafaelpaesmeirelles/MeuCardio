@@ -1,11 +1,24 @@
 ---
-title: "Tirzepatida e Semaglutida: Efeito Sobre a Pressão Arterial em Metanálise de 32 Ensaios"
+title: 'Tirzepatida e Semaglutida: Efeito Sobre a Pressão Arterial em Metanálise de 32 Ensaios'
 slug: tirzepatida-e-semaglutida-efeito-sobre-a-pressao-arterial-metanalise-de-32-ensaios
-theme: "Hipertensão"
+theme: Hipertensão
 kind: estudo
-review_status: pendente_revisao
-source_refs: ["Chen QX, Zhou XY, Wu Q, Xie JJ, Xu Y, Teng FY, Guo M. Effect of tirzepatide and semaglutide on blood pressure: A systematic review and meta-analysis. Endocrine. 2026;91(1):275. DOI: 10.1007/s12020-026-04757-7. PMID: 42603240. Abstract completo conferido no PubMed via E-utilities (esearch/esummary/efetch) em 09/09/2026."]
-legacy_source: "Documento novo, 09/09/2026. Nenhum documento desta pasta trata de agonistas do receptor de GLP-1 (tirzepatida, semaglutida) e pressão arterial — lacuna real, conferida por grep em todo `content/Hipertensão/` (termos 'tirzepatida', 'semaglutida' e 'GLP-1' ausentes). Tema pivotal: uso crescente desses fármacos para diabetes tipo 2 e obesidade, com efeito hemodinâmico clinicamente relevante e assimétrico entre as duas moléculas, ainda não sistematizado nesta biblioteca."
+review_status: revisado
+source_refs:
+- 'Chen QX, Zhou XY, Wu Q, Xie JJ, Xu Y, Teng FY, Guo M. Effect of tirzepatide and semaglutide on blood pressure:
+  A systematic review and meta-analysis. Endocrine. 2026;91(1):275. DOI: 10.1007/s12020-026-04757-7. PMID: 42603240.
+  Abstract completo conferido no PubMed via E-utilities (esearch/esummary/efetch) em 09/09/2026.'
+legacy_source: 'Documento novo, 09/09/2026. Nenhum documento desta pasta trata de agonistas do receptor de GLP-1
+  (tirzepatida, semaglutida) e pressão arterial — lacuna real, conferida por grep em todo `content/Hipertensão/`
+  (termos ''tirzepatida'', ''semaglutida'' e ''GLP-1'' ausentes). Tema pivotal: uso crescente desses fármacos para
+  diabetes tipo 2 e obesidade, com efeito hemodinâmico clinicamente relevante e assimétrico entre as duas moléculas,
+  ainda não sistematizado nesta biblioteca.'
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Tirzepatida e Semaglutida: Efeito Sobre a Pressão Arterial em Metanálise de 32 Ensaios
@@ -27,29 +40,26 @@ Revisão sistemática com metanálise de **eventos adversos emergentes do tratam
 **Tirzepatida:**
 - **Risco de eventos relacionados a hipertensão reduzido**: RR = 0,40 (IC95% 0,26–0,60; p<0,001).
 - Esse efeito anti-hipertensivo veio acompanhado de **risco aumentado de eventos relacionados a hipotensão**: RR = 2,45 (IC95% 1,35–4,45; p=0,003).
-- O risco de hipotensão foi **dose-dependente**, maior nos subgrupos de dose mais alta: RR = 2,58 (IC95% 1,38–4,81; p=0,003).
+- O sinal de hipotensão também foi observado nos subgrupos de dose mais alta: RR = 2,58 (IC95% 1,38–4,81; p=0,003).
 
 **Semaglutida:**
-- Perfil **pressórico relativamente neutro**: sem associação significativa com eventos de hipertensão (RR = 0,81, IC95% 0,57–1,15; p=0,233) nem de hipotensão (RR = 1,39, IC95% 0,81–2,36; p=0,232).
+- **Eventos pressóricos reportados:**: sem associação significativa com eventos de hipertensão (RR = 0,81, IC95% 0,57–1,15; p=0,233) nem de hipotensão (RR = 1,39, IC95% 0,81–2,36; p=0,232).
 - Nos subgrupos de dose mais alta houve **sinal (não significativo) de possível proteção pressórica**, sem alcançar significância estatística.
 
 ## Interpretação clínica
-Os dois agonistas do receptor de GLP-1 (tirzepatida atua também como agonista duplo GIP/GLP-1) **não têm o mesmo comportamento hemodinâmico**, apesar de ambos promoverem perda de peso substancial em DM2 e obesidade. A tirzepatida se comporta, na prática, como um fármaco com **efeito anti-hipertensivo potente o bastante para gerar hipotensão sintomática em parcela dos pacientes**, sobretudo em dose alta — achado com implicação direta para o paciente hipertenso tratado, que já usa um ou mais anti-hipertensivos e pode precisar de ajuste de dose desses fármacos ao iniciar tirzepatida. A semaglutida, neste corpo de evidência agregado, não mostrou o mesmo sinal de risco pressórico em nenhuma das duas direções.
+A metanálise encontrou sinal de hipotensão para tirzepatida e não detectou associação significativa para semaglutida. **Diferença entre significância e ausência de significância não demonstra, por si só, diferença entre os fármacos.** Os RR de cada molécula derivam de seus respectivos ensaios e comparadores; não constituem comparação direta randomizada entre tirzepatida e semaglutida.
 
-Os próprios autores concluem que os perfis hemodinâmicos distintos **sustentam decisão terapêutica individualizada**, considerando a pressão arterial basal do paciente e o risco cardiometabólico global, antes de escolher entre os dois fármacos ou de ajustar a dose.
+Eventos rotulados como hipertensão/hipotensão não medem a queda média de pressão nem demonstram equivalência hemodinâmica. O sinal em doses mais altas merece atenção, mas não determina um protocolo de ajuste de anti-hipertensivos.
 
 ## O que NÃO pode ser concluído
 - É metanálise de **eventos adversos relatados nos ensaios**, não um estudo desenhado a priori para medir variação absoluta de PA (mmHg) por fármaco — o desfecho é a ocorrência de evento clínico rotulado como "hipertensão" ou "hipotensão" nos bancos de segurança de cada ensaio, sujeito a heterogeneidade de definição entre estudos.
-- Não permite concluir que a semaglutida "não baixa a pressão" — apenas que, agregando os TEAEs disponíveis, ela não gerou sinal significativo de risco em nenhuma direção; efeito hipotensor discreto e não clinicamente relevante (sem gerar evento adverso) continua compatível com esse resultado.
+- Não permite concluir que a semaglutida "não baixa a pressão" — apenas que, agregando os TEAEs disponíveis, ela não gerou sinal significativo de risco em nenhuma direção; redução da PA sem ser registrada como evento adverso (sem gerar evento adverso) continua compatível com esse resultado.
 - Não separa, dentro do grupo tirzepatida, o efeito hemodinâmico atribuível à própria molécula do efeito indireto da perda de peso mais acentuada (tirzepatida costuma reduzir mais peso que semaglutida nos ensaios diretos) — a metanálise não isola esses dois mecanismos.
 - Não fornece dado específico sobre **ajuste de anti-hipertensivos concomitantes** ao iniciar tirzepatida — não há, nesta fonte, protocolo testado de redução preemptiva de dose de anti-hipertensivo.
 - Busca encerrada em setembro de 2025; ensaios e sub-análises publicados após essa data não estão incluídos.
 
-## Armadilha principal
-**Tratar "agonista de GLP-1" como classe hemodinamicamente uniforme.** O reflexo de "GLP-1 ajuda a controlar a pressão porque emagrece" é verdadeiro em grau variável para tirzepatida, mas o preço desse efeito mais potente é risco real e dose-dependente de hipotensão — o mesmo reflexo aplicado à semaglutida superestima o efeito pressórico dela, que neste corpo de evidência foi neutro.
-
-## Mensagem prática
-Ao iniciar **tirzepatida** em paciente hipertenso tratado, considere revisão precoce da pressão arterial e do esquema anti-hipertensivo — sobretudo em doses mais altas — pelo risco aumentado (mais que o dobro) de eventos hipotensivos (RR 2,45; dose alta RR 2,58); o mesmo cuidado antecipado não tem, nesta evidência agregada, o mesmo grau de justificativa para **semaglutida**, cujo perfil pressórico foi neutro. `VERIFICAÇÃO HUMANA NECESSÁRIA` quanto à aplicabilidade direta desses achados de metanálise de TEAEs (não de variação medida de PA em mmHg) à decisão individual de ajuste de anti-hipertensivo antes de qualquer conduta protocolar.
+## Mensagem prática e limitações de uso
+Avaliar pressão, sintomas, hidratação e medicação concomitante durante perda de peso e titulação de qualquer um dos tratamentos. A metanálise não autoriza dispensar esse cuidado com semaglutida nem reduzir preventivamente anti-hipertensivos segundo um algoritmo próprio. A estimativa de RR 2,45 para tirzepatida representa risco relativo dos eventos reportados; não informa risco absoluto individual sem conhecer a taxa basal.
 
 ## Tudo com Tudo
 
