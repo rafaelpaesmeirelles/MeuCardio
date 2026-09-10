@@ -39,6 +39,8 @@ class Calculator:
     # avaliação estruturada com múltiplos achados em prosa, fora do catálogo de
     # doses. O frontend renderiza "dose" e "assessment" como resultado composto.
     kind: str = "escore"
+    # Ferramentas oficiais externas têm orientação, mas nunca compute local.
+    external_url: str | None = None
 
 
 # -------------------------------------------------------------------- RCRI
@@ -1283,6 +1285,8 @@ def run(slug: str, payload: dict) -> dict:
     calc = REGISTRY.get(slug)
     if calc is None:
         raise KeyError(slug)
+    if calc.status == "referencia_externa":
+        raise ValueError("Ferramenta externa: acesse a instituição responsável pela página da calculadora. Não há cálculo local no CorVIA.")
     if calc.status != "implementada" or calc.compute is None:
         raise ValueError(
             "Calculadora ainda não liberada: aguarda validação dos coeficientes oficiais."

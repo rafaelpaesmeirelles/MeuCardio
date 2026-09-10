@@ -64,3 +64,9 @@ for registry in _CHATGPT_REGISTRIES:
 # registro" e arquivadas no grafo a cada reconciliação.
 for calculator in PERIOPERATIVE_REGISTRY.values():
     calculators.REGISTRY[calculator.slug] = calculator
+
+# Registro único também disponível ao reconciliador e à busca Tudo com Tudo.
+from .cardiovascular_risk_calculators import CARDIOVASCULAR_RISK_REGISTRY
+from .cardiovascular_risk_resources import CARDIOVASCULAR_RISK_RESOURCES
+calculators.REGISTRY.update(CARDIOVASCULAR_RISK_REGISTRY)
+calculators.REGISTRY.update(CARDIOVASCULAR_RISK_RESOURCES)
