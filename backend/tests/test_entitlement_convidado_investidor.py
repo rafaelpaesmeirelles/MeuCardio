@@ -348,13 +348,16 @@ class TestOnboardingConvidadoInvestidor:
 
 
 class TestBillingRegressao:
-    def test_assinante_pago_normal_continua_funcionando_como_antes(self, client, criar_usuario):
+    def test_assinante_pago_normal_continua_funcionando_como_antes(self, client, criar_usuario, monkeypatch):
+        from app.core.config import settings
+        monkeypatch.setattr(settings, "subscriptions_enabled", True)
         _, token = criar_usuario()
 
-        with patch("app.api.billing.stripe.Customer.create") as criar_cliente, \
-             patch("app.api.billing.stripe.checkout.Session.create") as criar_sessao:
+        with patch("app.api.billing._stripe_client") as factory:
+            criar_cliente = factory.return_value.v1.customers.create
+            criar_sessao = factory.return_value.v1.checkout.sessions.create
             criar_cliente.return_value = {"id": "cus_regressao"}
-            criar_sessao.return_value = {"url": "https://checkout.stripe.com/session/regressao"}
+            criar_sessao.return_value = {"id": "cs_cus_regressao", "url": "https://checkout.stripe.com/session/regressao", "expires_at": 9999999999}
             resp = client.post(
                 f"/api/billing/checkout?plano={PLANO_BASICO}&periodicidade={PERIODICIDADE_MENSAL}",
                 headers=_headers(token),
@@ -363,6 +366,7 @@ class TestBillingRegressao:
         assert resp.status_code == 200
         assert resp.json()["checkout_url"] == "https://checkout.stripe.com/session/regressao"
         criar_sessao.assert_called_once()
+        assert criar_sessao.call_args.kwargs["params"]["line_items"][0]["price_data"]["unit_amount"] == 9990
 
     def test_assinatura_cancelada_sem_convidado_nem_investidor_e_402(
         self, client, db, criar_usuario
@@ -406,13 +410,16 @@ class TestBillingRegressao:
         )
         assert ativos == 0
 
-    def test_checkout_normal_usuario_pagante_continua_chamando_stripe(self, client, criar_usuario):
+    def test_checkout_normal_usuario_pagante_continua_chamando_stripe(self, client, criar_usuario, monkeypatch):
+        from app.core.config import settings
+        monkeypatch.setattr(settings, "subscriptions_enabled", True)
         _, token = criar_usuario()
 
-        with patch("app.api.billing.stripe.Customer.create") as criar_cliente, \
-             patch("app.api.billing.stripe.checkout.Session.create") as criar_sessao:
+        with patch("app.api.billing._stripe_client") as factory:
+            criar_cliente = factory.return_value.v1.customers.create
+            criar_sessao = factory.return_value.v1.checkout.sessions.create
             criar_cliente.return_value = {"id": "cus_normal_2"}
-            criar_sessao.return_value = {"url": "https://checkout.stripe.com/session/normal"}
+            criar_sessao.return_value = {"id": "cs_cus_normal_2", "url": "https://checkout.stripe.com/session/normal", "expires_at": 9999999999}
             resp = client.post(
                 f"/api/billing/checkout?plano={PLANO_COMPLETO}", headers=_headers(token)
             )
@@ -420,12 +427,14 @@ class TestBillingRegressao:
         assert resp.status_code == 200
         criar_cliente.assert_called_once()
         criar_sessao.assert_called_once()
+        assert criar_sessao.call_args.kwargs["params"]["line_items"][0]["price_data"]["unit_amount"] == 16990
 
 
 # ----------------------------------------------------------------------- SEGURANÇA --
 
 
 class TestSeguranca:
+
     def test_nao_admin_nao_pode_marcar_convidado_nem_investidor(self, client, criar_usuario):
         alvo, _ = criar_usuario(email="alvo@teste.local")
         _, token_medico = criar_usuario(email="outro@teste.local")

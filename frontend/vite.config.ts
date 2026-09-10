@@ -28,6 +28,11 @@ const conteudoConectadoSomenteOnline = /(?:^|\/)(?:ChecklistModelo|ChecklistAlta
 // Eles continuam cobertos pelo cache NetworkFirst depois do primeiro uso.
 const operacaoClinicaSomenteOnline = /(?:^|\/)(?:Agenda|Prontuario|Receituario|RoundGerenciavel|CaixaDeEmail|CorviaMail|MinhaConta|ExcluirConta|Sincronizacao)-[^/]*\.(?:js|css)$/;
 
+// Cotações, saldo, chat e análises de IA exigem autorização e execução no backend.
+// Pré-carregar essas telas não oferece operação offline; seus chunks mantêm o
+// mesmo cache NetworkFirst de assets após o acesso, sem aumentar o download inicial.
+const iaECobrancaSomenteOnline = /(?:^|\/)(?:Assinatura|Assistente|HeartTeamVirtual|ScientificDocumentAI)-[^/]*\.(?:js|css)$/;
+
 export default defineConfig({
   plugins: [
     react(),
@@ -89,6 +94,7 @@ export default defineConfig({
               if (buscaTudoComTudoSomenteOnline.test(entry.url)) return false;
               if (conteudoConectadoSomenteOnline.test(entry.url)) return false;
               if (operacaoClinicaSomenteOnline.test(entry.url)) return false;
+              if (iaECobrancaSomenteOnline.test(entry.url)) return false;
               if (!entry.url.endsWith(".js")) return true;
               if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;

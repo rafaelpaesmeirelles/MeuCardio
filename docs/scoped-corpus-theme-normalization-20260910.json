@@ -1,0 +1,2177 @@
+{
+  "approval_basis": "Correção técnica Tudo com Tudo autorizada pelo proprietário nesta sessão e confirmada pelo coordenador; apenas theme muda em fontes clínicas já cobertas pelo baseline válido. Não é revisão clínica nova.",
+  "baseline_commit": "fedf818cbb248869a20f2db2949e8fe9884f90c7",
+  "canonical_domain_count": 30,
+  "canonical_theme_module_sha256": "e66f17e993cfeb16fd9903cf56ee3ce39f15ece3ce8cd55bf5fa3035a59ec0c9",
+  "canonical_themes": [
+    "Aorta e doença arterial periférica",
+    "Arritmias",
+    "Calculadoras",
+    "Cardiologia do Esporte e do Exercício",
+    "Cardiologia geriátrica",
+    "Cardiologia pediátrica",
+    "Cardiomiopatias",
+    "Cardio-oncologia",
+    "Cardiopatias congênitas",
+    "Comunicação clínica",
+    "Diabetes e cardiologia",
+    "Dispositivos",
+    "Doença coronariana",
+    "Endocardite",
+    "Farmacologia",
+    "Febre reumática",
+    "Fibrilação atrial",
+    "Geral",
+    "Gravidez",
+    "Hipertensão",
+    "Hipertensão pulmonar",
+    "Insuficiência cardíaca",
+    "Pericárdio",
+    "Perioperatório",
+    "Prevenção e lipídios",
+    "Saúde mental e cardiologia",
+    "Síncope",
+    "Terapia intensiva",
+    "Tromboembolismo",
+    "Valvopatias"
+  ],
+  "decision": "authorized_tct_theme_normalization",
+  "distinct_previous_themes": 138,
+  "items": {
+    "estudos": {
+      "aapdh-i-wearable-machine-learning-recuperacao-pos-alta": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "bd3f09d66857f8a05e922c55668675680b73d3038cc4a6c130c57d9b37f22d30",
+        "baseline_source_sha256": "6692185f3172263ecba96d2895a3fad9226c47124bfb285a3e61ee3af799f39f",
+        "before_theme": "Monitorização domiciliar após alta",
+        "unchanged_other_fields_sha256": "d4181199ce0c67e5cff618720effdb31fb0bb9a535eb9137d0dda4ffddeb1f74"
+      },
+      "acido-bempedoico-idosos-75-anos-estudos-fase-3": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "3420b5243cbbe0d3f5ff9c7f267b89a89051c00e19eede0b4b48c84281c011fa",
+        "baseline_source_sha256": "2978df3349614fea587baa812c6364277e5e2e291568a78a1e15fc27ab26118b",
+        "before_theme": "Dislipidemia no idoso",
+        "unchanged_other_fields_sha256": "a59e795668cde530cc4f588823725fa826131dec9a08f99caf0d97a643415217"
+      },
+      "ada-hf-acetazolamida-poupadora-cloreto-ic-hospitalizada": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "20d6dd0d359336cc73918a1db213af78561f39b6e4cae2b5042b874408360d88",
+        "baseline_source_sha256": "2f122bb581e48776ce4ce934829334abdeabf3c07e4d60cf2aa74ec9d9daca6e",
+        "before_theme": "Bloqueio sequencial do néfron",
+        "unchanged_other_fields_sha256": "71e1ed5b492128d784d603f0ebba58830033809196d8b2ca00bcf8e1439d76aa"
+      },
+      "agachamento-isometrico-12-minutos-hipotensao-pos-exercicio-idosas": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "4916a2fe86fa857cab87274113669b535e434a2bb8d25c96a7c416c05aa6539c",
+        "baseline_source_sha256": "d47c6cdd63a639d92603000573d3b4131c293e692c25109947a6648606b20bc4",
+        "before_theme": "Exercício isométrico e hipertensão",
+        "unchanged_other_fields_sha256": "5b8ef9fc14082151ad68a3a5bd6b9af46afee70c48172b95308c15f6dc0d7865"
+      },
+      "ai-ecg-alerta-mortalidade-hospitalar-ensaio": {
+        "after_theme": "Geral",
+        "anchor_source_sha256": "a6e909e919b8ba1d4522b1174e7d2710b5037c35b57496fa8e96c547da1026f7",
+        "baseline_source_sha256": "8b43c0f988e39260fa5f7782ca628d6b11be8a5067f96c4852114402233e7972",
+        "before_theme": "Inteligência artificial e segurança hospitalar",
+        "unchanged_other_fields_sha256": "ef079d2d5cc4bf6ce0e835f7aab17c44b3641e3db428ea6a5820e952ca7d16ad"
+      },
+      "ai-ecg-amiloidose-cardiaca-deteccao-precoce": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "eccb59d6cfd9b085ba482888b04852bc0ce4923ef1501cf51c1450665ce075f0",
+        "baseline_source_sha256": "2e4732c020cb33a7ab6b36e3dce1c9701d4164f4d2c3ffee874f3c483c827e87",
+        "before_theme": "IA-ECG e amiloidose cardíaca",
+        "unchanged_other_fields_sha256": "33f7b448224ade09cc3cc9f47d1b587a2deeb4d9aad319f960701e4ca2e1b9d9"
+      },
+      "ai-ecg-disfuncao-ventricular-populacao-validacao": {
+        "after_theme": "Arritmias",
+        "anchor_source_sha256": "6cd08315426d6f04cf6a6ef9f4c88c80e020464d716345b57920d313252d3e98",
+        "baseline_source_sha256": "619431f1b0632d27603b8bbb0ce135f5f41629d4a10154178e467d0dc43f8dde",
+        "before_theme": "Validação de IA-ECG",
+        "unchanged_other_fields_sha256": "56379b7a4dbb9090b588b603cb079fb68e535ac99712e6a7dfbfd46cabf43cbc"
+      },
+      "ai-ecg-fa-anticoagulacao-nao-cardiologistas-ensaio": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "e69898c62dec9bb366b9176597cda8e983dc7c35ca6934145d38a39829dd7829",
+        "baseline_source_sha256": "c5c27edc9cf8573187684e38518c8da6b0718658ec8e1813d39b7ec496c9eabd",
+        "before_theme": "IA-ECG e fibrilação atrial",
+        "unchanged_other_fields_sha256": "1ebf9be26b9addfe7c426feeab9dca6641bbcbd073fdc4829d1df1b3579a1c9d"
+      },
+      "ai-ecg-fracao-ejecao-internacao-ensaio": {
+        "after_theme": "Terapia intensiva",
+        "anchor_source_sha256": "5774e308e3261d3a8fcd75830e6d9407dfd57149037e2b2b9c1b2400093bbf2a",
+        "baseline_source_sha256": "94b2558733f48ab277f304f4a509d7ce64e75f46a6f8f2508387b1e355c8aff5",
+        "before_theme": "IA-ECG no paciente internado",
+        "unchanged_other_fields_sha256": "b865af85a58b7936562dc0a11e55387c7941a864b5e5ade5365cd35e725fd87b"
+      },
+      "ai-ecg-rastreamento-fa-monitor-30-dias-ensaio": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "662f2e09545e1d19e26ab2b98e45d8456804a5f7c1948c772b2ab75182a8b8be",
+        "baseline_source_sha256": "c3c3cba45dd0c1aa71b90799f0c7ae86912efa082e1599f37812fed62a2a21e9",
+        "before_theme": "Rastreamento direcionado de fibrilação atrial",
+        "unchanged_other_fields_sha256": "8f8479ab1b18360323f1de341fbcde1989037dd5c51b66046b1600a225fd8e1a"
+      },
+      "ai-eco-fracao-ejecao-versus-sonografista-ensaio": {
+        "after_theme": "Geral",
+        "anchor_source_sha256": "0923359d27877ba4f301a239d202cfc2ca16438ceedc5db2894de18914c0f736",
+        "baseline_source_sha256": "197c1ec4aef3b185bda985a7ae8d6545c4e2d66618919d2786c4e16293a1ebe6",
+        "before_theme": "IA em ecocardiografia",
+        "unchanged_other_fields_sha256": "54f371799af3cbafa6b02dd4c9006288f705c0436f19307f0ca29559c379b542"
+      },
+      "aim-chd-ia-prevencao-secundaria-coronariana-randomizado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "87a57a5eabcb46fec56523da7ec0d19bc46cf2e717cbaaccc19ca92f8687baff",
+        "baseline_source_sha256": "1cc1dc271a29f547d6c2f87be154f885133933b31d467c2a8020f4a38721d145",
+        "before_theme": "IA na prevenção secundária coronariana",
+        "unchanged_other_fields_sha256": "c5b40ddf7e3416bdfa14c2d185c492ab05425dadc112eb511407c0012baf4c20"
+      },
+      "aim-power-plataforma-digital-otimizacao-terapia-icfer": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "fddee62c32d53be58d5985788c4d16a486c8ee323673aaebb03171994415b377",
+        "baseline_source_sha256": "d95df8dfbd8a5e4b503611426ad41424968ba9da57488f68ab5d7bd6c3e274bf",
+        "before_theme": "Saúde digital e insuficiência cardíaca",
+        "unchanged_other_fields_sha256": "e08f1025580c6d281f0194b3447224ee104cda045df2fd98d5895642ebfe1548"
+      },
+      "aktivplan-habitos-atividade-fisica-pos-reabilitacao-estudo": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "4b1a460a2d1618b69cf14e67ebe6d6d97e42f9b5a8d29287d109e30e38e6b3b0",
+        "baseline_source_sha256": "871ecb28748d3847f332c7a8bfc5751ca8f0c885553cd2f9b5611349c80d1356",
+        "before_theme": "Saúde digital após reabilitação cardíaca",
+        "unchanged_other_fields_sha256": "540d0adf1be114d10873cf66983b550a8b34908432061c480c2f6357c5e65546"
+      },
+      "albumina-furosemida-ic-aguda-disfuncao-hepatica": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "2aa74dbb2a0ca34bde81c5a815b24987d086ca86f28e31468b0817c7df09dfae",
+        "baseline_source_sha256": "51552e134bf0638826a4148234f13919a419cf9971b0613ae62572adb1ad2339",
+        "before_theme": "Descongestão e disfunção hepática",
+        "unchanged_other_fields_sha256": "87e8ce27fb62a45f031a0621496ad7b6cae26d7211f7c2f923475d3a143fc3e6"
+      },
+      "albumina-modificada-isquemia-miocardite-pediatrica-diagnostico-2026": {
+        "after_theme": "Cardiologia pediátrica",
+        "anchor_source_sha256": "1bdf7112403fc617e09e4c7d9efd073a279f623e3ae35619c6603604ff65a06f",
+        "baseline_source_sha256": "d4b24b4d7088706f47cc58da21cbb282d383b9ed0c6c0cf9b6ad78d69cfa5c1b",
+        "before_theme": "Miocardite pediátrica e biomarcadores",
+        "unchanged_other_fields_sha256": "4f28a460e86566a21dcee3d99d4f495e90e7b674e15ba4d8e0acd83c1a0ca61f"
+      },
+      "alleviate-hf-monitor-inserivel-alerta-risco-diuretico": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "05d22ca112119bdfefef367bd2f9958822a19402ee283cee16952597d7825b86",
+        "baseline_source_sha256": "7ed090697c20c9adc39aed5bde6038c2e4fa76c609f68e31cff03bd5f9a4bdb7",
+        "before_theme": "Monitorização implantável na insuficiência cardíaca",
+        "unchanged_other_fields_sha256": "d451dd2a561f871854a20de5a5ea57b4e9e9dc3152998ad7867392edc5faf77b"
+      },
+      "amlodipino-versus-labetalol-hipertensao-pos-parto-estudo": {
+        "after_theme": "Gravidez",
+        "anchor_source_sha256": "67b2c65d92000fee754f371bc8ac9e340cfec3ebc2cd71e3d0c453cac6b243ba",
+        "baseline_source_sha256": "9a36e6cced054fb37caf04ceb9ee742d192ac92d5c533c50bab8eb000807615b",
+        "before_theme": "Hipertensão no pós-parto",
+        "unchanged_other_fields_sha256": "1b0e5ef31e067967415b11a36e6ed2d474a4139564fb505f32435af9a8920b6a"
+      },
+      "amplitude-o-mediadores-beneficio-efpeglenatida-estudo": {
+        "after_theme": "Diabetes e cardiologia",
+        "anchor_source_sha256": "0f82bd45aaeaaaa61c0c49b079f202e05411c62b9fb1054f4677f8f5806eac05",
+        "baseline_source_sha256": "0f1c71060c65637538d1f545aaa4d072b1dd2a8d83cf7e1d4328254233cda433",
+        "before_theme": "Diabetes e risco cardiovascular",
+        "unchanged_other_fields_sha256": "0e3b1851829f8e7c746097e0909c007fe86994d2b81ce425052ff9d9d25bfe67"
+      },
+      "anakinra-pericardite-recorrente-efetividade-desmame-2026": {
+        "after_theme": "Pericárdio",
+        "anchor_source_sha256": "7769b0e3fba605b08f24a59673af241a6f1ee120b0bd4a9fb2c35bef00721495",
+        "baseline_source_sha256": "5fdbb315b59e94a6d50cb8ca14d8373189fada8dc68a33eaf6c7240481f8280b",
+        "before_theme": "Pericardite recorrente e bloqueio de IL-1",
+        "unchanged_other_fields_sha256": "9f2068b84e7c4afdc5362211fcb6bc679cbf2dddfca45d5fd8c22c70e0a43eb8"
+      },
+      "aparelho-mandibular-versus-cpap-pressao-ambulatorial-12-meses": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "803e305925a6d874b71fd85f4e2bcc3afd97b00399cfc0aad754b5c3572d8491",
+        "baseline_source_sha256": "649e78c4f70362909ebeb42762e27d0229594b54e548a3e8a1b9931f7c711c54",
+        "before_theme": "Apneia obstrutiva do sono e hipertensão",
+        "unchanged_other_fields_sha256": "b1aab90102bc61294920a18115a62f53e9cc9521f6b50c98931c5301265362a8"
+      },
+      "attractnet-ia-rastreamento-amiloidose-cardiaca-estudo": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "b2f19bfcb096376199a50b9c4dda7f02205dacd24fb9b99afd0aee8e0d8beb23",
+        "baseline_source_sha256": "5cb5dac88b44e3b75e15573ec3b373addf7969cd3abb4b4a24e78aa469b3cce0",
+        "before_theme": "Inteligência artificial e amiloidose cardíaca",
+        "unchanged_other_fields_sha256": "b98336e7d4976cc36f2d7835c5173b0e002e1c134c09670d8572b33c94e728e5"
+      },
+      "azalea-timi-71-anticoagulacao-previa-abelacimabe-estudo": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "4683ba3acc5b90960da1f71b52126cfd18b9672ca8d1f50373fb1bec704e8125",
+        "baseline_source_sha256": "d624168ddd47238824963ac5a5791b1307b0e03a058073736695ebecb63b4968",
+        "before_theme": "Anticoagulação na fibrilação atrial",
+        "unchanged_other_fields_sha256": "c7b4110c5b78d650932b6cf8abc690940bc85f6ad15e31932f9477f5c57db186"
+      },
+      "bioflow-dapt-acs-alto-risco-sangramento-stents": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "1b1d886478a0f6c195e87bad44a6997b1de2b47a221f4970865aca20f03de6c7",
+        "baseline_source_sha256": "e2df19deacc22161585443ad2603bf6fff79d2b694305af4de936f6012f6ffb1",
+        "before_theme": "Antiagregação e stents",
+        "unchanged_other_fields_sha256": "ed34c42e5e90ed4ea7ecf64af06c21fb3f69802589a925617f61f3d01a68495e"
+      },
+      "bisoprolol-verapamil-cardiomiopatia-hipertrofica-nao-obstrutiva": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "d6670b2401729bff974cd89b9769173be4db995cc97ec61accb1ebc740ece17a",
+        "baseline_source_sha256": "3dec98e4ce9bfad505444f11fb6e6b92dfee367f390c1f94bde016585e3f1db4",
+        "before_theme": "Cardiomiopatia hipertrófica",
+        "unchanged_other_fields_sha256": "75c116f7c749484295c37508e8cd9a43a73d66eedd269b38c91e6a745ddbd46a"
+      },
+      "bloqueio-sequencial-nefron-versus-sraa-hipertensao-resistente": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "95998bd8398fad266cd813112411fab082bab07d119a14f71b68b46049a35d11",
+        "baseline_source_sha256": "d8f14e16f21b25429c9be3e3703812c7dfd46249de8b15a07ac37524f48a78f4",
+        "before_theme": "Hipertensão resistente",
+        "unchanged_other_fields_sha256": "5981dad3f2ee3a5217f36386fb7fbd5e2010add6c8f6b287ed74af1bf3e615b0"
+      },
+      "box-alvos-pressao-choque-cardiogenico-pos-parada": {
+        "after_theme": "Terapia intensiva",
+        "anchor_source_sha256": "1612d095fda4017c3b4839a7134eb9186638c8b82dec3be0ac14349ad41e8593",
+        "baseline_source_sha256": "56e50214e0559ad6135fa063b5c3044354ee87c2aefcec9c723876275459606c",
+        "before_theme": "Choque cardiogênico",
+        "unchanged_other_fields_sha256": "5540e6bb7de1e8f71b8061e06e89777253fbedd50df885883de999e20508a542"
+      },
+      "cardioversao-fa-ondas-bifasicas-rbw-bte-estudo": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "6a1832a990c518725465615225d95e7b376335d0a318474eab6884288f05e04b",
+        "baseline_source_sha256": "8c5b8d13bfa3f2b1e7f97305b83cf312fe9ec3a7b34fe1784fd8d5d5346f6765",
+        "before_theme": "Cardioversão elétrica",
+        "unchanged_other_fields_sha256": "ab0ee6cb935cfd9117d73c35f760d631c7a77c3d6a58d75a52f294660be3e13d"
+      },
+      "carpe3-reabilitacao-fase-3-manutencao-exercicio-doenca-isquemica": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "9e5eb68db35e7839e62dd08bc8debbb52c28d0d708d66a8d0b2abd16efe535f8",
+        "baseline_source_sha256": "f81c2277ba1292234d8c2f91e25329cfb59898bd7fe348f0879d63b7b617e2dd",
+        "before_theme": "Manutenção da reabilitação cardíaca",
+        "unchanged_other_fields_sha256": "7900947a80db6f8cccf0ff0588cd974d68b5f3de1dd010c9401032ec5373b8d2"
+      },
+      "cavitacao-ultrassonica-microbolhas-ulcera-isquemica-clti": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "09551f5b38af51c7151eed6e2d572aa9dff71351aae54f9a9ec63ab63ef7a359",
+        "baseline_source_sha256": "f93332273fabae6c7bbd5cb9434a5850317f91adc00c21af71108a1c5b78bcb9",
+        "before_theme": "Úlcera isquêmica sem opção de revascularização",
+        "unchanged_other_fields_sha256": "af821601d52c7c374b8d789d11e2aa1c5dd00f284d42f0566e602e8462de21d6"
+      },
+      "clear-outcomes-acido-bempedoico-eventos-de-membro-dap": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "cf6079cccb584d5f882121c63804158615d0d5fc43da6f52544c6151d4e00929",
+        "baseline_source_sha256": "844849616498e81e91053d46f5b7234db90cfe91ec51c6548586720d97f30b5e",
+        "before_theme": "Proteção do membro e redução de LDL",
+        "unchanged_other_fields_sha256": "2187686d0bef36b36753a01a5b5f4d5ea957a4e55353704b98e930a88e0268de"
+      },
+      "confidence-finerenona-empagliflozina-pressao-arterial-drc-diabetes": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "dbaa5a7612c7d5a56567f37b069c6fe14751737d30c2b36c42e38993925c59f8",
+        "baseline_source_sha256": "92b5721f0f118aaf301461c1863aafa3f72bd96be11e7a478be190a7d48bd019",
+        "before_theme": "Hipertensão na doença renal crônica e diabetes",
+        "unchanged_other_fields_sha256": "dc53f1656eb4cfbdd8754bd2edf82c1a2fe3fb5d4eed55257c2eb6bd2aeddf9c"
+      },
+      "convince-colchicina-pos-avc-aterosclerose-analise": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "8933c4e3fb2da7e59ed6b8a53c9e91f89584423d82f6c1b58396161d7ea1e624",
+        "baseline_source_sha256": "a63044fb0002c39f9079096d143d8230e34b108ddf208eff97d34d979259eb10",
+        "before_theme": "Inflamação e prevenção vascular secundária",
+        "unchanged_other_fields_sha256": "bf44137d807dd1f9e746e25779fa0b868b774fc96ea25e6372671b428db2a983"
+      },
+      "convince-colchicina-subtipo-avc-estudo": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "536d170761c0236e3812220808708b77306a994506fd086325cb6f5e17ee71a4",
+        "baseline_source_sha256": "4ed3eff3cceade5c7e58bdce628c4b7a8f5a22c16b86c7ad97b4f2c0a092d34c",
+        "before_theme": "Inflamação e prevenção vascular",
+        "unchanged_other_fields_sha256": "a0bc244d7b6681b2d592dbf61da40c10766c48c953e4d4a33d4e10e7526d4b70"
+      },
+      "coramitug-fase-2-attr-cm-estudo": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "bfab28cb2e9ee0ce0533490f47e1cf6fcc4c96a61fd25ce36a580f85f4f9397e",
+        "baseline_source_sha256": "c6de1d906a39a96d6df3b43ea6e8083f9f391e7993d350e3ceeffb9301b7ddd9",
+        "before_theme": "Amiloidose cardíaca por transtirretina",
+        "unchanged_other_fields_sha256": "bf8df6fa0d5dfcb32967cc19bbf9a36201b13ac1573bde48d12e65d11abf93f1"
+      },
+      "cpap-fenotipo-alto-risco-osa-multitrial-estudo": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "cc86c91d616029a4d9ebbc3f75c800304e0ecbbec7c5d3e77f0a0ebbc05a45a5",
+        "baseline_source_sha256": "965d4076e8c4d92c4c755fc3fffa9107e1924215a950371725910633c48499a7",
+        "before_theme": "Apneia obstrutiva do sono e risco cardiovascular",
+        "unchanged_other_fields_sha256": "88aff5babe525b832d7f3a96f386c24c65425a8efe9a70a13e1fcaef3043bd26"
+      },
+      "crhcp-controle-intensivo-pressao-diastolica-baixa-analise-secundaria": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "473995d2c9bf32f0000abcc251f8067b1850497b8e9ce6f234ab7749f0f73b11",
+        "baseline_source_sha256": "d436d7693399d87e5223f056fbe57cfa84c5342a18d09f8fbe95fb550908cc4c",
+        "before_theme": "Meta pressórica e pressão diastólica baixa",
+        "unchanged_other_fields_sha256": "424d4b47c12b62bc4609f0a7774ab195056463b406c60b320ec3601f90777ccf"
+      },
+      "danflu2-miocardite-pericardite-vacina-alta-dose-estudo": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "8781f35951865f9c32e4f6c1bb0269ba144a59a56bc826c4bc624b3f7e36801e",
+        "baseline_source_sha256": "4363689f3e16e2ec0ad607b86881078a9bdced26bd9f0862dde53550435c3cb0",
+        "before_theme": "Vacinação contra influenza e segurança cardiovascular",
+        "unchanged_other_fields_sha256": "d3db7fed73a03ac0fd783d33ab2f0ed69af55655fcdb4f99f6e13ae88705e003"
+      },
+      "danger-shock-recuperacao-clinica-precoce": {
+        "after_theme": "Terapia intensiva",
+        "anchor_source_sha256": "02af96b317f5a548793fffd8e7d469cf9e06f5fecf9265422528fb506951b046",
+        "baseline_source_sha256": "7316cd9c10220741aa3b011df9d5adbe207e3885222cc099a3dbbfa5b958f30f",
+        "before_theme": "Choque cardiogênico",
+        "unchanged_other_fields_sha256": "acaf9751186007f43e6af5edf3cd67ce6a820d8bc303b66af86b4b74f3d7316f"
+      },
+      "dietetista-remoto-refeicoes-dash-veteranos-hipertensao-obesidade": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "fa3d3f35f720b77704f0bf895ff9019cfb354bb8ceaf8f8425bec52d8af74207",
+        "baseline_source_sha256": "a2c3562d617d7c56a9929b3174f9b7db4fdb364caf50d43a436283cc2ac86c54",
+        "before_theme": "Dieta DASH e hipertensão",
+        "unchanged_other_fields_sha256": "2855029682193f728dd7482f9c9d9e72f9c1526a84451fee9c48c3c79fbfcf8e"
+      },
+      "eagle-ai-ecg-baixa-fracao-ejecao-ensaio": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "da33becb08f88aa35ed00ce264df73482a6718c7839d8b3ba579303ca4dbe6d2",
+        "baseline_source_sha256": "de7cb1b7ee87f9ab2141a38463276460b574337bddaa83fc99ca3b0c7482bd39",
+        "before_theme": "IA-ECG e insuficiência cardíaca",
+        "unchanged_other_fields_sha256": "7fe96066f0ee8407f3b6e80bb31324a8a245a790e77cb403477db658b9c6a76a"
+      },
+      "emori-hcm-estimulacao-ventricular-direita-otimizada-cmh-obstrutiva": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "1813595af1baa4f87b8b6d87e4002be77e2f26950e13582d7f0bff01c33e2b7c",
+        "baseline_source_sha256": "bc494a46b92abef208e365e554c0c3a833c652c1e507b031103a774c1d6aa193",
+        "before_theme": "Cardiomiopatia hipertrófica",
+        "unchanged_other_fields_sha256": "0d5baf59381085ba0cd7f25d2ef247ae20d265a3e3362f7051a4f38555b14dde"
+      },
+      "empagliflozina-recuperacao-feve-pos-stemi-pci": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "a27f33a4999b3a3a8d1ab3b2d0c4d4041fea372eaf0260c3d232e6eb295a6446",
+        "baseline_source_sha256": "fc037f79eb27dcfaf848ce18ebbb30a749f4ed6e899b66a7a5b36c484bdf1ec2",
+        "before_theme": "Terapia pós-infarto",
+        "unchanged_other_fields_sha256": "51997ba5e4f7f6a10dd576ec45826e6677993370c5be2168dc50051f88fc3ba8"
+      },
+      "empire-prevent-cardiac-empagliflozina-capacidade-aerobica-risco-ic": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "daf30e0ddb8fca19e0acd69b871cba28116d82545f6664e86a7f587357525a06",
+        "baseline_source_sha256": "246580bf8ae17d229ffe25ae01d8cb44eb7e2153c2f1c99c50ddb38b70ade3b7",
+        "before_theme": "Prevenção da insuficiência cardíaca",
+        "unchanged_other_fields_sha256": "2e471545e756d8dde0f8b3b9a4bdb44a22faf2ca11badeadb3fa442d58a259ec"
+      },
+      "empire-prevent-cardiac-empagliflozina-massa-ventricular": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "5a2ac25ac4d1eb0a26822e4039d930dadc340bb606c21f24ef53cabaf062f98d",
+        "baseline_source_sha256": "c228ca8c3c55f4f4a4fc29fe2d0f14e36653551eb4ec391241dbade3b51248e0",
+        "before_theme": "Prevenção de remodelamento ventricular",
+        "unchanged_other_fields_sha256": "08d85fd0fe7da575e49962b42b1b21d4ce1899b9acc9424bee104365e5fb5abb"
+      },
+      "equal-apple-watch-rastreamento-fibrilacao-atrial-randomizado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "7d1f69dd20aa00b8536c4708103511c81d0920c786ef0e82664c634cfee16956",
+        "baseline_source_sha256": "a900dc6397c8bcd4116f2cfff8848b3320ca531534865e29da6889a87a1f43c1",
+        "before_theme": "Wearables e fibrilação atrial",
+        "unchanged_other_fields_sha256": "100dcdfc912c37db80654928c479ef28de05c73559a8365d0697b5092af19b9d"
+      },
+      "escore-prognostico-miocardite-validacao-inicial-2026": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "23586e9eff0b283e9a5928ceecd8ccc3c9ac07d18817f4ccd5d09e0cd650c307",
+        "baseline_source_sha256": "888fa6497145ac2912fea8c1ed7f3fab00508bacc91aa475f3fe93b7634e561e",
+        "before_theme": "Miocardite e estratificação de risco",
+        "unchanged_other_fields_sha256": "af88d8eec6d8a79ba7cd664b5daf5382a2f6be367ace3d2b1d525d18dc22f21c"
+      },
+      "exercicio-liraglutida-aptidao-fisica-pos-perda-peso": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "9b78296ef39240a1e11c4407c0b14ab0e7c19fb9b09f69bd1ca9aad492ab9568",
+        "baseline_source_sha256": "47b235409862e786c17732cdc561c701452b032e3870d5d9ed8af3b97dc6b565",
+        "before_theme": "Obesidade, exercício e agonista de GLP-1",
+        "unchanged_other_fields_sha256": "529c167ddbb4e107f4711723e248864af4654e495034e319facf19f177be23fb"
+      },
+      "exercicio-na-gestacao-seguimento-metabolico-dez-anos-estudo": {
+        "after_theme": "Gravidez",
+        "anchor_source_sha256": "e5c205f897f507a3a761e8e465a3a65594851c9d03eb48dcb5702a4de8817a7a",
+        "baseline_source_sha256": "7e6e62b8ba80da293e82b329801ed05e9ac7fc1e9fb76fcfadb43877f7dc5a8d",
+        "before_theme": "Exercício e risco cardiometabólico na gestação",
+        "unchanged_other_fields_sha256": "adb1189dc6156808ae486c86dc1e8d48ee229a9ca08a9127f4f1d137bf22ecc7"
+      },
+      "exercicio-online-sobreviventes-cancer-mama-vo2-estudo": {
+        "after_theme": "Cardio-oncologia",
+        "anchor_source_sha256": "a58fc61555bca44667a03a9e9e645229f51f6d001a388ca9f32e3ed58337a641",
+        "baseline_source_sha256": "93ceb772c763900992d7d0c701feea5330465abd76cd491ccac4b3af52c30ef9",
+        "before_theme": "Reabilitação em cardio-oncologia",
+        "unchanged_other_fields_sha256": "8b7fcdbee059cc60c15cf998a5dd31ef034752e647bfbbeb725b888f54e51b67"
+      },
+      "fair-ffr-stent-arteria-renal-hipertensao-renovascular-um-ano": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "8dc32cf0d088cb660a19ace838e87ee0a9c88a59e7017942782ac9eb5c1f84cd",
+        "baseline_source_sha256": "2d010b290983df112ee7c384990750faa598822918325349425252963770d501",
+        "before_theme": "Hipertensão renovascular",
+        "unchanged_other_fields_sha256": "cb63edbddf9764d0cb92d97788db8ef611dd2e3b6a168bac16da7f2070caa9ae"
+      },
+      "fastr-reprieve-descongestao-automatizada-ic-aguda": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "7e0854321578e0be35c410c58bc603844e5d695b5cba1b95e81d052dbadac2c0",
+        "baseline_source_sha256": "1096e3d188a0d5b9ba4e91377aacb848feaade4a4f8db3860512a87401149db4",
+        "before_theme": "Descongestão na insuficiência cardíaca aguda",
+        "unchanged_other_fields_sha256": "c152bada2a1e66a3269feb1c69bf8a4bd4baaacbc49855097b3eb22b48910637"
+      },
+      "favor-iii-china-qfr-cinco-anos": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "364a6d698e3ca3b74d0fae8430a783483c785b5e8520addbd144d9b319950aca",
+        "baseline_source_sha256": "bbde6979fa14e9ebc6491b8acf83e4ded44d572aa0430e54a31c272b39666eba",
+        "before_theme": "Fisiologia coronária",
+        "unchanged_other_fields_sha256": "f977d2e9596133d112d1d972dc2fce6d41f5e74840fbe65a6f17ee97a2c14ea3"
+      },
+      "fidelity-finerenona-estagios-sindrome-ckm-estudo": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "93335a27e02c3d0a75a735b3a4f36a68e0b4477216cf490e30f9dab5806cc78f",
+        "baseline_source_sha256": "39a054bd85eff0a98ace48aba8e15420e062bf7ebf62a374a51865c03beda728",
+        "before_theme": "Síndrome cardiovascular-renal-metabólica",
+        "unchanged_other_fields_sha256": "dd68b2ff4b620038b4e495e1213f5b0f1d4592881ab12eee469661201bb0b097"
+      },
+      "find-ckd-finerenona-drc-sem-diabetes": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "bd2ed3cd471492e1999492dcc58775b31765bedc39dad59e8c4be2302788988a",
+        "baseline_source_sha256": "79cbbad8781c3fbdfd075dda106fc00d342157f1485cc1af71b087ee828d5550",
+        "before_theme": "Cardiorrenal",
+        "unchanged_other_fields_sha256": "18df98adf17ea9788334035d95bcf322b07d79234b225c6ac851aba4ff472c37"
+      },
+      "fourier-obesidade-beneficio-evolocumabe-analise-pre-especificada": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "cc0d60ce9cb03f46741d15866a9c749fb36ac60d7943fb13e8f52db60dc556b4",
+        "baseline_source_sha256": "de66632195757c8d21270e3a7617b25549c5ee8ad9410ba57f801d6fe946e39b",
+        "before_theme": "Obesidade e prevenção cardiovascular secundária",
+        "unchanged_other_fields_sha256": "c8fcba3ca8db1dd7d8a1e90fdb83db83316187055890c51646806e0f0343cc6b"
+      },
+      "gamepad-gamificacao-atividade-fisica-doenca-arterial-periferica": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "37e6cbc984ad3f8df0a8798cd83b5cbbe5b2558f1fb59d8f01649745d1403c39",
+        "baseline_source_sha256": "4b37d51111b2ca6f423a54265ce602022838b6c914576dd2cfb56c9cce73f15e",
+        "before_theme": "Saúde digital e doença arterial periférica",
+        "unchanged_other_fields_sha256": "560b5f9d6364175e3ef0bdf5c6a417b2e67e7f88760705dd033b49a9652518dc"
+      },
+      "gips-iii-remodelamento-pos-stemi-diferencas-sexo-estudo": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "1a0e833c52feed4e10625afad55e8ce56f245da2baa7b6369c8335a4531bc4d4",
+        "baseline_source_sha256": "219d502a1a0dc3b98213f5f302d22ac80675351313a8b5be6bfcf5723a57a8b3",
+        "before_theme": "Remodelamento pós-infarto na mulher",
+        "unchanged_other_fields_sha256": "cef66bca5a626d2fa180c656393d4382728fdf29a82b0136699534a0b6189c78"
+      },
+      "gofreshrx-entrega-alimentos-dash-hipertensao-tratada": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "a29e8ad59bd3c0023e3c95dbe43d017e451518d8be44a76f41e962ef0ffb2e3d",
+        "baseline_source_sha256": "983488e6028ac8dec5b48cb68d3046b2a1fe9d58bb86db1c569c3440a7478eb8",
+        "before_theme": "Acesso alimentar e controle pressórico",
+        "unchanged_other_fields_sha256": "76e6f2231e0c1ef2ee93228f4fc0db263a2675f4c9dff6651bd50e486fd95dc4"
+      },
+      "handgrip-isometrico-pressao-estresse-mulheres-hipertensas-estudo": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "867683007a285a6c2890f13af690eca2430e54df06a16e8fb8fa0347277b999a",
+        "baseline_source_sha256": "54b21517706011e70745c348a9a3f25853c2f1f37bf6c73ac219828e8c02d154",
+        "before_theme": "Exercício e hipertensão na mulher",
+        "unchanged_other_fields_sha256": "c7bd7f36e8b6059743e23590763c89b0b350495c694751ab18a20e25749b1f81"
+      },
+      "hiit-inflamacao-doenca-coronariana-estavel-rct-2026": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "3b1e75b116e32652e755ad60caa48701feebab573a82653db11a04ef46262de6",
+        "baseline_source_sha256": "fa22f50efec4eca71333e65a09fc45d39291fc6a6e3b0bbf1818dc83e28d6246",
+        "before_theme": "Reabilitação cardíaca e inflamação",
+        "unchanged_other_fields_sha256": "c5cd4f69d5a539d52f87d9a57fca42189e6f30e4b286caf5688df6a65816604a"
+      },
+      "hiit-mapa-rigidez-arterial-metabolitos-intestinais-hipertensao": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "14161b7e6b553fb089c03b83922a09ded74bb92a87a511b49f85382a9e6209fa",
+        "baseline_source_sha256": "53a6892b4d110383de9d52fc983c370e2d30e015cfaafcdf7b382a19ed267872",
+        "before_theme": "HIIT e controle ambulatorial da pressão",
+        "unchanged_other_fields_sha256": "e3f0eea0df674527d1d91924384c74bb3a0fec86fef5ae5892b594bcd2344c34"
+      },
+      "hiit-mict-reabilitacao-pos-iam-pci": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "37acf00514ed82d3ae91a2274fedcc57c38a5fb56c50776727f696ec7ec1bd76",
+        "baseline_source_sha256": "c68079390afee367166b5baa437a2a3412c7df7add40ed234862d9e07b1f2fb5",
+        "before_theme": "Reabilitação cardíaca pós-infarto",
+        "unchanged_other_fields_sha256": "f5827df11b5ee25dce66120b5f95941937741ee70acf2c3d1c5872e8bc0c50db"
+      },
+      "hiit-versus-continuo-resposta-pressora-exercicio-fibrilacao-atrial": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "22f68b1fc35f3dd5effbe64f246495c9ec751d48722dd74944e903ec89f00c33",
+        "baseline_source_sha256": "c06f076769288720e40999a7951ef23165c728b5b182a39658ed7c079c48d8e5",
+        "before_theme": "Exercício na fibrilação atrial",
+        "unchanged_other_fields_sha256": "a30f12e69c0db87b122f7721b4cecc3f44724accc92aae2a0da4c5af52470c44"
+      },
+      "his-alternative-i-his-versus-biventricular-cinco-anos-estudo": {
+        "after_theme": "Dispositivos",
+        "anchor_source_sha256": "d6faa9acff706fb7ec17887a2d90a4f80cbf3b15f5166dd0ebd511846285aacf",
+        "baseline_source_sha256": "ab806bbcd81fe54e9d47e5a82409e55f720a53a69c186601bc73142a49be7cdc",
+        "before_theme": "Ressincronização cardíaca",
+        "unchanged_other_fields_sha256": "c3cd69d75a9adf53bf39abf0847c618b64c6dbb3c2ee25c454b855d811c18025"
+      },
+      "hydra-years-cancer-embolia-pulmonar-estudo": {
+        "after_theme": "Tromboembolismo",
+        "anchor_source_sha256": "2e0d74a8f4aad4b11f3b86cc4727dff57820bcbd67a11fc0a85905073046520a",
+        "baseline_source_sha256": "d3955cdd5ed295db02a26409b4f95d49a0683c28c2b93ba63dc2218a1ac3f349",
+        "before_theme": "Diagnóstico de embolia pulmonar no câncer",
+        "unchanged_other_fields_sha256": "e27258d691c32208cc1954b1dca029c79cd41603b933a40b67d51e129b43a85b"
+      },
+      "icare-ofdi-litotripsia-versus-aterectomia-rotacional-calcificacao": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "41da60ac61edc02cd8e598ef7ab5b48f77c4d22a7e10e2940e67b5bad8c36330",
+        "baseline_source_sha256": "7a7fa191758d9be3e6f5a871faa8fef479da9c8266755bf75cd2281c371b8134",
+        "before_theme": "Intervenção coronária em lesão calcificada",
+        "unchanged_other_fields_sha256": "222ed3e3c01e23b517634529ccbfc526d402245e92edad42e18d16d7e6c43580"
+      },
+      "intervencao-multicomponente-hipertensao-cronica-gestacao-africa-estudo": {
+        "after_theme": "Gravidez",
+        "anchor_source_sha256": "e03a5b8f8417dd4e40c1067886cd99bb0c15db46fe2bfc56c70fe508e21d758d",
+        "baseline_source_sha256": "8815c2abbe153c0e2ffff21bac97fe6a78ef7a17c4acddf2f66434b978c65b75",
+        "before_theme": "Hipertensão crônica na gestação",
+        "unchanged_other_fields_sha256": "938e49df0214b065a3a4a6c6f0e12e3d5d895d60c67d2eb88208904f61e536be"
+      },
+      "ischemia-diferencas-sexo-estado-saude-angina-estudo": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "35a6cd646a45960c64b94fc2cd512bfc92ac428c13981eb2970f615f91cd7268",
+        "baseline_source_sha256": "5516431d4886a090857229a2d8329b9aab95d6f6c1675f9c2fe6c8ab0f5a03af",
+        "before_theme": "Doença isquêmica na mulher",
+        "unchanged_other_fields_sha256": "b233dbebe1c9679a5fe2945549c5ae7da0cca612821e3f231b287549c902f1ba"
+      },
+      "ivus-aterectomia-rotacional-planejada-lesao-calcificada-grau-3": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "9ae80bbcad308aa6e917d7882ee15b63b5dbb688689a864b1ae428e0d5c9d03c",
+        "baseline_source_sha256": "10e257e6d58ec1495d543c5a4a97a8495ab0992993c358445f905fa211df0bcd",
+        "before_theme": "Intervenção coronária complexa",
+        "unchanged_other_fields_sha256": "25adb4987fc703bd04df2b6f11a1f3d4b0d72f883ccd26a75a97db49edfd9256"
+      },
+      "ivus-estrategia-patencia-intervencao-doenca-arterial-periferica": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "3159f18d935ad7d0b0b2a5dc61efe28c78ebb277488753dfafef9165cbc7f284",
+        "baseline_source_sha256": "342fb054ecbf2db739df1dd63bc18407c89974f9ea542f261b16e8cf3ef31c09",
+        "before_theme": "Doença arterial periférica",
+        "unchanged_other_fields_sha256": "9bba6f50f113918e02cc979456e52d2e6662de1bc3388064b73453b4d03434ca"
+      },
+      "jejum-modificado-cinco-dias-cardiometabolico-randomizado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "211e3c3b18caf69e8f18c72f1def657aa3e99138424a17cdd49daf7e50612806",
+        "baseline_source_sha256": "5c7c7f6a456804cb94e25aae42dcc609fd5b3d89fccd70ce1df2860253233d87",
+        "before_theme": "Jejum modificado e risco cardiometabólico",
+        "unchanged_other_fields_sha256": "ced3f88ad912c04e8943a8c82fdeb3918303053aa0058f79fa259ebc3b19ba30"
+      },
+      "laroprovstat-pcsk9-oral-fase-1-estudo": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "cd541c5308aa95b6a81773a614c95cebe3fc1bab9beff734fbe3a2c00240b157",
+        "baseline_source_sha256": "e6d620f3399763bab5122e57a78d723deb7bb5ce18248f7cd3af44691aa20afe",
+        "before_theme": "Terapias hipolipemiantes emergentes",
+        "unchanged_other_fields_sha256": "3dbfaeedd8272a0f756a82e0c6157b5f61c5e35ff5cb3c8707031294fc238bbe"
+      },
+      "life-btk-desfechos-por-sexo-scaffold-everolimus-versus-angioplastia": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "144392ef69718494e955ac7384e7376038512c347376989302b83c4f0b5a7cc6",
+        "baseline_source_sha256": "437b650acdcabbf534b3a8dfad809f2fb355d2a7ee03a444a1bd37d7716d20ec",
+        "before_theme": "Isquemia crônica ameaçadora do membro",
+        "unchanged_other_fields_sha256": "95ef24c606355aa82a741cdafd95feec8d0d170d7ea74b0e60b1d528761980f9"
+      },
+      "lpa-frontiers-apheresis-pelacarsen-estudo": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "3adbb98e75ca49deff51301e2ac622c1c41353c6b8da4fd9f18a3267ad864840",
+        "baseline_source_sha256": "68dc8b0a4bb2ce0d11cb6e05fbeb844b2a030a05c826829c4ebfb1ff41d3b0b3",
+        "before_theme": "Lipoproteína(a)",
+        "unchanged_other_fields_sha256": "f8ae76afc3f44114f0354af034a34144ae093eda38e0af4c2ea10ad5159ffab1"
+      },
+      "magnesio-prevencao-fa-pos-operatoria-cirurgia-cardiaca-estudo": {
+        "after_theme": "Perioperatório",
+        "anchor_source_sha256": "450bc44dc86a01ffbb5c6defcbdf2eef823452bfb92ef58ab83ccfa9b88e31b5",
+        "baseline_source_sha256": "f9c088131be6b9f5f84627c2f9845e3a9fb70a136772297bb19982a7cfa62b4d",
+        "before_theme": "Fibrilação atrial pós-operatória",
+        "unchanged_other_fields_sha256": "7314b8641bba8c24798a33b1cfc9b834c0ea94b60847c742004f01dad181fbe2"
+      },
+      "mapt-mindfulness-exercicio-pressao-jovens-inativos": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "4e9e94188f9bb1d4a796b01c8afc21d566dd90c580d2f85c415e379871f34a63",
+        "baseline_source_sha256": "077bcbbd2f3f75585df709989accb0313c6a4aa0d6450028546d272b4fd3e0a7",
+        "before_theme": "Intervenções comportamentais na pressão elevada",
+        "unchanged_other_fields_sha256": "1a95d62f0b52d634275327f329bcb690436ed0b5b6b16840707d90922baa4c3c"
+      },
+      "mascara-fone-poluicao-ruido-biomarcadores-cardiovasculares-crossover": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "6f1b55740ce840d989ac6c717c31f6b908cf55466967820ccb586cd64bf5279a",
+        "baseline_source_sha256": "31c7dd8e3d78ad266348d8c61a2ffdf15c4cfbfd0984b8cc96cc2098f0ac2b5c",
+        "before_theme": "Poluição, ruído e proteção individual",
+        "unchanged_other_fields_sha256": "158318e1051cbcea193d4fe36cb83da724898ab1989536cc7ef38febaa79a7b5"
+      },
+      "menopausia-salud-corazon-intervencao-latinas-estudo": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "fe0e192c2ee83b7df98383a7f07ffc38a5b18835198141ee430c979a852a3964",
+        "baseline_source_sha256": "86be4022622da455ed664ed3741f278ac7fdf3664466057148fcd5bb4fc917b5",
+        "before_theme": "Menopausa e prevenção cardiovascular",
+        "unchanged_other_fields_sha256": "cd9aeb7c6d052b632ca7c80c52abf645fd15ff0771a5ab1e41949af2dbc989b6"
+      },
+      "mhealth-reabilitacao-domiciliar-enfermagem-insuficiencia-cardiaca": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "e63368cb921dab21d82b1519c1f936c45d533dd80be6a2372e04bf9cabce359a",
+        "baseline_source_sha256": "9d5495ab8f9371e50bd905802bdf7d0e3f3d68d5db0ec2f44481d0fe50e65861",
+        "before_theme": "Reabilitação cardíaca móvel",
+        "unchanged_other_fields_sha256": "1e3f065047f1f0b5722a2cb64aa058c14c9976a3378437ecab6fae90a0f5c2da"
+      },
+      "mint-estrategia-transfusional-sexo-infarto-anemia-estudo": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "45f346cf3e50423d99fd74811a566264cdb9567919c1a087a034b70810be2f9b",
+        "baseline_source_sha256": "508112a53858603055bab6fa1f7052eb57e22571506219ec17923486190c1102",
+        "before_theme": "Infarto, anemia e sexo",
+        "unchanged_other_fields_sha256": "f14151487bb737e6f144da71250ea074a221ba95d6c4d1cb3ccadd4d447627f4"
+      },
+      "miocardite-aguda-prognostico-longo-prazo-coorte-prospectiva-2026": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "b835b145efefcbb510fabb5eb38260fd95b996aed1283b6bdedee67266216522",
+        "baseline_source_sha256": "e8e9ee31ef737ddb9f9112b721c1a9490639dca461d629181e51f44c4fe347a8",
+        "before_theme": "Miocardite e prognóstico",
+        "unchanged_other_fields_sha256": "08af4c180f437c25e27f78be6d5be4176e14a886ae11f47fc22f453dc6fe7124"
+      },
+      "miro-ckd-balcinrenona-mais-dapagliflozina-na-drc-albuminurica": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "8892f3881c7bd2cb608cead74713e8be8da674e34f7929b880805491fc3b4920",
+        "baseline_source_sha256": "8ab83b6a99fbfb5eedf0e9425ea20661ec0c3f170ec43cdc052d8e8c72cc2f2b",
+        "before_theme": "Cardiorrenal",
+        "unchanged_other_fields_sha256": "0a57bf764e5b465dd8cdd971b24603318adc679e7671341997be925538597a1f"
+      },
+      "mist-cabg-minimamente-invasiva-versus-esternotomia": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "4d3e4db3339a69e1085db059354bb67a946d6b2142f55af371cb42eb4dd62a60",
+        "baseline_source_sha256": "510b2077dc5a40a88049dbdf87325c9fb656aeb6bd199aee5b16986e57a4fcb9",
+        "before_theme": "Revascularização cirúrgica minimamente invasiva",
+        "unchanged_other_fields_sha256": "c70ea97e597d36b13caa6522aa33d4898a6bdbf611c4718674feb11669e57472"
+      },
+      "myoflame-19-losartana-prednisolona-pos-covid-estudo": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "9ffa7999e13cc9bc9d58fd9c2d42da8acd91e5a3096d615634d760b4c0723d5f",
+        "baseline_source_sha256": "b88e4155d745cb77e998d2de46cf9a88fa24a514f80b3090ab829354a8e3750a",
+        "before_theme": "Síndrome pós-COVID e inflamação cardíaca",
+        "unchanged_other_fields_sha256": "b30a33a27e1c0aee7e5caee49ee698eb9aac1e61ef6dabf05e14c821bd2a9533"
+      },
+      "norscreen-rastreamento-digital-fa-patch-ecg-estudo": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "505486ddd9576d323e1b87b1ae190b96187485c4485fd3497824156fa966267f",
+        "baseline_source_sha256": "c0b0b1d7534004ea81af959654580e00ab493c20b761337f3016277da1283f25",
+        "before_theme": "Rastreamento de fibrilação atrial",
+        "unchanged_other_fields_sha256": "33b365c9226abe4f4f8f76331f675986a6c36dce1cca81e4cca09a7e7ee2b669"
+      },
+      "notion-3-icp-antes-tavi-doenca-coronariana-estavel": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "1969a8e132c44c460fa89338b5c53a369b46e8a36a03eeaa4d602028a342ca1c",
+        "baseline_source_sha256": "a3c5e664ee67ae84db7024187d3f8e47714ba75e43b0cbe851e9b56565599f77",
+        "before_theme": "Doença coronariana em pacientes submetidos a TAVI",
+        "unchanged_other_fields_sha256": "85e4edb44014ab806a94ba7f96ad7e2ab907785e95aa45593b6368d94274deab"
+      },
+      "onco-pe-rivaroxabana-18-vs-6-meses-estudo": {
+        "after_theme": "Tromboembolismo",
+        "anchor_source_sha256": "6e222cd1ac2b308fe241fd1d4084c741a46e16d7300a03d3603991e0518c26f4",
+        "baseline_source_sha256": "a97c4222845fc5bcd8d47fdefc067ad08440f0b492f4ca6d48ba5d512d2846ee",
+        "before_theme": "Tromboembolismo venoso associado ao câncer",
+        "unchanged_other_fields_sha256": "2e2f7532f38c0ae1694bb9ef636a79d3af87323a43d88f8cd966116cf7baee7d"
+      },
+      "optima-af-um-versus-doze-meses-antitrombotico-pos-pci-estudo": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "3d8daff81295e9c7eb3e4f762e5394e4cbd8ad5694134f2270fc7271c8d822ef",
+        "baseline_source_sha256": "7a4ee93b65f03905379a7d4c1be61433cbd42b0977c723c18a9459bed1d95918",
+        "before_theme": "FA e PCI",
+        "unchanged_other_fields_sha256": "dc54d0f1d0e4687236a0d533c999b11bb485928c752f937d6153d88949458117"
+      },
+      "orion-inclisirana-doenca-renal-cronica-estudo": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "2e88faa31511a67718dc2fa343525173f6875b5b6893d43d17375b925fc509c9",
+        "baseline_source_sha256": "069ef873c3ad723ba30fb2893125d0b8ee095b001069eb4e1aff94efcadc04c0",
+        "before_theme": "Dislipidemia e doença renal crônica",
+        "unchanged_other_fields_sha256": "c96ad42371e67cf6641ef324750bf46c7b8ef2859337e4d01cb738e6c901a7b4"
+      },
+      "partner-3-tamanho-anel-tavi-versus-cirurgia-cinco-anos": {
+        "after_theme": "Valvopatias",
+        "anchor_source_sha256": "4c9eca03775060423d44a1e3204a088da44b1c8c32325cf2b652583c0182bf7c",
+        "baseline_source_sha256": "96cb7e52e8b9e9fcde1cca661a212feed89c34ce0b2f8765dc5f1fc9d47ba2c6",
+        "before_theme": "TAVI em baixo risco e anatomia do anel",
+        "unchanged_other_fields_sha256": "c391f397e31e88c344af359ef937664ffaa2d386a4cee3d7c18fb97ce2a89da6"
+      },
+      "pe-tract-terapia-dirigida-cateter-protocolo-estudo": {
+        "after_theme": "Tromboembolismo",
+        "anchor_source_sha256": "e6b1eecec2045e074455dd4ada00306e29d8db59e0e43b8286bfdb9a9ffc71ee",
+        "baseline_source_sha256": "67a89e32f4154c10659cad18a16bd562aaffa364c34e5b6bf058eef591781015",
+        "before_theme": "Terapia dirigida por cateter na embolia pulmonar",
+        "unchanged_other_fields_sha256": "c98c68bc8afddcffebec6ec11954df6428c1c40f4aeeb0b5fdaa9102d24c6d53"
+      },
+      "peerless-ii-trombectomia-vs-anticoagulacao-protocolo-estudo": {
+        "after_theme": "Tromboembolismo",
+        "anchor_source_sha256": "b06e4cbd2621af6bdab3401200e9fd0ac7b96c67ed7c31f3ac48e114128c2fc5",
+        "baseline_source_sha256": "4b23ee858beb04aedea09071751737096217005fe03219a96daae517dd986e73",
+        "before_theme": "Trombectomia na embolia pulmonar",
+        "unchanged_other_fields_sha256": "d90220b0118957462ffc63c14524921b23d9e795cb0728d8a965b908d51599c6"
+      },
+      "perfil-imune-miocardite-inibidor-checkpoint-2026": {
+        "after_theme": "Cardio-oncologia",
+        "anchor_source_sha256": "14ebe84748df37a6ec631e1f973f34553597bf0eb77f3ae23f341c5d16d8ba5d",
+        "baseline_source_sha256": "947c03985e3d1d70463fa0e50f7677a39c61a4f57ba2a150ecd6df0486b91e62",
+        "before_theme": "Cardio-oncologia e miocardite",
+        "unchanged_other_fields_sha256": "a0a2b351f65b15c50707ad6a8f61cd43a67eae992f8bc14d9928333a87bd1588"
+      },
+      "pfa-versus-radiofrequencia-lesoes-cerebrais-silenciosas-estudo": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "45726565d324b7c574c5a523d505e1c5a9d8d744253aac56f587ff12c906061d",
+        "baseline_source_sha256": "b17ecaa1847eece9ba5870d3bc74c7d14cfc86148f07a7100216de9bd36d4948",
+        "before_theme": "Ablação de fibrilação atrial",
+        "unchanged_other_fields_sha256": "237618bc1a0da13c192272e24f3f9ed4f39b6df69ed96b675854de9cd9986c5c"
+      },
+      "pfa-versus-radiofrequencia-sintomas-pericardicos-pos-ablacao-2026": {
+        "after_theme": "Pericárdio",
+        "anchor_source_sha256": "a69fecb0cb538688607910d935e499393252bef27e1496f66ef9e65abbff4913",
+        "baseline_source_sha256": "e309c85550a0043f78de128af8c2293ffdc603b49b7881ea32bfe2c90cc6f5e1",
+        "before_theme": "Ablação e inflamação pericárdica",
+        "unchanged_other_fields_sha256": "5008454e8de04591e82248b5a66fb60c920fcd8e012f13cd9e9dd9ffc87feb8f"
+      },
+      "pilates-pressao-ambulatorial-mulheres-hipertensas-estudo": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "87b88f0eb20cfb864f53a4c0d99a552ddd3618a8a4258bccac850994dc373749",
+        "baseline_source_sha256": "733959c9bd66639416d349c7286acc7490dfbb3c77d04372e733a6c7464df8c4",
+        "before_theme": "Exercício e hipertensão na mulher",
+        "unchanged_other_fields_sha256": "6421bf02d1b3975f966683fae0436889aa876881d92103f89c228c6848b8fa65"
+      },
+      "pitavastatina-dislipidemia-combinada-adolescentes-obesidade-estudo": {
+        "after_theme": "Cardiologia pediátrica",
+        "anchor_source_sha256": "1808be675c6e62949423b3e7b40b7d24b0f7b48f8a42520fc3a880eb703513d1",
+        "baseline_source_sha256": "7b26bfdb0f1e30f56f550cf6fec3212ef6a4a16fcd1bc48912c6bdfcd1bc3c12",
+        "before_theme": "Dislipidemia pediátrica",
+        "unchanged_other_fields_sha256": "e62e41cf4d05749ee37fc218ac70a8bcd9dd7ca157810c3d86e91a9dd025dc95"
+      },
+      "pivotal-pvi-parede-posterior-criobalao-fa-persistente-estudo": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "3f477986c0cceb9967088015e942edf811bbb7fda8f745f1d8e0922d2e6f62a9",
+        "baseline_source_sha256": "71dc4db89b67e40c9fda457d385c2db9c170c0ede16123f831f905411be54564",
+        "before_theme": "Ablação de fibrilação atrial persistente",
+        "unchanged_other_fields_sha256": "0aa69177414d60916044d411cd6fd6d94ed4876ba53aa4e11ec1f659c40c45af"
+      },
+      "pressao-negativa-incisao-inguinal-cirurgia-vascular-randomizado": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "ee37e8e7c71454f342c4d61136677bdfbf2041254686434552a34a86f53bb64e",
+        "baseline_source_sha256": "2409132b14d2d2caaf64cf8c1ab2718e995f35305778e2d0907a08636d708067",
+        "before_theme": "Complicações de ferida em cirurgia vascular",
+        "unchanged_other_fields_sha256": "3e87f8440d77bac2ddb9d21aadedb44680bfbf16e8ce5fa253c5701d80651709"
+      },
+      "prism-resiliencia-adultos-cardiopatia-congenita-estudo": {
+        "after_theme": "Cardiopatias congênitas",
+        "anchor_source_sha256": "2815f0c0acecc4b612dc37edf012f6e7fd3ad07f929ad1cc3110c025ece54606",
+        "baseline_source_sha256": "df8b6d64445fd92050c77b150073717e30510c4ecc30e0ee11509d51dbf771cf",
+        "before_theme": "Cardiopatia congênita do adulto e saúde mental",
+        "unchanged_other_fields_sha256": "afe8ede2d911858bd33dfe4637afbbfbf479c3f264d882969155f578d8cace96"
+      },
+      "programa-mhealth-domiciliar-adicional-reabilitacao-coronariana": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "7310651cbf27d842238208e11b0f9e1d9aef9972f51a3920c2a9a34ad5273e30",
+        "baseline_source_sha256": "94f2e521783abf57f1c22c6ff9b143b25d96d832a99cbeb6cbfa435bfbe277da",
+        "before_theme": "mHealth adjuvante à reabilitação",
+        "unchanged_other_fields_sha256": "e7a815d7608dca4824e00cc7f14a865e3f7188f7c7351b2dc3a86e56ecc95966"
+      },
+      "prolific-intervencao-familiar-lipidios-india-dois-anos": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "86ff47ecbc16b3a267919b5cbe15da48838e6ce2181543d7e58033a7e2cc0e7b",
+        "baseline_source_sha256": "d02f4bbdd4c046e7e203febc98160d3d110601f969ff023719ae6a3b8872f471",
+        "before_theme": "Intervenção familiar e dislipidemia",
+        "unchanged_other_fields_sha256": "b3dd6ce3bb9ab7d43539e04df5081a9f254304f2bb70f7c303ff4f55745a495c"
+      },
+      "rapid-pop-insuflacao-otimizada-stent-pci-primaria": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "dc92bfb11b3170e12c8d430d381c3cf9b15dc887e68acc50c307caead7840a62",
+        "baseline_source_sha256": "56cbc012cfcd9daf5bdcb7609048441f35184794018726a7be29501da8e2c9cb",
+        "before_theme": "PCI primária",
+        "unchanged_other_fields_sha256": "155e693d111971a3a2c92cb2ebeca6054bb1e340fa3ae7cec22bcb6f76c11cbe"
+      },
+      "rate-af-wearable-digoxina-betabloqueador-frequencia": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "14da26f6b78afdb5de983a167109fa0a9190941950ebb9b4f42d1326e79e4853",
+        "baseline_source_sha256": "25d22a9d8e473e0ac6f4cfd72f457dd9a949030885116298cbb9c998579ec183",
+        "before_theme": "Wearables no controle de frequência da FA",
+        "unchanged_other_fields_sha256": "e7c33a8441b68cefe333afbd75b6a921b1527a9a48dcf6dbb36adb956811dd2a"
+      },
+      "reabilitacao-cardiaca-hibrida-versus-tradicional-rct-pragmatico": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "f2f2003e249bb5a05a6e31d7b350db02a22c62731a5c20698ae2b3d87d080a80",
+        "baseline_source_sha256": "05c99177dddbcf2c1460771b84bbce1559f4d72f6f730728461e5deba5631b7e",
+        "before_theme": "Reabilitação cardíaca híbrida",
+        "unchanged_other_fields_sha256": "e041731283244dbf55cdc31a23e1a3e995f9327c11642d142f73b0e2d5d22735"
+      },
+      "reabilitacao-domiciliar-versus-centro-ira-rct-2026": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "82ec050e111d0b7212d091889a545de0b9ee7185379e8545d6b02007dca63c19",
+        "baseline_source_sha256": "04045278b362e02214581f1d8f038f4098996ab10f56551b81ccd25f3ef04b90",
+        "before_theme": "Reabilitação domiciliar versus presencial",
+        "unchanged_other_fields_sha256": "0938a91ed0c455cb2d7fc3cb077a3059b8607eaa18cb1afd4461ed5a710939fd"
+      },
+      "reabilitacao-estruturada-adesao-sca-estudo": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "532e0f3545e827dc0b732193550101e93ed2ae60ae9fd54e7f989d12a6bf397c",
+        "baseline_source_sha256": "20d876d9477e4dfbe744fb74599fd1a812551efe35a52ca8dc00c1910546a30c",
+        "before_theme": "Reabilitação após síndrome coronariana aguda",
+        "unchanged_other_fields_sha256": "3ed45c66d8decc5b34ac1bbda08c72ad49f0424698d9fe99744cbd4352699465"
+      },
+      "reabilitacao-fase-3-dac-icfelevemente-reduzida-pos-pci": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "ad9e1b69ca5c970be054a1fd9c581433c0801fb8f9ca08af1d774456cc1d7492",
+        "baseline_source_sha256": "c666603f4dd3b112a5837df958243fc74e4454a69b21d7dc0ad68f38f30bf095",
+        "before_theme": "Reabilitação após PCI e ICFE levemente reduzida",
+        "unchanged_other_fields_sha256": "11af383250d05bd08983be979eafa03eac932408e4acb72df072e2676fa69e73"
+      },
+      "reabilitacao-precoce-pos-infarto-programa-abrangente-estudo": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "937e1cd32104ed2b2b2ec4f3f286670b59753d4c71eaf9ab40382cfad550d480",
+        "baseline_source_sha256": "9fba3f4ff39f83a933982b1d96a5f985a899c2fa3590722a09a4afe552c068d3",
+        "before_theme": "Reabilitação cardíaca pós-infarto",
+        "unchanged_other_fields_sha256": "71ed63aa19baab3d8fa3586405ab80606175759d1f01484f4f1ce84ae3ffaf0d"
+      },
+      "readyornot-chd-app-transicao-desenho-estudo": {
+        "after_theme": "Cardiopatias congênitas",
+        "anchor_source_sha256": "b426dc14ce4e3151bde3f6bbee5c725659d57ccb0fd351bcea954234f5a2d2cc",
+        "baseline_source_sha256": "68dfad0b98a82028736cc3f446254631eda1292edaaf6eee23443a7137978f8c",
+        "before_theme": "Transição digital na cardiopatia congênita",
+        "unchanged_other_fields_sha256": "809d018dbe3fe0fc1c45725a9bb7687f80afd48df598faf4bf85422670806ed0"
+      },
+      "rec-cagefree-i-balao-farmaco-lesoes-longas": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "16f62c7eee1373367f3bb61a2a78c56394660c82cc5d3077d1b8779a3fd0d3c2",
+        "baseline_source_sha256": "93b273b43b698643bc1530ca3fe1a40bf6615fa3df817e17cf3f86b0ac035875",
+        "before_theme": "Intervenção coronária complexa",
+        "unchanged_other_fields_sha256": "d955996ce9583720c2cf7af70478f6a1039d910ef97084fbd61dfb5307ad8731"
+      },
+      "recorrencia-precoce-pericardite-primeiro-episodio-2026": {
+        "after_theme": "Pericárdio",
+        "anchor_source_sha256": "2ff50bf75a1a4a634dd17e9d56ea25e7c2190b92a06cd9a87f356f5f94a9531b",
+        "baseline_source_sha256": "94f035300863b92bddafb671b165140879d7f134d31c945862de2a29a06bf251",
+        "before_theme": "Pericardite e recorrência",
+        "unchanged_other_fields_sha256": "4f05a5de12e045556c89658d1dabfed5549f0cd9edd1e25e0a6d02ad48ecfa5e"
+      },
+      "reduzir-sedentarismo-monitorizacao-entrevista-motivacional-rct": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "5dd91930e3b0770a746e7b3216b0300903354aaa8fad9962f0ad5d61c80783e0",
+        "baseline_source_sha256": "a3533bfb6658a482e47efea56740ac1f1db473053f9277d786b04cad7f567d2a",
+        "before_theme": "Comportamento sedentário e saúde cardiovascular",
+        "unchanged_other_fields_sha256": "ebbd10204a2cd2916eae46f75927f3d858d5eb5f671a7931997dd5e4004840df"
+      },
+      "remote-af-wearable-recorrencia-pos-ablacao-versus-loop": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "389750e8759bed9e5c54739a9c5fbfff399ec9075f04584064a77b16984cc720",
+        "baseline_source_sha256": "9125f1670c055c22859b3d58196e7e27d4778803ee4df882bc485f71a608fa54",
+        "before_theme": "Monitorização remota após ablação de FA",
+        "unchanged_other_fields_sha256": "d390b47dfb34d6534355b500ca55f9b8e0264355c3d316fd57f49fb2101a22bd"
+      },
+      "renove-doac-dose-reduzida-vs-plena-estudo": {
+        "after_theme": "Tromboembolismo",
+        "anchor_source_sha256": "23a8609b5df7a882407d731b33bce31396fd24f39b1a393f31901e86710a91c9",
+        "baseline_source_sha256": "e410ecd711e7c33fc8960754b4c08b92dc8f872fec7f2417b23cbd45a49cf0ea",
+        "before_theme": "Anticoagulação estendida no tromboembolismo venoso",
+        "unchanged_other_fields_sha256": "13aeade2d27e66196d387d200366b8a767050adf5955395d5e67640d964a0032"
+      },
+      "ressonancia-longo-prazo-miocardite-pediatrica-covid-2026": {
+        "after_theme": "Cardiologia pediátrica",
+        "anchor_source_sha256": "a845b56f06cfe169f282aba04a8f2d800e9f725d7dfdc8bd1eb0f241a06d7932",
+        "baseline_source_sha256": "9e63cba30371853a921c89f80fb5d2118dd09b73f74b99582057d0b2370bdf13",
+        "before_theme": "Miocardite pediátrica e ressonância",
+        "unchanged_other_fields_sha256": "0796efa0265888775e12735c8e60631630b0c124b74f00cd0c167563e6a62a83"
+      },
+      "riccadsa-cpap-endotelio-fibrinolise-doenca-coronariana": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "01371e7cf718c8107577c9a98d8fd46e3452d993df9622872a22f776ce7c4c1f",
+        "baseline_source_sha256": "896067af086bdf10093bd5f8c31d87d7c2878e4ab02bb90989c34323d1ee95f5",
+        "before_theme": "Apneia do sono e biologia vascular",
+        "unchanged_other_fields_sha256": "0b7a44b809a3040e08a8d80163cf456f4a66fb1a2b07ba20c8895edba707596b"
+      },
+      "riccadsa-cpap-fenotipo-icfep-doenca-coronariana": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "01a6e1cface3e0bbb77eb841078d9888f6337eec3e415a511fd0c60900205be7",
+        "baseline_source_sha256": "9eda422ee1447bc94ab3e291b0a4439feae074a925c690ac2cc928af2744cff5",
+        "before_theme": "Apneia obstrutiva do sono e ICFEP",
+        "unchanged_other_fields_sha256": "941ef8dbee955a48afb0dfe416f04e7a7433bf346f633b5d663596de5bce4bec"
+      },
+      "rotarex-versus-trombolise-isquemia-aguda-membro-sem-deficit-motor": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "e3133dd3bd273392d7055eaee75b72d9ccc47486ca564d4f65978ca471a2eec2",
+        "baseline_source_sha256": "d029d89d00ec02d6c6f48e31e1625e1bf76a728a2a888231a840bf111ca5c833",
+        "before_theme": "Isquemia aguda de membro",
+        "unchanged_other_fields_sha256": "fe607a781195f2362ffff8f963d2b138410fd3f188bd02e6d82d57575dea08c9"
+      },
+      "safe-protect-anchorman-watchman-oclusao-apendice-estudo": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "aadf281680e55ed94fc1049e423e33326a4b8c67e6077f3c905c20dc1115a24c",
+        "baseline_source_sha256": "ad6f88063df758d3eabe5533bdfa556c89facfb84acfa2035dafe3d0d8a623d1",
+        "before_theme": "Oclusão do apêndice atrial esquerdo",
+        "unchanged_other_fields_sha256": "3fa709cf185273ddf77ea3d20b7d50271366fca5c1d15deb4cf5a8cd8a229658"
+      },
+      "sarpogrelato-versus-aspirina-viscosidade-diabetes-dap": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "03f364f96db0b93cc00f3ac19f28052a79c5efa4f97f15815c3d8f081a094f92",
+        "baseline_source_sha256": "ed2a071beaf464bed8442890b2688658847c4533dc81705bd2638a6a1120dbf9",
+        "before_theme": "Terapia antiplaquetária e microcirculação",
+        "unchanged_other_fields_sha256": "2ad3cc574b2d6379f21aad738fadc9e7695e038d0114ebf6291136ab89593640"
+      },
+      "savesams-estatina-ezetimiba-idosos-seguranca-metabolica-estudo": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "6c4c5bf7c652430fcf08ef0ceed92a1bff9820f5abe72a09ce96b24617560f23",
+        "baseline_source_sha256": "6e568a68c70c418379e7f7738283c2f621d0c6eb07ee7998f95014d003c4a098",
+        "before_theme": "Dislipidemia no idoso",
+        "unchanged_other_fields_sha256": "34cc6d2e01aa70c933bb537fb505ca415a6fc955e07fd71b94f3cc54b577d62a"
+      },
+      "scram-reabilitacao-cardiaca-smartphone-versus-cuidado-usual": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "5cbf995a58ad3ba560f8cfafec6bbc71d6f7a78136772b9806728692e3b7f163",
+        "baseline_source_sha256": "1f8ae8571226704d494061846d6a955a362e2bdc6c41e7fd97f07b9cff4db60b",
+        "before_theme": "Reabilitação por smartphone",
+        "unchanged_other_fields_sha256": "d351d7dd31e7ca65d2dd3e3d4196701e0b782caad263d67acba1d7175959fb34"
+      },
+      "siri-realce-tardio-miocardite-aguda-coorte-2026": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "821ed0c2442b73f05a11efd715916c9ae822d368dbf4dbe88f050c1f8007df16",
+        "baseline_source_sha256": "92d7a47746faf13460fc4539e5b357a6270a04e8e14b9a85c6aedb2f9d49c610",
+        "before_theme": "Miocardite, inflamação e ressonância",
+        "unchanged_other_fields_sha256": "65e46b664be1f7fb39e621958618d76b5d151db17c20657fe718fe80ffa55173"
+      },
+      "sirona-balao-sirolimus-paclitaxel-doenca-femoropoplitea": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "948bacfb1f90d8c3fb21e866980160842539c28e799f53037c7c4e2e664b4704",
+        "baseline_source_sha256": "39eec4b8dbee81d8a1cd2421f740d12f934fa144ec5852f3542b591e1fb09094",
+        "before_theme": "Doença arterial periférica",
+        "unchanged_other_fields_sha256": "28ab43da611db71023e87620e4da82ce5565bc879adcd4f1247b65bdb9fba187"
+      },
+      "sirona-dois-anos-balao-sirolimus-versus-paclitaxel-femoropopliteo": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "e807387983ffe3c07c1ce9ef48b9f14eccd2f3b1a3e7a8dff7d4e2b939416045",
+        "baseline_source_sha256": "16548a2d86ec16c0b8b3d0c080099cc4298eb7a992d7f3844f6b522262375f99",
+        "before_theme": "Revascularização femoropoplítea",
+        "unchanged_other_fields_sha256": "b2a1a59d854e750b81d613b8cab9b86462a1c2ac8c0a2d8e7309b0e16815697f"
+      },
+      "sirona-subgrupos-sirolimus-versus-paclitaxel-femoropopliteo": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "099392381ba93d7e5bf65068bee7c70fc8b97c1601df96d6c2f05573c22ac816",
+        "baseline_source_sha256": "b74e369cf5d4f308e37f23f72a1f63a5fe06c363458b1b18f2f6ddfe56458f92",
+        "before_theme": "Revascularização femoropoplítea",
+        "unchanged_other_fields_sha256": "a2e3f24614009c0a8c9cd4416aa98c21c5b533751540eb130fdfaa085dfc09fd"
+      },
+      "sit-less-fitbit-mensagens-doenca-cardiometabolica-piloto": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "5bdc59343e7c9ded772b69611288c93b88918d770dcc2a4da1e9dc2bf413cc96",
+        "baseline_source_sha256": "9b72bebc9ad132019dd8dd46bbd1259daf88be75558cc99dea676cc615934092",
+        "before_theme": "Redução de comportamento sedentário",
+        "unchanged_other_fields_sha256": "48ff9b454ac8a9bc23f6e646a2a25a6e64a96a0f1639e4655ee129f23140786e"
+      },
+      "spec-ai-nigeria-cardiomiopatia-periparto-ensaio": {
+        "after_theme": "Gravidez",
+        "anchor_source_sha256": "e45cdaf94828f4824f34ba2df8ce42ebff8b44552e51c88f609c66143f583abe",
+        "baseline_source_sha256": "2a07f3a89a26009d3d80adc55443350d33993ac7329b218e782ce5cdbcec8878",
+        "before_theme": "IA e cardiomiopatia periparto",
+        "unchanged_other_fields_sha256": "86e083eae8e6d8b2ad39f14b7c885c863cdf32d9b3ab40b79f8b814780273e94"
+      },
+      "staying-healthy-after-childbirth-coaching-hipertensao-pos-parto-estudo": {
+        "after_theme": "Gravidez",
+        "anchor_source_sha256": "c590827082c9dc78e63b8742edd819f8d6481e9eebf4db725d1d0241f51f88ff",
+        "baseline_source_sha256": "ce61ef4175366a67f133066d1a13fcedbfb85e9f386a47177709b43e48eacbb6",
+        "before_theme": "Hipertensão no pós-parto",
+        "unchanged_other_fields_sha256": "2aa2d214aa277dd2df7de829915ed699ac8f8b49c506b731d7a64dd6d3a2f7f1"
+      },
+      "strokestop-iii-rastreamento-oportunistico-sistematico-fa-estudo": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "0c2c0a715a23187567ba8bf0c1b1a47cf97f405795e62d4f537263547abfa622",
+        "baseline_source_sha256": "e096523b9a7199cdff42b48809998d160df0c3f67020fdfcb33642705375693a",
+        "before_theme": "Rastreamento de fibrilação atrial",
+        "unchanged_other_fields_sha256": "d4ea91674f2f3b2d7482dbde94925391c2b1a3873f840bfcfb2018ecca5a2711"
+      },
+      "surmount-1-tirzepatida-biomarcadores-cardiovasculares-72-semanas": {
+        "after_theme": "Diabetes e cardiologia",
+        "anchor_source_sha256": "cbfbdc449832a7cde9e37bae024f604291093541140517acf63ae38a607cc7e1",
+        "baseline_source_sha256": "4c321097794146e4f16dba2bc82d04d000bc4a643ab62243c50fd044de15b15b",
+        "before_theme": "Tirzepatida e risco cardiometabólico",
+        "unchanged_other_fields_sha256": "0421ab99e7c3c78cf687a32febb01771488ac7739fd2973dfe886ff774696888"
+      },
+      "surmount-osa-risco-cardiometabolico-tirzepatida-estudo": {
+        "after_theme": "Diabetes e cardiologia",
+        "anchor_source_sha256": "67f35961818874f3e4aeee8254b02cfcf8a2ef7c861350438bcc1165d37ab1fe",
+        "baseline_source_sha256": "4db44db09b4bc42cc62f226aaf68cd4e92e6e70955ea5db41c486c08534c18fd",
+        "before_theme": "Apneia obstrutiva do sono e risco cardiometabólico",
+        "unchanged_other_fields_sha256": "4f0bf1e7d64fa2ed0ef67ba505bfc04e1b032152138604f4b513db23536311ea"
+      },
+      "tact-reabilitacao-tecnologica-mulheres-india-rct": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "51ff753b2783cb72673d849e77c0e61988981a24a4c2ae85f6850f8ed5ea35b9",
+        "baseline_source_sha256": "4b402cd2789b44cb65d419a8f820387831e0c5bd3e3e9a089932428e0de92f6d",
+        "before_theme": "Reabilitação digital para mulheres",
+        "unchanged_other_fields_sha256": "9df86014c2fd797f7d8decb84f1ccaa02eb9e48c4bae208745c0703ee7436f33"
+      },
+      "tavr-met-tirzepatida-halt-vazamento-paravalvar-obesidade": {
+        "after_theme": "Valvopatias",
+        "anchor_source_sha256": "d78c950f701ab4b1bb74694dc212675e2ed37640d9a7c75fe35a881f74948bce",
+        "baseline_source_sha256": "63d9a8399d79f5beae5303d0d38a7ee8efb73c1731346e974ea0923f463fdb11",
+        "before_theme": "Obesidade e resultados estruturais após TAVI",
+        "unchanged_other_fields_sha256": "d1b9b89d995ad515bea264824d881bac619e48efe1e2e2a73f06e04269ba04e1"
+      },
+      "telemonitoramento-estruturado-autocuidado-adesao-insuficiencia-cardiaca": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "48129a43c3f7fd32128a9589647b035014e7efdcae728c4a99acf3d186151643",
+        "baseline_source_sha256": "6eef3807e14629b6b2e338ed9b0bba51db5c6bcadcec6b2115c2537ed236d149",
+        "before_theme": "Telemonitoramento na insuficiência cardíaca",
+        "unchanged_other_fields_sha256": "154c9493ac241e0946ba83859408e7af53b748f08ad220f1a9a5165591c65c17"
+      },
+      "telereabilitacao-hibrida-cardiomiopatia-hipertrofica-nao-obstrutiva": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "bff43b897b46cacec8ff0f364a49dcbd45a49f4a5f73587a984d5ff9b31fb0a3",
+        "baseline_source_sha256": "895c4dc40460ed8e7e219f7cd8d41b2444f437e7efc5fdeee17dda95b3d141a2",
+        "before_theme": "Cardiomiopatia hipertrófica",
+        "unchanged_other_fields_sha256": "c8d18d17f6b19e1a236943c4df1427f251b1c8a767dde189095cdd25cdd932a7"
+      },
+      "tens-perna-fluxo-e-marcha-doenca-arterial-periferica-piloto": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "ceb1514df8c7e9c3a0550fd7509bda707b61bea1770ce8f3b6ba7228c8955aeb",
+        "baseline_source_sha256": "bfc0f3a0eb7df59f143d58f02bbb816163d8db37546d665b3badd7560cd70768",
+        "before_theme": "Claudicação e terapias adjuvantes",
+        "unchanged_other_fields_sha256": "ea4350cdf974cd804ba8ac0251de00201d7d32f87939c02207031bf0f6e74cba"
+      },
+      "textme-pso-mensagens-prevencao-cardiovascular-psoriase": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "d4dfdc6e86aa27efe37d375d0699fad82c3f331a7de888ef3676e8912201bc70",
+        "baseline_source_sha256": "552a2289755a2b218b7b9f8f6bf894587d44530a42e3155698c52e2a5f48a012",
+        "before_theme": "Prevenção cardiovascular na psoríase",
+        "unchanged_other_fields_sha256": "2b46070f3f8ce9009beda40c641ca4677eee03319b4405ea985abf9e7a2aea79"
+      },
+      "ticagrelor-monoterapia-imediata-pos-pci-stemi-piloto": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "1ef327d49d6bae817974b6ffb899317e697f52fd7c9d0996f117d476a9964c35",
+        "baseline_source_sha256": "5e78cd7aa49512dead254dd711431abbff74de066fd7b9234d6744f183e6e846",
+        "before_theme": "Antiagregação pós-PCI",
+        "unchanged_other_fields_sha256": "e908d4b7a476c83f2515d302f58b53f365d71b72fc399c35a26e4f3034c06403"
+      },
+      "track-rivaroxabana-baixa-dose-doenca-renal-avancada": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "c8ac0dfc1b03cfb028595b435954576cfbd370195b6866ea6249e9c0efcf165f",
+        "baseline_source_sha256": "37c330a39173633445021a6aea53acb95700c39bf1afc63d026a73ea921b68c3",
+        "before_theme": "Cardiorrenal",
+        "unchanged_other_fields_sha256": "6f1edc80c45d02eacfb74c25f5b6184c74e01db60824833da81b8aee88d429ec"
+      },
+      "transition-chd-programa-transicao-qualidade-vida-estudo": {
+        "after_theme": "Cardiopatias congênitas",
+        "anchor_source_sha256": "50d4232e0a478329405f771592df00eb8aed07870df2193c65a15a87ae987d37",
+        "baseline_source_sha256": "4bab537a6c1e30dc5035186c1406a1f866f7e27cb99835b48c73326476bc6c49",
+        "before_theme": "Transição na cardiopatia congênita",
+        "unchanged_other_fields_sha256": "38d5d500e769ab4e483cb8e3829ddf1e5d93bfbff4f1bcb85e4e6c36e53dfb21"
+      },
+      "treinamento-resistido-dois-anos-estrutura-cardiaca-mulheres-idosas-estudo": {
+        "after_theme": "Cardiologia geriátrica",
+        "anchor_source_sha256": "fdb28ff092c034053034ca354893ff1fed3eab6a4eea8d9dcad720833402178f",
+        "baseline_source_sha256": "282a9047cfcb9f201cb55024cc5c5e94a4a3a754141937a31a22999f3eef2d4c",
+        "before_theme": "Exercício na mulher idosa",
+        "unchanged_other_fields_sha256": "d363c8fbe2048c8086ecebe2ca3a15360fb584d7e42d1c1ab62b29a0ec76cea5"
+      },
+      "tuxedo-2-stents-diabetes-doenca-multiarterial": {
+        "after_theme": "Diabetes e cardiologia",
+        "anchor_source_sha256": "07672548df3906bc7740e88af6befb70cdb8f4323f5c41b5e0a9dcecb893ffe7",
+        "baseline_source_sha256": "86d1a3f3028b807500ad2b14082615bfabf28158eaeb6e5a3eaccd087ee47438",
+        "before_theme": "PCI no diabetes",
+        "unchanged_other_fields_sha256": "98efe9e44ebc1bd412afc102684caf75f6498b6886f12905867d58ec2fc84e99"
+      },
+      "up-to-af-apple-watch-anticoagulacao-intermitente-pos-ablacao": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "164dbeddc59dfb0caca580a341220b65c7f42e3c549c8cb22778bdafe2ce00ca",
+        "baseline_source_sha256": "21cedd6e2fa4e0ddc2c18e91b0a666d19936778159a6f60eebf5a01c82386643",
+        "before_theme": "Wearables e anticoagulação após ablação",
+        "unchanged_other_fields_sha256": "776ff7ca01281e786f465ecbc976184a02eeb99b34ee3219b21f3543249cd74f"
+      },
+      "var-pvc-vareniciclina-extrassistoles-pos-infarto-estudo": {
+        "after_theme": "Arritmias",
+        "anchor_source_sha256": "14ef1b72816895caa2887f6e857fc074275b475df1dc8806c2e55fe4c29f247c",
+        "baseline_source_sha256": "5cf95a4e2badd65ca964e2de03e8feb502856bbcf0fe0b1afdf5dc73b77c1c72",
+        "before_theme": "Arritmias ventriculares pós-infarto",
+        "unchanged_other_fields_sha256": "114150b4bc163ac93afaa7a8e5c25185a67e3d8782e4f2b23cc501315f92bdde"
+      },
+      "vesalius-cv-evolocumabe-diabetes-alto-risco": {
+        "after_theme": "Diabetes e cardiologia",
+        "anchor_source_sha256": "9e676122677ee50bdefad5dcd76d4361f7ba2302c946cab2316d59065d67ea18",
+        "baseline_source_sha256": "ac534e0470e1bff41e88359e2c1d5c0d3b3ec4a62f614160201726e8161b5f62",
+        "before_theme": "Diabetes e prevenção cardiovascular",
+        "unchanged_other_fields_sha256": "6946df4f603b4f4ea4907a773c8b82af1c439aee74814247ce313f01561ad9e1"
+      },
+      "vesalius-cv-lpa-risco-beneficio-evolocumabe-estudo": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "f1e53af37a3ae59dd11900209a51c7b81259936889ede1ae01c7b09d3f04d1a5",
+        "baseline_source_sha256": "9fe3beb93122c7045dae5098afca3a5e278fb9406254e93ac578be84f8b6cd5d",
+        "before_theme": "Lipoproteína(a)",
+        "unchanged_other_fields_sha256": "e173af69eae664853ab7eedae1dcbf93d15725bac4d47e36a7d6f7c19253eeaf"
+      },
+      "vesalius-cv-pci-previa-sem-infarto-evolocumabe-estudo": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "dc52a0320e00f27bfebf31303762a01d2980fb338c4b42d3acbe66999244e100",
+        "baseline_source_sha256": "4821f47bf012b0c8419dd98cb45c53a78e5bb289216bf150f63084d1426f3eae",
+        "before_theme": "Prevenção cardiovascular e lípides",
+        "unchanged_other_fields_sha256": "43343fbf0a16cd4d6cc00a785e924c43cc44f3747767dea5e5e8095e1a84fa84"
+      },
+      "vitak-cac-menaquinona-7-progressao-calcificacao-coronariana": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "ad700d3a6a5ed750bb209af7526bd2a5b25ab5af3cd3045c82980f75d5675221",
+        "baseline_source_sha256": "3d2d62f90bce6339f6b0af3c790258c698c10fcef5c97219c6cad3d3018630fc",
+        "before_theme": "Calcificação coronariana",
+        "unchanged_other_fields_sha256": "85452a87659e3ad0e2f2888df53a6c54937b4d671ce971c3655e7bcfa4986eee"
+      },
+      "vital-af-ia-ecg-uma-derivacao-risco-incidente": {
+        "after_theme": "Arritmias",
+        "anchor_source_sha256": "fec85d029b4e3da28dc721458a66bf5cabaa4d343c98421813ee4da38bcaf4fe",
+        "baseline_source_sha256": "b1f2fe1d13991e8a94a37640bbeb97e22971a435b3833a7427f86af737cd5104",
+        "before_theme": "IA em ECG portátil",
+        "unchanged_other_fields_sha256": "1594c228622915c258502a2cc3a1d744b927ae3a32958f9063fd490f8b2ef36c"
+      }
+    },
+    "evidencias": {
+      "aapdh-i-atividade-prediz-recuperacao-pos-alta-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "87745e4e846928ace65e4e762dbf66d82829036f1a197b5e55e8f9a55ea55633",
+        "baseline_source_sha256": "57d0f8751b4d1def5da3ed41f6acb85dbb6dd7f87346f6b591374a31f3b8ce27",
+        "before_theme": "Monitorização domiciliar após alta",
+        "unchanged_other_fields_sha256": "324d7bdcf569d7bc421167c635b32a869034862fcfe39327173c2a07c364d9ef"
+      },
+      "acido-bempedoico-eficacia-seguranca-idosos-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "aacc6cb0aab957cde63ec93a214baf28d2b60127fba1417952687c4ac3279efc",
+        "baseline_source_sha256": "e37aa09df830ae072e9fc095b7ee004397b27ba55a0a2f9c7e5abcf066db9e1c",
+        "before_theme": "Dislipidemia no idoso",
+        "unchanged_other_fields_sha256": "f0af96b0d2a2e6122ffa9a41b83838740598d0a315fcabfe8ef5a2dcfeb8423e"
+      },
+      "ada-hf-acetazolamida-preserva-cloreto-sem-aumentar-diurese-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "81adec2852557bf6ba25e82480852f280dc8a7c3554e90054e6803a1403677df",
+        "baseline_source_sha256": "e44cc14b7a8a60daba01b4234dccd998cc5cf390c3aa68b5b5d82e382f825d0c",
+        "before_theme": "Bloqueio sequencial do néfron",
+        "unchanged_other_fields_sha256": "2144bd87e69fbb4857af29c2b0e054ed9a15a2256e2ad461b3962f799d46b81d"
+      },
+      "agachamento-isometrico-12-minutos-gera-hipotensao-aguda-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "5c643c45047203b023473ad2619edd0ad72ea97d120e67ac99dbd148094fbde9",
+        "baseline_source_sha256": "6acd934d2b67fc3b0ef9fa158e59df2040a85830068e1f1662c71201f9c87fe2",
+        "before_theme": "Exercício isométrico e hipertensão",
+        "unchanged_other_fields_sha256": "2aadb24ed2351fbb72c2c36c0810938d1fcd157be0899a56a46303c711bcf531"
+      },
+      "ai-ecg-alerta-associa-reducao-mortalidade-achado": {
+        "after_theme": "Geral",
+        "anchor_source_sha256": "fefb97222b35903d9cd12f8a00f9ce5b3de6aa67418f242286b08522e9b5b670",
+        "baseline_source_sha256": "dcc566c0eeda780b416b77eb6c332ef211ca5bee875d3d0b72b4979de530f34c",
+        "before_theme": "Inteligência artificial e segurança hospitalar",
+        "unchanged_other_fields_sha256": "dceae2eb6ba23206715452b7879aaa26ec680f70f29b5217fd26dba36380d741"
+      },
+      "ai-ecg-antecipa-suspeita-amiloidose-achado": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "067e8e349fc033f7ad539be3134f4e64007f4ba64a36d6303c13207d909220fd",
+        "baseline_source_sha256": "1eda01bcefc4502b008d55d9b7940b89517f22f05b1fbeb09912cf2ec5e1c0a0",
+        "before_theme": "IA-ECG e amiloidose cardíaca",
+        "unchanged_other_fields_sha256": "428a72a69fedb3f4bdf94db46fbbdaf20a60386595e8af9d183ca2a9c5d68d05"
+      },
+      "ai-ecg-discrimina-disfuncao-ventricular-comunitaria-achado": {
+        "after_theme": "Arritmias",
+        "anchor_source_sha256": "fd8010d6de99e3c642d588b9dfbdca30c8c8cec6d3beee6a50609032592b7da2",
+        "baseline_source_sha256": "a11fd336ed61e9738c4cd99a677b66b992a07ebbd294239db4462f950939d60a",
+        "before_theme": "Validação de IA-ECG",
+        "unchanged_other_fields_sha256": "7b1845d24936de5375706632ff6c342c2f6f7f8ea0a8f6c20f656f5d10db1f4c"
+      },
+      "ai-ecg-fa-aumenta-anticoagulacao-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "517383665edf9f5c30c917a2dcda9a7bb0862a0df4164c36276d052c670f0221",
+        "baseline_source_sha256": "c74074fcd40d80d677bd57bb5cb80d5598319fe57c2e27f2eceb4909d06581ae",
+        "before_theme": "IA-ECG e fibrilação atrial",
+        "unchanged_other_fields_sha256": "cf46f21db7dddf797263fa044328768c0971f7fe05f797294043e56113b75c15"
+      },
+      "ai-ecg-internacao-aumenta-deteccao-fe-baixa-achado": {
+        "after_theme": "Terapia intensiva",
+        "anchor_source_sha256": "0fc2b45a21edaadb7fc15a5d198b82e55fc9f42eaa587cbb0044598596dcb2d0",
+        "baseline_source_sha256": "8c0fc4dc3f4790fd78d0452ac3693294bbeb4103ada2bbaa3d2688a80137e8eb",
+        "before_theme": "IA-ECG no paciente internado",
+        "unchanged_other_fields_sha256": "849a4dec29bfe0305a7a115ec885853dfc4bd062624bc90442eae0f2aa5e73d5"
+      },
+      "ai-ecg-seleciona-alto-risco-fa-monitorizacao-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "b26c7a9d5f9c33f5af4bfb2fadb0dc0d4cbfc0bb3ff2275aeacb99817110e8f8",
+        "baseline_source_sha256": "49bdcaf9c6ff33e4ebc32973f558523ff45374b8b8e95f0e1373687d8eb8b43a",
+        "before_theme": "Rastreamento direcionado de fibrilação atrial",
+        "unchanged_other_fields_sha256": "9b16ce591c86e516f24ed7cdbce1e858da3c97ff906b9753d16fd82cf0a9694d"
+      },
+      "ai-eco-nao-inferior-avaliacao-inicial-feve-achado": {
+        "after_theme": "Geral",
+        "anchor_source_sha256": "a8421d632c14e4642b93a9232930b39b5c630d5227a0af5a867d2707f134ef10",
+        "baseline_source_sha256": "cd49b80839866fa085d45e8e124899bdec4a6db1a43f2d9d2be5f291bc6b3d44",
+        "before_theme": "IA em ecocardiografia",
+        "unchanged_other_fields_sha256": "7ef0277a5e5256a0b7811745b65897f80edcdbe292b84a848fedd1c9f982c2fb"
+      },
+      "aim-chd-melhora-curto-prazo-ldl-pressao-achado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "ea9a9da9c91a4142376482c9ccde903b2bae8a675cf88de9217eaaa97d42fe62",
+        "baseline_source_sha256": "2dfc7138b8eb8427ae289334e8cfdac07a1e25d546602f6920c2f98cbbb7c3fb",
+        "before_theme": "IA na prevenção secundária coronariana",
+        "unchanged_other_fields_sha256": "1bb42de60eb81fe4fb9d59cb4694d08072dc9a24e081d25451ec0d7bf6e5459b"
+      },
+      "aim-power-melhora-escore-terapia-otima-icfer-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "6402735ad9bc695b7eae798f566a7bc98d9e12457b4a3f6e1580b8a7366ce2f3",
+        "baseline_source_sha256": "3817ca6d8875143e72153c3f2e9999b9598fa406d921c971d57e6170d6811647",
+        "before_theme": "Saúde digital e insuficiência cardíaca",
+        "unchanged_other_fields_sha256": "2621930cd11578a848342099ce51001a0de78311135c6817deba04efcfc1e839"
+      },
+      "aktivplan-protocolo-manutencao-digital-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "27a8044829d7cad6c4cd179dc315899f7f6f2e5dd58d6753eb1420a8de427fa8",
+        "baseline_source_sha256": "1de1ef18be3aaacdb490ec77c286714f1ba31fd7dbb5ea03f617ade4d2f8e350",
+        "before_theme": "Saúde digital após reabilitação cardíaca",
+        "unchanged_other_fields_sha256": "ddba5a2f8b90025eac79af623f2c864220c2d4e55e126269dca5bcb2ce2bec9c"
+      },
+      "albumina-furosemida-melhora-sintomas-e-creatinina-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "57c35ddab40575f4f4c1d341443c0f9ce96dda445e9c60e715a5be89d991c8d8",
+        "baseline_source_sha256": "8763e31f3bde2fca49a0ee90535ab7613cecc7c9876ff46527eaf6e62fe93062",
+        "before_theme": "Descongestão e disfunção hepática",
+        "unchanged_other_fields_sha256": "2d4e61db99b4b351ff4fd1fcacdf38e312c174c125c1aaf18ffaa65fb28c8dc6"
+      },
+      "albumina-modificada-baixo-valor-incremental-miocardite-pediatrica-achado": {
+        "after_theme": "Cardiologia pediátrica",
+        "anchor_source_sha256": "9168e4135410779c006f4ea8c38ec5d8648cf671224d29edec4e69fb637dcf7b",
+        "baseline_source_sha256": "2d7b0d26d0df02eddbbfc6dc5c146b1b378380c52b190e9269a510dd7a88cd94",
+        "before_theme": "Miocardite pediátrica e biomarcadores",
+        "unchanged_other_fields_sha256": "bc9a86064afb6f2dffc29f4d02a66a86c6d93ba2b72b831e04b37ad18beba3b2"
+      },
+      "alleviate-hf-estrategia-monitor-diuretico-resultado-neutro-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "c019ebf8d47de896fc4fbaa20dadd4b00bc46a5b3236a9f09801c713d6332505",
+        "baseline_source_sha256": "3ff3219c9a40c82131f59563907afccfe8508b2ba6954b2f673d494d1009ff92",
+        "before_theme": "Monitorização implantável na insuficiência cardíaca",
+        "unchanged_other_fields_sha256": "ede370efb394f6ddf10e2833289f065d25c748aed5c9f7910cb0137fa592e9f1"
+      },
+      "amlodipino-controle-mais-rapido-hipertensao-pos-parto-achado": {
+        "after_theme": "Gravidez",
+        "anchor_source_sha256": "39dca440f854382e8e33537cb8030ee69bed10d1dfcf255fe3ef516494263ea8",
+        "baseline_source_sha256": "ffa4d6f5107eeff07a39896f16de3eff995160d2f48e8fb6619171caa7d95a3d",
+        "before_theme": "Hipertensão no pós-parto",
+        "unchanged_other_fields_sha256": "bab2d1217b153ad55e8744fac333cb91747439b034aeff2c20bf15c282c8e267"
+      },
+      "amplitude-o-mediacao-ldl-uacr-efpeglenatida-achado": {
+        "after_theme": "Diabetes e cardiologia",
+        "anchor_source_sha256": "7a3ee430cf1333c4c76a29853bcde7f66984e6a46f6e225a06842621f667f8ad",
+        "baseline_source_sha256": "71ea9b18238cf1031d32aa458127d6c817ed7302a31eff9a65d6fc9424299959",
+        "before_theme": "Diabetes e risco cardiovascular",
+        "unchanged_other_fields_sha256": "2da237c8186621e9c7b9b57f0240cf853d92b5e1f68969dbbc3f9491e03d6d30"
+      },
+      "anakinra-associada-menos-recorrencias-economia-glicocorticoide-achado": {
+        "after_theme": "Pericárdio",
+        "anchor_source_sha256": "fcac5b8107813ae00061101f65f09eb87839829bb03b00a6a23e399a7f62bc92",
+        "baseline_source_sha256": "640200acd05822fd1280f8c18782fcc7a9eb287a76328d6c57f1a349b84a1cc1",
+        "before_theme": "Pericardite recorrente e bloqueio de IL-1",
+        "unchanged_other_fields_sha256": "256882da9ca90f1087b2c62ddbf7be1a8d75b7e6c45694ae7804978e22c96d4a"
+      },
+      "aparelho-mandibular-nao-inferior-cpap-pressao-24h-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "497c321427d5c0c370f3048028800a6e36f8cf39b9631fa9ffef3d270ff0a383",
+        "baseline_source_sha256": "38337ab6cce9d3eec575bc9119243573bdf5eab1ccf4563ae1a84fcb200f18b2",
+        "before_theme": "Apneia obstrutiva do sono e hipertensão",
+        "unchanged_other_fields_sha256": "06689a7f0879dc00d46fe42a530294c0aa7c6e3ee2f364e0e9cac5ad1a157712"
+      },
+      "attractnet-aumenta-rendimento-diagnostico-attr-cm-achado": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "97dc0c62e2e2745b5e12ed7fc31373da0f2a3e89ae27be0ce71ccfd5d7324513",
+        "baseline_source_sha256": "5ca530d280462e9f7f95eed19330563cfdf4ca0c82b7c7cbdec6c5a18b0d1808",
+        "before_theme": "Inteligência artificial e amiloidose cardíaca",
+        "unchanged_other_fields_sha256": "ef907722d54bc5bb52fbd742421cc6b535e96e235800c4a882bef327dbd9028a"
+      },
+      "attribute-cm-acoramidis-melhora-desfecho-hierarquico-achado": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "0811fac4d33d003da77b9dd0febf20f07e436a97e5b93a1f64491134f91573d3",
+        "baseline_source_sha256": "b0c175e797ef5932c0e111457ba675422efb741c532d876515692df7b267cd9b",
+        "before_theme": "Amiloidose cardíaca por transtirretina",
+        "unchanged_other_fields_sha256": "8fa4a5a6983fc3620fe86e4942da01ce349fdfaa9f91614bc6610acaea445487"
+      },
+      "azalea-timi-71-anticoagulacao-previa-abelacimabe-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "dfbcef209531cbd51597f274a93236161d4cb00e54f875e78a6032cb73fa275e",
+        "baseline_source_sha256": "1c9fd63fdf02273fc8f51a9acee6271d3150cce7ccaa0361ea39d42d99cbb93d",
+        "before_theme": "Anticoagulação na fibrilação atrial",
+        "unchanged_other_fields_sha256": "b7aec459577032a22b3bf65811169ebd2375bf90d0cc7986db50f229566f1334"
+      },
+      "bioflow-dapt-acs-alto-risco-sangramento-stents-achado-principal": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "6cec5c99274e531feedaee41afee96f82f6ed7425dd6058bf81ad47796cf98dc",
+        "baseline_source_sha256": "fc4259dc3ae5b0e4c50307da26a47367d8c1ec2f32e57775ebc566ebc4a9e317",
+        "before_theme": "Antiagregação e stents",
+        "unchanged_other_fields_sha256": "3ee98414a962b035925b819e42fba243a8f32bd4f04a0d40caec14a82cee8277"
+      },
+      "bisoprolol-verapamil-cardiomiopatia-hipertrofica-nao-obstrutiva-achado-principal": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "1867b4d9e2165a24fe6957e04236df30e00ac3b9ea7fc7f98ec85f7c015074ef",
+        "baseline_source_sha256": "e4e7646b189595a590138c73de192363710855c7480a2e7606841c363265cf99",
+        "before_theme": "Cardiomiopatia hipertrófica",
+        "unchanged_other_fields_sha256": "f4908a2a5a6791a1cb1a6dc62e3fd2b9614ac2de7ebe0105d1ab99f6b00fbcb3"
+      },
+      "bloqueio-nefron-reduz-mais-pressao-central-e-pulso-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "d348fff625becf7ec18e498f203927f9fef07589d93204e8d5dab838af72b62a",
+        "baseline_source_sha256": "97bb1bf8528a0b04e344c785abb6e6d396688cd8b563d33df132778f924fc737",
+        "before_theme": "Hipertensão resistente",
+        "unchanged_other_fields_sha256": "d3201fb65101ce8fe111b9c5cf6de3471ef178fcef9a60a313d0168057f1d884"
+      },
+      "box-alvos-pressao-choque-cardiogenico-pos-parada-achado-principal": {
+        "after_theme": "Terapia intensiva",
+        "anchor_source_sha256": "42e175e42bb1baa1ff5499bdf94f2c097709a469e727fff3f605ddb01acbc14e",
+        "baseline_source_sha256": "1f51b565d2a1127e6101a06e0fb7235f447a14305e9d222c97160642bfc5dd85",
+        "before_theme": "Choque cardiogênico",
+        "unchanged_other_fields_sha256": "9453a0e429576a5ae8b8cd68d57e0f1a7abffb4e2b1f01fcf56973da199b7fb5"
+      },
+      "cardioversao-fa-ondas-bifasicas-rbw-bte-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "01838d7148392868718a9a272b9ccdb54e66311dea43c9a658818ff1ad8e62d2",
+        "baseline_source_sha256": "4233d49398b1ea0a59dc5bc56cca5d577b5ade0f3526fd73f1057f59833e37bb",
+        "before_theme": "Cardioversão elétrica",
+        "unchanged_other_fields_sha256": "813b82e9a6d1ed843e6683e9ba77cc3d2695511828692dc9132ef71469c50e8a"
+      },
+      "carpe3-aconselhamento-manutencao-nao-preservou-atividade-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "6cf0c96f462489c03c159710ac0ec2e25aad723856fb8da9e0567cbe5ba64e24",
+        "baseline_source_sha256": "c45de688a33fcc909e6960a7eebc8ace6ab01506ade56287353ed4f0f375474d",
+        "before_theme": "Manutenção da reabilitação cardíaca",
+        "unchanged_other_fields_sha256": "07a928386e939cafa3973e17aa5af98eeaa6b7ca2acded48dc667ab49ff18df2"
+      },
+      "cavitacao-microbolhas-aumenta-perfusao-e-cicatrizacao-achado": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "0adac7a965288f07b41915cf174c612760e93ef01defb65f5c4e802985417f55",
+        "baseline_source_sha256": "c00343ac2f54f608003685455756882195f21fce06c01ddb03a551e5f2b741dd",
+        "before_theme": "Úlcera isquêmica sem opção de revascularização",
+        "unchanged_other_fields_sha256": "c56d084315f8db0cc10f93a59968fa1b7fac740d7e1bf6484d59cc95f918bc13"
+      },
+      "clear-outcomes-acido-bempedoico-reduz-eventos-de-membro-achado": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "4f9b114bd47aa1c959549942b809005e7834da1d50bdecafaadcc8fc8832d609",
+        "baseline_source_sha256": "6b916f637556151763b5acaef70aa40c0ab334f8880b82758b95afde38f22d8f",
+        "before_theme": "Proteção do membro e redução de LDL",
+        "unchanged_other_fields_sha256": "a1995c4c99eb94936eb54cbb43919a90c8ae512978f40ec5df401d1566aafe98"
+      },
+      "cmr-miocardite-pediatrica-covid-melhora-temporal-achado": {
+        "after_theme": "Cardiologia pediátrica",
+        "anchor_source_sha256": "6d765d8a13d924edf465326ee51a7828b04039440962f8330ea9415220302f22",
+        "baseline_source_sha256": "bad2c4e8c0db5f4518fdb2c8df0868188c05d83cf9482e1e6cc0be5756013b24",
+        "before_theme": "Miocardite pediátrica e ressonância",
+        "unchanged_other_fields_sha256": "bfbbf88ff4aeed76e17796eb233382563559eac9d095c0343a06478411e00c74"
+      },
+      "coaching-pos-parto-aumenta-atencao-primaria-controle-pressao-achado": {
+        "after_theme": "Gravidez",
+        "anchor_source_sha256": "350ef86ed5db74d62fc48d9a98237157af8dad00329532a7a8d4bab6979dbd21",
+        "baseline_source_sha256": "78555ed5e3efa71a2faee7c126680bd9b11907ff3b51a10a40559df8d995deb0",
+        "before_theme": "Hipertensão no pós-parto",
+        "unchanged_other_fields_sha256": "59928a7db53763ab1a7941f0fc811db647ec9513d6e0c73461d9bef311382444"
+      },
+      "confidence-combinacao-reduz-pressao-com-baseline-elevada-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "ce640d93c9897e28071af42fc934099ffcbe51fd433a73b540958ebdf23e5371",
+        "baseline_source_sha256": "a59ce9505328fa744942b71047f3f52d86d80ab0268cf67645bbd2742fc80f94",
+        "before_theme": "Hipertensão na doença renal crônica e diabetes",
+        "unchanged_other_fields_sha256": "c32902b95a919cba623d03bae125990823b7f070af567dcc70410cf256c10341"
+      },
+      "convince-aterosclerose-nao-modifica-beneficio-colchicina-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "1b58c17524013f02aa147ae6107a00ade6b93c8f2410ed4bee486e5b5362e1bd",
+        "baseline_source_sha256": "aff5cce717fbc85979f40c154591f07cb8c6c017a3839c29c20d3fb0ce0a7845",
+        "before_theme": "Inflamação e prevenção vascular secundária",
+        "unchanged_other_fields_sha256": "0e402cd3aeb24de671b85a08bece8d264057ead1996b389d33c1773608546158"
+      },
+      "convince-colchicina-sem-interacao-subtipo-avc-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "074d31f91b7cbb92a1889d75ab9b42dd193b1392366f729829f9be07063cb505",
+        "baseline_source_sha256": "a67112e4cae663e4d454d8e39ea83a682aba892a7eb963d9f3bac3484b128f2a",
+        "before_theme": "Inflamação e prevenção vascular",
+        "unchanged_other_fields_sha256": "2d5918e3580bf41c2b5a51f536cc9a9d918cee84eb2204922ee31db489ef94a4"
+      },
+      "coramitug-reduz-ntprobnp-sem-beneficio-caminhada-achado": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "dfc3c1a76c0477ac5581be3b88f17af8b036fe3197b4e854b7a161671a0da823",
+        "baseline_source_sha256": "8e11ae54dbf06a8b22a2eab64b364f297f7857b48ef8318192812bdb55032405",
+        "before_theme": "Amiloidose cardíaca por transtirretina",
+        "unchanged_other_fields_sha256": "eaa1b27d3ae7098a21650b96987243dad94d3c29980677d378379ae3dce1f9c9"
+      },
+      "cpap-beneficio-depende-fenotipo-alto-risco-osa-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "1c4bddc66982a344d97399cf9595696b02a51dfd08a322b3909e8877f0bd70ba",
+        "baseline_source_sha256": "dba46c023662cbdc42766e27fd4469f9971bbb93042b67b9d105d4773e86cfe1",
+        "before_theme": "Apneia obstrutiva do sono e risco cardiovascular",
+        "unchanged_other_fields_sha256": "4d6e0f3baec84148bfe96dfb2c43e9e3fc4694799a5f24b9c6629f624877ab59"
+      },
+      "crhcp-beneficio-controle-intensivo-independe-diastolica-basal-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "3f9a0333b698a2001cd1792235a845d8379eb2d0988db2694c0844320340d54e",
+        "baseline_source_sha256": "607696a5f75710b6e6387df6e1ac924b40fa781e4f7619dae01feae1c165f800",
+        "before_theme": "Meta pressórica e pressão diastólica baixa",
+        "unchanged_other_fields_sha256": "5026cb9ddaf1309e791ae659bb973aa42092adc26e756290e229ef85aca0a59e"
+      },
+      "danflu2-alta-dose-sem-excesso-miopericardite-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "4fc88078e0c9fce136809b28d93aefbd80daa0c1d40395efa405a73ca6cbb502",
+        "baseline_source_sha256": "f3fb536ffd9cdf2f74231d3af5c166c31aeef350d0c60c42ec735bab3563653e",
+        "before_theme": "Vacinação contra influenza e segurança cardiovascular",
+        "unchanged_other_fields_sha256": "3ba10ff9bf3a5190e0215e3bb2089c1e6d87a3f3a9105ba082919d284d62c66a"
+      },
+      "danger-shock-recuperacao-clinica-precoce-achado-principal": {
+        "after_theme": "Terapia intensiva",
+        "anchor_source_sha256": "fcf8b541e551759d0fc52a0c9c703d5afb321a3f6747ef23eb5292fb0f8fc153",
+        "baseline_source_sha256": "ae6b9dc8763dae4e8bc60a5bbf78b136d6ce1855a404be4d434a2e7e23429c6f",
+        "before_theme": "Choque cardiogênico",
+        "unchanged_other_fields_sha256": "aa43dca52c5e891dbe66ba35c5f06abef4fbea926d5b4c23149ca58ba907ad47"
+      },
+      "dietetista-remoto-dash-reduz-pressao-veteranos-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "f251fb77495e5d2dcb8f2c9ee03b2b4faf803580c708e4a5b75a35a5a0d58ed3",
+        "baseline_source_sha256": "47883febde048c3d4fee321a849fdb2b9dad093a684b8c779c58d09ee490788b",
+        "before_theme": "Dieta DASH e hipertensão",
+        "unchanged_other_fields_sha256": "45772e3a4c9c3b1b0a1c5d3bc29f434761e7fb1562183eb862272b0e1d20dbf7"
+      },
+      "eagle-ai-ecg-aumenta-diagnostico-fe-baixa-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "acdc310cc56c48ceecccfbdacac51d68f335531e615488c6e10274a57ef0cf16",
+        "baseline_source_sha256": "0777866076b577e0d209f12ff140e12f085a502b4521e237ac1d83d69d7e0d2e",
+        "before_theme": "IA-ECG e insuficiência cardíaca",
+        "unchanged_other_fields_sha256": "74aa5caffb0092090a69ff183e9a519c24d25269183ec7cc84e5ece4531114c5"
+      },
+      "ecg-portatil-ia-estratifica-risco-fa-achado": {
+        "after_theme": "Arritmias",
+        "anchor_source_sha256": "795faa828681af227a1a55c7cbcdd87b78767a3e9c2d6ea3e5588b7d91cc0a6d",
+        "baseline_source_sha256": "88495d7346fad423d1e50344f81faaccde8fac13ba27050763ad2b73a9e6bed6",
+        "before_theme": "IA em ECG portátil",
+        "unchanged_other_fields_sha256": "78c9420c4dd11b95d998a5d02bc270660fb7c2247f7b001c3c4a072297b8a7c1"
+      },
+      "emori-hcm-estimulacao-ventricular-direita-otimizada-cmh-obstrutiva-achado-principal": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "725398fdad03d2b4f25434409ff698dd96147262bc523d63b94f180718530b79",
+        "baseline_source_sha256": "3bf44cb28bb4abc367dd196085e9d6487feff2b0b8a654772bffca147a0a3174",
+        "before_theme": "Cardiomiopatia hipertrófica",
+        "unchanged_other_fields_sha256": "01f5a03a884019b4e3b6af025eee9e1f83bd49677284f97c5f7df3f179c88199"
+      },
+      "empagliflozina-recuperacao-feve-pos-stemi-pci-achado-principal": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "40d563b924900ec34c2f6f1066e091966baae12434874e336d636b93d8f826c6",
+        "baseline_source_sha256": "bfe70b35a7f88d7a065ef0b2c903108eb7b46a78757b4ea23e479482ff7fcd7e",
+        "before_theme": "Terapia pós-infarto",
+        "unchanged_other_fields_sha256": "b23a3c7b4321be108628a9789f8bca94181c211127e608c8dbd25171df85bc6c"
+      },
+      "empire-empagliflozina-reduz-massa-ve-sem-mudar-volumes-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "4c837f6aa6f9a26a528e738a83a57574fa5709d503ff6b50d7bfc6ccf5cc5071",
+        "baseline_source_sha256": "da14a92893cabc6433f8c388a17ee6ce59d322d10ed6f6ab9bc5febc9c65cd06",
+        "before_theme": "Prevenção de remodelamento ventricular",
+        "unchanged_other_fields_sha256": "1caa2204689ede208da89d19349acbc476a562c445fff533eb56094fd5667d3f"
+      },
+      "empire-prevent-empagliflozina-nao-melhora-vo2-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "ba44a580adb8c95a3b56957ef7db87d76795cc87ca999aa05466be7226d490ad",
+        "baseline_source_sha256": "b1b2f1215d9b623d800f59c6697a91fa10377ea8285180cf87b29f3f1f5a9dc2",
+        "before_theme": "Prevenção da insuficiência cardíaca",
+        "unchanged_other_fields_sha256": "8c8c62f8657c6c1547d678e49533d2a600f5dfadb8f5a7b9b808f02d0193f4f6"
+      },
+      "equal-smartwatch-aumenta-deteccao-fa-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "59777203a10e58414cb62df863e1abda6a4711ac2ca3d645cdc1103d1c1a89f1",
+        "baseline_source_sha256": "0b5145c16c78c76e8fc73a06d4e5bdd87532d07ef628bc484485bf0b58a92e8e",
+        "before_theme": "Wearables e fibrilação atrial",
+        "unchanged_other_fields_sha256": "11e0a1cc81b5464cf29a25d72fc89b5823ecd3b241e38b6c86ef0ed82d679f09"
+      },
+      "escore-miocardite-promissor-requer-validacao-externa-achado": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "9f3f8a57a67dc1aaa1db2913b8a0301a9250b1fe9e652af3e2e0994ca6353c13",
+        "baseline_source_sha256": "abc36aa98b9d9bfc24dee358d5f4536d4fc120e79a375220c9a0cd2f299920ef",
+        "before_theme": "Miocardite e estratificação de risco",
+        "unchanged_other_fields_sha256": "2763a213142f58bb8a6c3a3f3eb3e9f9e98d54cb390ddcba13e9dba8b2333ef5"
+      },
+      "exercicio-com-liraglutida-melhora-aptidao-versus-farmaco-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "50df48b8ea04b653c4db233d14735d51bb2dd855bdfd5833b1d877f964b4d100",
+        "baseline_source_sha256": "4adc8e82eaab313e31516519e2dd8885cd9533f2805992b37d30f7cd1a041881",
+        "before_theme": "Obesidade, exercício e agonista de GLP-1",
+        "unchanged_other_fields_sha256": "2e569b172d27d26bcaebfb3447240df6cee06b5777fea8693cf9f3497077045a"
+      },
+      "exercicio-gestacao-beneficios-metabolicos-longo-prazo-achado": {
+        "after_theme": "Gravidez",
+        "anchor_source_sha256": "dc7286d6eb314ca7d47cd85f2789e3aa7d3cfd1e68a0badf9aa0593450f287d2",
+        "baseline_source_sha256": "f1dd5f111edc1d0e003b15aa2de4aab8f8bdbf3a952a9651b0cf205c56cd5d5c",
+        "before_theme": "Exercício e risco cardiometabólico na gestação",
+        "unchanged_other_fields_sha256": "e2cbeb589349f68a9880fa330d876ccf5b56a4028f9dffcd5e9e74f16edab892"
+      },
+      "exercicio-online-melhora-vo2-cancer-mama-achado": {
+        "after_theme": "Cardio-oncologia",
+        "anchor_source_sha256": "c5e9442268064c42da4a4c959c9082d10ecca219ad0065ff23b6e48acd0c4f04",
+        "baseline_source_sha256": "11dfb16edcc30f83f9a69df21aa960fff00b95bafa9e9a486ba5b6c6ade04e40",
+        "before_theme": "Reabilitação em cardio-oncologia",
+        "unchanged_other_fields_sha256": "3b397b8ef014aa276d2e06aecf45cac3134eba87c33b66eeb4a657e762e3ddaa"
+      },
+      "fair-ffr-reduz-stents-sem-perder-controle-pressao-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "126cbc2d213bd6182474d7ebe1b3db820f44f9b40bca2fd80e595f70cf318fa0",
+        "baseline_source_sha256": "123716e7d582208da01d1127f9a2a42ae1a07705c1069cf03a8b41fa89505c99",
+        "before_theme": "Hipertensão renovascular",
+        "unchanged_other_fields_sha256": "c73dbdeb47d70cea075ce88f736710c2f4e3ef7da0e3a96d62b11c34680ccc7d"
+      },
+      "fastr-reprieve-aumenta-natriurese-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "c11252595d7b251d4ad3f4d13d308f74aa7ee6e34fa0381908e79eb2bfe87002",
+        "baseline_source_sha256": "643085b06ebea77b9c7df728e8daf9903bd33f9f6dcb70cb409f178e6f94d2ae",
+        "before_theme": "Descongestão na insuficiência cardíaca aguda",
+        "unchanged_other_fields_sha256": "bbfefeec243e485fbbc88caf227705c4ff37ebc20205a71662a32d0ce98f04b5"
+      },
+      "favor-iii-china-qfr-cinco-anos-achado-principal": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "10c0afc99cb2c06e3e427324fa3607ed457f78095113717ce54f5ce5f570a9b0",
+        "baseline_source_sha256": "f50717080c0722e2bdd50e06bf545bc8208ef851c70f9170f7759b6fe0e6e4a7",
+        "before_theme": "Fisiologia coronária",
+        "unchanged_other_fields_sha256": "fa4818e43dc1038574d68fbd2794f580a91c75b6b4026b94e5db430a6cf1e3f8"
+      },
+      "finerenona-beneficio-entre-estagios-ckm-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "d8656b5d03070bf73a625ad21e5b6af320c35886b1c2dff96651e0635a0faeb8",
+        "baseline_source_sha256": "ded19bd857d0f38f59d453ec949bf422fbd19ae517bd33117469258e995a1c56",
+        "before_theme": "Síndrome cardiovascular-renal-metabólica",
+        "unchanged_other_fields_sha256": "039271087993d5eca6b19213a595433faacf48796ae830c88ddf506e1d36aea3"
+      },
+      "fourier-obesidade-grave-maior-beneficio-absoluto-evolocumabe-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "a00ee0e523756b0bcf999409caecd6387e785426f2b29b692a4ba3a2d2b37133",
+        "baseline_source_sha256": "15e6821e52461f81822c2c96af5b1aabf570bd1888e94f2466167f6530f0ef2b",
+        "before_theme": "Obesidade e prevenção cardiovascular secundária",
+        "unchanged_other_fields_sha256": "474ee2c0d4eda1e26308597989cbcbbda0ae8d35e6a4fea217e8bc1fe6af8e21"
+      },
+      "gamepad-gamificacao-aumenta-passos-dap-achado": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "20549d280932699da9571113e56c56175296cb8dc9c237ea1517820060c61c7c",
+        "baseline_source_sha256": "d3c3e50f24035eda43aa809886b0dd6cce0db24324c2db06c22d43e6454b2cc4",
+        "before_theme": "Saúde digital e doença arterial periférica",
+        "unchanged_other_fields_sha256": "a3580f242691638a2953ec7d9857ce9ed1f67ff3e5f77585c9f4a482fd1f050a"
+      },
+      "gips-iii-remodelamento-pos-stemi-semelhante-entre-sexos-achado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "b5e141a41f94b60c6241f12b45877a6d3a7c0627cc0f06541d21f513429544ca",
+        "baseline_source_sha256": "db4a55122d58cfdac2da4f30dbeeba82cd63a074529b316bc1ec2ddb764044aa",
+        "before_theme": "Remodelamento pós-infarto na mulher",
+        "unchanged_other_fields_sha256": "6dbb540aff9c8c96958f12095a3631de4d04b5cf564cee7568d119b4acb26676"
+      },
+      "gofreshrx-alimentos-dash-reduzem-pressao-e-ldl-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "deb6fe96f92c4d4b0d2162a478017755545ec61ed8a7278fb17c253dc8a7c2ca",
+        "baseline_source_sha256": "7437cef532bad8edc04acd5d2adc0cec774b8eaf005651579821d919a904363c",
+        "before_theme": "Acesso alimentar e controle pressórico",
+        "unchanged_other_fields_sha256": "ece0b25ed5cf2f1978180bff18a9685a6f464d75db29f874684e5a25cf225872"
+      },
+      "handgrip-reduz-carga-pressoria-absoluta-estresse-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "eb57258d65f1bbf3e7fff7dcfa019e2c16fb6363ee86fc5ce655d0be5e35b27e",
+        "baseline_source_sha256": "6889f64e5454fc5bbca723eb6028415734f440d9ce59c833f8372e8156ab59ca",
+        "before_theme": "Exercício e hipertensão na mulher",
+        "unchanged_other_fields_sha256": "25d6951d9734152dbdd0b8c74bd1978299624bc6d2f51df86d1c4a253c58a34d"
+      },
+      "helios-b-vutrisirana-reduz-morte-eventos-attr-cm-achado": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "892ff5e2ab07b0bde7a6de8a8775dcdb1c4a159504ea11132ea047e5e8b98574",
+        "baseline_source_sha256": "0a330c6a213ef922d2ccd62df5282dbcba734949ec0333947d6e57cdfe4e0e87",
+        "before_theme": "Amiloidose cardíaca por transtirretina",
+        "unchanged_other_fields_sha256": "90353e300ce0f06acd2f20c563d80dd4c49f57f8277bf138c462266b9215234e"
+      },
+      "hiit-coronariopatia-nao-reduziu-inflamacao-cronica-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "030f307fbab49c7cc60e49d428b5c5eab5f2f80e77ebc15dda0ab2430b09bf9b",
+        "baseline_source_sha256": "0a003ef4fe20b36414951d9fb628cf73c6f756e264caec21de9868af2eb9d548",
+        "before_theme": "Reabilitação cardíaca e inflamação",
+        "unchanged_other_fields_sha256": "01a44a1b4e7a0ec2b4ba9465f2c6b5179d4cdee538cf1b0e97f06b5de979afab"
+      },
+      "hiit-mict-reabilitacao-pos-iam-pci-achado-principal": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "e634ff022e414629b6cf8a516883c09a6e69594b8db43b9eeff955dc0dc4ce92",
+        "baseline_source_sha256": "0fd06de9da760a1b8458661ba40dada28e9760dd75a89a1c231b1a0b933d2892",
+        "before_theme": "Reabilitação cardíaca pós-infarto",
+        "unchanged_other_fields_sha256": "491a578cce6f344f2d025ca40b6d21ee3d5c10e35fcc6050f174f17324992488"
+      },
+      "hiit-reduz-mapa-e-rigidez-arterial-hipertensao-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "08d3dc21a4d3a5cbb5a06e4d6c53a38e3b28d2804fbc96069b394d27dd0f0c9d",
+        "baseline_source_sha256": "a8ca8e717f2fad374e44942f705d6d511c20578da7ba25b35df76f3df529b634",
+        "before_theme": "HIIT e controle ambulatorial da pressão",
+        "unchanged_other_fields_sha256": "e873b52aea556ba28f01dff5fb85b13969efb7c0029cb773274bef007193e878"
+      },
+      "his-alternative-i-his-versus-biventricular-cinco-anos-achado": {
+        "after_theme": "Dispositivos",
+        "anchor_source_sha256": "d047b1657d1cd0354b16161991d6c26b8a7c9df155c7b12083bfb9f4608355f0",
+        "baseline_source_sha256": "0f6981fb897a6fe04ebb93fff428865345a2cd8ec60e8d2ec318d0ace261bcc4",
+        "before_theme": "Ressincronização cardíaca",
+        "unchanged_other_fields_sha256": "c57005cf58d734ae9cbcde0bf75944aa95ab18c87eb0dff7ca4d2a3f0e79ea03"
+      },
+      "hydra-years-reduz-angiotomografia-cancer-achado": {
+        "after_theme": "Tromboembolismo",
+        "anchor_source_sha256": "4e87652064dd2099224f65f3b9a40154a32bfa95fae7ca4aa5a1d3095e1d304e",
+        "baseline_source_sha256": "e3c749a275060873fd33cb10334ef6b63b8a58daf0db2024b779f4d5786a18d4",
+        "before_theme": "Diagnóstico de embolia pulmonar no câncer",
+        "unchanged_other_fields_sha256": "93f3d8cd50950e6cb35d0c8586005a5856ad77daba6b65faee1c7ac9ba378711"
+      },
+      "icare-ofdi-litotripsia-nao-inferior-aterectomia-achado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "dc275df070c06d82784fcf04f6a72eff2b14d17e75c4d88c0173e718f71a5541",
+        "baseline_source_sha256": "2451c93a0eef18358e3c9a6b993ebd51f77e973cb0ea061a7d590a18701538de",
+        "before_theme": "Intervenção coronária em lesão calcificada",
+        "unchanged_other_fields_sha256": "fa7f647b041126c22977c939a57ee29987488ff90a4d2ee7f587bcd6b4f68758"
+      },
+      "inclisirana-reducao-ldl-por-funcao-renal-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "c084b7f569b1cfedefa915744a11fc1e30c4f3302a4e522fe5640f0df9255cb5",
+        "baseline_source_sha256": "1d11279cec9d0b967fd1a9d634053a2ed79fcd2f52edb7697bffea7b9d5097d3",
+        "before_theme": "Dislipidemia e doença renal crônica",
+        "unchanged_other_fields_sha256": "ebd2428963f288a31f39bd17d943237ceb84b2b4817ba69d3f3edffa37881111"
+      },
+      "intervencao-hipertensao-gestacao-africa-factivel-sem-eficacia-achado": {
+        "after_theme": "Gravidez",
+        "anchor_source_sha256": "a448b150e404a2b248e0cbbbe06656958c77aae99feceb9ba00189409629af7e",
+        "baseline_source_sha256": "2ed2fcd7d40fc2d6d3667d049571370e567a99a0831732e1620311dbb2ee650a",
+        "before_theme": "Hipertensão crônica na gestação",
+        "unchanged_other_fields_sha256": "3dfaeb62e2fbeb729e670c8e91dbccdabec7a4c7e2b2ce229b2eca34c20be7e9"
+      },
+      "ischemia-mulheres-maior-carga-angina-nao-explicada-tratamento-achado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "13c48b5ca01c8cb85bdab7a68f0a19efc04853de67801d15609929ff73792f94",
+        "baseline_source_sha256": "c5e9e64d01c5af87a25284b324c5a1fe1c15de342efd58bef1db6e91bd8f6f49",
+        "before_theme": "Doença isquêmica na mulher",
+        "unchanged_other_fields_sha256": "f9d9fc330fbc742597f85d89378e1258ade30d6288d14785e65b218ed7f0967e"
+      },
+      "ivus-aterectomia-rotacional-planejada-lesao-calcificada-grau-3-achado-principal": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "c0a8da7d4a96a9f3aad4b47583a5c1243dada582d99f8478386c1a66d540343b",
+        "baseline_source_sha256": "203537e7a313b29281c9d0d5e3eddea15f3547f337fa2bdb382037df37415fd7",
+        "before_theme": "Intervenção coronária complexa",
+        "unchanged_other_fields_sha256": "e871971330b5a682f033c81164a0957c9658fc2277492331eff76f7ddbd00657"
+      },
+      "ivus-estrategia-patencia-intervencao-doenca-arterial-periferica-achado-principal": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "0ec06aa95a890ec8f96612f6590762debdcaac7530d36e0255a821812cd45c88",
+        "baseline_source_sha256": "a143ec5795a6f2b3cc25ac490a271e2923eca5ed335d0b2a227a077718b962ec",
+        "before_theme": "Doença arterial periférica",
+        "unchanged_other_fields_sha256": "069ec069939fea4c2ed0ed21a9d2cf15065349ff4a6f81dd31163617c0f064ef"
+      },
+      "jejum-modificado-efeitos-cardiometabolicos-transitorios-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "786d426af446103e39ba43753eeb3971aa2a862ee48cc75bc8044244a7481f15",
+        "baseline_source_sha256": "0e9c96e4d148fdd94a42adfdeb4f130e5d5146f03ac683aa5e9c4ab9ed12d2eb",
+        "before_theme": "Jejum modificado e risco cardiometabólico",
+        "unchanged_other_fields_sha256": "5e52494a0d798562cc8a1717a66c8326096d4be9fc7829a8b24753f8c344c199"
+      },
+      "laroprovstat-pcsk9-oral-reducao-ldl-fase-1-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "c8cf086914c08721b66bca8f1a591042c226aef7b7245828623ed7316c204c06",
+        "baseline_source_sha256": "86da67722446777c0a16fa5c6ad5057e9ee632ed809554de1662c8950b0755d7",
+        "before_theme": "Terapias hipolipemiantes emergentes",
+        "unchanged_other_fields_sha256": "25617434b6fe7a432c27e0e379fc627b839776d9fd7481969280f18d9a60b64d"
+      },
+      "life-btk-scaffold-beneficio-independente-do-sexo-achado": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "9e44a9af5f2f9dbc4a5ec0087051d6d3427c0f53e5bc78a7f95d941cd2f8e914",
+        "baseline_source_sha256": "1ad7bf2ea859e64f89a4d2349f9c489ff56f247b79033ecd667cfad55c3ec1f4",
+        "before_theme": "Isquemia crônica ameaçadora do membro",
+        "unchanged_other_fields_sha256": "5fe7073b6dc67f9875d0cf1d19ad226b277143b652c17b61f7c28095e0f6b533"
+      },
+      "magnesio-prevencao-fa-pos-operatoria-cirurgia-cardiaca-achado": {
+        "after_theme": "Perioperatório",
+        "anchor_source_sha256": "5435d758abcdd58395ffedfc2347c5b5aa9deb0a0b795129bf3d9151cfc4e794",
+        "baseline_source_sha256": "e405820e9e9ffbd3853f4663b2c4b75ed3044f4356dfde7eb7e9d78d82de27c4",
+        "before_theme": "Fibrilação atrial pós-operatória",
+        "unchanged_other_fields_sha256": "4af5e0b8f1da630075d4ed73589da284d1b078ca0713edec436e94865ddb44d3"
+      },
+      "mapt-mindfulness-exercicio-reduz-pressao-sistolica-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "502dac06216f6f93207acfe6ba7b48e41cbfffcd9915d07fcd3a6da3836fa62e",
+        "baseline_source_sha256": "6e0963cc125549e2c1df4568216a984f4db6aa8cf3ddc37265945be42cbaffa9",
+        "before_theme": "Intervenções comportamentais na pressão elevada",
+        "unchanged_other_fields_sha256": "12900bad4531d51b891ff9dfd2d51c391aa80b704a595bd1a99e1ca9ebd568d1"
+      },
+      "menopausia-salud-corazon-factivel-aceitavel-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "9810032b4d30aca7e7a6b9b085b7922e953cfc305eee30369b48d99e68c7186f",
+        "baseline_source_sha256": "83443746dd975222d7634177d818d342557877a0a8948fd11345d93c3a79075e",
+        "before_theme": "Menopausa e prevenção cardiovascular",
+        "unchanged_other_fields_sha256": "b9d7b444f31d330581793fe9ff7125b9a59b115bb1d2c626ffc967e13a291695"
+      },
+      "mhealth-adicional-reabilitacao-nao-aumentou-atividade-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "8c70377afeffb741e4e4e94bbbdc478870a01c72f76520f068eb4ac630f81db8",
+        "baseline_source_sha256": "1dadab0b695a7629e0c370f4fe0b8248d75384821d6eb6c1f9bea2900d029f3e",
+        "before_theme": "mHealth adjuvante à reabilitação",
+        "unchanged_other_fields_sha256": "069cb53f7e594a2f47ae97434ea4e2778e284aa36f7fd229281fca5bed590761"
+      },
+      "mhealth-enfermagem-melhora-capacidade-funcional-ic-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "7e9e963f3235f938b37a27b8c58684d25908c1ddfbdb89efe2e1d5753ddebfd9",
+        "baseline_source_sha256": "4a88de3838531ac0b4d9d11b4ccf363b12aa674369ac3fdb316f210f7d4335a5",
+        "before_theme": "Reabilitação cardíaca móvel",
+        "unchanged_other_fields_sha256": "f41f4c16dad3d038386591fc27e499f277b266f8ff5f46220f21aecb4161ae56"
+      },
+      "mint-sem-interacao-sexo-estrategia-transfusional-achado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "08f67ae8f4df3d50c787542db4e29d7675c8f20a8bae0fb860b677e07da1c460",
+        "baseline_source_sha256": "72529add1aef20ce1503ce299723b3a1bf49a88625c14ed7920c37d590650df0",
+        "before_theme": "Infarto, anemia e sexo",
+        "unchanged_other_fields_sha256": "ff70c04f66cfc237740e3cfce91a2043dba2b893871924fd659cf81ef514913d"
+      },
+      "miocardite-checkpoint-assinatura-il6-biomarcadores-convencionais-achado": {
+        "after_theme": "Cardio-oncologia",
+        "anchor_source_sha256": "b5a57fefa2d84cb31368c4f0ca4686eecf2fb4675cc3ce1d2488c8d5e61cc38f",
+        "baseline_source_sha256": "1b8c23b5ed11ac0b5fdeeb2acadfaa384759915d3bef5fda811ce315df2910dd",
+        "before_theme": "Cardio-oncologia e miocardite",
+        "unchanged_other_fields_sha256": "b75556e7b31f207ee2a28c3a53bd228b340e4c2b0f05a3df4d25af0dc0203962"
+      },
+      "miocardite-fulminante-marca-pior-prognostico-longo-prazo-achado": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "d77af38e477cd1fc2ead89f8cf2ba690f9b0541d55f0e3882a17e3fe0e1d9ce3",
+        "baseline_source_sha256": "bfee052ebb62e5b7937621e103c0804fa92e54e31f60736cff7725a4efd73f91",
+        "before_theme": "Miocardite e prognóstico",
+        "unchanged_other_fields_sha256": "3cb8664bba5de224443c755e1f3f8eb65724b875f59488282f7c534a08fede57"
+      },
+      "mist-toracotomia-melhora-recuperacao-fisica-achado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "a80b14e82a8762cd33089e8d096ea848a43d1a42d875107f2b5a0b458cb85981",
+        "baseline_source_sha256": "d3fdbd7e0d1eb014d4db87c4eae37b18722e3a16c49cedfe5c6c677ba1307117",
+        "before_theme": "Revascularização cirúrgica minimamente invasiva",
+        "unchanged_other_fields_sha256": "d01cdca1efd957ca3cd3ead18e73e72e883056109687b2ba58f64f6313953682"
+      },
+      "myoflame-19-desfecho-primario-neutro-achado": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "7d436473ddb741c7872b469ffc70e139b460f4b1012fa96c74fc2e80b64c4b1f",
+        "baseline_source_sha256": "4929a8bc78c5bb78e22b2e9a3882e801182fb0218440c0fb0de5f88119d0644d",
+        "before_theme": "Síndrome pós-COVID e inflamação cardíaca",
+        "unchanged_other_fields_sha256": "cd5b0194dba2a9535e635638e3b2a39951b204f47f9b21ec5470b4ba5cdb5279"
+      },
+      "norscreen-rastreamento-digital-fa-patch-ecg-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "8de217e67aa309d0dc4cd6866d11db85a098ba2c66a1595f1ee8edee8112932c",
+        "baseline_source_sha256": "cf72066c458aaedf6fc33a2da8283016c1f1c1b1f8ad4e87a8cf20df364456ff",
+        "before_theme": "Rastreamento de fibrilação atrial",
+        "unchanged_other_fields_sha256": "5969c6c62d3b0a0c788515be7d4be41011637c7b2a12e794263a6f3aee1c4e6a"
+      },
+      "notion-3-icp-reduz-composto-isquemico-aumenta-sangramento-achado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "f76e3a327c5ff43dc17bb9c5c9b16c218ddc1efc0e8372027b2cf17098db5179",
+        "baseline_source_sha256": "6c390abead2a2208569f7645972b631555890777c78e496ea7e5b6b29c9da0e9",
+        "before_theme": "Doença coronariana em pacientes submetidos a TAVI",
+        "unchanged_other_fields_sha256": "1d38c108a438a21c510527e8359f6c258972fed894bcac86943a8cfd488ef9ea"
+      },
+      "onco-pe-anticoagulacao-prolongada-reduz-recorrencia-achado": {
+        "after_theme": "Tromboembolismo",
+        "anchor_source_sha256": "068487387ff2bf2e947de6e304a3f80939f208105796b4409df523e1823892d9",
+        "baseline_source_sha256": "7adba7fb9871320a5e3738fe5056e0682c2f330b1f3065f389a4c343aa29cef5",
+        "before_theme": "Tromboembolismo venoso associado ao câncer",
+        "unchanged_other_fields_sha256": "7fba5e3c6fbb44fa40dffcde383f0f1903f9efe9b9c8c9f8236a4a74ecb3941e"
+      },
+      "optima-af-um-versus-doze-meses-antitrombotico-pos-pci-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "1dd314763e570b6f605a9be9f11c4ffb8477d7cea9c86c0f41b0fe37f943a34b",
+        "baseline_source_sha256": "d6423d00bae3130d091bed7bcc09109f8c0b77eb5353fd80f16d15dceb3fe669",
+        "before_theme": "FA e PCI",
+        "unchanged_other_fields_sha256": "407dd4480ae80accaefbc87e7d40af4af3c81af57a4d1ba8298566b985dc68b0"
+      },
+      "partner-3-anel-nao-modifica-tavi-versus-cirurgia-achado": {
+        "after_theme": "Valvopatias",
+        "anchor_source_sha256": "a44d398f9b04e06026e7c41dc5d34e60ce7274e8299629e6c4fd76776752efff",
+        "baseline_source_sha256": "f0fa2a72c1cd8d4b0eb3c4226d3aaf04bc3fbb25577e617b19260c6e8838d20c",
+        "before_theme": "TAVI em baixo risco e anatomia do anel",
+        "unchanged_other_fields_sha256": "1da33580d6c562afc2a835dfe406cdce7bdec7bf32827938bd9293166cb668a9"
+      },
+      "pe-tract-protocolo-desfecho-funcional-longo-prazo-achado": {
+        "after_theme": "Tromboembolismo",
+        "anchor_source_sha256": "2526578628f96ca89e851e473c7803425378608ad40d2412db0bef888d6691a4",
+        "baseline_source_sha256": "84be41d56c92a1e9098decd6b75fb79d39d57b38b5e6906ef49e47f7def9243e",
+        "before_theme": "Terapia dirigida por cateter na embolia pulmonar",
+        "unchanged_other_fields_sha256": "5e5f2bbfe4e4ed1804f0f9ad50fc6a84a32efd547c1351d94e5922c582ed98be"
+      },
+      "peerless-ii-protocolo-trombectomia-vs-anticoagulacao-achado": {
+        "after_theme": "Tromboembolismo",
+        "anchor_source_sha256": "73a57b2ad0e1a12ce963ab685deac368e6f59da5b1c28a05f4171ddc373f4bf5",
+        "baseline_source_sha256": "8d3b245f5c31a4c3d2ec7e1ce89c7bd6cae3c877cccf7b2f792c5c163a6ac9b1",
+        "before_theme": "Trombectomia na embolia pulmonar",
+        "unchanged_other_fields_sha256": "23801f9b9b2bd5152dfe218ea3c4319d868a80a5145737a072d6206680eb4e0b"
+      },
+      "pelacarsen-reducao-aferese-lpa-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "3fb62ecd717865ec7c23ce0fc34ff045f8062a506d945c95c00b9442c7ec6fd5",
+        "baseline_source_sha256": "61c223177b2f28ef7f47167e95659058f68c9c55b030b06cac3d5c74b0a863ec",
+        "before_theme": "Lipoproteína(a)",
+        "unchanged_other_fields_sha256": "ee693986ab37274e290b5655dcc64460e0ab3fa8b393eeb6ca738193dcefe20b"
+      },
+      "pfa-associada-menos-sintomas-pericardicos-pos-ablacao-achado": {
+        "after_theme": "Pericárdio",
+        "anchor_source_sha256": "887d47edba5316fa45c3d29c62f5267c6716fe4768775c752a98a5ac13fcc9ad",
+        "baseline_source_sha256": "d2fc5c59128ca3bcba4d963c8a6d41b7da71cdc2b7083c50f254b191bfa42934",
+        "before_theme": "Ablação e inflamação pericárdica",
+        "unchanged_other_fields_sha256": "3c699ef2475f18a1174c2b6d715ede84397d519e3be91f04e450f289a9910ab3"
+      },
+      "pfa-radiofrequencia-lesoes-cerebrais-silenciosas-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "11ddece350f232e8fbbca51ba3563a2512539f76a001f428994d84ec0bc5c84b",
+        "baseline_source_sha256": "a12492025cc5c09cf923f9a61a6a4bed7dc9a78dc0ff7c35238a73a369305110",
+        "before_theme": "Ablação de fibrilação atrial",
+        "unchanged_other_fields_sha256": "4f2362cc684b6ec94e6555f87ac0eda8598cd3c970d9a8ff620544ba85957eb0"
+      },
+      "pilates-reduz-pressao-ambulatorial-mulheres-hipertensas-achado": {
+        "after_theme": "Hipertensão",
+        "anchor_source_sha256": "7a022385e5f1eb5d7a82c7dcfc1157b08b89387862f58b6d4d64293133d3031a",
+        "baseline_source_sha256": "3b6650a6ee5fd05d5961b07aaa5093d2808a69e28909e29d33e49bfcc852f9c1",
+        "before_theme": "Exercício e hipertensão na mulher",
+        "unchanged_other_fields_sha256": "f722ee0f1de327409ee77c3500a1aa96e33c42b2d4f670d7387d926ce8e2b2e6"
+      },
+      "pitavastatina-adolescentes-reducao-ldl-sem-mudanca-vascular-achado": {
+        "after_theme": "Cardiologia pediátrica",
+        "anchor_source_sha256": "c4fce91475141aa0b60e4fefd19416ae3b73232037992effee84c9ee008b9e76",
+        "baseline_source_sha256": "bb7b77dc91535a741e148fb1b9ea139c3e1b1ce6d69aba667d88b7bd05afb84b",
+        "before_theme": "Dislipidemia pediátrica",
+        "unchanged_other_fields_sha256": "95fa561080696977d73012d8e8b06bf596e114a074bba23157f9191f0a3b9ba2"
+      },
+      "pivotal-pvi-parede-posterior-criobalao-fa-persistente-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "88b1c36d1f8f80fbb6ff1fb4a815419874443997884c05a6498393038e2ac7f3",
+        "baseline_source_sha256": "2e0fce2958e747eaef054b3ae01157ea2103f14b9fe9191d4aa8f50a39090d5a",
+        "before_theme": "Ablação de fibrilação atrial persistente",
+        "unchanged_other_fields_sha256": "3fcaeeb77330dcc2a324a8f1e7f0e8c6b51e87748091c230432c002d288b9957"
+      },
+      "pressao-negativa-nao-reduz-complicacao-incisao-inguinal-achado": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "350a8c03fcf880eaf45eaa0ad97df7f865f2ef8729ce7371a5af6ce727cd6bb9",
+        "baseline_source_sha256": "28e1db89ab4b74d7111570a631adb0e4ac88a43809c0690ea391ec1e591acca6",
+        "before_theme": "Complicações de ferida em cirurgia vascular",
+        "unchanged_other_fields_sha256": "168bca7177ee0e95709a7fcfe972309bcb2c8dfa46ed73250656b466f765fb15"
+      },
+      "prism-achd-viavel-melhora-qualidade-vida-achado": {
+        "after_theme": "Cardiopatias congênitas",
+        "anchor_source_sha256": "d11ebf05ab90f65a0a137900a1c49302bb28cff60b51181459ce95672560fcdb",
+        "baseline_source_sha256": "2814d80578398ec4b81a0b4ed4352d68511aa3de7ce38848ceeb5b410fcc18e5",
+        "before_theme": "Cardiopatia congênita do adulto e saúde mental",
+        "unchanged_other_fields_sha256": "9be2c8b5aa01cb70cf4f40dccd2bbe95b33b73875737999ab5bd18dfe507f9c8"
+      },
+      "prolific-intervencao-familiar-melhora-perfil-lipidico-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "1a23d9a5722506a28cce20d4e9a9cbf9bb2244fccd70c45b5d456c86ed49d1d1",
+        "baseline_source_sha256": "dc053dc43f1b30c10422415280a3d3d9178a3de914905dbabd717a63d1f98693",
+        "before_theme": "Intervenção familiar e dislipidemia",
+        "unchanged_other_fields_sha256": "8ee00af0c79dab021ba9395c8235abc6202fcca2bc11bebfe28d17c7fcf24230"
+      },
+      "protecao-combinada-poluicao-ruido-melhora-biomarcadores-agudos-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "2e91b8a7209e61a9019a33d7560b67c7e07c4061c09fe8d9191c2bd54be77a51",
+        "baseline_source_sha256": "742c25a1c02c58200e0474885b7da7714b3c418fb07137cf51c224bb9d1d2b38",
+        "before_theme": "Poluição, ruído e proteção individual",
+        "unchanged_other_fields_sha256": "043aba3fe63e9722863acd1f69c9c99c8669dd2c513a41edddb66c8ff71810bb"
+      },
+      "rapid-pop-insuflacao-otimizada-stent-pci-primaria-achado-principal": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "c2ed1f39d50cc6153b994a316fe647e3e8c1b67381685b41520d9e3c25fd540a",
+        "baseline_source_sha256": "76f95192ad2e2575658e2e2d9d0c4a3b866b954496facf5dd1ba943c9011978b",
+        "before_theme": "PCI primária",
+        "unchanged_other_fields_sha256": "df1c74112138aa7380a7433e75ec645ea9474257f01f05900439def80549c06d"
+      },
+      "rate-af-wearable-frequencia-semelhante-digoxina-betabloqueador-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "36e33e8b7b40e4f8d2261dbbd764e95e286dbd36ba97591b3d813a851786b879",
+        "baseline_source_sha256": "7a517ceaff03bdfde5c30bbd37e6d08fc0d2beff1bbbef3cb434a5b460a674ba",
+        "before_theme": "Wearables no controle de frequência da FA",
+        "unchanged_other_fields_sha256": "ebe1f648e358386cbb454405724961ca9f2dd7bcb9051295252d7cd6b55368fc"
+      },
+      "reabilitacao-52-semanas-melhora-feve-ldl-pos-pci-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "69638eacf5b903e99104165c024055e29cf7c8089088443fb06e5a29a6cc1588",
+        "baseline_source_sha256": "a6f907fadc9a56c082102ac2c6bcabd05e0dcd44ee15abb1594131341f145966",
+        "before_theme": "Reabilitação após PCI e ICFE levemente reduzida",
+        "unchanged_other_fields_sha256": "35a9675e369cbab5552803299050482cb360132f82037fba35a6aec26444f9da"
+      },
+      "reabilitacao-hibrida-beneficios-comparaveis-presencial-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "d6700d70d3546e77f797068c2651cb3334fe07796e783a5615d76ff50cea2d1a",
+        "baseline_source_sha256": "8a09b361428edf6767c72b6f2f950a4fd941f308cf6ca529f7eb39aa072413a1",
+        "before_theme": "Reabilitação cardíaca híbrida",
+        "unchanged_other_fields_sha256": "b639aece663664f80ab5d1f848481cd43a311b5f36f05ee2633f9c2888d59615"
+      },
+      "reabilitacao-precoce-pos-iam-melhora-recuperacao-achado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "e7132386e54ff2e6fb775d0bffe20f6c9f28443fee9e94592361b7e8c57e26e9",
+        "baseline_source_sha256": "d097ad28d6606c4adec9fbee006e56b83b85e9c0ae1d27a9d08cc31ed1999166",
+        "before_theme": "Reabilitação cardíaca pós-infarto",
+        "unchanged_other_fields_sha256": "17cfcd58e0b3c4ed9ebf31eb02d0b825dac570a6c101fffbb127bd4f7fb21636"
+      },
+      "reabilitacao-presencial-superou-domiciliar-capacidade-pressao-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "f6d80c1778560bfee43786debbd7c7be48b5daa9be5b58b759a81835a5eeaa5a",
+        "baseline_source_sha256": "21d7558129ed24de85f313ebda1d379d1e5de437eb4e8ab7f44c1c02d025c55e",
+        "before_theme": "Reabilitação domiciliar versus presencial",
+        "unchanged_other_fields_sha256": "0c81c9959b3a1408d3682ebc4a157864ad840d54b72d38d26757e50e006ab367"
+      },
+      "reabilitacao-sca-melhora-adesao-achado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "b43410d45558a257151b8b36cff7cee0b42706a210f6dc0bc0782f2762987a16",
+        "baseline_source_sha256": "6e7b42638a6c84900607617710004d5ba4faf674b162c9d36a7155c8995c1f33",
+        "before_theme": "Reabilitação após síndrome coronariana aguda",
+        "unchanged_other_fields_sha256": "534860957b14dfe550adb46c492863cac3753b67663fa7d9adb1919c85d3ce28"
+      },
+      "readyornot-chd-protocolo-app-transicao-achado": {
+        "after_theme": "Cardiopatias congênitas",
+        "anchor_source_sha256": "44e62a8d6ae80f22f2e68e0007bb2a682499f4b8e94adc599e9a51612a93573a",
+        "baseline_source_sha256": "6b363d5eca9d6e24537a1b721cb4702e7f14aef2ba38c1b9589b24c6808542c3",
+        "before_theme": "Transição digital na cardiopatia congênita",
+        "unchanged_other_fields_sha256": "375f0cef8438073ffdd8adefcfc76152482b0234e8b2e8b7c7b141ba60acba61"
+      },
+      "rec-cagefree-i-balao-farmaco-lesoes-longas-achado-principal": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "f7e684f819c2d23224350453ea6e6e30782eaa0ece558162230b94a65bc3eba0",
+        "baseline_source_sha256": "8877c5c600e672493a971b4c54d02fdfc24d50b0be2eb4a17bfa6705781f08ba",
+        "before_theme": "Intervenção coronária complexa",
+        "unchanged_other_fields_sha256": "f78bf9a2b8d580f0e95ad0c535edcab17a4c485d896c1fabf35fadd5173e8b50"
+      },
+      "recorrencias-pericardite-concentradas-primeiros-tres-meses-achado": {
+        "after_theme": "Pericárdio",
+        "anchor_source_sha256": "80989ade9290d37497d147f83adad1a5fce6da96a29dc48f08d834fe6689521c",
+        "baseline_source_sha256": "bb7e976c83ab5fc5d4944971501ba9ca17710dec74139fa664a4ca1c7c0a853e",
+        "before_theme": "Pericardite e recorrência",
+        "unchanged_other_fields_sha256": "80e7daa1bc62aa3e5f6a31ce7ecf943f2bfe8e1fbdec5c34933a1395285cb467"
+      },
+      "remote-af-wearable-alto-vpn-recorrencia-pos-ablacao-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "319a2c53d67db761ed43ba1e83af19aea7d2eae1536e17fc4aa4f250f1b70f32",
+        "baseline_source_sha256": "8037723d9446d0198d294d8bbebbf1f99c6c4a0be8f8129bafadef2e7178ccd6",
+        "before_theme": "Monitorização remota após ablação de FA",
+        "unchanged_other_fields_sha256": "b6d4866a3155c995b4a710d9cc6451331232a5ffc72bee24d40bff0862ff6567"
+      },
+      "renove-dose-reduzida-nao-atinge-nao-inferioridade-achado": {
+        "after_theme": "Tromboembolismo",
+        "anchor_source_sha256": "0d3ad7a074611020eb4b0b8f724f531dbd84f5e9a33157845d574a7ea2f03006",
+        "baseline_source_sha256": "51204d9e04fdab86af9436445627ca6cda137dd3688900711402c4c322edef53",
+        "before_theme": "Anticoagulação estendida no tromboembolismo venoso",
+        "unchanged_other_fields_sha256": "8118ce3d4cb0c78b0a8e98239b2361f1e09cb5a0a1d7c863ccb942c128e051f2"
+      },
+      "riccadsa-cpap-melhora-fenotipo-icfep-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "9647ff395601d3135d4adfd4180bc71b0c2f7af297601840bb278020a96cfd4f",
+        "baseline_source_sha256": "9e31cae6af9f586012aad71633cf5680a3eb63b4038125f71072ed058cca9a96",
+        "before_theme": "Apneia obstrutiva do sono e ICFEP",
+        "unchanged_other_fields_sha256": "8ae3935ad2973f0d0d179cf20d3b875966b5aa5299264d5d624376cbc5e58965"
+      },
+      "riccadsa-cpap-reduz-vcam1-sem-efeito-fibrinolitico-amplo-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "52c6eb879a9294ba2ee31b5b06dc916bab130c6ea3a95d9a68552d0af919bbe6",
+        "baseline_source_sha256": "8cf895eae500f5193dc4f7ca837ad45f1531d083034246b0f5cf4dcde638f0f9",
+        "before_theme": "Apneia do sono e biologia vascular",
+        "unchanged_other_fields_sha256": "7278779d7be9a2a06bb8af6180d71903d62c76621b5218901ed3ec19c8618c7c"
+      },
+      "rotarex-nao-prova-superioridade-sobre-trombolise-achado": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "ab518bbc1e4c819869b49481bd81cd528b323d006a7613913515fbd2da4ce1b3",
+        "baseline_source_sha256": "821dbbbd260f2914842e8a030a2caabdb27715918227fdbbc0df3c2cc2bc4d71",
+        "before_theme": "Isquemia aguda de membro",
+        "unchanged_other_fields_sha256": "dc96137fbf4eadabfac6d2e9b61b0fd72d3e981f13d1b8102329fabd079bc203"
+      },
+      "safe-protect-anchorman-watchman-oclusao-apendice-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "8dcbdf95671f1753d95c1613acc3efa05b81d1c298c6b6d622cad1d0fde4244a",
+        "baseline_source_sha256": "08aff2480439822f5975c3ab99d62c89f7fb94564b24a34d653334506443f01a",
+        "before_theme": "Oclusão do apêndice atrial esquerdo",
+        "unchanged_other_fields_sha256": "733b54f2afbb6375d59af56b479ef43bfa7412ac78335f8c79d80abd38077a28"
+      },
+      "sarpogrelato-nao-supera-aspirina-viscosidade-dap-achado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "96eff967628f5ab913411be89c1d83b1f360ba6831c22c796ee3a82b7c17329e",
+        "baseline_source_sha256": "bcb4d6da0e0ef40123dc633d63203a9ffff63d4ff0de66bbd7856fbdd0a49e45",
+        "before_theme": "Terapia antiplaquetária e microcirculação",
+        "unchanged_other_fields_sha256": "1787b45c8ccbbfe93453f7470f01ec6e277af3d60d2e87f7321dde838c21e7ea"
+      },
+      "savesams-estatina-ezetimiba-idosos-sintomas-musculares-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "79233fd1c17a892b71e90edf72946aefca8bb12c780475509ed662e3dd715f3b",
+        "baseline_source_sha256": "85d503796a7e710f21105185888802772aa6bc1ffd450f3d0b28e5a82ae66103",
+        "before_theme": "Dislipidemia no idoso",
+        "unchanged_other_fields_sha256": "07e617b9ac0e9b684c89022fdcb4c872ba6dadbcda953d607b2eba91d60e0a27"
+      },
+      "scram-nao-melhorou-vo2max-cuidado-usual-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "8f17290b4057da4d409fc3a7913e3ee15fc5c5e3500ce1e631cdbe19f38601f0",
+        "baseline_source_sha256": "092f7874422a7f7ef63b128e62a64e3a01bc1af4c68a3928de035c5cb20da35a",
+        "before_theme": "Reabilitação por smartphone",
+        "unchanged_other_fields_sha256": "9ef33240ee4f9042a47cc48b1cd4167a8a0dfc4b4b5c55ee14c38506a17a040e"
+      },
+      "siri-associado-presenca-extensao-realce-tardio-miocardite-achado": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "1f53305f92a38b66cabfbb442f01ed1d4d2421b317316502f5fb5e4d91262658",
+        "baseline_source_sha256": "e851a817257e09109b922282f634bcf94b853953431b4e50d5a0f2ea36d0a329",
+        "before_theme": "Miocardite, inflamação e ressonância",
+        "unchanged_other_fields_sha256": "d1e69b0d0d380fcbb84e9180c5f6da26d1e3f5348be20094d9a5f2e929f6c3e1"
+      },
+      "sirona-balao-sirolimus-paclitaxel-doenca-femoropoplitea-achado-principal": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "29a5193fc0be31d6b3609b2cdb545679c19ca13b49a30807e4a5c0483298468b",
+        "baseline_source_sha256": "bc6ed40446510ca73ec80c8d91635df4c6c3702c972cbf608e4e0f9f447a218b",
+        "before_theme": "Doença arterial periférica",
+        "unchanged_other_fields_sha256": "bfe5fccb08f0a19ca66a19340f968c37bd135eaccfc3350c8c8be1befcc22a99"
+      },
+      "sirona-dois-anos-sirolimus-paclitaxel-resultados-comparaveis-achado": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "61b43c56744670f4edabae56b79ee39cbd6f1854b1962c50e50c8076dd3bf8fd",
+        "baseline_source_sha256": "1082afb43cb6658c287da43ff42c60cab1ae17561ace9757f03dd83c16895351",
+        "before_theme": "Revascularização femoropoplítea",
+        "unchanged_other_fields_sha256": "3e2ffe64b9455e8a444a6e0bf7bcc0a84a4f35442197122c5e054cb16e05833c"
+      },
+      "sirona-subgrupos-nao-definem-escolha-do-revestimento-achado": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "a74f18e829674abd3443b0f7f71db49ae300743a92aa9c43303c92acf02326b8",
+        "baseline_source_sha256": "cbd63bdbdd1305bddfc4219cd2687715ae51735f953d23029ed7c2eee9c87d5d",
+        "before_theme": "Revascularização femoropoplítea",
+        "unchanged_other_fields_sha256": "c8e24c52e2482e4ab9d40f7d9faa0d8a32489a542f34b9c563a4cc7f4ce251df"
+      },
+      "sit-less-piloto-nao-reduz-significativamente-sedentarismo-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "b98231688aba1b5d39ed9e7259a5b640353573940b4146a488969448f47e45ab",
+        "baseline_source_sha256": "494884d749115302c2ccf047a5d18584d55dc3d92c979b845398f24f013e7a3d",
+        "before_theme": "Redução de comportamento sedentário",
+        "unchanged_other_fields_sha256": "a63661a3d842a131ef7ecf8dbbd0310f820b318f512c9bb3352c5114810912a8"
+      },
+      "spec-ai-estetoscopio-aumenta-diagnostico-periparto-achado": {
+        "after_theme": "Gravidez",
+        "anchor_source_sha256": "ea0f3bd46e17603c2a42e7fdaa1034b516db2abb1a6c6e4f690f7b570fbfd55b",
+        "baseline_source_sha256": "3805af801a7421a9ed818ad4aadc2cc6768978b6d7a27da33afaef5e5e0cd00d",
+        "before_theme": "IA e cardiomiopatia periparto",
+        "unchanged_other_fields_sha256": "087ea943dad695f1306ee6045b5cf76b14df66c594d3def2bd26d326ba9f060e"
+      },
+      "strokestop-iii-rastreamento-oportunistico-sistematico-fa-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "59c61d4a38c9b4381dd07df91c2a750b239e3f8caeb49aa23e283793eee03345",
+        "baseline_source_sha256": "b0bf2633b41a08d333cc6a2546a46790e93387006f02338136228ca1ecfb7ef3",
+        "before_theme": "Rastreamento de fibrilação atrial",
+        "unchanged_other_fields_sha256": "3c7985587d05973ae595b7aba694274fbc2f36c2c340d755293baa83df430b47"
+      },
+      "surmount-1-tirzepatida-melhora-biomarcadores-multiplas-vias-achado": {
+        "after_theme": "Diabetes e cardiologia",
+        "anchor_source_sha256": "b28da866e64619d1aab810f73891fd0eeaa9bdd32090a5a8c740c11fa5a3e549",
+        "baseline_source_sha256": "9a9ecc66017a7ffb49a626a926564a4cd46060263fbc4b40083ccd7b7cdea8ed",
+        "before_theme": "Tirzepatida e risco cardiometabólico",
+        "unchanged_other_fields_sha256": "a43547c4996f442b5d8abb5bf29ce79ab4c3f4c246ec0827fe9ae3917af925a6"
+      },
+      "surmount-osa-melhora-risco-cardiometabolico-achado": {
+        "after_theme": "Diabetes e cardiologia",
+        "anchor_source_sha256": "f4064ba2d50f81746f0f48b7aa9d4908c49b838550c7873692e164e2ff1cc8c5",
+        "baseline_source_sha256": "a33292bf5429b8f3a7743a4e74c7625d72febb80eb7e7305f83819620a876594",
+        "before_theme": "Apneia obstrutiva do sono e risco cardiometabólico",
+        "unchanged_other_fields_sha256": "3a3e4a42d6ff55d615ee60f954ce2b6eaa59aa8c9a6d14d52eb4ffc5936ce9fb"
+      },
+      "tact-mulheres-melhorou-capacidade-qualidade-adesao-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "51d6f67820f6bd14338f75374f62ed749588c84e88ae8ae7b7f2f6643cc35a52",
+        "baseline_source_sha256": "74e69d7f4823bf50cb4546f5f9e604d25e6055941f7f52e125cd8ea83660f4e6",
+        "before_theme": "Reabilitação digital para mulheres",
+        "unchanged_other_fields_sha256": "4c77f63c51c71b62e64de0e9f3ec5096a2d2236ef3cae78f6252ad7fe91337e9"
+      },
+      "tavr-met-tirzepatida-reduz-halt-vazamento-achado": {
+        "after_theme": "Valvopatias",
+        "anchor_source_sha256": "cc29fa54b48569780f4e18b15e5998d6fa2721ba9df176aef69e9891f2884a8d",
+        "baseline_source_sha256": "006ebfc71c1ab142be570e3f2d768e2762a196f33a3c8e486e5c7ae0ca1bdb96",
+        "before_theme": "Obesidade e resultados estruturais após TAVI",
+        "unchanged_other_fields_sha256": "cbfe99335c93661cd41df32d2c57a0a0df6d2149f06bfe7fedf087bc75f5086c"
+      },
+      "telemonitoramento-melhora-autocuidado-adesao-ic-achado": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "65dd68dc2f7fc5bd940331811f9be303743a0e9ad846164844d90164370aff5f",
+        "baseline_source_sha256": "dd7b1e6702c133b4aa4ddd27c8da240d1e9a3f64daea7796acff07ea7b460e12",
+        "before_theme": "Telemonitoramento na insuficiência cardíaca",
+        "unchanged_other_fields_sha256": "4a7b167cd60430970b8dd32cac858f4021a208a30fc797b38616cc9f6b10f92a"
+      },
+      "telereabilitacao-hibrida-cardiomiopatia-hipertrofica-nao-obstrutiva-achado-principal": {
+        "after_theme": "Cardiomiopatias",
+        "anchor_source_sha256": "b21a42d86dcc7e1df6ca52dd38536f28034e56d352e0fea0c3a30a05db17d0a1",
+        "baseline_source_sha256": "25c05754c9344271d23fc96d10bfc15df25334b6b95bae68eedea25f992b8287",
+        "before_theme": "Cardiomiopatia hipertrófica",
+        "unchanged_other_fields_sha256": "1877d91324667350fa9686958ed4bc8fca5581b65ff513fae8d5c32df4e658e4"
+      },
+      "tens-aumenta-agudamente-fluxo-e-caminhada-dap-achado": {
+        "after_theme": "Aorta e doença arterial periférica",
+        "anchor_source_sha256": "0c35751af8e9b594c1a31f42cbd76a1de6778f98c2a55b6f1e5f90e510a1924a",
+        "baseline_source_sha256": "860d29f5b7325c71ab6e762b6b74fc95d9ab8f88d3d64bd3d1e8e804c6937975",
+        "before_theme": "Claudicação e terapias adjuvantes",
+        "unchanged_other_fields_sha256": "5cb36d199edf81579af4efaf44cad06dba90ff0f8704a21d6d805e9332be3445"
+      },
+      "textme-pso-melhora-comportamento-sem-mudar-biomarcadores-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "c3e7365766994ba6cd82f8750fd5ff49856b9d10a43cf457c4c6b41e8456a959",
+        "baseline_source_sha256": "6aa2423b099a03d46fb8fecc57c0d6faf30508aeba41429c9bf8f523f96296c1",
+        "before_theme": "Prevenção cardiovascular na psoríase",
+        "unchanged_other_fields_sha256": "69d836774dd40b63acf7d87d466e265d3b7c2cc5837f1b8e25ac4a0514d0d5ee"
+      },
+      "ticagrelor-monoterapia-imediata-pos-pci-stemi-piloto-achado-principal": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "9cf4a2a6956d0ed1e6dadae372353b5af90ec257a71f79336cd919c4ae85b090",
+        "baseline_source_sha256": "567eb574a1db25a1b55234c73783ce932dd761342de5a52704e0f3f1392c86ef",
+        "before_theme": "Antiagregação pós-PCI",
+        "unchanged_other_fields_sha256": "add244fba4e84a840361fde005c264083c285f17c2b1085733b8f66386c092ff"
+      },
+      "track-rivaroxabana-baixa-dose-doenca-renal-avancada-achado-principal": {
+        "after_theme": "Insuficiência cardíaca",
+        "anchor_source_sha256": "2270f29e186ad815e058028e6c8bda37d8704766176dbadbe31b66ced0b10296",
+        "baseline_source_sha256": "7a82b31f78d485405fc68475777bee45fe530dcb4e69314d7c8f4c39dbba3a6e",
+        "before_theme": "Cardiorrenal",
+        "unchanged_other_fields_sha256": "1ac611da856ab4b0cd81917afa2264cb65fdfcf05270c51783a3928bb4002844"
+      },
+      "transition-chd-melhora-qualidade-vida-conhecimento-achado": {
+        "after_theme": "Cardiopatias congênitas",
+        "anchor_source_sha256": "e580096e8716e30637df697a47987f1d8f6c05246377bcb0db15c6f396e4c96e",
+        "baseline_source_sha256": "27bd894a50ab9a6ac64d82bd402b30d749f6412257a2008c19fa72cbdfe6e5a6",
+        "before_theme": "Transição na cardiopatia congênita",
+        "unchanged_other_fields_sha256": "c95c7112c0d187ae8d256777fd1772fda5e36e80fea15b12dde4d5fa4d2e6bf0"
+      },
+      "treinamento-continuo-maior-reducao-pressao-pico-fa-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "b57574db25e5480719c8a585ca54c705b6a5089847f2a861efe90b74579ce7af",
+        "baseline_source_sha256": "e06ac0a407ef9da0f72f7be614f168d1aef8e3229c93fa01202c12b68ad77842",
+        "before_theme": "Exercício na fibrilação atrial",
+        "unchanged_other_fields_sha256": "2190b859a8d62d401ec7b89f81305da534e06af8ffa6340de0cabe47d3efa381"
+      },
+      "treinamento-resistido-melhora-parametros-cardiacos-mulheres-idosas-achado": {
+        "after_theme": "Cardiologia geriátrica",
+        "anchor_source_sha256": "d7bb737a989831d5a98d8196aa9f5ecbcc0d87d2ccacfddfbfb35f81c461af2d",
+        "baseline_source_sha256": "a4f8583a40be33b3d8e2bb0cd07720a316e3e6ac1afcee60666a4325330db41d",
+        "before_theme": "Exercício na mulher idosa",
+        "unchanged_other_fields_sha256": "65966939ba73c84da811d2d5c9ff915a630cf589ba9ab295768d70c933e938cc"
+      },
+      "tuxedo-2-stents-diabetes-doenca-multiarterial-achado-principal": {
+        "after_theme": "Diabetes e cardiologia",
+        "anchor_source_sha256": "df95d4e32b0a035d8d69901286c9534e793b0f0e5c30900cf759ca81f54f6a3d",
+        "baseline_source_sha256": "748147be9184026564c1e07857781d42dc3bf4c7702069cd2049e445b71a646a",
+        "before_theme": "PCI no diabetes",
+        "unchanged_other_fields_sha256": "dd47692401386e410f0b1018f261f4c29739ffc3d7eef22d4bb68aa0562b6fee"
+      },
+      "up-to-af-reduz-exposicao-doac-sem-estabelecer-seguranca-achado": {
+        "after_theme": "Fibrilação atrial",
+        "anchor_source_sha256": "84281846624603f6c6c609f0a2aeb9f9934d864a21a0ca9d9e6bf0c6a729a5dd",
+        "baseline_source_sha256": "7075d2aa7db2b047427e29120b31ec65af41e5b91b6b3ef0dfaf79918e10fca5",
+        "before_theme": "Wearables e anticoagulação após ablação",
+        "unchanged_other_fields_sha256": "a8faccdcb58aba3cc68a0ceccf1cf4f671e1452cecb658b9d91c7c75360251b2"
+      },
+      "var-pvc-vareniciclina-extrassistoles-pos-infarto-achado": {
+        "after_theme": "Arritmias",
+        "anchor_source_sha256": "0e8477bd96424c0216636b1a0aa08fa79d2d9333ff836024d163e800fbafc5de",
+        "baseline_source_sha256": "fe8435567d7b54d37ec88014bf691973e15292cf320188cacfb48d9f8e2059ba",
+        "before_theme": "Arritmias ventriculares pós-infarto",
+        "unchanged_other_fields_sha256": "85e06034df6112cb28679efec514d8a2f6b8221a26b898674002d7eeafefcf2e"
+      },
+      "vesalius-cv-evolocumabe-diabetes-alto-risco-achado-principal": {
+        "after_theme": "Diabetes e cardiologia",
+        "anchor_source_sha256": "57a154ab679b5bd9bbde6726d4ab81a873fd9403a8a006387f7efe3be87c6950",
+        "baseline_source_sha256": "d66e8773c99bd0db8fa08713791d1da7e38908cc9e4745ac0a6fe0490584ffc6",
+        "before_theme": "Diabetes e prevenção cardiovascular",
+        "unchanged_other_fields_sha256": "c3178c1e20ec21d299c48692a91deec50a4e69afb93c8c2407f8dac5722e175c"
+      },
+      "vesalius-cv-lpa-risco-coronariano-evolocumabe-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "ff8da5311bc4fdd2444551b86de0ce755c9ce403b3cd1f05f12fb4f164befdf4",
+        "baseline_source_sha256": "22872d8cc5c9c524f7aafb850a028165634c5b22357d25ba211f60d61476e5f2",
+        "before_theme": "Lipoproteína(a)",
+        "unchanged_other_fields_sha256": "868743bcf736540d657a3d4df435e313e86b6e9538e6e961008bc6862701686c"
+      },
+      "vesalius-cv-pci-previa-evolocumabe-reducao-eventos-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "daf5d4700a16481e5662973e1a53c2c9737a6d89bef78e464ba71cf6df7e85a6",
+        "baseline_source_sha256": "97c7f88f9582d2b9f8e86963426b0e967e4cd18a6ca3f12a91696c05859292aa",
+        "before_theme": "Prevenção cardiovascular e lípides",
+        "unchanged_other_fields_sha256": "527bb912c4492f96e2c96dfb8395e22f277259cb72c2ba9f91fba10c11694e70"
+      },
+      "vitak-cac-menaquinona-retarda-progressao-calcio-achado": {
+        "after_theme": "Doença coronariana",
+        "anchor_source_sha256": "9475a1dbff252e0366da065ec23fcda91692edd94db4e8a63cc602baefd76da6",
+        "baseline_source_sha256": "719dd14beffb4ade06d59b117bb81aefea01b37d82e34e398208dd54d3b9481c",
+        "before_theme": "Calcificação coronariana",
+        "unchanged_other_fields_sha256": "f1f3aa06ade2f9c7968ceb661016bd8c61a1f80f65613fe7a2ace49f9e4b99b6"
+      },
+      "wearable-mais-entrevista-reduziu-sedentarismo-achado": {
+        "after_theme": "Prevenção e lipídios",
+        "anchor_source_sha256": "12682e85e72706ee526dfaf6388fd879b98ccc614818d0547118d1426bd696d6",
+        "baseline_source_sha256": "098411b5a80f3599238cf69330bd3e35cdd334103078016cd5bb509e84bed71b",
+        "before_theme": "Comportamento sedentário e saúde cardiovascular",
+        "unchanged_other_fields_sha256": "9d75f304b5318dd765401a43f8f96a5105caba3ef57dcf15bb94d8becb1c4add"
+      }
+    }
+  },
+  "normalization_commit": "800a159e09c87176c9c5bc0f53978495dd5a8de9",
+  "normalized_total": 304,
+  "schema_version": 1
+}

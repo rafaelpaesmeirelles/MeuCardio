@@ -1,0 +1,515 @@
+{
+  "baseline_run": 34418893616,
+  "baseline_job": 102689862687,
+  "result": {
+    "failed": 84,
+    "passed": 3038,
+    "skipped": 3
+  },
+  "failures": [
+    {
+      "module": "tests/test_aprofundamento_avaliacao_multidimensional_cardiogeriatrica.py",
+      "test": "test_documentos_compartilhados_sao_os_esperados_e_documentados",
+      "summary": "AssertionError: sobreposição não documentada com outra ficha: {'sarcopenia-e-risco-cardiovascular-metanalise-de-estudos-longitudinais'}",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_doenca_coronariana_idoso.py",
+      "test": "test_marcacao_editorial_correta_apos_aprofundamento",
+      "summary": "AssertionError: assert None == 'claude'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_doenca_coronariana_idoso.py",
+      "test": "test_profundidade_minima_e_nao_e_resumo",
+      "summary": "AssertionError: presentation tem 0 itens, mínimo 6",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_doenca_coronariana_idoso.py",
+      "test": "test_assistente_deterministico_seguro",
+      "summary": "assert 0 >= 3",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_doenca_coronariana_idoso.py",
+      "test": "test_vinculos_tudo_com_tudo_resolvem_e_sao_documentos_narrativos",
+      "summary": "AssertionError: ficha aprofundada deveria conectar um volume relevante de documentos",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_doenca_coronariana_idoso.py",
+      "test": "test_patient_material_slug_resolve",
+      "summary": "AssertionError: patient_material_slug deveria estar preenchido",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_fisiologia_ventriculo_unico.py",
+      "test": "test_marcacao_editorial_correta",
+      "summary": "AssertionError: assert None == 'claude'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_fisiologia_ventriculo_unico.py",
+      "test": "test_profundidade_minima_e_nao_e_resumo",
+      "summary": "assert 0 >= 8",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_fisiologia_ventriculo_unico.py",
+      "test": "test_texto_com_acentuacao_correta_do_portugues",
+      "summary": "assert 'não ' in '{\"slug\": \"fisiologia-ventriculo-unico\", \"name\": \"Fisiologia de ventrículo único\", \"aliases\": [\"coração univentricular...\", \"fluxograma-descompensacao-aguda-da-circulacao-de-fontan\"], \"patient_material_slug\": \"fisiologia-ventriculo-unico\"}'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_fisiologia_ventriculo_unico.py",
+      "test": "test_assistente_deterministico_seguro",
+      "summary": "assert 0 >= 3",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_indicacoes_ecocardiograma_fetal.py",
+      "test": "test_marcacao_editorial_correta",
+      "summary": "AssertionError: assert None == 'claude'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_indicacoes_ecocardiograma_fetal.py",
+      "test": "test_profundidade_minima_e_nao_e_resumo",
+      "summary": "AssertionError: assert (True and 0 >= 8)",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_indicacoes_ecocardiograma_fetal.py",
+      "test": "test_texto_com_acentuacao_correta_do_portugues",
+      "summary": "assert 'não ' in '{\"slug\": \"indicacoes-ecocardiograma-fetal\", \"name\": \"Indicações de ecocardiograma fetal\", \"aliases\": [\"quando pedir e...a-congenita-na-prole-e-ecocardiograma-fetal-direcionado\"], \"patient_material_slug\": \"indicacoes-ecocardiograma-fetal\"}'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_indicacoes_ecocardiograma_fetal.py",
+      "test": "test_assistente_deterministico_seguro",
+      "summary": "assert (0 >= 3)",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_indicacoes_ecocardiograma_fetal.py",
+      "test": "test_vinculos_tudo_com_tudo_resolvem_e_sao_documentos_narrativos",
+      "summary": "AssertionError: assert 3 <= 1",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_plano_parto_cardiopatia_materna.py",
+      "test": "test_marcacao_editorial_correta",
+      "summary": "AssertionError: assert None == 'claude'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_plano_parto_cardiopatia_materna.py",
+      "test": "test_profundidade_minima_e_nao_e_resumo",
+      "summary": "AssertionError: assert (True and 0 >= 8)",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_plano_parto_cardiopatia_materna.py",
+      "test": "test_assistente_deterministico_seguro",
+      "summary": "assert (0 >= 3)",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_plano_parto_cardiopatia_materna.py",
+      "test": "test_vinculos_tudo_com_tudo_resolvem_e_sao_documentos_narrativos",
+      "summary": "assert 3 <= 0",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_plano_parto_cardiopatia_materna.py",
+      "test": "test_patient_material_slug_resolve",
+      "summary": "AssertionError: assert None == 'plano-parto-cardiopatia-materna'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_sopros_na_infancia.py",
+      "test": "test_marcacao_editorial_correta",
+      "summary": "AssertionError: assert None == 'claude'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_sopros_na_infancia.py",
+      "test": "test_profundidade_minima_e_nao_e_resumo",
+      "summary": "AssertionError: presentation tem 0 itens, mínimo 6",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_sopros_na_infancia.py",
+      "test": "test_assistente_deterministico_seguro",
+      "summary": "assert 0 >= 3",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_aprofundamento_sopros_na_infancia.py",
+      "test": "test_vinculos_tudo_com_tudo_resolvem_e_sao_documentos_narrativos",
+      "summary": "AssertionError: aprofundamento deveria conectar um volume relevante de documentos",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_audit_tudo_com_tudo_study_slug.py",
+      "test": "test_auditor_valida_study_slug_exatamente_como_estudo",
+      "summary": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-runner/pytest-0/test_auditor_valida_study_slug0/doencas/relacoes-transversais.json'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_audit_tudo_com_tudo_study_slug.py",
+      "test": "test_auditor_bloqueia_estudo_incompativel[study_patch0-pmid_mismatch]",
+      "summary": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-runner/pytest-0/test_auditor_bloqueia_estudo_i0/doencas/relacoes-transversais.json'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_audit_tudo_com_tudo_study_slug.py",
+      "test": "test_auditor_bloqueia_estudo_incompativel[study_patch1-target_pmid_missing]",
+      "summary": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-runner/pytest-0/test_auditor_bloqueia_estudo_i1/doencas/relacoes-transversais.json'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_audit_tudo_com_tudo_study_slug.py",
+      "test": "test_auditor_bloqueia_estudo_incompativel[study_patch2-target_not_published]",
+      "summary": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-runner/pytest-0/test_auditor_bloqueia_estudo_i2/doencas/relacoes-transversais.json'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_audit_tudo_com_tudo_study_slug.py",
+      "test": "test_auditor_bloqueia_estudo_incompativel[study_patch3-target_not_reviewed]",
+      "summary": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-runner/pytest-0/test_auditor_bloqueia_estudo_i3/doencas/relacoes-transversais.json'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_audit_tudo_com_tudo_study_slug.py",
+      "test": "test_auditor_permite_vinculo_sem_pmid_quando_evidencia_nao_o_declara",
+      "summary": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-runner/pytest-0/test_auditor_permite_vinculo_s0/doencas/relacoes-transversais.json'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_canonical_content_review_status.py",
+      "test": "test_todos_os_documentos_markdown_estao_revisados",
+      "summary": "AssertionError: assert ['content/Car...revisao', ...] == []",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_canonical_medication_required_fields.py",
+      "test": "test_canonical_publishable_manifests_have_no_human_verification_marker",
+      "summary": "AssertionError: medicamentos/metadados.json",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_cardiologia_intensiva_uco_contract.py",
+      "test": "test_auditoria_descobre_calculadoras_de_registros_modulares",
+      "summary": "assert 'glob(\"*calculators*.py\")' in '#!/usr/bin/env python3\\n\"\"\"Auditoria reprodutível das relações do corpus Tudo com Tudo.\\n\\nLê os itens versionados, v...eturn 0 if result[\"gate\"][\"passed\"] else 1\\n\\n\\nif __name__ == \"__main__\":\\n    raise SystemExit(main(sys.argv[1:]))\\n'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_cardiovascular_exam_ai.py",
+      "test": "test_responses_envia_multiplos_arquivos_com_store_false",
+      "summary": "app.services.ia.usage_control.AIUsageError: 422: Não foi possível estimar o custo do arquivo clínico.",
+      "owner_group": "A"
+    },
+    {
+      "module": "tests/test_condicoes_profundas_adulto_lote3_embolia.py",
+      "test": "test_embolia_pulmonar_tem_quatro_arestas_externas_explicitas_e_resolvidas",
+      "summary": "AssertionError: assert {('calculador...ein-pe'), ...} == {('checklist'...-pelo-risco')}",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_corvia_mail.py",
+      "test": "TestCheckoutEmail::test_preco_indefinido_devolve_409",
+      "summary": "assert 500 == 409",
+      "owner_group": "B"
+    },
+    {
+      "module": "tests/test_corvia_mail.py",
+      "test": "TestCheckoutEmail::test_status_email_reporta_preco_definido",
+      "summary": "assert 2000 == 1000",
+      "owner_group": "B"
+    },
+    {
+      "module": "tests/test_deploy_contract.py",
+      "test": "test_deploy_exige_readiness_antes_de_migrar_e_reconciliar",
+      "summary": "assert 'BACKEND_PRONTO=0' in '#!/usr/bin/env bash\\n# Recuperação emergencial web-only autorizada em 04/09/2026.\\n# Publica o frontend já aprovado e...as animadas e backend pronto.\"\\nprintf \\'WEB_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\nprintf \\'BACKEND_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\n'",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_contract.py",
+      "test": "test_deploy_constroi_antes_da_indisponibilidade_e_abre_proxy_por_ultimo",
+      "summary": "ValueError: substring not found",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_contract.py",
+      "test": "test_deploy_ativa_e_certifica_workers_da_mesma_release_antes_do_proxy",
+      "summary": "ValueError: substring not found",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_contract.py",
+      "test": "test_deploy_diagnostica_falhas_inesperadas_apos_subir_servicos",
+      "summary": "ValueError: '\"${COMPOSE[@]}\" up -d --no-build --remove-orphans db redis backend frontend-build' is not in list",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_contract.py",
+      "test": "test_deploy_restaura_dump_se_fase_mutavel_falhar",
+      "summary": "ValueError: substring not found",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_contract.py",
+      "test": "test_deploy_preserva_banco_persistente_mesmo_parado_e_sem_labels",
+      "summary": "assert 'BANCO_PERSISTENTE=0' in '#!/usr/bin/env bash\\n# Recuperação emergencial web-only autorizada em 04/09/2026.\\n# Publica o frontend já aprovado e...as animadas e backend pronto.\"\\nprintf \\'WEB_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\nprintf \\'BACKEND_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\n'",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_contract.py",
+      "test": "test_deploy_nao_volta_ao_importador_parcial",
+      "summary": "assert 'python -m app.commands.reconcile_content --publish-reviewed' in '#!/usr/bin/env bash\\n# Recuperação emergencial web-only autorizada em 04/09/2026.\\n# Publica o frontend já aprovado e...as animadas e backend pronto.\"\\nprintf \\'WEB_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\nprintf \\'BACKEND_SHA=%s\\\\n\\' \"$CUR",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_contract.py",
+      "test": "test_deploy_exige_https_publico_e_fecha_proxy_se_certificacao_falhar",
+      "summary": "assert 'https://${DOMAIN}/api/ready' in '#!/usr/bin/env bash\\n# Recuperação emergencial web-only autorizada em 04/09/2026.\\n# Publica o frontend já aprovado e...as animadas e backend pronto.\"\\nprintf \\'WEB_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\nprintf \\'BACKEND_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\n'",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_contract.py",
+      "test": "test_deploy_bloqueia_concorrencia_e_revalida_checkout",
+      "summary": "assert 'git status --porcelain --untracked-files=normal' in '#!/usr/bin/env bash\\n# Recuperação emergencial web-only autorizada em 04/09/2026.\\n# Publica o frontend já aprovado e...as animadas e backend pronto.\"\\nprintf \\'WEB_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\nprintf \\'BACKEND_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\n'",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_contract.py",
+      "test": "test_deploy_injeta_e_confirma_commit_publico",
+      "summary": "assert 'export DEPLOY_COMMIT=\"$COMMIT_ATUAL\"' in '#!/usr/bin/env bash\\n# Recuperação emergencial web-only autorizada em 04/09/2026.\\n# Publica o frontend já aprovado e...as animadas e backend pronto.\"\\nprintf \\'WEB_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\nprintf \\'BACKEND_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\n'",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_contract.py",
+      "test": "test_deploy_habilita_e_certifica_ia_cardiovascular_antes_do_trafego",
+      "summary": "assert '[[ -z \"${OPENAI_API_KEY:-}\" ]]' in '#!/usr/bin/env bash\\n# Recuperação emergencial web-only autorizada em 04/09/2026.\\n# Publica o frontend já aprovado e...as animadas e backend pronto.\"\\nprintf \\'WEB_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\nprintf \\'BACKEND_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\n'",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_rag_fora_da_janela_critica_20260903.py",
+      "test": "test_indexacao_rag_roda_depois_do_caddy_reabrir_e_do_rollback_desarmado",
+      "summary": "ValueError: substring not found",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_rag_fora_da_janela_critica_20260903.py",
+      "test": "test_indexacao_rag_e_disparada_em_background_nao_bloqueante",
+      "summary": "ValueError: substring not found",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_rag_fora_da_janela_critica_20260903.py",
+      "test": "test_falha_da_indexacao_rag_nao_derruba_o_deploy",
+      "summary": "ValueError: substring not found",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_rag_fora_da_janela_critica_20260903.py",
+      "test": "test_nao_ha_segunda_chamada_de_indexacao_redundante_no_deploy",
+      "summary": "assert 0 == 1",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_rag_fora_da_janela_critica_20260903.py",
+      "test": "test_reconcile_content_nao_e_seguido_de_chamada_de_rede_antes_do_readiness",
+      "summary": "ValueError: substring not found",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_rollback_window.py",
+      "test": "test_rollback_permanece_armado_ate_readiness_e_checkout_imutavel",
+      "summary": "ValueError: substring not found",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_deploy_snapshot_order.py",
+      "test": "test_snapshot_ocorre_depois_do_build_e_da_parada_dos_escritores",
+      "summary": "ValueError: substring not found",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_entitlement_convidado_investidor.py",
+      "test": "TestBillingRegressao::test_assinante_pago_normal_continua_funcionando_como_antes",
+      "summary": "assert 500 == 200",
+      "owner_group": "B"
+    },
+    {
+      "module": "tests/test_entitlement_convidado_investidor.py",
+      "test": "TestBillingRegressao::test_checkout_normal_usuario_pagante_continua_chamando_stripe",
+      "summary": "assert 500 == 200",
+      "owner_group": "B"
+    },
+    {
+      "module": "tests/test_feature_inventory.py",
+      "test": "test_published_feature_inventory_is_intact",
+      "summary": "AssertionError: ERRO: Rotas React divergiu. Ausentes=[]; novos_nao_revisados=['/admin/atividade']",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_fullscreen_social_login_contract.py",
+      "test": "test_login_screen_uses_dynamic_viewport_without_social_buttons",
+      "summary": "assert ['import \"../...260909.css\";'] == ['import \"../...260904.css\";']",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_guia_atresia_pulmonar.py",
+      "test": "test_referencias_tudo_com_tudo_resolvem_explicitamente",
+      "summary": "AssertionError: assert 10 == 5",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_guia_defeito_septo_atrioventricular.py",
+      "test": "test_referencias_tudo_com_tudo_resolvem_sem_inferencia_tematica",
+      "summary": "AssertionError: assert {('caso_clini...lmonar'), ...} == {('checklist'...o-terciario')}",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_guia_endocardite_pediatrica.py",
+      "test": "test_referencias_tudo_com_tudo_resolvem_sem_inferencia_tematica",
+      "summary": "AssertionError: assert {('caso_clini...s-especiais')} == {('checklist'...s-especiais')}",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_guia_hipertensao_pulmonar_pediatrica.py",
+      "test": "test_referencias_tudo_com_tudo_resolvem_sem_inferencia_tematica",
+      "summary": "AssertionError: assert {('checklist'...dispositivo')} == {('checklist'...dispositivo')}",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_guia_retorno_venoso_pulmonar_anomalo.py",
+      "test": "test_referencias_tudo_com_tudo_resolvem_explicitamente",
+      "summary": "AssertionError: assert 7 == 4",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_onboarding_convidado_investidor_admin.py",
+      "test": "TestNuncaChamaStripe::test_normal_criado_pelo_admin_continua_chamando_stripe",
+      "summary": "assert 500 == 200",
+      "owner_group": "B"
+    },
+    {
+      "module": "tests/test_painel_menu_acervo.py",
+      "test": "test_publica_preservados_revisados",
+      "summary": "sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: documents",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_painel_menu_acervo.py",
+      "test": "test_dry_run_nao_altera_banco",
+      "summary": "sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: documents",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_painel_menu_acervo.py",
+      "test": "test_ordem_do_menu_alerta_e_deploy",
+      "summary": "assert 'app.commands.publish_preserved_content' in '#!/usr/bin/env bash\\n# Recuperação emergencial web-only autorizada em 04/09/2026.\\n# Publica o frontend já aprovado e...as animadas e backend pronto.\"\\nprintf \\'WEB_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\nprintf \\'BACKEND_SHA=%s\\\\n\\' \"$CURRENT_SHA\"\\n'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_prehome_approved_auth_flow.py",
+      "test": "test_prehome_brand_matches_approved_corvia_identity",
+      "summary": "assert 'login-gateway__stars' in 'import { useState, type FormEvent } from \"react\";\\nimport { Link } from \"react-router-dom\";\\nimport Icone from \"../co...>CorVIA</strong><span>|</span>CARDIOLOGY SPACES<span>|</span>VERSÃO 2.0</div>\\n      </footer>\\n    </main>\\n  );\\n}\\n'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_provedor_tool_use.py",
+      "test": "test_tool_use_e_executado_e_resultado_volta_como_tool_result",
+      "summary": "app.services.ia.usage_control.AIUsageError: 403: Chamada de IA sem conta responsável.",
+      "owner_group": "A"
+    },
+    {
+      "module": "tests/test_provedor_tool_use.py",
+      "test": "test_tool_result_serializa_tipos_temporais_de_rotina_da_agenda",
+      "summary": "app.services.ia.usage_control.AIUsageError: 403: Chamada de IA sem conta responsável.",
+      "owner_group": "A"
+    },
+    {
+      "module": "tests/test_provedor_tool_use.py",
+      "test": "test_sem_ferramentas_nao_usa_tool_use_mesmo_que_stop_reason_venha_assim",
+      "summary": "app.services.ia.usage_control.AIUsageError: 403: Chamada de IA sem conta responsável.",
+      "owner_group": "A"
+    },
+    {
+      "module": "tests/test_provedor_tool_use.py",
+      "test": "test_teto_de_rodadas_de_tool_use_e_respeitado",
+      "summary": "app.services.ia.usage_control.AIUsageError: 403: Chamada de IA sem conta responsável.",
+      "owner_group": "A"
+    },
+    {
+      "module": "tests/test_provedor_tool_use.py",
+      "test": "test_executor_ferramenta_recebe_input_correto_com_multiplas_tools_na_mesma_rodada",
+      "summary": "app.services.ia.usage_control.AIUsageError: 403: Chamada de IA sem conta responsável.",
+      "owner_group": "A"
+    },
+    {
+      "module": "tests/test_provedor_tool_use.py",
+      "test": "test_web_search_declara_allowed_callers_direct",
+      "summary": "app.services.ia.usage_control.AIUsageError: 403: Chamada de IA sem conta responsável.",
+      "owner_group": "A"
+    },
+    {
+      "module": "tests/test_public_route_inventory.py",
+      "test": "test_public_routes_are_explicitly_allowlisted",
+      "summary": "AssertionError: Inventário de rotas públicas mudou. Revise cada rota e atualize a allowlist conscientemente. Encontradas: [('GET', '/api/agenda/oauth/google/callback'), ('GET', '/api/agenda/oauth/microsoft/callback'), ('GET', '/api/auth/social/providers'), ('GET', '/api/auth/social/{provider}/callba",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_rag_stream_status.py",
+      "test": "test_stream_encaminha_status_de_tool_sem_tratar_como_final",
+      "summary": "app.services.ia.usage_control.AIUsageError: 403: Operação de IA sem conta responsável.",
+      "owner_group": "A"
+    },
+    {
+      "module": "tests/test_reconcile_content_full_run.py",
+      "test": "test_reconcile_publish_reviewed_termina_sem_excecao_contra_conteudo_real",
+      "summary": "RuntimeError: Autorização integral diverge do total canônico: manifesto=11581, atual=12210.",
+      "owner_group": "D"
+    },
+    {
+      "module": "tests/test_tudo_com_tudo_medication_ui_contract.py",
+      "test": "test_qualquer_assunto_e_organizado_sem_expandir_tema_amplo_por_inferencia",
+      "summary": "assert 'Conexão clínica verificável' in 'import { useEffect, useRef, useState, type ReactNode } from \"react\";\\nimport { Link, useSearchParams } from \"react-ro...Disease && <Vazio titulo=\"Nada encontrado\" acao=\"Tente o princípio ativo ou um sinônimo clínico.\" />}\\n  </main>;\\n}\\n'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_vinculo_tudo_com_tudo_doenca_de_kawasaki.py",
+      "test": "test_marcacao_editorial_correta",
+      "summary": "AssertionError: assert None == 'claude'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_vinculo_tudo_com_tudo_doenca_de_kawasaki.py",
+      "test": "test_vinculos_tudo_com_tudo_resolvem_e_sao_documentos_narrativos",
+      "summary": "assert 3 <= 0",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_vinculo_tudo_com_tudo_doenca_de_kawasaki.py",
+      "test": "test_patient_material_slug_resolve",
+      "summary": "AssertionError: assert None == 'doenca-de-kawasaki-o-que-os-pais-precisam-saber'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_vinculo_tudo_com_tudo_trombose_associada_cancer.py",
+      "test": "test_marcacao_editorial_correta",
+      "summary": "AssertionError: assert 'revisado' == 'pendente_revisao'",
+      "owner_group": "C"
+    },
+    {
+      "module": "tests/test_whatsapp_assistant_security.py",
+      "test": "test_audio_transcription_returns_reviewable_text",
+      "summary": "app.services.whatsapp_adapter.WhatsAppProviderError: Falha no provedor de transcrição",
+      "owner_group": "A"
+    }
+  ]
+}

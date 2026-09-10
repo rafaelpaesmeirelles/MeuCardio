@@ -1,6 +1,6 @@
 """Account-scoped, fail-closed accounting at every paid provider boundary.
 
-Prices: provider public pricing and OpenAI images-vision, verified 2026-09-09.
+Prices: provider public pricing, cache tariffs and image limits, verified 2026-09-10.
 All monetary values passed to the wallet are integer BRL micro-units. Payloads
 and patient data are never persisted here. Network SDK retries must be disabled.
 """
@@ -24,7 +24,7 @@ from fastapi import HTTPException
 from app.core.config import settings
 
 log = logging.getLogger("corvia.ai.accounting")
-PRICING_VERSION = "2026-09-09-v1"
+PRICING_VERSION = "2026-09-10-cache-v2"
 PRICES = {
     "gpt-4o-mini": ("0.15", "0.60"), "gpt-4o": ("2.50", "10"),
     "gpt-5.6-sol": ("4", "20"), "gpt-5.6": ("4", "20"),
@@ -36,7 +36,7 @@ PRICES = {
 BUDGETS = {
     "clinical_ai": 10_000_000, "personal_ai": 40_000_000,
     "ecg_ai": 3_000_000, "exam_ai": 10_000_000, "round_ai": 3_000_000,
-    "heart_team": 10_000_000, "whatsapp_ai": 1_000_000,
+    "heart_team": 100_000_000, "whatsapp_ai": 1_000_000,
     "scientific_document_ai": 10_000_000, "translation_ai": 10_000_000,
     "retrieval": 100_000, "catalog_index": 1_000_000, "editorial": 10_000_000,
 }
@@ -74,19 +74,73 @@ def model_prices(model):
         raise AIUsageError("Tarifa de IA inválida.", 503) from exc
 
 
-def cost_micros(model, input_tokens, output_tokens, web_searches=0):
+def _count(value):
+    if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+        raise AIUsageError("Medição de IA inválida; reserva retida para reconciliação.", 503)
+    return value
+
+
+def _cache_factors(model):
+    if model in {"gpt-5.6", "gpt-5.6-sol"}:
+        return Decimal("0.1"), Decimal("1.25"), None
+    if model in {"gpt-4o", "gpt-4o-mini"}:
+        return Decimal("0.5"), None, None
+    if model in {"claude-haiku-4-5", "claude-sonnet-4-6", "claude-sonnet-5", "claude-opus-5"}:
+        return Decimal("0.1"), Decimal("1.25"), Decimal("2")
+    return None, None, None
+
+
+def cost_micros(model, input_tokens, output_tokens, web_searches=0, *,
+                cache_read_tokens=0, cache_write_tokens=0, cache_write_1h_tokens=0):
+    """Input is the unweighted total, including all cache categories."""
     rates = model_prices(model)
     fx = Decimal(str(getattr(settings, "ai_billing_usd_brl", 6)))
     if not fx.is_finite() or fx <= 0:
         raise AIUsageError("Câmbio de contabilização inválido.", 503)
-    if min(input_tokens, output_tokens, web_searches) < 0:
-        raise AIUsageError("Medição de IA inválida.", 503)
-    # GPT-5.6 long-context price threshold applies to the complete request.
+    for count in (input_tokens, output_tokens, web_searches, cache_read_tokens,
+                  cache_write_tokens, cache_write_1h_tokens):
+        _count(count)
+    ordinary = input_tokens - cache_read_tokens - cache_write_tokens - cache_write_1h_tokens
+    if ordinary < 0:
+        raise AIUsageError("Categorias de cache excedem o consumo informado.", 503)
+    weighted = Decimal(ordinary)
+    for count, factor in zip((cache_read_tokens, cache_write_tokens, cache_write_1h_tokens), _cache_factors(model)):
+        if count:
+            if factor is None:
+                raise AIUsageError("Categoria de cache sem tarifa homologada.", 503)
+            weighted += count * factor
+    # The long-context threshold uses actual input, never price-weighted tokens.
     multiplier = (Decimal(2), Decimal("1.5")) if model in {"gpt-5.6", "gpt-5.6-sol"} and input_tokens > 272_000 else (1, 1)
-    amount = (Decimal(input_tokens) * rates[0] * multiplier[0]
+    amount = (weighted * rates[0] * multiplier[0]
               + Decimal(output_tokens) * rates[1] * multiplier[1]
               + Decimal(web_searches) * Decimal("10000")) * fx
     return int(amount.to_integral_value(rounding=ROUND_CEILING))
+
+
+def _reserve_cost(model, input_tokens, output_tokens, searches=0):
+    # Assume no cache discount; cover the highest supported write tariff.
+    # Claude server tools can also create cache entries without explicit markers.
+    if model in {"gpt-5.6", "gpt-5.6-sol"}:
+        return cost_micros(model, input_tokens, output_tokens, searches, cache_write_tokens=input_tokens)
+    if _cache_factors(model)[2] is not None:
+        return cost_micros(model, input_tokens, output_tokens, searches, cache_write_1h_tokens=input_tokens)
+    return cost_micros(model, input_tokens, output_tokens, searches)
+
+
+def _cache_ttls(value):
+    ttls = set()
+    if isinstance(value, dict):
+        if isinstance(value.get("cache_control"), dict):
+            ttl = value["cache_control"].get("ttl", "5m")
+            if ttl not in {"5m", "1h"}:
+                raise AIUsageError("Duração de cache não homologada.", 503)
+            ttls.add(ttl)
+        for child in value.values():
+            ttls.update(_cache_ttls(child))
+    elif isinstance(value, (tuple, list)):
+        for child in value:
+            ttls.update(_cache_ttls(child))
+    return ttls
 
 
 def image_tokens(content, model, detail="auto"):
@@ -150,12 +204,12 @@ def input_token_bound(value, model):
     if isinstance(value, (list, tuple)):
         return sum(input_token_bound(v, model) + 16 for v in value)
     if isinstance(value, dict):
-        if value.get("type") in {"image", "document"} and isinstance(value.get("source"), dict):
+        if isinstance(value.get("type"), str) and value.get("type") in {"image", "document"} and isinstance(value.get("source"), dict):
             src = value["source"]
             if src.get("type") != "base64":
                 raise AIUsageError("Arquivo remoto sem orçamento verificável.", 422)
             return _binary_tokens(src.get("data", ""), src.get("media_type"), model)
-        if value.get("type") in {"image_url", "input_image"}:
+        if isinstance(value.get("type"), str) and value.get("type") in {"image_url", "input_image"}:
             image = value.get("image_url")
             url = image.get("url") if isinstance(image, dict) else image
             detail = image.get("detail", "auto") if isinstance(image, dict) else value.get("detail", "auto")
@@ -170,6 +224,7 @@ def input_token_bound(value, model):
 def estimate_request(provider, request):
     model = request.get("model")
     model_prices(model)
+    _cache_ttls(request)
     output = int(request.get("max_completion_tokens", request.get("max_output_tokens", request.get("max_tokens", 0))) or 0)
     if output <= 0 and not str(model).startswith("text-embedding-"):
         raise AIUsageError("Chamada de IA sem limite de saída.", 503)
@@ -179,7 +234,7 @@ def estimate_request(provider, request):
     inputs = input_token_bound(request, model) + 256
     # Search result content is additional provider-side model input.
     inputs += searches * 25_000
-    return cost_micros(model, inputs, output, searches)
+    return _reserve_cost(model, inputs, output, searches)
 
 
 @dataclass
@@ -324,8 +379,16 @@ def _mapping(value):
     return vars(value) if value is not None and hasattr(value, "__dict__") else {}
 
 
+def _usage_details(value):
+    if value is not None and not (isinstance(value, dict) or hasattr(value, "model_dump") or hasattr(value, "__dict__")):
+        raise AIUsageError("Detalhamento de consumo inválido; reserva retida.", 503)
+    return _mapping(value)
+
+
 class RequestMeter:
-    def __init__(self, scope, model, estimate):
+    def __init__(self, scope, model, estimate, *, provider=None, request=None):
+        self.provider = provider or ("anthropic" if model.startswith("claude-") else "openai")
+        self.cache_ttls = _cache_ttls(request or {})
         self.scope, self.model, self.finished = scope, model, False
         self.estimate = estimate
 
@@ -335,15 +398,36 @@ class RequestMeter:
         output_count = u.get("output_tokens", u.get("completion_tokens", 0 if self.model.startswith("text-embedding-") else None))
         if input_count is None or output_count is None:
             raise AIUsageError("O provedor não informou consumo verificável; reserva retida para reconciliação.", 503)
-        input_count, output_count = int(input_count), int(output_count)
-        # Anthropic cache writes/reads are additional to input_tokens.
-        input_count += 2 * int(u.get("cache_creation_input_tokens", 0) or 0)
-        input_count += int(u.get("cache_read_input_tokens", 0) or 0)
+        input_count, output_count = _count(input_count), _count(output_count)
+        cache_read = cache_write = cache_1h = 0
+        if self.provider == "anthropic":
+            cache_read = _count(u.get("cache_read_input_tokens", 0) or 0)
+            creation = _count(u.get("cache_creation_input_tokens", 0) or 0)
+            breakdown = _usage_details(u.get("cache_creation"))
+            if breakdown:
+                cache_write = _count(breakdown.get("ephemeral_5m_input_tokens", 0) or 0)
+                cache_1h = _count(breakdown.get("ephemeral_1h_input_tokens", 0) or 0)
+                if cache_write + cache_1h != creation:
+                    raise AIUsageError("Medição de escrita de cache inconsistente.", 503)
+            elif creation:
+                if self.cache_ttls == {"5m"}:
+                    cache_write = creation
+                elif self.cache_ttls == {"1h"}:
+                    cache_1h = creation
+                else:
+                    raise AIUsageError("Duração da escrita de cache não verificável; reserva retida.", 503)
+            # Anthropic excludes cache reads and writes from input_tokens.
+            input_count += creation + cache_read
+        else:
+            details = _usage_details(u.get("input_tokens_details") if u.get("input_tokens_details") is not None else u.get("prompt_tokens_details"))
+            cache_read = _count(details.get("cached_tokens", 0) or 0)
+            cache_write = _count(details.get("cache_write_tokens", 0) or 0)
         server = _mapping(u.get("server_tool_use"))
-        searches = int(server.get("web_search_requests", 0) or 0)
+        searches = _count(server.get("web_search_requests", 0) or 0)
         if output:
             searches = max(searches, sum(_mapping(row).get("type") == "web_search_call" for row in output))
-        cost = cost_micros(self.model, input_count, output_count, searches)
+        cost = cost_micros(self.model, input_count, output_count, searches,
+            cache_read_tokens=cache_read, cache_write_tokens=cache_write, cache_write_1h_tokens=cache_1h)
         with self.scope.lock:
             self.scope.pending -= self.estimate
             self.scope.spent += cost
@@ -366,7 +450,7 @@ def paid_request(provider, request):
         raise AIUsageError("Chamada paga sem conta ou centro de custo autorizado.", 403)
     estimate = estimate_request(provider, request)
     current.reserve(estimate, request["model"])
-    meter = RequestMeter(current, request["model"], estimate)
+    meter = RequestMeter(current, request["model"], estimate, provider=provider, request=request)
     try:
         yield meter
     except BaseException as exc:
@@ -447,11 +531,18 @@ def plan_rounds(provider, request, rounds, tool_result_bytes=20_000):
     current = _scope.get()
     if current is None:
         raise AIUsageError("Chamada de IA sem conta responsável.", 403)
-    base = estimate_request(provider, request)
-    maximum_output = int(request.get("max_tokens", 0))
-    additional = sum(cost_micros(request["model"], i * (maximum_output + tool_result_bytes + 1024), 0)
-                     for i in range(rounds))
-    amount = base * rounds + additional
+    estimate_request(provider, request)  # Validate the request before planning.
+    if not isinstance(rounds, int) or isinstance(rounds, bool) or rounds <= 0 or tool_result_bytes < 0:
+        raise AIUsageError("Limite de rodadas inválido.", 503)
+    maximum_output = int(request.get("max_completion_tokens", request.get("max_output_tokens", request.get("max_tokens", 0))) or 0)
+    searches = sum(int(t.get("max_uses", 3)) for t in request.get("tools", []) if str(t.get("type", "")).startswith("web_search"))
+    inputs = input_token_bound(request, request["model"]) + 256 + searches * 25_000
+    # Generated output is already a token bound. Tool text uses its UTF-8 byte
+    # bound, with message framing headroom. Recompute each full round so that
+    # crossing a long-context threshold reprices the complete input/output.
+    # The actual serialized request is checked again immediately before egress.
+    amount = sum(_reserve_cost(request["model"], inputs + i * (maximum_output + tool_result_bytes + 1024),
+                               maximum_output, searches) for i in range(rounds))
     if current.reserved_cost:
         if amount + current.spent > current.reserved_cost:
             raise AIUsageError("As rodadas excedem o orçamento reservado.")
@@ -467,7 +558,7 @@ def plan_token_budgets(provider, budgets, *, requests=()):
     current = _scope.get()
     if current is None:
         raise AIUsageError("Operação sem conta responsável.", 403)
-    amount = sum(cost_micros(b["model"], int(b["input_tokens"]), int(b["max_output_tokens"]),
+    amount = sum(_reserve_cost(b["model"], int(b["input_tokens"]), int(b["max_output_tokens"]),
                              int(b.get("web_searches", 0))) for b in budgets)
     amount += sum(estimate_request(provider, request) for request in requests)
     if current.reserved_cost:
@@ -513,9 +604,9 @@ def metered_transcription(client, *, model, content, filename, media_type):
         raise AIUsageError("Modelo de transcrição sem medição homologada.", 503)
     seconds = audio_duration(content, media_type)
     # 100 audio tokens/second is deliberately above normal transcription use;
-    # output is bounded by the transcription model's context envelope.
+    # both supported transcription models document a 2,000-token output limit.
     request = {"model": model, "input": "x" * (math.ceil(seconds * 100) + 1024),
-               "max_output_tokens": 16_384}
+               "max_output_tokens": 2_000}
     stream = BytesIO(content); stream.name = filename
     with paid_request("openai", request) as meter:
         result = client.audio.transcriptions.create(model=model, file=stream)

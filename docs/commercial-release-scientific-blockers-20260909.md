@@ -115,3 +115,7 @@ As duas pendências cobertas pelo inventário são consolidações intencionais 
 A evidência existente permite reconhecer o pacote incremental autorizado, preservando suas exclusões e destinos canônicos. Não autoriza ampliar automaticamente a aprovação integral para todos os itens atuais. Para liberar uma publicação científica integral, é necessário reconciliar os itens fora do pacote e as exclusões, concluir a revisão efetivamente necessária e registrar aprovação editorial/clinicamente responsável para o inventário exato resultante. A autorização de implantar planos comerciais não substitui essa decisão científica.
 
 Uma publicação apenas de aplicação deve preservar o conteúdo já publicado e respeitar os gates existentes; este relatório não autoriza desativá-los, modificar manifestos, promover pendências ou simular revisão.
+
+## Resolução rastreável do snapshot integrado de 10/09
+
+O diagnóstico acima é histórico e corresponde ao snapshot anterior à incorporação do PR #915. A reconciliação final está documentada em `release-tct-plans-prevalentes-20260910.md` e `scoped-corpus-release-provenance-20260910.md`: manifesto separado schema 2, 12.154 autorizados e 56 em quarentena, sem alteração da autorização integral antiga nem fabricação de revisão clínica. A publicação depende da validação final do candidato e do fluxo normal de deploy.

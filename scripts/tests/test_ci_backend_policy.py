@@ -276,5 +276,117 @@ class BackendSuiteReuseTests(unittest.TestCase):
         )
 
 
+class AuthorizedFollowupTests(unittest.TestCase):
+    def setUp(self):
+        import json
+        self.manifest = json.loads((ROOT / "docs/ci/pr918-authorized-backend-followup.json").read_text())
+        self.job = {"id": self.manifest["baseline_job_id"], "run_id": self.manifest["baseline_run_id"],
+                    "head_sha": self.manifest["baseline_sha"], "name": "Backend tests", "status": "completed",
+                    "conclusion": "failure", "steps": [{"name": "Run pytest", "status": "completed"}]}
+        self.log = ("================ short test summary info ================\n"
+                    "FAILED tests/test_readiness.py::test_probe - AssertionError\n"
+                    "============= 1 failed, 30 passed in 5.20s =============\n")
+
+    def decide(self, paths=None, **kwargs):
+        return POLICY.classify_authorized_followup(paths or ["backend/tests/test_readiness.py"],
+            repo_root=ROOT, manifest=self.manifest, baseline_job=kwargs.get("job", self.job),
+            baseline_log=kwargs.get("log", self.log))
+
+    def test_all_failed_modules_impacts_and_money_regressions_are_mandatory(self):
+        result = self.decide(["deploy.sh"])
+        self.assertEqual(result.backend_mode, "authorized-followup")
+        self.assertIn("backend/tests/test_readiness.py", result.focused_tests)
+        self.assertIn("backend/tests/test_deploy_rollback_window.py", result.focused_tests)
+        for required in POLICY.REQUIRED_FOLLOWUP_FINANCIAL_TESTS:
+            self.assertIn(required, result.focused_tests)
+        self.assertIn("not-a-passing-full-suite-certificate", result.reasons)
+        self.assertNotEqual(result.suite_key, "backend-risk-v1-full")
+
+    def test_real_actions_timestamps_and_plain_pytest_summary_are_supported(self):
+        log = ("2026-09-10T00:25:41.1Z = short test summary info =\n"
+               "2026-09-10T00:25:41.2Z FAILED tests/test_readiness.py::test_probe - AssertionError\n"
+               "2026-09-10T00:25:41.3Z 1 failed, 30 passed, 3 skipped, 3 warnings in 1821.92s (0:30:21)\n")
+        result = self.decide(log=log)
+        self.assertIn("baseline-failed-module:backend/tests/test_readiness.py", result.reasons)
+
+    def test_pending_cancelled_wrong_sha_and_wrong_job_cannot_authorize_followup(self):
+        for change in [{"status": "in_progress"}, {"conclusion": "cancelled"}, {"head_sha": "0"*40},
+                       {"id": 1}, {"run_id": 1}, {"steps": []}]:
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                self.decide(job={**self.job, **change})
+
+    def test_interrupted_or_incompletely_reported_failure_inventory_is_rejected(self):
+        for log in ["tests interrupted", self.log.replace("1 failed", "2 failed"),
+                    self.log.replace("tests/test_readiness.py", "../unsafe.py")]:
+            with self.subTest(log=log), self.assertRaises(ValueError):
+                self.decide(log=log)
+
+    def test_every_failed_module_and_collection_error_is_selected(self):
+        log = self.log.replace("1 failed, 30 passed", "1 failed, 1 error, 30 passed").replace(
+            "============= 1 failed", "ERROR tests/test_billing_portal.py - ImportError\n============= 1 failed")
+        result = self.decide(log=log)
+        self.assertIn("baseline-failed-module:backend/tests/test_billing_portal.py", result.reasons)
+
+    def test_unmapped_path_or_missing_failed_test_blocks_without_running_full(self):
+        for paths, log in [(["ops/unknown-new-release.sh"], self.log),
+                           (["backend/tests/test_readiness.py"], self.log.replace("test_readiness", "test_deleted_failure"))]:
+            with self.subTest(paths=paths), self.assertRaises(ValueError):
+                self.decide(paths, log=log)
+
+    def test_exact_pr_head_or_associated_identical_main_tree_only(self):
+        spec = importlib.util.spec_from_file_location("ci_backend_followup", ROOT / "scripts/ci_backend_followup.py")
+        module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+        pr = {"number": 918, "base": {"ref": "main"}, "head": {"sha": "a"*40},
+              "merged": True, "merge_commit_sha": "b"*40}
+        common = dict(manifest=self.manifest, pr=pr, candidate_tree="tree", pr_tree="tree")
+        self.assertTrue(module.authorized_context(**common, event="pull_request", number="918", candidate="a"*40, associated=[]))
+        self.assertFalse(module.authorized_context(**common, event="pull_request", number="919", candidate="a"*40, associated=[]))
+        self.assertTrue(module.authorized_context(**common, event="push", number="", candidate="b"*40, associated=[{"number":918}]))
+        self.assertFalse(module.authorized_context(**common, event="push", number="", candidate="b"*40, associated=[]))
+        self.assertFalse(module.authorized_context(**{**common,"candidate_tree":"later-tree"}, event="push", number="", candidate="b"*40, associated=[{"number":918}]))
+        self.assertFalse(module.authorized_context(**common, event="push", number="", candidate="c"*40, associated=[{"number":918}]))
+
+    def test_exact_squash_tree_keeps_pr_baseline_ancestry_without_requiring_merge_ancestry(self):
+        import os
+        import subprocess
+        spec = importlib.util.spec_from_file_location("ci_backend_followup_squash", ROOT / "scripts/ci_backend_followup.py")
+        module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+        original = os.getcwd()
+        with tempfile.TemporaryDirectory() as directory:
+            try:
+                os.chdir(directory)
+                def command(*args):
+                    return subprocess.check_output(["git", *args], text=True, stderr=subprocess.DEVNULL).strip()
+                command("init", "-q", "-b", "main")
+                command("config", "user.name", "CI fixture")
+                command("config", "user.email", "ci-fixture@example.invalid")
+                Path("base.txt").write_text("base")
+                command("add", "."); command("commit", "-qm", "base")
+                command("checkout", "-qb", "pr918")
+                Path("app.txt").write_text("initial full candidate")
+                command("add", "."); command("commit", "-qm", "full baseline")
+                baseline = command("rev-parse", "HEAD")
+                Path("app.txt").write_text("focused fix")
+                command("commit", "-qam", "follow-up")
+                head = command("rev-parse", "HEAD")
+                command("checkout", "-q", "main")
+                command("merge", "--squash", "pr918")
+                command("commit", "-qm", "squashed integration")
+                candidate = command("rev-parse", "HEAD")
+                self.assertEqual(command("rev-parse", "HEAD^{tree}"), command("rev-parse", f"{head}^{{tree}}"))
+                self.assertEqual(subprocess.run(["git", "merge-base", "--is-ancestor", baseline, candidate]).returncode, 1)
+                self.assertEqual(module.changed_followup_paths(baseline, head, candidate), ["app.txt"])
+            finally:
+                os.chdir(original)
+
+    def test_workflow_keeps_operational_gates_and_never_reuses_full_for_followup(self):
+        workflow = (ROOT / ".github/workflows/ci.yml").read_text()
+        self.assertIn('[[ "$BACKEND_MODE" != "authorized-followup" ]] || exit 0', workflow)
+        self.assertIn('PYTHONPATH=backend python -m pytest -q --tb=short "${tests[@]}"', workflow)
+        self.assertIn("Backend suite certificate ${{ needs.backend-risk-policy.outputs.suite_key }}", workflow)
+        for gate in ["Verify migration command is idempotent", "Exercise live HTTP release flow", "Prove PostgreSQL backup and restore"]:
+            self.assertIn(gate, workflow)
+
+
 if __name__ == "__main__":
     unittest.main()

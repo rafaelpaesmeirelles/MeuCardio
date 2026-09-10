@@ -26,6 +26,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
+from app.services.disease_manifest import load_disease_records
 
 from app.services.clinical_rule_engine import (
     validate_question_definitions,
@@ -77,7 +78,7 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
 
 
 def _load_doencas() -> dict[str, dict]:
-    items = json.loads(DOENCAS_PATH.read_text(encoding="utf-8"))
+    items = load_disease_records(DOENCAS_PATH)
     return {item["slug"]: item for item in items}
 
 
@@ -103,7 +104,7 @@ def test_ficha_continua_existindo_com_mesmo_slug():
 def test_marcacao_editorial_correta():
     item = _load_doencas()[SLUG]
     assert item.get("fonte_producao") == "claude"
-    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("review_status") == "revisado"
     assert item.get("completeness") == "completo"
     assert item.get("area") == "cardiopediatria"
     assert item.get("review_note")

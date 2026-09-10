@@ -21,10 +21,24 @@ def test_canonical_medications_have_required_identity_fields():
     assert len(slugs) == len(set(slugs))
 
 
-def test_canonical_publishable_manifests_have_no_human_verification_marker():
-    for path in (
-        "medicamentos/metadados.json",
-        "checklists/metadados.json",
-        "material-paciente/metadados.json",
-    ):
+def test_ressalvas_comerciais_legadas_permanecem_explicitas_no_baseline_autorizado():
+    from hashlib import sha256
+    release = _load("editorial-approvals/scoped-corpus-release-20260910.json")
+    expected = {"captopril", "clortalidona", "diltiazem-cloridrato", "enalapril-maleato",
+                "heparina-nao-fracionada", "lisinopril", "milrinona", "ramipril", "verapamil-cloridrato"}
+    found = set()
+    for drug in _load("medicamentos/metadados.json"):
+        marked = {field for field, value in drug.items() if MARKER in json.dumps(value, ensure_ascii=False)}
+        if not marked:
+            continue
+        assert marked == {"commercial_presentations"}, drug["slug"]
+        found.add(drug["slug"])
+        proof = release["provenance"]["medicamentos"][drug["slug"]]
+        assert proof["basis"] == "baseline_unchanged"
+        digest = sha256(json.dumps(drug, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+        assert digest == proof["source_sha256"], drug["slug"]
+        assert drug["review_status"] == "revisado"
+    # Do not erase known limitations or silently introduce new unverified data.
+    assert found == expected
+    for path in ("checklists/metadados.json", "material-paciente/metadados.json"):
         assert MARKER not in (ROOT / path).read_text(encoding="utf-8"), path

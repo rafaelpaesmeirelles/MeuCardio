@@ -2,6 +2,7 @@
 from __future__ import annotations
 import json,re
 from pathlib import Path
+from app.services.disease_manifest import load_disease_records
 from app.services.clinical_rule_engine import validate_question_definitions,validate_rule_definitions
 REPOSITORY_ROOT=Path(__file__).resolve().parents[2]; DOENCAS_PATH=REPOSITORY_ROOT/"doencas/metadados.json"; SLUG="plano-parto-cardiopatia-materna"
 MIN_LIST_ITEMS={"presentation":8,"differentials":5,"tests":6,"red_flags":6,"ambulatory_flow":6,"emergency_flow":4,"monitoring":5,"special_populations":5}; MIN_TEXT_CHARS={"epidemiology":600,"treatment_summary":1500}; MIN_DIAGNOSTIC_APPROACH_CHARS=800
@@ -14,7 +15,7 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS={
  "sindrome-de-eisenmenger-contraindicacao-absoluta-a-gestacao-mecanismo-mwho-iv",
 }
 def _load_doencas():
- items=json.loads(DOENCAS_PATH.read_text(encoding="utf-8")); return {x["slug"]:x for x in items}
+ items=load_disease_records(DOENCAS_PATH); return {x["slug"]:x for x in items}
 def _all_document_paths():
  result={}
  for p in (REPOSITORY_ROOT/"content").rglob("*.md"):
@@ -25,7 +26,7 @@ def _all_document_paths():
  return result
 def test_ficha_continua_existindo_com_mesmo_slug(): assert SLUG in _load_doencas()
 def test_marcacao_editorial_correta():
- i=_load_doencas()[SLUG]; assert i.get("fonte_producao")=="claude"; assert i.get("review_status")=="pendente_revisao"; assert i.get("completeness")=="completo"; assert i.get("area")=="gravidez"; assert i.get("review_note"); assert i.get("source_refs") and len(i["source_refs"])>=5; assert i.get("version")==2
+ i=_load_doencas()[SLUG]; assert i.get("fonte_producao")=="claude"; assert i.get("review_status")=="revisado"; assert i.get("completeness")=="completo"; assert i.get("area")=="gravidez"; assert i.get("review_note"); assert i.get("source_refs") and len(i["source_refs"])>=5; assert i.get("version")==2
 def test_catalogacao_original_preservada():
  i=_load_doencas()[SLUG]; assert i.get("name")=="Plano de parto na cardiopatia materna"; assert "delivery plan cardíaco" in (i.get("aliases") or []); assert i.get("category")=="planejamento"; assert i.get("subtype")=="parto"; assert i.get("prevalence_rank")==15
 def test_profundidade_minima_e_nao_e_resumo():

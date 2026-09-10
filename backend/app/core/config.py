@@ -162,8 +162,10 @@ class Settings(BaseSettings):
     whatsapp_approved_template_names: str = ""
     heart_team_enabled: bool = False
     heart_team_files_dir: str = "/heart-team-files"
-    heart_team_clinical_model: str = ""
-    heart_team_max_output_tokens: int = 2200
+    heart_team_ai_provider: str = "openai"
+    heart_team_clinical_model: str = "gpt-5.6-sol"
+    heart_team_max_output_tokens: int = 8192
+    heart_team_reasoning_effort: str = "medium"
     heart_team_source_limit: int = 16
     heart_team_cache_ttl_seconds: int = 3600
     heart_team_monthly_cost_ceiling_micros: int = 25_000_000

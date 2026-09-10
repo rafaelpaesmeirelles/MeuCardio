@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from app.services.disease_manifest import load_disease_records
 import re
 
 from app.services.clinical_rule_engine import (
@@ -23,6 +24,8 @@ SLUG = "atresia-pulmonar"
 
 
 def _records(path: Path) -> list[dict]:
+    if path == DISEASES:
+        return load_disease_records(path)
     payload = json.loads(path.read_text(encoding="utf-8"))
     assert isinstance(payload, list)
     return payload
@@ -95,10 +98,24 @@ def test_referencias_tudo_com_tudo_resolvem_explicitamente():
         item for item in _records(EXPLICIT_RELATIONS)
         if item["source_disease_slug"] == SLUG
     ]
-    assert len(relations) == 5
+    assert {(item["target_type"], item["target_slug"]) for item in relations} == {
+        ('caso_clinico', 'recem-nascido-cianotico-com-atresia-pulmonar-e-septo-interventricular-integro-anatomia-do-vd-decide-a-via-cirurgica'),
+        ('checklist', 'conduta-inicial-na-cianose-central-com-suspeita-de-cardiopatia-congenita-critica-no-recem-nascido'),
+        ('estudo', 'ashburn-2004-determinantes-de-mortalidade-e-tipo-de-reparo-em-atresia-pulmonar-com-septo-intacto'),
+        ('estudo', 'guleserian-2006-historia-natural-da-atresia-pulmonar-com-circulacao-coronariana-dependente-do-vd'),
+        ('galeria', 'atresia-pulmonar-com-civ-tetralogia-de-fallot-extrema-diagrama-cdc'),
+        ('galeria', 'atresia-pulmonar-septo-ventricular-intacto-diagrama-cdc'),
+        ('trilha', 'trilha-cardiologia-pediatrica-recem-nascido-cianotico'),
+        ('trilha', 'trilha-cardiologia-pediatrica-ventriculo-unico-e-fontan'),
+        ('trilha', 'trilha-cardiopatia-congenita-triagem-para-centro-terciario'),
+        ('trilha', 'trilha-cardiopatia-congenita-via-de-saida-direita-do-norwood-neonatal-ao-adulto'),
+    }
     targets = {
         "checklist": {item["slug"] for item in _records(CHECKLISTS)},
         "trilha": {item["slug"] for item in _records(TRACKS)},
+        "caso_clinico": {item["slug"] for item in _records(ROOT / "casos-clinicos/metadados.json")},
+        "estudo": {item["slug"] for item in _records(ROOT / "estudos/metadados.json")},
+        "galeria": {item["slug"] for item in _records(ROOT / "galeria/metadados.json")},
     }
     assert all(item["target_slug"] in targets[item["target_type"]] for item in relations)
     assert all(item["review_status"] == "revisado" for item in relations)

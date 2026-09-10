@@ -20,7 +20,8 @@ def context():
 def capture_plan(monkeypatch):
     result = []
     monkeypatch.setattr(ht, "plan_token_budgets", lambda provider, budgets: result.extend(budgets))
-    monkeypatch.setattr(ht.settings, "heart_team_clinical_model", "")
+    monkeypatch.setattr(ht.settings, "heart_team_clinical_model", "gpt-4o-mini")
+    monkeypatch.setattr(ht.settings, "heart_team_ai_provider", "openai")
     monkeypatch.setattr(ht.settings, "heart_team_max_output_tokens", 2200)
     monkeypatch.setattr(ht.settings, "ai_provider", "openai")
     return result
@@ -53,12 +54,13 @@ def test_visual_default_and_fallback_are_in_same_preflight(context, capture_plan
     monkeypatch.setattr(ht.settings, "ai_clinical_data_controls_approved", True)
     provider = object.__new__(ProvedorOpenAI)
     provider._modelo = "gpt-4o-mini"
+    monkeypatch.setattr(ht.settings, "heart_team_clinical_model", "gpt-5.6-sol")
     context["attachments"] = [{"id": 1, "media_type": "image/png", "objective_extract": {}}]
     ht._plan_journey(None, SimpleNamespace(owner_id=42), provider, context, ht.selected_agent_keys(["imaging"]))
-    assert len(capture_plan) == 7
-    assert [row["model"] for row in capture_plan[-2:]] == ["gpt-5.6-sol", "gpt-4o"]
-    assert all(row["max_output_tokens"] == 1200 for row in capture_plan[-2:])
-    assert all(row["input_tokens"] > 4096 for row in capture_plan[-2:])
+    assert len(capture_plan) == 9
+    assert [row["model"] for row in capture_plan[-4:]] == ["gpt-5.6-sol", "gpt-5.6-sol", "gpt-4o", "gpt-4o"]
+    assert all(row["max_output_tokens"] == 2200 for row in capture_plan[-4:])
+    assert all(row["input_tokens"] > 4096 for row in capture_plan[-4:])
 
 
 def _orchestrator_stubs(monkeypatch, cached=None):
@@ -156,7 +158,7 @@ def test_local_quote_does_not_call_models_or_external_verification(monkeypatch):
     db.flush = lambda: None
     case.status = "draft"
     recorded = []
-    monkeypatch.setattr(ht, "obter_provedor", lambda: SimpleNamespace(_modelo="gpt-4o-mini"))
+    monkeypatch.setattr(ht, "obter_provedor_heart_team", lambda: SimpleNamespace(_modelo="gpt-4o-mini"))
     monkeypatch.setattr(ht, "verify_source_rows", lambda rows: pytest.fail("quote must remain local"))
     monkeypatch.setattr(ai_wallet, "reserve", lambda **kwargs: pytest.fail("quote must not reserve"))
     monkeypatch.setattr(ai_wallet, "quote_cost", lambda **kwargs: {
@@ -168,7 +170,8 @@ def test_local_quote_does_not_call_models_or_external_verification(monkeypatch):
         return SimpleNamespace(id=11)
     monkeypatch.setattr(ht, "audit_event", audit)
     quote = ht.estimate_case_budget(db, case, actor_id=42)
-    assert quote["quote_id"] == 11 and 0 < quote["maximum_credit_centavos"] < 4000
+    assert quote["quote_id"] == 11 and quote["maximum_credit_centavos"] > 0
+    assert quote["model_config"]["model"] == ht.settings.heart_team_clinical_model
     assert quote["available_credit_centavos"] == 4000
     assert recorded[0]["action"] == "cost_estimated"
     assert "question" not in recorded[0]["detail"]

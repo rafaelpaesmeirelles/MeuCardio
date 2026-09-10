@@ -12,6 +12,18 @@ from types import SimpleNamespace
 import pytest
 
 from app.services.ia.provedor import ProvedorAnthropic
+from app.services.ia.usage_control import MeteredSDK, ai_usage_scope
+from app.services import ai_wallet
+
+
+@pytest.fixture(autouse=True)
+def _metered_owner(monkeypatch):
+    # Keep the real meter and bounded planner; replace only persistence.
+    monkeypatch.setattr(ai_wallet, "reserve", lambda **kw: {"created": True})
+    monkeypatch.setattr(ai_wallet, "settle", lambda **kw: None)
+    monkeypatch.setattr(ai_wallet, "mark_unknown", lambda **kw: pytest.fail("unexpected unknown usage"))
+    with ai_usage_scope(owner_id=1, feature="personal_ai"):
+        yield
 
 
 @dataclass
@@ -45,7 +57,7 @@ def _provedor_com_cliente_falso(respostas: list[_Resp]):
         chamadas.append({"messages": messages, **kwargs})
         return respostas[len(chamadas) - 1]
 
-    provedor._cliente = SimpleNamespace(messages=SimpleNamespace(create=create))
+    provedor._cliente = MeteredSDK(SimpleNamespace(messages=SimpleNamespace(create=create)), "anthropic")
     return provedor, chamadas
 
 
@@ -205,3 +217,43 @@ def test_web_search_declara_allowed_callers_direct():
     provedor.responder("sistema", [{"role": "user", "content": "oi"}], usar_internet=True)
     ferramenta_busca = next(t for t in chamadas[0]["tools"] if t["name"] == "web_search")
     assert ferramenta_busca["allowed_callers"] == ["direct"]
+
+
+@pytest.mark.parametrize("model,has_temperature", [
+    ("claude-sonnet-5", False), ("claude-sonnet-4-6", True),
+])
+def test_ecg_sampling_is_compatible_with_selected_model(model, has_temperature):
+    import io
+    from PIL import Image
+    output = io.BytesIO()
+    Image.new("RGB", (8, 8), "white").save(output, format="PNG")
+    provider, calls = _provedor_com_cliente_falso([
+        _Resp([_Bloco(type="text", text='{"quality":"adequada"}')], "end_turn"),
+    ])
+    result = provider.analisar_arquivo_clinico(
+        "sistema", "Avalie o traçado", output.getvalue(), "image/png", modelo=model,
+    )
+    assert len(calls) == 1
+    assert ("temperature" in calls[0]) is has_temperature
+    assert result.modelo == model
+
+
+def test_api_rejects_claude_model_for_openai_before_database_access(monkeypatch):
+    from fastapi import HTTPException
+    from app.api import ai
+    from app.core.config import settings
+    monkeypatch.setattr(settings, "ai_enabled", True)
+    monkeypatch.setattr(settings, "ai_provider", "openai")
+    question = ai.Pergunta(pergunta="Olá", modelo="claude-sonnet-5", usar_internet=False)
+    with pytest.raises(HTTPException) as caught:
+        ai._preparar_pergunta(question, None, SimpleNamespace(id=1))
+    assert caught.value.status_code == 422
+    assert "Anthropic" in caught.value.detail
+
+
+def test_selectable_models_all_have_a_homologated_tariff():
+    from app.api.ai import MODELOS_ANTHROPIC_PERMITIDOS
+    from app.services.ia.usage_control import model_prices
+    assert "claude-fable-5" not in MODELOS_ANTHROPIC_PERMITIDOS
+    for model in MODELOS_ANTHROPIC_PERMITIDOS:
+        assert len(model_prices(model)) == 2

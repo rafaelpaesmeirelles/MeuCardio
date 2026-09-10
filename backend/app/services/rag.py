@@ -452,7 +452,7 @@ def _rrf(listas: list[list[int]], k: int = 60) -> list[int]:
 def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> list[dict]:
     # Import tardio: rag_multi importa rag (dividir/obter_provedor_embeddings)
     # — import no topo do arquivo criaria ciclo no boot do pacote.
-    from app.services.rag_multi import buscar_lexico_multi, ids_semanticos_multi, resolver_trechos_multi
+    from app.services.rag_multi import buscar_lexico_multi, ids_semanticos_multi, resolver_trechos_multi, filtrar_trechos_publicados
 
     limite = settings.ai_top_k * 3
 
@@ -530,7 +530,7 @@ def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> lis
     linhas = db.execute(
         select(DocumentChunk, Document)
         .join(Document, Document.id == DocumentChunk.document_id)
-        .where(DocumentChunk.id.in_(ids_doc))
+        .where(DocumentChunk.id.in_(ids_doc), Document.published.is_(True))
     ).all() if ids_doc else []
 
     # Correção coordenada de 03/09/2026, "bloqueador residual RAG": um chunk
@@ -581,7 +581,9 @@ def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> lis
         if trecho:
             trechos_por_chave[("multi", chave_lex)] = trecho
 
-    return [trechos_por_chave[chave] for chave in ordenados if chave in trechos_por_chave]
+    # Publication may change while embeddings are in flight. Recheck lexical
+    # snapshots as well as hydrated chunks before exposing either to the model.
+    return filtrar_trechos_publicados(db, [trechos_por_chave[chave] for chave in ordenados if chave in trechos_por_chave])
 
 
 def montar_contexto(trechos: list[dict]) -> tuple[str, list[dict]]:

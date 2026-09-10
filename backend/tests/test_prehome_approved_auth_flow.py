@@ -29,9 +29,7 @@ def test_prehome_brand_matches_approved_corvia_identity():
         "Um universo de espaços.",
         "Uma só cardiologia.",
         "Consultório, Hospital, Ensino, Pesquisa e Gestão orbitando juntos no seu Universo Profissional.",
-        "login-gateway__stars",
-        "login-gateway__milky-way",
-        "login-gateway__pulse",
+        '<LoginGalaxy theme={temaPublico} />',
         "Ambiente Protegido",
         "Sistema seguro",
         'to="/esqueci-senha"',
@@ -51,6 +49,18 @@ def test_prehome_brand_matches_approved_corvia_identity():
     assert "login-gateway__routes" not in login
     assert "login-gateway__ring" not in login
     assert "A PLATAFORMA Nº 1" not in login
+
+    # The approved galaxy moved into its own component. Both themes retain a
+    # complete embedded poster while the corresponding animated image loads.
+    galaxy = read("components/LoginGalaxy.tsx")
+    assert 'import LoginGalaxy from "../components/LoginGalaxy"' in login
+    assert 'src={theme === "dark" ? darkGalaxyPoster : lightGalaxyPoster}' in galaxy
+    assert 'loadGalaxy(theme === "light" ? lightSource : darkSource)' in galaxy
+    assert 'className="login-gateway__galaxy-poster"' in galaxy
+    assert 'className="login-gateway__galaxy-canvas"' in galaxy
+    assert '(prefers-reduced-motion: reduce)' in galaxy
+    for asset in ("galaxy-light.webp", "galaxy-dark.webp"):
+        assert (FRONTEND / "assets/login" / asset).is_file()
 
 
 def test_login_copy_and_all_real_auth_controls_remain_available():

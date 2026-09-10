@@ -36,7 +36,7 @@ EXPECTED_APP_ROUTES = {
     "/indicadores", "/cursos", "/cursos/:slug", "/favoritos", "/assistente",
     "/round", "/prontuario", "/ecg-ia", "/exames-ia", "/agenda", "/documentos", "/exportar", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
     "/minha-conta", "/excluir-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
-    "/admin", "/fila-telediagnostico", "/receitas-para-assinatura", "/admin/usuarios-online",
+    "/admin", "/admin/atividade", "/fila-telediagnostico", "/receitas-para-assinatura", "/admin/usuarios-online",
     "/admin/usuarios", "/admin/usuarios/:id", "/admin/usuarios/:id/gerenciar",
     "/heart-team", "/heart-team/:caseId", "/whatsapp-assistant", "/admin/operacoes-ia",
     "/tour", "/tour/cardiology-spaces", "/em-breve", "/verificacao-identidade",
@@ -53,7 +53,7 @@ EXPECTED_NAV_ROUTES = {
     "/medicamentos", "/indicadores", "/receituario", "/round", "/prontuario", "/exames-ia", "/trilhas", "/trilhas/timeline",
     "/usuarios-online", "/minha-conta", "/excluir-conta", "/privacidade", "/termos", "/admin", "/fila-telediagnostico", "/receitas-para-assinatura",
     "/sincronizacao", "/admin/usuarios", "/tour", "/tour?origem=assinatura&modo=quick",
-    "/heart-team", "/whatsapp-assistant", "/admin/operacoes-ia",
+    "/heart-team", "/whatsapp-assistant", "/admin/operacoes-ia", "/admin/atividade",
 }
 
 EXPECTED_BACKEND_ROUTERS = {
@@ -72,7 +72,7 @@ EXPECTED_BACKEND_ROUTERS = {
     "encounter_artifacts.router", "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
     "related_content.router", "knowledge_graph.router", "patient_profiles.router", "patient_timeline.router",
     "account_sync.router", "patient_multimodal_ai.router", "ecg_quick.router", "cardiovascular_exam_ai.router",
-    "heart_team.router", "whatsapp.router",
+    "heart_team.router", "whatsapp.router", "ai_credits.router", "ai_wallet.router",
 }
 
 EXPECTED_SUPPORT_FILES = {

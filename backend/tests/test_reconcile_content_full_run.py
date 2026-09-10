@@ -19,10 +19,15 @@ existe, mesmo mecanismo que tornou possível reproduzir o incidente
 localmente nesta sessão). Não é teste sintético: é a mesma verificação que
 teria pego os três bugs antes do deploy, se já existisse.
 """
+from app.commands import reconcile_content as reconciliation
 from app.commands.reconcile_content import reconcile
 
 
-def test_reconcile_publish_reviewed_termina_sem_excecao_contra_conteudo_real(db):
+def test_reconcile_publish_reviewed_termina_sem_excecao_contra_conteudo_real(db, monkeypatch):
+    # This test explicitly targets repository content, independently of the
+    # empty CONTENT_DIR used by isolated unit-test fixtures.
+    monkeypatch.setitem(reconciliation.FRONTS["documentos"], "path",
+                        str(reconciliation.REPOSITORY_ROOT / "content"))
     # allow_partial=True: este teste valida que a carga TERMINA COM SUCESSO
     # (sem exceção, sem rejeição bloqueante) — não é o gate de volume mínimo
     # do acervo, que já tem cobertura própria em outros testes.
@@ -38,3 +43,20 @@ def test_reconcile_publish_reviewed_termina_sem_excecao_contra_conteudo_real(db)
 
     assert "medicamentos" in resultado["loads"]
     assert resultado["loads"]["medicamentos"]["total"] > 0
+
+    authorization = resultado["full_corpus_authorization"]
+    assert authorization["schema_version"] == 2
+    assert resultado["immutable_source_snapshot"] is True
+    assert resultado["database"]["published_total"] == authorization["authorized_total"]
+    for front, approved in authorization["approved"].items():
+        actual = set(resultado["database"]["fronts"][front]["published_slugs"])
+        assert actual == set(approved)
+        assert actual.isdisjoint(authorization["quarantined"][front])
+
+    from app.models.gallery import GalleryImage
+    import json
+    gallery_sources = json.loads((reconciliation.REPOSITORY_ROOT / "galeria/metadados.json").read_text())
+    expected_paths = {item["slug"]: item["file_path"] for item in gallery_sources}
+    for image in db.query(GalleryImage).filter(GalleryImage.slug.in_(expected_paths)).all():
+        assert image.file_path == expected_paths[image.slug]
+        assert "corvia-corpus-snapshot" not in image.file_path

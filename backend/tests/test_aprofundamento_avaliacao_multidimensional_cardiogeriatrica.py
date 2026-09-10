@@ -28,6 +28,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
+from app.services.disease_manifest import load_disease_records
 
 from app.services.clinical_rule_engine import (
     validate_question_definitions,
@@ -68,18 +69,17 @@ ALLOWED_ADD_KEYS = {
     "suggested_tests", "differentials", "ambulatory_flow", "emergency_flow", "messages",
 }
 
+# Compartilhamentos adicionais presentes na composição canônica da release autorizada.
 DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
-    # também em fragilidade-pre-procedimento-cardiovascular e valvopatias
-    "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
-    # também em insuficiencia-cardiaca-no-idoso
-    "framework-de-manejo-por-dominio-para-insuficiencia-cardiaca-no-idoso-aha-2026",
-    # também em hipertensão/fragilidade no idoso
-    "fluxograma-hipertensao-no-idoso-e-no-fragil-quando-iniciar-alvo-e-desintensificacao-esc-2024",
+    'estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade',
+    'fluxograma-hipertensao-no-idoso-e-no-fragil-quando-iniciar-alvo-e-desintensificacao-esc-2024',
+    'framework-de-manejo-por-dominio-para-insuficiencia-cardiaca-no-idoso-aha-2026',
+    'sarcopenia-e-risco-cardiovascular-metanalise-de-estudos-longitudinais',
 }
 
 
 def _load_doencas() -> dict[str, dict]:
-    items = json.loads(DOENCAS_PATH.read_text(encoding="utf-8"))
+    items = load_disease_records(DOENCAS_PATH)
     return {item["slug"]: item for item in items}
 
 

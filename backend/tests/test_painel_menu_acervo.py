@@ -2,7 +2,7 @@ import json
 import re
 from pathlib import Path
 
-from sqlalchemy import Boolean, String, create_engine
+from sqlalchemy import Boolean, String, create_engine, false
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column
 
 from app.commands import publish_preserved_content as command
@@ -83,6 +83,9 @@ def test_publica_preservados_revisados(monkeypatch, tmp_path):
     }
     monkeypatch.setattr(command, "FRONTS", fronts)
     monkeypatch.setattr(reconciliation, "FRONTS", fronts)
+    # This SQLite fixture contains static records only; runtime documents and
+    # their cross-table ownership predicates are covered by PostgreSQL tests.
+    monkeypatch.setattr(reconciliation, "_runtime_managed_document_filter", lambda: false())
     monkeypatch.setattr(
         command,
         "_load_full_corpus_authorization",
@@ -129,6 +132,9 @@ def test_dry_run_nao_altera_banco(monkeypatch, tmp_path):
     }
     monkeypatch.setattr(command, "FRONTS", fronts)
     monkeypatch.setattr(reconciliation, "FRONTS", fronts)
+    # This SQLite fixture contains static records only; runtime documents and
+    # their cross-table ownership predicates are covered by PostgreSQL tests.
+    monkeypatch.setattr(reconciliation, "_runtime_managed_document_filter", lambda: false())
     monkeypatch.setattr(
         command,
         "_load_full_corpus_authorization",
@@ -187,4 +193,5 @@ def test_ordem_do_menu_alerta_e_deploy():
     assert ".emerg-atalho {" not in clinical_css
     assert len(re.findall(r"(?m)^\.emerg-atalho\s*\{", emergencia_css)) == 1
     assert "padding: 0.8rem 1.15rem" in emergencia_css
-    assert "app.commands.publish_preserved_content" in deploy
+    assert "app.commands.reconcile_content --publish-reviewed" in deploy
+    assert "app.commands.publish_preserved_content" not in deploy

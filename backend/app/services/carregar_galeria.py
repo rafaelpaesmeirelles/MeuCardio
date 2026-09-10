@@ -48,9 +48,9 @@ def _asset_root(caminho_json: str) -> Path:
     return Path(caminho_json).resolve().parent
 
 
-def carregar(caminho_json: str) -> dict:
+def carregar(caminho_json: str, *, asset_root: Path | None = None) -> dict:
     itens = json.load(open(caminho_json, encoding="utf-8"))
-    asset_root = _asset_root(caminho_json)
+    asset_root = Path(asset_root) if asset_root is not None else _asset_root(caminho_json)
     db = SessionLocal()
     novos, atualizados, sem_arquivo = 0, 0, []
     try:

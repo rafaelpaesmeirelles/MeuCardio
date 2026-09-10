@@ -30,6 +30,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
+from app.services.disease_manifest import load_disease_records
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
@@ -40,11 +41,15 @@ PASTAS_NAO_DOCUMENTO = ("Farmacologia", "Calculadoras", "Exames")
 
 TERMOS_TEMA = ("câncer", "cancer", "oncológic", "oncologic")
 
-DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS: set[str] = set()
+# Compartilhamentos adicionais presentes na composição canônica da release autorizada.
+DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
+    'anticoagulacao-estendida-em-dose-reduzida-no-tev-do-cancer-o-ensaio-api-cat',
+    'trombose-associada-ao-cancer-escore-de-khorana-e-escolha-de-anticoagulante',
+}
 
 
 def _load_doencas() -> dict[str, dict]:
-    items = json.loads(DOENCAS_PATH.read_text(encoding="utf-8"))
+    items = load_disease_records(DOENCAS_PATH)
     return {item["slug"]: item for item in items}
 
 
@@ -70,7 +75,7 @@ def test_ficha_continua_existindo_com_mesmo_slug():
 def test_marcacao_editorial_correta():
     item = _load_doencas()[SLUG]
     assert item.get("fonte_producao") == "claude"
-    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("review_status") == "revisado"
     assert item.get("completeness") == "completo"
     assert item.get("area") == "cardiooncologia"
     assert item.get("review_note")

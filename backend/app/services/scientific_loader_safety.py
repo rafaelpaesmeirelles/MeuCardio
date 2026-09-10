@@ -7,11 +7,37 @@ uma carga automatizada não transforma conteúdo novo em conteúdo público.
 
 from __future__ import annotations
 
+from contextlib import contextmanager
+from contextvars import ContextVar
 from typing import Any
 
 
 REVIEWED_STATUS = "revisado"
 PROVENANCE_LABEL = "Proveniência de produção: "
+
+
+# The release scope crosses the synchronous native loaders without changing
+# source metadata or allowing a per-record published flag to escape quarantine.
+_publication_quarantine: ContextVar[frozenset[tuple[type, str]]] = ContextVar(
+    "corvia_publication_quarantine", default=frozenset()
+)
+
+
+@contextmanager
+def publication_quarantine(quarantined_slugs, models):
+    identities = frozenset((models[front], slug) for front, slugs in quarantined_slugs.items() for slug in slugs)
+    token = _publication_quarantine.set(identities)
+    try:
+        yield
+    finally:
+        _publication_quarantine.reset(token)
+
+
+def is_release_quarantined(record: Any, source: dict[str, Any]) -> bool:
+    identities = _publication_quarantine.get()
+    return any((type(record), slug) in identities for slug in (
+        getattr(record, "slug", None), source.get("slug")
+    ))
 
 
 def source_review_note(source: dict[str, Any]) -> str | None:
@@ -77,6 +103,7 @@ def enforce_safe_publication(record: Any, source: dict[str, Any], *, is_new: boo
     """
     if (
         is_new
+        or is_release_quarantined(record, source)
         or source.get("published") is False
         or getattr(record, "review_status", None) != REVIEWED_STATUS
     ):

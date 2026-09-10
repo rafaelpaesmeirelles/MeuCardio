@@ -33,6 +33,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
+from app.services.disease_manifest import load_disease_records
 
 from app.services.clinical_rule_engine import (
     validate_question_definitions,
@@ -75,14 +76,18 @@ ALLOWED_ADD_KEYS = {
 
 # Documentos legitimamente compartilhados com outras fichas (verificados
 # durante a montagem: ambos genuína e centralmente sobre DAC no idoso).
+# Compartilhamentos adicionais presentes na composição canônica da release autorizada.
 DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
-    "fragilidade-como-modificador-de-decisao-cardiovascular",
-    "reabilitacao-cardiaca-no-muito-idoso-seguranca-fragilidade-e-adesao",
+    'apneia-obstrutiva-do-sono-no-idoso-cardiopata-prevalencia-risco-modificado-pela-idade-e-limites-do-cpap',
+    'choque-cardiogenico-e-suporte-circulatorio-mecanico-no-idoso-idade-cronologica-versus-fragilidade',
+    'estatina-em-prevencao-primaria-no-muito-idoso-o-que-prosper-e-a-metanalise-ctt-mostram',
+    'fragilidade-como-modificador-de-decisao-cardiovascular',
+    'reabilitacao-cardiaca-no-muito-idoso-seguranca-fragilidade-e-adesao',
 }
 
 
 def _load_doencas() -> dict[str, dict]:
-    items = json.loads(DOENCAS_PATH.read_text(encoding="utf-8"))
+    items = load_disease_records(DOENCAS_PATH)
     return {item["slug"]: item for item in items}
 
 
@@ -110,7 +115,7 @@ def test_ficha_continua_existindo_com_mesmo_slug():
 def test_marcacao_editorial_correta_apos_aprofundamento():
     item = _load_doencas()[SLUG]
     assert item.get("fonte_producao") == "claude"
-    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("review_status") == "revisado"
     assert item.get("completeness") == "completo"
     assert item.get("area") == "cardiogeriatria"
     assert item.get("review_note")

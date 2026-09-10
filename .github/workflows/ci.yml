@@ -77,11 +77,26 @@ jobs:
 
       - name: Classify backend risk and select focused tests
         id: classify
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
         run: >-
-          python scripts/ci_backend_policy.py
+          python scripts/ci_backend_followup.py
           --paths-file "$RUNNER_TEMP/backend-policy-paths.txt"
           --repo-root .
+          --manifest docs/ci/pr918-authorized-backend-followup.json
           --github-output "$GITHUB_OUTPUT"
+
+      - name: Record the explicit follow-up scope and initial-run evidence
+        if: steps.classify.outputs.backend_mode == 'authorized-followup'
+        uses: actions/upload-artifact@v6
+        with:
+          name: backend-authorized-followup-evidence
+          path: ${{ runner.temp }}/backend-authorized-followup-evidence.json
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Reuse only an identical successful suite for this exact SHA
         id: reuse
@@ -97,6 +112,9 @@ jobs:
           echo "reuse_backend=false" >> "$GITHUB_OUTPUT"
           echo "reuse_source_run=" >> "$GITHUB_OUTPUT"
           [[ "$BACKEND_MODE" != "skip" ]] || exit 0
+          # Explicit follow-up is executed as its own scope; a failed full
+          # baseline never becomes an identical successful full certificate.
+          [[ "$BACKEND_MODE" != "authorized-followup" ]] || exit 0
 
           expected_job="Backend tests"
           if [[ "$BACKEND_MODE" == "focused" ]]; then
@@ -164,7 +182,8 @@ jobs:
     name: Backend tests
     needs: backend-risk-policy
     if: >-
-      needs.backend-risk-policy.outputs.backend_mode == 'full' &&
+      (needs.backend-risk-policy.outputs.backend_mode == 'full' ||
+       needs.backend-risk-policy.outputs.backend_mode == 'authorized-followup') &&
       needs.backend-risk-policy.outputs.reuse_backend != 'true'
     runs-on: ubuntu-latest
     services:
@@ -278,9 +297,21 @@ jobs:
       - name: Run pytest
         working-directory: backend
         shell: bash
+        env:
+          BACKEND_MODE: ${{ needs.backend-risk-policy.outputs.backend_mode }}
+          FOCUSED_TESTS: ${{ needs.backend-risk-policy.outputs.focused_tests }}
         run: |
-          set -o pipefail
-          python -m pytest -q --tb=short 2>&1 | tee pytest-output.txt
+          set -euo pipefail
+          if [[ "$BACKEND_MODE" == "authorized-followup" ]]; then
+            [[ -n "$FOCUSED_TESTS" ]] || { echo "Authorized follow-up test list is empty." >&2; exit 64; }
+            read -r -a tests <<< "$FOCUSED_TESTS"
+            # Tests are validated root-relative backend/scripts test files.
+            # Operational migration, HTTP and backup gates remain below.
+            cd ..
+            PYTHONPATH=backend python -m pytest -q --tb=short "${tests[@]}" 2>&1 | tee backend/pytest-output.txt
+          else
+            python -m pytest -q --tb=short 2>&1 | tee pytest-output.txt
+          fi
 
       - name: Upload pytest failure report
         if: failure()
@@ -519,6 +550,14 @@ jobs:
                   exit 1
                 }
               fi
+              ;;
+            authorized-followup)
+              [[ "$REUSE_BACKEND" != "true" && "$FULL_RESULT" == "success" && "$FOCUSED_RESULT" == "skipped" ]] || {
+                echo "Authorized follow-up or retained operational gates failed." >&2
+                exit 1
+              }
+              [[ "$SUITE_KEY" == backend-risk-v1-authorized-followup-pr918-* ]] || exit 1
+              echo "Authorized follow-up passed with operational gates; this is not a full-suite pass or full-suite reuse."
               ;;
             focused)
               if [[ "$REUSE_BACKEND" == "true" ]]; then

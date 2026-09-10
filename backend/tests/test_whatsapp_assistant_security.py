@@ -120,6 +120,16 @@ def test_meta_media_download_stops_stream_above_limit(monkeypatch):
 def test_audio_transcription_returns_reviewable_text(monkeypatch):
  monkeypatch.setattr(settings,"whatsapp_phone_number_id","p");monkeypatch.setattr(settings,"whatsapp_meta_access_token","t");monkeypatch.setattr(settings,"whatsapp_meta_app_secret","s");monkeypatch.setattr(settings,"whatsapp_meta_verify_token","v");monkeypatch.setattr(settings,"openai_api_key","key")
  import openai
- client=Mock();client.audio.transcriptions.create.return_value=SimpleNamespace(text="  revisar antes de executar  ")
+ from app.services.ia import usage_control
+ from app.services import ai_wallet
+ import subprocess
+ monkeypatch.setattr(subprocess,"run",lambda *a,**k:SimpleNamespace(stdout='{"format":{"duration":"2.0"}}'))
+ monkeypatch.setattr(ai_wallet,"reserve",lambda **kw:{"created":True})
+ settlements=[]
+ monkeypatch.setattr(ai_wallet,"settle",lambda **kw:settlements.append(kw))
+ monkeypatch.setattr(ai_wallet,"mark_unknown",lambda **kw:pytest.fail("unexpected unknown usage"))
+ client=Mock();client.audio.transcriptions.create.return_value=SimpleNamespace(text="  revisar antes de executar  ",usage={"input_tokens":20,"output_tokens":10})
  monkeypatch.setattr(openai,"OpenAI",lambda **_:client)
- assert MetaCloudAdapter(client=Mock()).transcribe_audio(b"audio",filename="a.ogg",mime_type="audio/ogg")=="revisar antes de executar"
+ with usage_control.ai_usage_scope(owner_id=1,feature="whatsapp_ai"):
+  assert MetaCloudAdapter(client=Mock()).transcribe_audio(b"OggSfake",filename="a.ogg",mime_type="audio/ogg")=="revisar antes de executar"
+ assert len(settlements)==1 and settlements[0]["actual_cost_micros"]>0

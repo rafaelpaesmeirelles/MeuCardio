@@ -30,9 +30,11 @@ from app.commands.reconcile_content import (
     _load_full_corpus_authorization,
     _synchronize_publication,
     _validate_editorial_approvals,
-    _validate_full_corpus_publication,
+    _validate_release_publication,
+    _authorization_quarantine,
 )
 from app.core.db import SessionLocal
+from app.services.knowledge_graph import arquivar_entidades_de_conteudo_despublicado
 
 
 def publish_preserved_reviewed(db: Session, *, dry_run: bool = False) -> dict[str, Any]:
@@ -55,6 +57,8 @@ def publish_preserved_reviewed(db: Session, *, dry_run: bool = False) -> dict[st
         full_corpus_authorized_slugs, full_corpus_authorization = (
             _load_full_corpus_authorization(canonical_slugs, sources)
         )
+        if full_corpus_authorization and full_corpus_authorization.get("schema_version") == 2:
+            raise RuntimeError("Snapshot schema 2 exige reconcile_content --publish-reviewed para carregar os bytes autorizados antes da publicação.")
         approvals = _load_editorial_approvals()
         approvals = {
             front: approvals[front] | full_corpus_authorized_slugs[front]
@@ -73,14 +77,16 @@ def publish_preserved_reviewed(db: Session, *, dry_run: bool = False) -> dict[st
             approved_slugs=approvals,
             publication_intents=publication_intents,
             full_corpus_authorized_slugs=full_corpus_authorized_slugs,
+            quarantined_slugs=_authorization_quarantine(full_corpus_authorization),
             # Com autorização integral, contagens por frente e total precisam
             # ser certificadas antes de commit ou rollback do dry-run.
             dry_run=dry_run and full_corpus_authorization is None,
             commit=full_corpus_authorization is None,
         )
         if full_corpus_authorization is not None:
-            full_corpus_database = _database_inventory(db, canonical_slugs)
-            _validate_full_corpus_publication(
+            arquivar_entidades_de_conteudo_despublicado(db, commit=False)
+            full_corpus_database = _database_inventory(db, canonical_slugs, include_published_slugs=full_corpus_authorization.get("schema_version") == 2)
+            _validate_release_publication(
                 full_corpus_database,
                 full_corpus_authorization,
             )

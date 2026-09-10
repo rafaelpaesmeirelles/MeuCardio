@@ -33,11 +33,17 @@ from app.services.heart_team_safety import (
     deterministic_disagreements, emergency_screen, mandatory_opinion_usable,
     normalize_opinion, validate_deidentified,
 )
-from app.services.ia.provedor import obter_provedor
 from app.services.ia.usage_control import ai_operation, input_token_bound, plan_token_budgets
 from app.services.knowledge_graph import relacionados_de
 
-PIPELINE_VERSION = "heart-team-v1.1-fail-closed"
+PIPELINE_VERSION = "heart-team-v1.2-dedicated-frontier"
+HEART_TEAM_MAX_OPINION_BYTES = 32 * 1024
+VISUAL_SYSTEM = "Extração clínica preliminar desidentificada; toda interpretação exige validação médica."
+VISUAL_INSTRUCTION = (
+    "Extraia SOMENTE observações visuais objetivas do exame para revisão médica. "
+    "Não diagnostique, não recomende tratamento e não invente medidas. Responda JSON "
+    "com image_quality, objective_observations, unreadable_elements e limitations."
+)
 HUMAN_ONLY = [
     "Confirmar diagnóstico e prognóstico.",
     "Indicar, cancelar ou interpretar exames no contexto assistencial.",
@@ -51,6 +57,44 @@ class HeartTeamError(RuntimeError): ...
 class HeartTeamDisabled(HeartTeamError): ...
 class HeartTeamSafetyError(HeartTeamError): ...
 class HeartTeamBudgetExceeded(HeartTeamError): ...
+
+
+def heart_team_model_config() -> dict:
+    """Dedicated clinical configuration; never inherit the general chat tier."""
+    provider = str(settings.heart_team_ai_provider).strip().lower()
+    model = str(settings.heart_team_clinical_model).strip()
+    effort = str(settings.heart_team_reasoning_effort).strip()
+    output = int(settings.heart_team_max_output_tokens)
+    if provider not in {"openai", "anthropic"} or not model or output <= 0:
+        raise HeartTeamError("Configuração exclusiva do modelo Heart Team inválida.")
+    if (provider == "openai" and model.startswith("claude-")) or (provider == "anthropic" and not model.startswith("claude-")):
+        raise HeartTeamError("Modelo Heart Team incompatível com seu provedor exclusivo.")
+    if effort not in {"low", "medium", "high"}:
+        raise HeartTeamError("Nível de raciocínio Heart Team inválido.")
+    return {"provider": provider, "model": model, "max_output_tokens": output,
+            "reasoning_effort": effort, "max_opinion_bytes": HEART_TEAM_MAX_OPINION_BYTES}
+
+
+def obter_provedor_heart_team():
+    from app.services.ia.provedor import ProvedorOpenAI, ProvedorAnthropic
+    config = heart_team_model_config()
+    provider = {"openai": ProvedorOpenAI, "anthropic": ProvedorAnthropic}[config["provider"]]()
+    # This instance is never shared with the application's general chat cache.
+    provider._modelo = config["model"]
+    provider._heart_team_provider_name = config["provider"]
+    return provider
+
+
+def _clinical_system(system: str) -> str:
+    return system + "\nProduza JSON estruturado conciso com no máximo 32 KiB em UTF-8. Preserve achados, fontes, limitações e divergências relevantes; evite repetição literal."
+
+
+def _consensus_message(snapshot: dict, opinions: list[dict], sources: list[dict]) -> dict:
+    # Content is complete. Execution metadata and repeated copies of mandatory
+    # opinions/claim positions add no clinical evidence to the coordinator.
+    return {"case": snapshot, "opinions": [
+        {"agent_key": row["agent_key"], "round_name": row["round_name"], "content": row["content"]}
+        for row in opinions], "sources": sources}
 
 
 def utcnow() -> datetime:
@@ -210,7 +254,7 @@ def _enforce_case_limits(db, case: HeartTeamCase) -> None:
 
 
 def _reserve_call(db, case: HeartTeamCase, *, agent_key: str, phase: str, input_chars: int, media_bytes: int = 0) -> HeartTeamCostLedger:
-    max_output = int(getattr(settings, "heart_team_max_output_tokens", 2200))
+    max_output = int(getattr(settings, "heart_team_max_output_tokens", 8192))
     reserve = _estimate_cost_micros(input_chars, max_output, media_bytes=media_bytes)
     try:
         db.execute(text("SELECT pg_advisory_xact_lock(:namespace, :owner)"), {"namespace": 1213486164, "owner": case.owner_id})
@@ -242,18 +286,21 @@ def _call(db, case: HeartTeamCase, *, provider, agent_key: str, round_name: str,
     serialized = stable_json(message)
     ledger = _reserve_call(db, case, agent_key=agent_key, phase=round_name, input_chars=len(system) + len(serialized))
     try:
-        response = provider.responder(sistema=system, mensagens=[{"role": "user", "content": serialized}], modelo=getattr(settings, "heart_team_clinical_model", "") or None, usar_internet=False, max_output_tokens=int(getattr(settings, "heart_team_max_output_tokens", 2200)))
+        config = heart_team_model_config()
+        response = provider.responder(sistema=_clinical_system(system), mensagens=[{"role": "user", "content": serialized}], modelo=config["model"], usar_internet=False, max_output_tokens=config["max_output_tokens"], reasoning_effort=config["reasoning_effort"])
     except Exception:
         case.reserved_cost_micros = max(0, int(case.reserved_cost_micros or 0) - ledger.reserved_micros); db.commit(); raise
     _reconcile_call(db, case, ledger, response)
+    if getattr(response, "truncado", False):
+        raise HeartTeamSafetyError("O modelo atingiu o limite de saída; nenhuma conclusão clínica foi emitida.")
     raw = _json_response(response.texto)
     content, _blocks = normalize_opinion(raw, registry)
     ids = sorted({sid for claim in content.get("claims", []) for sid in claim.get("source_ids", [])})
     content["source_ids"] = ids
+    _check_response_envelope(content)
     opinion = HeartTeamOpinion(case_id=case.id, agent_key=agent_key, round_name=round_name, position={"claims": [{"statement": c.get("statement"), "position": c.get("position", "uncertain")} for c in content.get("claims", [])]}, content=content, source_ids=ids, confidence=content.get("confidence", "insufficient"), content_hash=content_hash(content), model_name=response.modelo, tokens_input=response.tokens_entrada, tokens_output=response.tokens_saida)
     db.add(opinion); db.commit(); db.refresh(opinion)
     result = {"id": opinion.id, "agent_key": agent_key, "round_name": round_name, "content": content, "position": opinion.position, "source_ids": ids, "confidence": opinion.confidence, "content_hash": opinion.content_hash, "model_name": opinion.model_name, "tokens_input": opinion.tokens_input, "tokens_output": opinion.tokens_output}
-    _check_response_envelope(result)
     return result
 
 
@@ -263,7 +310,7 @@ def _knowledge_graph_fingerprint(db) -> str:
 
 
 def _cache_key(case: HeartTeamCase, snapshot: dict, attachments: list[dict], *, graph_fingerprint: str = "unknown") -> str:
-    return content_hash({"owner_id": case.owner_id, "snapshot": snapshot, "attachments": [{k: a.get(k) for k in ("source_sha256", "sha256", "media_type", "size_bytes", "kind", "reference_id", "sanitization_report", "objective_extract")} for a in attachments], "agents": case.selected_agents, "pipeline": PIPELINE_VERSION, "knowledge_graph": graph_fingerprint, "model": getattr(settings, "heart_team_clinical_model", ""), "max_output": getattr(settings, "heart_team_max_output_tokens", 2200)})
+    return content_hash({"owner_id": case.owner_id, "snapshot": snapshot, "attachments": [{k: a.get(k) for k in ("source_sha256", "sha256", "media_type", "size_bytes", "kind", "reference_id", "sanitization_report", "objective_extract")} for a in attachments], "agents": case.selected_agents, "pipeline": PIPELINE_VERSION, "knowledge_graph": graph_fingerprint, "model_config": heart_team_model_config()})
 
 
 def purge_expired_cache(db, *, now: datetime | None = None) -> int:
@@ -411,7 +458,7 @@ def _visual_bytes(db, case: HeartTeamCase, descriptor: dict) -> bytes | None:
 
 def _response_envelope_limit(output_tokens: int | None = None) -> int:
     """Bound structural expansion of normalized answers, without truncation."""
-    return 4096 + 32 * (output_tokens or int(getattr(settings, "heart_team_max_output_tokens", 2200)))
+    return HEART_TEAM_MAX_OPINION_BYTES
 
 
 def _check_response_envelope(value: dict, *, output_tokens: int | None = None) -> None:
@@ -431,15 +478,13 @@ def _plan_journey(db, case: HeartTeamCase, provider, context: dict, agent_keys: 
 
     Future structured replies are bounded by _check_response_envelope. Input
     bytes conservatively bound tokenizer input. The consensus allowance also
-    covers duplicated positions and deterministic disagreements. No patient
+    follows the exact compact message shape used by the coordinator. No patient
     payload is persisted by the accounting layer.
     """
-    provider_name = str(getattr(settings, "ai_provider", "openai"))
-    model = getattr(settings, "heart_team_clinical_model", "") or getattr(provider, "_modelo", None)
-    model = model or getattr(settings, "anthropic_model" if provider_name == "anthropic" else "openai_model")
-    max_output = int(getattr(settings, "heart_team_max_output_tokens", 2200))
+    config = heart_team_model_config()
+    provider_name, model, max_output = config["provider"], config["model"], config["max_output_tokens"]
     envelope = _response_envelope_limit(max_output)
-    extract_output = min(1200, max_output)
+    extract_output = max_output
     candidates = _visual_candidates(context["attachments"])
     visual_requests = []
     future_extract_bytes = 0
@@ -448,39 +493,28 @@ def _plan_journey(db, case: HeartTeamCase, provider, context: dict, agent_keys: 
             binary = _visual_bytes(db, case, descriptor)
             if not binary:
                 raise HeartTeamSafetyError("Arquivo visual não pôde ser lido com segurança.")
-            resolver = getattr(provider, "_modelo_ecg_compativel", None)
-            visual_model = resolver(getattr(settings, "heart_team_clinical_model", "") or None) if resolver else model
-            fallback = getattr(provider, "_MODELO_ECG_FALLBACK", None) or getattr(provider, "_MODELO_ECG_PADRAO", None)
-            for target in dict.fromkeys([visual_model, fallback or visual_model]):
-                # The common estimator accepts both provider envelope shapes.
-                visual_requests.append({
-                    "model": target, "max_tokens": extract_output,
-                    "system": "x" * 1024,
-                    "messages": [{"role": "user", "content": [{
-                        "type": "document" if descriptor["media_type"] == "application/pdf" else "image",
-                        "source": {"type": "base64", "media_type": descriptor["media_type"],
-                                   "data": base64.b64encode(binary).decode("ascii")},
-                    }]}],
-                })
+            visual_requests.extend(provider._clinical_file_request_variants(
+                VISUAL_SYSTEM, VISUAL_INSTRUCTION, binary, descriptor["media_type"],
+                modelo=model, max_output_tokens=extract_output))
             # JSON escaping plus new extraction metadata in the existing descriptor.
             future_extract_bytes += 2 * _response_envelope_limit(extract_output) + 4096
     # A fixed wrapper allowance covers provider SDK keys and message framing.
     context_bytes = len(stable_json(context).encode("utf-8")) + future_extract_bytes + extra_input_bytes
     base_bytes = len(stable_json({"case": context["case"], "sources": context["sources"]}).encode("utf-8")) + extra_input_bytes
     def budget(system: str, message_bytes: int) -> dict:
-        return {"model": model, "input_tokens": len(system.encode("utf-8")) + message_bytes + 4096,
+        return {"model": model, "input_tokens": len(_clinical_system(system).encode("utf-8")) + message_bytes + 4096,
                 "max_output_tokens": max_output}
     budgets = [budget(specialist_prompt(key), context_bytes) for key in agent_keys]
     specialists = [key for key in agent_keys if key not in {"evidence", "red_team"}]
-    # Original opinion + two objections, escaped once within the SDK message.
-    budgets += [budget(contestation_prompt(key), base_bytes + 6 * envelope) for key in specialists]
+    # Original opinion plus two complete mandatory reviews; each has an enforced byte bound.
+    budgets += [budget(contestation_prompt(key), base_bytes + 3 * envelope) for key in specialists]
     total_opinions = len(agent_keys) + len(specialists)
-    # All opinions, two mandatory reviews and deterministic disagreements.
-    # Each disagreement only repeats existing statement/agent/position values.
-    budgets.append(budget(COORDINATOR_SYSTEM, base_bytes + (8 * total_opinions + 4) * envelope))
+    # Coordinator receives each complete opinion once, including mandatory reviews.
+    # Divergences are recoverable from the preserved claims and positions.
+    budgets.append(budget(COORDINATOR_SYSTEM, base_bytes + total_opinions * (envelope + 256)))
     budgets.extend({"model": request["model"],
                     "input_tokens": input_token_bound(request, request["model"]) + 4096,
-                    "max_output_tokens": extract_output} for request in visual_requests)
+                    "max_output_tokens": int(request.get("max_completion_tokens", request.get("max_tokens", extract_output)))} for request in visual_requests)
     plan_token_budgets(provider_name, budgets)
 
 
@@ -495,18 +529,14 @@ def _enrich_visual_attachments(db, case: HeartTeamCase, descriptors: list[dict],
         binary = _visual_bytes(db, case, descriptor)
         if not binary:
             raise HeartTeamSafetyError("Arquivo visual não pôde ser lido com segurança.")
-        instruction = (
-            "Extraia SOMENTE observações visuais objetivas do exame para revisão médica. "
-            "Não diagnostique, não recomende tratamento e não invente medidas. Responda JSON "
-            "com image_quality, objective_observations, unreadable_elements e limitations."
-        )
+        instruction = VISUAL_INSTRUCTION
         ledger = _reserve_call(db, case, agent_key="multimodal_extractor", phase="attachment_extract", input_chars=len(instruction), media_bytes=len(binary))
         try:
             response = provider.analisar_arquivo_clinico(
-                sistema="Extração clínica preliminar desidentificada; toda interpretação exige validação médica.",
+                sistema=VISUAL_SYSTEM,
                 instrucao=instruction, conteudo=binary, media_type=descriptor["media_type"],
                 modelo=getattr(settings, "heart_team_clinical_model", "") or None,
-                max_output_tokens=min(1200, int(getattr(settings, "heart_team_max_output_tokens", 2200))),
+                max_output_tokens=int(getattr(settings, "heart_team_max_output_tokens", 8192)),
             )
         except Exception as exc:
             case.reserved_cost_micros = max(0, int(case.reserved_cost_micros or 0) - ledger.reserved_micros); db.commit()
@@ -516,7 +546,7 @@ def _enrich_visual_attachments(db, case: HeartTeamCase, descriptors: list[dict],
             raise HeartTeamSafetyError("O provedor multimodal não conseguiu interpretar o formato; anexe um laudo textual/PDF.") from exc
         _reconcile_call(db, case, ledger, response)
         extract = _json_response(response.texto)
-        _check_response_envelope(extract, output_tokens=min(1200, int(getattr(settings, "heart_team_max_output_tokens", 2200))))
+        _check_response_envelope(extract, output_tokens=int(getattr(settings, "heart_team_max_output_tokens", 8192)))
         if not isinstance(extract.get("objective_observations"), list):
             if not textual_report_present:
                 raise HeartTeamSafetyError("Extração multimodal inválida; anexe um laudo textual/PDF.")
@@ -546,6 +576,7 @@ def analyze_case_by_id(db, *, case_id: int, owner_id: int, actor_id: int, confir
 def _budget_fingerprint(case: HeartTeamCase, attachments: list[dict]) -> str:
     return content_hash({
         "input": case.input_data or {}, "selected_agents": case.selected_agents,
+        "model_config": heart_team_model_config(),
         "attachments": [{key: item.get(key) for key in ("id", "kind", "reference_id", "sha256", "source_sha256", "media_type", "size_bytes")} for item in attachments],
     })
 
@@ -572,7 +603,7 @@ def estimate_case_budget(db, case: HeartTeamCase, *, actor_id: int) -> dict:
         # The worker reopens bibliography. Its abstracts never enter the model
         # context; allow extra bibliographic metadata without external HTTP here.
         with quote_scope(case.owner_id, "heart_team") as scope:
-            _plan_journey(db, case, obter_provedor(), context, selected_agent_keys(case.selected_agents),
+            _plan_journey(db, case, obter_provedor_heart_team(), context, selected_agent_keys(case.selected_agents),
                           extra_input_bytes=8192 * len(rows))
             maximum_cost = scope.planned_cost
     quoted = quote_cost(owner_id=case.owner_id, max_cost_micros=maximum_cost)
@@ -581,7 +612,7 @@ def estimate_case_budget(db, case: HeartTeamCase, *, actor_id: int) -> dict:
         "maximum_cost_micros": maximum_cost, "currency": "BRL",
         "pricing_version": PRICING_VERSION, "case_fingerprint": fingerprint,
         "expires_at": (utcnow() + timedelta(minutes=15)).isoformat(),
-        "cache_hit": cache_hit,
+        "cache_hit": cache_hit, "model_config": heart_team_model_config(),
     }
     event = audit_event(db, case, actor_id=actor_id, action="cost_estimated", detail=detail)
     db.flush()
@@ -727,7 +758,7 @@ class HeartTeamOrchestrator:
         if pii:
             case.status = "failed"; audit_event(self.db, case, actor_id=actor_id, action="pii_blocked", detail={"identifier_types": pii}); self.db.commit(); raise HeartTeamSafetyError("Identificadores detectados; anonimize os dados antes da análise.")
         case.structured_case = snapshot; case.missing_data = missing; case.risk_classification = emergency_screen(snapshot); case.started_at = utcnow(); case.status = "analyzing"; self.db.commit()
-        provider = self.provider or obter_provedor()
+        provider = self.provider or obter_provedor_heart_team()
         attachments = attachment_descriptors(self.db, case)
         _apply_accepted_budget(self.db, case, attachments)
         key = _cache_key(case, snapshot, attachments, graph_fingerprint=_knowledge_graph_fingerprint(self.db)); case.input_hash = key; self.db.commit()
@@ -760,7 +791,7 @@ class HeartTeamOrchestrator:
             for agent_key in [key for key in agent_keys if key not in {"evidence", "red_team"}]:
                 contestations.append(_call(self.db, case, provider=provider, agent_key=agent_key, round_name="contestation", system=contestation_prompt(agent_key), message={"original": mandatory_first.get(agent_key), "objections": objections, "case": snapshot, "sources": context["sources"]}, registry=registry))
             all_for_consensus = opinions + contestations
-            coordinator = _call(self.db, case, provider=provider, agent_key="coordinator", round_name="consensus", system=COORDINATOR_SYSTEM, message={"case": snapshot, "opinions": all_for_consensus, "red_team": objections["red_team"], "evidence_review": objections["evidence"], "deterministic_disagreements": deterministic_disagreements(all_for_consensus), "sources": context["sources"]}, registry=registry)
+            coordinator = _call(self.db, case, provider=provider, agent_key="coordinator", round_name="consensus", system=COORDINATOR_SYSTEM, message=_consensus_message(snapshot, all_for_consensus, context["sources"]), registry=registry)
             if not mandatory_opinion_usable("coordinator", coordinator["content"]):
                 case.status = "unusable"; case.result = {}; case.finished_at = utcnow(); audit_event(self.db, case, actor_id=actor_id, action="coordinator_unusable"); self.db.commit(); return case
         except HeartTeamBudgetExceeded:

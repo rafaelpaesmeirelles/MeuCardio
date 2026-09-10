@@ -417,6 +417,89 @@ def classify_paths(paths: Iterable[str], *, repo_root: Path) -> PolicyDecision:
     )
 
 
+
+REQUIRED_FOLLOWUP_FINANCIAL_TESTS = (
+    "backend/tests/test_commercial_plans.py", "backend/tests/test_ai_wallet.py",
+    "backend/tests/test_ai_credit_payments.py", "backend/tests/test_ai_provider_accounting.py",
+    "backend/tests/test_heart_team_ai_budget.py", "backend/tests/test_scientific_document_budget.py",
+    "backend/tests/test_billing_periodicidade.py", "backend/tests/test_billing_convidado.py",
+    "backend/tests/test_billing_portal.py", "backend/tests/test_billing_temporarily_disabled.py",
+)
+FOLLOWUP_TEST_PATH = re.compile(r"^(?:backend|scripts)/tests/test_[A-Za-z0-9_]+\.py$")
+
+
+def baseline_failed_tests(log: str) -> tuple[str, ...]:
+    """Read every failure from a completed pytest summary, never a success claim."""
+    clean = re.sub(r"\x1b\[[0-9;]*m", "", log)
+    clean = re.sub(r"(?m)^\d{4}-\d\d-\d\dT\S+Z\s*", "", clean)
+    summaries = re.findall(r"(?m)^(?:=+\s*)?(\d+ (?:failed|passed|errors?|skipped)\b[^\n]*? in [0-9.]+s[^\n]*?)(?:\s*=+)?$", clean)
+    if not summaries:
+        raise ValueError("Baseline has no completed pytest summary; follow-up cannot hide an interrupted suite")
+    summary = summaries[-1]
+    expected = sum(int(n) for n in re.findall(r"(\d+) (?:failed|errors?)\b", summary))
+    section = clean.rsplit("short test summary info", 1)[-1] if expected else ""
+    entries = re.findall(r"\b(?:FAILED|ERROR) ([^\s]+)", section)
+    if len(entries) != expected:
+        raise ValueError("Incomplete baseline failure inventory")
+    modules = set()
+    for entry in entries:
+        path = entry.split("::", 1)[0]
+        if path.startswith("tests/"):
+            path = "backend/" + path
+        if not FOLLOWUP_TEST_PATH.fullmatch(path):
+            raise ValueError("Baseline failure outside the supported test paths")
+        modules.add(path)
+    return tuple(sorted(modules))
+
+
+def classify_authorized_followup(paths: Iterable[str], *, repo_root: Path, manifest: dict,
+                                 baseline_job: dict, baseline_log: str) -> PolicyDecision:
+    """A separate, explicitly authorized scope; never reclassify a failed full as passed."""
+    if (baseline_job.get("id") != manifest["baseline_job_id"]
+            or baseline_job.get("run_id") != manifest["baseline_run_id"]
+            or baseline_job.get("head_sha") != manifest["baseline_sha"]
+            or baseline_job.get("name") != "Backend tests"
+            or baseline_job.get("status") != "completed"
+            or baseline_job.get("conclusion") not in {"success", "failure"}):
+        raise ValueError("Baseline job is not the completed, authorized initial execution")
+    if not any(step.get("name") == "Run pytest" and step.get("status") == "completed"
+               for step in baseline_job.get("steps", [])):
+        raise ValueError("The initial pytest execution is incomplete")
+    failed = baseline_failed_tests(baseline_log)
+    normalized = sorted({_normalize_path(path) for path in paths if path.strip()})
+    if not normalized:
+        raise ValueError("Follow-up has no changes from the initial candidate")
+    selected = set(REQUIRED_FOLLOWUP_FINANCIAL_TESTS) | set(failed)
+    mapping = manifest.get("impact_tests", {})
+    for path in normalized:
+        if path in mapping:
+            tests = mapping[path]
+            if not isinstance(tests, list) or not tests:
+                raise ValueError(f"Empty follow-up impact mapping: {path}")
+            selected.update(tests)
+        elif path.startswith("backend/"):
+            related, unmapped = _related_tests([path], repo_root=repo_root)
+            if unmapped or not related:
+                raise ValueError(f"Unmapped follow-up backend change: {path}")
+            selected.update("backend/" + test for test in related)
+        elif _safe_without_backend(path):
+            continue
+        else:
+            raise ValueError(f"Unmapped follow-up change: {path}")
+    for test in selected:
+        if not FOLLOWUP_TEST_PATH.fullmatch(test) or not (repo_root / test).is_file():
+            raise ValueError(f"Missing or invalid required follow-up test: {test}")
+    tests = tuple(sorted(selected))
+    report_hash = hashlib.sha256(baseline_log.encode()).hexdigest()
+    scope = manifest["baseline_sha"] + report_hash + "\n".join(normalized + list(tests))
+    digest = hashlib.sha256(scope.encode()).hexdigest()[:16]
+    return PolicyDecision(backend_mode="authorized-followup",
+        suite_key=f"{POLICY_VERSION}-authorized-followup-pr918-{digest}", focused_tests=tests,
+        reasons=("user-authorized:PR918-and-exact-main-integration-only", "not-a-passing-full-suite-certificate",
+                 f"baseline-run:{manifest['baseline_run_id']}", f"baseline-conclusion:{baseline_job['conclusion']}",
+                 f"baseline-report-sha256:{report_hash}", *(f"baseline-failed-module:{test}" for test in failed),
+                 *(f"followup-impact:{path}" for path in normalized)))
+
 def _write_github_outputs(path: Path, decision: PolicyDecision) -> None:
     with path.open("a", encoding="utf-8") as stream:
         for key, value in decision.github_outputs().items():

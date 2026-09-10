@@ -582,6 +582,17 @@ def test_evidencia_rejeita_fonte_recuperada_mas_nao_citada():
 
 
 def test_responses_envia_multiplos_arquivos_com_store_false(monkeypatch):
+    import fitz
+    from app.services import ai_wallet
+    from app.services.ia.usage_control import ai_usage_scope
+    monkeypatch.setattr(ai_wallet, "reserve", lambda **kw: {"created": True})
+    settlements = []
+    monkeypatch.setattr(ai_wallet, "settle", lambda **kw: settlements.append(kw))
+    monkeypatch.setattr(ai_wallet, "mark_unknown", lambda **kw: pytest.fail("unexpected unknown usage"))
+    with fitz.open() as pdf:
+        pdf.new_page()
+        pdf_bytes = pdf.tobytes()
+
     captured: dict[str, object] = {"requests": []}
     clinical_payload = {key: value for key, value in _payload().items() if key not in {
         "possible_management", "guidelines", "disclaimer", "urgent_review_recommended",
@@ -647,22 +658,23 @@ def test_responses_envia_multiplos_arquivos_com_store_false(monkeypatch):
             return FakeResponse(raw_response(evidence_payload if with_search else clinical_payload, with_search=with_search))
 
     _enable(monkeypatch)
-    monkeypatch.setattr(settings, "ai_cardiovascular_exam_model", "modelo-configurado")
+    monkeypatch.setattr(settings, "ai_cardiovascular_exam_model", "gpt-5.6-sol")
     monkeypatch.setattr(cardiovascular_exam_assist.httpx, "Client", FakeClient)
-    result = cardiovascular_exam_assist.analyze_exam(
-        [
-            ClinicalFile(content=b"imagem-1", media_type="image/jpeg", file_id="arquivo-1", label="apical"),
-            ClinicalFile(content=b"%PDF-1.4\n%%EOF", media_type="application/pdf", file_id="arquivo-2", label="laudo"),
-        ],
-        "echocardiogram",
-        "Qual a impressão integrada?",
-        "Laudo desidentificado.",
-        "Contexto desidentificado.",
-    )
+    with ai_usage_scope(owner_id=1, feature="exam_ai"):
+        result = cardiovascular_exam_assist.analyze_exam(
+            [
+                ClinicalFile(content=_png(), media_type="image/png", file_id="arquivo-1", label="apical"),
+                ClinicalFile(content=pdf_bytes, media_type="application/pdf", file_id="arquivo-2", label="laudo"),
+            ],
+            "echocardiogram",
+            "Qual a impressão integrada?",
+            "Laudo desidentificado.",
+            "Contexto desidentificado.",
+        )
 
     clinical_request, evidence_request = captured["requests"]
     assert captured["url"] == cardiovascular_exam_assist.RESPONSES_URL
-    assert clinical_request["model"] == "modelo-configurado"
+    assert clinical_request["model"] == "gpt-5.6-sol"
     assert clinical_request["store"] is False
     assert "tools" not in clinical_request
     assert evidence_request["store"] is False
@@ -670,7 +682,7 @@ def test_responses_envia_multiplos_arquivos_com_store_false(monkeypatch):
     assert evidence_request["include"] == ["web_search_call.action.sources"]
     content = clinical_request["input"][0]["content"]
     assert [item["type"] for item in content] == ["input_text", "input_image", "input_file"]
-    assert content[1]["image_url"].startswith("data:image/jpeg;base64,")
+    assert content[1]["image_url"].startswith("data:image/png;base64,")
     assert content[2]["filename"] == "arquivo-2.pdf"
     assert content[2]["file_data"].startswith("data:application/pdf;base64,")
     assert result["web_sources"] == [{"url": source_url, "title": "Diretriz", "cited": True}]
@@ -682,3 +694,6 @@ def test_responses_envia_multiplos_arquivos_com_store_false(monkeypatch):
     assert result["payload"]["guidelines"][0]["recommendation_class"] is None
     assert result["payload"]["guidelines"][0]["evidence_level"] is None
     assert result["payload"]["disclaimer"].startswith("Análise assistiva gerada por IA")
+
+    assert len(settlements) == 1
+    assert settlements[0]["actual_cost_micros"] > 0

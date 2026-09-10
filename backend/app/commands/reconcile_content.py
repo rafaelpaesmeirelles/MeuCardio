@@ -7,6 +7,13 @@ Uso operacional:
 A carga é idempotente. Registros removidos ou renomeados permanecem armazenados
 para auditoria, mas são despublicados e deixam de contar para a certificação do
 corpus canônico do commit atual.
+
+O manifesto padrão schema 2 exige --publish-reviewed: a carga congela a
+publicação canônica, importa uma cópia imutável validada e promove somente
+as identidades explicitamente aprovadas. Sem a opção, falha antes de abrir
+uma sessão de banco. --authorization-manifest (alias --full-authorization)
+permite selecionar explicitamente um manifesto schema 1, cujo contrato
+integral permanece inalterado. publish_preserved_content não publica schema 2.
 """
 
 from __future__ import annotations
@@ -14,7 +21,11 @@ from __future__ import annotations
 import argparse
 import importlib
 import json
+from hashlib import sha256
 from collections import Counter
+from contextlib import contextmanager
+import shutil
+from tempfile import TemporaryDirectory
 from pathlib import Path
 from typing import Any
 
@@ -45,6 +56,8 @@ from app.services.corpus_release_authorization import (
     resolve_publication_policy,
     validate_full_corpus_publication as _validate_full_corpus_publication,
     validate_full_corpus_authorization,
+    validate_snapshot_authorization,
+    validate_snapshot_publication,
 )
 from app.services.disease_manifest import load_disease_records
 from app.services.importer import _resolve_markdown_slug, import_directory
@@ -53,11 +66,12 @@ from app.services.knowledge_graph import (
     backfill_mesmo_tema,
 )
 from app.services.study_track_progress import canonicalize_progress_tokens
+from app.services.scientific_loader_safety import publication_quarantine
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 EDITORIAL_APPROVALS_DIR = REPOSITORY_ROOT / "editorial-approvals"
 FULL_CORPUS_AUTHORIZATION_PATH = (
-    EDITORIAL_APPROVALS_DIR / "full-corpus-release-20260907.json"
+    EDITORIAL_APPROVALS_DIR / "scoped-corpus-release-20260910.json"
 )
 BLOCKING_DIAGNOSTIC_KEYS = frozenset({
     "avisos", "duplicados_ignorados", "erros", "falhas", "ignoradas",
@@ -328,7 +342,7 @@ def _load_front(
         result = import_directory(str(source))
     else:
         module = importlib.import_module(f"app.services.{config['loader']}")
-        result = module.carregar(str(source))
+        result = module.carregar(str(source), asset_root=source.parent) if front == "galeria" else module.carregar(str(source))
     result = {**result, "itens_fonte": len(canonical_slugs)}
     _assert_no_rejections(front, result)
     return result, canonical_slugs, publication_intents
@@ -382,40 +396,66 @@ def _validate_editorial_approvals(
     return validated
 
 
+def _canonical_source_fingerprints(front: str, source: Path) -> dict[str, str]:
+    if source.is_dir():
+        result = {}
+        for md in sorted(source.rglob("*.md")):
+            post = frontmatter.load(md)
+            slug = _resolve_markdown_slug(post.metadata, post.metadata.get("title") or md.stem, source=str(md))
+            result[slug] = sha256(md.read_bytes()).hexdigest()
+        return result
+    return {slug: sha256(json.dumps(metadata, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+            for slug, metadata in _canonical_source_metadata(front, source)}
+
+
 def _load_full_corpus_authorization(
     canonical_slugs: dict[str, set[str]],
     sources: dict[str, Path],
+    *,
+    authorization_path: Path | None = None,
+    evidence_root: Path | None = None,
 ) -> tuple[dict[str, set[str]], dict[str, Any] | None]:
-    """Valida a autorização integral ligada ao corpus exato do checkout.
+    """Validate the selected exact snapshot before any database mutation.
 
-    O manifesto é opcional para compatibilidade com releases anteriores. Quando
-    presente, qualquer divergência de arquivo, slug, contagem ou revisão aborta a
-    reconciliação antes da primeira mutação no banco.
+    The scoped default is mandatory. Schema 1 stays strict when explicitly
+    selected; an absent or malformed schema 2 never falls back to old approval.
     """
-    empty = {front: set() for front in FRONTS}
-    if not FULL_CORPUS_AUTHORIZATION_PATH.exists():
-        return empty, None
+    path = Path(authorization_path) if authorization_path is not None else FULL_CORPUS_AUTHORIZATION_PATH
+    if not path.exists():
+        raise RuntimeError(f"Autorização de publicação não encontrada: {path}")
     if set(sources) != set(FRONTS) or set(canonical_slugs) != set(FRONTS):
-        raise RuntimeError("Inventário incompleto para validar autorização integral.")
-
+        raise RuntimeError("Inventário incompleto para validar autorização do corpus.")
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise RuntimeError("Autorização de publicação deve ser objeto JSON.")
     fingerprints = {}
+    review_statuses = {}
     for front in FRONTS:
         statuses = _canonical_review_statuses(front, sources[front])
-        fingerprint_source = (
-            sources[front].parent
-            if front in {"doencas_especializadas", "triagem_sintomas"}
-            else sources[front]
+        review_statuses[front] = statuses
+        fingerprint_source = sources[front].parent if front in {"doencas_especializadas", "triagem_sintomas"} else sources[front]
+        fingerprints[front] = build_front_fingerprint(fingerprint_source, canonical_slugs[front], statuses)
+    if payload.get("schema_version") == 2:
+        return validate_snapshot_authorization(
+            path, canonical_slugs=canonical_slugs, fingerprints=fingerprints,
+            review_statuses=review_statuses,
+            source_fingerprints={front: _canonical_source_fingerprints(front, sources[front]) for front in FRONTS},
+            repository_root=evidence_root or REPOSITORY_ROOT,
         )
-        fingerprints[front] = build_front_fingerprint(
-            fingerprint_source,
-            canonical_slugs[front],
-            statuses,
-        )
-    return validate_full_corpus_authorization(
-        FULL_CORPUS_AUTHORIZATION_PATH,
-        canonical_slugs=canonical_slugs,
-        fingerprints=fingerprints,
-    )
+    return validate_full_corpus_authorization(path, canonical_slugs=canonical_slugs, fingerprints=fingerprints)
+
+
+def _validate_release_publication(database, authorization):
+    if authorization and authorization.get("schema_version") == 2:
+        validate_snapshot_publication(database, authorization)
+    else:
+        _validate_full_corpus_publication(database, authorization)
+
+
+def _authorization_quarantine(authorization) -> dict[str, set[str]]:
+    if not authorization or authorization.get("schema_version") != 2:
+        return {}
+    return {front: set(slugs) for front, slugs in authorization["quarantined"].items()}
 
 
 def _load_controlled_substances(db: Session) -> dict:
@@ -455,6 +495,7 @@ def _synchronize_publication(
     approved_slugs: dict[str, set[str]],
     publication_intents: dict[str, dict[str, bool | None]],
     full_corpus_authorized_slugs: dict[str, set[str]] | None = None,
+    quarantined_slugs: dict[str, set[str]] | None = None,
     dry_run: bool = False,
     commit: bool = True,
 ) -> tuple[dict[str, int], dict[str, int], dict[str, int], dict[str, int]]:
@@ -469,6 +510,7 @@ def _synchronize_publication(
     unpublished_unreviewed: dict[str, int] = {}
     unpublished_ineligible: dict[str, int] = {}
     full_corpus_authorized_slugs = full_corpus_authorized_slugs or {}
+    quarantined_slugs = quarantined_slugs or {}
     try:
         for front, config in FRONTS.items():
             model = config["model"]
@@ -485,6 +527,7 @@ def _synchronize_publication(
                 intents,
                 approved,
                 release_authorized,
+                quarantined_slugs=quarantined_slugs.get(front, set()),
             )
             if publish_reviewed:
                 changed = (
@@ -559,6 +602,8 @@ def _synchronize_publication(
 def _database_inventory(
     db: Session,
     canonical_slugs: dict[str, set[str]],
+    *,
+    include_published_slugs: bool = False,
 ) -> dict[str, Any]:
     fronts: dict[str, Any] = {}
     total = 0
@@ -588,6 +633,8 @@ def _database_inventory(
             "archived_absent": max(stored - canonical - runtime_managed, 0),
             "minimum": minimum,
         }
+        if include_published_slugs:
+            fronts[front]["published_slugs"] = sorted(slug for (slug,) in db.query(model.slug).filter(model.slug.in_(slugs), model.published.is_(True)).all())
         total += canonical
         published_total += published
         stored_total += stored
@@ -629,12 +676,98 @@ def _migrate_study_track_progress(db: Session) -> int:
     return updated
 
 
-def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) -> dict[str, Any]:
+
+@contextmanager
+def _immutable_release_sources(prepared, authorization_path: Path):
+    """Copy approved text/metadata and its evidence before touching the DB.
+
+    Native loaders only consume this private snapshot. Referenced gallery assets are copied as regular files; their stored
+    file_path strings are left unchanged. No database field receives a snapshot path.
+    """
+    with TemporaryDirectory(prefix="corvia-corpus-snapshot-") as temporary:
+        snapshot_root = Path(temporary)
+        copied = {}
+        def relative_source(source, front):
+            try:
+                return source.relative_to(REPOSITORY_ROOT)
+            except ValueError:
+                configured = Path(str(FRONTS[front]["path"]).lstrip("/"))
+                if ".." in configured.parts:
+                    raise RuntimeError("Caminho de fonte inválido.")
+                return configured
+        for front, (source, _slugs, _intents) in prepared.items():
+            target = snapshot_root / relative_source(source, front)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            if source.is_dir():
+                shutil.copytree(source, target, dirs_exist_ok=True)
+            elif front in {"doencas_especializadas", "triagem_sintomas"}:
+                shutil.copytree(source.parent, target.parent, dirs_exist_ok=True)
+            else:
+                shutil.copy2(source, target)
+                corrections = source.parent / "correcoes"
+                if corrections.is_dir():
+                    shutil.copytree(corrections, target.parent / "correcoes", dirs_exist_ok=True)
+            copied[front] = target
+
+        def copy_evidence(relative):
+            path = Path(relative)
+            if path.is_absolute() or ".." in path.parts:
+                raise RuntimeError("Caminho de evidência inválido.")
+            source = (REPOSITORY_ROOT / path).resolve()
+            if not source.is_relative_to(REPOSITORY_ROOT.resolve()) or not source.is_file():
+                raise RuntimeError("Fonte de evidência ausente ou fora do repositório.")
+            target = snapshot_root / path
+            if not target.exists():
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(source, target)
+            return target
+
+        auth_target = snapshot_root / "editorial-approvals" / authorization_path.name
+        auth_target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(authorization_path, auth_target)
+        manifest = json.loads(auth_target.read_text())
+        evidence_paths = {
+            claim["evidence_path"]
+            for claims in manifest.get("provenance", {}).values()
+            for claim in claims.values()
+        }
+        for path in evidence_paths:
+            evidence = json.loads(copy_evidence(path).read_text())
+            for reference in evidence.get("references", []):
+                copy_evidence(reference["path"])
+        # Read-only files prevent accidental mutation by native loaders. The
+        # validated snapshot, rather than later reads of live sources, is used.
+        for path in snapshot_root.rglob("*"):
+            if path.is_file() and not path.is_symlink():
+                path.chmod(0o444)
+        snapshot_prepared = {}
+        for front, target in copied.items():
+            slugs = _canonical_source_slugs(front, target)
+            intents = _canonical_publication_intents(front, target)
+            snapshot_prepared[front] = (target, slugs, intents)
+        yield snapshot_prepared, auth_target, snapshot_root
+
+
+def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False,
+              authorization_path: Path | None = None) -> dict[str, Any]:
+    selected = Path(authorization_path) if authorization_path is not None else FULL_CORPUS_AUTHORIZATION_PATH
+    if not selected.is_file():
+        raise RuntimeError(f"Autorização de publicação não encontrada: {selected}")
+    manifest = json.loads(selected.read_text(encoding="utf-8"))
+    prepared = {front: _prepare_front(front, config) for front, config in FRONTS.items()}
+    if isinstance(manifest, dict) and manifest.get("schema_version") == 2:
+        if not publish_reviewed:
+            raise RuntimeError("Reconciliação de snapshot schema 2 exige --publish-reviewed; nenhuma carga foi iniciada.")
+        with _immutable_release_sources(prepared, selected) as (snapshot, authorization, evidence_root):
+            return _reconcile_prepared(snapshot, publish_reviewed=publish_reviewed,
+                allow_partial=allow_partial, authorization_path=authorization, evidence_root=evidence_root)
+    return _reconcile_prepared(prepared, publish_reviewed=publish_reviewed,
+        allow_partial=allow_partial, authorization_path=selected, evidence_root=REPOSITORY_ROOT)
+
+
+def _reconcile_prepared(prepared, *, publish_reviewed: bool, allow_partial: bool,
+                        authorization_path: Path, evidence_root: Path) -> dict[str, Any]:
     loads: dict[str, Any] = {}
-    prepared = {
-        front: _prepare_front(front, config)
-        for front, config in FRONTS.items()
-    }
     canonical_slugs = {
         front: state[1]
         for front, state in prepared.items()
@@ -647,7 +780,9 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
     (
         full_corpus_authorized_slugs,
         full_corpus_authorization,
-    ) = _load_full_corpus_authorization(canonical_slugs, sources)
+    ) = _load_full_corpus_authorization(canonical_slugs, sources, authorization_path=authorization_path, evidence_root=evidence_root)
+    quarantined_slugs = _authorization_quarantine(full_corpus_authorization)
+    freeze_during_load = canonical_slugs if full_corpus_authorization and full_corpus_authorization.get("schema_version") == 2 else quarantined_slugs
     approved_slugs = _load_editorial_approvals()
     approved_slugs = {
         front: approved_slugs[front] | full_corpus_authorized_slugs[front]
@@ -675,6 +810,7 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
             approved_slugs=approved_slugs,
             publication_intents=publication_intents,
             full_corpus_authorized_slugs=full_corpus_authorized_slugs,
+            quarantined_slugs=freeze_during_load,
             commit=False,
         )
         arquivar_entidades_de_conteudo_despublicado(preflight_db, commit=False)
@@ -685,14 +821,22 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
     finally:
         preflight_db.close()
 
-    for front, config in FRONTS.items():
-        (
-            loads[front],
-            loaded_slugs,
-            loaded_intents,
-        ) = _load_front(front, config, prepared=prepared[front])
-        if loaded_slugs != canonical_slugs[front] or loaded_intents != publication_intents[front]:
-            raise RuntimeError(f"Frente {front}: estado preparado divergiu durante a carga.")
+    with publication_quarantine(freeze_during_load, {front: config["model"] for front, config in FRONTS.items()}):
+        for front, config in FRONTS.items():
+            (
+                loads[front],
+                loaded_slugs,
+                loaded_intents,
+            ) = _load_front(front, config, prepared=prepared[front])
+            if loaded_slugs != canonical_slugs[front] or loaded_intents != publication_intents[front]:
+                raise RuntimeError(f"Frente {front}: estado preparado divergiu durante a carga.")
+
+    # The bytes consumed by the native loaders must still match the approved
+    # snapshot. Recheck before promotion rather than trusting prepared slugs.
+    rechecked_slugs, rechecked_authorization = _load_full_corpus_authorization(
+        canonical_slugs, sources, authorization_path=authorization_path, evidence_root=evidence_root)
+    if rechecked_slugs != full_corpus_authorized_slugs or rechecked_authorization != full_corpus_authorization:
+        raise RuntimeError("A autorização ou o conteúdo mudou durante a importação.")
 
     db = SessionLocal()
     try:
@@ -710,17 +854,20 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
             approved_slugs=approved_slugs,
             publication_intents=publication_intents,
             full_corpus_authorized_slugs=full_corpus_authorized_slugs,
+            quarantined_slugs=quarantined_slugs,
             commit=False,
         )
-        database = _database_inventory(db, canonical_slugs)
+        arquivar_entidades_de_conteudo_despublicado(db, commit=False)
+        database = _database_inventory(db, canonical_slugs, include_published_slugs=bool(full_corpus_authorization and full_corpus_authorization.get("schema_version") == 2))
         if database["below_minimum"] and not allow_partial:
             raise RuntimeError(
                 "Reconciliação incompleta: "
                 + json.dumps(database["below_minimum"], ensure_ascii=False, sort_keys=True)
             )
-        _validate_full_corpus_publication(database, full_corpus_authorization)
+        _validate_release_publication(database, full_corpus_authorization)
         db.commit()
-        knowledge_graph = backfill_mesmo_tema(db)
+        knowledge_graph = backfill_mesmo_tema(db, source_root=evidence_root) if full_corpus_authorization and full_corpus_authorization.get("schema_version") == 2 else backfill_mesmo_tema(db)
+        arquivar_entidades_de_conteudo_despublicado(db)
     except Exception:
         db.rollback()
         raise
@@ -744,6 +891,8 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
         "loads": loads,
         "editorial_approvals": editorial_approvals,
         "full_corpus_authorization": full_corpus_authorization,
+        "quarantined_by_front": {front: len(slugs) for front, slugs in quarantined_slugs.items()},
+        "immutable_source_snapshot": bool(full_corpus_authorization and full_corpus_authorization.get("schema_version") == 2),
         "published_reviewed": published,
         "unpublished_absent": unpublished_absent,
         "unpublished_unreviewed": unpublished_unreviewed,
@@ -779,11 +928,14 @@ def main() -> int:
                         help="Publica somente registros revisados com aprovação versionada.")
     parser.add_argument("--allow-partial", action="store_true",
                         help="Não falha quando o banco fica abaixo do baseline versionado.")
+    parser.add_argument("--authorization-manifest", "--full-authorization", dest="authorization_path", type=Path,
+                        help="Manifesto exato schema 2; o alias --full-authorization também permite selecionar explicitamente schema 1.")
     args = parser.parse_args()
 
     try:
         result = reconcile(publish_reviewed=args.publish_reviewed,
-                           allow_partial=args.allow_partial)
+                           allow_partial=args.allow_partial,
+                           authorization_path=args.authorization_path)
     except Exception as exc:  # noqa: BLE001
         print(json.dumps({"status": "error", "type": type(exc).__name__, "detail": str(exc)},
                          ensure_ascii=False, indent=2))

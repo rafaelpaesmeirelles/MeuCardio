@@ -27,6 +27,7 @@ PUBLIC_ROUTE_RATIONALES: dict[tuple[str, str], str] = {
         "Comprovação externa do deploy; retorna somente o SHA Git injetado, sem configuração."
     ),
     ("GET", "/api/pedidos/precos"): "Catálogo comercial necessário antes de login ou assinatura.",
+    ("GET", "/api/billing/plans"): "Catálogo público dos quatro planos e preços antes da assinatura; não retorna dados de contas ou pagamentos.",
     ("GET", "/api/documentos-publicos/{token}"): (
         "Download destinado ao paciente, autorizado por token de alta entropia na URL."
     ),
