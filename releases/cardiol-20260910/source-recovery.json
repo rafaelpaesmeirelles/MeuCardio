@@ -1,0 +1,59 @@
+{
+  "verified_utc": "2026-09-10T22:39:22.376794+00:00",
+  "scope": "Missing SBC originals read-only source recovery; no production or database changes",
+  "documents": [
+    {
+      "doi": "10.36660/abc.20250624",
+      "title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+      "local_path": "/tmp/corvia-sbc-has-20250624-original.xml",
+      "size": 2581779,
+      "sha256": "480282352a4e49188a088a533a1d74c18e6e904360458e20cc63222cb6e01776",
+      "discovery_page": "https://abccardiol.org/article/diretriz-brasileira-de-hipertensao-arterial-2025/",
+      "original_url": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782X-abc-122-09-e20250624/0066-782X-abc-122-09-e20250624.xml",
+      "format": "JATS XML",
+      "language": "pt",
+      "publisher_translation_languages": [
+        "en"
+      ],
+      "license": "CC-BY-4.0",
+      "license_source": "article/front/article-meta/permissions/license xlink:href",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "source_http_status": 200
+    },
+    {
+      "doi": "10.36660/abc.20260565",
+      "title": "Errata: Diretriz de Síndrome Coronariana Crônica – 2025",
+      "local_path": "/tmp/corvia-sbc-errata-20260565-original.pdf",
+      "size": 126470,
+      "sha256": "1f6c9c71139f16b066ea2b4bf2cfbd50dea3ac30711d960c18c54316c018b6ad",
+      "discovery_page": "https://api.crossref.org/works/10.36660/abc.20260565",
+      "original_url": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-7-e20260565/0066-782x-abc-123-7-e20260565.x98474.pdf",
+      "format": "PDF",
+      "language": "pt",
+      "license": "CC-BY-4.0",
+      "license_source": "Crossref deposited license vor; PDF footer confirms Creative Commons Attribution",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "source_http_status": 200,
+      "corrects_doi": "10.36660/abc.20250619",
+      "correction_scope": "Adds Erika Maria Gonçalves Campana and Ricardo Stein to authorship, institutions and conflict disclosures. Does not change clinical recommendations."
+    }
+  ],
+  "unresolved": [
+    {
+      "doi": "10.36660/abc.20260222",
+      "title": "Positioning Statement on the Use of Point-of-Care Ultrasound in Cardiovascular Medicine – 2026",
+      "pmid": "42307308",
+      "checks": [
+        {
+          "url": "https://api.crossref.org/works/10.36660/abc.20260222",
+          "http_status": 404
+        },
+        {
+          "url": "https://doi.org/10.36660/abc.20260222",
+          "http_status": 404
+        }
+      ],
+      "status": "No original retrieved or license verified; preserve pending status."
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "baseline": false,
+  "cases": [
+    {
+      "format": "jats",
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "format": "pdf",
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "format": "jats",
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "format": "pdf",
+      "theme": "dark",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "violations": [],
+  "requests": [
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/library/documents/qa-reader-jats",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-jats",
+      "method": "GET"
+    },
+    {
+      "path": "/api/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/grafo/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-jats/sources/test_source/original-text",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/library/documents/qa-reader-pdf",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-pdf",
+      "method": "GET"
+    },
+    {
+      "path": "/api/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/grafo/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-pdf/sources/test_source/original",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/library/documents/qa-reader-jats",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-jats",
+      "method": "GET"
+    },
+    {
+      "path": "/api/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/grafo/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-jats/sources/test_source/original-text",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/library/documents/qa-reader-pdf",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-pdf",
+      "method": "GET"
+    },
+    {
+      "path": "/api/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/grafo/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-pdf/sources/test_source/original",
+      "method": "GET"
+    }
+  ],
+  "assertions": [
+    {
+      "name": "native-portuguese-text-light",
+      "pass": true
+    },
+    {
+      "name": "author-summary-jats-light",
+      "pass": true
+    },
+    {
+      "name": "no-ai-translation-jats-light",
+      "pass": true
+    },
+    {
+      "name": "pdf-blob-light",
+      "pass": true
+    },
+    {
+      "name": "pdf-download-light",
+      "pass": true
+    },
+    {
+      "name": "author-summary-pdf-light",
+      "pass": true
+    },
+    {
+      "name": "no-ai-translation-pdf-light",
+      "pass": true
+    },
+    {
+      "name": "native-portuguese-text-dark",
+      "pass": true
+    },
+    {
+      "name": "author-summary-jats-dark",
+      "pass": true
+    },
+    {
+      "name": "no-ai-translation-jats-dark",
+      "pass": true
+    },
+    {
+      "name": "pdf-blob-dark",
+      "pass": true
+    },
+    {
+      "name": "pdf-download-dark",
+      "pass": true
+    },
+    {
+      "name": "author-summary-pdf-dark",
+      "pass": true
+    },
+    {
+      "name": "no-ai-translation-pdf-dark",
+      "pass": true
+    }
+  ],
+  "scope": "Real production App/Shell/Documento/ScientificReadingAccess bundle; 360x900, light/dark, JATS/PDF, all APIs intercepted with fictitious physician and article. No production/DB/AI/backend-CI calls.",
+  "build": {
+    "command": "npm run build",
+    "result": "passed",
+    "vite_seconds": 50.5,
+    "precache_entries": 150,
+    "precache_kib": 3056.99,
+    "note": "Built before incorporation of PR925 into this worktree; ScientificReadingAccess unchanged by that incorporation."
+  },
+  "csp_regression": {
+    "before": {
+      "effectiveDirective": "frame-src",
+      "blockedURI": "blob"
+    },
+    "after": {
+      "violations": []
+    },
+    "change": "Added frame-src 'self' blob: to infra/Caddyfile and infra/nginx/default.conf; preserved object-src 'none' and frame-ancestors 'none'."
+  },
+  "limitations": [
+    "The PDF frame loads a blob without CSP violations and downloads identical bytes, but no PDF text rendering was visually confirmed in headless_shell or full headless Chromium. Both showed an empty/gray viewer. Do not claim full PDF visual validation.",
+    "All API calls were mocked; these checks do not prove production backend integration."
+  ],
+  "manual_visual_review": [
+    "JATS native Portuguese text and coverage notice visible in light theme.",
+    "Source authors and native Portuguese labels visible; summary correctly attributed to source authors.",
+    "PDF viewer empty/gray under headless browsers; download fallback confirmed."
+  ]
+}

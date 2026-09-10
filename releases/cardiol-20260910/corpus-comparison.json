@@ -1,0 +1,278 @@
+[
+  {
+    "doi": "10.36660/abc.20260223",
+    "title": "Diretriz sobre Ecocardiografia de Estresse – 2026",
+    "in_public_references": true,
+    "guideline": null,
+    "asset": {
+      "doi": "10.36660/abc.20260223",
+      "source_key": "40bece063a7ad51764d2973f82d5f9903e038b84d7704a0d5c4706e5931e4809",
+      "status": "pending",
+      "original_present": false,
+      "translation_present": false,
+      "license_url": null,
+      "title": null
+    },
+    "license": "verified_from_original_xml",
+    "repository_reference_files": [
+      "doencas/relacoes-transversais.json",
+      "evidencias/metadados.json",
+      "exames/metadados.json"
+    ]
+  },
+  {
+    "doi": "10.36660/abc.20260565",
+    "title": "Erratum: Guideline for Chronic Coronary Syndrome - 2025.",
+    "in_public_references": false,
+    "guideline": null,
+    "asset": null,
+    "license": "not_verified",
+    "repository_reference_files": []
+  },
+  {
+    "doi": "10.36660/abc.20260220",
+    "title": "Posicionamento sobre Emergências Cardiovasculares para Eventos Esportivos – 2026",
+    "in_public_references": false,
+    "guideline": null,
+    "asset": null,
+    "license": "verified_from_original_xml",
+    "repository_reference_files": []
+  },
+  {
+    "doi": "10.36660/abc.20260215",
+    "title": "Posicionamento sobre Diagnóstico e Tratamento da Tempestade Elétrica – 2026",
+    "in_public_references": true,
+    "guideline": null,
+    "asset": {
+      "doi": "10.36660/abc.20260215",
+      "source_key": "0ca4232b9ab9e8b3cc8d806dba293760364bdf2ceb1dcfed8b15cc4336b0e570",
+      "status": "pending",
+      "original_present": false,
+      "translation_present": false,
+      "license_url": null,
+      "title": null
+    },
+    "license": "verified_from_original_xml",
+    "repository_reference_files": [
+      "content/Arritmias/bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica.md",
+      "content/Arritmias/fluxograma-arritmia-ventricular-e-morte-subita.md"
+    ]
+  },
+  {
+    "doi": "10.36660/abc.20260216",
+    "title": "Posicionamento sobre o Manejo de Antitrombóticos e Anticoagulantes em Dengue – 2026",
+    "in_public_references": false,
+    "guideline": null,
+    "asset": null,
+    "license": "verified_from_original_xml",
+    "repository_reference_files": []
+  },
+  {
+    "doi": "10.36660/abc.20250619",
+    "title": "Diretriz de Síndrome Coronariana Crônica – 2025",
+    "in_public_references": true,
+    "guideline": null,
+    "asset": {
+      "doi": "10.36660/abc.20250619",
+      "source_key": "2f1312520d03786c986c76d05a7ad22eb4e19973472aeecca27d7ce8ed3b1b03",
+      "status": "pending",
+      "original_present": false,
+      "translation_present": false,
+      "license_url": null,
+      "title": null
+    },
+    "license": "verified_from_original_xml",
+    "repository_reference_files": [
+      "casos-clinicos/metadados.json",
+      "content/Doença_coronariana/angina-microvascular-endotipo-cmd-na-pratica.md",
+      "content/Doença_coronariana/fluxograma-alta-apos-sca-os-cinco-pilares-modificaveis.md",
+      "content/Doença_coronariana/prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda.md",
+      "doencas/correcoes/zzz-codex-20260828-sindrome-coronariana-cronica.json",
+      "doencas/relacoes-transversais.json",
+      "evidencias/metadados.json",
+      "exames/metadados.json"
+    ]
+  },
+  {
+    "doi": "10.36660/abc.20260221",
+    "title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "in_public_references": true,
+    "guideline": null,
+    "asset": {
+      "doi": "10.36660/abc.20260221",
+      "source_key": "7d2100ecb9c444b05374e73e3b079804006c49c22ea225323b5d8b0ab1075c8e",
+      "status": "pending",
+      "original_present": false,
+      "translation_present": false,
+      "license_url": null,
+      "title": null
+    },
+    "license": "verified_from_original_xml",
+    "repository_reference_files": [
+      "doencas/fragmentos/cardiomiopatia-por-sobrecarga-de-ferro.json",
+      "doencas/fragmentos/cardiomiopatia-restritiva-nao-amiloide.json",
+      "evidencias/metadados.json"
+    ]
+  },
+  {
+    "doi": "10.36660/abc.20250640",
+    "title": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025",
+    "in_public_references": true,
+    "guideline": null,
+    "asset": {
+      "doi": "10.36660/abc.20250640",
+      "source_key": "beb80369addb70a9c379782ece20c10e5bb6d000d9a47891379829eaff39ebba",
+      "status": "pending",
+      "original_present": false,
+      "translation_present": false,
+      "license_url": null,
+      "title": null
+    },
+    "license": "verified_from_original_xml",
+    "repository_reference_files": [
+      "casos-clinicos/metadados.json",
+      "content/Calculadoras/score2-score2-op-aplicabilidade-e-limites-no-paciente-brasileiro.md",
+      "content/Doença_coronariana/fluxograma-alta-apos-sca-os-cinco-pilares-modificaveis.md",
+      "content/Doença_coronariana/prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda.md",
+      "content/Prevenção_e_lipídios/dislipidemias-diagnostico-estratificacao-e-tratamento-esceas-2019.md",
+      "content/Prevenção_e_lipídios/fluxograma-lpa-elevada-rastreio-risco-residual-e-o-que-nao-esperar-do-farmaco.md",
+      "content/Prevenção_e_lipídios/hipolipemiantes-na-mulher-em-idade-fertil-gestacao-e-lactacao.md",
+      "content/Prevenção_e_lipídios/lipidograma-na-consulta-primeira-leitura-discordancia-e-decisao-clinica.md",
+      "content/Prevenção_e_lipídios/lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam.md",
+      "doencas/relacoes-transversais.json",
+      "evidencias/metadados.json",
+      "exames/metadados.json",
+      "material-paciente/metadados.json"
+    ]
+  },
+  {
+    "doi": "10.36660/abc.20250621",
+    "title": "Diretriz Brasileira Baseada em Evidências de 2025 para o Manejo da Obesidade e Prevenção de Doenças Cardiovasculares e Complicações Associadas à Obesidade: Uma Declaração de Posicionamento de Cinco Sociedades Médicas",
+    "in_public_references": true,
+    "guideline": null,
+    "asset": {
+      "doi": "10.36660/abc.20250621",
+      "source_key": "78bcc208be1e0ca7d9ecf80aa5a2e47beb0029944db9139105883259760aabcd",
+      "status": "pending",
+      "original_present": false,
+      "translation_present": false,
+      "license_url": null,
+      "title": null
+    },
+    "license": "verified_from_original_xml",
+    "repository_reference_files": [
+      "doencas/fragmentos/zzz-codex-20260829-sindrome-cardiovascular-rim-metabolica-ckm.json",
+      "doencas/relacoes-transversais.json",
+      "evidencias/metadados.json"
+    ]
+  },
+  {
+    "doi": "10.36660/abc.20250620",
+    "title": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025",
+    "in_public_references": false,
+    "guideline": null,
+    "asset": null,
+    "license": "verified_from_original_xml",
+    "repository_reference_files": []
+  },
+  {
+    "doi": "10.36660/abc.20250618",
+    "title": "Diretriz Brasileira de Fibrilação Atrial – 2025",
+    "in_public_references": true,
+    "guideline": null,
+    "asset": {
+      "doi": "10.36660/abc.20250618",
+      "source_key": "bbb97371be4492e706304a664c73fa1956f13cfafcc01c879de790e7e8055ede",
+      "status": "pending",
+      "original_present": false,
+      "translation_present": false,
+      "license_url": null,
+      "title": null
+    },
+    "license": "verified_from_original_xml",
+    "repository_reference_files": [
+      "content/Fibrilação_atrial/diretriz-brasileira-de-fibrilacao-atrial-2025-sbc-sobrac.md",
+      "content/Fibrilação_atrial/fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care.md",
+      "content/Fibrilação_atrial/fluxograma-ambulatorial-pos-cardioversao-fa-destino.md",
+      "content/Fibrilação_atrial/fluxograma-ambulatorial-sinalizadores-fa-nao-anticoag-destino.md",
+      "content/Fibrilação_atrial/fluxograma-laao-vs-anticoagulacao-contraindicacao-relativa.md",
+      "content/Fibrilação_atrial/oclusao-do-apendice-atrial-esquerdo-protect-af-e-prevail.md",
+      "content/Fibrilação_atrial/recorrencia-leve-pos-cardioversao-fa-retorno-precoce-nao-ps.md",
+      "content/Fibrilação_atrial/sinalizadores-ambulatoriais-falha-controle-frequencia-e-novos-sintomas-de-ic-na-fa.md",
+      "content/Fibrilação_atrial/sinalizadores-ambulatoriais-pos-ablacao-fa-alarme-complicacao-nao-recorrencia.md",
+      "content/Fibrilação_atrial/sinalizadores-ambulatoriais-pos-cardioversao-fa-quando-voltar-ao-ps.md",
+      "doencas/correcoes/zz-release36h-pr666-fibrilacao-atrial.json",
+      "doencas/metadados.json",
+      "doencas/relacoes-transversais.json",
+      "doencas/snapshots/claude-20260829-atresia-tricuspide.json",
+      "doencas/snapshots/claude-20260829-planejamento-parto-cardiopatia-fetal.json",
+      "evidencias/metadados.json",
+      "material-paciente/metadados.json"
+    ]
+  },
+  {
+    "doi": "10.36660/abc.20260222",
+    "title": "Positioning Statement on the Use of Point-of-Care Ultrasound in Cardiovascular Medicine - 2026.",
+    "in_public_references": false,
+    "guideline": null,
+    "asset": null,
+    "license": "not_verified",
+    "repository_reference_files": []
+  },
+  {
+    "doi": "10.36660/abc.20250615",
+    "title": "Posicionamento sobre a Saúde Cardiometabólica ao Longo do Ciclo de Vida da Mulher – 2025",
+    "in_public_references": false,
+    "guideline": null,
+    "asset": null,
+    "license": "verified_from_original_xml",
+    "repository_reference_files": []
+  },
+  {
+    "doi": "10.36660/abc.20250624",
+    "title": "Brazilian Guidelines of Hypertension - 2025.",
+    "in_public_references": true,
+    "guideline": {
+      "id": 67,
+      "doi": "10.36660/abc.20250624",
+      "title": "Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624",
+      "year": 2025,
+      "org": "SBC",
+      "status": "manual"
+    },
+    "asset": {
+      "doi": "10.36660/abc.20250624",
+      "source_key": "17a2001985308d7acf24f69220a5dae96742baeb7f62991b9ee89fed5bdd195b",
+      "status": "blocked_fulltext",
+      "original_present": false,
+      "translation_present": false,
+      "license_url": null,
+      "title": null
+    },
+    "license": "not_verified",
+    "repository_reference_files": [
+      "casos-clinicos/metadados.json",
+      "content/Hipertensão/destino-da-investigacao-de-secundaria-centro-has-endocrino-nefrologia.md",
+      "content/Hipertensão/diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12.md",
+      "content/Hipertensão/diretriz-brasileira-de-hipertensao-2025-metas-em-doenca-coronariana-diabetes-e-insuficiencia-cardiaca-capitulo-8.md",
+      "content/Hipertensão/fluxograma-destino-ambulatorial-suspeita-hipertensao-secundaria.md",
+      "content/Hipertensão/fluxograma-hipertensao-resistente-quarta-droga.md",
+      "content/Hipertensão/fluxograma-sinais-de-alarme-ambulatoriais-hipertensao.md",
+      "content/Hipertensão/fluxograma-timing-encaminhamento-ambulatorial-hipertensao-resistente.md",
+      "content/Hipertensão/hipertensao-arterial-classificacao-diagnostico-metas.md",
+      "content/Hipertensão/hipertensao-secundaria-causas-rastreaveis-no-adulto.md",
+      "content/Hipertensão/pa-muito-elevada-no-consultorio-sem-lesao-aguda-conduta-ambulatorial.md",
+      "content/Hipertensão/sbc-2025-versus-esc-2024-versus-aha-acc-qual-mapa-usar-no-consultorio-brasileiro.md",
+      "content/Hipertensão/sinais-de-alarme-ambulatoriais-na-hipertensao-quando-encaminhar.md",
+      "content/Hipertensão/suspeita-ambulatorial-de-hipertensao-secundaria-quando-escalar-investigacao.md",
+      "content/Hipertensão/timing-de-encaminhamento-ambulatorial-na-hipertensao-resistente.md",
+      "content/Terapia_intensiva/edema-agudo-de-pulmao-cardiogenico-protocolo-inicial.md",
+      "doencas/correcoes/zzz-codex-20260828-hipertensao-arterial-sistemica.json",
+      "doencas/fragmentos/pr597-hipertensao-resistente-refrataria.json",
+      "doencas/fragmentos/zzz-codex-20260829-hipertensao-renovascular-e-estenose-de-arteria-renal.json",
+      "doencas/relacoes-transversais.json",
+      "evidencias/metadados.json",
+      "exames/metadados.json"
+    ]
+  }
+]

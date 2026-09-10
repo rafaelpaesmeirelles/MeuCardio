@@ -1,0 +1,126 @@
+{
+  "release": "cardiol-20260910",
+  "mode": "database_read_only",
+  "count": 13,
+  "items": [
+    {
+      "doi": "10.36660/abc.20250615",
+      "action": "create",
+      "reason": null,
+      "asset_id": null,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20250618",
+      "action": "attach",
+      "reason": null,
+      "asset_id": 1907,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20250619",
+      "action": "attach",
+      "reason": null,
+      "asset_id": 4824,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20250620",
+      "action": "create",
+      "reason": null,
+      "asset_id": null,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20250621",
+      "action": "attach",
+      "reason": null,
+      "asset_id": 9634,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20250624",
+      "action": "preserve",
+      "reason": "existing_processing_history",
+      "asset_id": 27,
+      "create_source_metadata": false,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20250640",
+      "action": "attach",
+      "reason": null,
+      "asset_id": 1764,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20260215",
+      "action": "attach",
+      "reason": null,
+      "asset_id": 1364,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20260216",
+      "action": "create",
+      "reason": null,
+      "asset_id": null,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20260220",
+      "action": "create",
+      "reason": null,
+      "asset_id": null,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20260221",
+      "action": "attach",
+      "reason": null,
+      "asset_id": 9628,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20260223",
+      "action": "attach",
+      "reason": null,
+      "asset_id": 9620,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    },
+    {
+      "doi": "10.36660/abc.20260565",
+      "action": "create",
+      "reason": null,
+      "asset_id": null,
+      "create_source_metadata": true,
+      "native_pt": true,
+      "publisher_abstract": false
+    }
+  ],
+  "paid_calls": 0,
+  "clinical_changes": 0
+}

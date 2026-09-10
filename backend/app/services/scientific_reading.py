@@ -149,12 +149,20 @@ def reading_manifest(db, entity_type, slug):
         asset = assets.get(source['key'])
         base = f'/api/scientific-reading/{quote(entity_type, safe="")}/{quote(row.slug, safe="")}/sources/{source["key"]}'
         has_original = bool(asset and asset.original_storage_key and asset.license_url and asset.source_sha256)
+        source_format = (asset.coverage or {}).get('source_format', 'jats_xml') if asset else None
+        extracted_original = (asset.progress or {}).get('original_text') if asset else None
+        readable_pdf = bool(isinstance(extracted_original, dict) and extracted_original.get('storage_key') and
+                            extracted_original.get('source_sha256') == asset.source_sha256 and
+                            re.fullmatch(r'[0-9a-f]{64}', str(extracted_original.get('sha256', ''))))
+        native_pt = bool(has_original and (asset.coverage or {}).get('native_pt'))
+        original_suffix = 'pdf' if source_format == 'pdf' else 'xml'
+        original_media = 'application/pdf' if source_format == 'pdf' else 'application/xml'
         complete = bool(asset and asset.status == 'ready' and asset.translated_storage_key and asset.coverage.get('complete_text'))
-        status = 'available' if complete else ('blocked_license' if asset and asset.status == 'blocked_license' else 'pending' if asset and asset.status in ('pending', 'downloaded', 'translating', 'budget_wait') else 'unavailable')
+        status = 'original_pt' if native_pt else 'available' if complete else ('blocked_license' if asset and asset.status == 'blocked_license' else 'pending' if asset and asset.status in ('pending', 'downloaded', 'translating', 'budget_wait') else 'unavailable')
         source.update({
-            'original': {'read_url': base + '/original-text' if has_original else None, 'coverage': {**asset.coverage, 'complete_text': True} if has_original else {}, 'status': 'available' if has_original else 'source_only', 'url': base + '/original' if has_original else source['url'], 'media_type': 'application/xml' if has_original else None, 'filename': 'original-' + source['key'][:12] + '.xml' if has_original else None},
-            'translation_pt': {'coverage': asset.coverage if asset else {}, 'status': status, 'url': base + '/translation' if complete else None, 'reason': asset.reason if asset else 'Tradução integral ainda não preparada para esta fonte.', 'media_type': 'text/plain; charset=utf-8', 'filename': 'traducao-' + source['key'][:12] + '.txt'},
-            'summary_pt': {'status': 'available' if asset and asset.summary_pt else 'unavailable', 'text': asset.summary_pt if asset else None, 'origin': 'fulltext_ai'},
+            'original': {'read_url': base + '/original-text' if has_original and (source_format != 'pdf' or readable_pdf) else None, 'coverage': {**asset.coverage, 'complete_text': True} if has_original else {}, 'status': 'available' if has_original else 'source_only', 'url': base + '/original' if has_original else source['url'], 'media_type': original_media if has_original else None, 'filename': 'original-' + source['key'][:12] + '.' + original_suffix if has_original else None},
+            'translation_pt': {'coverage': asset.coverage if asset else {}, 'status': status, 'url': base + '/translation' if complete else None, 'reason': 'O original já está em português; não é necessária tradução por IA.' if native_pt else asset.reason if asset else 'Tradução integral ainda não preparada para esta fonte.', 'media_type': 'text/plain; charset=utf-8', 'filename': 'traducao-' + source['key'][:12] + '.txt'},
+            'summary_pt': {'status': 'available' if asset and asset.summary_pt else 'unavailable', 'text': asset.summary_pt if asset else None, 'origin': (asset.progress or {}).get('summary_origin', 'fulltext_ai') if asset else None},
             'license_url': asset.license_url if asset else None, 'coverage': asset.coverage if asset else {},
             'title': (asset.progress or {}).get('title') if asset else None, 'authors': (asset.progress or {}).get('authors', []) if asset else [], 'attribution': (asset.progress or {}).get('attribution') if asset else None,
             'provenance': {'source_sha256': asset.source_sha256 if asset else None, 'pmcid': asset.pmcid if asset else None, 'model': (asset.progress or {}).get('model') if asset else None},

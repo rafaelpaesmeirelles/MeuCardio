@@ -1,0 +1,180 @@
+{
+  "baseline": false,
+  "cases": [
+    {
+      "format": "pdf",
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "format": "pdf",
+      "theme": "dark",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "violations": [],
+  "requests": [
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/library/documents/qa-reader-pdf",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-pdf",
+      "method": "GET"
+    },
+    {
+      "path": "/api/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/grafo/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-pdf/sources/test_source/original-text",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-pdf/sources/test_source/original",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/library/documents/qa-reader-pdf",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-pdf",
+      "method": "GET"
+    },
+    {
+      "path": "/api/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/grafo/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-pdf/sources/test_source/original-text",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/documento/qa-reader-pdf/sources/test_source/original",
+      "method": "GET"
+    }
+  ],
+  "assertions": [
+    {
+      "name": "pdf-extracted-text-visible-light",
+      "pass": true
+    },
+    {
+      "name": "extraction-notice-light",
+      "pass": true
+    },
+    {
+      "name": "no-pdf-iframe-light",
+      "pass": true
+    },
+    {
+      "name": "pdf-download-identical-light",
+      "pass": true
+    },
+    {
+      "name": "author-summary-pdf-light",
+      "pass": true
+    },
+    {
+      "name": "no-ai-translation-pdf-light",
+      "pass": true
+    },
+    {
+      "name": "pdf-extracted-text-visible-dark",
+      "pass": true
+    },
+    {
+      "name": "extraction-notice-dark",
+      "pass": true
+    },
+    {
+      "name": "no-pdf-iframe-dark",
+      "pass": true
+    },
+    {
+      "name": "pdf-download-identical-dark",
+      "pass": true
+    },
+    {
+      "name": "author-summary-pdf-dark",
+      "pass": true
+    },
+    {
+      "name": "no-ai-translation-pdf-dark",
+      "pass": true
+    }
+  ],
+  "scope": "Final PDF original-text reader on production App/Shell/Documento bundle, real authorized errata PDF and extracted UTF-8 text, fictitious physician, all API calls intercepted.",
+  "build": {
+    "command": "npm run build",
+    "result": "passed",
+    "vite_seconds": 56.29,
+    "precache_entries": 150,
+    "precache_kib": 3056.99,
+    "exit_code": 0,
+    "total_seconds": 138.49
+  },
+  "source": {
+    "doi": "10.36660/abc.20260565",
+    "text_sha256": "54c7c825ee7223d7ced6435f4ce66d5329c842533042c0584bc8efe7ec0120e8",
+    "pdf_sha256": "1f6c9c71139f16b066ea2b4bf2cfbd50dea3ac30711d960c18c54316c018b6ad"
+  },
+  "csp": "Production CSP restored: no frame-src expansion and no PDF iframe.",
+  "manual_visual_review": "Real errata text and extraction/no-AI notice visible in both themes. A heavily indented extracted line is interpreted as a Markdown code block; main text readable.",
+  "previous_checks": "Previous 4-case / 14-assertion prototype results are preserved under superseded-iframe-prototype; JATS results remain useful, PDF iframe design is rejected and not part of the final implementation.",
+  "limitations": [
+    "API mocks verify UI behavior, not production integration.",
+    "PDF layout is not reproduced; original PDF is available for download."
+  ],
+  "post_verification_adjustment": "After final browser evidence, original text rendering was changed from ReactMarkdown to a plain div with whiteSpace: pre-wrap and overflowWrap: anywhere, preserving original indentation/symbols. Summaries/translations retain Markdown. This one-line reversible adjustment was not rebuilt or rerun locally, per owner instruction; final mandatory frontend CI will compile it."
+}
