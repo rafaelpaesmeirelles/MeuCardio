@@ -81,6 +81,7 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
           GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
         run: >-
@@ -92,7 +93,7 @@ jobs:
 
       - name: Test risk classification and exact-suite reuse before trusting them
         if: steps.classify.outputs.backend_mode != 'authorized-no-backend-ci'
-        run: python -m unittest scripts.tests.test_ci_backend_policy -v
+        run: python -m unittest scripts.tests.test_ci_backend_policy scripts.tests.test_ci_section_owner_decision -v
 
       - name: Record the release owner decision without a backend test certificate
         if: steps.classify.outputs.backend_mode == 'authorized-no-backend-ci'
@@ -562,9 +563,14 @@ jobs:
                 echo "Backend CI ran despite the release owner's explicit instruction." >&2
                 exit 1
               }
-              [[ "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-pr918 ]] || exit 1
+              [[ "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-pr918 ||
+                 "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-tct-section-visibility-20260910 ]] || exit 1
               echo "backend CI não executado por decisão do responsável"
-              echo "Initial full run remains failed (84 failed, 3038 passed); local evidence is recorded separately."
+              if [[ "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-pr918 ]]; then
+                echo "Initial full run remains failed (84 failed, 3038 passed); local evidence is recorded separately."
+              else
+                echo "Section-visibility correction: independent owner decision; local evidence recorded separately."
+              fi
               echo "This owner decision is not a full/focused test certificate or successful suite reuse."
               ;;
             authorized-followup)

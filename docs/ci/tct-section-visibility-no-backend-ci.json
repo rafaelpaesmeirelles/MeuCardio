@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "decision_id": "tct-section-visibility-20260910",
+  "repository": "rafaelpaesmeirelles/MeuCardio",
+  "head_branch": "codex/fix-tct-section-visibility-20260910",
+  "base_sha": "02ad2d6a38301667a82eb60444b531d1e1fcd4e1",
+  "pull_request": null,
+  "authorization": {
+    "date": "2026-09-10",
+    "instruction": "Sem novo ci backend",
+    "mode": "authorized-no-backend-ci",
+    "source": "Persistent explicit user instruction, reaffirmed during the general Tudo com Tudo section-visibility correction.",
+    "scope": "Only this correction PR once sealed and its exact confirmed main integration; no automatic inheritance from PR918."
+  },
+  "local_evidence": [
+    "docs/tct-section-visibility-20260910.md"
+  ]
+}
