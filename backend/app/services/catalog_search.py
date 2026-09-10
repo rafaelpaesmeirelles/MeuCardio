@@ -214,17 +214,39 @@ INTERNAL_MARKER_SQL_PATTERN = (
 )
 
 
+# Presentation categories only: no relevance, ranking or publication expansion.
+# Precedence mirrors the existing search UI for the four document subdivisions.
+DOCUMENT_SECTION_SQL = """CASE
+  WHEN frente <> 'documento' THEN frente
+  WHEN unaccent(lower(coalesce(kind, '') || ' ' || coalesce(title, '')))
+       ~ '(^|[^a-z0-9])(flux|algoritm|flowchart)' THEN 'fluxo'
+  WHEN unaccent(lower(coalesce(kind, '') || ' ' || coalesce(title, '')))
+       ~ '(^|[^a-z0-9])(diretr|guideline|consens|posicionamento)' THEN 'diretriz'
+  WHEN unaccent(lower(coalesce(kind, '') || ' ' || coalesce(title, '')))
+       ~ '(^|[^a-z0-9])(protoc|condut|manejo|tratamento|terapia|abordagem)' THEN 'conduta'
+  ELSE 'geral' END"""
+
+
 def _search_sql(match_predicate: str, *, disease: bool = False, include_counts: bool = False):
     rank_base = ("CASE WHEN frente || ':' || slug = ANY(CAST(:disease_links AS text[])) "
                  "THEN 2.0 ELSE 0.0 END") if disease else "coalesce(ts_rank(v, consulta.tsq), 0)"
-    selection = "SELECT * FROM filtrados"
+    paged = disease or include_counts
+    candidate_table = "selecionados" if paged else "filtrados"
+    selection = f"SELECT * FROM {candidate_table}"
     ordering = "rank DESC, title, frente, slug"
     if disease:
-        selection = """SELECT *, row_number() OVER (
+        selection = f"""SELECT *, row_number() OVER (
             PARTITION BY frente ORDER BY rank DESC,
             array_position(CAST(:disease_links AS text[]), frente || ':' || slug), title, slug
-        ) AS front_position FROM filtrados"""
+        ) AS front_position FROM {candidate_table}"""
         ordering = "front_position, rank DESC, title, frente, slug"
+    section_ctes = (f""", classificados AS (
+  SELECT *, {DOCUMENT_SECTION_SQL} AS secao FROM filtrados
+), selecionados AS (
+  SELECT * FROM classificados
+  WHERE CAST(:secao AS text) IS NULL OR secao = CAST(:secao AS text)
+)""" if paged else "")
+    section_column = "secao, " if paged else ""
     query = f"""
 WITH cmed_atual AS (
   SELECT apresentacao.drug_id,
@@ -249,12 +271,12 @@ WITH cmed_atual AS (
   FROM achados CROSS JOIN consulta
   WHERE (CAST(:frente AS text) IS NULL OR frente = CAST(:frente AS text))
     AND ({match_predicate})
-), ordenados AS (
+){section_ctes}, ordenados AS (
   {selection}
 ), paginados AS (
   SELECT * FROM ordenados ORDER BY {ordering} LIMIT :limit OFFSET :offset
 ), resultados AS (
-SELECT frente, slug, title, kind, theme, source_tier, ano,
+SELECT {section_column}frente, slug, title, kind, theme, source_tier, ano,
        ts_headline(
                    'portuguese',
                    regexp_replace(
@@ -275,18 +297,24 @@ FROM paginados
 ORDER BY {ordering}
 )
 """
-    if disease or include_counts:
+    if paged:
         # A single candidate set supplies both totals and the page, including
         # empty/out-of-range pages. No second scan and no discarded page slots.
         query += """SELECT
           coalesce((SELECT jsonb_agg(row_to_json(resultados)) FROM resultados), '[]'::jsonb) AS results,
           coalesce((SELECT jsonb_object_agg(frente, total) FROM
-            (SELECT frente, count(*) AS total FROM filtrados GROUP BY frente) counts
-          ), '{}'::jsonb) AS por_frente
+            (SELECT frente, count(*) AS total FROM selecionados GROUP BY frente) counts
+          ), '{}'::jsonb) AS por_frente,
+          coalesce((SELECT jsonb_object_agg(secao, total) FROM
+            (SELECT secao, count(*) AS total FROM selecionados GROUP BY secao) counts
+          ), '{}'::jsonb) AS por_secao,
+          (SELECT count(*) FROM filtrados) AS matched_total
         """
     else:
         query += "SELECT * FROM resultados"
-    return text(query)
+    # Existing callers of PAGE/DISEASE SQL retain their unfiltered contract;
+    # RAG's non-paged SQL is unchanged and has no additional bind parameter.
+    return text(query).bindparams(secao=None) if paged else text(query)
 
 
 def _count_sql(match_predicate: str):

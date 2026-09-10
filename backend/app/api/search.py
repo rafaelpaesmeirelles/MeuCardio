@@ -1,3 +1,5 @@
+from typing import Annotated, Literal
+
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -22,6 +24,11 @@ from app.services.clinical_text import clinical_text_without_internal_overrides
 from app.services.connected_content import buscar_relacionados_da_doenca, buscar_relacionados_do_medicamento
 
 router = APIRouter(prefix="/api/search", tags=["busca"])
+SearchSection = Literal[
+    "geral", "conduta", "diretriz", "fluxo", "galeria", "exame", "evidencia",
+    "estudo", "medicamento", "caso_clinico", "trilha", "checklist",
+    "material_paciente", "emergencia", "doenca", "triagem_sintoma", "calculadora",
+]
 
 
 def _disease_identity_phrases(disease: SpecialtyDisease) -> tuple[str, ...]:
@@ -52,6 +59,8 @@ def search(
             "trilha|checklist|material_paciente|emergencia|doenca|triagem_sintoma|"
             "calculadora — vazio traz todas"
         )),
+    secao: Annotated[SearchSection | None, Query(
+        description="Seção editorial; combinada com frente por interseção")] = None,
     limit: int = Query(60, ge=1, le=100),
     offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
@@ -86,8 +95,9 @@ def search(
                     if drug_model is not None else None)
     query = (disease_model.name if disease_model is not None
              else drug_model.generic_name if drug_model is not None else q)
-    calculadoras = calculadoras_encontradas(query) if frente in (None, "calculadora") else []
-    if disease_model is not None and frente in (None, "calculadora"):
+    include_calculators = frente in (None, "calculadora") and secao in (None, "calculadora")
+    calculadoras = calculadoras_encontradas(query) if include_calculators else []
+    if disease_model is not None and include_calculators:
         seen_calculators = {item["slug"] for item in calculadoras}
         for phrase in _disease_identity_phrases(disease_model):
             for item in calculadoras_encontradas(phrase):
@@ -117,7 +127,7 @@ def search(
                                if item.get("relation_method") == "SpecialtyDisease.tests"]
             if recommendations:
                 supplementary_groups.append({**group, "itens": recommendations})
-        if frente in (None, "calculadora"):
+        if include_calculators:
             # Retrieve the calculator's actual catalogue row, not a synthetic
             # result or a new clinical indication inferred by the search.
             from app.services import calculators as calc
@@ -132,7 +142,11 @@ def search(
         disease_links.append(f"doenca:{disease_model.slug}" if disease_model is not None
                              else f"medicamento:{drug_model.slug}")
 
-    if frente == "calculadora":
+    # The in-memory catalogue is part of the same section/filter contract.
+    # Deduplicate by its typed canonical identity before counting or slicing.
+    calculadoras = list({item["slug"]: {**item, "secao": "calculadora"}
+                         for item in calculadoras}.values())
+    if frente == "calculadora" or secao == "calculadora":
         rows = calculadoras[offset:offset + limit]
         next_offset = offset + len(rows)
         return {
@@ -140,6 +154,7 @@ def search(
             "limit": limit, "offset": offset,
             "next_offset": next_offset if next_offset < len(calculadoras) else None,
             "por_frente": {"calculadora": len(calculadoras)} if calculadoras else {},
+            "por_secao": {"calculadora": len(calculadoras)} if calculadoras else {},
             "primary_disease": None, "results": rows,
         }
 
@@ -147,7 +162,7 @@ def search(
     database_limit = limit - len(calculator_rows)
     database_offset = max(0, offset - len(calculadoras)) if frente is None else offset
     values = {
-        "q": query, "q_like": literal_like(query), "frente": frente,
+        "q": query, "q_like": literal_like(query), "frente": frente, "secao": secao,
         "limit": database_limit, "offset": database_offset,
     }
     sql = PAGE_SQL
@@ -170,7 +185,10 @@ def search(
     page = db.execute(sql, search_values).mappings().one()
     raw_rows = page["results"]
     por_frente = page["por_frente"]
-    if disease_model is None and drug_model is None and not por_frente and normalizar(q):
+    if (disease_model is None and drug_model is None
+            and not page.get("matched_total", sum(por_frente.values())) and normalizar(q)):
+        # Selecting an empty section must not switch an otherwise successful
+        # full-text candidate set to a broader literal fallback.
         page = db.execute(LITERAL_PAGE_SQL, search_values).mappings().one()
         raw_rows = page["results"]
         por_frente = page["por_frente"]
@@ -186,12 +204,15 @@ def search(
     por_frente = {str(kind): int(count) for kind, count in por_frente.items()}
     if calculadoras:
         por_frente["calculadora"] = len(calculadoras)
+    por_secao = {str(section): int(count) for section, count in page["por_secao"].items()}
+    if calculadoras:
+        por_secao["calculadora"] = len(calculadoras)
     total = sum(por_frente.values())
     next_offset = offset + len(rows)
     return {
         "query": q, "count": len(rows), "total": total, "limit": limit, "offset": offset,
         "next_offset": next_offset if next_offset < total else None,
-        "por_frente": por_frente, "primary_disease": primary_disease, "primary_drug": primary_drug,
+        "por_frente": por_frente, "por_secao": por_secao, "primary_disease": primary_disease, "primary_drug": primary_drug,
         "supplementary_groups": supplementary_groups,
         "results": rows,
     }
