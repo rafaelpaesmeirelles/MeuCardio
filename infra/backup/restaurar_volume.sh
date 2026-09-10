@@ -16,6 +16,7 @@ declare -A CAMINHO_NO_CONTAINER=(
   [documentofiles]="/documentos-emitidos"
   [certificadosfiles]="/certificados-a1"
   [examefiles]="/exames-pacientes"
+  [scientific-publication-library]="/scientific-publication-library"
 )
 
 if [[ -z "$ARQUIVO" || ! -f "$ARQUIVO" ]]; then
@@ -57,13 +58,26 @@ if [[ -n "$BACKEND_CONTAINER" ]]; then
   "${COMPOSE[@]}" stop backend
 fi
 
+LIBRARY_WORKER_WAS_RUNNING=0
+RESTORE_SERVICE=backend
+if [[ "$NOME_VOLUME" == "scientific-publication-library" ]]; then
+  RESTORE_SERVICE=scientific-publication-library-worker
+  if "${COMPOSE[@]}" ps --status running --services | grep -Fxq scientific-publication-library-worker; then
+    LIBRARY_WORKER_WAS_RUNNING=1
+    "${COMPOSE[@]}" stop scientific-publication-library-worker
+  fi
+fi
+
 ARQUIVO_ABS="$(cd "$(dirname "$ARQUIVO")" && pwd)/$(basename "$ARQUIVO")"
 echo "Limpando e restaurando '$CAMINHO'..."
 "${COMPOSE[@]}" run --rm -T --no-deps \
   -v "$(dirname "$ARQUIVO_ABS"):/backup-entrada:ro" \
-  backend \
+  "$RESTORE_SERVICE" \
   sh -c "find '$CAMINHO' -mindepth 1 -delete && tar -xzf '/backup-entrada/$(basename "$ARQUIVO_ABS")' -C '$CAMINHO'"
 
 echo "Religando o backend..."
 "${COMPOSE[@]}" up -d backend
+if [[ "$LIBRARY_WORKER_WAS_RUNNING" == "1" ]]; then
+  "${COMPOSE[@]}" up -d scientific-publication-library-worker
+fi
 echo "Restauração de '$NOME_VOLUME' concluída. Confira o volume e o comportamento do KYC/receituário antes de encerrar o incidente."

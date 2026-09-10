@@ -88,7 +88,7 @@ backend_exec() { "${COMPOSE[@]}" exec -T backend "$@"; }
 mostrar_diagnostico() {
   "${COMPOSE[@]}" ps || true
   "${COMPOSE[@]}" logs --tail=200 \
-    backend caddy frontend-build db agenda-sync whatsapp-heart-team-worker || true
+    backend caddy frontend-build db agenda-sync whatsapp-heart-team-worker intelligence-radar scientific-publication-library-worker || true
 }
 
 compose_project_name() {
@@ -107,6 +107,8 @@ restaurar_backup_pre_deploy() {
   parar_servico_se_existir caddy
   parar_servico_se_existir agenda-sync
   parar_servico_se_existir whatsapp-heart-team-worker
+  parar_servico_se_existir intelligence-radar
+  parar_servico_se_existir scientific-publication-library-worker
   parar_servico_se_existir backend
   TRAFEGO_ABERTO=0
 
@@ -425,7 +427,7 @@ fi
 
 log "Construindo imagens a partir do checkout imutável, sem interromper o tráfego atual."
 validar_checkout_imutavel
-"${COMPOSE[@]}" build backend frontend-build agenda-sync whatsapp-heart-team-worker
+"${COMPOSE[@]}" build backend frontend-build agenda-sync whatsapp-heart-team-worker intelligence-radar scientific-publication-library-worker
 validar_checkout_imutavel
 
 # A implantação não faz chamadas pagas fora da carteira. Os controles de
@@ -442,6 +444,8 @@ parar_servico_se_existir caddy
 TRAFEGO_ABERTO=0
 parar_servico_se_existir agenda-sync
 parar_servico_se_existir whatsapp-heart-team-worker
+parar_servico_se_existir intelligence-radar
+parar_servico_se_existir scientific-publication-library-worker
 parar_servico_se_existir backend
 SERVICOS_INICIADOS=1
 # Todas as requisições aceitas antes da indisponibilidade já terminaram; o dump
@@ -482,14 +486,16 @@ backend_exec python -m app.commands.apply_editorial_classifications --apply
 # uma falha que não tinha nada a ver com a saúde do banco/app. A indexação real
 # está mais abaixo, DEPOIS do tráfego reaberto — ver "Indexação RAG incremental".
 
-log "Ativando os supervisores de agenda e WhatsApp/Heart Team da mesma release."
+log "Ativando os supervisores de agenda, WhatsApp/Heart Team, Intelligence e biblioteca científica da mesma release."
 "${COMPOSE[@]}" up -d --no-build --no-deps --force-recreate \
-  agenda-sync whatsapp-heart-team-worker
+  agenda-sync whatsapp-heart-team-worker intelligence-radar scientific-publication-library-worker
 WORKERS_PRONTOS=0
 WORKERS_ESTAVEIS=0
 for _ in $(seq 1 20); do
   if "${COMPOSE[@]}" ps --status running --services | grep -Fxq agenda-sync \
-    && "${COMPOSE[@]}" ps --status running --services | grep -Fxq whatsapp-heart-team-worker; then
+    && "${COMPOSE[@]}" ps --status running --services | grep -Fxq whatsapp-heart-team-worker \
+    && "${COMPOSE[@]}" ps --status running --services | grep -Fxq intelligence-radar \
+    && "${COMPOSE[@]}" ps --status running --services | grep -Fxq scientific-publication-library-worker; then
     WORKERS_ESTAVEIS=$((WORKERS_ESTAVEIS + 1))
     if [[ "$WORKERS_ESTAVEIS" -ge 5 ]]; then
       WORKERS_PRONTOS=1
@@ -501,9 +507,36 @@ for _ in $(seq 1 20); do
   sleep 2
 done
 [[ "$WORKERS_PRONTOS" == "1" ]] || {
-  echo "Os supervisores de agenda e WhatsApp/Heart Team não permaneceram estáveis por 10 segundos." >&2
+  echo "Os supervisores de agenda, WhatsApp/Heart Team, Intelligence e biblioteca científica não permaneceram estáveis por 10 segundos." >&2
   false
 }
+
+log "Confirmando heartbeat do Intelligence na mesma release, sem chamada a provedor."
+"${COMPOSE[@]}" exec -T intelligence-radar python - <<'PYHEARTBEAT'
+import os
+from datetime import datetime, timezone
+from app.services.guideline_radar_runtime import HEARTBEAT_TTL, read_heartbeat
+pulse = read_heartbeat()
+assert pulse and pulse.get("commit") == os.environ["DEPLOY_COMMIT"], "Heartbeat ausente ou de outra release"
+age = (datetime.now(timezone.utc) - datetime.fromisoformat(pulse["at"])).total_seconds()
+assert 0 <= age <= HEARTBEAT_TTL, "Heartbeat do Intelligence expirado"
+print("Intelligence supervisionado: heartbeat e release confirmados.")
+PYHEARTBEAT
+
+log "Confirmando supervisor e armazenamento da biblioteca científica, sem processar fila."
+"${COMPOSE[@]}" exec -T scientific-publication-library-worker python - <<'PYLIBRARY'
+import os
+from pathlib import Path
+from datetime import datetime, timezone
+from app.services.guideline_radar_runtime import HEARTBEAT_TTL, read_heartbeat
+from app.services.scientific_publication_library_worker import HEARTBEAT_KEY
+pulse = read_heartbeat(HEARTBEAT_KEY)
+assert pulse and pulse.get("commit") == os.environ["DEPLOY_COMMIT"], "Heartbeat da biblioteca ausente ou de outra release"
+age = (datetime.now(timezone.utc) - datetime.fromisoformat(pulse["at"])).total_seconds()
+assert 0 <= age <= HEARTBEAT_TTL, "Heartbeat da biblioteca expirado"
+assert Path("/scientific-publication-library").is_dir(), "Volume da biblioteca não montado"
+print("Biblioteca científica: supervisor, release e volume confirmados sem processar documentos.")
+PYLIBRARY
 
 log "Certificando flags e controles transitórios da central cardiovascular."
 backend_exec python - <<'PY'

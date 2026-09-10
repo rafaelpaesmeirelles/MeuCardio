@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { Fragment, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
@@ -379,6 +380,8 @@ export default function Calculadora() {
           </ul>
         )}
       </div>
+
+      <ScientificReadingAccess entityType="calculadora" slug={slug} />
 
       <TudoSobreEsteTema tema={calc.theme} excluirTipo="calculadora" excluirSlug={slug} />
 

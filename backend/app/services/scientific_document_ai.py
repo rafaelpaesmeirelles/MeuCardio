@@ -115,7 +115,9 @@ def extract_text(content: bytes, media_type: str) -> str:
     text = text.replace("\x00", "").strip()
     if not text:
         raise ValueError("O arquivo não contém texto extraível. PDFs somente-imagem exigem análise multimodal específica.")
-    return text[:MAX_EXTRACTED_CHARS]
+    if len(text) > MAX_EXTRACTED_CHARS:
+        raise ValueError("O arquivo excede o limite de extração integral. Nenhum texto foi truncado; divida o documento em partes identificadas.")
+    return text
 
 
 def _model() -> str:
@@ -206,7 +208,10 @@ def _translate_chunk(chunk: str) -> str:
         ),
         "input": [{"role": "user", "content": [{"type": "input_text", "text": chunk}]}],
     }
-    return _response_text(_post_response(request))
+    translated = _response_text(_post_response(request)).strip()
+    if not translated or len(translated) < max(1, len(chunk.strip()) // 3):
+        raise ValueError("O provedor não devolveu a tradução completa do trecho científico.")
+    return translated
 
 
 def translate_full_text(text: str) -> str:

@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import GrafoRelacionados from "../components/GrafoRelacionados";
@@ -112,6 +113,8 @@ export default function MaterialPacienteDetalhe() {
       {material.documento_slug && (
         <p><Link to={`/biblioteca/${material.documento_slug}`}>Ver conteúdo técnico de origem</Link></p>
       )}
+
+      <ScientificReadingAccess entityType="material_paciente" slug={material.slug} />
 
       <GrafoRelacionados entityType="material_paciente" slug={material.slug} />
     </article>

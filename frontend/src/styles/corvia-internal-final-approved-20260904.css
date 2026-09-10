@@ -579,3 +579,55 @@ html[data-corvia-theme="dark"] #root .spaces-brand strong b { color: #5f8fe8 !im
 @media (max-width: 900px) {
   #root .spaces-choice__brand-cluster .galaxy-theme-toggle__image { width: 100% !important; height: 100% !important; }
 }
+
+/* 10/09 — a identidade profissional precisa de espaço real para foto e nome.
+   Somente mobile: o tratamento e primeiro nome ficam abaixo da foto, sem corte.
+   A altura automática também acomoda nomes/títulos mais longos e zoom de texto. */
+@media (max-width: 900px) {
+  #root .spaces-choice > header .spaces-user,
+  #root .spaces-home__topbar > .spaces-user {
+    display: flex !important;
+    flex: 0 0 104px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 104px !important;
+    min-width: 104px !important;
+    max-width: 104px !important;
+    min-height: 76px !important;
+    gap: 4px !important;
+    overflow: visible !important;
+    white-space: normal !important;
+  }
+  #root .spaces-choice > header .spaces-user .spaces-user__name,
+  #root .spaces-home__topbar > .spaces-user .spaces-user__name {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    text-overflow: clip !important;
+    text-align: center !important;
+    font-size: .75rem !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+  }
+  #root .spaces-choice > header .spaces-user__avatar,
+  #root .spaces-home__topbar > .spaces-user .spaces-user__avatar {
+    width: 44px !important;
+    height: 44px !important;
+    flex-basis: 44px !important;
+    flex-shrink: 0 !important;
+  }
+  #root .spaces-choice > header .spaces-user > svg:last-child,
+  #root .spaces-home__topbar > .spaces-user > svg:last-child { display: none !important; }
+  #root .spaces-choice { grid-template-rows: minmax(104px, auto) auto 44px !important; }
+  #root .spaces-home__topbar {
+    grid-template-rows: minmax(84px, auto) 46px !important;
+  }
+}
+@media (max-width: 600px) {
+  #root .spaces-home__topbar { grid-template-rows: minmax(84px, auto) 44px 46px !important; }
+}

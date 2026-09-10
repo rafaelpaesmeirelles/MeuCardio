@@ -1,0 +1,15 @@
+.scientific-reading-access { min-width: 0; margin: 1rem 0; }
+.scientific-reading-access h2 { font-size: 1.1rem; margin: 0 0 .8rem; }
+.scientific-reading-access label { display: grid; gap: .35rem; margin-top: .8rem; }
+.scientific-reading-access select { max-width: 100%; width: 100%; min-width: 0; }
+.scientific-reading-access__options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: .8rem; }
+.scientific-reading-access__options > div { min-width: 0; display: grid; align-content: start; gap: .35rem; }
+.scientific-reading-access .btn { white-space: normal; min-height: 44px; max-width: 100%; overflow-wrap: anywhere; }
+.scientific-reading-access small { display: block; color: var(--texto-secundario); }
+.scientific-reading-access__reference { overflow-wrap: anywhere; }
+.scientific-reading-access__reader { margin-top: 1rem; border-top: 1px solid var(--borda); padding-top: .8rem; }
+.scientific-reading-access__reader > div { overflow-wrap: anywhere; line-height: 1.7; margin-top: .8rem; }
+
+.scientific-reading-access__reader table { display: block; max-width: 100%; overflow-x: auto; }
+.scientific-reading-access__reader pre { max-width: 100%; overflow-x: auto; }
+.scientific-reading-access__reader img { max-width: 100%; height: auto; }

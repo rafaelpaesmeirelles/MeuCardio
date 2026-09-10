@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import GrafoRelacionados from "../components/GrafoRelacionados";
@@ -103,6 +104,8 @@ export default function ChecklistModelo() {
       {modelo.documento_origem && (
         <p><Link to={`/biblioteca/${modelo.documento_origem}`}>Ver protocolo de origem</Link></p>
       )}
+
+      <ScientificReadingAccess entityType="checklist" slug={modelo.slug} />
 
       <GrafoRelacionados entityType="checklist" slug={modelo.slug} />
     </article>

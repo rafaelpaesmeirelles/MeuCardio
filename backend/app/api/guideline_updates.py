@@ -9,11 +9,10 @@ from app.models.content import Document
 from app.models.guideline import Guideline, GuidelineLink, GuidelineNotification
 from app.models.user import User
 from app.services.guideline_discovery import DISCOVERY_LOOKBACK_DAYS, DISCOVERY_START
-from app.services.guideline_discovery_worldwide import discover_and_publish_worldwide
+from app.services.guideline_radar_runtime import radar_status, run_radar, run_pending_radar_analysis
 from app.services.guideline_clinical_update import get_analysis, list_impacts
 from app.services.guideline_clinical_update_runtime import (
     COMPLETE_PUBLICATION_LIMIT,
-    process_pending_guidelines,
 )
 
 router = APIRouter(prefix="/api/guideline-updates", tags=["diretrizes"])
@@ -110,6 +109,11 @@ def list_updates(
     }
 
 
+@router.get("/status")
+def intelligence_status(db: Session = Depends(get_db), _: User = Depends(current_user)):
+    return radar_status(db)
+
+
 @router.get("/me")
 def my_notifications(
     include_read: bool = Query(False),
@@ -175,7 +179,7 @@ def run_discovery(
     db: Session = Depends(get_db),
     _=Depends(require_admin),
 ):
-    return discover_and_publish_worldwide(db, analyze_clinical_impact=True)
+    return run_radar(db, force=True, origin="admin")
 
 
 @router.post("/admin/process-pending")
@@ -184,4 +188,4 @@ def run_pending_analysis(
     db: Session = Depends(get_db),
     _=Depends(require_admin),
 ):
-    return process_pending_guidelines(db, limit=limit)
+    return run_pending_radar_analysis(db, limit=limit)

@@ -20,6 +20,7 @@ MOBILE_NAV = ROOT / "frontend/src/components/ClinicalMobileNav.tsx"
 MAIN = ROOT / "backend/app/main.py"
 
 EXPECTED_APP_ROUTES = {
+    "/intelligence",
     "/", "/produto", "/entrar", "/solicitar-acesso", "/esqueci-senha", "/redefinir-senha",
     "/privacidade", "/termos", "/validar", "/validar/:codigo",
     "/corvia-mail", "/apresentacao", "/biblioteca", "/biblioteca/:slug",
@@ -44,6 +45,7 @@ EXPECTED_APP_ROUTES = {
 }
 
 EXPECTED_NAV_ROUTES = {
+    "/intelligence",
     "/", "/apresentacao", "/agenda", "/condicoes", "/diretrizes", "/assistente", "/doencas",
     "/triagem-sintomas", "/biblioteca", "/busca", "/busca?modo=tudo-com-tudo", "/calculadoras", "/emergencia",
     "/cardiologia-intensiva",
@@ -64,7 +66,7 @@ EXPECTED_BACKEND_ROUTERS = {
     "drugs.router", "drug_insights.router", "round_api.router", "ai.router",
     "gallery.router", "favorites.router", "lab_tests.router", "evidence.router",
     "studies.router", "prescriptions.router", "prescricao_especial.router", "documents.router", "appointments.router",
-    "timeline.router", "guidelines.router", "guideline_updates.router", "scientific_documents_ai.router",
+    "timeline.router", "guidelines.router", "guideline_updates.router", "scientific_documents_ai.router", "scientific_reading.router",
     "mail360_status.router", "presence.router", "indicadores.router",
     "checklists.router", "study_tracks.router", "exportacao.router", "exportacao_universal.router",
     "emergencia.router", "receituario.router", "clinical_cases.router",
@@ -137,6 +139,17 @@ EXPECTED_SUPPORT_FILES = {
     "backend/app/api/ecg_quick.py",
     "backend/app/api/cardiovascular_exam_ai.py",
     "backend/app/api/scientific_documents_ai.py",
+    "backend/app/api/scientific_reading.py",
+    "backend/app/services/scientific_reading.py",
+    "backend/app/services/scientific_publication_library.py",
+    "backend/app/services/scientific_publication_library_worker.py",
+    "backend/app/models/scientific_publication_asset.py",
+    "backend/migrations/versions/c1sp20260910_scientific_publication_assets.py",
+    "backend/app/services/guideline_radar_runtime.py",
+    "backend/app/services/guideline_radar_worker.py",
+    "frontend/src/components/ScientificReadingAccess.tsx",
+    "frontend/src/components/ScientificIntelligenceMonitor.tsx",
+    "frontend/src/pages/CorviaIntelligence.tsx",
     "backend/app/api/patient_multimodal_ai.py",
     "backend/app/api/exportacao_universal.py",
     "backend/app/api/guideline_updates.py",

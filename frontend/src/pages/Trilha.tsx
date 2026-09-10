@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../lib/api";
@@ -159,6 +160,8 @@ export default function Trilha() {
           </li>
         ))}
       </ol>
+
+      <ScientificReadingAccess entityType="trilha" slug={d.slug} />
 
       <GrafoRelacionados entityType="trilha" slug={d.slug} />
     </div>

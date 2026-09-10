@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
@@ -76,6 +77,8 @@ export default function Evidencia() {
           <p style={{ lineHeight: 1.65, marginBottom: 0 }}>{evidencia.summary}</p>
         </section>
       )}
+
+      <ScientificReadingAccess entityType="evidencia" slug={slug} />
 
       <ClinicalUpdates updates={evidencia.clinical_updates} />
 

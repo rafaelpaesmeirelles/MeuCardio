@@ -12,7 +12,7 @@ from app.api import (
     service_orders, sessions, social_login, specialty_guides, studies, timeline, billing, guidelines, indicadores,
     checklists, study_tracks, exportacao, exportacao_universal, emergencia, receituario, prescricao_especial, clinical_cases, agenda_integrada, agenda_clinica,
     encounter_artifacts, related_content, knowledge_graph, patient_profiles, patient_timeline, ecg_quick,
-    cardiovascular_exam_ai, scientific_documents_ai, patient_multimodal_ai,
+    cardiovascular_exam_ai, scientific_documents_ai, scientific_reading, patient_multimodal_ai,
     patient_multimodal_delete_guard as _patient_multimodal_delete_guard,
     whatsapp, heart_team,
 )
@@ -121,7 +121,7 @@ ROUTERS_ASSINANTES = (
     round_api.router, ai.router, gallery.router, favorites.router, lab_tests.router,
     evidence.router, studies.router, prescriptions.router, documents.router,
     appointments.router, timeline.router, guidelines.router, guideline_updates.router,
-    scientific_documents_ai.router,
+    scientific_documents_ai.router, scientific_reading.router,
     mail360_status.router, presence.router, indicadores.router, checklists.router,
     study_tracks.router, exportacao.router, exportacao_universal.router, emergencia.router, receituario.router,
     prescricao_especial.router,

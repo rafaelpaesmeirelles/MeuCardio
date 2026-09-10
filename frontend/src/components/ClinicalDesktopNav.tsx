@@ -13,6 +13,7 @@ type NavSection = { title: string; items: NavItem[] };
 type SpaceKey = "consultorio" | "hospital" | "ensino" | "pesquisa" | "gestao";
 
 const CLINICA_DECISAO: NavItem[] = [
+  { to: "/heart-team", label: "Heart Team Virtual", icon: "round", featured: true },
   { to: "/doencas", label: "Guia de Doenças", icon: "doencas" },
   { to: "/medicamentos", label: "Medicamentos", icon: "medicamento" },
   { to: "/exames", label: "Exames", icon: "clinica" },
@@ -28,6 +29,7 @@ const CLINICA_DECISAO: NavItem[] = [
 ];
 
 const ESTUDO_EDUCACAO: NavItem[] = [
+  { to: "/intelligence", label: "CorVIA Intelligence", icon: "sincronizar", featured: true },
   { to: "/evidencias", label: "Estudos & Evidências", icon: "evidencia" },
   { to: "/estudos", label: "Estudos clínicos", icon: "evidencia" },
   { to: "/documentos-cientificos-ia", label: "Documento científico IA", icon: "assistente" },
@@ -44,8 +46,7 @@ const ESTUDO_EDUCACAO: NavItem[] = [
 
 const TRABALHO_ASSISTENCIA: NavItem[] = [
   { to: "/exames-ia", label: "IA para Exames", icon: "ecg", featured: true },
-  ...(heartTeamEnabled() ? [{ to: "/heart-team", label: "Heart Team Virtual", icon: "assistente" as NomeIcone, featured: true }] : []),
-  ...(whatsappAssistantEnabled() ? [{ to: "/whatsapp-assistant", label: "Assistente pelo WhatsApp", icon: "comunicacao" as NomeIcone, featured: true }] : []),
+  { to: "/whatsapp-assistant", label: "Assistente WhatsApp", icon: "comunicacao", featured: true },
   { to: "/prontuario", label: "Prontuário", icon: "pacientes" },
   { to: "/round", label: "Round hospitalar", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
@@ -148,7 +149,7 @@ const SPACE_META: Record<SpaceKey, { label: string; icon: NomeIcone; actions: Na
 };
 
 const PATH_TO_SPACE: Array<[string, SpaceKey]> = [
-  ["/documentos-cientificos-ia", "pesquisa"], ["/evidencias", "pesquisa"], ["/estudos", "pesquisa"], ["/diretrizes", "pesquisa"], ["/biblioteca", "pesquisa"], ["/busca", "pesquisa"], ["/fluxogramas", "pesquisa"], ["/exportar", "pesquisa"], ["/favoritos", "pesquisa"],
+  ["/intelligence", "pesquisa"], ["/documentos-cientificos-ia", "pesquisa"], ["/evidencias", "pesquisa"], ["/estudos", "pesquisa"], ["/diretrizes", "pesquisa"], ["/biblioteca", "pesquisa"], ["/busca", "pesquisa"], ["/fluxogramas", "pesquisa"], ["/exportar", "pesquisa"], ["/favoritos", "pesquisa"],
   ["/casos-clinicos", "ensino"], ["/trilhas", "ensino"], ["/material-paciente", "ensino"], ["/galeria", "ensino"], ["/apresentacao", "ensino"],
   ["/heart-team", "hospital"], ["/round", "hospital"], ["/cardiologia-intensiva", "hospital"], ["/checklists", "hospital"], ["/emergencia", "hospital"], ["/exames-ia", "hospital"], ["/ecg-ia", "hospital"],
   ["/corvia-mail", "gestao"], ["/caixa-de-email", "gestao"], ["/whatsapp-assistant", "gestao"], ["/usuarios-online", "gestao"], ["/telediagnostico", "gestao"], ["/fila-telediagnostico", "gestao"], ["/sincronizacao", "gestao"], ["/minha-conta", "gestao"], ["/verificacao-identidade", "gestao"], ["/excluir-conta", "gestao"], ["/indicadores", "gestao"], ["/receitas-para-assinatura", "gestao"], ["/admin", "gestao"], ["/privacidade", "gestao"], ["/termos", "gestao"],
@@ -189,7 +190,7 @@ export default function ClinicalDesktopNav() {
   const sections: NavSection[] = [
     { title: "Clínica & Decisão", items: CLINICA_DECISAO },
     { title: "Ciência & Ensino", items: ESTUDO_EDUCACAO },
-    { title: "Trabalho & Assistência", items: TRABALHO_ASSISTENCIA },
+    { title: "Assistência", items: TRABALHO_ASSISTENCIA },
     { title: "Produtividade", items: FERRAMENTAS_PRODUTIVIDADE },
     { title: "Rede & Conectividade", items: REDE_CONECTIVIDADE },
     { title: "Administração & Conta", items: administracao },

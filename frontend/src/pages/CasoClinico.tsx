@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { CSSProperties, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Markdown from "react-markdown";
@@ -132,6 +133,8 @@ export default function CasoClinico() {
           </div>
         )}
       </div>
+
+      <ScientificReadingAccess entityType="caso_clinico" slug={slug} />
 
       <TudoSobreEsteTema tema={caso.tema} excluirTipo="caso_clinico" excluirSlug={slug} />
 

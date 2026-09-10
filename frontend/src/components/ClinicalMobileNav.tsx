@@ -10,6 +10,7 @@ type LinkItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolea
 type MobileSection = { title: string; items: LinkItem[] };
 
 const CLINICA_DECISAO: LinkItem[] = [
+  { to: "/heart-team", label: "Heart Team Virtual", icon: "round", featured: true },
   { to: "/doencas", label: "Guia de Doenças", icon: "doencas" },
   { to: "/medicamentos", label: "Medicamentos", icon: "medicamento" },
   { to: "/exames", label: "Exames", icon: "clinica" },
@@ -25,6 +26,7 @@ const CLINICA_DECISAO: LinkItem[] = [
 ];
 
 const ESTUDO_EDUCACAO: LinkItem[] = [
+  { to: "/intelligence", label: "CorVIA Intelligence", icon: "sincronizar", featured: true },
   { to: "/evidencias", label: "Evidências", icon: "evidencia" },
   { to: "/estudos", label: "Estudos", icon: "evidencia" },
   { to: "/diretrizes", label: "Guidelines", icon: "conhecimento" },
@@ -38,8 +40,7 @@ const ESTUDO_EDUCACAO: LinkItem[] = [
 
 const TRABALHO_ASSISTENCIA: LinkItem[] = [
   { to: "/exames-ia", label: "IA para Exames", icon: "ecg", featured: true },
-  ...(heartTeamEnabled() ? [{ to: "/heart-team", label: "Heart Team Virtual", icon: "assistente" as NomeIcone, featured: true }] : []),
-  ...(whatsappAssistantEnabled() ? [{ to: "/whatsapp-assistant", label: "Assistente pelo WhatsApp", icon: "comunicacao" as NomeIcone, featured: true }] : []),
+  { to: "/whatsapp-assistant", label: "Assistente WhatsApp", icon: "comunicacao", featured: true },
   { to: "/prontuario", label: "Prontuário", icon: "pacientes" },
   { to: "/round", label: "Round hospitalar", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
@@ -93,8 +94,8 @@ export default function ClinicalMobileNav() {
 
   const secoes: MobileSection[] = [
     { title: "Clínica & Decisão", items: CLINICA_DECISAO },
-    { title: "Estudos & Educação", items: ESTUDO_EDUCACAO },
-    { title: "Trabalho & Assistência", items: TRABALHO_ASSISTENCIA },
+    { title: "Ciência & Ensino", items: ESTUDO_EDUCACAO },
+    { title: "Assistência", items: TRABALHO_ASSISTENCIA },
     { title: "Ferramentas & Produtividade", items: FERRAMENTAS },
     { title: "Rede & Conectividade", items: REDE },
     { title: "Administração & Conta", items: contaAdmin },
