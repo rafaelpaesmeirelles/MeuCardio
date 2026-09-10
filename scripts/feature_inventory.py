@@ -82,6 +82,7 @@ EXPECTED_BACKEND_ROUTERS = {
 EXPECTED_SUPPORT_FILES = {
     "frontend/src/pages/AdminClinicalChanges.tsx",
     "frontend/src/components/ClinicalChangeApprovalNotice.tsx",
+    "frontend/src/styles/clinical-change-notice.css",
     "frontend/src/components/FavoriteFunctionControl.tsx",
     "frontend/src/components/PrivateScientificOriginal.tsx",
     "backend/app/api/clinical_change_approvals.py",

@@ -11,3 +11,8 @@
 @media (max-width: 600px) { .favorites-page__filters { grid-template-columns: minmax(0, 1fr); } .favorites-page__item-header { flex-wrap: wrap; } }
 
 .favorites-page__private-reading { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .8rem; }
+
+/* Light surfaces need ink-colored links and enabled controls, not luminous cyan. */
+html[data-corvia-theme="light"] #root .favorites-page :is(a,h2 a,button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled)) { color:var(--texto,#18354b) !important; opacity:1 !important; }
+html[data-corvia-theme="light"] #root .favorites-page :is(button:not(:disabled),a.botao,input:not(:disabled),select:not(:disabled),textarea:not(:disabled)) { background:var(--cv-panel,#e1eff6) !important; border-color:var(--texto-secundario,#49677b) !important; box-shadow:none !important; }
+html[data-corvia-theme="light"] #root .favorites-page :is(input,textarea)::placeholder { color:var(--texto-secundario,#49677b) !important; opacity:1 !important; }

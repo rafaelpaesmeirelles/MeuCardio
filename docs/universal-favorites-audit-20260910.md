@@ -59,3 +59,10 @@ Visual QA completed the existing 32 mobile and 10 Intelligence cases with no pag
 ## Second visual gate follow-up
 
 Head 8c6b3f51f72914456ffe60376ed9ba187a6b27ec passed RC2 and the other required PR gates; both backend test jobs remained skipped. Visual QA again completed the existing mobile and Intelligence cases without page errors. The new pending-notice fixture was bypassed by the service worker retained from those preceding cases: actual QA API responses contained no pending proposals. The synthetic Favorites/approval cases now use their own authenticated browser context with service workers blocked, while the existing real-app matrix keeps its original context and behavior. Assertions and tolerances remain unchanged; no approval mutation is permitted.
+
+
+## Visual inspection before merge
+
+Head 53c9bcbbc73704f915907c57efada70a95e48a81 passed every required PR gate, with both backend jobs skipped. Visual QA produced 93 images: 15 pages, 10 Intelligence surfaces, 32 mobile matrix cases, and 16 Favorites/approval fixture cases; no page errors, test failures or approval mutations. Direct inspection of the generated screenshots nevertheless found weak light-theme contrast in the new pending notice, Favorites links and controls. Merge was held for a scoped contrast correction rather than treating passing geometry assertions as proof of legibility. Existing dark/light layouts and release budgets remain protected.
+
+Scoped light-theme link/control colors and the shared notice now use the active palette. CSS parsing and syntax checks passed; the declared ink/panel pair measures 10.84:1. Visual QA records computed contrast with alpha composition, requires 4.5:1 for ordinary text and 3:1 for large text, and reports complex unresolved paint stacks as indeterminate for direct screenshot review. Numerical probes passed, including translucent foreground and inherited background cases. No local browser matrix or backend CI was added.

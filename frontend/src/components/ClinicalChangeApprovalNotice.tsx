@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
+import "../styles/clinical-change-notice.css";
 
 /** One owner-only counter per mounted shell; never fetch proposal bodies here. */
 export default function ClinicalChangeApprovalNotice() {

@@ -21,6 +21,7 @@ await writeFile(path.join(temp,'Approval.mjs'),compile(source));
 const {default:Approval,ApiError}=await import(pathToFileURL(path.join(temp,'Approval.mjs')));
 let notice=await readFile(path.join(root,'src/components/ClinicalChangeApprovalNotice.tsx'),'utf8');
 notice=notice.replace('import { api, ApiError } from "../lib/api";','import { ApiError } from "./Approval.mjs"; const api={get:(...args)=>globalThis.approvalFixture.get(...args)};').replace('import { useAuth } from "../lib/auth";','const useAuth=()=>({usuario:globalThis.approvalFixture.user});');
+notice=notice.replace(/import "\.\.\/styles\/[^"]+";/g,'');
 await writeFile(path.join(temp,'Notice.mjs'),compile(notice));
 const {default:Notice}=await import(pathToFileURL(path.join(temp,'Notice.mjs')));
 

@@ -1,0 +1,4 @@
+/* The notice shares the active space palette without inheriting legacy cyan links. */
+#root .clinical-change-notice { color:var(--cv-text,var(--spaces-text,#e4edf3)) !important; background:var(--cv-panel,var(--spaces-panel,#061725)) !important; }
+#root .clinical-change-notice :is(a,strong,p) { color:inherit !important; opacity:1 !important; }
+#root .clinical-change-notice a { text-decoration:underline; }

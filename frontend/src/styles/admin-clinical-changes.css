@@ -17,3 +17,8 @@
 
 .admin-clinical-changes__comparison dt { font-weight:600; margin-top:12px; }
 .admin-clinical-changes__comparison dd { margin:4px 0 0; }
+
+/* Light surfaces need ink-colored links and enabled controls, not luminous cyan. */
+html[data-corvia-theme="light"] #root .admin-clinical-changes :is(a,h2 a,button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled)) { color:var(--texto,#18354b) !important; opacity:1 !important; }
+html[data-corvia-theme="light"] #root .admin-clinical-changes :is(button:not(:disabled),a.botao,input:not(:disabled),select:not(:disabled),textarea:not(:disabled)) { background:var(--cv-panel,#e1eff6) !important; border-color:var(--texto-secundario,#49677b) !important; box-shadow:none !important; }
+html[data-corvia-theme="light"] #root .admin-clinical-changes :is(input,textarea)::placeholder { color:var(--texto-secundario,#49677b) !important; opacity:1 !important; }

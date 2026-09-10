@@ -1,3 +1,54 @@
+// Computed colors, not antialiased screenshot pixels. Unknown paint stacks are
+// explicitly left for screenshot review; they must never become false passes.
+export function measureTextContrast(elements) {
+  const rgba = value => {
+    if (value === 'transparent') return [0, 0, 0, 0];
+    const match = /^rgba?\(([^)]+)\)$/.exec(value);
+    if (!match || match[1].includes('%')) return null;
+    const parts = match[1].split(/[,\s/]+/).filter(Boolean).map(Number);
+    if (parts.length === 3) parts.push(1);
+    return parts.length === 4 && parts.every(Number.isFinite) ? parts : null;
+  };
+  const over = (front, back) => {
+    const alpha = front[3] + back[3] * (1 - front[3]);
+    return [...front.slice(0, 3).map((channel, i) => alpha ? (channel * front[3] + back[i] * back[3] * (1 - front[3])) / alpha : 0), alpha];
+  };
+  const luminance = color => color.slice(0, 3).map(channel => {
+    const value = channel / 255;
+    return value <= .04045 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4;
+  }).reduce((sum, channel, i) => sum + channel * [.2126, .7152, .0722][i], 0);
+  return elements.map(element => {
+    const style = getComputedStyle(element);
+    const placeholder = element.matches('input, textarea') && !element.value && element.getAttribute('placeholder');
+    const textStyle = placeholder ? getComputedStyle(element, '::placeholder') : style;
+    const sample = { tag: element.tagName, className: element.className, text: (placeholder || element.textContent || element.value || element.getAttribute('aria-label') || '').trim().slice(0, 180), color: textStyle.color, minimum: parseFloat(textStyle.fontSize) >= 24 || parseFloat(textStyle.fontSize) >= 56 / 3 && Number(textStyle.fontWeight) >= 700 ? 3 : 4.5 };
+    const unknown = reason => ({ ...sample, status: 'indeterminate', reason });
+    if (!element.getClientRects().length || element.matches(':disabled')) return { ...sample, status: 'inactive' };
+    if (placeholder && Number(textStyle.opacity) !== 1) return unknown('placeholder opacity needs screenshot review');
+    let background = [0, 0, 0, 0];
+    for (let current = element; current; current = current.parentElement) {
+      const layer = getComputedStyle(current);
+      if (Number(layer.opacity) !== 1 || layer.filter !== 'none' || layer.mixBlendMode !== 'normal') return unknown('group opacity/filter/blend needs screenshot review');
+      if (background[3] < 1) {
+        if (layer.backgroundImage !== 'none') return unknown('gradient/image behind text needs screenshot review');
+        for (const pseudo of ['::before', '::after']) {
+          const paint = getComputedStyle(current, pseudo);
+          if (paint.content !== 'none' && paint.content !== 'normal' && paint.display !== 'none' && Number(paint.opacity) > 0 && (paint.backgroundImage !== 'none' || (rgba(paint.backgroundColor)?.[3] ?? 1) > 0)) return unknown('painted pseudo-element needs screenshot review');
+        }
+        const color = rgba(layer.backgroundColor);
+        if (!color) return unknown('unsupported background color space');
+        background = over(background, color);
+      }
+    }
+    if (background[3] < 1) return unknown('no opaque backing color resolved');
+    const foreground = rgba(textStyle.color);
+    if (!foreground) return unknown('unsupported foreground color space');
+    const a = luminance(over(foreground, background)), b = luminance(background);
+    const ratio = (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
+    return { ...sample, background, ratio, status: ratio >= sample.minimum ? 'pass' : 'fail' };
+  });
+}
+
 // Runs only inside the existing isolated Visual QA workflow, using synthetic API fixtures.
 // No decisions are submitted: every clinical-approval mutation is intercepted and fails the gate.
 export async function inspectFavoritesAndApprovals({ page: sourcePage, base, out, report, approvalTitle }) {
@@ -63,6 +114,12 @@ export async function inspectFavoritesAndApprovals({ page: sourcePage, base, out
     }
     await page.waitForFunction(value => document.documentElement.getAttribute('data-corvia-theme') === value, theme);
   }
+  async function contrast(selector, name) {
+    const metrics = await page.locator(selector).evaluateAll(measureTextContrast);
+    if (!metrics.length) fail(`${name}: no text selected for contrast measurement`);
+    for (const item of metrics) if (item.status === 'fail') fail(`${name}: contrast ${item.ratio.toFixed(3)} < ${item.minimum} for ${item.tag} ${item.text}`);
+    return metrics;
+  }
   async function geometry(selector, name) {
     const metrics = await page.locator(selector).evaluate(element => {
       const box = element.getBoundingClientRect();
@@ -95,16 +152,18 @@ export async function inspectFavoritesAndApprovals({ page: sourcePage, base, out
         const consentChecked = await page.locator('.admin-clinical-changes__decision input[type="checkbox"]').isChecked();
         if (!approvalDisabled || consentChecked) fail(`${name}: approval enabled before explicit review consent`);
         await geometry('.admin-clinical-changes', `${name}/approval-comparison`);
+        const approvalContrast = await contrast('.clinical-change-notice a strong, .clinical-change-notice p, .admin-clinical-changes > header h1, .admin-clinical-changes__decision label, .admin-clinical-changes__decision legend, .admin-clinical-changes__decision button:enabled', `${name}/approval-text`);
         await heading.scrollIntoViewIfNeeded();
         await page.screenshot({ path: `${out}/approval-owner-${name}.png`, fullPage: false });
         await page.locator('.admin-clinical-changes__comparison').scrollIntoViewIfNeeded();
         await page.screenshot({ path: `${out}/approval-comparison-${name}.png`, fullPage: false });
-        cases.push({ name, surface: 'approval-owner', heading: headingMetrics, ownerNotice, approvalDisabled, consentChecked, fixtureOnly: true });
+        cases.push({ name, surface: 'approval-owner', heading: headingMetrics, ownerNotice, approvalDisabled, consentChecked, contrast: approvalContrast, fixtureOnly: true });
 
         await page.goto(`${base}/favoritos`, { waitUntil: 'networkidle' });
         await setTheme(theme);
         await page.locator('.favorites-page__item').nth(2).waitFor({ state: 'visible' });
         const favoriteMetrics = await geometry('.favorites-page', `${name}/favorites`);
+        const favoriteContrast = await contrast('.favorites-page h1, .favorites-page h2, .favorites-page h2 a, .favorites-page p, .favorites-page label, .favorites-page input:enabled, .favorites-page select:enabled, .favorites-page button:enabled, .favorites-page__private-reading a', `${name}/favorite-text`);
         const publicReaderCount = await page.locator('.favorites-page__item').nth(0).locator('.scientific-reading-access').count();
         const privateCard = page.locator('.favorites-page__item').nth(1);
         const privateLinks = await privateCard.locator('.favorites-page__private-reading a').evaluateAll(links => links.map(link => link.getAttribute('href')));
@@ -116,7 +175,7 @@ export async function inspectFavoritesAndApprovals({ page: sourcePage, base, out
           await page.locator('.favorites-page__item').nth(index).scrollIntoViewIfNeeded();
           await page.screenshot({ path: `${out}/favorites-${name}-${['public', 'private', 'unavailable'][index]}.png`, fullPage: false });
         }
-        cases.push({ name, surface: 'favorites', geometry: favoriteMetrics, publicReaderCount, privateLinks, unavailableRemovable, fixtureOnly: true });
+        cases.push({ name, surface: 'favorites', geometry: favoriteMetrics, publicReaderCount, privateLinks, unavailableRemovable, contrast: favoriteContrast, fixtureOnly: true });
 
         owner = false;
         await page.goto(`${base}/admin/mudancas-clinicas`, { waitUntil: 'networkidle' });
