@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "decision_id": "feature-discovery-20260910",
+  "repository": "rafaelpaesmeirelles/MeuCardio",
+  "head_branch": "codex/fix-feature-discovery-20260910",
+  "base_sha": "db0a3ff71a184e2d6711168427e7565d6e0c9e48",
+  "pull_request": null,
+  "authorization": {
+    "date": "2026-09-10",
+    "instruction": "Sem novo ci backend",
+    "mode": "authorized-no-backend-ci",
+    "source": "Explicit user instruction recorded earlier in this session and still in force; the subsequent feature discovery, Intelligence scheduling and mobile identity requests did not revoke it. The user did not repeat the no-backend-CI instruction in this subtask.",
+    "scope": "Only the independently sealed feature-discovery PR on codex/fix-feature-discovery-20260910 and its exact confirmed main integration: Heart Team and WhatsApp assistant menu discovery, Intelligence menu and science-home card plus monitoring schedule verification/correction, and mobile professional identity. No authorization inherited from PR918, PR919 or PR920."
+  },
+  "local_evidence": [
+    "docs/feature-discovery-audit-20260910.md"
+  ]
+}

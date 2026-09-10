@@ -1,0 +1,11 @@
+# Decisão do responsável: descoberta das funções e identidade mobile
+
+A instrução explícita **“Sem novo ci backend”**, registrada anteriormente nesta sessão, permanece vigente. O pedido posterior de destacar Heart Team, Assistente WhatsApp e CorVIA Intelligence, verificar e corrigir sua periodicidade de monitoramento e corrigir o nome do profissional no mobile não revogou essa instrução. O usuário não a repetiu neste pedido. Esta decisão tem escopo próprio e não herda a autorização dos PRs 918, 919 ou 920.
+
+O escopo é somente a branch `codex/fix-feature-discovery-20260910`, originada de `db0a3ff71a184e2d6711168427e7565d6e0c9e48`, o PR independente a selar no manifesto, e sua integração exata e confirmada em main. Inclui a descoberta de Heart Team no menu Clínica & Decisão, Assistente WhatsApp em Assistência, Intelligence em Ciência & Ensino e no cartão que substitui Timeline na Home científica; a verificação/correção do monitoramento científico de quatro em quatro horas, ou de hora em hora nos períodos configurados; e a identidade do profissional na tela de escolha e Home mobile.
+
+O bootstrap com número nulo bloqueia a classificação antes do fallback, sem produzir gate aprovado nem executar suíte. Draft PR também aciona CI; a proteção precisa preceder a publicação da branch. Após o número ser selado, a política exige repositório, branch, head SHA atual, ancestralidade da origem e, para main, merge SHA, associação ao PR e igualdade da árvore. Dados ausentes, identidade divergente ou erro de API bloqueiam a classificação; não acionam testes como fallback. Outros PRs ou commits posteriores não herdam a decisão.
+
+Os jobs de backend completo e focal permanecem **skipped**, incluindo suas etapas de migrations e banco. O artefato informa `backend_ci_executed=false` e `test_certificate=null`, registrando **“backend CI não executado por decisão do responsável”**. Não é certificado de aprovação de testes nem reutilização de suíte.
+
+As verificações locais reais serão registradas em [feature-discovery-audit-20260910.md](../feature-discovery-audit-20260910.md). A política não autoriza alteração de conteúdo, publicação científica ou critérios editoriais. Corpus, RC2, Visual e gates normais de publicação permanecem exigidos.
