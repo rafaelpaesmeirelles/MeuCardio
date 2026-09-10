@@ -1,0 +1,313 @@
+{
+  "cases": [
+    {
+      "name": "catalog",
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "name": "external",
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "name": "native",
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "name": "catalog",
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "name": "external",
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "name": "native",
+      "theme": "dark",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "assertions": [
+    {
+      "name": "sbc-pending-light",
+      "pass": true
+    },
+    {
+      "name": "external-no-controls-light",
+      "pass": true
+    },
+    {
+      "name": "external-private-link-light",
+      "pass": true
+    },
+    {
+      "name": "sbc-pending-dark",
+      "pass": true
+    },
+    {
+      "name": "external-no-controls-dark",
+      "pass": true
+    },
+    {
+      "name": "external-private-link-dark",
+      "pass": true
+    },
+    {
+      "name": "native-result-rendered",
+      "pass": true
+    },
+    {
+      "name": "boolean-preserved",
+      "pass": true
+    },
+    {
+      "name": "edit-clears-result",
+      "pass": true
+    },
+    {
+      "name": "stale-response-discarded",
+      "pass": true
+    }
+  ],
+  "apiRequests": [
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/calculators",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/calculators/prevent",
+      "method": "GET"
+    },
+    {
+      "path": "/api/assinatura/provedores",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/calculadora/prevent",
+      "method": "GET"
+    },
+    {
+      "path": "/api/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/grafo/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/calculators/framingham-global",
+      "method": "GET"
+    },
+    {
+      "path": "/api/assinatura/provedores",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/calculadora/framingham-global",
+      "method": "GET"
+    },
+    {
+      "path": "/api/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/grafo/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/calculators",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/calculators/prevent",
+      "method": "GET"
+    },
+    {
+      "path": "/api/assinatura/provedores",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/calculadora/prevent",
+      "method": "GET"
+    },
+    {
+      "path": "/api/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/grafo/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/session-status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/auth/me",
+      "method": "GET"
+    },
+    {
+      "path": "/api/presence/heartbeat",
+      "method": "POST"
+    },
+    {
+      "path": "/api/calculators/framingham-global",
+      "method": "GET"
+    },
+    {
+      "path": "/api/assinatura/provedores",
+      "method": "GET"
+    },
+    {
+      "path": "/api/chat/nao-lidas",
+      "method": "GET"
+    },
+    {
+      "path": "/api/favorites/status",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scientific-reading/calculadora/framingham-global",
+      "method": "GET"
+    },
+    {
+      "path": "/api/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/grafo/relacionados",
+      "method": "GET"
+    },
+    {
+      "path": "/api/calculators/framingham-global/run",
+      "method": "POST"
+    },
+    {
+      "path": "/api/calculators/framingham-global/run",
+      "method": "POST"
+    }
+  ],
+  "scope": "Built production frontend with original App/Shell at 360x900; all API calls intercepted with synthetic physician and actual calculator registry fixtures. No production calls, no paid AI, no backend CI.",
+  "build": {
+    "command": "npm run build",
+    "exit_code": 0,
+    "duration_seconds": 153.27,
+    "precache_entries": 150,
+    "precache_kib": 3056.99
+  },
+  "manual_visual_review": [
+    "catalog-risk-light",
+    "catalog-risk-dark",
+    "external-dark",
+    "native-result-dark"
+  ],
+  "limitations": [
+    "API interaction was mocked; this is not a live backend or production integration test.",
+    "Screenshots show the existing internal scrolling viewport; full page captures do not expand the scroll container."
+  ]
+}
