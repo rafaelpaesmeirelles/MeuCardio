@@ -86,7 +86,7 @@ def run_pending_radar_analysis(db, *, limit: int) -> dict:
         try:
             from app.services.guideline_clinical_update_runtime import process_pending_guidelines
             result = process_pending_guidelines(db, limit=limit)
-            _audit(db, "intelligence_analysis_completed", {"analysis_status": analysis_state(result)})
+            _audit(db, "intelligence_analysis_completed", {"analysis_status": analysis_state(result), "analysis_error": result.get("analysis_error")})
             return result
         finally:
             lock.execute(text("SELECT pg_advisory_unlock(:key)"), {"key": LOCK_KEY})
@@ -127,6 +127,7 @@ def run_radar(db, *, force: bool = False, origin: str = "scheduler") -> dict:
                     "created": int(result.get("created") or 0),
                     "analysis_failures": len(pipeline.get("failures") or []),
                     "analysis_status": analysis_state(pipeline),
+                    "analysis_error": pipeline.get("analysis_error"),
                     "commit": os.getenv("DEPLOY_COMMIT", "unknown"),
                 })
                 result["radar_schedule"] = schedule

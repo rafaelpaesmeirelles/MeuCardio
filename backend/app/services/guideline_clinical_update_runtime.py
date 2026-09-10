@@ -115,8 +115,8 @@ def _reopen_in_app_alerts(db, guideline_id: int) -> None:
 
 
 def _is_rate_limit(exc: Exception) -> bool:
-    response = getattr(exc, "response", None)
-    return getattr(response, "status_code", None) == 429
+    from app.services.scientific_processing_errors import http_status
+    return http_status(exc) == 429
 
 
 def _official_pending_query(db):
@@ -147,6 +147,7 @@ def process_pending_guidelines(db, *, limit: int = COMPLETE_PUBLICATION_LIMIT) -
     items: list[dict] = []
     failures: list[dict] = []
     rate_limited = False
+    analysis_error = None
     if not core.settings.ai_enabled or core.settings.ai_provider != "openai" or not core.settings.openai_api_key.strip():
         return {
             "processed": 0,
@@ -171,11 +172,13 @@ def process_pending_guidelines(db, *, limit: int = COMPLETE_PUBLICATION_LIMIT) -
                 items.append(result)
             except Exception as exc:
                 db.rollback()
+                from app.services.scientific_processing_errors import safe_error_diagnostic
+                analysis_error = safe_error_diagnostic(exc)
                 if _is_rate_limit(exc):
                     rate_limited = True
-                    log.warning("Rate limit ao analisar %s; fila oficial preservada para retomada.", guideline.slug)
+                    log.warning("Scientific analysis request rejected: %s", analysis_error)
                     break
-                log.exception("Falha ao analisar/aplicar diretriz %s", guideline.slug)
+                log.warning("Scientific analysis failed: %s", analysis_error)
                 failures.append({
                     "guideline_id": guideline.id,
                     "slug": guideline.slug,
@@ -192,6 +195,7 @@ def process_pending_guidelines(db, *, limit: int = COMPLETE_PUBLICATION_LIMIT) -
         "requested": len(guidelines),
         "remaining": remaining,
         "rate_limited": rate_limited,
+        "analysis_error": analysis_error,
         "items": items,
         "failures": failures,
     }
