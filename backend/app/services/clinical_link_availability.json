@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "release": "corvia-20260910",
+  "scope": "presentation_only_no_publication_authorization",
+  "references": {
+    "/biblioteca/ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca": {
+      "reason": "no_integral_approved_equivalent",
+      "evidence_path": "docs/tct-missing-link-destination-review-20260910.json",
+      "evidence_sha256": "e254de71cc0e3fda52e0d4a8f686837e9dd0bf567b8ba43750529511df18326c",
+      "source_paths": [
+        "content/Insuficiência_cardíaca/bio-adm-adrenomedulina-biomarcador-e-alvo-terapeutico-na-insuficiencia-cardiaca-aguda.md",
+        "content/Insuficiência_cardíaca/biomarcadores-de-fibrose-miocardica-na-insuficiencia-cardiaca-fibroblastos-galectina-3-e-imagem.md"
+      ],
+      "detail": "Mesmo biomarcador e contexto de congestão/IC aguda; PMID42235631 compartilhado. A ficha de exame não equivale integralmente à revisão histórica de2025–2026 e seus ensaios guiados porCA125."
+    },
+    "/biblioteca/inclisirana-sem-estatina-de-base-victorion-mono-e-difference": {
+      "reason": "no_integral_approved_equivalent",
+      "evidence_path": "docs/tct-missing-link-destination-review-20260910.json",
+      "evidence_sha256": "e254de71cc0e3fda52e0d4a8f686837e9dd0bf567b8ba43750529511df18326c",
+      "source_paths": [
+        "content/Prevenção_e_lipídios/edicao-de-base-do-pcsk9-verve-102-dose-unica-para-reducao-vitalicia-de-ldl.md"
+      ],
+      "detail": "O documento histórico reúne Mono e Difference. O documento semelhante atual reúne Mono e INITIATE e está em quarentena. Dois estudos aprovados, Mono(40392667) e Difference(40884558), são destinos separados bibliograficamente exatos para cada ensaio, não um alias único do documento."
+    },
+    "/biblioteca/lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta": {
+      "reason": "no_integral_approved_equivalent",
+      "evidence_path": "docs/tct-missing-link-destination-review-20260910.json",
+      "evidence_sha256": "e254de71cc0e3fda52e0d4a8f686837e9dd0bf567b8ba43750529511df18326c",
+      "source_paths": [
+        "content/Doença_coronariana/lipoproteina-a-fator-de-risco-causal-terapias-em-desenvolvimento-e-o-reves-do-lpahorizon.md"
+      ],
+      "detail": "O candidato dedicado ao mesmo topline HORIZON está em quarentena. O panorama aprovado que compartilha PMID40185318 é a própria fonte deste link; redirecionar para ele criaria autolink."
+    },
+    "/biblioteca/ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice": {
+      "reason": "no_integral_approved_equivalent",
+      "evidence_path": "docs/tct-missing-link-destination-review-20260910.json",
+      "evidence_sha256": "e254de71cc0e3fda52e0d4a8f686837e9dd0bf567b8ba43750529511df18326c",
+      "source_paths": [
+        "content/Farmacologia/ninerafaxstat-modulador-da-energetica-miocardica-ensaios-improve-hcm-e-improve-dice.md"
+      ],
+      "detail": "O único documento aprovado identificado com IMPROVE-DiCE PMID41410037 é a própria fonte do link. Compartilha também38599256 e38752753, mas não constitui destino independente."
+    },
+    "/biblioteca/poluicao-do-ar-prevencao-cardiovascular-esc-2021-aha-2020": {
+      "reason": "no_integral_approved_equivalent",
+      "evidence_path": "docs/tct-missing-link-destination-review-20260910.json",
+      "evidence_sha256": "e254de71cc0e3fda52e0d4a8f686837e9dd0bf567b8ba43750529511df18326c",
+      "source_paths": [
+        "content/Geral/carga-global-de-doenca-cardiovascular-o-estudo-gbd-2023.md"
+      ],
+      "detail": "O documento histórico reúne ESC2021 PMID34458905 e declaração AHA2020 PMID33150789. Foram encontradas três evidências ESC2021 aprovadas; não há registro único aprovado equivalente ao conjunto ESC+AHA. Não substituir por estudo de Pope/Mustafic, com bibliografia e desenho distintos."
+    },
+    "/biblioteca/retatrutida-agonista-triplo-gip-glp-1-glucagon-em-diabetes-tipo-2-e-a-lacuna-do-desfecho-cardiovascular": {
+      "reason": "no_integral_approved_equivalent",
+      "evidence_path": "docs/tct-missing-link-destination-review-20260910.json",
+      "evidence_sha256": "e254de71cc0e3fda52e0d4a8f686837e9dd0bf567b8ba43750529511df18326c",
+      "source_paths": [
+        "content/Diabetes_e_cardiologia/retatrutida-e-marcadores-de-risco-cardiovascular-no-diabetes-tipo-2-e-na-obesidade.md"
+      ],
+      "detail": "O candidato TRANSCEND-T2D-1 contém os três PMIDs do alvo histórico(37385280,41090431,42250575), mas está em quarentena. O panorama de marcadores aprovado é a própria fonte do link; não usar como alias."
+    },
+    "/biblioteca/sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025": {
+      "reason": "no_integral_approved_equivalent",
+      "evidence_path": "docs/tct-missing-link-destination-review-20260910.json",
+      "evidence_sha256": "e254de71cc0e3fda52e0d4a8f686837e9dd0bf567b8ba43750529511df18326c",
+      "source_paths": [
+        "content/Fibrilação_atrial/cirurgia-bariatrica-e-fibrilacao-atrial-incidencia-complicacoes-periablacao-e-recorrencia-pos-ablacao.md",
+        "content/Fibrilação_atrial/colchicina-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-por-cateter.md",
+        "content/Fibrilação_atrial/isglt2-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-metanalise-2025.md"
+      ],
+      "detail": "O documento histórico reúne DARE-AF PMID41206792 e metanálise41357094. Há documento aprovado da metanálise, mas não foi encontrado destino canônico aprovado para DARE-AF. O documento da metanálise é também uma das três fontes do link; ali a substituição seria autolink."
+    },
+    "/biblioteca/decisao-compartilhada-entre-tavi-e-troca-cirurgica-da-valva-aortica-o-estudo-impact-sdm": {
+      "reason": "target_quarantined",
+      "evidence_path": "editorial-approvals/scoped-corpus-release-20260910.json",
+      "evidence_sha256": "a528b0090743558b5ce828ecd1b98ef9260c99fb59089fd0267bd7466b9f24a0",
+      "source_paths": [
+        "content/Comunicação_clínica/decisao-compartilhada-entre-tavi-e-cirurgia-valvar-na-estenose-aortica-grave-ensaio-piloto.md"
+      ],
+      "detail": "Destino explicitamente retido pelo snapshot autorizado; preservar exclusão e bytes de origem."
+    },
+    "/biblioteca/escore-iabp-shock-ii-estratificacao-de-risco-de-mortalidade-no-choque-cardiogenico-pos-iam": {
+      "reason": "target_quarantined",
+      "evidence_path": "editorial-approvals/scoped-corpus-release-20260910.json",
+      "evidence_sha256": "a528b0090743558b5ce828ecd1b98ef9260c99fb59089fd0267bd7466b9f24a0",
+      "source_paths": [
+        "content/Calculadoras/escore-iabp-shock-ii-estratificacao-de-mortalidade-em-30-dias-no-choque-cardiogenico.md"
+      ],
+      "detail": "Destino explicitamente retido pelo snapshot autorizado; preservar exclusão e bytes de origem."
+    },
+    "/biblioteca/exposicao-a-luz-artificial-a-noite-e-incidencia-de-doenca-cardiovascular-uk-biobank": {
+      "reason": "target_quarantined",
+      "evidence_path": "editorial-approvals/scoped-corpus-release-20260910.json",
+      "evidence_sha256": "a528b0090743558b5ce828ecd1b98ef9260c99fb59089fd0267bd7466b9f24a0",
+      "source_paths": [
+        "content/Geral/adversidade-na-infancia-e-risco-cardiovascular-vias-proteomicas-uk-biobank.md"
+      ],
+      "detail": "Destino explicitamente retido pelo snapshot autorizado; preservar exclusão e bytes de origem."
+    },
+    "/biblioteca/hipertensao-na-gestacao-e-risco-de-demencia-o-million-women-study-2025": {
+      "reason": "target_quarantined",
+      "evidence_path": "editorial-approvals/scoped-corpus-release-20260910.json",
+      "evidence_sha256": "a528b0090743558b5ce828ecd1b98ef9260c99fb59089fd0267bd7466b9f24a0",
+      "source_paths": [
+        "content/Gravidez/diabetes-gestacional-e-risco-cognitivo-demencia-materna-evidencia-2024-2025.md"
+      ],
+      "detail": "Destino explicitamente retido pelo snapshot autorizado; preservar exclusão e bytes de origem."
+    },
+    "/biblioteca/milvexian-sca-ensaio-librexia-acs-interrompido-por-futilidade": {
+      "reason": "target_quarantined",
+      "evidence_path": "editorial-approvals/scoped-corpus-release-20260910.json",
+      "evidence_sha256": "a528b0090743558b5ce828ecd1b98ef9260c99fb59089fd0267bd7466b9f24a0",
+      "source_paths": [
+        "content/Doença_coronariana/librexia-acs-milvexian-inibidor-do-fator-xia-apos-sindrome-coronariana-aguda.md",
+        "content/Farmacologia/fesomersen-antisense-fator-xi-ensaio-re-thinc-esrd-hemodialise.md"
+      ],
+      "detail": "Destino explicitamente retido pelo snapshot autorizado; preservar exclusão e bytes de origem."
+    },
+    "/biblioteca/retatrutida-agonista-triplo-gip-glp-1-glucagon-e-risco-cardiovascular-transcend-t2d-1": {
+      "reason": "target_quarantined",
+      "evidence_path": "editorial-approvals/scoped-corpus-release-20260910.json",
+      "evidence_sha256": "a528b0090743558b5ce828ecd1b98ef9260c99fb59089fd0267bd7466b9f24a0",
+      "source_paths": [
+        "content/Farmacologia/semaglutida-tirzepatida-sinal-de-naion-farmacovigilancia-ema-mhra-2025-2026.md"
+      ],
+      "detail": "Destino explicitamente retido pelo snapshot autorizado; preservar exclusão e bytes de origem."
+    },
+    "/biblioteca/roxi-vte-i-e-ii-anticorpos-anti-fator-xi-na-profilaxia-de-tev-pos-artroplastia-de-joelho": {
+      "reason": "target_quarantined",
+      "evidence_path": "editorial-approvals/scoped-corpus-release-20260910.json",
+      "evidence_sha256": "a528b0090743558b5ce828ecd1b98ef9260c99fb59089fd0267bd7466b9f24a0",
+      "source_paths": [
+        "content/Farmacologia/fesomersen-antisense-fator-xi-ensaio-re-thinc-esrd-hemodialise.md",
+        "content/Tromboembolismo/inibidores-do-fator-xi-xia-no-tev-da-prevencao-pos-operatoria-ao-que-ainda-falta-provar.md"
+      ],
+      "detail": "Destino explicitamente retido pelo snapshot autorizado; preservar exclusão e bytes de origem."
+    },
+    "/biblioteca/sistema-modular-marca-passo-sem-eletrodo-e-cdi-subcutaneo-em-comunicacao-sem-fio-o-ensaio-modular-atp": {
+      "reason": "target_quarantined",
+      "evidence_path": "editorial-approvals/scoped-corpus-release-20260910.json",
+      "evidence_sha256": "a528b0090743558b5ce828ecd1b98ef9260c99fb59089fd0267bd7466b9f24a0",
+      "source_paths": [
+        "content/Dispositivos/sistema-modular-marca-passo-sem-eletrodo-e-cdi-subcutaneo-o-ensaio-modular-atp.md"
+      ],
+      "detail": "Destino explicitamente retido pelo snapshot autorizado; preservar exclusão e bytes de origem."
+    },
+    "/biblioteca/tep-subsegmentar-isolado-anticoagular-ou-vigiar-stopape-e-metanalise-2026": {
+      "reason": "target_quarantined",
+      "evidence_path": "editorial-approvals/scoped-corpus-release-20260910.json",
+      "evidence_sha256": "a528b0090743558b5ce828ecd1b98ef9260c99fb59089fd0267bd7466b9f24a0",
+      "source_paths": [
+        "content/Tromboembolismo/tep-subsegmentar-isolado-vigilancia-clinica-versus-anticoagulacao.md"
+      ],
+      "detail": "Destino explicitamente retido pelo snapshot autorizado; preservar exclusão e bytes de origem."
+    },
+    "/biblioteca/terapia-de-ativacao-barorreflexa-barostim-na-icfer-beat-hf-e-o-ensaio-confirmatorio-benefit-hf": {
+      "reason": "target_quarantined",
+      "evidence_path": "editorial-approvals/scoped-corpus-release-20260910.json",
+      "evidence_sha256": "a528b0090743558b5ce828ecd1b98ef9260c99fb59089fd0267bd7466b9f24a0",
+      "source_paths": [
+        "content/Insuficiência_cardíaca/modulacao-de-contratilidade-cardiaca-ccm-na-icfer-reanalise-por-win-ratio-do-fix-hf-5c.md"
+      ],
+      "detail": "Destino explicitamente retido pelo snapshot autorizado; preservar exclusão e bytes de origem."
+    }
+  }
+}

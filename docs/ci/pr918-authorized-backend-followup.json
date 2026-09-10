@@ -6,8 +6,9 @@
   "authorization": {
     "date": "2026-09-10",
     "source": "Explicit user instruction in this working session",
-    "instruction": "Nao fazer teste completo do backend 2 vezes repetidas ok, nao ha necessidade",
-    "scope": "One initial full execution, followed by all failed modules plus impacted tests and mandatory financial regressions; only PR918 and its exact main integration tree."
+    "instruction": "Sem novo ci backend",
+    "mode": "authorized-no-backend-ci",
+    "scope": "Only PR918 and its exact main integration. No full or focused backend CI, including migrations/test jobs. This records the responsible owner decision; it is not a passing test certificate."
   },
   "impact_tests": {
     "deploy.sh": [
@@ -107,5 +108,39 @@
       "backend/tests/test_upload_security.py",
       "backend/tests/test_whatsapp_assistant_behavior.py"
     ]
-  }
+  },
+  "authorization_history": [
+    {
+      "date": "2026-09-10",
+      "source": "Explicit user instruction in this working session",
+      "instruction": "Nao fazer teste completo do backend 2 vezes repetidas ok, nao ha necessidade",
+      "scope": "One initial full execution, followed by all failed modules plus impacted tests and mandatory financial regressions; only PR918 and its exact main integration tree."
+    }
+  ],
+  "functional_baseline_sha": "266cde7454ec808f37dd4ab0ef6d83415b607c63",
+  "initial_full_result": {
+    "conclusion": "failure",
+    "failed": 84,
+    "passed": 3038,
+    "skipped": 3
+  },
+  "failed_followup_classification": {
+    "run_id": 34422978741,
+    "head_sha": "266cde7454ec808f37dd4ab0ef6d83415b607c63",
+    "classification_job_id": 102702204503,
+    "classification_conclusion": "failure",
+    "cause": "Baseline job-log download failed before classification; HTTP reason unavailable in captured stderr.",
+    "backend_job_id": 102702299040,
+    "backend_conclusion": "skipped",
+    "focused_job_id": 102702298687,
+    "focused_conclusion": "skipped"
+  },
+  "local_evidence": [
+    "docs/release-tct-plans-prevalentes-20260910.md",
+    "docs/commercial-plans-ai-wallet-20260909.md",
+    "docs/heart-team-frontier-and-scoped-reconciliation-20260910.md",
+    "docs/ai-configuration-audit-20260910.md",
+    "docs/ci/pr918-initial-backend-failures.json"
+  ],
+  "decision_document": "docs/ci/pr918-no-backend-ci-owner-decision.md"
 }

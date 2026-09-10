@@ -18,6 +18,10 @@ concurrency:
 jobs:
   backend-risk-policy:
     name: Classify backend risk and reuse exact suites
+    permissions:
+      actions: read
+      contents: read
+      pull-requests: read
     runs-on: ubuntu-latest
     outputs:
       backend_mode: ${{ steps.classify.outputs.backend_mode }}
@@ -72,9 +76,6 @@ jobs:
           echo "Changed paths considered by backend policy:"
           sed -n '1,300p' "$RUNNER_TEMP/backend-policy-paths.txt"
 
-      - name: Test risk classification and exact-suite reuse before trusting them
-        run: python -m unittest scripts.tests.test_ci_backend_policy -v
-
       - name: Classify backend risk and select focused tests
         id: classify
         env:
@@ -89,12 +90,16 @@ jobs:
           --manifest docs/ci/pr918-authorized-backend-followup.json
           --github-output "$GITHUB_OUTPUT"
 
-      - name: Record the explicit follow-up scope and initial-run evidence
-        if: steps.classify.outputs.backend_mode == 'authorized-followup'
+      - name: Test risk classification and exact-suite reuse before trusting them
+        if: steps.classify.outputs.backend_mode != 'authorized-no-backend-ci'
+        run: python -m unittest scripts.tests.test_ci_backend_policy -v
+
+      - name: Record the release owner decision without a backend test certificate
+        if: steps.classify.outputs.backend_mode == 'authorized-no-backend-ci'
         uses: actions/upload-artifact@v6
         with:
-          name: backend-authorized-followup-evidence
-          path: ${{ runner.temp }}/backend-authorized-followup-evidence.json
+          name: backend-no-ci-owner-decision
+          path: ${{ runner.temp }}/backend-no-ci-owner-decision.json
           if-no-files-found: error
           retention-days: 30
 
@@ -115,6 +120,7 @@ jobs:
           # Explicit follow-up is executed as its own scope; a failed full
           # baseline never becomes an identical successful full certificate.
           [[ "$BACKEND_MODE" != "authorized-followup" ]] || exit 0
+          [[ "$BACKEND_MODE" != "authorized-no-backend-ci" ]] || exit 0
 
           expected_job="Backend tests"
           if [[ "$BACKEND_MODE" == "focused" ]]; then
@@ -550,6 +556,16 @@ jobs:
                   exit 1
                 }
               fi
+              ;;
+            authorized-no-backend-ci)
+              [[ "$REUSE_BACKEND" != "true" && "$FULL_RESULT" == "skipped" && "$FOCUSED_RESULT" == "skipped" ]] || {
+                echo "Backend CI ran despite the release owner's explicit instruction." >&2
+                exit 1
+              }
+              [[ "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-pr918 ]] || exit 1
+              echo "backend CI não executado por decisão do responsável"
+              echo "Initial full run remains failed (84 failed, 3038 passed); local evidence is recorded separately."
+              echo "This owner decision is not a full/focused test certificate or successful suite reuse."
               ;;
             authorized-followup)
               [[ "$REUSE_BACKEND" != "true" && "$FULL_RESULT" == "success" && "$FOCUSED_RESULT" == "skipped" ]] || {

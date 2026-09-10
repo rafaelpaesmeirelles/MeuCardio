@@ -388,5 +388,131 @@ class AuthorizedFollowupTests(unittest.TestCase):
             self.assertIn(gate, workflow)
 
 
+class AuthorizedNoBackendCITests(unittest.TestCase):
+    def setUp(self):
+        import json
+        self.manifest = json.loads((ROOT / "docs/ci/pr918-authorized-backend-followup.json").read_text())
+        self.job = {"id":102689862687, "run_id":34418893616,
+                    "head_sha":"eddcb80d3fc99e7c25b330c943637f49691826fa",
+                    "name":"Backend tests", "status":"completed", "conclusion":"failure"}
+
+    def decide(self, manifest=None, job=None):
+        return POLICY.classify_authorized_no_backend_ci(["backend/app/core/config.py"],
+            repo_root=ROOT, manifest=manifest or self.manifest, baseline_job=job or self.job)
+
+    def test_owner_decision_selects_no_tests_and_preserves_failed_full(self):
+        decision = self.decide()
+        self.assertEqual(decision.backend_mode, "authorized-no-backend-ci")
+        self.assertEqual(decision.focused_tests, ())
+        self.assertIn("not-a-full-or-focused-test-certificate", decision.reasons)
+        self.assertIn("backend CI não executado por decisão do responsável", decision.reasons)
+        self.assertNotEqual(decision.suite_key, "backend-risk-v1-full")
+
+    def test_missing_instruction_wrong_origin_or_changed_result_are_rejected(self):
+        import copy
+        for change in ["instruction", "origin", "result", "evidence"]:
+            manifest=copy.deepcopy(self.manifest)
+            if change == "instruction": manifest["authorization"]["instruction"]=""
+            if change == "origin": manifest["functional_baseline_sha"]="0"*40
+            if change == "result": manifest["initial_full_result"]["conclusion"]="success"
+            if change == "evidence": manifest["local_evidence"]=["docs/missing-owner-evidence.md"]
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                self.decide(manifest=manifest)
+
+    def test_baseline_metadata_cannot_claim_success_or_another_job(self):
+        for change in [{"conclusion":"success"},{"status":"in_progress"},{"id":1},{"run_id":1},{"head_sha":"0"*40}]:
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                self.decide(job={**self.job,**change})
+
+    def test_metadata_only_entrypoint_never_downloads_logs_or_starts_tests(self):
+        import json,os
+        from unittest.mock import patch
+        spec=importlib.util.spec_from_file_location("ci_no_backend_entrypoint",ROOT/"scripts/ci_backend_followup.py")
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        candidate="a"*40
+        pr={"number":918,"base":{"ref":"main"},"head":{"sha":candidate}}
+        calls=[]
+        def github(path, **kwargs):
+            calls.append(path)
+            if path.endswith("/pulls/918"): return pr
+            if path.endswith("/actions/jobs/102689862687"): return self.job
+            self.fail(f"Unexpected remote evidence call: {path}")
+        def git(*args):
+            if args == ("rev-parse","HEAD"): return candidate
+            if args[0] == "rev-parse": return "same-tree"
+            if args[0] == "diff": return "docs/ci/pr918-no-backend-ci-owner-decision.md"
+            self.fail(f"Unexpected git call: {args}")
+        original=os.getcwd()
+        with tempfile.TemporaryDirectory() as directory:
+            paths=Path(directory)/"paths";paths.write_text("backend/app/core/config.py\n")
+            output=Path(directory)/"output"
+            argv=["ci_backend_followup.py","--paths-file",str(paths),"--repo-root",str(ROOT),
+                  "--manifest",str(ROOT/"docs/ci/pr918-authorized-backend-followup.json"),"--github-output",str(output)]
+            try:
+                with patch.object(sys,"argv",argv), patch.dict(os.environ,{"EVENT_NAME":"pull_request","PR_NUMBER":"918","REPOSITORY":"rafaelpaesmeirelles/MeuCardio","RUNNER_TEMP":directory}), \
+                     patch.object(module,"github",github), patch.object(module,"git",git), patch.object(module.subprocess,"run") as commands, patch("builtins.print"):
+                    self.assertEqual(module.main(),0)
+                    for call in commands.call_args_list:
+                        self.assertEqual(call.args[0][0],"git")
+                self.assertIn("backend_mode=authorized-no-backend-ci",output.read_text())
+                evidence=json.loads((Path(directory)/"backend-no-ci-owner-decision.json").read_text())
+                self.assertFalse(evidence["backend_ci_executed"])
+                self.assertIsNone(evidence["test_certificate"])
+                self.assertEqual(evidence["baseline_conclusion"],"failure")
+                self.assertFalse(any("/logs" in call for call in calls))
+            finally:
+                os.chdir(original)
+
+    def test_incomplete_main_association_never_falls_back_to_backend_tests(self):
+        import os
+        from unittest.mock import patch
+        spec = importlib.util.spec_from_file_location("ci_no_backend_integration", ROOT / "scripts/ci_backend_followup.py")
+        module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+        candidate, head = "b" * 40, "a" * 40
+        original = os.getcwd()
+        with tempfile.TemporaryDirectory() as directory:
+            paths = Path(directory) / "paths"; paths.write_text("backend/app/core/config.py\n")
+            output = Path(directory) / "output"
+            argv = ["ci_backend_followup.py", "--paths-file", str(paths), "--repo-root", str(ROOT),
+                    "--manifest", str(ROOT / "docs/ci/pr918-authorized-backend-followup.json"),
+                    "--github-output", str(output)]
+            try:
+                for merge_sha, candidate_tree in [(candidate, "different-tree"), ("c" * 40, "pr-tree")]:
+                    pr = {"number": 918, "base": {"ref": "main"}, "head": {"sha": head},
+                          "merged": True, "merge_commit_sha": merge_sha}
+                    def github(path, **kwargs):
+                        if path.endswith("/pulls/918"): return pr
+                        if path.endswith(f"/commits/{candidate}/pulls"): return []
+                        self.fail(f"Unexpected GitHub request: {path}")
+                    def git(*args):
+                        if args == ("rev-parse", "HEAD"): return candidate
+                        if args == ("rev-parse", "HEAD^{tree}"): return candidate_tree
+                        if args == ("rev-parse", f"{head}^{{tree}}"): return "pr-tree"
+                        self.fail(f"Unexpected git request: {args}")
+                    with self.subTest(merge_sha=merge_sha, candidate_tree=candidate_tree), \
+                         patch.object(sys, "argv", argv), \
+                         patch.dict(os.environ, {"EVENT_NAME": "push", "PR_NUMBER": "", "REPOSITORY": "rafaelpaesmeirelles/MeuCardio"}), \
+                         patch.object(module, "github", github), patch.object(module, "git", git), \
+                         patch.object(module.subprocess, "run"), patch.object(module, "classify_paths") as fallback, \
+                         patch.object(module, "classify_authorized_no_backend_ci") as waiver:
+                        with self.assertRaisesRegex(ValueError, "integration evidence is incomplete"):
+                            module.main()
+                        fallback.assert_not_called()
+                        waiver.assert_not_called()
+                        self.assertFalse(output.exists())
+            finally:
+                os.chdir(original)
+
+    def test_workflow_requires_both_backend_jobs_skipped_and_skips_ci_policy_tests(self):
+        workflow=(ROOT/".github/workflows/ci.yml").read_text()
+        self.assertIn("if: steps.classify.outputs.backend_mode != 'authorized-no-backend-ci'",workflow)
+        section=workflow.split("authorized-no-backend-ci)",1)[1].split(";;",1)[0]
+        self.assertIn('"$FULL_RESULT" == "skipped"',section)
+        self.assertIn('"$FOCUSED_RESULT" == "skipped"',section)
+        self.assertIn('"$REUSE_BACKEND" != "true"',section)
+        self.assertIn("backend CI não executado por decisão do responsável",section)
+        self.assertIn("pull-requests: read",workflow)
+
+
 if __name__ == "__main__":
     unittest.main()

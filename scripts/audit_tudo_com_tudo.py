@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 from collections import Counter, defaultdict
 import json
+import importlib.util
 from pathlib import Path
 import re
 import sys
@@ -23,6 +24,9 @@ from app.services.disease_manifest import load_disease_records  # noqa: E402
 from app.services.triage_manifest import load_triage_records  # noqa: E402
 from app.services.transversal_manifest import load_transversal_relations  # noqa: E402
 from app.services.clinical_markdown_links import parse_clinical_markdown_target  # noqa: E402
+from app.services.clinical_link_availability import (  # noqa: E402
+    unavailable_clinical_link_reason, validate_unavailable_clinical_reference,
+)
 
 LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)\s]+)\)")
 CODE_BLOCK = re.compile(r"```.*?```|~~~.*?~~~", re.DOTALL)
@@ -150,12 +154,15 @@ def _reference_issue(
     target: str,
     allowed: tuple[str, ...],
     slugs: dict[str, set[str]],
+    quarantined: dict[str, set[str]] | None = None,
 ) -> dict[str, Any] | None:
     """Distingue alvo ausente de alvo existente com tipo incompatível."""
     actual_types = sorted(kind for kind, values in slugs.items() if target in values)
-    if any(kind in actual_types for kind in allowed):
+    valid_types = set(actual_types).intersection(allowed)
+    if valid_types and any(target not in (quarantined or {}).get(kind, set()) for kind in valid_types):
         return None
-    reason = "wrong_target_type" if actual_types else "missing_target"
+    reason = ("target_quarantined" if valid_types else
+              "wrong_target_type" if actual_types else "missing_target")
     return {
         "field": field,
         "source": source,
@@ -250,6 +257,75 @@ def _evidence_study_issue(
     return None
 
 
+def _snapshot_inventory(root: Path):
+    """Reuse the exact source fingerprints used to construct the authorization.
+
+    Loading this pure helper does not build a release or access the database.
+    """
+    path = ROOT / "scripts/build_scoped_corpus_release.py"
+    spec = importlib.util.spec_from_file_location("audit_scoped_inventory", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.inventory(root)
+
+
+def _load_scoped_approval(path: Path, root: Path) -> dict[str, Any]:
+    from app.services.corpus_release_authorization import validate_snapshot_authorization
+
+    records, fingerprints = _snapshot_inventory(root)
+    approved, metadata = validate_snapshot_authorization(
+        path, canonical_slugs={front: set(items) for front, items in records.items()},
+        fingerprints=fingerprints,
+        review_statuses={front: {slug: row["metadata"].get("review_status")
+                                for slug, row in items.items()}
+                         for front, items in records.items()},
+        source_fingerprints={front: {slug: row["source_sha256"] for slug, row in items.items()}
+                             for front, items in records.items()},
+        repository_root=root,
+    )
+    kind_by_front = {front: kind for kind, front in APPROVAL_FRONT_BY_KIND.items()}
+    return {
+        "approved": {kind_by_front[front]: slugs for front, slugs in approved.items()},
+        "quarantined": {kind_by_front[front]: set(slugs)
+                        for front, slugs in metadata["quarantined"].items()},
+        "metadata": {**metadata, "path": str(path),
+                     "decision": "approved_snapshot_with_quarantine",
+                     "item_count": metadata["authorized_total"]},
+    }
+
+
+def _load_scoped_policy(root: Path) -> dict[str, Any] | None:
+    paths = []
+    for path in sorted((root / "editorial-approvals").glob("*.json")):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(payload, dict) and (payload.get("schema_version") == 2
+                or payload.get("decision") == "approved_snapshot_with_quarantine"):
+            paths.append(path)
+    if len(paths) > 1:
+        raise ValueError("Mais de um snapshot editorial: selecione uma autoridade inequívoca")
+    return _load_scoped_approval(paths[0], root) if paths else None
+
+
+def _effective_editorial_records(kind, records, scoped):
+    """Model the reconciler's exact policy while preserving raw source bytes."""
+    if scoped is None:
+        return records
+    approved = scoped["approved"].get(kind, set())
+    quarantine = scoped["quarantined"].get(kind, set())
+    effective = []
+    for record in records:
+        slug = record.get("slug")
+        row = dict(record)
+        # Invalid source flags are still audited; a boolean is policy input.
+        if "published" not in row or isinstance(row["published"], bool):
+            if slug in quarantine:
+                row["published"] = False
+            elif slug in approved:
+                row["published"] = True
+        effective.append(row)
+    return effective
+
+
 def _load_editorial_approvals(root: Path = ROOT) -> dict[str, set[str]]:
     """Lê aprovações versionadas sem alterar status nem flags do corpus."""
     kind_by_front = {front: kind for kind, front in APPROVAL_FRONT_BY_KIND.items()}
@@ -288,6 +364,7 @@ def _editorial_issues(
     records: list[dict[str, Any]],
     *,
     approved: set[str] | None = None,
+    provenance_approved: set[str] | None = None,
 ) -> list[dict[str, Any]]:
     """Aplica invariantes editoriais sem promover nem publicar conteúdo."""
     approved = approved or set()
@@ -336,6 +413,11 @@ def _editorial_issues(
                 "review_status": status,
                 "published": published,
             })
+        if identifier in (provenance_approved or set()):
+            # This exact disclosure denies a human signature, not the completed
+            # agent review. Other pending-review language still blocks release.
+            note = re.sub(r"\bsem\s+aprova[cç][aã]o\s+humana\s+presumida\b", "", note,
+                          flags=re.IGNORECASE)
         if status == "revisado" and any(pattern.search(note) for pattern in PENDING_REVIEW_PATTERNS):
             issues.append({
                 "kind": kind,
@@ -770,8 +852,16 @@ def audit(
         if calculator.status == "implementada"
     }
 
+    scoped = _load_scoped_policy(ROOT)
+    quarantine_by_type = {}
+    if scoped:
+        quarantine_by_type = dict(scoped["quarantined"])
+        documents_quarantine = quarantine_by_type.pop("documento_markdown", set())
+        quarantine_by_type["documento"] = documents_quarantine & slugs["documento"]
+        quarantine_by_type["fluxograma"] = documents_quarantine & slugs["fluxograma"]
     stats: dict[str, Counter] = defaultdict(Counter)
     broken: list[dict[str, Any]] = []
+    unavailable_references: list[dict[str, Any]] = []
 
     def add(field: str, source: str, target: str, allowed: tuple[str, ...]) -> None:
         stats[field]["total"] += 1
@@ -781,6 +871,7 @@ def audit(
             target=target,
             allowed=allowed,
             slugs=slugs,
+            quarantined=quarantine_by_type,
         )
         if issue is None:
             stats[field]["resolved"] += 1
@@ -844,7 +935,24 @@ def audit(
         )
 
     for slug, document in documents.items():
+        if scoped and slug in scoped["quarantined"].get("documento_markdown", set()):
+            continue  # Retained sources are inventoried, not exposed as public navigation.
         for target in LINK.findall(_markdown_without_code(document["body"])):
+            if unavailable_clinical_link_reason(target):
+                if scoped is None:
+                    raise RuntimeError("Unavailable disposition requires a validated scoped snapshot")
+                disposition = validate_unavailable_clinical_reference(
+                    target, repository_root=ROOT, canonical_document_slugs=set(documents),
+                    quarantined_document_slugs=scoped["quarantined"].get("documento_markdown", set()),
+                    source_path=document["path"],
+                )
+                unavailable_references.append({
+                    "field": "Document.body_md.link", "source": slug,
+                    "source_path": document["path"], **disposition,
+                })
+                stats["Document.body_md.link"]["total"] += 1
+                stats["Document.body_md.link"]["unavailable"] += 1
+                continue
             reference = parse_clinical_markdown_target(target)
             if reference:
                 allowed, target_slug = reference
@@ -930,7 +1038,10 @@ def audit(
         for item in items
     )
     review_counts.update(item.get("review_status", "ausente") for item in documents.values())
-    approvals = _load_editorial_approvals()
+    approvals = _load_editorial_approvals(ROOT)
+    if scoped is not None:
+        # A legacy manifest cannot override this complete, validated partition.
+        approvals = scoped["approved"]
     editorial_issues: list[dict[str, Any]] = []
     editorial_quarantine: list[dict[str, Any]] = []
     release_readiness_issues: list[dict[str, Any]] = []
@@ -940,7 +1051,11 @@ def audit(
     editorial_issues.extend(_approval_target_issues(approvals, records_by_kind))
     for kind, items in manifests.items():
         editorial_issues.extend(
-            _editorial_issues(kind, items, approved=approvals.get(kind, set()))
+            _editorial_issues(
+                kind, _effective_editorial_records(kind, items, scoped),
+                approved=approvals.get(kind, set()),
+                provenance_approved=approvals.get(kind, set()) if scoped else None,
+            )
         )
         editorial_quarantine.extend(_editorial_quarantine(kind, items))
         if strict_release:
@@ -948,12 +1063,21 @@ def audit(
         publication_flags[kind] = _publication_flags(items)
     editorial_issues.extend(_editorial_issues(
         "documento_markdown",
-        document_records,
+        _effective_editorial_records("documento_markdown", document_records, scoped),
         approved=approvals.get("documento_markdown", set()),
+        provenance_approved=approvals.get("documento_markdown", set()) if scoped else None,
     ))
     editorial_quarantine.extend(
         _editorial_quarantine("documento_markdown", document_records)
     )
+    if scoped is not None:
+        editorial_quarantine = [
+            {"kind": kind, "identifier": slug, "reason": "snapshot_quarantine",
+             "review_status": record.get("review_status"),
+             "published": record.get("published", "missing"), "effective_published": False}
+            for kind, items in records_by_kind.items() for record in items
+            if (slug := record.get("slug")) in scoped["quarantined"].get(kind, set())
+        ]
     if strict_release:
         release_readiness_issues.extend(
             _strict_release_issues("documento_markdown", document_records)
@@ -970,9 +1094,14 @@ def audit(
     approval_manifest_metadata: dict[str, Any] | None = None
     approval_manifest_issues: list[dict[str, Any]] = []
     if approval_manifest is not None:
-        approval_manifest_issues, approval_manifest_metadata = (
-            _approval_manifest_issues(approval_manifest, records_by_kind)
-        )
+        payload = json.loads(approval_manifest.read_text(encoding="utf-8"))
+        if payload.get("schema_version") == 2:
+            selected = _load_scoped_approval(approval_manifest, ROOT)
+            approval_manifest_metadata = selected["metadata"]
+        else:
+            approval_manifest_issues, approval_manifest_metadata = (
+                _approval_manifest_issues(approval_manifest, records_by_kind)
+            )
 
     # Cobertura conservadora: frentes com tema próprio + emergência herdada +
     # medicamento em Farmacologia + doença/triagem somente via vínculo explícito.
@@ -1000,6 +1129,10 @@ def audit(
         "editorial_quarantine_count": len(editorial_quarantine),
         "references": {field: dict(counts) for field, counts in sorted(stats.items())},
         "broken_references": broken,
+        "unavailable_references": unavailable_references,
+        "unavailable_reference_count": len(unavailable_references),
+        "unavailable_reference_reasons": dict(Counter(
+            row["reason"] for row in unavailable_references)),
         "editorial_issues": editorial_issues,
         "approval_manifest_issues": approval_manifest_issues,
         "explicit_disease_relations": {
@@ -1025,6 +1158,12 @@ def audit(
             "specialty_area_associations": specialty_area_associations,
         },
     }
+    if scoped is not None:
+        result["scoped_publication"] = scoped["metadata"]
+        result["effective_publication_flags"] = {
+            kind: _publication_flags(_effective_editorial_records(kind, items, scoped))
+            for kind, items in records_by_kind.items()
+        }
     release_strict = strict_release or strict_release_manifest is not None
     if release_strict:
         result["release_readiness_issues"] = release_readiness_issues

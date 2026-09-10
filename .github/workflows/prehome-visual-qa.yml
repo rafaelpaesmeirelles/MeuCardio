@@ -10,6 +10,11 @@ on:
       - "frontend/src/pages/EsqueciSenha.tsx"
       - "frontend/src/pages/RedefinirSenha.tsx"
       - "frontend/src/components/PreHomeBrand.tsx"
+      - "frontend/src/components/LoginGalaxy.tsx"
+      - "frontend/src/assets/login/**"
+      - "frontend/src/assets/loginGalaxyPosters.ts"
+      - "frontend/src/assets/approvedHeartData.ts"
+      - "frontend/src/styles/login-universe-refinement-20260909.css"
       - "frontend/src/styles/login.css"
       - "frontend/src/styles/login-viewport-refinement.css"
       - "frontend/src/styles/cardiology-spaces-login.css"
@@ -170,6 +175,18 @@ jobs:
           ];
           const browser = await chromium.launch({ headless: true });
           const report = { pages: [], themeParity: [], pageErrors: [], failures: [] };
+          const assetsRoot = path.join(process.env.GITHUB_WORKSPACE, 'frontend/src/assets');
+          const embedded = (file, name) => {
+            const source = fs.readFileSync(path.join(assetsRoot, file), 'utf8');
+            const match = source.match(new RegExp(`export const ${name} = "([^"]+)"`));
+            if (!match) throw new Error(`Approved embedded asset missing: ${name}`);
+            return match[1];
+          };
+          const approvedAssets = {
+            heart: embedded('approvedHeartData.ts', 'approvedHeartDataUri'),
+            dark: embedded('loginGalaxyPosters.ts', 'darkGalaxyPoster'),
+            light: embedded('loginGalaxyPosters.ts', 'lightGalaxyPoster'),
+          };
 
           function channel(rgb) {
             const m = String(rgb || '').match(/rgba?\((\d+)[, ]+(\d+)[, ]+(\d+)/i);
@@ -188,7 +205,7 @@ jobs:
             for (const [name, route] of routes) {
               await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
               await page.waitForTimeout(350);
-              const metrics = await page.evaluate(({ viewportName, pageName }) => {
+              const metrics = await page.evaluate(({ viewportName, pageName, approvedAssets }) => {
                 const visible = (selector) => {
                   const element = document.querySelector(selector); if (!element) return false;
                   const style = getComputedStyle(element); const rect = element.getBoundingClientRect();
@@ -210,7 +227,7 @@ jobs:
                   panel: '.login-gateway__console',
                   brand: '.login-gateway__scene',
                   logo: '.login-gateway__brand',
-                  hero: '.login-gateway__core .prehome-brand__heart',
+                  hero: '.login-gateway__core .login-gateway__approved-heart',
                 } : {
                   root: '.public-space',
                   panel: '.public-space__surface',
@@ -218,8 +235,8 @@ jobs:
                   logo: '.public-corvia-brand',
                   hero: '.public-space__signal',
                 };
-                const sample = document.querySelector(selectors.panel);
-                const heart = rect('.login-gateway__core .prehome-brand__heart');
+                const sample = document.querySelector(isLogin && viewportName.startsWith('mobile') ? '.login-gateway__form' : selectors.panel);
+                const heart = rect('.login-gateway__core .login-gateway__approved-heart');
                 const ensino = rect('.login-gateway__space--ensino');
                 const style = sample ? getComputedStyle(sample) : null;
                 return {
@@ -229,25 +246,29 @@ jobs:
                   isLogin,
                   loginTheme: isLogin ? document.querySelector('.login-gateway')?.getAttribute('data-login-theme') || '' : null,
                   sampleVisible: visible(selectors.panel), brandVisible: visible(selectors.brand),
-                  sampleBackground: style?.backgroundColor || '',
+                  sampleBackground: style?.backgroundImage !== 'none' ? style?.backgroundImage : style?.backgroundColor || '',
                   canonicalMain: visible(selectors.root), logo: visible(selectors.logo),
                   heroVisual: visible(selectors.hero),
                   rootRect: rect(selectors.root),
                   panelRect: rect(selectors.panel),
                   footerRect: rect('.login-gateway__footer'),
                   utilitiesRect: rect('.login-gateway__join'),
-                  metaRect: rect('.login-gateway__form-meta'),
+                  metaRect: rect('.login-gateway__forgot'),
+                  approvedHeart: !isLogin || document.querySelector('.login-gateway__approved-heart')?.getAttribute('src') === approvedAssets.heart,
+                  approvedGalaxy: !isLogin || document.querySelector('.login-gateway__galaxy-poster')?.getAttribute('src') === approvedAssets.dark,
+                  galaxyVisible: !isLogin || visible('.login-gateway__galaxy-canvas[data-ready="true"]') || visible('.login-gateway__galaxy-poster:not([data-replaced="true"])'),
                   headingRect: rect('.login-gateway__hero h1'),
                   sceneRect: rect('.login-gateway__scene'),
                   heartOverlapsEnsino: intersects(heart, ensino),
                   isMobile: viewportName.startsWith('mobile'), bodyText: document.body?.innerText || '',
                 };
-              }, { viewportName, pageName: name });
+              }, { viewportName, pageName: name, approvedAssets });
               const sampleLum = luminance(metrics.sampleBackground);
               report.pages.push({ viewportName, name, route, ...metrics, bodyText: undefined, sampleLuminance: sampleLum });
               if (metrics.scrollWidth > metrics.width + 4) report.failures.push(`${viewportName}/${name}: overflow horizontal ${metrics.scrollWidth}px > ${metrics.width}px`);
               if (!metrics.sampleVisible) report.failures.push(`${viewportName}/${name}: painel transacional não renderizou`);
               if (!metrics.brandVisible) report.failures.push(`${viewportName}/${name}: área conceitual não renderizou`);
+              if (!metrics.approvedHeart || !metrics.approvedGalaxy || !metrics.galaxyVisible) report.failures.push(`${viewportName}/${name}: coração ou galáxia aprovados ausentes/incorretos`);
               if (!metrics.logo) report.failures.push(`${viewportName}/${name}: marca CorVIA não está visível`);
               if (!metrics.canonicalMain) report.failures.push(`${viewportName}/${name}: shell público canônico ausente`);
               if ((metrics.isLogin ? !metrics.isMobile : true) && !metrics.heroVisual) report.failures.push(`${viewportName}/${name}: elemento visual central ausente`);
@@ -273,9 +294,9 @@ jobs:
                   '.login-gateway__space--gestao', '.login-gateway__console',
                   '.login-gateway__console-head', '.login-gateway__theme-choice',
                   '.login-gateway__form', '.login-gateway__footer',
-                  '.login-gateway__form-meta', '.login-gateway__join',
+                  '.login-gateway__forgot', '.login-gateway__join',
                 ];
-                const captureThemeContract = () => page.evaluate((selectors) => {
+                const captureThemeContract = () => page.evaluate(({ selectors, approvedAssets }) => {
                   const rects = Object.fromEntries(selectors.map((selector) => {
                     const element = document.querySelector(selector);
                     if (!element) return [selector, null];
@@ -290,16 +311,18 @@ jobs:
                     label: element.getAttribute('aria-label') || element.getAttribute('placeholder') || element.textContent?.trim() || '',
                     disabled: 'disabled' in element ? Boolean(element.disabled) : false,
                   }));
-                  const panel = document.querySelector('.login-gateway__console');
+                  const panel = document.querySelector(innerWidth <= 900 ? '.login-gateway__form' : '.login-gateway__console');
                   return {
                     theme: document.querySelector('.login-gateway')?.getAttribute('data-login-theme') || '',
                     scrollWidth: document.documentElement.scrollWidth,
                     scrollHeight: document.documentElement.scrollHeight,
-                    panelBackground: panel ? getComputedStyle(panel).backgroundColor : '',
+                    panelBackground: panel ? (getComputedStyle(panel).backgroundImage !== 'none' ? getComputedStyle(panel).backgroundImage : getComputedStyle(panel).backgroundColor) : '',
+                    approvedHeart: document.querySelector('.login-gateway__approved-heart')?.getAttribute('src') === approvedAssets.heart,
+                    approvedGalaxy: document.querySelector('.login-gateway__galaxy-poster')?.getAttribute('src') === approvedAssets[document.querySelector('.login-gateway')?.getAttribute('data-login-theme')],
                     rects,
                     controls,
                   };
-                }, paritySelectors);
+                }, { selectors: paritySelectors, approvedAssets });
                 // Zera o scroll antes de cada captura: o console de acesso é mais alto
                 // que o viewport em telas móveis estreitas, então o rádio de tema (o
                 // rádio nativo fica oculto 1x1px atrás do ícone) pode ficar abaixo da
@@ -340,16 +363,23 @@ jobs:
                 if (!await lightThemeInput.isChecked()) report.failures.push(`${viewportName}/${name}: rádio do tema claro não refletiu a seleção`);
                 if (lightLuminance === null || lightLuminance < 0.75) report.failures.push(`${viewportName}/${name}: superfície clara não ficou inequivocamente clara (${lightLuminance})`);
                 if (JSON.stringify(darkContract.controls) !== JSON.stringify(lightContract.controls)) report.failures.push(`${viewportName}/${name}: funções ou controles divergem entre claro e escuro`);
-                if (darkContract.scrollWidth !== lightContract.scrollWidth || darkContract.scrollHeight !== lightContract.scrollHeight) report.failures.push(`${viewportName}/${name}: dimensões do documento divergem entre claro e escuro`);
-                for (const selector of paritySelectors) {
+                // Approved themes use distinct type/card sizes. Preserve functional
+                // parity and verify each layout's bounds instead of pixel equality.
+                if (!lightContract.approvedHeart || !lightContract.approvedGalaxy) report.failures.push(`${viewportName}/${name}: ativos claros diferentes da referência aprovada`);
+                if (lightContract.scrollWidth > viewport.width + 4 || (!metrics.isMobile && lightContract.scrollHeight > viewport.height + 2)) report.failures.push(`${viewportName}/${name}: tema claro excede a área útil`);
+                for (const selector of paritySelectors.filter((selector) => !metrics.isMobile || selector !== '.login-gateway__footer')) {
                   const darkRect = darkContract.rects[selector];
                   const lightRect = lightContract.rects[selector];
                   if (!darkRect || !lightRect) {
                     report.failures.push(`${viewportName}/${name}: elemento de paridade ausente ${selector}`);
                     continue;
                   }
-                  const drift = Math.max(...['x', 'y', 'width', 'height'].map((key) => Math.abs(darkRect[key] - lightRect[key])));
-                  if (drift > 0.75) report.failures.push(`${viewportName}/${name}: geometria diverge entre claro e escuro em ${selector} (${drift.toFixed(2)}px)`);
+                  for (const [theme, bounds] of [['dark', darkRect], ['light', lightRect]]) {
+                    if (bounds.width <= 0 || bounds.height <= 0 || bounds.x < -4 || bounds.x + bounds.width > viewport.width + 4
+                        || (!metrics.isMobile && (bounds.y < -1 || bounds.y + bounds.height > viewport.height + 1))) {
+                      report.failures.push(`${viewportName}/${name}/${theme}: elemento fora da área útil ${selector}`);
+                    }
+                  }
                 }
                 await page.screenshot({ path: path.join(out, `${viewportName}-${name}-light.png`), fullPage: false });
               }

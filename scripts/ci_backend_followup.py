@@ -8,7 +8,7 @@ import os
 from pathlib import Path
 import subprocess
 
-from ci_backend_policy import classify_paths, classify_authorized_followup, _write_github_outputs
+from ci_backend_policy import classify_paths, classify_authorized_no_backend_ci, _write_github_outputs
 
 
 def github(path: str, *, raw: bool = False):
@@ -72,27 +72,38 @@ def main() -> int:
             raise ValueError("Invalid PR head")
         subprocess.run(["git", "fetch", "--no-tags", "origin", pr_head], check=True, capture_output=True)
         associated = github(f"repos/{repository}/commits/{candidate}/pulls") if event == "push" else []
+        candidate_tree = git("rev-parse", "HEAD^{tree}")
+        pr_tree = git("rev-parse", f"{pr_head}^{{tree}}")
         applicable = authorized_context(manifest, event=event, number=number, candidate=candidate,
-            pr=pr, candidate_tree=git("rev-parse", "HEAD^{tree}"),
-            pr_tree=git("rev-parse", f"{pr_head}^{{tree}}"), associated=associated)
+            pr=pr, candidate_tree=candidate_tree, pr_tree=pr_tree, associated=associated)
         if event == "pull_request" and number == "918" and not applicable:
             raise ValueError("PR918 candidate is stale or outside the exact authorized head; no repeated full suite")
-        if event == "push" and any(item.get("number") == 918 for item in associated) and not applicable:
+        # GitHub's commit-to-PR association may lag behind the merge metadata.
+        # Recognizing a possible integration only blocks fallback; it never grants
+        # the exception without every authorized_context identity check above.
+        possible_integration = (any(item.get("number") == 918 for item in associated)
+            or (bool(pr.get("merged")) and
+                (candidate == pr.get("merge_commit_sha") or candidate_tree == pr_tree)))
+        if event == "push" and possible_integration and not applicable:
             raise ValueError("PR918 integration evidence is incomplete or its tree differs; refusing a repeated full suite")
         if applicable:
-            baseline = manifest["baseline_sha"]
-            if candidate == baseline:
-                raise ValueError("The initial full run must finish; it cannot be repeated as a follow-up")
+            baseline = manifest.get("functional_baseline_sha")
+            if baseline != "266cde7454ec808f37dd4ab0ef6d83415b607c63":
+                raise ValueError("The functional origin of this release is not the authorized 266cde74")
             paths = changed_followup_paths(baseline, pr_head, candidate)
+            # Metadata only. The owner explicitly revoked further backend CI;
+            # no job-log download, pytest invocation or suite certificate here.
             job = github(f"repos/{repository}/actions/jobs/{manifest['baseline_job_id']}")
-            log = github(f"repos/{repository}/actions/jobs/{manifest['baseline_job_id']}/logs", raw=True)
-            decision = classify_authorized_followup(paths, repo_root=root, manifest=manifest, baseline_job=job, baseline_log=log)
-            summary = {"authorization": manifest["authorization"], "baseline_sha": baseline,
+            decision = classify_authorized_no_backend_ci(paths, repo_root=root, manifest=manifest, baseline_job=job)
+            summary = {"authorization": manifest["authorization"], "functional_baseline_sha": baseline,
                        "baseline_run_id": manifest["baseline_run_id"], "baseline_job_id": manifest["baseline_job_id"],
-                       "baseline_conclusion": job["conclusion"], "changed_paths": paths,
-                       "focused_tests": decision.focused_tests, "suite_key": decision.suite_key,
-                       "scope": "authorized follow-up; not a passing full-suite certificate"}
-            Path(os.environ.get("RUNNER_TEMP", "/tmp"), "backend-authorized-followup-evidence.json").write_text(json.dumps(summary, indent=2)+"\n")
+                       "baseline_conclusion": job["conclusion"], "initial_full_result": manifest["initial_full_result"],
+                       "failed_followup_classification": manifest["failed_followup_classification"],
+                       "candidate_sha": candidate, "candidate_tree": git("rev-parse", "HEAD^{tree}"),
+                       "local_evidence": manifest["local_evidence"], "changed_paths": paths,
+                       "backend_ci_executed": False, "test_certificate": None,
+                       "scope": "backend CI não executado por decisão do responsável"}
+            Path(os.environ.get("RUNNER_TEMP", "/tmp"), "backend-no-ci-owner-decision.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2)+"\n")
     if decision is None:
         decision = classify_paths(original_paths, repo_root=root)
     if args.github_output:

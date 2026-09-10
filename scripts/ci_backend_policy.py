@@ -500,6 +500,38 @@ def classify_authorized_followup(paths: Iterable[str], *, repo_root: Path, manif
                  f"baseline-report-sha256:{report_hash}", *(f"baseline-failed-module:{test}" for test in failed),
                  *(f"followup-impact:{path}" for path in normalized)))
 
+
+def classify_authorized_no_backend_ci(paths: Iterable[str], *, repo_root: Path,
+                                      manifest: dict, baseline_job: dict) -> PolicyDecision:
+    """Record the release owner's explicit decision; do not certify test success."""
+    auth = manifest.get("authorization", {})
+    if (manifest.get("pull_request") != 918
+            or manifest.get("functional_baseline_sha") != "266cde7454ec808f37dd4ab0ef6d83415b607c63"
+            or auth.get("mode") != "authorized-no-backend-ci"
+            or auth.get("instruction") != "Sem novo ci backend"):
+        raise ValueError("Missing explicit no-backend-CI authorization for this release")
+    if (baseline_job.get("id") != 102689862687 or baseline_job.get("run_id") != 34418893616
+            or baseline_job.get("head_sha") != "eddcb80d3fc99e7c25b330c943637f49691826fa"
+            or baseline_job.get("name") != "Backend tests"
+            or baseline_job.get("status") != "completed" or baseline_job.get("conclusion") != "failure"):
+        raise ValueError("Initial full-run metadata does not match its recorded failure")
+    if manifest.get("initial_full_result") != {"conclusion": "failure", "failed": 84, "passed": 3038, "skipped": 3}:
+        raise ValueError("The initial full-suite result cannot be rewritten as successful")
+    evidence = manifest.get("local_evidence", [])
+    if not evidence:
+        raise ValueError("Local evidence references are missing")
+    for raw in [*evidence, manifest.get("decision_document", "")]:
+        path = _normalize_path(raw)
+        if not path.startswith("docs/") or not (repo_root / path).is_file():
+            raise ValueError(f"Missing release decision evidence: {path}")
+    normalized = sorted({_normalize_path(path) for path in paths if path.strip()})
+    return PolicyDecision(backend_mode="authorized-no-backend-ci",
+        suite_key="backend-risk-v1-authorized-no-backend-ci-pr918", focused_tests=(),
+        reasons=("backend CI não executado por decisão do responsável", "user-instruction:Sem novo ci backend",
+                 "not-a-full-or-focused-test-certificate", "initial-full-run:34418893616:failure:84-failed:3038-passed:3-skipped",
+                 "followup-266cde74:classification-failed:backend-and-focused-skipped",
+                 "local-evidence-recorded:not-reexecuted-by-CI", *(f"release-change:{path}" for path in normalized)))
+
 def _write_github_outputs(path: Path, decision: PolicyDecision) -> None:
     with path.open("a", encoding="utf-8") as stream:
         for key, value in decision.github_outputs().items():

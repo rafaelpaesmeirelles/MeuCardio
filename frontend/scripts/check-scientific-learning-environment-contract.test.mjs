@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
@@ -53,18 +53,16 @@ test("offers the third experience after login while login chooses only appearanc
 });
 
 test("keeps five scientific journeys and every scientific surface discoverable", () => {
-  const approvedScenes = {
-    descobrir: "consultorio",
-    evidencias: "hospital",
-    aprender: "ensino",
-    ensinar: "pesquisa",
-    produzir: "gestao",
-  };
-  for (const [id, sceneName] of Object.entries(approvedScenes)) {
+  const scientificJourneys = ["descobrir", "evidencias", "aprender", "ensinar", "produzir"];
+  for (const id of scientificJourneys) {
     assert.match(home, new RegExp(`id: "${id}"`));
-    assert.match(scene, new RegExp(`${id}:\\s*"/spaces/corvia-room-${sceneName}\\.jpg"`));
-    assert.match(scene, new RegExp(`${id}:\\s*"/spaces/corvia-room-${sceneName}-light(?:-640)?\\.(?:jpg|webp)"`));
+    for (const theme of ["dark", "light"]) {
+      const asset = `/spaces/corvia-science-${id}-${theme}-768.webp`;
+      assert.ok(scene.includes(`${id}: "${asset}"`), `missing approved ${id}/${theme} scene`);
+      assert.ok(existsSync(new URL(`../public${asset}`, import.meta.url)), `missing scene asset ${asset}`);
+    }
   }
+  assert.equal(scientificJourneys.length, 5);
   assert.match(scene, /theme\s*===\s*"light"\s*\?\s*LIGHT_SCENE_BY_SPACE\[space\]\s*:\s*SCENE_BY_SPACE\[space\]/);
   assert.match(scene, /src=\{scene\}/);
   assert.match(scene, /decoding="async"/);

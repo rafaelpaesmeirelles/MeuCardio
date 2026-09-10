@@ -22,22 +22,12 @@ from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.services.clinical_text import clinical_text_without_internal_overrides
 from app.services.content_areas import content_area_counts
+from app.services.clinical_markdown_links import rewrite_clinical_markdown_links
 
 router = APIRouter(prefix="/api/library", tags=["biblioteca"])
 
-_RELATIVE_DOCUMENT_LINK = re.compile(
-    r"(\]\()(?![a-z][a-z\d+.-]*:|//|/|#)(?:[^()\s]+/)*([^/()\s]+)\.md([?#][^)]*)?(\))",
-    re.IGNORECASE,
-)
-
-
 def _library_document_links(body: str) -> str:
-    return _RELATIVE_DOCUMENT_LINK.sub(
-        lambda match: (
-            f"{match[1]}/biblioteca/{match[2]}{match[3] or ''}{match[4]}"
-        ),
-        body,
-    )
+    return rewrite_clinical_markdown_links(body)
 
 # Os mínimos vêm da mesma fonte usada pelo reconciliador operacional. O número
 # de arquivos físicos é certificado pelo inventário versionado e não é inferido

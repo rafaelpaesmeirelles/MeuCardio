@@ -1,5 +1,9 @@
 # CorVIA — proposta de cobrança de IA
 
+## Atualização da decisão comercial — 10/09/2026
+
+Esta proposta histórica foi sucedida pelas decisões implementadas em `commercial-plans-ai-wallet-20260909.md`: Básico R$99,90, Básico + Mail R$119,90, IA R$149,90 e Completo IA + Mail R$169,90. A franquia piloto dos planos IA é R$40 em créditos de serviço, com limite protegido de custo fornecedor de R$10 por ciclo; os planos sem IA não oferecem assistentes. Checkout e recargas continuam desativados até o lançamento. As simulações e valores antigos abaixo foram preservados como histórico, não como oferta vigente. A contribuição semântica continua sem percentual de ganho medido devido à recusa do provedor registrada abaixo.
+
 Data de referência: 09/09/2026. Proposta para decisão comercial; nenhum preço, produto, saldo, assinatura ou cobrança foi alterado. As tarifas de fornecedores foram consultadas em fontes oficiais nesta data. Exemplos abaixo são simulações, não a fatura nem o consumo médio dos assinantes.
 
 **Resultado da tentativa de comparação da IA:** uma única chamada de embeddings para o lote de 16 perguntas foi recusada pelo provedor com HTTP 429, código `credit_balance_exhausted`, após aproximadamente 2,65 segundos. Não houve novas tentativas. O braço híbrido não pôde ser executado; **não existe percentual de ganho semântico medido nesta avaliação**. O fallback textual permite continuidade da recuperação, mas, neste teste, a contribuição da camada semântica paga estava indisponível. Isso não comprova indisponibilidade de todos os modelos ou provedores.
