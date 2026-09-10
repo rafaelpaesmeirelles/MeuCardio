@@ -49,44 +49,76 @@ SECTION_MANIFEST = "docs/ci/tct-section-visibility-no-backend-ci.json"
 SECTION_REPOSITORY = "rafaelpaesmeirelles/MeuCardio"
 
 
-def section_visibility_owner_decision(root: Path, *, event: str, number: str,
-                                      head_ref: str, repository: str):
-    """A separate owner decision for this correction; PR918 grants no authority."""
-    path = root / SECTION_MANIFEST
+EDITORIAL_BRANCH = "codex/fix-editorial-classifications-20260910"
+EDITORIAL_BASE = "4c58de6fb7cd64bd8767f062d9ef0ee814870cda"
+EDITORIAL_DECISION = "editorial-classifications-20260910"
+EDITORIAL_MANIFEST = "docs/ci/editorial-classifications-no-backend-ci.json"
+EDITORIAL_REPOSITORY = "rafaelpaesmeirelles/MeuCardio"
+
+SECTION_SCOPE = {
+    "manifest": SECTION_MANIFEST, "head_branch": SECTION_BRANCH,
+    "repository": SECTION_REPOSITORY, "decision_id": SECTION_DECISION,
+    "base_sha": SECTION_BASE, "minimum_pull_request": 919,
+    "local_evidence": "docs/tct-section-visibility-20260910.md",
+    "decision_document": "docs/ci/tct-section-visibility-owner-decision.md",
+    "suite_key": "backend-risk-v1-authorized-no-backend-ci-tct-section-visibility-20260910",
+}
+EDITORIAL_SCOPE = {
+    "manifest": EDITORIAL_MANIFEST, "head_branch": EDITORIAL_BRANCH,
+    "repository": EDITORIAL_REPOSITORY, "decision_id": EDITORIAL_DECISION,
+    "base_sha": EDITORIAL_BASE, "minimum_pull_request": 920,
+    "local_evidence": "docs/editorial-classification-audit-20260910.md",
+    "decision_document": "docs/ci/editorial-classifications-owner-decision.md",
+    "suite_key": "backend-risk-v1-authorized-no-backend-ci-editorial-classifications-20260910",
+}
+
+
+def section_visibility_owner_decision(root: Path, **context):
+    return scoped_owner_decision(root, scope=SECTION_SCOPE, **context)
+
+
+def editorial_classification_owner_decision(root: Path, **context):
+    return scoped_owner_decision(root, scope=EDITORIAL_SCOPE, **context)
+
+
+def scoped_owner_decision(root: Path, *, event: str, number: str,
+                          head_ref: str, repository: str, scope: dict):
+    """Verify one explicitly registered correction; no other PR grants authority."""
+    path = root / scope["manifest"]
     if not path.is_file():
-        if event == "pull_request" and head_ref == SECTION_BRANCH:
-            raise ValueError("Section-visibility owner decision missing; refusing backend CI")
+        if event == "pull_request" and head_ref == scope["head_branch"]:
+            raise ValueError("Scoped owner decision missing; refusing backend CI")
         return None
     manifest = json.loads(path.read_text())
     approved_number = manifest.get("pull_request")
     relevant_pr = event == "pull_request" and (
-        head_ref == SECTION_BRANCH or (approved_number is not None and number == str(approved_number)))
+        head_ref == scope["head_branch"] or (approved_number is not None and number == str(approved_number)))
     if not relevant_pr and event != "push":
         return None
-    if (repository != SECTION_REPOSITORY or manifest.get("repository") != SECTION_REPOSITORY
-            or manifest.get("decision_id") != SECTION_DECISION
-            or manifest.get("head_branch") != SECTION_BRANCH
-            or manifest.get("base_sha") != SECTION_BASE
+    if (repository != scope["repository"] or manifest.get("repository") != scope["repository"]
+            or manifest.get("decision_id") != scope["decision_id"]
+            or manifest.get("head_branch") != scope["head_branch"]
+            or manifest.get("base_sha") != scope["base_sha"]
             or manifest.get("authorization", {}).get("instruction") != "Sem novo ci backend"
             or manifest.get("authorization", {}).get("mode") != "authorized-no-backend-ci"):
-        raise ValueError("Section-visibility owner decision identity is invalid; refusing backend CI")
+        raise ValueError("Scoped owner decision identity is invalid; refusing backend CI")
     # The initial draft supplies the number. Before sealing it, no suite and no
     # successful waiver are allowed, even if someone prematurely merges it.
     if approved_number is None:
-        raise ValueError("Section-visibility bootstrap awaits a sealed PR number; refusing backend CI")
-    if not isinstance(approved_number, int) or isinstance(approved_number, bool) or approved_number <= 918:
-        raise ValueError("Section-visibility PR number is invalid; refusing backend CI")
+        raise ValueError("Scoped owner-decision bootstrap awaits a sealed PR number; refusing backend CI")
+    if not isinstance(approved_number, int) or isinstance(approved_number, bool) or approved_number < scope["minimum_pull_request"]:
+        raise ValueError("Scoped owner-decision PR number is invalid; refusing backend CI")
     candidate = git("rev-parse", "HEAD")
     pr = github(f"repos/{repository}/pulls/{approved_number}")
     pr_head = pr.get("head", {}).get("sha", "")
     if len(pr_head) != 40 or any(c not in "0123456789abcdef" for c in pr_head):
-        raise ValueError("Section-visibility PR head is invalid; refusing backend CI")
+        raise ValueError("Scoped owner-decision PR head is invalid; refusing backend CI")
     subprocess.run(["git", "fetch", "--no-tags", "origin", pr_head], check=True, capture_output=True)
     candidate_tree = git("rev-parse", "HEAD^{tree}")
     pr_tree = git("rev-parse", f"{pr_head}^{{tree}}")
     associated = github(f"repos/{repository}/commits/{candidate}/pulls") if event == "push" else []
     if not isinstance(associated, list):
-        raise ValueError("Section-visibility integration association is invalid")
+        raise ValueError("Scoped owner-decision integration association is invalid")
     possible_integration = (any(item.get("number") == approved_number for item in associated)
         or (bool(pr.get("merged")) and
             (candidate == pr.get("merge_commit_sha") or candidate_tree == pr_tree)))
@@ -95,22 +127,22 @@ def section_visibility_owner_decision(root: Path, *, event: str, number: str,
     identity = (pr.get("number") == approved_number
         and pr.get("base", {}).get("ref") == "main"
         and pr.get("base", {}).get("repo", {}).get("full_name") == repository
-        and pr.get("head", {}).get("ref") == SECTION_BRANCH
+        and pr.get("head", {}).get("ref") == scope["head_branch"]
         and pr.get("head", {}).get("repo", {}).get("full_name") == repository)
     applicable = identity and authorized_context({"pull_request": approved_number}, event=event,
         number=number, candidate=candidate, pr=pr, candidate_tree=candidate_tree,
         pr_tree=pr_tree, associated=associated)
-    if not applicable or (event == "pull_request" and head_ref != SECTION_BRANCH):
-        raise ValueError("Section-visibility PR/integration evidence incomplete; refusing backend CI")
-    paths = changed_followup_paths(SECTION_BASE, pr_head, candidate)
+    if not applicable or (event == "pull_request" and head_ref != scope["head_branch"]):
+        raise ValueError("Scoped owner-decision PR/integration evidence incomplete; refusing backend CI")
+    paths = changed_followup_paths(scope["base_sha"], pr_head, candidate)
     evidence = manifest.get("local_evidence", [])
-    if evidence != ["docs/tct-section-visibility-20260910.md"]:
-        raise ValueError("Section-visibility evidence references are invalid")
-    for evidence_path in [*evidence, "docs/ci/tct-section-visibility-owner-decision.md"]:
+    if evidence != [scope["local_evidence"]]:
+        raise ValueError("Scoped owner-decision evidence references are invalid")
+    for evidence_path in [*evidence, scope["decision_document"]]:
         if not (root / evidence_path).is_file():
-            raise ValueError("Section-visibility local evidence is missing")
-    summary = {"decision_id": SECTION_DECISION, "authorization": manifest["authorization"],
-        "pull_request": approved_number, "base_sha": SECTION_BASE,
+            raise ValueError("Scoped owner-decision local evidence is missing")
+    summary = {"decision_id": scope["decision_id"], "authorization": manifest["authorization"],
+        "pull_request": approved_number, "base_sha": scope["base_sha"],
         "candidate_sha": candidate, "candidate_tree": candidate_tree,
         "local_evidence": evidence, "changed_paths": paths,
         "backend_ci_executed": False, "test_certificate": None,
@@ -118,10 +150,10 @@ def section_visibility_owner_decision(root: Path, *, event: str, number: str,
     Path(os.environ.get("RUNNER_TEMP", "/tmp"), "backend-no-ci-owner-decision.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n")
     return PolicyDecision(backend_mode="authorized-no-backend-ci",
-        suite_key="backend-risk-v1-authorized-no-backend-ci-tct-section-visibility-20260910",
+        suite_key=scope["suite_key"],
         focused_tests=(), reasons=("backend CI não executado por decisão do responsável",
             "user-instruction:Sem novo ci backend", "not-a-full-or-focused-test-certificate",
-            f"independent-owner-decision:{SECTION_DECISION}", f"pull-request:{approved_number}"))
+            f"independent-owner-decision:{scope['decision_id']}", f"pull-request:{approved_number}"))
 
 
 def main() -> int:
@@ -136,8 +168,11 @@ def main() -> int:
     original_paths = args.paths_file.read_text().splitlines()
     decision = None
     event, number = os.environ.get("EVENT_NAME", ""), os.environ.get("PR_NUMBER", "")
-    decision = section_visibility_owner_decision(root, event=event, number=number,
-        head_ref=os.environ.get("PR_HEAD_REF", ""), repository=os.environ.get("REPOSITORY", ""))
+    context = dict(event=event, number=number, head_ref=os.environ.get("PR_HEAD_REF", ""),
+                   repository=os.environ.get("REPOSITORY", ""))
+    decision = editorial_classification_owner_decision(root, **context)
+    if decision is None:
+        decision = section_visibility_owner_decision(root, **context)
     if decision is not None:
         if args.github_output:
             _write_github_outputs(args.github_output, decision)

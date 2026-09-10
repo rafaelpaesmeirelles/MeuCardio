@@ -495,6 +495,7 @@ class AuthorizedNoBackendCITests(unittest.TestCase):
                          patch.object(module, "github", github), patch.object(module, "git", git), \
                          patch.object(module.subprocess, "run"), patch.object(module, "classify_paths") as fallback, \
                          patch.object(module, "section_visibility_owner_decision", return_value=None), \
+                         patch.object(module, "editorial_classification_owner_decision", return_value=None), \
                          patch.object(module, "classify_authorized_no_backend_ci") as waiver:
                         with self.assertRaisesRegex(ValueError, "integration evidence is incomplete"):
                             module.main()
