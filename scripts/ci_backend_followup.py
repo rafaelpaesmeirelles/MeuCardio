@@ -55,6 +55,22 @@ EDITORIAL_DECISION = "editorial-classifications-20260910"
 EDITORIAL_MANIFEST = "docs/ci/editorial-classifications-no-backend-ci.json"
 EDITORIAL_REPOSITORY = "rafaelpaesmeirelles/MeuCardio"
 
+HTTP_RETRY_BRANCH = "codex/fix-publication-http-retry-20260910"
+HTTP_RETRY_BASE = "0f341021314669c5fcb8bf81e15ec4f95c7c6934"
+HTTP_RETRY_DECISION = "publication-http-retry-20260910"
+HTTP_RETRY_MANIFEST = "docs/ci/publication-http-retry-no-backend-ci.json"
+HTTP_RETRY_REPOSITORY = "rafaelpaesmeirelles/MeuCardio"
+
+HTTP_RETRY_SCOPE = {
+    "manifest": HTTP_RETRY_MANIFEST, "head_branch": HTTP_RETRY_BRANCH,
+    "repository": HTTP_RETRY_REPOSITORY, "decision_id": HTTP_RETRY_DECISION,
+    "base_sha": HTTP_RETRY_BASE, "minimum_pull_request": 923,
+    "local_evidence": "docs/publication-http-retry-audit-20260910.md",
+    "decision_document": "docs/ci/publication-http-retry-owner-decision.md",
+    "suite_key": "backend-risk-v1-authorized-no-backend-ci-publication-http-retry-20260910",
+}
+
+
 FAVORITES_BRANCH = "codex/universal-favorites-20260910"
 FAVORITES_BASE = "97270582d93cac6327c9d843395fa704be831373"
 FAVORITES_DECISION = "universal-favorites-20260910"
@@ -119,6 +135,10 @@ def feature_discovery_owner_decision(root: Path, **context):
 
 def universal_favorites_owner_decision(root: Path, **context):
     return scoped_owner_decision(root, scope=FAVORITES_SCOPE, **context)
+
+
+def publication_http_retry_owner_decision(root: Path, **context):
+    return scoped_owner_decision(root, scope=HTTP_RETRY_SCOPE, **context)
 
 
 def scoped_owner_decision(root: Path, *, event: str, number: str,
@@ -210,7 +230,9 @@ def main() -> int:
     event, number = os.environ.get("EVENT_NAME", ""), os.environ.get("PR_NUMBER", "")
     context = dict(event=event, number=number, head_ref=os.environ.get("PR_HEAD_REF", ""),
                    repository=os.environ.get("REPOSITORY", ""))
-    decision = universal_favorites_owner_decision(root, **context)
+    decision = publication_http_retry_owner_decision(root, **context)
+    if decision is None:
+        decision = universal_favorites_owner_decision(root, **context)
     if decision is None:
         decision = feature_discovery_owner_decision(root, **context)
     if decision is None:

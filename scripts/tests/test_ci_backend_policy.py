@@ -498,6 +498,7 @@ class AuthorizedNoBackendCITests(unittest.TestCase):
                          patch.object(module, "editorial_classification_owner_decision", return_value=None), \
                          patch.object(module, "feature_discovery_owner_decision", return_value=None), \
                          patch.object(module, "universal_favorites_owner_decision", return_value=None), \
+                         patch.object(module, "publication_http_retry_owner_decision", return_value=None), \
                          patch.object(module, "classify_authorized_no_backend_ci") as waiver:
                         with self.assertRaisesRegex(ValueError, "integration evidence is incomplete"):
                             module.main()
