@@ -47,3 +47,10 @@ Final CI, exact release commits, gate runs and read-only production verification
 ## Operational dependencies preserved
 
 PR921 is already live at the base commit. Original acquisition and Portuguese processing are progressive; the implementation does not certify that all approximately 12,000 scientific items have full translations. Existing institutional and subscriber AI budgets remain unchanged. WhatsApp has a visible entry, but real activation still depends on configured Meta integration; no sandbox activation or outbound WhatsApp message is part of this change.
+
+
+## First PR gate follow-up
+
+Implementation head bd8ce12e72d7153ae3076a47133bf9e1f0977247 passed CI (both backend test jobs skipped), frontend, corpus database/inventory, deep inventory, route coverage and approved-reference QA. RC2 stopped at the static feature inventory because the newly authorized admin route/router had not been added to that second inventory. They are now registered explicitly, with the new supporting files protected; existing expectations remain.
+
+Visual QA completed the existing 32 mobile and 10 Intelligence cases with no page errors, then stopped when the new helper attempted to use the Home galaxy control on an internal page. The helper now operates the actual account-menu theme radio control, closes the overlay and asserts the resulting theme. No application UI, tolerance or existing case was removed. The corrected combined head must pass normal gates before merge.

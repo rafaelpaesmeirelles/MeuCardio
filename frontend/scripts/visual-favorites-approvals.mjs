@@ -43,7 +43,15 @@ export async function inspectFavoritesAndApprovals({ page, base, out, report, ap
   await page.context().route('**/api/**', handler);
   const fail = message => report.failures.push(`favorites-approvals: ${message}`);
   async function setTheme(theme) {
-    if (await page.locator('html').getAttribute('data-corvia-theme') !== theme) await page.locator('.galaxy-theme-toggle').first().click();
+    if (await page.locator('html').getAttribute('data-corvia-theme') !== theme) {
+      // Internal pages expose the theme selector in the account menu. The
+      // galaxy control belongs to Home/choice and is not present in AppFrame.
+      const account = page.locator('.cv-account__trigger');
+      if (await account.getAttribute('aria-expanded') !== 'true') await account.click();
+      await page.locator('.cv-account-menu').getByRole('radio', { name: theme === 'light' ? /Modo claro/ : /Modo escuro/ }).click();
+      if (await account.getAttribute('aria-expanded') === 'true') await account.click();
+      await page.locator('.cv-account-menu').waitFor({ state: 'hidden' });
+    }
     await page.waitForFunction(value => document.documentElement.getAttribute('data-corvia-theme') === value, theme);
   }
   async function geometry(selector, name) {
