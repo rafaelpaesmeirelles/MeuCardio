@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from app.services.disease_manifest import load_disease_records
 import re
 
 from app.services.clinical_rule_engine import (
@@ -23,6 +24,8 @@ SLUG = "endocardite-pediatrica"
 
 
 def _records(path: Path) -> list[dict]:
+    if path == DISEASES:
+        return load_disease_records(path)
     payload = json.loads(path.read_text(encoding="utf-8"))
     assert isinstance(payload, list)
     return payload
@@ -96,18 +99,19 @@ def test_referencias_tudo_com_tudo_resolvem_sem_inferencia_tematica():
         for item in _records(EXPLICIT_RELATIONS)
         if item["source_disease_slug"] == SLUG
     ]
-    assert {
-        (item["target_type"], item["target_slug"])
-        for item in relations
-    } == {
-        ("checklist", "investigacao-de-endocardite-com-hemocultura-negativa"),
-        ("checklist", "indicacao-e-timing-de-cirurgia-na-endocardite-complicada"),
-        ("trilha", "trilha-endocardite-infecciosa-do-diagnostico-ao-timing-cirurgico"),
-        ("trilha", "trilha-endocardite-situacoes-especiais"),
+    assert {(item["target_type"], item["target_slug"]) for item in relations} == {
+        ('caso_clinico', 'endocardite-infecciosa-pediatrica-cardiopatia-congenita-muda-a-microbiologia'),
+        ('checklist', 'indicacao-e-timing-de-cirurgia-na-endocardite-complicada'),
+        ('checklist', 'investigacao-de-endocardite-com-hemocultura-negativa'),
+        ('material_paciente', 'endocardite-pediatrica'),
+        ('trilha', 'trilha-endocardite-infecciosa-do-diagnostico-ao-timing-cirurgico'),
+        ('trilha', 'trilha-endocardite-situacoes-especiais'),
     }
     targets = {
         "checklist": {item["slug"] for item in _records(CHECKLISTS)},
         "trilha": {item["slug"] for item in _records(TRACKS)},
+        "caso_clinico": {item["slug"] for item in _records(ROOT / "casos-clinicos/metadados.json")},
+        "material_paciente": {item["slug"] for item in _records(ROOT / "material-paciente/metadados.json")},
     }
     assert all(item["target_slug"] in targets[item["target_type"]] for item in relations)
     assert all(item["review_status"] == "revisado" for item in relations)

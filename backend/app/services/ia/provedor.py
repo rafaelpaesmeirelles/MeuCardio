@@ -20,6 +20,7 @@ from dataclasses import dataclass
 from fastapi.encoders import jsonable_encoder
 
 from app.core.config import settings
+from app.services.ia.usage_control import AIUsageError, MeteredSDK, plan_rounds, plan_requests
 
 
 logger = logging.getLogger("meucardio.ia.provedor")
@@ -33,7 +34,12 @@ def _serializar_resultado_tool(resultado) -> str:
     essas funções diretamente. Sem esta conversão, a rotina era persistida e
     o ``json.dumps`` falhava antes de o assistente conseguir confirmá-la.
     """
-    return json.dumps(jsonable_encoder(resultado), ensure_ascii=False)
+    serialized = json.dumps(jsonable_encoder(resultado), ensure_ascii=False)
+    if len(serialized.encode("utf-8")) > 20_000:
+        # Bound the next paid request without executing the tool again.
+        preview = serialized.encode("utf-8")[:9_000].decode("utf-8", errors="ignore")
+        return json.dumps({"truncated": True, "preview": preview}, ensure_ascii=False)
+    return serialized
 
 
 @dataclass
@@ -62,6 +68,7 @@ class ProvedorIA(ABC):
         ferramentas: list[dict] | None = None,
         executor_ferramenta=None,
         max_output_tokens: int | None = None,
+        reasoning_effort: str | None = None,
     ) -> Resposta: ...
 
     @abstractmethod
@@ -123,7 +130,7 @@ class ProvedorOpenAI(ProvedorIA):
     def __init__(self) -> None:
         from openai import OpenAI
 
-        self._cliente = OpenAI(api_key=settings.openai_api_key)
+        self._cliente = MeteredSDK(OpenAI(api_key=settings.openai_api_key, max_retries=0), "openai")
         self._modelo = settings.openai_model
         self._modelo_embedding = settings.openai_embedding_model
 
@@ -144,12 +151,9 @@ class ProvedorOpenAI(ProvedorIA):
         ferramentas: list[dict] | None = None,
         executor_ferramenta=None,
         max_output_tokens: int | None = None,
+        reasoning_effort: str | None = None,
     ) -> Resposta:
-        # usar_internet, ferramentas e executor_ferramenta não têm
-        # efeito no caminho OpenAI — aceitos na assinatura por paridade de
-        # interface com ProvedorAnthropic. A validação de que usar_internet e
-        # ferramentas exigem provider="anthropic" é feita antes, na rota
-        # (app/api/ai.py), não aqui.
+        # Internet remains provider-specific; local tools share the existing executor.
         modelo_efetivo = modelo or self._modelo
         kwargs = {
             "model": modelo_efetivo,
@@ -160,6 +164,17 @@ class ProvedorOpenAI(ProvedorIA):
         else:
             kwargs["max_tokens"] = max_output_tokens or settings.ai_max_output_tokens
             kwargs["temperature"] = 0.2
+        if reasoning_effort is not None:
+            if not modelo_efetivo.startswith("gpt-5") or reasoning_effort not in {"low", "medium", "high"}:
+                raise AIUsageError("Esforço de raciocínio incompatível com o modelo OpenAI.", 422)
+            kwargs["reasoning_effort"] = reasoning_effort
+        if ferramentas:
+            from app.services.ia.openai_tools import run_tools
+            for event in run_tools(self._cliente, kwargs, ferramentas, executor_ferramenta,
+                                   stream=False, serialize=_serializar_resultado_tool):
+                if "final" in event:
+                    return event["final"]
+            raise RuntimeError("Resposta final da ferramenta ausente.")
         resp = self._cliente.chat.completions.create(**kwargs)
         uso = resp.usage
         return Resposta(
@@ -179,15 +194,24 @@ class ProvedorOpenAI(ProvedorIA):
         ferramentas: list[dict] | None = None,
         executor_ferramenta=None,
     ):
-        modelo_efetivo = self._modelo
-        stream = self._cliente.chat.completions.create(
-            model=modelo_efetivo,
-            messages=[{"role": "system", "content": sistema}, *mensagens],
-            max_tokens=settings.ai_max_output_tokens,
-            temperature=0.2,
-            stream=True,
-            stream_options={"include_usage": True},
-        )
+        modelo_efetivo = modelo or self._modelo
+        stream_kwargs = {
+            "model": modelo_efetivo,
+            "messages": [{"role": "system", "content": sistema}, *mensagens],
+            "stream": True, "stream_options": {"include_usage": True},
+        }
+        if modelo_efetivo.startswith("gpt-5"):
+            stream_kwargs["max_completion_tokens"] = settings.ai_max_output_tokens
+        else:
+            stream_kwargs.update(max_tokens=settings.ai_max_output_tokens, temperature=0.2)
+        if ferramentas:
+            from app.services.ia.openai_tools import run_tools
+            stream_kwargs.pop("stream")
+            stream_kwargs.pop("stream_options")
+            yield from run_tools(self._cliente, stream_kwargs, ferramentas, executor_ferramenta,
+                                 stream=True, serialize=_serializar_resultado_tool)
+            return
+        stream = self._cliente.chat.completions.create(**stream_kwargs)
         textos: list[str] = []
         tokens_entrada = 0
         tokens_saida = 0
@@ -207,7 +231,7 @@ class ProvedorOpenAI(ProvedorIA):
             tokens_saida=tokens_saida, modelo=modelo_efetivo, truncado=truncado,
         )}
 
-    def analisar_arquivo_clinico(
+    def _clinical_file_request_variants(
         self,
         sistema: str,
         instrucao: str,
@@ -215,7 +239,7 @@ class ProvedorOpenAI(ProvedorIA):
         media_type: str,
         modelo: str | None = None,
         max_output_tokens: int | None = None,
-    ) -> Resposta:
+    ) -> list[dict]:
         # Chat Completions aceita imagem inline, mas não PDF. Recusamos em vez
         # de transformar PDF em texto e perder justamente o traçado do ECG.
         if media_type == "application/pdf":
@@ -263,6 +287,32 @@ class ProvedorOpenAI(ProvedorIA):
                 })
             return kwargs
 
+        attempt_models = [modelo_efetivo]
+        if modelo_efetivo != self._MODELO_ECG_FALLBACK:
+            attempt_models.append(self._MODELO_ECG_FALLBACK)
+        attempts = []
+        for target in attempt_models:
+            attempt = kwargs_para(target)
+            attempts.extend([{**attempt, "response_format": {"type": "json_object"}}, attempt])
+        return attempts
+
+    def analisar_arquivo_clinico(
+        self,
+        sistema: str,
+        instrucao: str,
+        conteudo: bytes,
+        media_type: str,
+        modelo: str | None = None,
+        max_output_tokens: int | None = None,
+    ) -> Resposta:
+        attempts = self._clinical_file_request_variants(
+            sistema, instrucao, conteudo, media_type, modelo, max_output_tokens)
+        modelo_efetivo = attempts[0]["model"]
+
+        def kwargs_para(modelo_alvo: str):
+            return next(dict(item) for item in attempts
+                        if item["model"] == modelo_alvo and "response_format" not in item)
+
         def executar(modelo_alvo: str):
             kwargs = kwargs_para(modelo_alvo)
             from openai import BadRequestError
@@ -278,6 +328,10 @@ class ProvedorOpenAI(ProvedorIA):
                 # Uma repetição, no mesmo modelo, sem JSON mode. A saída ainda
                 # passa pelo parser e pelo schema clínico estritos.
                 return self._cliente.chat.completions.create(**kwargs)
+
+        # Bound all compatibility attempts before the first provider call.
+        # Failed validation calls settle at zero; only actual usage is debited.
+        plan_requests("openai", attempts)
 
         try:
             resp = executar(modelo_efetivo)
@@ -329,7 +383,7 @@ class ProvedorAnthropic(ProvedorIA):
     def __init__(self) -> None:
         import anthropic
 
-        self._cliente = anthropic.Anthropic(api_key=settings.anthropic_api_key)
+        self._cliente = MeteredSDK(anthropic.Anthropic(api_key=settings.anthropic_api_key, max_retries=0), "anthropic")
         self._modelo = settings.anthropic_model
 
     @property
@@ -428,11 +482,20 @@ class ProvedorAnthropic(ProvedorIA):
         ferramentas: list[dict] | None = None,
         executor_ferramenta=None,
         max_output_tokens: int | None = None,
+        reasoning_effort: str | None = None,
     ) -> Resposta:
         modelo_efetivo = modelo or self._modelo
         kwargs = self._kwargs_base(sistema, modelo_efetivo, usar_internet, ferramentas)
         kwargs["max_tokens"] = max_output_tokens or settings.ai_max_output_tokens
+        if reasoning_effort is not None:
+            compatible = modelo_efetivo.startswith(("claude-sonnet-5", "claude-opus-5", "claude-sonnet-4-6", "claude-opus-4-6"))
+            if not compatible or reasoning_effort not in {"low", "medium", "high"}:
+                raise AIUsageError("Esforço de raciocínio incompatível com o modelo Anthropic.", 422)
+            kwargs["output_config"] = {"effort": reasoning_effort}
         max_rodadas = self._MAX_RODADAS_TOOL_USE if ferramentas else self._MAX_RODADAS_PAUSE_TURN
+
+        plan_rounds("anthropic", {**kwargs, "messages": mensagens}, max_rodadas,
+                    tool_result_bytes=20_000 if ferramentas else 0)
 
         mensagens_turno = list(mensagens)
         textos: list[str] = []
@@ -492,6 +555,9 @@ class ProvedorAnthropic(ProvedorIA):
         kwargs = self._kwargs_base(sistema, modelo_efetivo, usar_internet, ferramentas)
         max_rodadas = self._MAX_RODADAS_TOOL_USE if ferramentas else self._MAX_RODADAS_PAUSE_TURN
 
+        plan_rounds("anthropic", {**kwargs, "messages": mensagens}, max_rodadas,
+                    tool_result_bytes=20_000 if ferramentas else 0)
+
         mensagens_turno = list(mensagens)
         textos: list[str] = []
         tokens_entrada = 0
@@ -537,7 +603,7 @@ class ProvedorAnthropic(ProvedorIA):
             truncado=resp.stop_reason == "max_tokens",
         )}
 
-    def analisar_arquivo_clinico(
+    def _clinical_file_request_variants(
         self,
         sistema: str,
         instrucao: str,
@@ -545,7 +611,7 @@ class ProvedorAnthropic(ProvedorIA):
         media_type: str,
         modelo: str | None = None,
         max_output_tokens: int | None = None,
-    ) -> Resposta:
+    ) -> list[dict]:
         modelo_efetivo = self._modelo_ecg_compativel(modelo)
         encoded = base64.b64encode(conteudo).decode("ascii")
         if media_type == "application/pdf":
@@ -565,7 +631,6 @@ class ProvedorAnthropic(ProvedorIA):
         kwargs = {
             "system": sistema,
             "max_tokens": max_output_tokens or settings.ai_max_output_tokens,
-            "temperature": 0,
             "messages": [{
                 "role": "user",
                 # Documento primeiro: ordem recomendada pelo provedor para
@@ -574,8 +639,40 @@ class ProvedorAnthropic(ProvedorIA):
             }],
         }
 
+        def kwargs_para(modelo_alvo: str):
+            # Sonnet 5 uses adaptive reasoning and rejects non-default sampling
+            # parameters. Keep deterministic sampling only for older models.
+            sampling = {} if modelo_alvo.startswith("claude-sonnet-5") else {"temperature": 0}
+            return {"model": modelo_alvo, **kwargs, **sampling}
+
+        attempt_models = [modelo_efetivo]
+        if modelo_efetivo != self._MODELO_ECG_PADRAO:
+            attempt_models.append(self._MODELO_ECG_PADRAO)
+        return [kwargs_para(target) for target in attempt_models]
+
+    def analisar_arquivo_clinico(
+        self,
+        sistema: str,
+        instrucao: str,
+        conteudo: bytes,
+        media_type: str,
+        modelo: str | None = None,
+        max_output_tokens: int | None = None,
+    ) -> Resposta:
+        attempts = self._clinical_file_request_variants(
+            sistema, instrucao, conteudo, media_type, modelo, max_output_tokens)
+        modelo_efetivo = attempts[0]["model"]
+
+        def kwargs_para(modelo_alvo: str):
+            return next(dict(item) for item in attempts if item["model"] == modelo_alvo)
+
+        def executar(modelo_alvo: str):
+            return self._cliente.messages.create(**kwargs_para(modelo_alvo))
+
+        plan_requests("anthropic", attempts)
+
         try:
-            resp = self._cliente.messages.create(model=modelo_efetivo, **kwargs)
+            resp = executar(modelo_efetivo)
         except Exception as error:
             from anthropic import BadRequestError
 
@@ -592,7 +689,7 @@ class ProvedorAnthropic(ProvedorIA):
                 getattr(error, "status_code", None),
             )
             modelo_efetivo = self._MODELO_ECG_PADRAO
-            resp = self._cliente.messages.create(model=modelo_efetivo, **kwargs)
+            resp = executar(modelo_efetivo)
         texto = "".join(
             bloco.text for bloco in resp.content if getattr(bloco, "type", None) == "text"
         )

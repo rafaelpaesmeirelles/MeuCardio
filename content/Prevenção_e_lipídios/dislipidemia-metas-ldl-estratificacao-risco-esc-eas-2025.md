@@ -1,13 +1,20 @@
 ---
-title: "Dislipidemia — Metas de LDL, Estratificação de Risco e a Atualização ESC/EAS 2025"
+title: Dislipidemia — Metas de LDL, Estratificação de Risco e a Atualização ESC/EAS 2025
 slug: dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025
-theme: "Prevenção e lipídios"
+theme: Prevenção e lipídios
 kind: protocolo
 review_status: revisado
-source_refs: ["Mach F, Koskinas KC, Roeters van Lennep J et al. 2025 focused update of the 2019 ESC/EAS guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190", "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188."]
-legacy_source: "Pesquisado e redigido para preencher lacuna identificada em COBERTURA.md — tema tinha apenas 3 documentos."
+review_note: 'Correção técnica assistida por IA em 09/09/2026: nomenclatura da meta opcional <40 mg/dL, faixas etárias
+  dos modelos e distinção entre mecanismo e evidência dos fármacos; sem aprovação humana presumida. Revisão científica
+  assistida por IA e revisão cruzada entre agentes em 09/09/2026; ajustes consolidados pelo coordenador. Não representa
+  revisão humana independente. Escopo, fontes verificadas e limites documentados em docs/producao-prevalentes-20260909.md.'
+source_refs:
+- 'Mach F, Koskinas KC, Roeters van Lennep J et al. 2025 focused update of the 2019 ESC/EAS guidelines for the management
+  of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190'
+- 'Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular
+  risk. Eur Heart J. 2020;41(1):111-188.'
+legacy_source: Pesquisado e redigido para preencher lacuna identificada em COBERTURA.md — tema tinha apenas 3 documentos.
 ---
-
 # Dislipidemia — Metas de LDL, Estratificação de Risco e a Atualização ESC/EAS 2025
 
 ## O que mudou na atualização de 2025 (e o que não mudou)
@@ -28,19 +35,21 @@ legacy_source: "Pesquisado e redigido para preencher lacuna identificada em COBE
 | Risco moderado | < 100 mg/dL |
 | Alto risco | < 70 mg/dL **e** redução ≥ 50% do valor basal |
 | Muito alto risco | < 55 mg/dL **e** redução ≥ 50% do valor basal |
-| Risco extremo (evento cardiovascular recorrente em até 2 anos, em uso de estatina em dose máxima tolerada) | < 40 mg/dL |
+| ASCVD com segundo evento vascular em até 2 anos, sob estatina máxima tolerada: opção individualizada | < 40 mg/dL pode ser considerado (ESC/EAS 2019: IIb/B) |
+
+A última linha não constitui uma quinta categoria formal chamada “risco extremo” na ESC/EAS; expressa uma opção de meta em recorrência, com força de recomendação distinta. Não confundir com classificações de outras sociedades.
 
 ## Como estratificar o risco
 
 1. Pacientes com doença aterosclerótica já estabelecida (IAM prévio, AVC isquêmico, doença arterial periférica), diabetes com lesão de órgão-alvo, doença renal crônica grave, ou hipercolesterolemia familiar já são classificados diretamente como alto ou muito alto risco — não precisam de escore.
-2. Para os demais, calcular **SCORE2** (< 70 anos) ou **SCORE2-OP** (≥ 70 anos) — estima risco de evento cardiovascular fatal e não fatal em 10 anos.
+2. Para os demais, calcular **SCORE2** (40–69 anos) ou **SCORE2-OP** (70–89 anos), nas populações elegíveis dos modelos — estima risco de evento cardiovascular fatal e não fatal em 10 anos.
 3. Considerar **modificadores de risco** que podem reclassificar um paciente para uma categoria mais alta mesmo com escore limítrofe: Lp(a) elevada, proteína C-reativa de alta sensibilidade persistentemente elevada, escore de cálcio coronariano elevado, história familiar de doença cardiovascular precoce.
 
 ## Tratamento farmacológico
 
 - **Estatina é a primeira escolha** para a grande maioria dos pacientes.
 - Quando a meta não é atingida com estatina em dose máxima tolerada, associar **ezetimiba**.
-- Se ainda assim a meta não for atingida — especialmente em risco alto/muito alto — considerar **inibidor de PCSK9** (anticorpo monoclonal ou inclisirana) ou **ácido bempedoico** (alternativa para intolerância a estatina).
+- Se ainda assim a meta não for atingida — especialmente em risco alto/muito alto — considerar terapia adicional conforme risco, redução necessária e evidência específica: **anticorpos monoclonais anti-PCSK9**, **ácido bempedoico** ou outras opções apropriadas. A **inclisirana** reduz a síntese de PCSK9; não é anticorpo monoclonal. Redução de LDL e demonstração de benefício em eventos são desfechos diferentes e devem ser avaliados por fármaco e estudo, sem presumir equivalência.
 - **Evinacumabe**: opção específica para hipercolesterolemia familiar homozigota, quadro raro e grave que não responde adequadamente às terapias anteriores.
 - No contexto de síndrome coronariana aguda, a diretriz de 2025 reforça iniciar a combinação (estatina de alta intensidade + ezetimiba) **já durante a internação**, não esperar o retorno ambulatorial.
 
@@ -53,4 +62,20 @@ legacy_source: "Pesquisado e redigido para preencher lacuna identificada em COBE
 
 ## Referências
 
-Ver `source_refs` no cabeçalho deste documento.
+As fontes utilizadas estão listadas ao final da página.
+
+
+## Recursos relacionados no CorVIA
+
+- [Lipidograma na consulta: primeira leitura, discordância e decisão clínica](/biblioteca/lipidograma-na-consulta-primeira-leitura-discordancia-e-decisao-clinica)
+- [Retorno da dislipidemia: resposta insuficiente, segurança e intensificação](/biblioteca/retorno-da-dislipidemia-resposta-insuficiente-seguranca-e-intensificacao)
+- [Dislipidemia](/doencas/dislipidemia)
+- [atorvastatina calcica](/medicamentos?slug=atorvastatina-calcica)
+- [ezetimiba](/medicamentos?slug=ezetimiba)
+- [IMPROVE-IT (Cannon et al. 2015) — Ezetimiba associada a estatina após síndrome coronariana aguda](/estudos/improve-it-cannon-2015-ezetimiba-associada-a-estatina-apos-sca)
+- [Perfil lipídico (colesterol total, LDL-C, HDL-C e triglicerídeos)](/exames/perfil-lipidico-colesterol-total-ldl-hdl-e-triglicerideos)
+- [Apolipoproteína B (ApoB)](/exames/apolipoproteina-b-apob)
+- [Lipoproteína(a) [Lp(a)]](/exames/lipoproteina-a-lp-a)
+- [Dislipidemia: interpretação, metas, resposta e segurança](/trilhas/trilha-consulta-progressiva-dislipidemia)
+
+Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.

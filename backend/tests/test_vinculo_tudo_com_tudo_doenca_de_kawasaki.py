@@ -2,13 +2,14 @@
 from __future__ import annotations
 import json,re
 from pathlib import Path
+from app.services.disease_manifest import load_disease_records
 REPOSITORY_ROOT=Path(__file__).resolve().parents[2]; DOENCAS_PATH=REPOSITORY_ROOT/"doencas/metadados.json"; SLUG="doenca-de-kawasaki"; PASTAS_NAO_DOCUMENTO=("Farmacologia","Calculadoras","Exames"); TERMOS_TEMA=("kawasaki",)
 DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS={
  "dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca",
  "trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki",
 }
 def _load_doencas():
- items=json.loads(DOENCAS_PATH.read_text(encoding="utf-8")); return {x["slug"]:x for x in items}
+ items=load_disease_records(DOENCAS_PATH); return {x["slug"]:x for x in items}
 def _all_document_paths():
  result={}
  for p in (REPOSITORY_ROOT/"content").rglob("*.md"):
@@ -19,7 +20,7 @@ def _all_document_paths():
  return result
 def test_ficha_continua_existindo_com_mesmo_slug(): assert SLUG in _load_doencas()
 def test_marcacao_editorial_correta():
- i=_load_doencas()[SLUG]; assert i.get("fonte_producao")=="claude"; assert i.get("review_status")=="pendente_revisao"; assert i.get("completeness")=="completo"; assert i.get("area")=="cardiopediatria"; assert i.get("review_note"); assert i.get("version")==2
+ i=_load_doencas()[SLUG]; assert i.get("fonte_producao")=="claude"; assert i.get("review_status")=="revisado"; assert i.get("completeness")=="completo"; assert i.get("area")=="cardiopediatria"; assert i.get("review_note"); assert i.get("version")==3
 def test_catalogacao_e_conteudo_clinico_preexistente_preservados():
  i=_load_doencas()[SLUG]; assert i.get("name")=="Doença de Kawasaki"; assert "Kawasaki" in (i.get("aliases") or []); assert i.get("category")=="doenca_inflamatoria"; assert i.get("subtype")=="vasculite"; assert i.get("prevalence_rank")==2; assert i.get("treatment_summary"); assert len(i.get("assistant_rules") or [])>=4
 def test_vinculos_tudo_com_tudo_resolvem_e_sao_documentos_narrativos():

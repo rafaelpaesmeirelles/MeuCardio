@@ -1,0 +1,29 @@
+{
+  "patch_sha256": "ddd7a8915dc4c0a27155cff439ba3d357dfbc3c61c9f5688c559d5b8261b26bf",
+  "base_commit": "d7f51132d0c1e343e75ff0e85c69211adbf2daa3",
+  "errors": [],
+  "exact_patch_blobs_verified": 43,
+  "catalog_totals": {
+    "casos-clinicos": 927,
+    "checklists": 479,
+    "material-paciente": 454
+  },
+  "untouched_records_preserved": {
+    "casos-clinicos": 914,
+    "checklists": 471,
+    "material-paciente": 446
+  },
+  "round2_resources_verified": 24,
+  "reciprocal_documents_verified": 14,
+  "previous_relations_preserved": 3135,
+  "new_relations_verified": 24,
+  "progressive_trails": 8,
+  "progressive_stages": 67,
+  "native_posology_and_overlay_verified": 8,
+  "limits": [
+    "Static verification only; no database, paid AI, import, publication or deployment.",
+    "Scientific and cross reviews remain AI-assisted; no human review invented.",
+    "Final release corpus authorization belongs to the release owner.",
+    "Previously reported 431 links were not all rescanned here; exact patched blobs and 24 reciprocal resource mappings were checked."
+  ]
+}

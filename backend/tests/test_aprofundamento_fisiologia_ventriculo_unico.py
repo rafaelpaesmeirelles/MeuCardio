@@ -16,6 +16,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
+from app.services.disease_manifest import load_disease_records
 
 from app.services.clinical_rule_engine import validate_question_definitions, validate_rule_definitions
 
@@ -29,16 +30,18 @@ PASTAS_NAO_DOCUMENTO = ("Farmacologia", "Calculadoras", "Exames")
 DOSE_PATTERNS = (r"\d+[\.,]?\d*\s*mg(?!/d[lL])\b",r"\d+[\.,]?\d*\s*mg/kg",r"\d+[\.,]?\d*\s*mcg",r"\d+[\.,]?\d*\s*j/kg")
 ALLOWED_ADD_KEYS = {"risk","red_flags","supporting","opposing","missing_information","suggested_tests","differentials","ambulatory_flow","emergency_flow","messages"}
 TERMOS_TEMA = ("ventrículo único", "ventriculo unico", "fontan", "univentricular")
+# Compartilhamentos adicionais presentes na composição canônica da release autorizada.
 DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
-    "circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto",
-    "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
-    "descompensacao-aguda-da-circulacao-de-fontan",
-    "disfuncao-do-no-sinusal-na-crianca-e-no-adolescente-etiologia-pos-cirurgica-holter-e-indicacao-de-marca-passo",
-    "circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais",
+    'circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais',
+    'circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto',
+    'descompensacao-aguda-da-circulacao-de-fontan',
+    'disfuncao-do-no-sinusal-na-crianca-e-no-adolescente-etiologia-pos-cirurgica-holter-e-indicacao-de-marca-passo',
+    'tromboprofilaxia-na-circulacao-de-fontan',
+    'ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes',
 }
 
 def _load_doencas() -> dict[str, dict]:
-    items=json.loads(DOENCAS_PATH.read_text(encoding="utf-8")); return {item["slug"]:item for item in items}
+    items=load_disease_records(DOENCAS_PATH); return {item["slug"]:item for item in items}
 
 def _all_document_paths() -> dict[str, Path]:
     result={}
@@ -52,7 +55,7 @@ def _all_document_paths() -> dict[str, Path]:
 
 def test_ficha_continua_existindo_com_mesmo_slug(): assert SLUG in _load_doencas()
 def test_marcacao_editorial_correta():
-    item=_load_doencas()[SLUG]; assert item.get("fonte_producao")=="claude"; assert item.get("review_status")=="pendente_revisao"; assert item.get("completeness")=="completo"; assert item.get("area")=="cardiopediatria"; assert item.get("review_note"); assert item.get("source_refs") and len(item["source_refs"])>=5; assert item.get("version")==2
+    item=_load_doencas()[SLUG]; assert item.get("fonte_producao")=="claude"; assert item.get("review_status")=="revisado"; assert item.get("completeness")=="completo"; assert item.get("area")=="cardiopediatria"; assert item.get("review_note"); assert item.get("source_refs") and len(item["source_refs"])>=5; assert item.get("version")==2
 def test_catalogacao_original_preservada():
     item=_load_doencas()[SLUG]; assert item.get("name")=="Fisiologia de ventrículo único"; assert "circulação de Fontan" in (item.get("aliases") or []); assert item.get("category")=="cardiopatia_congenita"; assert item.get("subtype")=="coracao_univentricular"; assert item.get("prevalence_rank")==21
 def test_profundidade_minima_e_nao_e_resumo():

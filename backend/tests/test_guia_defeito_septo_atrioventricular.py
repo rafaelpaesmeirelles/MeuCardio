@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from app.services.disease_manifest import load_disease_records
 import re
 
 from app.services.clinical_rule_engine import (
@@ -23,6 +24,8 @@ SLUG = "defeito-septo-atrioventricular"
 
 
 def _records(path: Path) -> list[dict]:
+    if path == DISEASES:
+        return load_disease_records(path)
     payload = json.loads(path.read_text(encoding="utf-8"))
     assert isinstance(payload, list)
     return payload
@@ -96,23 +99,22 @@ def test_referencias_tudo_com_tudo_resolvem_sem_inferencia_tematica():
         for item in _records(EXPLICIT_RELATIONS)
         if item["source_disease_slug"] == SLUG
     ]
-    assert {
-        (item["target_type"], item["target_slug"])
-        for item in relations
-    } == {
-        (
-            "trilha",
-            "trilha-cardiologia-pediatrica-insuficiencia-cardiaca-e-hipertensao-pulmonar",
-        ),
-        ("trilha", "trilha-cardiopatia-congenita-triagem-para-centro-terciario"),
-        (
-            "checklist",
-            "elegibilidade-esportiva-na-crianca-e-no-adolescente-com-cardiopatia-congenita-por-lesao",
-        ),
+    assert {(item["target_type"], item["target_slug"]) for item in relations} == {
+        ('caso_clinico', 'defeito-do-septo-atrioventricular-total-reparo-primario-precoce-versus-bandagem-de-arteria-pulmonar-coorte-australiana'),
+        ('checklist', 'elegibilidade-esportiva-na-crianca-e-no-adolescente-com-cardiopatia-congenita-por-lesao'),
+        ('estudo', 'fong2021-preditores-de-reoperacao-e-mortalidade-apos-reparo-do-defeito-do-septo-atrioventricular-total'),
+        ('evidencia', 'cc-adulto-tc-defeito-do-septo-atrioventricular-com-sinais-de-ic'),
+        ('galeria', 'canal-atrioventricular-completo-eco-4-camaras'),
+        ('trilha', 'trilha-cardiologia-pediatrica-insuficiencia-cardiaca-e-hipertensao-pulmonar'),
+        ('trilha', 'trilha-cardiopatia-congenita-triagem-para-centro-terciario'),
     }
     targets = {
+        "evidencia": {item["slug"] for item in _records(ROOT / "evidencias/metadados.json")},
         "checklist": {item["slug"] for item in _records(CHECKLISTS)},
         "trilha": {item["slug"] for item in _records(TRACKS)},
+        "caso_clinico": {item["slug"] for item in _records(ROOT / "casos-clinicos/metadados.json")},
+        "estudo": {item["slug"] for item in _records(ROOT / "estudos/metadados.json")},
+        "galeria": {item["slug"] for item in _records(ROOT / "galeria/metadados.json")},
     }
     assert all(item["target_slug"] in targets[item["target_type"]] for item in relations)
     assert all(item["review_status"] == "revisado" for item in relations)

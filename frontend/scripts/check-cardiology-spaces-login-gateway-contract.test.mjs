@@ -4,6 +4,9 @@ import test from "node:test";
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const entrar = read("src/pages/Entrar.tsx");
+const galaxy = read("src/components/LoginGalaxy.tsx");
+const galaxyPosters = read("src/assets/loginGalaxyPosters.ts");
+const galaxyStyles = read("src/styles/login-universe-refinement-20260909.css");
 const styles = read("src/styles/cardiology-spaces-login.css");
 const finalStyles = read("src/styles/cardiology-spaces-login-approved-final.css");
 const approvedStyles = read("src/styles/corvia-approved-fidelity-20260904.css");
@@ -63,7 +66,7 @@ test("campos claros continuam vencendo o contrato global de formulário", () => 
   assert.match(publicStyles, /#root \.login\.login-gateway--dark[\s\S]*?color-scheme:\s*dark;/);
 });
 
-test("layout final aprovado: copy, galaxia real horaria, ECG, coração, login fino e associação", () => {
+test("layout final aprovado: copy, galáxia por tema, ECG, coração, login fino e associação", () => {
   assert.match(entrar, /Um universo de espaços\. <strong>Uma só cardiologia\.<\/strong>/);
   assert.match(entrar, /Consultório, Hospital, Ensino, Pesquisa e Gestão orbitando juntos no seu Universo Profissional\./);
   assert.match(entrar, /corvia-approved-fidelity-asset-fix-20260904\.css/);
@@ -78,23 +81,44 @@ test("layout final aprovado: copy, galaxia real horaria, ECG, coração, login f
   assert.match(entrar, /className="login-gateway__join" to="\/solicitar-acesso"/);
   assert.match(entrar, /<strong>Novo no CorVIA\?<\/strong><small>Solicite seu Acesso<\/small>/);
 
-  assert.match(entrar, /className="login-gateway__galaxy-image"/);
-  assert.match(entrar, /src="\/spaces\/galaxy-approved-canonical\.webp"/);
-  assert.match(entrar, /image\.src = "\/spaces\/galaxy-approved-canonical\.webp"/,
-    "o canvas e a imagem de fallback devem usar a mesma galáxia canônica");
-  assert.match(entrar, /className="login-gateway__galaxy-canvas"/);
-  assert.match(entrar, /const durationMs = 85_000/);
-  assert.match(entrar, /context\.scale\(1, projectionY\)/);
-  assert.match(entrar, /context\.rotate\(angle\)/);
-  assert.match(entrar, /const angle = reducedMotion\.matches \? 0 :/,
+  assert.match(entrar, /import LoginGalaxy from "\.\.\/components\/LoginGalaxy"/);
+  assert.match(entrar, /<LoginGalaxy theme=\{temaPublico\} \/>/,
+    "o login precisa usar o componente real com o tema selecionado");
+  assert.match(galaxy, /import lightSource from "\.\.\/assets\/login\/galaxy-light\.webp"/);
+  assert.match(galaxy, /import darkSource from "\.\.\/assets\/login\/galaxy-dark\.webp"/);
+  for (const theme of ["light", "dark"]) {
+    assert.ok(readFileSync(new URL(`../src/assets/login/galaxy-${theme}.webp`, import.meta.url)).length > 0,
+      `a textura aprovada ${theme} precisa existir`);
+    assert.match(galaxyPosters, new RegExp(`export const ${theme}GalaxyPoster = "data:image/webp;base64,`),
+      `o primeiro quadro completo ${theme} precisa estar incorporado`);
+  }
+  assert.match(galaxy, /className="login-gateway__galaxy-poster"/);
+  assert.match(galaxy, /src=\{theme === "dark" \? darkGalaxyPoster : lightGalaxyPoster\}/);
+  assert.match(galaxy, /loadGalaxy\(theme === "light" \? lightSource : darkSource\)/,
+    "a animação e seu poster precisam corresponder ao mesmo tema aprovado");
+  assert.match(galaxy, /return image\.decode\(\)\.then\(\(\) => image\)/,
+    "a animação deve esperar a decodificação integral da imagem");
+  assert.match(galaxy, /className="login-gateway__galaxy-canvas"/);
+  assert.match(galaxy, /const durationMs = 120_000/);
+  assert.match(galaxy, /const direction = dark \? 1 : -1/,
+    "a rotação aprovada mantém a direção própria de cada tema");
+  assert.match(galaxy, /const diskProjectionY = 0\.34/);
+  assert.match(galaxy, /context\.scale\(0\.72, diskProjectionY \* 0\.72\)/);
+  assert.match(galaxy, /context\.rotate\(angle\)/);
+  assert.match(galaxy, /const angle = reducedMotion\.matches \? 0 :/,
     "a preferência por movimento reduzido deve manter a galáxia parada");
-  assert.match(entrar, /if \(!reducedMotion\.matches\) animationFrame = requestAnimationFrame\(draw\)/);
-  assert.match(entrar, /reducedMotion\.removeEventListener\("change", motionChanged\)/);
+  assert.match(galaxy, /if \(!reducedMotion\.matches && !document\.hidden\) animationFrame = requestAnimationFrame\(draw\)/);
+  assert.match(galaxy, /reducedMotion\.removeEventListener\("change", motionChanged\)/);
+  assert.match(galaxy, /document\.removeEventListener\("visibilitychange", visibilityChanged\)/);
+  assert.match(galaxy, /draw\(startedAt\);[\s\S]*?canvas\.dataset\.ready = "true";[\s\S]*?poster\.dataset\.replaced = "true"/,
+    "o poster completo só sai depois do primeiro frame completo da animação");
   const finalLoginStyles = read("src/styles/corvia-login-final-approved-20260904.css");
   assert.match(finalLoginStyles, /login-gateway__milky-way \{[\s\S]*?animation:\s*none !important[\s\S]*?rotate:\s*0deg !important/,
     "o contêiner posicionado da galáxia deve permanecer imóvel");
-  assert.match(finalLoginStyles, /login-gateway__galaxy-image \{[\s\S]*?animation:\s*none !important[\s\S]*?rotate:\s*0deg !important/,
-    "o fallback aprovado precisa permanecer horizontal e imóvel");
+  assert.match(galaxyStyles, /login-gateway__galaxy-poster \{[^}]*transform:\s*none !important[^}]*animation:\s*none !important/,
+    "o poster aprovado precisa permanecer horizontal e imóvel");
+  assert.match(galaxyStyles, /login-gateway__galaxy-poster\[data-replaced="true"\]\s*\{[^}]*visibility:\s*hidden !important/,
+    "somente o poster já substituído por um frame completo pode ser ocultado");
   assert.match(finalLoginStyles, /login-gateway__galaxy-canvas\[data-ready="true"\]/,
     "o canvas animado só pode substituir a imagem depois do primeiro frame pronto");
   assert.match(assetFixStyles, /mask:\s*none !important/,

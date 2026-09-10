@@ -30,6 +30,9 @@ def _preparar_auditoria(tmp_path, monkeypatch, *, evidencias, estudos):
     (tmp_path / "doencas" / "relacoes-explicitas.json").write_text(
         "[]", encoding="utf-8",
     )
+    (tmp_path / "doencas" / "relacoes-transversais.json").write_text(
+        "[]", encoding="utf-8",
+    )
     (tmp_path / "medicamentos" / "interacoes.json").write_text(
         "[]", encoding="utf-8",
     )

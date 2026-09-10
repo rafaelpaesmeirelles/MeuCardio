@@ -1,0 +1,126 @@
+{
+  "fronts": {
+    "casos_clinicos": {
+      "bytes": 3288751,
+      "directory": "casos-clinicos",
+      "duplicate_keys": [],
+      "files": 1,
+      "manifest": "casos-clinicos/metadados.json",
+      "records": 927
+    },
+    "checklists": {
+      "bytes": 3508318,
+      "directory": "checklists",
+      "duplicate_keys": [],
+      "files": 1,
+      "manifest": "checklists/metadados.json",
+      "records": 479
+    },
+    "controlados": {
+      "bytes": 106278,
+      "directory": "controlados",
+      "duplicate_keys": [],
+      "files": 3,
+      "legal_records": {
+        "listas": 16,
+        "regras": 11,
+        "substancias": 775
+      },
+      "manifest": "controlados/listas-344-98.json",
+      "records": 0
+    },
+    "documentos": {
+      "bytes": 25455808,
+      "directory": "content",
+      "duplicate_keys": [],
+      "files": 3027,
+      "records": 3027
+    },
+    "doencas_especializadas": {
+      "bytes": 14896439,
+      "directory": "doencas",
+      "duplicate_keys": [],
+      "files": 151,
+      "manifest": "doencas/metadados.json",
+      "records": 326
+    },
+    "emergencia": {
+      "bytes": 51674,
+      "directory": "emergencia",
+      "duplicate_keys": [],
+      "files": 1,
+      "manifest": "emergencia/metadados.json",
+      "records": 77
+    },
+    "estudos": {
+      "bytes": 4693512,
+      "directory": "estudos",
+      "duplicate_keys": [],
+      "duplicate_publication_identifiers": {},
+      "files": 1,
+      "manifest": "estudos/metadados.json",
+      "records": 2061,
+      "unique_publications": 2061
+    },
+    "evidencias": {
+      "bytes": 4502297,
+      "directory": "evidencias",
+      "duplicate_keys": [],
+      "files": 1,
+      "manifest": "evidencias/metadados.json",
+      "records": 3363
+    },
+    "exames": {
+      "bytes": 1587112,
+      "directory": "exames",
+      "duplicate_keys": [],
+      "files": 1,
+      "manifest": "exames/metadados.json",
+      "records": 423
+    },
+    "galeria": {
+      "bytes": 105787550,
+      "directory": "galeria",
+      "duplicate_keys": [],
+      "files": 282,
+      "manifest": "galeria/metadados.json",
+      "records": 281
+    },
+    "material_paciente": {
+      "bytes": 3117887,
+      "directory": "material-paciente",
+      "duplicate_keys": [],
+      "files": 2,
+      "manifest": "material-paciente/metadados.json",
+      "records": 454
+    },
+    "medicamentos": {
+      "bytes": 2553675,
+      "directory": "medicamentos",
+      "duplicate_keys": [],
+      "files": 3,
+      "manifest": "medicamentos/metadados.json",
+      "records": 206
+    },
+    "triagem_sintomas": {
+      "bytes": 584019,
+      "directory": "triagem-sintomas",
+      "duplicate_keys": [],
+      "files": 7,
+      "manifest": "triagem-sintomas/metadados.json",
+      "records": 23
+    },
+    "trilhas": {
+      "bytes": 1741915,
+      "directory": "trilhas",
+      "duplicate_keys": [],
+      "files": 1,
+      "manifest": "trilhas/metadados.json",
+      "records": 563
+    }
+  },
+  "invalid": [],
+  "missing": [],
+  "total_files": 3482,
+  "total_records": 12210
+}

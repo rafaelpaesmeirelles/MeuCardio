@@ -1,0 +1,37 @@
+{
+  "base_main": "cb750689b94f7888b18133e68ff8293bff55d742",
+  "new_records": {
+    "casos-clinicos": 12,
+    "material-paciente": 6,
+    "checklists": 6
+  },
+  "corrected_records": {
+    "casos-clinicos": 1,
+    "material-paciente": 2,
+    "checklists": 2
+  },
+  "catalog_totals": {
+    "casos-clinicos": 927,
+    "checklists": 479,
+    "material-paciente": 454
+  },
+  "untouched_records_preserved": {
+    "casos-clinicos": 914,
+    "checklists": 471,
+    "material-paciente": 446
+  },
+  "documents_in_combined_delivery": 27,
+  "internal_links_checked": 431,
+  "new_explicit_relations": 24,
+  "prior_explicit_relations_preserved": 3135,
+  "trails_updated": 8,
+  "new_stages": 18,
+  "total_progressive_stages": 67,
+  "native_patient_posology_detector": "executed on 8 new/corrected materials",
+  "errors": [],
+  "limits": [
+    "No database imports, publication or authenticated UI executed.",
+    "Human review not claimed; independent AI cross-review documented.",
+    "Historical full-corpus authorization unchanged; this validation does not authorize release."
+  ]
+}

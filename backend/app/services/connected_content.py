@@ -8,9 +8,9 @@ missing launch guarantees at the boundary exposed to the UI:
 2. medications outside the generic Farmacologia topic are admitted only when
    the medication's reviewed structured indications explicitly match the
    requested clinical topic;
-3. a medication can ask for its own connected ecosystem: only clinical topics
-   explicitly supported by its indications are traversed, then all published
-   fronts from those topics are merged and deduplicated.
+3. a medication can ask for its own connected ecosystem: supported indication
+   topics delimit the candidate pool; medication names and explicit graph
+   relations select useful items before merging and deduplication.
 
 No fuzzy semantic similarity is used here. A missing relation is preferable to
 a clinically irrelevant relation.
@@ -106,7 +106,7 @@ def _direct_graph_groups(
         db,
         entity_type=entity_type,
         slug=slug,
-        limite_por_tipo=(limite_por_tipo if limite_por_tipo is not None else 1000),
+        limite_por_tipo=limite_por_tipo,
         incluir_contexto_tematico=False,
     )
     if not graph:
@@ -451,13 +451,28 @@ def _origin_context(
     their reviewed title/tags. Evidence records reuse only their explicit
     ``document_slug`` relation and that document's reviewed title; the evidence
     statement itself is deliberately not used as an implicit relation source.
-    Unknown item types and free-form subjects keep the previous slug-only
-    behaviour.
+    Medications reuse only their generic and brand names, never their broad
+    indications as identity terms. Unknown item types and free-form subjects
+    keep the previous slug-only behaviour.
     """
     if not assunto:
         return _OriginContext(None)
     if not excluir_slug or assunto != excluir_slug:
         return _OriginContext(assunto)
+
+    if excluir_tipo == "medicamento":
+        item = db.execute(
+            select(Drug).where(
+                Drug.slug == excluir_slug,
+                Drug.published.is_(True),
+            )
+        ).scalar_one_or_none()
+        if item is not None:
+            # Names identify the medication; indications only delimit the
+            # candidate topics and must not turn an entire disease into a link.
+            return _OriginContext(" ".join(filter(None, (
+                assunto, item.generic_name, *(item.brand_names or []),
+            ))))
 
     if excluir_tipo == "estudo":
         item = db.execute(
@@ -1378,9 +1393,9 @@ def buscar_relacionados_do_medicamento(
         buscar_relacionados_contextuais(
             db, theme, excluir_tipo="medicamento", excluir_slug=drug.slug,
             assunto=drug.slug,
-            # Structured indication/dosing labels already prove the topic link.
-            # Preserve each supported topic's published ecosystem.
-            filtrar_grupos_por_assunto=False,
+            # An indication identifies a candidate topic, not a relation to
+            # every item in that topic. Preserve names/brands and direct edges.
+            filtrar_grupos_por_assunto=True,
             limite_por_categoria=limite_por_categoria,
         )
         for theme in themes
@@ -1388,9 +1403,9 @@ def buscar_relacionados_do_medicamento(
     for response in responses:
         for group in response.get("grupos", []):
             for item in group.get("itens", []):
-                item.setdefault("relation_scope", "structured_clinical_topic")
-                item.setdefault("relation_method", "reviewed_drug_structured_metadata")
-                item.setdefault("context_only", True)
+                item.setdefault("relation_scope", "clinical_match")
+                item.setdefault("relation_method", "discriminative_lexical_overlap")
+                item.setdefault("context_only", False)
     if not themes:
         # A drug outside the supported indication taxonomy can still have
         # explicit reviewed graph links. Do not invent a theme to expose them.
@@ -1403,8 +1418,8 @@ def buscar_relacionados_do_medicamento(
     return {
         "medicamento": {"slug": drug.slug, "titulo": drug.generic_name},
         "temas": themes,
-        "relation_scope": "structured_clinical_topic" if themes else "direct_graph_relation",
-        "relation_method": "reviewed_drug_indication" if themes else "typed_graph_relation",
+        "relation_scope": "clinical_match" if themes else "direct_graph_relation",
+        "relation_method": "drug_identity_plus_typed_graph" if themes else "typed_graph_relation",
         "grupos": groups,
         "total": total,
     }

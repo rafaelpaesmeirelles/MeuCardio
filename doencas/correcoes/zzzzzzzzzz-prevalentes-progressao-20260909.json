@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "hipertensao-arterial-sistemica",
+    "append": {
+      "related_document_slugs": [
+        "hipertensao-arterial-classificacao-diagnostico-metas",
+        "hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro",
+        "edema-no-hipertenso-em-uso-de-bcc-avaliacao-e-represcricao",
+        "hipertensao-hipocalemia-e-renina-alta-interpretacao-sem-atalhos"
+      ]
+    }
+  },
+  {
+    "slug": "insuficiencia-cardiaca",
+    "append": {
+      "related_document_slugs": [
+        "icfer-classificacao-diagnostico-quatro-pilares",
+        "ic-primeira-consulta-dispneia-confirmacao-e-etiologia",
+        "ic-terapia-fundacional-seguranca-renal-potassio-e-hipotensao",
+        "icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante",
+        "ic-transicao-pos-alta-plano-primeiras-seis-semanas"
+      ]
+    }
+  },
+  {
+    "slug": "fibrilacao-atrial",
+    "append": {
+      "related_document_slugs": [
+        "fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care",
+        "palpitacoes-monitorizacao-e-correlacao-entre-sintoma-e-ritmo",
+        "fibrilacao-atrial-primeira-consulta-plano-longitudinal-e-retorno",
+        "anticoagulacao-na-fa-reconciliacao-de-dose-funcao-renal-e-interacoes"
+      ]
+    }
+  },
+  {
+    "slug": "sindrome-coronariana-cronica",
+    "append": {
+      "related_document_slugs": [
+        "suspeita-de-doenca-coronariana-primeira-consulta-do-sintoma-a-decisao",
+        "fluxograma-sindrome-coronariana-cronica-esc-2024"
+      ]
+    }
+  },
+  {
+    "slug": "sindrome-coronariana-aguda",
+    "append": {
+      "related_document_slugs": [
+        "dor-toracica-exames-discordantes-reavaliacao-e-destino-seguro",
+        "primeiro-retorno-pos-sca-conciliacao-antitrombotica-e-intercorrencias"
+      ]
+    }
+  },
+  {
+    "slug": "dislipidemia",
+    "append": {
+      "related_document_slugs": [
+        "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025",
+        "lipidograma-na-consulta-primeira-leitura-discordancia-e-decisao-clinica",
+        "retorno-da-dislipidemia-resposta-insuficiente-seguranca-e-intensificacao"
+      ]
+    }
+  },
+  {
+    "slug": "diabetes-mellitus-tipo-2",
+    "append": {
+      "related_document_slugs": [
+        "doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023",
+        "consulta-cardiometabolica-no-dm2-avaliacao-inicial-e-plano-longitudinal",
+        "finerenona-fidelio-dkd-figaro-dkd-e-a-fidelity"
+      ]
+    }
+  },
+  {
+    "slug": "valvopatias",
+    "append": {
+      "related_document_slugs": [
+        "fluxograma-sopro-cardiaco-incidental-no-adulto-assintomatico",
+        "estenose-aortica-do-laudo-discordante-a-consulta-longitudinal",
+        "insuficiencia-mitral-leitura-critica-do-laudo-e-preparo-da-decisao",
+        "fluxograma-regurgitacao-mitral-esc-eacts-2025"
+      ]
+    }
+  },
+  {
+    "slug": "estenose-aortica",
+    "append": {
+      "related_document_slugs": [
+        "estenose-aortica-do-laudo-discordante-a-consulta-longitudinal"
+      ]
+    }
+  },
+  {
+    "slug": "insuficiencia-mitral",
+    "append": {
+      "related_document_slugs": [
+        "insuficiencia-mitral-leitura-critica-do-laudo-e-preparo-da-decisao",
+        "fluxograma-regurgitacao-mitral-esc-eacts-2025"
+      ]
+    }
+  },
+  {
+    "slug": "sincope",
+    "append": {
+      "related_document_slugs": [
+        "sincope-classificacao-etiologica-em-tres-grandes-grupos",
+        "sincope-diagnostico-e-manejo-esc-2018",
+        "sincope-recorrente-apos-marca-passo-interpretacao-do-tilt-e-reavaliacao"
+      ]
+    }
+  }
+]

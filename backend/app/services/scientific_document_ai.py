@@ -21,6 +21,8 @@ from app.models.scientific_user_document import ScientificUserDocument
 from app.services import cofre
 from app.services.knowledge_graph import backfill_mesmo_tema
 
+from app.services.ia.usage_control import metered_responses_post, plan_requests, plan_token_budgets, input_token_bound
+
 RESPONSES_URL = "https://api.openai.com/v1/responses"
 MAX_EXTRACTED_CHARS = 300_000
 ANALYSIS_CONTEXT_CHARS = 120_000
@@ -135,7 +137,7 @@ def _post_response(request: dict, timeout: float = 220.0) -> dict:
     if not settings.ai_enabled or settings.ai_provider != "openai" or not settings.openai_api_key.strip():
         raise RuntimeError("Provedor de IA clínica não configurado.")
     with httpx.Client(timeout=httpx.Timeout(timeout, connect=20.0)) as client:
-        response = client.post(
+        response = metered_responses_post(client,
             RESPONSES_URL,
             headers={
                 "Authorization": f"Bearer {settings.openai_api_key}",
@@ -148,6 +150,20 @@ def _post_response(request: dict, timeout: float = 220.0) -> dict:
     if payload.get("status") != "completed" or payload.get("error"):
         raise ValueError("O provedor não concluiu a análise científica.")
     return payload
+
+
+def plan_document(text: str) -> int:
+    """Budget analysis plus every possible translation chunk before any call."""
+    maximum = max(4096, settings.ai_max_output_tokens)
+    model = _model()
+    bounds = [{"model": model,
+               "input_tokens": len(text[:ANALYSIS_CONTEXT_CHARS].encode("utf-8")) + len(json.dumps(ANALYSIS_SCHEMA).encode("utf-8")) + 8192,
+               "max_output_tokens": maximum}]
+    for start in range(0, len(text), TRANSLATION_CHUNK_CHARS):
+        bounds.append({"model": model,
+                       "input_tokens": len(text[start:start + TRANSLATION_CHUNK_CHARS].encode("utf-8")) + 4096,
+                       "max_output_tokens": maximum})
+    return plan_token_budgets("openai", bounds)
 
 
 def analyze_text(text: str) -> dict[str, Any]:

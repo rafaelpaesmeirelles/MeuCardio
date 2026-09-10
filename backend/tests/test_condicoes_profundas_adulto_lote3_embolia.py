@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from app.services.calculators import REGISTRY
 import re
 import unicodedata
 
@@ -150,17 +151,17 @@ def test_embolia_pulmonar_tem_quatro_arestas_externas_explicitas_e_resolvidas():
         item for item in _records(EXPLICIT_RELATIONS)
         if item["source_disease_slug"] == SLUG
     ]
-    assert {
-        (item["target_type"], item["target_slug"])
-        for item in relations
-    } == {
-        ("protocolo_emergencia", "tromboembolismo-pulmonar"),
-        ("checklist", "alta-pos-tromboembolismo-venoso-agudo"),
-        ("checklist", "criterios-para-tratamento-ambulatorial-do-tep-de-baixo-risco"),
-        (
-            "trilha",
-            "trilha-tromboembolismo-pulmonar-risco-intermediario-alto-e-terapia-guiada-pelo-risco",
-        ),
+    assert {(item["target_type"], item["target_slug"]) for item in relations} == {
+        ('calculadora', 'geneva-revisado'),
+        ('calculadora', 'geneva-simplificado'),
+        ('calculadora', 'pesi'),
+        ('calculadora', 'spesi'),
+        ('calculadora', 'wells-tep'),
+        ('caso_clinico', 'tep-hemodinamicamente-estavel-rivaroxabana-isolada-einstein-pe'),
+        ('checklist', 'alta-pos-tromboembolismo-venoso-agudo'),
+        ('checklist', 'criterios-para-tratamento-ambulatorial-do-tep-de-baixo-risco'),
+        ('protocolo_emergencia', 'tromboembolismo-pulmonar'),
+        ('trilha', 'trilha-tromboembolismo-pulmonar-risco-intermediario-alto-e-terapia-guiada-pelo-risco'),
     }
     assert all(item["confidence"] == "explicit" for item in relations)
     assert all(item["provenance_type"] == "editorial" for item in relations)
@@ -169,6 +170,8 @@ def test_embolia_pulmonar_tem_quatro_arestas_externas_explicitas_e_resolvidas():
         "protocolo_emergencia": {item["slug"] for item in _records(EMERGENCY)},
         "checklist": {item["slug"] for item in _records(CHECKLISTS)},
         "trilha": {item["slug"] for item in _records(TRACKS)},
+        "calculadora": {calculator.slug for calculator in REGISTRY.values() if calculator.status == "implementada"},
+        "caso_clinico": {item["slug"] for item in _records(ROOT / "casos-clinicos/metadados.json")},
     }
     assert all(item["target_slug"] in targets[item["target_type"]] for item in relations)
 

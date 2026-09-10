@@ -1,0 +1,258 @@
+{
+  "mapped": [
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "primeira-consulta-has-doses-omitidas-por-intolerancia-e-descontrole-sustentado",
+      "document": "hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro",
+      "disease": "hipertensao-arterial-sistemica",
+      "trail": "trilha-consulta-progressiva-hipertensao",
+      "title": "Primeira consulta: a pressão permanece alta, mas a prescrição não corresponde ao uso real",
+      "team": "has"
+    },
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "has-hipocalemia-rastreio-negativo-sob-bra-diuretico-e-renina-elevada",
+      "document": "hipertensao-hipocalemia-e-renina-alta-interpretacao-sem-atalhos",
+      "disease": "hipertensao-arterial-sistemica",
+      "trail": "trilha-consulta-progressiva-hipertensao",
+      "title": "Hipocalemia e renina elevada durante tratamento: um rastreio negativo pode encerrar a investigação?",
+      "team": "has"
+    },
+    {
+      "category": "material-paciente",
+      "type": "material_paciente",
+      "slug": "apos-trocar-remedio-da-pressao-como-organizar-retorno-e-observar-inchaco",
+      "document": "hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro",
+      "disease": "hipertensao-arterial-sistemica",
+      "trail": "trilha-consulta-progressiva-hipertensao",
+      "title": "Troquei o remédio da pressão: o que levar e observar até o retorno",
+      "team": "has"
+    },
+    {
+      "category": "checklists",
+      "type": "checklist",
+      "slug": "fechamento-da-consulta-apos-represcricao-anti-hipertensiva",
+      "document": "hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro",
+      "disease": "hipertensao-arterial-sistemica",
+      "trail": "trilha-consulta-progressiva-hipertensao",
+      "title": "Fechamento da consulta após represcrição anti-hipertensiva",
+      "team": "has"
+    },
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "icfer-primeiro-retorno-potassio-52-antes-de-iniciar-espironolactona",
+      "document": "ic-terapia-fundacional-seguranca-renal-potassio-e-hipotensao",
+      "disease": "insuficiencia-cardiaca",
+      "trail": "trilha-consulta-progressiva-insuficiencia-cardiaca",
+      "title": "Primeiro retorno na ICFEr: o potássio permite iniciar espironolactona hoje?",
+      "team": "ic"
+    },
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "icfep-pos-alta-perda-de-peso-ortostatismo-e-lesao-renal-reavaliar-volemia",
+      "document": "ic-transicao-pos-alta-plano-primeiras-seis-semanas",
+      "disease": "insuficiencia-cardiaca",
+      "trail": "trilha-consulta-progressiva-insuficiencia-cardiaca",
+      "title": "ICFEp após a alta: perda de peso, ortostatismo e piora renal exigem outra leitura",
+      "team": "ic"
+    },
+    {
+      "category": "material-paciente",
+      "type": "material_paciente",
+      "slug": "meu-coracao-melhorou-posso-parar-os-remedios-da-insuficiencia-cardiaca",
+      "document": "icfer-classificacao-diagnostico-quatro-pilares",
+      "disease": "insuficiencia-cardiaca",
+      "trail": "trilha-consulta-progressiva-insuficiencia-cardiaca",
+      "title": "Meu coração melhorou: posso parar os remédios?",
+      "team": "ic"
+    },
+    {
+      "category": "checklists",
+      "type": "checklist",
+      "slug": "retorno-com-feve-melhorada-preservar-tratamento-e-reavaliar-tolerancia",
+      "document": "icfer-classificacao-diagnostico-quatro-pilares",
+      "disease": "insuficiencia-cardiaca",
+      "trail": "trilha-consulta-progressiva-insuficiencia-cardiaca",
+      "title": "Insuficiência cardíaca com melhora da fração de ejeção: retorno longitudinal",
+      "team": "ic"
+    },
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "palpitacoes-dois-tipos-de-sintoma-e-correlacao-parcial-no-holter",
+      "document": "palpitacoes-monitorizacao-e-correlacao-entre-sintoma-e-ritmo",
+      "disease": "fibrilacao-atrial",
+      "trail": "trilha-consulta-progressiva-fibrilacao-atrial",
+      "title": "O Holter explicou as falhas, mas também explicou o coração disparado?",
+      "team": "fa"
+    },
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "fa-cardioversao-eletiva-omissoes-doac-reveladas-na-reconciliacao",
+      "document": "anticoagulacao-na-fa-reconciliacao-de-dose-funcao-renal-e-interacoes",
+      "disease": "fibrilacao-atrial",
+      "trail": "trilha-consulta-progressiva-fibrilacao-atrial",
+      "title": "Cardioversão marcada: o paciente revelou omissões do anticoagulante",
+      "team": "fa"
+    },
+    {
+      "category": "material-paciente",
+      "type": "material_paciente",
+      "slug": "diario-de-palpitacoes-e-retorno-do-holter-como-participar",
+      "document": "palpitacoes-monitorizacao-e-correlacao-entre-sintoma-e-ritmo",
+      "disease": "fibrilacao-atrial",
+      "trail": "trilha-consulta-progressiva-fibrilacao-atrial",
+      "title": "Palpitações: o diário que ajuda a entender seu exame",
+      "team": "fa"
+    },
+    {
+      "category": "checklists",
+      "type": "checklist",
+      "slug": "retorno-das-palpitacoes-auditoria-da-correlacao-sintoma-ritmo",
+      "document": "palpitacoes-monitorizacao-e-correlacao-entre-sintoma-e-ritmo",
+      "disease": "fibrilacao-atrial",
+      "trail": "trilha-consulta-progressiva-fibrilacao-atrial",
+      "title": "Retorno por palpitações: revisão da correlação entre sintoma e ritmo",
+      "team": "fa"
+    },
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "dor-toracica-estavel-teste-interrompido-por-gonalgia-proxima-decisao",
+      "document": "suspeita-de-doenca-coronariana-primeira-consulta-do-sintoma-a-decisao",
+      "disease": "sindrome-coronariana-cronica",
+      "trail": "trilha-consulta-progressiva-doenca-coronariana",
+      "title": "Dor aos esforços e teste interrompido por dor no joelho: a investigação terminou?",
+      "team": "coronaria"
+    },
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "primeiro-retorno-pos-sca-dois-p2y12-dispneia-e-receitas-conflitantes",
+      "document": "primeiro-retorno-pos-sca-conciliacao-antitrombotica-e-intercorrencias",
+      "disease": "sindrome-coronariana-aguda",
+      "trail": "trilha-consulta-progressiva-doenca-coronariana",
+      "title": "Primeiro retorno após SCA: dois P2Y12, equimoses e falta de ar",
+      "team": "coronaria"
+    },
+    {
+      "category": "material-paciente",
+      "type": "material_paciente",
+      "slug": "primeiro-retorno-apos-infarto-leve-remedios-receitas-e-duvidas",
+      "document": "primeiro-retorno-pos-sca-conciliacao-antitrombotica-e-intercorrencias",
+      "disease": "sindrome-coronariana-aguda",
+      "trail": "trilha-consulta-progressiva-doenca-coronariana",
+      "title": "Primeiro retorno após o infarto: leve remédios, receitas e dúvidas",
+      "team": "coronaria"
+    },
+    {
+      "category": "checklists",
+      "type": "checklist",
+      "slug": "primeiro-retorno-pos-sca-fechamento-de-divergencias-e-pendencias",
+      "document": "primeiro-retorno-pos-sca-conciliacao-antitrombotica-e-intercorrencias",
+      "disease": "sindrome-coronariana-aguda",
+      "trail": "trilha-consulta-progressiva-doenca-coronariana",
+      "title": "Primeiro retorno após SCA: fechar divergências e pendências da alta",
+      "team": "coronaria"
+    },
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "primeiro-lipidograma-triglicerideos-altos-ldl-calculado-nao-interpretavel",
+      "document": "lipidograma-na-consulta-primeira-leitura-discordancia-e-decisao-clinica",
+      "disease": "dislipidemia",
+      "trail": "trilha-consulta-progressiva-dislipidemia",
+      "title": "Primeiro lipidograma: o LDL calculado permite tranquilizar este paciente?",
+      "team": "prevencao"
+    },
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "dm2-drc-queda-inicial-tfge-apos-isglt2-retorno-com-seguranca",
+      "document": "consulta-cardiometabolica-no-dm2-avaliacao-inicial-e-plano-longitudinal",
+      "disease": "diabetes-mellitus-tipo-2",
+      "trail": "trilha-consulta-progressiva-diabetes-cardiovascular",
+      "title": "DM2 e doença renal: a queda inicial da TFGe exige retirar o iSGLT2?",
+      "team": "prevencao"
+    },
+    {
+      "category": "material-paciente",
+      "type": "material_paciente",
+      "slug": "preparar-retorno-colesterol-exames-remedios-e-duvidas",
+      "document": "retorno-da-dislipidemia-resposta-insuficiente-seguranca-e-intensificacao",
+      "disease": "dislipidemia",
+      "trail": "trilha-consulta-progressiva-dislipidemia",
+      "title": "Como se preparar para o retorno do colesterol",
+      "team": "prevencao"
+    },
+    {
+      "category": "checklists",
+      "type": "checklist",
+      "slug": "retorno-dislipidemia-uso-real-resposta-meta-e-continuidade",
+      "document": "retorno-da-dislipidemia-resposta-insuficiente-seguranca-e-intensificacao",
+      "disease": "dislipidemia",
+      "trail": "trilha-consulta-progressiva-dislipidemia",
+      "title": "Retorno da dislipidemia: uso real, resposta, meta e continuidade",
+      "team": "prevencao"
+    },
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "estenose-aortica-area-pequena-gradiente-baixo-e-laudos-nao-comparaveis",
+      "document": "estenose-aortica-do-laudo-discordante-a-consulta-longitudinal",
+      "disease": "estenose-aortica",
+      "trail": "trilha-consulta-progressiva-valvopatias",
+      "title": "Área aórtica pequena e gradiente baixo: a troca de valva já está definida?",
+      "team": "valvas-sincope"
+    },
+    {
+      "category": "casos-clinicos",
+      "type": "caso_clinico",
+      "slug": "sincope-apos-marca-passo-registros-temporais-e-queda-pressoria",
+      "document": "sincope-recorrente-apos-marca-passo-interpretacao-do-tilt-e-reavaliacao",
+      "disease": "sincope",
+      "trail": "trilha-consulta-progressiva-sincope",
+      "title": "Novo desmaio com marca-passo: o relatório normal encerra a investigação?",
+      "team": "valvas-sincope"
+    },
+    {
+      "category": "material-paciente",
+      "type": "material_paciente",
+      "slug": "estenose-aortica-laudos-diferentes-preparar-a-consulta",
+      "document": "estenose-aortica-do-laudo-discordante-a-consulta-longitudinal",
+      "disease": "estenose-aortica",
+      "trail": "trilha-consulta-progressiva-valvopatias",
+      "title": "Dois laudos diferentes da valva aórtica: como preparar a consulta",
+      "team": "valvas-sincope"
+    },
+    {
+      "category": "checklists",
+      "type": "checklist",
+      "slug": "sincope-recorrente-apos-marca-passo-correlacao-clinica-e-dispositivo",
+      "document": "sincope-recorrente-apos-marca-passo-interpretacao-do-tilt-e-reavaliacao",
+      "disease": "sincope",
+      "trail": "trilha-consulta-progressiva-sincope",
+      "title": "Síncope recorrente após marca-passo: correlação do episódio e reavaliação",
+      "team": "valvas-sincope"
+    }
+  ],
+  "new_counts": {
+    "casos-clinicos": 12,
+    "material-paciente": 6,
+    "checklists": 6
+  },
+  "correction_counts": {
+    "casos-clinicos": 1,
+    "material-paciente": 2,
+    "checklists": 2
+  },
+  "stages_added": 18,
+  "relations_added": 24,
+  "documents_linked": 14,
+  "tracks_updated": 8
+}

@@ -5,8 +5,8 @@ editorial posterior. A fronteira de segurança de publicação fica na
 reconciliação: apenas `review_status=revisado` é publicado e qualquer registro
 que deixe de estar revisado é despublicado.
 
-Os lotes Tudo com Tudo pendentes anteriores foram revisados. Qualquer novo
-status diferente de revisado quebra o gate e exige decisão editorial explícita.
+A release schema2 preserva explicitamente nove documentos pendentes dentro de
+56 identidades em quarentena; somente a partição autorizada pode ser publicada.
 """
 
 from __future__ import annotations
@@ -99,21 +99,27 @@ def test_manifesto_nao_marca_como_publicado_um_registro_pendente():
     assert conflitos == []
 
 
-def test_todos_os_documentos_markdown_estao_revisados():
-    pendentes: list[str] = []; pendentes_permitidos: set[str] = set(); sem_status: list[str] = []
-    approved_docs = _approved_by_front().get("documentos", set())
+def test_documentos_publicaveis_revisados_e_pendencias_em_quarentena_explicita():
+    import frontmatter
+    release = json.loads((EDITORIAL_APPROVALS_DIR / "scoped-corpus-release-20260910.json").read_text())
+    assert release["schema_version"] == 2
+    approved = set(release["approved"]["documentos"])
+    quarantine = set(release["quarantined"]["documentos"])
+    seen, pending = set(), set()
+    assert not approved & quarantine
     for path in sorted((REPOSITORY_ROOT / "content").rglob("*.md")):
-        text = path.read_text(encoding="utf-8")
-        frontmatter = text.split("---", 2)[1] if text.startswith("---") else ""
-        match = re.search(r"^review_status:\s*['\"]?([^'\"\n]+)", frontmatter, re.MULTILINE)
-        relative_path = str(path.relative_to(REPOSITORY_ROOT))
-        if match is None: sem_status.append(relative_path)
-        elif match.group(1).strip() != "revisado":
-            slug_match = re.search(r'^slug:\s*[\'\"]?([^\'\"\n]+)', frontmatter, re.MULTILINE)
-            slug = slug_match.group(1).strip() if slug_match else ""
-            if slug in approved_docs:
-                continue
-            pendentes.append(f"{relative_path}:{match.group(1).strip()}")
-    assert sem_status == []
-    assert pendentes == []
-    assert pendentes_permitidos == PENDENTES_MARKDOWN_AVC
+        post = frontmatter.load(path)
+        slug, status = post.metadata["slug"], post.metadata.get("review_status")
+        seen.add(slug)
+        assert status in {"revisado", "pendente_revisao"}, str(path)
+        if slug in approved:
+            assert status == "revisado", slug
+        if status != "revisado":
+            pending.add(slug)
+            assert slug in quarantine and slug not in approved, slug
+            assert post.metadata.get("published") is not True, slug
+    assert seen == approved | quarantine
+    # Seven uncovered pending sources plus two duplicate originals must remain
+    # visibly pending; the release must never change their status to pass CI.
+    assert len(pending) == 9
+    assert len(quarantine) == 56

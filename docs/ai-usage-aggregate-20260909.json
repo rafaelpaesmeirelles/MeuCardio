@@ -1,0 +1,359 @@
+{
+  "generated_at": "2026-09-09T22:13:12.885227+00:00",
+  "period_days": 30,
+  "period_timezone": "UTC",
+  "scope": "Aggregate retained records only; no clinical text, personal identifiers, or paid calls.",
+  "runtime_settings": {
+    "ai_enabled": true,
+    "ai_provider": "openai",
+    "ai_embedding_provider": "openai",
+    "ai_daily_limit": 1000,
+    "ai_max_output_tokens": 4096,
+    "ai_top_k": 8,
+    "ai_max_context_chars": 24000,
+    "ai_assistant_tools_enabled": true,
+    "ai_clinical_multimodal_enabled": true,
+    "ai_ecg_model": "",
+    "ai_cardiovascular_exam_model": "",
+    "openai_model": "gpt-4o-mini",
+    "openai_embedding_model": "text-embedding-3-small",
+    "embedding_dim": 1536,
+    "anthropic_model": "claude-sonnet-5",
+    "heart_team_enabled": true,
+    "heart_team_clinical_model": "",
+    "heart_team_max_output_tokens": 2200,
+    "heart_team_source_limit": 16,
+    "heart_team_cache_ttl_seconds": 3600,
+    "heart_team_monthly_cost_ceiling_micros": 25000000,
+    "heart_team_daily_case_limit": 10,
+    "heart_team_monthly_case_limit": 100,
+    "heart_team_input_token_cost_micros": 2,
+    "heart_team_output_token_cost_micros": 12,
+    "whatsapp_enabled": null,
+    "whatsapp_daily_command_limit": 100,
+    "whatsapp_monthly_command_limit": 1500,
+    "whatsapp_monthly_cost_ceiling_microunits": 5000000,
+    "whatsapp_meta_message_cost_microunits": 0,
+    "whatsapp_transcription_cost_microunits": 0,
+    "whatsapp_scientific_summary_cost_microunits": 0,
+    "whatsapp_transcription_model": "gpt-4o-mini-transcribe",
+    "subscriptions_enabled": false
+  },
+  "groups": {
+    "chat": {
+      "records": 19,
+      "sums": {
+        "tokens_entrada": 312870,
+        "tokens_saida": 15810
+      },
+      "by_day_and_dimensions": [
+        {
+          "day": "2026-08-14",
+          "modelo": "claude-haiku-4-5",
+          "records": 2,
+          "tokens_entrada": 9411,
+          "tokens_saida": 1362
+        },
+        {
+          "day": "2026-08-14",
+          "modelo": "claude-sonnet-5",
+          "records": 1,
+          "tokens_entrada": 24112,
+          "tokens_saida": 3041
+        },
+        {
+          "day": "2026-08-18",
+          "modelo": "claude-haiku-4-5",
+          "records": 1,
+          "tokens_entrada": 8693,
+          "tokens_saida": 252
+        },
+        {
+          "day": "2026-08-19",
+          "modelo": "claude-haiku-4-5",
+          "records": 6,
+          "tokens_entrada": 53287,
+          "tokens_saida": 1114
+        },
+        {
+          "day": "2026-08-19",
+          "modelo": "claude-sonnet-5",
+          "records": 2,
+          "tokens_entrada": 35057,
+          "tokens_saida": 1059
+        },
+        {
+          "day": "2026-08-20",
+          "modelo": "claude-haiku-4-5",
+          "records": 2,
+          "tokens_entrada": 12454,
+          "tokens_saida": 1280
+        },
+        {
+          "day": "2026-08-20",
+          "modelo": "claude-opus-5",
+          "records": 1,
+          "tokens_entrada": 124342,
+          "tokens_saida": 4065
+        },
+        {
+          "day": "2026-08-22",
+          "modelo": "claude-haiku-4-5",
+          "records": 2,
+          "tokens_entrada": 30901,
+          "tokens_saida": 419
+        },
+        {
+          "day": "2026-08-22",
+          "modelo": "claude-sonnet-5",
+          "records": 1,
+          "tokens_entrada": 10919,
+          "tokens_saida": 1582
+        },
+        {
+          "day": "2026-08-25",
+          "modelo": "claude-sonnet-5",
+          "records": 1,
+          "tokens_entrada": 3694,
+          "tokens_saida": 1636
+        }
+      ]
+    },
+    "round": {
+      "records": 0,
+      "sums": {},
+      "by_day_and_dimensions": []
+    },
+    "ecg_and_quick_exam": {
+      "records": 0,
+      "sums": {
+        "tokens_input": 0,
+        "tokens_output": 0
+      },
+      "by_day_and_dimensions": []
+    },
+    "longitudinal_multimodal": {
+      "records": 0,
+      "sums": {
+        "tokens_input": 0,
+        "tokens_output": 0
+      },
+      "by_day_and_dimensions": []
+    },
+    "heart_team_cases": {
+      "records": 0,
+      "sums": {
+        "tokens_input": 0,
+        "tokens_output": 0,
+        "estimated_cost_micros": 0,
+        "reserved_cost_micros": 0
+      },
+      "by_day_and_dimensions": []
+    },
+    "heart_team_ledger": {
+      "records": 0,
+      "sums": {
+        "tokens_input": 0,
+        "tokens_output": 0,
+        "actual_micros": 0,
+        "reserved_micros": 0
+      },
+      "by_day_and_dimensions": []
+    },
+    "whatsapp": {
+      "records": 0,
+      "sums": {
+        "input_units": 0,
+        "output_units": 0,
+        "estimated_cost_microunits": 0
+      },
+      "by_day_and_dimensions": []
+    },
+    "whatsapp_messages": {
+      "records": 0,
+      "sums": {
+        "estimated_cost_microunits": 0
+      },
+      "by_day_and_dimensions": []
+    },
+    "whatsapp_outbox": {
+      "records": 0,
+      "sums": {
+        "estimated_cost_microunits": 0
+      },
+      "by_day_and_dimensions": []
+    },
+    "private_scientific_documents": {
+      "records": 0,
+      "sums": {},
+      "by_day_and_dimensions": []
+    }
+  },
+  "limitations": [
+    "Counts and token sums cover retained local records, not the full provider invoice.",
+    "Deleted chat conversations also delete usage-bearing messages.",
+    "Embedding provider usage is not persisted; it cannot be priced from chunk counts.",
+    "Round and private scientific document processing discard provider token usage.",
+    "Web-search tool charges and some failures after provider consumption are not captured.",
+    "Heart Team case totals and ledger totals overlap and must not be added together.",
+    "WhatsApp message/outbox/usage records can overlap; totals are not an invoice.",
+    "Configured micro-unit tariffs are estimates with no currency field; not verified provider prices.",
+    "Private document created_at is upload time; audit actions count processing attempts separately.",
+    "Technical synthetic probes may be included; no user identifiers were accessed to classify them."
+  ],
+  "chat_by_mode_model": [
+    {
+      "day": "2026-08-14",
+      "mode": "clinica",
+      "model": "claude-haiku-4-5",
+      "records": 1,
+      "tokens_input": 3477,
+      "tokens_output": 1126
+    },
+    {
+      "day": "2026-08-14",
+      "mode": "pessoal",
+      "model": "claude-haiku-4-5",
+      "records": 1,
+      "tokens_input": 5934,
+      "tokens_output": 236
+    },
+    {
+      "day": "2026-08-14",
+      "mode": "pessoal",
+      "model": "claude-sonnet-5",
+      "records": 1,
+      "tokens_input": 24112,
+      "tokens_output": 3041
+    },
+    {
+      "day": "2026-08-18",
+      "mode": "pessoal",
+      "model": "claude-haiku-4-5",
+      "records": 1,
+      "tokens_input": 8693,
+      "tokens_output": 252
+    },
+    {
+      "day": "2026-08-19",
+      "mode": "pessoal",
+      "model": "claude-haiku-4-5",
+      "records": 6,
+      "tokens_input": 53287,
+      "tokens_output": 1114
+    },
+    {
+      "day": "2026-08-19",
+      "mode": "pessoal",
+      "model": "claude-sonnet-5",
+      "records": 2,
+      "tokens_input": 35057,
+      "tokens_output": 1059
+    },
+    {
+      "day": "2026-08-20",
+      "mode": "clinica",
+      "model": "claude-haiku-4-5",
+      "records": 1,
+      "tokens_input": 3116,
+      "tokens_output": 1024
+    },
+    {
+      "day": "2026-08-20",
+      "mode": "pessoal",
+      "model": "claude-haiku-4-5",
+      "records": 1,
+      "tokens_input": 9338,
+      "tokens_output": 256
+    },
+    {
+      "day": "2026-08-20",
+      "mode": "pessoal",
+      "model": "claude-opus-5",
+      "records": 1,
+      "tokens_input": 124342,
+      "tokens_output": 4065
+    },
+    {
+      "day": "2026-08-22",
+      "mode": "pessoal",
+      "model": "claude-haiku-4-5",
+      "records": 2,
+      "tokens_input": 30901,
+      "tokens_output": 419
+    },
+    {
+      "day": "2026-08-22",
+      "mode": "pessoal",
+      "model": "claude-sonnet-5",
+      "records": 1,
+      "tokens_input": 10919,
+      "tokens_output": 1582
+    },
+    {
+      "day": "2026-08-25",
+      "mode": "clinica",
+      "model": "claude-sonnet-5",
+      "records": 1,
+      "tokens_input": 3694,
+      "tokens_output": 1636
+    }
+  ],
+  "audit_event_counts": [
+    {
+      "day": "2026-08-14",
+      "action": "perguntar",
+      "records": 3
+    },
+    {
+      "day": "2026-08-17",
+      "action": "ai_assist_round",
+      "records": 1
+    },
+    {
+      "day": "2026-08-18",
+      "action": "perguntar",
+      "records": 1
+    },
+    {
+      "day": "2026-08-19",
+      "action": "perguntar",
+      "records": 8
+    },
+    {
+      "day": "2026-08-20",
+      "action": "perguntar",
+      "records": 3
+    },
+    {
+      "day": "2026-08-22",
+      "action": "perguntar",
+      "records": 3
+    },
+    {
+      "day": "2026-08-23",
+      "action": "ai_ecg_transfer_attempt",
+      "records": 10
+    },
+    {
+      "day": "2026-08-24",
+      "action": "ai_ecg_transfer_attempt",
+      "records": 5
+    },
+    {
+      "day": "2026-08-25",
+      "action": "ai_ecg_transfer_attempt",
+      "records": 2
+    },
+    {
+      "day": "2026-08-25",
+      "action": "perguntar",
+      "records": 1
+    },
+    {
+      "day": "2026-09-08",
+      "action": "ai_clinical_exam_transfer_attempt",
+      "records": 1
+    }
+  ]
+}

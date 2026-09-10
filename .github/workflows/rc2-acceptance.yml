@@ -121,6 +121,13 @@ jobs:
             test -e "$dir"
             docker cp "$dir" "$BACKEND_ID:/$dir"
           done
+          # The scoped publication validator also checks transitive evidence hashes.
+          for file in docs/scoped-corpus-release-evidence-20260910.json docs/scoped-corpus-theme-normalization-20260910.json docs/HANDOFF-producao-prevalentes-20260909.md docs/prevalentes-round2-release-application-20260909.md releases/scientific-20260909/reviewed-content.json backend/app/services/canonical_themes.py; do
+            test -f "$file"
+            docker compose exec -T backend mkdir -p "/$(dirname "$file")"
+            docker cp "$file" "$BACKEND_ID:/$file"
+            docker compose exec -T backend chmod 0444 "/$file"
+          done
           docker compose exec -T backend test -f /medicamentos/metadados.json
           docker compose exec -T backend test -f /controlados/listas-344-98.json
           docker compose exec -T backend test -f /emergencia/metadados.json

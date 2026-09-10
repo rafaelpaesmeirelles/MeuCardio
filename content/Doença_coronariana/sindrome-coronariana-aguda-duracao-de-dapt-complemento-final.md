@@ -1,43 +1,66 @@
 ---
-title: "Síndrome Coronariana Aguda: Duração de DAPT (Complemento Final)"
+title: "Síndrome coronariana aguda: individualização da duração da DAPT"
 slug: sindrome-coronariana-aguda-duracao-de-dapt-complemento-final
 theme: "Doença coronariana"
 kind: protocolo
 review_status: revisado
-source_refs: ["ESC 2023: Clopidogrel além dos 12 meses na SCA? · Afya Cardiologia · 2023 · https://portal.afya.com.br/cardiologia/clopidogrel-na-sca", "Terapia antiplaquetária dupla para o cardiologista geral · European Society of Cardiology · 2023 · https://www.escardio.org/Councils/Council-for-Cardiology-Practice-(CCP)/Cardiopractice/dual-antiplatelet-therapy-for-the-general-cardiologist", "Antiagregação Plaquetária Após Síndrome Coronariana Aguda · Guia TdC · 2026 · https://www.tadeclinicagem.com.br/guia/548/antiagregacao-plaquetaria-apos-sindrome-coronariana-aguda/", "Alto Risco de Sangramento após a ATC · SOLACI · 2022 · https://solaci.org/pt/2022/07/15/alto-risco-de-sangramento-apos-a-atc-mais-evidencia-para-dapt-de-curta-duracao/", "Valgimigli M, Frigoli E, Heg D, et al. Dual Antiplatelet Therapy after PCI in Patients at High Bleeding Risk. N Engl J Med. 2021;385(18):1643-1655. DOI 10.1056/NEJMoa2108749. PMID 34449185 — números do MASTER DAPT corrigidos e conferidos contra o abstract indexado em 30/07/2026.", "Ge Z, Kan J, Gao X, et al. Extended Clopidogrel Monotherapy vs DAPT in Patients With Acute Coronary Syndromes at High Ischemic and Bleeding Risk: The OPT-BIRISK Randomized Clinical Trial. JAMA Cardiol. 2024;9(6):523-531. PMID 38630489 — números conferidos contra o abstract indexado em 30/07/2026, batem com o que já estava no documento."]
-legacy_source: "protocolos/modulo-atualizado-sindrome-coronariana-aguda-fecha-lacuna-dapt-protocolo-completo.md · Revisado a fundo em 30/07/2026: os números do MASTER DAPT que estavam aqui (2,6% vs. 3,8% de sangramento, OR 0,68) não conferiam com o ensaio real — corrigidos para os números verdadeiros (6,5% vs. 9,4%, diferença -2,82pp, p<0,001), verificados contra o abstract indexado no PubMed via Europe PMC. Os números do OPT-BIRISK (2,5% vs. 3,3%, RR 0,75) foram conferidos e batem exatamente com o ensaio — mantidos sem alteração."
+review_note: "Correção científica assistida por IA em 09/09/2026 sobre arquivo da main cb750689b94f7888b18133e68ff8293bff55d742. Removidas generalizações de duração/classes e NNT/NNH; ensaios delimitados por população e momento. Revisão cruzada concluída por agente independente de IA; não representa validação humana."
+source_refs:
+  - "Rao SV et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for Acute Coronary Syndromes. DOI: 10.1161/CIR.0000000000001309. Síntese oficial, item 2: https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+  - "Costa F et al. Derivation and validation of the PRECISE-DAPT score. Lancet. 2017;389:1025-1034. DOI: 10.1016/S0140-6736(17)30397-5. Abstract original: https://pubmed.ncbi.nlm.nih.gov/28290994/"
+  - "Valgimigli M et al. Dual Antiplatelet Therapy after PCI in Patients at High Bleeding Risk. N Engl J Med. 2021;385:1643-1655. DOI: 10.1056/NEJMoa2108749. Abstract original: https://pubmed.ncbi.nlm.nih.gov/34449185/?dopt=Abstract"
+  - "Li Y et al. Extended Clopidogrel Monotherapy vs DAPT in Patients With Acute Coronary Syndromes at High Ischemic and Bleeding Risk: OPT-BIRISK. JAMA Cardiol. 2024;9:523-531. DOI: 10.1001/jamacardio.2024.0534. Abstract original: https://pubmed.ncbi.nlm.nih.gov/38630489/"
+  - "FDA. BRILINTA (ticagrelor), prescribing information, revisão 03/2024, seção 2.2: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/022433s035lbl.pdf"
+legacy_source: "protocolos/modulo-atualizado-sindrome-coronariana-aguda-fecha-lacuna-dapt-protocolo-completo.md; histórico editorial anterior preservado no versionamento Git."
 ---
 
-# Síndrome Coronariana Aguda: Duração de DAPT (Complemento Final)
+# Síndrome coronariana aguda: individualização da duração da DAPT
 
-## Duracao padrao dapt
-12 meses é o tempo padrão de DAPT (recomendação Classe I), independente do tipo de tratamento (clínico, ICP ou cirúrgico) e do tipo de stent utilizado — esta permanece a única recomendação Classe I após quase duas décadas de evidência
+## Duração padrão e escopo
 
-## Escore precise dapt
-- **componentes**: 5 itens: idade, depuração de creatinina (ClCr), hemoglobina, contagem de leucócitos e sangramento prévio
-- **funcao**: Predição de risco de sangramento para orientar decisão sobre duração individualizada de DAPT além ou abaixo do padrão de 12 meses
-- **fonte**: ESC Council for Cardiology Practice
+Na SCA sem alto risco de sangramento, AAS associado a um inibidor oral de P2Y12 por pelo menos 12 meses é a estratégia de referência da ACC/AHA 2025. Existem alternativas selecionadas para reduzir sangramento. Não se deve apresentar essa duração como a única recomendação de Classe I, nem como limite máximo universal. [Síntese oficial ACC/AHA 2025](https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know).
 
-## Dapt curta alto risco sangramento
-- **duracao recomendada**: 1 a 6 meses em pacientes com alto risco de sangramento (HBR), diferente da faixa padrão de 6-12 meses
-- **evidencia master dapt — números corrigidos em 30/07/2026**: os números que estavam aqui (2,6% vs. 3,8%, OR 0,68) não conferiam com o ensaio. O real: Valgimigli M et al., NEJM 2021 (PMID 34449185) — 4579 pacientes de alto risco de sangramento, 1 mês de DAPT após stent farmacológico biodegradável de sirolimo, randomizados entre suspender a DAPT (terapia abreviada) ou continuar por pelo menos mais 2 meses (terapia padrão). Sangramento maior ou clinicamente relevante não maior aos 335 dias: **6,5% com terapia abreviada contra 9,4% com terapia padrão** (diferença -2,82 pontos percentuais; IC95% -4,40 a -1,24; p<0,001 para superioridade). Eventos clínicos adversos líquidos (morte, IAM, AVC ou sangramento maior): 7,5% vs. 7,7%, não inferior (p<0,001). Sem aumento de eventos isquêmicos com a estratégia abreviada.
-- **fonte**: Valgimigli M et al., N Engl J Med 2021;385(18):1643-1655, PMID 34449185 — números conferidos contra o abstract indexado (Europe PMC) em 30/07/2026.
+Este complemento organiza a decisão longitudinal. Sangramento ativo importante, nova isquemia, cirurgia urgente e transições entre P2Y12 precisam de protocolos específicos e decisão médica no contexto agudo. Não é uma ordem de suspensão automática nem um protocolo de carga.
 
-## Dapt prolongada alto risco isquemico
-- **beneficio**: Estudos DAPT e PEGASUS-TIMI-54 demonstraram que manutenção de DAPT além de 12 meses reduz eventos cardiovasculares maiores (MACE), com NNT de 60-80:1
-- **custo em sangramento**: Ganho isquêmico ocorre às custas de aumento de sangramento, com NNH de 80-100:1
-- **fonte**: Afya Cardiologia
+## PRECISE-DAPT: informação de risco, não prazo automático
 
-## Dapt alem de 12 meses alto risco duplo
-- **estudo opt birisk**: Em pacientes com SCA e ALTO risco isquêmico E ALTO risco de sangramento simultaneamente, monoterapia com clopidogrel após 9-12 meses de DAPT reduziu sangramento (BARC 2/3/5: 2,5% vs. 3,3% com DAPT continuada; RR 0,75, IC95% 0,57-0,97)
-- **conclusao pratica**: DAPT é estratégia temporária por no máximo 1 ano; manutenção após esse período depende do risco de sangramento — se baixo, pode-se manter DAPT; se alto, trocar para monoterapia (AAS conforme diretrizes clássicas, ou clopidogrel conforme evidência mais recente)
-- **fonte**: Afya Cardiologia — ESC 2023
+O escore original utiliza idade, depuração de creatinina, hemoglobina, leucócitos e sangramento espontâneo prévio. Foi derivado de conjuntos individuais de ensaios após stent, predominantemente com AAS/clopidogrel e sem indicação de anticoagulação oral. No estudo, escore ≥25 identificou perfil em que DAPT mais longa aumentou sangramento; sua aplicação integra avaliação clínica. Não substitui a reconstrução de eventos, risco do procedimento, indicação de anticoagulação e tolerabilidade. [Costa et al., estudo original](https://pubmed.ncbi.nlm.nih.gov/28290994/).
 
-## Dapt curta pos icp eletiva nao sca
-Para ICP eletiva (não-SCA) com stent farmacológico de geração atual, diretrizes ACC/AHA reduziram recomendação padrão de 12 para 6 meses (Classe I), com flexibilidade para mais ou menos tempo conforme risco de sangramento (Classe IIb) — esta redução NÃO se aplica a pacientes com SCA, que mantêm padrão de 12 meses
+## Abreviar DAPT: qual evidência se aplica?
 
-## Sintese algoritmo decisao
-- **sca padrao sem fatores de risco especiais**: 12 meses de DAPT (Classe I)
-- **sca com alto risco sangramento isolado**: Considerar redução para 1-6 meses, transicionando para monoterapia (SAPT)
-- **sca com alto risco isquemico sem sangramento**: Considerar prolongamento além de 12 meses (Classe IIb)
-- **sca com alto risco isquemico e sangramento simultaneos**: Após 9-12 meses de DAPT, transicionar para monoterapia com clopidogrel (evidência OPT-BIRISK) em vez de manter DAPT completa
+No MASTER DAPT, pacientes com alto risco hemorrágico foram randomizados um mês após implante de stent com polímero biodegradável liberador de sirolimo: interromper DAPT ou mantê-la por pelo menos mais dois meses. Aos 335 dias, sangramento maior ou não maior clinicamente relevante ocorreu em **6,5% versus 9,4%**, respectivamente, na população por intenção de tratar; diferença −2,82 pontos percentuais (IC95% −4,40 a −1,24). Os desfechos compostos de eventos líquidos e de eventos cardíacos/cerebrais preencheram os critérios de não inferioridade. Isso não demonstra equivalência absoluta de cada evento isquêmico nem autoriza abreviar em qualquer paciente logo após qualquer ICP. [MASTER DAPT, resumo original](https://pubmed.ncbi.nlm.nih.gov/34449185/?dopt=Abstract).
+
+Portanto, escrever apenas “HBR: 1–6 meses” elimina informações essenciais. A decisão deve identificar o paciente, o momento desde a ICP, a evolução até esse momento e qual antiplaquetário continuará. Evidência de abreviação após ICP não deve ser automaticamente transplantada para tratamento exclusivamente clínico ou cirurgia de revascularização.
+
+## Anticoagulação concomitante é uma via própria
+
+Na necessidade de anticoagulação prolongada após ICP, a ACC/AHA 2025 recomenda retirar AAS em 1–4 semanas e manter P2Y12, preferencialmente clopidogrel, associado ao anticoagulante. A aplicação exige ponderar o risco individual; não manter automaticamente tripla terapia por 12 meses. Retirada planejada de AAS nesse cenário é distinta da interrupção autônoma de DAPT. [ACC/AHA 2025, item 2](https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know).
+
+Na prescrição, indicar o nome que será retirado, data e responsável. “Reduzir o remédio do sangue” não diferencia anticoagulante de antiagregante.
+
+## Depois de um ano: reavaliar, sem limite máximo inventado
+
+O aniversário da SCA não resolve sozinho a escolha entre manutenção de monoterapia e intensificação prolongada em paciente selecionado. A informação de prescrição FDA do ticagrelor distingue o primeiro ano de SCA do período posterior, com regimes próprios; isso não significa indicação universal de prolongamento. [FDA, documento de prescrição 03/2024, seção 2.2](https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/022433s035lbl.pdf).
+
+Perguntas para a reavaliação: houve sangramento? Houve novo evento isquêmico? Mudou a função renal ou a indicação de anticoagulação? Qual combinação foi tolerada? Qual benefício e dano são esperados para esta pessoa? NNT/NNH não podem ser fornecidos como faixas genéricas combinando ensaios, populações, desfechos e tempos diferentes.
+
+## Alto risco isquêmico e hemorrágico: limites do OPT-BIRISK
+
+O OPT-BIRISK incluiu 7.758 pacientes chineses com SCA/ICP e ambos os riscos pelos critérios do estudo, que completaram 9–12 meses de DAPT e estavam sem eventos adversos havia pelo menos seis meses. Comparou clopidogrel isolado com AAS/clopidogrel por mais nove meses. Sangramento BARC 2/3/5: **2,5% versus 3,3%; HR 0,75, IC95% 0,57–0,97**. O resultado apoia a estratégia na população selecionada; não determina troca obrigatória em todo paciente rotulado como risco duplo. A medida publicada é **hazard ratio**, não risco relativo. [Li et al., OPT-BIRISK](https://pubmed.ncbi.nlm.nih.gov/38630489/).
+
+## Fechamento da decisão
+
+**Modelo de registro original:** indicação e data da SCA/ICP; estratégia vigente; risco hemorrágico e isquêmico; anticoagulação concomitante; decisão e justificativa; medicamento mantido/retirado; prazo e responsável; compreensão do paciente.
+
+ICP eletiva por síndrome coronariana crônica pertence a outra população. Não importar seu prazo para SCA nem importar automaticamente resultados pós-ICP para todos os tipos de tratamento de SCA. A ausência de uma regra universal exige um plano explícito, não ausência de seguimento.
+
+## Recursos relacionados no CorVIA
+
+- [Primeiro retorno e conciliação antitrombótica](/biblioteca/primeiro-retorno-pos-sca-conciliacao-antitrombotica-e-intercorrencias)
+- [Checklist: fechamento de divergências no retorno](/checklists/primeiro-retorno-pos-sca-fechamento-de-divergencias-e-pendencias)
+- [Caso: dois P2Y12 e receitas conflitantes](/casos-clinicos/primeiro-retorno-pos-sca-dois-p2y12-dispneia-e-receitas-conflitantes)
+- [Material: por que dois medicamentos após infarto ou stent](/material-paciente/por-que-tomar-dois-remedios-para-o-sangue-depois-do-infarto-ou-stent)
+- [AAS](/medicamentos?slug=acido-acetilsalicilico-aas), [clopidogrel](/medicamentos?slug=clopidogrel-bissulfato) e [ticagrelor](/medicamentos?slug=ticagrelor)
+- [Trilha de antitrombóticos e desescalonamento](/trilhas/trilha-doenca-coronariana-antitrombotico-e-desescalonamento-da-dapt)
+
+As relações orientam navegação e aplicação contextual. Não representam indicação de uso simultâneo de todos os fármacos.

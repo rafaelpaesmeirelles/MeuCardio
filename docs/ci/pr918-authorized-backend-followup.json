@@ -1,0 +1,146 @@
+{
+  "pull_request": 918,
+  "baseline_sha": "eddcb80d3fc99e7c25b330c943637f49691826fa",
+  "baseline_run_id": 34418893616,
+  "baseline_job_id": 102689862687,
+  "authorization": {
+    "date": "2026-09-10",
+    "source": "Explicit user instruction in this working session",
+    "instruction": "Sem novo ci backend",
+    "mode": "authorized-no-backend-ci",
+    "scope": "Only PR918 and its exact main integration. No full or focused backend CI, including migrations/test jobs. This records the responsible owner decision; it is not a passing test certificate."
+  },
+  "impact_tests": {
+    "deploy.sh": [
+      "backend/tests/test_deploy_contract.py",
+      "backend/tests/test_deploy_rollback_window.py",
+      "backend/tests/test_deploy_version.py",
+      "backend/tests/test_deploy_snapshot_order.py",
+      "backend/tests/test_deploy_rag_fora_da_janela_critica_20260903.py"
+    ],
+    ".github/workflows/ci.yml": [
+      "scripts/tests/test_ci_backend_policy.py"
+    ],
+    "scripts/ci_backend_policy.py": [
+      "scripts/tests/test_ci_backend_policy.py"
+    ],
+    "scripts/ci_backend_followup.py": [
+      "scripts/tests/test_ci_backend_policy.py"
+    ],
+    "scripts/tests/test_ci_backend_policy.py": [
+      "scripts/tests/test_ci_backend_policy.py"
+    ],
+    "scripts/tests/test_full_corpus_release_authorization.py": [
+      "scripts/tests/test_full_corpus_release_authorization.py"
+    ],
+    "docs/ci/pr918-authorized-backend-followup.json": [
+      "scripts/tests/test_ci_backend_policy.py"
+    ],
+    "docker-compose.prod.yml": [
+      "backend/tests/test_deploy_contract.py",
+      "backend/tests/test_deploy_rollback_window.py",
+      "backend/tests/test_deploy_version.py",
+      "backend/tests/test_deploy_snapshot_order.py",
+      "backend/tests/test_deploy_rag_fora_da_janela_critica_20260903.py"
+    ],
+    "backend/app/services/ia/openai_tools.py": [
+      "backend/tests/test_openai_assistant_tools.py",
+      "backend/tests/test_ai_provider_accounting.py"
+    ],
+    "backend/app/services/ia/usage_control.py": [
+      "backend/tests/test_ai_cache_accounting.py",
+      "backend/tests/test_ai_provider_accounting.py",
+      "backend/tests/test_ai_wallet.py",
+      "backend/tests/test_cardiovascular_exam_ai.py",
+      "backend/tests/test_heart_team_ai_budget.py",
+      "backend/tests/test_openai_assistant_tools.py",
+      "backend/tests/test_provedor_tool_use.py",
+      "backend/tests/test_rag_stream_status.py",
+      "backend/tests/test_scientific_document_budget.py",
+      "backend/tests/test_whatsapp_assistant_security.py"
+    ],
+    "editorial-approvals/scoped-corpus-release-20260910.json": [
+      "scripts/tests/test_full_corpus_release_authorization.py",
+      "backend/tests/test_reconcile_content_full_run.py",
+      "backend/tests/test_reconcile_canonical_publication.py",
+      "backend/tests/test_reconcile_rag_pipeline.py"
+    ],
+    ".github/workflows/rc2-acceptance.yml": [
+      "backend/tests/test_deploy_contract.py"
+    ],
+    "scripts/feature_inventory.py": [
+      "backend/tests/test_feature_inventory.py"
+    ],
+    "scripts/build_scoped_corpus_release.py": [
+      "scripts/tests/test_snapshot_release_authorization.py",
+      "scripts/tests/test_full_corpus_release_authorization.py"
+    ],
+    "scripts/tests/test_snapshot_release_authorization.py": [
+      "scripts/tests/test_snapshot_release_authorization.py"
+    ],
+    "backend/app/core/config.py": [
+      "backend/tests/test_heart_team_frontier.py",
+      "backend/tests/test_heart_team_ai_budget.py",
+      "backend/tests/test_heart_team_virtual.py",
+      "backend/tests/test_runtime_config.py",
+      "backend/tests/test_pydantic_config_compat.py",
+      "backend/tests/test_ai_provider_accounting.py",
+      "backend/tests/test_ai_cache_accounting.py",
+      "backend/tests/test_commercial_plans.py"
+    ],
+    ".env.example": [
+      "backend/tests/test_heart_team_frontier.py",
+      "backend/tests/test_heart_team_ai_budget.py",
+      "backend/tests/test_heart_team_virtual.py",
+      "backend/tests/test_runtime_config.py",
+      "backend/tests/test_pydantic_config_compat.py",
+      "backend/tests/test_ai_provider_accounting.py",
+      "backend/tests/test_ai_cache_accounting.py",
+      "backend/tests/test_commercial_plans.py"
+    ],
+    "backend/app/services/heart_team.py": [
+      "backend/tests/test_ai_cache_accounting.py",
+      "backend/tests/test_ai_provider_accounting.py",
+      "backend/tests/test_heart_team_ai_budget.py",
+      "backend/tests/test_heart_team_frontier.py",
+      "backend/tests/test_heart_team_virtual.py",
+      "backend/tests/test_readiness.py",
+      "backend/tests/test_upload_security.py",
+      "backend/tests/test_whatsapp_assistant_behavior.py"
+    ]
+  },
+  "authorization_history": [
+    {
+      "date": "2026-09-10",
+      "source": "Explicit user instruction in this working session",
+      "instruction": "Nao fazer teste completo do backend 2 vezes repetidas ok, nao ha necessidade",
+      "scope": "One initial full execution, followed by all failed modules plus impacted tests and mandatory financial regressions; only PR918 and its exact main integration tree."
+    }
+  ],
+  "functional_baseline_sha": "266cde7454ec808f37dd4ab0ef6d83415b607c63",
+  "initial_full_result": {
+    "conclusion": "failure",
+    "failed": 84,
+    "passed": 3038,
+    "skipped": 3
+  },
+  "failed_followup_classification": {
+    "run_id": 34422978741,
+    "head_sha": "266cde7454ec808f37dd4ab0ef6d83415b607c63",
+    "classification_job_id": 102702204503,
+    "classification_conclusion": "failure",
+    "cause": "Baseline job-log download failed before classification; HTTP reason unavailable in captured stderr.",
+    "backend_job_id": 102702299040,
+    "backend_conclusion": "skipped",
+    "focused_job_id": 102702298687,
+    "focused_conclusion": "skipped"
+  },
+  "local_evidence": [
+    "docs/release-tct-plans-prevalentes-20260910.md",
+    "docs/commercial-plans-ai-wallet-20260909.md",
+    "docs/heart-team-frontier-and-scoped-reconciliation-20260910.md",
+    "docs/ai-configuration-audit-20260910.md",
+    "docs/ci/pr918-initial-backend-failures.json"
+  ],
+  "decision_document": "docs/ci/pr918-no-backend-ci-owner-decision.md"
+}

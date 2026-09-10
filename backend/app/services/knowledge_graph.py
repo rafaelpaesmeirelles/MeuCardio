@@ -25,6 +25,7 @@ import hashlib
 import json
 import re
 import unicodedata
+from contextvars import ContextVar
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import unquote
@@ -228,6 +229,20 @@ class _ItemTema:
     id_origem: int
     slug: str
     titulo: str
+
+
+_SOURCE_ROOT: ContextVar[Path | None] = ContextVar("knowledge_graph_source_root", default=None)
+
+
+def _graph_source(primary: Path, fallback: Path) -> Path:
+    root = _SOURCE_ROOT.get()
+    if root is not None:
+        # A scoped reconciliation must never fall back to live repository bytes.
+        source = root / primary.relative_to("/")
+        if not source.is_file() or not source.resolve().is_relative_to(root.resolve()):
+            raise RuntimeError(f"Fonte do grafo ausente no snapshot validado: {primary}")
+        return source
+    return primary if primary.is_file() else fallback
 
 
 _PRODUTOR_BACKFILL = "tudo_com_tudo_v2"
@@ -1060,9 +1075,8 @@ def _registrar_referencias_explicitas(
     # O arquivo curado distingue pares nominais de alertas por classe e de
     # interações ternárias/contextuais. Somente os registros revisados com
     # EXATAMENTE dois slugs viram `interacts_with`, mesma regra da API.
-    arquivo_interacoes = Path("/medicamentos/interacoes.json")
-    if not arquivo_interacoes.is_file():
-        arquivo_interacoes = Path(__file__).resolve().parents[3] / "medicamentos/interacoes.json"
+    arquivo_interacoes = _graph_source(Path("/medicamentos/interacoes.json"),
+        Path(__file__).resolve().parents[3] / "medicamentos/interacoes.json")
     try:
         interacoes = json.loads(arquivo_interacoes.read_text(encoding="utf-8"))
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
@@ -1127,11 +1141,8 @@ def _carregar_manifesto_relacoes_explicitas() -> list[dict]:
     referências a conteúdo ausente/despublicado são relatadas pelo backfill e
     não viram aresta pública.
     """
-    caminho = (
-        _ARQUIVO_RELACOES_EXPLICITAS
-        if _ARQUIVO_RELACOES_EXPLICITAS.is_file()
-        else _ARQUIVO_RELACOES_EXPLICITAS_FALLBACK
-    )
+    caminho = _graph_source(_ARQUIVO_RELACOES_EXPLICITAS,
+                            _ARQUIVO_RELACOES_EXPLICITAS_FALLBACK)
     try:
         payload = json.loads(caminho.read_text(encoding="utf-8"))
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
@@ -1481,7 +1492,16 @@ def _semear_conteudo_especializado(
     return ids_publicados, entidades_novas, relacoes_novas
 
 
-def backfill_mesmo_tema(db: Session, *, commit: bool = True) -> dict:
+def backfill_mesmo_tema(db: Session, *, commit: bool = True, source_root: Path | None = None) -> dict:
+    """Reconcile using an optional immutable source tree for curated graph inputs."""
+    token = _SOURCE_ROOT.set(source_root)
+    try:
+        return _backfill_mesmo_tema(db, commit=commit)
+    finally:
+        _SOURCE_ROOT.reset(token)
+
+
+def _backfill_mesmo_tema(db: Session, *, commit: bool = True) -> dict:
     """Semeia o grafo a partir de metadado estruturado publicado.
 
     Mantém o nome histórico por compatibilidade da API, mas hoje executa três
@@ -1741,9 +1761,8 @@ def backfill_mesmo_tema(db: Session, *, commit: bool = True) -> dict:
             publicados_por_slug=publicados_por_slug,
         )
     )
-    transversal_path = Path("/doencas/relacoes-transversais.json")
-    if not transversal_path.is_file():
-        transversal_path = Path(__file__).resolve().parents[3] / "doencas/relacoes-transversais.json"
+    transversal_path = _graph_source(Path("/doencas/relacoes-transversais.json"),
+        Path(__file__).resolve().parents[3] / "doencas/relacoes-transversais.json")
     transversais, transversais_nao_resolvidas = resolve_transversal_relations(
         load_transversal_relations(transversal_path), entidades_por_slug, publicados_por_slug,
     )
@@ -1831,7 +1850,7 @@ def _arquivar_entidades_sem_conteudo_publicado_correspondente(
 
 
 def relacionados_de(
-    db: Session, *, entity_type: str, slug: str, limite_por_tipo: int = 5,
+    db: Session, *, entity_type: str, slug: str, limite_por_tipo: int | None = 5,
     incluir_contexto_tematico: bool = False,
 ) -> dict | None:
     """Devolve relacionados ativos nas duas direções da aresta.
@@ -2042,7 +2061,7 @@ def relacionados_de(
                 i["slug"],
             ),
         )
-        pagina = itens_ordenados[:limite_por_tipo]
+        pagina = itens_ordenados if limite_por_tipo is None else itens_ordenados[:limite_por_tipo]
         total += len(itens_ordenados)
         grupos.append({
             "tipo": tipo,

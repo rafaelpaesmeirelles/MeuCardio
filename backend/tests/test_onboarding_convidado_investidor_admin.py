@@ -174,21 +174,25 @@ class TestNuncaChamaStripe:
         assert resp.status_code == 403
         assert db.query(Subscription).filter(Subscription.user_id == criado.id).first() is None
 
-    def test_normal_criado_pelo_admin_continua_chamando_stripe(self, client, db, admin):
+    def test_normal_criado_pelo_admin_continua_chamando_stripe(self, client, db, admin, monkeypatch):
+        from app.core.config import settings
+        monkeypatch.setattr(settings, "subscriptions_enabled", True)
         _, token_admin = admin
         client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "normal"},
                     headers=_headers(token_admin))
         criado = db.query(User).filter(User.email == "novo@teste.local").first()
         token_criado = _token_para(criado)
 
-        with patch("app.api.billing.stripe.checkout.Session.create") as criar_sessao, \
-             patch("app.api.billing.stripe.Customer.create") as criar_cliente:
+        with patch("app.api.billing._stripe_client") as factory:
+            criar_cliente = factory.return_value.v1.customers.create
+            criar_sessao = factory.return_value.v1.checkout.sessions.create
             criar_cliente.return_value = {"id": "cus_teste_normal"}
-            criar_sessao.return_value = {"url": "https://checkout.stripe.com/fake"}
+            criar_sessao.return_value = {"id": "cs_onboarding", "url": "https://checkout.stripe.com/fake", "expires_at": 9999999999}
             resp = client.post("/api/billing/checkout?plano=basico", headers=_headers(token_criado))
         assert resp.status_code == 200
         assert resp.json()["checkout_url"] == "https://checkout.stripe.com/fake"
         criar_sessao.assert_called_once()
+        assert criar_sessao.call_args.kwargs["params"]["line_items"][0]["price_data"]["unit_amount"] == 9990
 
 
 def _token_para(user: User) -> str:

@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta, timezone
 
 import logging
+import hashlib
 import stripe
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query, Request
 from sqlalchemy.exc import IntegrityError
@@ -12,45 +13,43 @@ from app.core.security import ACESSO_LIBERADO, current_user
 from app.models.audit import AuditLog
 from app.models.subscription import (
     PERIODICIDADE_ANUAL, PERIODICIDADE_MENSAL, PERIODICIDADE_SEMESTRAL,
-    PLANO_BASICO, PLANO_COMPLETO, TIPO_CURSO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription,
+    PLANO_BASICO, PLANO_BASICO_MAIL, PLANO_IA, PLANO_COMPLETO,
+    CURRENT_COMMERCIAL_VERSION, LEGACY_COMMERCIAL_VERSION,
+    TIPO_CURSO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription,
 )
 from app.models.user import User
 from app.services import emails
+from app.services.commercial_plans import (
+    PLANS, catalogue, monthly_price, mail_addon_price, plan_features, resolve_entitlements,
+)
 
-PLANOS_VALIDOS = {PLANO_BASICO, PLANO_COMPLETO}
-# Preço do plano completo cobrado inline (price_data), no mesmo padrão já usado
-# no checkout do CorvIA Mail avulso — evita depender de um segundo Price
-# pré-criado no painel do Stripe só para este plano.
-PRECO_COMPLETO_CENTAVOS = 5990
-# Preço do plano básico — hoje vem de um Price pré-criado no Stripe
-# (`settings.stripe_price_id`), não de um valor inline como o completo. O
-# valor abaixo é só para compor o e-mail de boas-vindas/confirmação sem uma
-# chamada extra à API do Stripe a cada assinatura nova; é o mesmo R$49,90
-# documentado em CLAUDE.md e cobrado no painel do Stripe.
-PRECO_BASICO_CENTAVOS = 4990
-PLANOS_NOME = {PLANO_BASICO: "Assinatura Básica", PLANO_COMPLETO: "Assinatura Completa"}
+PLANOS_VALIDOS = set(PLANS)
+# New monthly catalogue. Legacy amounts remain below solely for existing events.
+PRECO_COMPLETO_CENTAVOS = 16990
+PRECO_BASICO_CENTAVOS = 9990
+PLANOS_NOME = {key: value["name"] for key, value in PLANS.items()}
 
 PERIODICIDADES_VALIDAS = {PERIODICIDADE_MENSAL, PERIODICIDADE_SEMESTRAL, PERIODICIDADE_ANUAL}
 ROTULO_PERIODICIDADE = {
     PERIODICIDADE_MENSAL: "mês", PERIODICIDADE_SEMESTRAL: "6 meses", PERIODICIDADE_ANUAL: "ano",
 }
-# Valores fixos por plano+periodicidade, confirmados pelo Rafael em
-# 08/08/2026 (mensal sem mudança de valor). Única fonte de verdade sobre
-# preço no servidor — o cliente nunca envia valor, só plano+periodicidade,
-# e é este dicionário que resolve o centavo, aqui e no e-mail transacional.
+# Display compatibility constants; checkout reads the configured server prices.
 PRECO_CENTAVOS = {
     (PLANO_BASICO, PERIODICIDADE_MENSAL): PRECO_BASICO_CENTAVOS,
+    (PLANO_BASICO_MAIL, PERIODICIDADE_MENSAL): 11990,
+    (PLANO_IA, PERIODICIDADE_MENSAL): 14990,
+    (PLANO_COMPLETO, PERIODICIDADE_MENSAL): PRECO_COMPLETO_CENTAVOS,
+}
+LEGACY_PRECO_CENTAVOS = {
+    (PLANO_BASICO, PERIODICIDADE_MENSAL): 4990,
     (PLANO_BASICO, PERIODICIDADE_SEMESTRAL): 26990,
     (PLANO_BASICO, PERIODICIDADE_ANUAL): 47990,
-    (PLANO_COMPLETO, PERIODICIDADE_MENSAL): PRECO_COMPLETO_CENTAVOS,
+    (PLANO_COMPLETO, PERIODICIDADE_MENSAL): 5990,
     (PLANO_COMPLETO, PERIODICIDADE_SEMESTRAL): 32390,
     (PLANO_COMPLETO, PERIODICIDADE_ANUAL): 57590,
 }
-# Reverso de PRECO_CENTAVOS, usado para inferir o plano a partir do valor
-# cobrado que o Stripe confirma no webhook (nunca dos parâmetros que o
-# cliente mandou no clique) — chave única porque os seis valores são todos
-# distintos entre si.
-PLANO_DO_VALOR_CENTAVOS = {v: k[0] for k, v in PRECO_CENTAVOS.items()}
+# Existing contracts are recognized without moving them to the new catalogue.
+PLANO_DO_VALOR_CENTAVOS = {v: k[0] for k, v in LEGACY_PRECO_CENTAVOS.items()}
 
 # O prefixo precisa incluir /api: o Caddy usa `handle /api/*` (que, ao contrário
 # de `handle_path`, não remove o prefixo antes de repassar ao backend).
@@ -58,6 +57,20 @@ router = APIRouter(prefix="/api/billing", tags=["billing"])
 
 stripe.api_key = settings.stripe_secret_key
 log = logging.getLogger("meucardio.billing")
+
+
+def _stripe_client():
+    return stripe.StripeClient(settings.stripe_secret_key)
+
+
+def _checkout_tracking(seed: str) -> str:
+    # Stable across retries of the same idempotent Checkout request.
+    return "corvia_plans_" + "".join(chr(97 + n % 26) for n in hashlib.sha256(seed.encode()).digest()[:8])
+
+
+@router.get("/plans")
+def planos_comerciais():
+    return catalogue(subscriptions_enabled=settings.subscriptions_enabled)
 
 # Tradução dos status do Stripe para o vocabulário em português usado no banco
 # e na interface. Sem isso o valor cru em inglês vaza para a tela do assinante.
@@ -94,9 +107,8 @@ def _fim_do_periodo(obj) -> datetime | None:
     """Desde a versão de API 2025-03-31.basil o current_period_end saiu do objeto
     Subscription e passou a viver em cada item da assinatura."""
     itens = _campo(_campo(obj, "items") or {}, "data") or []
-    if not itens:
-        return None
-    fim = _campo(itens[0], "current_period_end")
+    fim = _campo(itens[0], "current_period_end") if itens else None
+    fim = fim or _campo(obj, "current_period_end")
     if not fim:
         return None
     return datetime.fromtimestamp(fim, tz=timezone.utc)
@@ -114,7 +126,7 @@ def _assinatura_meucardio(db: Session, user_id: int) -> Subscription | None:
     return (
         db.query(Subscription)
         .filter(Subscription.user_id == user_id, Subscription.kind == TIPO_MEUCARDIO)
-        .order_by(Subscription.id)
+        .order_by(Subscription.status.in_(ACESSO_LIBERADO).desc(), Subscription.id.desc())
         .first()
     )
 
@@ -147,7 +159,7 @@ def _assinatura_email(db: Session, user_id: int) -> Subscription | None:
     return (
         db.query(Subscription)
         .filter(Subscription.user_id == user_id, Subscription.kind == TIPO_EMAIL)
-        .order_by(Subscription.id)
+        .order_by(Subscription.status.in_(ACESSO_LIBERADO).desc(), Subscription.id.desc())
         .first()
     )
 
@@ -187,11 +199,20 @@ def _aplicar_evento(db: Session, obj, quando: datetime, alteracoes) -> Subscript
     # da plataforma, cancelando o acesso de um assinante pagante sem que
     # nenhuma requisição desse erro.
     sub = None
-    id_assinatura = obj["id"] if "id" in obj else None
+    id_assinatura = _campo(obj, "id")
+    is_invoice = _campo(obj, "object") == "invoice" or str(id_assinatura or "").startswith("in_")
+    if is_invoice:
+        parent = _campo(obj, "parent") or {}
+        details = _campo(parent, "subscription_details") or {}
+        id_assinatura = _campo(obj, "subscription") or _campo(details, "subscription")
+        if not id_assinatura:
+            return None
     if id_assinatura:
         sub = db.query(Subscription).filter(
             Subscription.stripe_subscription_id == id_assinatura
-        ).first()
+        ).with_for_update().populate_existing().first()
+    if sub is None and is_invoice:
+        return None
     if sub is None:
         # Primeiro evento de uma assinatura ainda sem id gravado. O metadata diz
         # de qual das duas se trata; sem metadata, é a da plataforma, que é o
@@ -223,15 +244,20 @@ def _aplicar_evento(db: Session, obj, quando: datetime, alteracoes) -> Subscript
             consulta = consulta.filter(Subscription.kind == TIPO_EMAIL)
         else:
             consulta = consulta.filter(Subscription.kind == TIPO_MEUCARDIO)
-        sub = consulta.order_by(Subscription.id.desc()).first()
+        sub = consulta.order_by(Subscription.id.desc()).with_for_update().populate_existing().first()
     if sub is None:
         return None
     if sub.last_event_at is not None and quando < sub.last_event_at:
         return None
+    # Stripe cancellation is terminal for that subscription id, including
+    # out-of-order deliveries sharing the same whole-second event timestamp.
+    if (sub.status == "cancelado" and sub.stripe_subscription_id == id_assinatura
+            and _campo(obj, "status") != "canceled"):
+        return None
     alteracoes(sub)
     sub.last_event_at = quando
     db.commit()
-    if sub.kind == TIPO_EMAIL:
+    if sub.kind in {TIPO_EMAIL, TIPO_MEUCARDIO}:
         _sincronizar_caixa_de_email(db, sub)
     return sub
 
@@ -252,6 +278,15 @@ def _periodicidade_do_price(price) -> str:
     return PERIODICIDADE_MENSAL
 
 
+def _confirmed_price_metadata(obj):
+    items = _campo(_campo(obj, "items") or {}, "data") or []
+    price = _campo(items[0], "price") if items else {}
+    metadata = _campo(price or {}, "metadata") or {}
+    if _campo(metadata, "commercial_version") == CURRENT_COMMERCIAL_VERSION:
+        return metadata
+    return _campo(obj, "metadata") or {}
+
+
 def _inferir_plano_periodicidade_do_objeto(obj) -> tuple[str | None, str | None]:
     """Lê o valor cobrado e a recorrência do primeiro item da assinatura do
     Stripe e infere plano+periodicidade — nunca do que o cliente pediu no
@@ -268,6 +303,16 @@ def _inferir_plano_periodicidade_do_objeto(obj) -> tuple[str | None, str | None]
     valor = _campo(price, "unit_amount")
     if valor is None:
         return None, None
+    metadata = _confirmed_price_metadata(obj)
+    if _campo(metadata, "commercial_version") == CURRENT_COMMERCIAL_VERSION:
+        plano = _campo(metadata, "plano")
+        recurring = _campo(price, "recurring") or {}
+        if (plano not in PLANS or valor != monthly_price(plano)
+                or _campo(price, "currency") != "brl"
+                or _campo(recurring, "interval") != "month"
+                or (_campo(recurring, "interval_count") or 1) != 1):
+            return None, None
+        return plano, PERIODICIDADE_MENSAL
     plano = PLANO_DO_VALOR_CENTAVOS.get(valor)
     if plano is None:
         return None, None
@@ -275,46 +320,59 @@ def _inferir_plano_periodicidade_do_objeto(obj) -> tuple[str | None, str | None]
 
 
 def _item_de_preco(plano: str, periodicidade: str) -> dict:
-    """Resolve o item de linha (Price existente ou `price_data` inline) para
-    um plano+periodicidade — usado tanto no checkout quanto na troca de
-    plano de uma assinatura ativa, para não ter duas fontes de verdade sobre
-    preço. Nunca aceita preço vindo do cliente: os seis pontos possíveis
-    (2 planos × 3 periodicidades) são todos resolvidos aqui, a partir de
-    PRECO_CENTAVOS/settings — o cliente só escolhe QUAL dos seis, nunca o
-    valor.
+    """Only newly approved monthly offers; existing renewals stay in Stripe."""
+    if periodicidade != PERIODICIDADE_MENSAL:
+        raise HTTPException(status_code=409, detail="Os novos planos estão disponíveis apenas na modalidade mensal. Contratos anteriores mantêm suas condições.")
+    amount = monthly_price(plano)
+    if amount <= 0:
+        raise HTTPException(status_code=503, detail="Preço do plano indisponível.")
+    return {"price_data": {
+        "currency": "brl", "unit_amount": amount,
+        "recurring": {"interval": "month"},
+        "product_data": {"name": PLANS[plano]["name"]},
+    }}
 
-    Levanta 503 se a periodicidade pedida ainda não tiver Price configurado
-    no `.env` — nunca inventa um price_data com o valor de PRECO_CENTAVOS
-    para semestral/anual: o pedido original foi explícito em pedir Price
-    OBJECTS de verdade para esses dois, criados uma vez via API, não preço
-    inline recriado a cada chamada."""
-    if periodicidade == PERIODICIDADE_MENSAL:
-        if plano == PLANO_COMPLETO:
-            return {
-                "price_data": {
-                    "currency": "brl",
-                    "unit_amount": PRECO_COMPLETO_CENTAVOS,
-                    "recurring": {"interval": "month"},
-                    "product_data": {"name": "Corvia — Assinatura Completa (Acesso ao Site + CorvIA Mail)"},
-                },
-            }
-        return {"price": settings.stripe_price_id}
 
-    price_id = {
-        (PLANO_BASICO, PERIODICIDADE_SEMESTRAL): settings.stripe_price_id_basico_semestral,
-        (PLANO_BASICO, PERIODICIDADE_ANUAL): settings.stripe_price_id_basico_anual,
-        (PLANO_COMPLETO, PERIODICIDADE_SEMESTRAL): settings.stripe_price_id_completo_semestral,
-        (PLANO_COMPLETO, PERIODICIDADE_ANUAL): settings.stripe_price_id_completo_anual,
-    }.get((plano, periodicidade))
-    if not price_id:
-        raise HTTPException(
-            status_code=503,
-            detail=(
-                f"O plano {PLANOS_NOME.get(plano, plano)} a cada {ROTULO_PERIODICIDADE[periodicidade]} "
-                "ainda não está disponível para assinatura."
-            ),
-        )
-    return {"price": price_id}
+def _ensure_no_mail_overlap(db, user, plan):
+    if not PLANS[plan]["mail"]:
+        return
+    addon = _assinatura_email(db, user.id)
+    if addon and addon.status in ACESSO_LIBERADO and addon.stripe_subscription_id:
+        raise HTTPException(status_code=409, detail="Você já tem uma assinatura avulsa do CorVIA Mail. Regularize esse contrato antes de contratar um plano que inclua Mail, para evitar duas cobranças.")
+
+
+def _subscription_price_id(plano: str) -> str:
+    """A distinct Product/Price per tier; only called on an explicit plan change."""
+    params = _item_de_preco(plano, PERIODICIDADE_MENSAL)["price_data"]
+    lookup = f"corvia:{CURRENT_COMMERCIAL_VERSION}:{plano}:{params['unit_amount']}"
+    client = _stripe_client()
+    existing = client.v1.prices.list(params={"lookup_keys": [lookup], "active": True, "limit": 1})
+    rows = _campo(existing, "data") or []
+    if rows:
+        price = rows[0]
+        recurring = _campo(price, "recurring") or {}
+        if (_campo(price, "unit_amount") != params["unit_amount"]
+                or _campo(price, "currency") != "brl"
+                or _campo(recurring, "interval") != "month"
+                or (_campo(recurring, "interval_count") or 1) != 1):
+            raise HTTPException(status_code=503, detail="Preço cadastrado incompatível com o plano.")
+        return price["id"]
+    price = client.v1.prices.create(
+        params={**params, "lookup_key": lookup, "metadata": {"commercial_version": CURRENT_COMMERCIAL_VERSION, "plano": plano}},
+        options={"idempotency_key": lookup},
+    )
+    return price["id"]
+
+
+def _confirmed_commercial_version(obj) -> str | None:
+    metadata = _confirmed_price_metadata(obj)
+    if _campo(metadata, "commercial_version") == CURRENT_COMMERCIAL_VERSION:
+        plan, period = _inferir_plano_periodicidade_do_objeto(obj)
+        if plan == _campo(metadata, "plano") and period == PERIODICIDADE_MENSAL:
+            return CURRENT_COMMERCIAL_VERSION
+        return None
+    plan, _ = _inferir_plano_periodicidade_do_objeto(obj)
+    return LEGACY_COMMERCIAL_VERSION if plan else None
 
 
 def _sincronizar_caixa_de_email(db: Session, sub: Subscription) -> None:
@@ -327,7 +385,9 @@ def _sincronizar_caixa_de_email(db: Session, sub: Subscription) -> None:
     conta = db.query(EmailAccount).filter(EmailAccount.user_id == sub.user_id).first()
     if not conta:
         return
-    novo_status = "ativa" if sub.status in ACESSO_LIBERADO else "suspensa"
+    owner = db.get(User, sub.user_id)
+    has_mail = bool(owner and resolve_entitlements(db, owner)["mail"])
+    novo_status = "ativa" if has_mail else "suspensa"
     if conta.status != novo_status:
         conta.status = novo_status
         db.commit()
@@ -354,6 +414,7 @@ def criar_checkout(
         raise HTTPException(status_code=400, detail="Plano inválido.")
     if periodicidade not in PERIODICIDADES_VALIDAS:
         raise HTTPException(status_code=400, detail="Periodicidade inválida.")
+    item_preco = _item_de_preco(plano, periodicidade)
 
     sub = _obter_ou_criar_assinatura(db, user)
 
@@ -409,38 +470,57 @@ def criar_checkout(
             "mensagem": "Médico Convidado — Acesso Completo Liberado.",
         }
 
+    # Serialize checkout creation per subscription. Reuse an open session, and
+    # keep an idempotency key stable even if the provider response is interrupted.
+    sub = db.query(Subscription).filter(Subscription.id == sub.id).with_for_update().populate_existing().one()
+    if sub.status in ACESSO_LIBERADO:
+        raise HTTPException(status_code=409, detail="A assinatura já está ativa. Use Trocar plano.")
+    _ensure_no_mail_overlap(db, user, plano)
+    last = db.query(AuditLog).filter(
+        AuditLog.user_id == user.id, AuditLog.action == "subscription_checkout_created",
+        AuditLog.entity == "subscription", AuditLog.entity_id == str(sub.id),
+    ).order_by(AuditLog.id.desc()).first()
+    now = datetime.now(timezone.utc).timestamp()
+    previous = dict(last.detail or {}) if last else {}
+    client = _stripe_client()
+    if previous.get("session_id") and previous.get("expires_at", 0) > now:
+        if (previous.get("plan") == plano and previous.get("amount") == monthly_price(plano)
+                and previous.get("version") == CURRENT_COMMERCIAL_VERSION):
+            return {"checkout_url": previous["url"]}
+        old_session = client.v1.checkout.sessions.retrieve(previous["session_id"])
+        if _campo(old_session, "status") == "complete":
+            raise HTTPException(status_code=409, detail="Pagamento em confirmação. Aguarde antes de iniciar outra assinatura.")
+        if _campo(old_session, "status") == "open":
+            client.v1.checkout.sessions.expire(previous["session_id"])
     if not sub.stripe_customer_id:
-        customer = stripe.Customer.create(email=user.email, name=user.full_name)
+        customer = client.v1.customers.create(
+            params={"email": user.email, "name": user.full_name},
+            options={"idempotency_key": f"corvia-customer:{user.id}"},
+        )
         sub.stripe_customer_id = customer["id"]
-
-    # Gravado aqui, não deduzido do webhook: o webhook só confirma status e
-    # data de renovação, quem decide o plano/periodicidade é esta chamada,
-    # antes de existir qualquer evento do Stripe para esta assinatura.
     sub.plano = plano
     sub.periodicidade = periodicidade
-    db.commit()
-
-    line_items = [{**_item_de_preco(plano, periodicidade), "quantity": 1}]
-
-    session = stripe.checkout.Session.create(
-        customer=sub.stripe_customer_id,
-        mode="subscription",
-        payment_method_types=["card"],
-        line_items=line_items,
-        # Pedido do Rafael em 08/08/2026: cupom promocional no checkout —
-        # os cupons em si são criados por ele no painel Stripe depois, este
-        # campo só habilita o campo de código na tela do Stripe.
-        allow_promotion_codes=True,
-        subscription_data={
-            "metadata": {
-                "tipo": "meucardio", "plano": plano, "periodicidade": periodicidade,
-                "user_id": str(user.id),
-            }
-        },
+    attempt = f"corvia-checkout:{sub.id}:{plano}:{CURRENT_COMMERCIAL_VERSION}:{last.id if last else 0}"
+    session = client.v1.checkout.sessions.create(params=dict(
+        customer=sub.stripe_customer_id, mode="subscription",
+        integration_identifier=_checkout_tracking(attempt),
+        line_items=[{**item_preco, "quantity": 1}], allow_promotion_codes=True,
+        subscription_data={"metadata": {
+            "tipo": "meucardio", "plano": plano, "periodicidade": periodicidade,
+            "commercial_version": CURRENT_COMMERCIAL_VERSION, "user_id": str(user.id),
+        }},
         success_url=f"{settings.public_url}/assinatura?status=sucesso",
         cancel_url=f"{settings.public_url}/assinatura?status=cancelado",
-    )
+    ), options={"idempotency_key": attempt})
+    db.add(AuditLog(user_id=user.id, action="subscription_checkout_created", entity="subscription",
+                    entity_id=str(sub.id), detail={
+                        "session_id": session["id"], "url": session["url"],
+                        "expires_at": session["expires_at"], "plan": plano,
+                        "amount": monthly_price(plano), "version": CURRENT_COMMERCIAL_VERSION,
+                    }))
+    db.commit()
     return {"checkout_url": session["url"]}
+
 
 
 @router.get("/status-email")
@@ -452,8 +532,8 @@ def status_email(db: Session = Depends(get_db), user: User = Depends(current_use
     if user.role == "admin":
         return {
             "status": "ativo", "current_period_end": None,
-            "preco_definido": settings.corvia_mail_preco_definido,
-            "preco_centavos": settings.corvia_mail_preco_centavos,
+            "preco_definido": (mail_addon_price() > 0),
+            "preco_centavos": mail_addon_price(),
             "incluido_no_plano": True,
         }
     # Convidado (issue #52, "REGRA DEFINITIVA DE ACESSO PARA CONVIDADO"):
@@ -465,8 +545,8 @@ def status_email(db: Session = Depends(get_db), user: User = Depends(current_use
     if getattr(user, "convidado", False):
         return {
             "status": "ativo", "current_period_end": None,
-            "preco_definido": settings.corvia_mail_preco_definido,
-            "preco_centavos": settings.corvia_mail_preco_centavos,
+            "preco_definido": (mail_addon_price() > 0),
+            "preco_centavos": mail_addon_price(),
             "incluido_no_plano": True,
         }
     # Investidor (issue #52, achado da revisão adversarial): CorvIA Mail
@@ -480,7 +560,7 @@ def status_email(db: Session = Depends(get_db), user: User = Depends(current_use
         return {
             "status": "inativo", "current_period_end": None,
             "preco_definido": False,
-            "preco_centavos": settings.corvia_mail_preco_centavos,
+            "preco_centavos": mail_addon_price(),
             "incluido_no_plano": False,
         }
 
@@ -488,8 +568,8 @@ def status_email(db: Session = Depends(get_db), user: User = Depends(current_use
     if sub and sub.status in ACESSO_LIBERADO:
         return {
             "status": sub.status, "current_period_end": sub.current_period_end,
-            "preco_definido": settings.corvia_mail_preco_definido,
-            "preco_centavos": settings.corvia_mail_preco_centavos,
+            "preco_definido": (mail_addon_price() > 0),
+            "preco_centavos": mail_addon_price(),
             "incluido_no_plano": False,
         }
 
@@ -497,19 +577,19 @@ def status_email(db: Session = Depends(get_db), user: User = Depends(current_use
     # Sem esta checagem, quem pagou o plano completo veria "Assinar o CorvIA
     # Mail" na tela, e um clique nele seria recusado pelo checkout (409).
     principal = _assinatura_meucardio(db, user.id)
-    if principal and principal.status in ACESSO_LIBERADO and principal.plano == PLANO_COMPLETO:
+    if principal and resolve_entitlements(db, user)["mail"]:
         return {
             "status": principal.status, "current_period_end": principal.current_period_end,
-            "preco_definido": settings.corvia_mail_preco_definido,
-            "preco_centavos": settings.corvia_mail_preco_centavos,
+            "preco_definido": (mail_addon_price() > 0),
+            "preco_centavos": mail_addon_price(),
             "incluido_no_plano": True,
         }
 
     return {
         "status": sub.status if sub else "inativo",
         "current_period_end": sub.current_period_end if sub else None,
-        "preco_definido": settings.corvia_mail_preco_definido,
-        "preco_centavos": settings.corvia_mail_preco_centavos,
+        "preco_definido": (mail_addon_price() > 0),
+        "preco_centavos": mail_addon_price(),
         "incluido_no_plano": False,
     }
 
@@ -535,17 +615,17 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
             status_code=409,
             detail="O CorvIA Mail não está disponível para contas de investidor — o acesso a essa conta é só em modo demonstração.",
         )
-    if not settings.corvia_mail_preco_definido:
+    if not (mail_addon_price() > 0):
         raise HTTPException(
             status_code=409,
             detail="O preço do CorvIA Mail ainda não foi definido. Assinatura indisponível no momento.",
         )
 
     principal = _assinatura_meucardio(db, user.id)
-    if principal and principal.status in ACESSO_LIBERADO and principal.plano == PLANO_COMPLETO:
+    if principal and principal.status in ACESSO_LIBERADO and plan_features(principal.plano, getattr(principal, "commercial_version", None))["mail"]:
         raise HTTPException(
             status_code=409,
-            detail="Seu plano atual (Assinatura Completa) já inclui o CorvIA Mail — não é preciso assinar separadamente.",
+            detail="Seu plano atual já inclui o CorvIA Mail — não é preciso assinar separadamente.",
         )
 
     sub = _obter_ou_criar_assinatura_email(db, user)
@@ -574,12 +654,11 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
         # antes da primeira cobrança recorrente valer — diferente do cartão,
         # que cobra na hora. Depende também de o Pix estar habilitado nas
         # configurações de pagamento da conta Stripe (fora do código).
-        payment_method_types=["card", "pix"],
         payment_method_options={
             "pix": {
                 "mandate_options": {
                     "amount_type": "fixed",
-                    "amount": settings.corvia_mail_preco_centavos,
+                    "amount": mail_addon_price(),
                     "payment_schedule": "monthly",
                     "reference": "CorvIA Mail",
                 },
@@ -591,7 +670,7 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
         line_items=[{
             "price_data": {
                 "currency": "brl",
-                "unit_amount": settings.corvia_mail_preco_centavos,
+                "unit_amount": mail_addon_price(),
                 "recurring": {"interval": "month"},
                 "product_data": {"name": "CorvIA Mail"},
             },
@@ -673,21 +752,11 @@ def trocar_plano(
     plano: str = Query(...), periodicidade: str = Query(...),
     db: Session = Depends(get_db), user: User = Depends(current_user),
 ):
-    """Troca plano e/ou periodicidade de uma assinatura JÁ ATIVA (08/08/2026,
-    pedido do Rafael) — antes disso, trocar exigia cancelar e reassinar
-    manualmente (o 409 em `criar_checkout` acima). Usa
-    `stripe.Subscription.modify(...)` trocando o item de preço, com
-    `proration_behavior="create_prorations"`: o Stripe credita/debita a
-    diferença proporcional ao tempo restante do ciclo atual, em vez de
-    cobrar o valor cheio do novo plano imediatamente ou esperar o próximo
-    ciclo — é o comportamento que a maioria dos assinantes espera ao trocar
-    no meio do período já pago.
+    """Request a monthly plan change; only confirmed Stripe events grant it.
 
-    NUNCA aplica o novo plano/periodicidade localmente aqui — só dispara a
-    troca no Stripe. Quem grava `sub.plano`/`sub.periodicidade` de verdade é
-    sempre o webhook (`customer.subscription.updated`), lendo o que o Stripe
-    confirmou — mesma disciplina de "nunca confiar no otimista" que o resto
-    deste arquivo já segue (ver `_inferir_plano_periodicidade_do_objeto`)."""
+    Upgrades invoice immediately and remain pending if unpaid. Downgrades do
+    not refund the current cycle, preventing consumption followed by a refund.
+    """
     _exigir_assinaturas_habilitadas()
     if plano not in PLANOS_VALIDOS:
         raise HTTPException(status_code=400, detail="Plano inválido.")
@@ -702,18 +771,23 @@ def trocar_plano(
         # trocar o plano dele é ação de admin (painel Admin/pré-autorização),
         # não desta rota.
         raise HTTPException(status_code=409, detail="Contas de convidado não trocam de plano por aqui.")
-    if sub.plano == plano and sub.periodicidade == periodicidade:
+    if (sub.plano == plano and sub.periodicidade == periodicidade
+            and sub.commercial_version == CURRENT_COMMERCIAL_VERSION):
         raise HTTPException(status_code=409, detail="Você já está neste plano e periodicidade.")
 
-    item_preco = _item_de_preco(plano, periodicidade)
-    stripe_sub = stripe.Subscription.retrieve(sub.stripe_subscription_id)
+    if sub.periodicidade != PERIODICIDADE_MENSAL:
+        raise HTTPException(status_code=409, detail="Seu contrato semestral ou anual será preservado. Solicite a mudança para um plano mensal ao término do período contratado.")
+    _item_de_preco(plano, periodicidade)
+    _ensure_no_mail_overlap(db, user, plano)
+    item_preco = {"price": _subscription_price_id(plano)}
+    stripe_sub = _stripe_client().v1.subscriptions.retrieve(sub.stripe_subscription_id)
     item_atual = _campo(_campo(stripe_sub, "items") or {}, "data")[0]
 
-    stripe.Subscription.modify(
+    _stripe_client().v1.subscriptions.update(
         sub.stripe_subscription_id,
-        items=[{"id": item_atual["id"], **item_preco}],
-        proration_behavior="create_prorations",
-        metadata={"tipo": "meucardio", "plano": plano, "periodicidade": periodicidade, "user_id": str(user.id)},
+        params=dict(items=[{"id": item_atual["id"], **item_preco}],
+        proration_behavior=("always_invoice" if monthly_price(plano) > int(_campo(_campo(item_atual, "price") or {}, "unit_amount") or 0) else "none"),
+        payment_behavior="pending_if_incomplete"),
     )
     db.add(AuditLog(
         user_id=user.id, action="solicitar_troca_plano", entity="subscription",
@@ -787,15 +861,33 @@ def status_assinatura(db: Session = Depends(get_db), user: User = Depends(curren
     from app.services.entitlement import acesso_administrativo_sem_pagamento
 
     sub = _assinatura_meucardio(db, user.id)
+    entitlements = resolve_entitlements(db, user)
+    special = user.role == "admin" or getattr(user, "convidado", False) or getattr(user, "investidor", False)
+    capabilities = {
+        "entitlements": entitlements,
+        "portal_available": bool(not special and settings.stripe_secret_key and _customer_ids_do_usuario(db, user.id)),
+        "change_plan_available": bool(not special and settings.subscriptions_enabled
+                                      and settings.stripe_secret_key and sub
+                                      and sub.status in ACESSO_LIBERADO and sub.stripe_subscription_id),
+    }
     if not sub:
         return {
             "status": "inativo", "current_period_end": None, "plano": None, "periodicidade": None,
             "acesso_administrativo": acesso_administrativo_sem_pagamento(user),
+            **capabilities,
         }
     return {
         "status": sub.status, "current_period_end": sub.current_period_end, "plano": sub.plano,
         "periodicidade": sub.periodicidade,
         "acesso_administrativo": acesso_administrativo_sem_pagamento(user),
+        "commercial_version": sub.commercial_version,
+        "reference_price_centavos": (
+            LEGACY_PRECO_CENTAVOS.get((sub.plano, sub.periodicidade))
+            if sub.commercial_version == LEGACY_COMMERCIAL_VERSION
+            else monthly_price(sub.plano) if sub.plano in PLANS and sub.periodicidade == PERIODICIDADE_MENSAL else None
+        ),
+        "price_source": "catalogue_before_discounts",
+        **capabilities,
     }
 
 
@@ -838,6 +930,10 @@ async def webhook(request: Request, background_tasks: BackgroundTasks, db: Sessi
     if event is None:
         raise HTTPException(status_code=400, detail="Assinatura de webhook inválida.")
 
+    from app.services.ai_credit_payments import handle_verified_event
+    if handle_verified_event(db, event):
+        return {"ok": True}
+
     tipo = event["type"]
     obj = event["data"]["object"]
     quando = datetime.fromtimestamp(event["created"], tz=timezone.utc)
@@ -850,7 +946,15 @@ async def webhook(request: Request, background_tasks: BackgroundTasks, db: Sessi
         estado_antes: dict = {}
 
         def alterar(sub):
+            metadata = _confirmed_price_metadata(obj)
+            version = _confirmed_commercial_version(obj) if sub.kind == TIPO_MEUCARDIO else None
+            if (_campo(metadata, "commercial_version") == CURRENT_COMMERCIAL_VERSION
+                    and version is None):
+                raise HTTPException(status_code=400, detail="Preço confirmado incompatível com o plano comercial.")
             previous_stripe_id = sub.stripe_subscription_id
+            previous_version = sub.commercial_version or LEGACY_COMMERCIAL_VERSION
+            previously_had_ai = (sub.status in ACESSO_LIBERADO
+                                 and plan_features(sub.plano, previous_version)["ai"])
             estado_antes["era_nova"] = sub.stripe_subscription_id is None
             estado_antes["status_anterior"] = sub.status
             estado_antes["plano_anterior"] = sub.plano
@@ -860,6 +964,12 @@ async def webhook(request: Request, background_tasks: BackgroundTasks, db: Sessi
             fim = _fim_do_periodo(obj)
             if fim is not None:
                 sub.current_period_end = fim
+            start_value = _campo(obj, "current_period_start")
+            if start_value is None:
+                period_items = _campo(_campo(obj, "items") or {}, "data") or []
+                start_value = _campo(period_items[0], "current_period_start") if period_items else None
+            if start_value is not None:
+                sub.current_period_start = datetime.fromtimestamp(start_value, tz=timezone.utc)
             if sub.kind == TIPO_MEUCARDIO:
                 # Reconciliação SEMPRE pelo que o Stripe confirma neste
                 # evento — nunca pelo que `/checkout` ou `/trocar-plano`
@@ -873,6 +983,19 @@ async def webhook(request: Request, background_tasks: BackgroundTasks, db: Sessi
                     sub.plano = novo_plano
                 if nova_periodicidade:
                     sub.periodicidade = nova_periodicidade
+                if version is not None:
+                    sub.commercial_version = version
+                confirmed_ai = plan_features(sub.plano, sub.commercial_version)["ai"]
+                if not confirmed_ai:
+                    sub.ai_access_started_at = None
+                elif sub.status in {"ativo", "teste"}:
+                    if previous_stripe_id is None:
+                        # Initial purchase pays the whole first cycle.
+                        sub.ai_access_started_at = sub.current_period_start
+                    elif not previously_had_ai:
+                        sub.ai_access_started_at = quando
+                    elif sub.ai_access_started_at is None and previous_version == LEGACY_COMMERCIAL_VERSION:
+                        sub.ai_access_started_at = sub.current_period_start
             from app.services.admin_activity import record_subscription_activation
             record_subscription_activation(
                 db, subscription=sub, previous_status=estado_antes["status_anterior"],
@@ -886,10 +1009,12 @@ async def webhook(request: Request, background_tasks: BackgroundTasks, db: Sessi
             status_anterior = estado_antes["status_anterior"]
             plano_anterior = estado_antes["plano_anterior"]
             periodicidade_anterior = estado_antes["periodicidade_anterior"]
-            valor_do_plano = PRECO_CENTAVOS.get(
-                (sub.plano, sub.periodicidade),
-                PRECO_COMPLETO_CENTAVOS if sub.plano == PLANO_COMPLETO else PRECO_BASICO_CENTAVOS,
-            )
+            confirmed_items = _campo(_campo(obj, "items") or {}, "data") or []
+            confirmed_price = _campo(confirmed_items[0], "price") if confirmed_items else {}
+            valor_do_plano = _campo(confirmed_price or {}, "unit_amount")
+            if valor_do_plano is None:
+                price_table = LEGACY_PRECO_CENTAVOS if sub.commercial_version == LEGACY_COMMERCIAL_VERSION else PRECO_CENTAVOS
+                valor_do_plano = price_table.get((sub.plano, sub.periodicidade), 0)
 
             if era_nova and tipo == "customer.subscription.created":
                 background_tasks.add_task(
@@ -913,7 +1038,7 @@ async def webhook(request: Request, background_tasks: BackgroundTasks, db: Sessi
     elif tipo == "customer.subscription.deleted":
         sub = _aplicar_evento(db, obj, quando, lambda s: setattr(s, "status", "cancelado"))
         if sub is not None and sub.kind == TIPO_MEUCARDIO:
-            tinha_mail = sub.plano == PLANO_COMPLETO or (
+            tinha_mail = plan_features(sub.plano, getattr(sub, "commercial_version", None))["mail"] or (
                 db.query(Subscription)
                 .filter(
                     Subscription.user_id == sub.user_id, Subscription.kind == TIPO_EMAIL,

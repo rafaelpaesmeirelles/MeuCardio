@@ -24,7 +24,7 @@ router = APIRouter(prefix="/api/ai", tags=["ia"])
 
 # IDs corretos dos modelos Claude, sem sufixo de data — mesma allowlist usada
 # para validar `modelo` e para popular o seletor no frontend.
-MODELOS_ANTHROPIC_PERMITIDOS = ["claude-opus-5", "claude-sonnet-5", "claude-haiku-4-5", "claude-fable-5"]
+MODELOS_ANTHROPIC_PERMITIDOS = ["claude-opus-5", "claude-sonnet-5", "claude-haiku-4-5"]
 
 # Versão do texto de consentimento para o assistente usar ferramentas de
 # agenda/e-mail — mesmo padrão de MOBILITY_CONSENT_VERSION em
@@ -243,6 +243,11 @@ def _preparar_pergunta(dados: Pergunta, db: Session, user) -> tuple[AIConversati
             detail=f"Remova estes identificadores antes de enviar: {', '.join(achados)}.",
         )
 
+    if dados.modelo is not None and settings.ai_provider != "anthropic":
+        raise HTTPException(
+            status_code=422,
+            detail="A seleção de modelos Claude exige o provedor Anthropic configurado.",
+        )
     if dados.modelo is not None and dados.modelo not in MODELOS_ANTHROPIC_PERMITIDOS:
         raise HTTPException(
             status_code=422,

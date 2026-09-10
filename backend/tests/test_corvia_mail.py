@@ -857,12 +857,19 @@ class TestSincronizacaoAssinaturaCaixa:
 # ---------------------------------------------------------------------------
 
 class TestCheckoutEmail:
-    def test_preco_indefinido_devolve_409(self, client, criar_usuario, monkeypatch):
+    def test_catalogo_sem_adicional_mail_valido_devolve_409(self, client, criar_usuario, monkeypatch):
         from app.core.config import settings
+        from unittest.mock import patch
 
-        monkeypatch.setattr(settings, "corvia_mail_preco_centavos", 0)
+        monkeypatch.setattr(settings, "subscriptions_enabled", True)
+        # New Mail offers derive their price from the approved plan deltas.
+        # An invalid delta must fail before any external payment operation.
+        monkeypatch.setattr(settings, "commercial_price_basico_mail_centavos", settings.commercial_price_basico_centavos)
+        monkeypatch.setattr(settings, "commercial_price_completo_centavos", settings.commercial_price_ia_centavos)
         user, token = criar_usuario()
-        resp = client.post("/api/billing/checkout-email", headers={"Authorization": f"Bearer {token}"})
+        with patch("app.api.billing.stripe.Customer.create") as customer, patch("app.api.billing.stripe.checkout.Session.create") as checkout:
+            resp = client.post("/api/billing/checkout-email", headers={"Authorization": f"Bearer {token}"})
+            customer.assert_not_called(); checkout.assert_not_called()
         assert resp.status_code == 409
 
     def test_status_email_reporta_preco_definido(self, client, criar_usuario):
@@ -871,7 +878,7 @@ class TestCheckoutEmail:
         assert resp.status_code == 200
         corpo = resp.json()
         assert corpo["preco_definido"] is True
-        assert corpo["preco_centavos"] == 1000
+        assert corpo["preco_centavos"] == 2000
         assert corpo["status"] == "inativo"
 
     def test_ja_assinante_devolve_409_no_checkout(self, client, db, criar_usuario):

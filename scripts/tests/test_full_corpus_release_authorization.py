@@ -101,22 +101,16 @@ def _manifest(fingerprints, *, expected_total, inventory_sha256):
 
 
 class FullCorpusReleaseAuthorizationTests(unittest.TestCase):
-    def test_manifesto_real_vincula_exatamente_11581_revisados(self):
+    def test_manifesto_historico_recusa_snapshot_atual_alterado(self):
         canonical, fingerprints = _repository_inventory()
-
-        authorized, metadata = validate_full_corpus_authorization(
-            ROOT / "editorial-approvals" / "full-corpus-release-20260907.json",
-            canonical_slugs=canonical,
-            fingerprints=fingerprints,
-        )
-
-        self.assertEqual(sum(map(len, authorized.values())), 11_581)
-        self.assertEqual(metadata["authorized_total"], 11_581)
-        self.assertEqual(set(authorized), set(FRONT_SOURCES))
-        self.assertTrue(all(
-            fingerprint["count"] == fingerprint["reviewed_count"]
-            for fingerprint in fingerprints.values()
-        ))
+        path = ROOT / "editorial-approvals" / "full-corpus-release-20260907.json"
+        historical = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(historical["expected_total"], 11_581)
+        # The old approval remains immutable: the new release must use its
+        # independently evidence-bound snapshot policy, never widen schema 1.
+        self.assertNotEqual(corpus_inventory_sha256(fingerprints), historical["inventory_sha256"])
+        with self.assertRaises(RuntimeError):
+            validate_full_corpus_authorization(path, canonical_slugs=canonical, fingerprints=fingerprints)
 
     def test_alteracao_de_fonte_invalida_autorizacao(self):
         with tempfile.TemporaryDirectory() as directory:

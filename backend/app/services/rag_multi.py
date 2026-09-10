@@ -13,6 +13,7 @@ from sqlalchemy import select, union_all
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
+from app.models.content import Document
 from app.models.rag import DocumentChunk, KnowledgeChunk
 from app.services.calculators import REGISTRY as CALCULATORS_REGISTRY
 from app.services.catalog_search import (
@@ -35,6 +36,8 @@ from app.services.rag import (
 )
 from app.services.rag_sources import FONTES_POR_TIPO, FONTES_RAG, publicados
 
+from app.services.ia.usage_control import ai_operation
+
 # `catalog_search` usa 'emergencia' como rótulo de frente (mesmo texto
 # mostrado em /api/search); `rag_sources.FONTES_RAG` usa o entity_type
 # 'protocolo_emergencia' (allowlist do grafo). Único ponto onde os dois
@@ -48,6 +51,7 @@ _FRENTE_PARA_ENTITY_TYPE["emergencia"] = "protocolo_emergencia"
 log = logging.getLogger("corvia.rag_multi")
 
 
+@ai_operation("catalog_index", owner=None, cost_center="catalog_index")
 def indexar_entidade(
     db: Session, *, entity_type: str, entity_id: int, titulo: str, texto: str, provedor=None,
     forcar: bool = False,
@@ -319,7 +323,7 @@ def resolver_trechos_multi(db: Session, chunk_ids: list[int]) -> dict[int, dict]
         fonte = FONTES_POR_TIPO[entity_type]
         ids = [c.entity_id for c in tipo_chunks]
         linhas = {item.id: item for item in db.execute(
-            select(fonte.model).where(fonte.model.id.in_(ids))
+            select(fonte.model).where(fonte.model.id.in_(ids), fonte.model.published.is_(True))
         ).scalars().all()}
         for chunk in tipo_chunks:
             item = linhas.get(chunk.entity_id)
@@ -339,6 +343,33 @@ def resolver_trechos_multi(db: Session, chunk_ids: list[int]) -> dict[int, dict]
                 "entity_type": entity_type,
             }
     return resultado
+
+
+def filtrar_trechos_publicados(db: Session, trechos: list[dict]) -> list[dict]:
+    """Revalidate public sources after ranking; retained vectors grant no access.
+
+    Only the canonical RAG registry is accepted here. Private user documents
+    have their own owner-scoped retrieval and do not enter this catalogue.
+    """
+    por_tipo: dict[str, set[str]] = {}
+    for trecho in trechos:
+        por_tipo.setdefault(trecho["entity_type"], set()).add(trecho["slug"])
+    permitidos: set[tuple[str, str]] = set()
+    for entity_type, slugs in por_tipo.items():
+        if entity_type == "calculadora":
+            validos = {calc.slug for calc in CALCULATORS_REGISTRY.values()} & slugs
+        else:
+            fonte = FONTES_POR_TIPO.get(entity_type)
+            if entity_type == "documento":
+                model, slug_column = Document, Document.slug
+            elif fonte is not None:
+                model, slug_column = fonte.model, getattr(fonte.model, fonte.slug_attr)
+            else:
+                continue
+            validos = set(db.execute(select(slug_column).where(
+                slug_column.in_(slugs), model.published.is_(True))).scalars())
+        permitidos.update((entity_type, slug) for slug in validos)
+    return [trecho for trecho in trechos if (trecho["entity_type"], trecho["slug"]) in permitidos]
 
 
 def buscar_lexico_multi(db: Session, pergunta: str, limite: int) -> list[dict]:

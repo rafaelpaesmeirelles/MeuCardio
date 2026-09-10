@@ -1,13 +1,26 @@
 ---
-title: "Hipertensão Arterial — Classificação, Diagnóstico, Metas e Tratamento (Diretriz 2025)"
+title: Hipertensão Arterial — Classificação, Diagnóstico, Metas e Tratamento (Diretriz 2025)
 slug: hipertensao-arterial-classificacao-diagnostico-metas
-theme: "Hipertensão"
+theme: Hipertensão
 kind: diretriz
 review_status: revisado
-source_refs: ["Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong AC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624"]
-legacy_source: "Substitui versão anterior baseada na diretriz 2020, desatualizada pela diretriz 2025 (SBC/SBH/SBN, lançada no Congresso Brasileiro de Cardiologia em setembro de 2025)."
+source_refs:
+- 'Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624.
+  DOI: 10.36660/abc.20250624. Referência do conteúdo de base.'
+- 'AHA. Top Things to Know: 2025 High Blood Pressure Guideline. https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline/top-things-to-know'
+- Bress AP et al. Management of Elevated Blood Pressure in the Acute Care Setting. AHA Scientific Statement. 2024.
+  https://professional.heart.org/en/science-news/management-of-elevated-blood-pressure-in-the-acute-care-setting/top-things-to-know
+- 'AHA. About PREVENT Calculator: população e finalidade. https://professional.heart.org/en/guidelines-and-statements/about-prevent-calculator'
+- 'Carey RM et al. Resistant Hypertension: Detection, Evaluation, and Management. AHA Scientific Statement. 2018.
+  https://professional.heart.org/en/science-news/resistant-hypertension-detection-evaluation-and-management/top-things-to-know'
+- KDIGO. Clinical Practice Guideline for Evaluation and Management of CKD. 2024. https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf
+review_note: Correção científica focal assistida por IA em 09/09/2026. Complementos de segurança apoiados nas fontes
+  AHA/KDIGO indicadas; não equivale a revisão humana ou conferência integral da SBC 2025. Revisão científica assistida
+  por IA e revisão cruzada entre agentes em 09/09/2026; ajustes consolidados pelo coordenador. Não representa revisão
+  humana independente. Escopo, fontes verificadas e limites documentados em docs/producao-prevalentes-20260909.md.
+legacy_source: Substitui versão anterior baseada na diretriz 2020, desatualizada pela diretriz 2025 (SBC/SBH/SBN,
+  lançada no Congresso Brasileiro de Cardiologia em setembro de 2025).
 ---
-
 # Hipertensão Arterial — Classificação, Diagnóstico, Metas e Tratamento (Diretriz 2025)
 
 > Este documento substitui a versão anterior, baseada na diretriz de 2020. A diretriz brasileira foi
@@ -16,16 +29,18 @@ legacy_source: "Substitui versão anterior baseada na diretriz 2020, desatualiza
 
 ## O que mudou em relação à diretriz de 2020
 
-- A meta pressórica deixou de ser estratificada por risco — agora é **< 130/80 mmHg para todo mundo**, independentemente de idade ou risco cardiovascular.
+- A meta pressórica deixou de ser estratificada por risco — agora é **< 130/80 mmHg como meta geral**, com avaliação de tolerabilidade e individualização clínica.
 - A pressão "12 por 8" (120/80 mmHg) **deixou de ser considerada normal** e passou a ser classificada como pré-hipertensão.
-- A hipertensão passou a ter **três estágios**, não mais dois.
-- O escore de risco cardiovascular mudou: **não se usa mais Framingham/ERG** — agora é o escore **PREVENT**, da American Heart Association.
+- A classificação atual utiliza **três estágios de hipertensão**, apresentados na tabela abaixo.
+- O **PREVENT**, da American Heart Association, integra a avaliação de risco em prevenção primária, respeitando população elegível e o protocolo adotado; não substitui o reconhecimento de doença cardiovascular estabelecida.
 - O termo **"urgência hipertensiva" foi abandonado**.
-- A classificação de hipertensão resistente e refratária passou a considerar também se a pressão está controlada, não só o número de medicações.
+- A avaliação de resistência requer controle pressórico, classes, doses, adesão e medidas fora do consultório; a contagem de comprimidos não basta.
 
 ## Diagnóstico
 
-O diagnóstico de HAS continua definido por PA de consultório ≥ 140/90 mmHg, mas a diretriz recomenda uso de **aparelhos automáticos** de aferição. O diagnóstico precisa ser confirmado — pelo menos duas visitas médicas separadas por dias a semanas, ou avaliação por MAPA/MRPA — exceto se o paciente já tiver lesão de órgão-alvo ou doença cardiovascular estabelecida, caso em que o diagnóstico pode ser fechado de imediato. Os valores de corte do MAPA e do MRPA continuam os mesmos da diretriz anterior.
+Neste referencial brasileiro, HAS é definida por PAS de consultório ≥140 mmHg e/ou PAD ≥90 mmHg. A confirmação exige medidas confiáveis e contexto clínico: repetir a aferição com técnica adequada, recuperar registros prévios e utilizar medidas em outras visitas ou MAPA/MRPA conforme o caso. **Doença cardiovascular ou lesão de órgão-alvo isoladamente não comprovam hipertensão**, nem tornam qualquer medida ocasional diagnóstica. Em elevação acentuada persistente ou suspeita de lesão aguda, a avaliação e o tratamento necessários não devem ser adiados para realizar MAPA.
+
+Como complemento de segurança, a AHA/ACC 2025 utiliza a **PA média**, juntamente com o contexto cardiovascular, para decisões terapêuticas e valoriza monitoramento domiciliar padronizado. Seus limiares classificatórios próprios não devem ser confundidos com a tabela brasileira abaixo. [Síntese oficial AHA/ACC 2025](https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline/top-things-to-know).
 
 ## Classificação da pressão arterial (consultório, ≥ 18 anos)
 
@@ -48,21 +63,21 @@ A classificação usa o maior valor entre PAS e PAD.
 
 ## Exames complementares
 
-Na avaliação inicial e depois pelo menos uma vez ao ano: urina, potássio, creatinina, TFG estimada, glicemia de jejum, hemoglobina glicada, ácido úrico, eletrocardiograma, e — novidade desta diretriz — **relação proteinúria/creatininúria ou albuminúria/creatininúria**.
+A avaliação inicial deve caracterizar risco cardiometabólico, função renal, eletrólitos e possível lesão de órgão-alvo. Selecionar exames conforme história, exame físico e tratamento: creatinina com TFGe, potássio, avaliação urinária/albuminúria, perfil glicêmico, lipidograma e ECG integram essa avaliação; exames adicionais respondem a perguntas específicas.
 
-Para rastreio de lesão de órgão-alvo: ecocardiograma (coração), índice tornozelo-braquial ou velocidade de onda de pulso carotídeo-femoral ou ultrassom de carótidas (grandes vasos), TFG e albuminúria (rim), fundo de olho (retinopatia hipertensiva).
+Não prescrever automaticamente ecocardiograma, exame vascular e fundo de olho para todas as pessoas e em todos os retornos. A indicação e a periodicidade dependem dos achados e do quanto o resultado modifica a conduta. Após ajustes de medicamentos com risco renal/eletrolítico, a verificação de segurança pode ser necessária muito antes de um controle anual. Usar os protocolos específicos de DRC, diabetes e dos medicamentos para definir esse intervalo.
 
 ## Estratificação de risco cardiovascular
 
-A diretriz **abandonou o escore de Framingham/ERG** e adotou o **escore PREVENT**, da American Heart Association ([calculadora oficial](https://professional.heart.org/en/guidelines-and-statements/prevent-risk-calculator/prevent-calculator)).
+Começar pela história clínica: doença cardiovascular manifesta exige medidas de prevenção secundária pertinentes; não é necessário calcular a probabilidade de um primeiro evento para reconhecer essa situação. Diabetes, DRC, hipercolesterolemia familiar e lesões de órgão-alvo exigem aplicação dos critérios de risco do protocolo escolhido, sem depender exclusivamente de um número calculado.
 
-Já é considerado **alto risco automaticamente**, sem precisar calcular escore: doença cardiovascular manifesta, diabetes, doença renal crônica, hipercolesterolemia familiar, ou lesão de órgão-alvo já identificada. Fora esses casos, calcula-se o PREVENT — inclusive em pacientes **pré-hipertensos**, que também devem ser estratificados.
+O PREVENT foi desenvolvido para prevenção primária em pessoas **sem doença cardiovascular conhecida**, com elegibilidade e horizontes de previsão definidos pela ferramenta. A faixa geral descrita pela AHA é 30–79 anos; conferir também a aplicabilidade do horizonte de 30 anos. Não aplicar fora da população indicada nem usar resultado baixo para retirar proteção de quem já apresenta doença estabelecida. Documentar equação, horizonte e categoria de risco utilizada. [AHA: finalidade e população do PREVENT](https://professional.heart.org/en/guidelines-and-statements/about-prevent-calculator).
 
 ## Tratamento
 
 ### Não medicamentoso
 
-Indicado **desde o diagnóstico de PA ≥ 120/80 mmHg** (ou seja, já a partir da pré-hipertensão): peso adequado, intervenção dietética, redução de sódio e aumento de potássio por alimentos naturais, atividade física moderada/aeróbica, redução de álcool, cessação do tabagismo, redução de estresse.
+Medidas de estilo de vida incluem controle do peso, alimentação adequada, redução de sódio, atividade física compatível com a condição clínica, redução do álcool e cessação do tabagismo. Orientar potássio alimentar de forma individualizada: DRC, hipercalemia e medicamentos que elevem potássio exigem cautela. Suplementos e substitutos de sal com potássio não devem ser recomendados automaticamente.
 
 ### Quando iniciar medicação
 
@@ -72,7 +87,7 @@ Indicado **desde o diagnóstico de PA ≥ 120/80 mmHg** (ou seja, já a partir d
 
 ### Meta — a mudança mais importante desta diretriz
 
-**< 130/80 mmHg para todos os pacientes**, independentemente de risco cardiovascular ou idade. A diretriz **não estabelece limite inferior**: se a PAS cair abaixo de 120 mmHg e o paciente estiver assintomático, a recomendação é **manter a medicação**, não reduzir a dose reativamente.
+**< 130/80 mmHg é a meta geral apresentada neste documento.** A aplicação exige avaliação de tolerabilidade, sintomas ortostáticos, fragilidade, função renal e objetivos do cuidado. Uma PAS isolada abaixo de 120 mmHg não determina automaticamente manter ou reduzir a prescrição: conferir técnica, repetição das medidas, sintomas e contexto clínico. Em DRC, hipotensão sintomática e hipercalemia não controlada são motivos para reavaliar o bloqueador do SRAA, conforme os pontos de prática da [KDIGO 2024](https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf).
 
 ### Escolha inicial: monoterapia ou combinação
 
@@ -83,43 +98,41 @@ Podem iniciar com **monoterapia**:
 - pacientes frágeis;
 - hipotensão ortostática sintomática.
 
-**Todos os demais pacientes hipertensos devem iniciar com terapia combinada** — geralmente dois medicamentos em dose baixa, não monoterapia em dose alta.
+A combinação de duas classes é apropriada para muitos pacientes que necessitam tratamento; a escolha considera elevação, risco, tolerabilidade e contraindicações. Preferir uma prescrição simples e, quando apropriado e disponível, combinação em um comprimido. Não converter essa preferência em obrigação universal.
 
-Se o controle não for atingido nem aumentando as doses da combinação, a **terapia tripla** é a próxima opção — controla a PA em cerca de 90% dos pacientes.
+Se o controle não for obtido, conferir uso real e adequação das doses antes de escalar. Uma estratégia habitual é a **terapia tripla** com bloqueador do SRAA, BCC e diurético, escolhidos e titulados conforme o paciente. Não há garantia individual de controle.
 
 ### Classes de escolha
 
 - Monoterapia ou combinação inicial: **IECA ou BRA**, **bloqueador de canal de cálcio (BCC)**, **diurético** — qualquer uma das três pode ser usada isolada.
 - Combinação de duas: IECA/BRA + diurético, ou IECA/BRA + BCC.
 - Tripla terapia: IECA/BRA + diurético + BCC.
-- **Betabloqueador não é escolha inicial sem indicação específica** — só entra (em mono ou combinação) havendo insuficiência cardíaca, angina, fibrilação atrial, diálise, ou mulher com desejo de engravidar.
-- **Quarta droga** (quando a tripla não controla): **espironolactona**; se houver efeito colateral persistente, tentar **eplerenona**.
+- **Betabloqueador:** selecionar quando houver indicação clínica específica e molécula apropriada, por exemplo determinadas situações de IC, angina ou controle de frequência. Gestação/desejo reprodutivo e diálise exigem escolha própria; não autorizam qualquer betabloqueador como equivalente.
+- **Adição de antagonista mineralocorticoide:** considerar espironolactona após confirmação de resistência e avaliação de potássio, função renal, interações e possibilidade de monitoramento. Eplerenona pode ser alternativa em algumas intolerâncias, mas **não elimina hipercalemia ou risco renal da classe**. Hipercalemia não deve provocar troca automática entre os dois agentes. A [KDIGO 2024, ponto 3.8.5](https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf) destaca esses riscos, especialmente com baixa TFG. Definir critérios de elegibilidade e controle laboratorial pelo contexto e protocolo específico antes de prescrever.
 
 ### Condições clínicas associadas
 
-Para coronariopatia, doença renal crônica, diabetes, obesidade, pós-AVC e insuficiência cardíaca, a **meta pressórica continua a mesma para todos os grupos (< 130/80 mmHg)** — o que muda entre eles é a escolha de classe com benefício específico para cada condição (ver documento correspondente de cada uma).
+Para coronariopatia, doença renal crônica, diabetes, obesidade, pós-AVC e insuficiência cardíaca, a meta geral de **< 130/80 mmHg** deve ser aplicada à luz da tolerabilidade e do contexto. A escolha da classe também considera benefício específico para cada condição e suas contraindicações (ver os documentos correspondentes).
 
-## Crise hipertensiva — nomenclatura nova
+## Elevação importante da PA e emergência hipertensiva
 
-PAS ≥ 180 mmHg e/ou PAD ≥ 110 mmHg agora se divide em dois cenários, sem mais usar o termo "urgência hipertensiva":
+Separar **PA elevada sem lesão aguda** de **PA elevada com lesão de órgão-alvo nova ou em agravamento**. O segundo cenário caracteriza a preocupação com emergência hipertensiva e costuma requerer tratamento hospitalar monitorizado, frequentemente endovenoso. A avaliação de gravidade não deve ser bloqueada por um corte numérico rígido: a presença de lesão aguda e a síndrome clínica orientam a urgência. Dor torácica, dispneia aguda, alterações neurológicas ou visuais precisam de investigação imediata, mesmo que a medida não alcance 180/110 mmHg.
 
-- **Elevação importante da PA sem lesão progressiva de órgão-alvo**: ajustar ou iniciar medicação oral, com reavaliação ambulatorial precoce em até 7 dias. Não é indicação de conduta agressiva no pronto-socorro.
-- **Emergência hipertensiva**: mesmos níveis de PA, mas com lesão de órgão-alvo aguda e progressiva. Manter em UTI, com metas de redução específicas por órgão acometido e anti-hipertensivo endovenoso.
+Sem evidência de lesão aguda, repetir a PA corretamente, investigar fatores precipitantes, conciliar a prescrição e garantir seguimento oportuno. Evitar redução rápida e agressiva por um número isolado. Quando indicado, ajustar o tratamento oral com retorno definido. Essas distinções são apoiadas pela [declaração científica AHA 2024 sobre o ambiente agudo](https://professional.heart.org/en/science-news/management-of-elevated-blood-pressure-in-the-acute-care-setting/top-things-to-know). As metas e a velocidade de redução na emergência dependem do órgão e da apresentação; não existe uma única meta aplicável a todas as síndromes.
 
-## Hipertensão resistente e refratária — classificação atualizada
+## Hipertensão resistente e suspeita de refratariedade
 
-A diretriz de 2025 passou a cruzar **número de medicações** com **controle da PA** (antes, a classificação olhava principalmente para o número de fármacos):
+Suspeitar de resistência quando a PA permanece acima da meta apesar de três classes apropriadas, habitualmente BCC de longa ação, IECA/BRA e diurético, em doses máximas toleradas. Confirmar técnica, persistência fora do consultório, adesão e adequação do esquema. Sem informações suficientes de dose, adesão ou PA extraconsultório, o rótulo correto é **resistência aparente**, ainda em investigação. Esses elementos são explicitados na [declaração AHA sobre hipertensão resistente](https://professional.heart.org/en/science-news/resistant-hypertension-detection-evaluation-and-management/top-things-to-know).
 
-| Nº de medicações | PA < 130/80 mmHg | PA ≥ 130/80 mmHg |
-|---|---|---|
-| 1–2 | — | Hipertensão não controlada |
-| 3 | Hipertensão controlada | Hipertensão resistente |
-| 4 | Hipertensão resistente controlada | Hipertensão resistente |
-| ≥ 5 | Hipertensão resistente controlada | **Hipertensão refratária** |
+| Situação observada | Próximo passo antes de rotular |
+|---|---|
+| PA elevada em uso de múltiplos comprimidos | Confirmar quantas classes há e se doses/formulações são adequadas |
+| PA elevada apenas no consultório | Investigar efeito do avental branco |
+| Esquema não adquirido ou doses omitidas | Resolver acesso/tolerabilidade e reavaliar exposição real |
+| Descontrole apesar de esquema efetivamente otimizado | Investigar causas secundárias e fatores que elevam PA |
+| Descontrole persistente em cinco ou mais classes | Avaliação especializada; não concluir refratariedade pela contagem isolada |
 
-Antes de fechar qualquer um desses diagnósticos, é preciso excluir pseudorresistência (diagnóstico ou tratamento inadequado) — MAPA/MRPA ajudam nessa exclusão.
-
-Padrão de resposta a fármaco difere entre os dois grupos: hipertensão resistente costuma responder melhor a inibidor do sistema renina-angiotensina-aldosterona, diurético tiazídico e espironolactona; hipertensão refratária tende a responder melhor a simpatolítico de ação central, betabloqueador e alfabloqueador.
+Refratariedade exige caracterizar falha de um regime otimizado e apropriado, incluindo estratégia diurética e avaliação da possibilidade de antagonista mineralocorticoide. Contraindicação a uma classe deve ser documentada; não é justificativa para declarar que o paciente falhou a um tratamento que não recebeu. O encaminhamento não deve aguardar a adição empírica de sucessivos agentes sem esclarecer o mecanismo do descontrole.
 
 ## O que este documento não cobre (lacunas registradas)
 
@@ -129,11 +142,36 @@ Padrão de resposta a fármaco difere entre os dois grupos: hipertensão resiste
 
 ## Referências
 
-Ver `source_refs` no cabeçalho deste documento.
+As fontes utilizadas estão listadas ao final da página.
 
 ## Como esta meta se relaciona com a da ESC 2024
-A diretriz brasileira de 2025 fixa **< 130/80 mmHg para todos**, sem estratificar por risco. A diretriz europeia de 2024, descrita nos documentos de hipertensão desta mesma biblioteca, adota alvo **sistólico de 120–129 mmHg e diastólico de 70–79 mmHg** em quem tolera o tratamento.
+A diretriz brasileira de 2025 fixa **< 130/80 mmHg como meta geral**, sem estratificar por risco. A diretriz europeia de 2024, descrita nos documentos de hipertensão desta mesma biblioteca, adota alvo **sistólico de 120–129 mmHg e diastólico de 70–79 mmHg** em quem tolera o tratamento.
 
 As duas não se contradizem por erro: são sociedades diferentes, com metodologias e populações de referência diferentes. Mas convivem nesta biblioteca, e o número que aparece muda conforme a página aberta. **Para a prática no Brasil, a referência é a diretriz da SBC.** A meta europeia, mais baixa, é útil para entender a direção do debate e para o paciente em que o alvo mais estrito é buscado e tolerado.
 
 Vale ainda a distinção que costuma confundir na leitura da ESC 2024: **70–89 mmHg é a definição da categoria "pressão elevada"**, não uma meta de tratamento — a meta diastólica é 70–79 mmHg.
+
+## Aplicação prática e Tudo com Tudo
+
+- [Primeira consulta, plano longitudinal e retorno seguro](/biblioteca/hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro).
+- [Edema em uso de BCC e represcrição](/biblioteca/edema-no-hipertenso-em-uso-de-bcc-avaliacao-e-represcricao).
+- [Hipocalemia e resultados de renina difíceis de interpretar](/biblioteca/hipertensao-hipocalemia-e-renina-alta-interpretacao-sem-atalhos).
+- [PREVENT: indicações e limitações](/biblioteca/pooled-cohort-equations-e-equacoes-prevent-risco-cardiovascular-em-prevencao-primaria).
+- [Olmesartana](/biblioteca/olmesartana-medoxomila), [anlodipino](/biblioteca/anlodipino-besilato) e [indapamida](/biblioteca/indapamida).
+
+## Recursos relacionados no CorVIA
+
+- [Hipertensão na primeira consulta: plano longitudinal e retorno seguro](/biblioteca/hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro)
+- [Edema no hipertenso em uso de BCC: avaliação e represcrição](/biblioteca/edema-no-hipertenso-em-uso-de-bcc-avaliacao-e-represcricao)
+- [Hipertensão, hipocalemia e renina alta: interpretação sem atalhos](/biblioteca/hipertensao-hipocalemia-e-renina-alta-interpretacao-sem-atalhos)
+- [Hipertensão arterial sistêmica](/doencas/hipertensao-arterial-sistemica)
+- [olmesartana medoxomila](/medicamentos?slug=olmesartana-medoxomila)
+- [ALLHAT — Diurético tiazídico versus IECA versus bloqueador de canal de cálcio como anti-hipertensivo de primeira linha](/estudos/allhat-diuretico-tiazidico-vs-ieca-vs-bloqueador-de-canal-de-calcio)
+- [MAPA — Monitorização Ambulatorial da Pressão Arterial](/exames/mapa-monitorizacao-ambulatorial-pressao-arterial)
+- [MRPA — Monitorização Residencial da Pressão Arterial](/exames/mrpa-monitorizacao-residencial-da-pressao-arterial)
+- [Potássio sérico na avaliação de risco arrítmico e monitorização cardiovascular](/exames/potassio-serico-risco-arritmico-e-monitorizacao)
+- [anlodipino besilato](/medicamentos?slug=anlodipino-besilato)
+- [Pressão alta](/material-paciente/hipertensao-arterial)
+- [Hipertensão: da primeira consulta ao seguimento e à investigação secundária](/trilhas/trilha-consulta-progressiva-hipertensao)
+
+Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.

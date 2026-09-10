@@ -337,8 +337,8 @@ test("o GalaxyThemeToggle mantém a imagem canônica transparente e o canvas da 
 
 test("a paleta textual e os indicadores essenciais mantêm contraste WCAG no canvas claro", () => {
   const lightStyles = readRequired("src/styles/cardiology-spaces-light-mode.css");
-  const textColors = ["#1b2440", "#4d5873", "#5e687f", "#626c82", "#4b4fc4", "#7957c8", "#c42068", "#0f727a", "#14764c"];
-  const lightCanvases = ["#f7f3fa", "#eef2fa"];
+  const textColors = ["#18354b", "#49677b", "#5e687f", "#246ac1", "#7956c8", "#c42068", "#0f727a", "#14764c"];
+  const lightCanvases = ["#e5f3f8", "#e2eff7"];
   for (const color of textColors) {
     assert.ok(lightStyles.includes(color), `${color} precisa continuar declarado na paleta clara`);
     for (const canvas of lightCanvases) {
@@ -346,13 +346,17 @@ test("a paleta textual e os indicadores essenciais mantêm contraste WCAG no can
     }
   }
 
-  assert.ok(lightStyles.includes("#eef2fa"), "o canvas lavanda precisa permanecer na paleta Aurora Lunar");
+  // Placeholders usam o fundo branco imposto pelo contrato final dos formulários.
+  assert.match(lightStyles, /textarea\s*\{[^}]*background-color:\s*#ffffff\s*!important/s);
+  assert.match(lightStyles, /textarea::placeholder\s*\{[^}]*color:\s*#626c82\s*!important/s);
+  assert.ok(contrastRatio("#626c82", "#ffffff") >= 4.5, "placeholders precisam atingir 4,5:1 sobre o fundo branco efetivo");
+  assert.ok(lightStyles.includes("#e2eff7"), "o canvas diurno aprovado precisa permanecer na paleta clara");
   for (const decorativeColor of ["#d12870", "#137a80", "#b78a52"]) {
-    assert.ok(lightStyles.includes(decorativeColor), `${decorativeColor} precisa permanecer restrito a detalhes decorativos da Aurora Lunar`);
+    assert.ok(lightStyles.includes(decorativeColor), `${decorativeColor} precisa permanecer restrito a detalhes decorativos do tema claro`);
   }
-  assert.ok(contrastRatio("#4b4fc4", "#ffffff") >= 3, "o anel de foco precisa atingir 3:1 sobre branco");
+  assert.ok(contrastRatio("#246ac1", "#ffffff") >= 3, "o anel de foco precisa atingir 3:1 sobre branco");
   for (const canvas of lightCanvases) {
-    assert.ok(contrastRatio("#81899e", canvas) >= 3, `a borda dos radios precisa atingir 3:1 sobre ${canvas}`);
+    assert.ok(contrastRatio("#81889e", canvas) >= 3, `a borda dos radios precisa atingir 3:1 sobre ${canvas}`);
   }
   assert.ok(contrastRatio("#ffffff", "#b31f3a") >= 4.5, "ações de emergência precisam manter texto branco legível");
 });
@@ -427,7 +431,7 @@ test("a camada clara é a última folha, escopada no html e cobre todas as super
     "o botão da busca legada precisa manter contraste no claro");
   assert.match(lightStyles, /\.cv-function-deck\s+\.cv-nav-link\[data-feature="exam-ai"\][^{]+\{[^}]*color:\s*#14764c/s,
     "o destaque Exame com IA precisa usar verde legível no claro");
-  assert.match(lightStyles, /button\[role="radio"\]:focus-visible\s*\{[^}]*outline:\s*3px\s+solid\s+#4b4fc4/s,
+  assert.match(lightStyles, /button\[role="radio"\]:focus-visible\s*\{[^}]*outline:\s*3px\s+solid\s+#246ac1/s,
     "o foco do seletor precisa alcançar contraste não textual de 3:1");
 
   const themeControlCss = rules

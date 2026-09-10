@@ -144,6 +144,7 @@ def test_deploy_nao_volta_ao_importador_parcial():
     fonte = _fonte(DEPLOY)
     assert "app.services.importer" not in fonte
     assert "--allow-partial" not in fonte
+    assert "app.commands.publish_preserved_content" not in fonte
     assert "python -m app.commands.reconcile_content --publish-reviewed" in fonte
 
 
@@ -206,19 +207,18 @@ def test_deploy_habilita_e_certifica_ia_cardiovascular_antes_do_trafego():
         assert setting in compose
 
     assert '[[ -z "${OPENAI_API_KEY:-}" ]]' in deploy
-    assert "Validando provedor multimodal sem enviar dados clínicos" in deploy
-    assert '"store": False' in deploy
+    # Configuração é certificada sem gastar fora da carteira nem vincular
+    # disponibilidade da aplicação ao saldo do fornecedor externo.
+    assert "_post(" not in deploy
+    assert "chat.completions.create" not in deploy
     assert "status_ia_exames" in deploy
     assert '"persists_files_in_corvia": False' in deploy
     assert '"provider_response_storage_requested": False' in deploy
     assert "echo \"$OPENAI_API_KEY\"" not in deploy
 
-    indice_canario = deploy.index("Validando provedor multimodal sem enviar dados clínicos")
-    indice_indisponibilidade = deploy.index("Fechando o proxy e o backend antigo")
     indice_status = deploy.index("Certificando flags e controles transitórios")
     indice_rollback_off = deploy.index("ROLLBACK_NECESSARIO=0", indice_status)
     indice_proxy = deploy.index("Abrindo o proxy somente após")
-    assert indice_canario < indice_indisponibilidade
     assert indice_status < indice_rollback_off < indice_proxy
 
 
@@ -321,3 +321,33 @@ def test_restaurador_mantem_compatibilidade_com_backup_sql_gzip_legado():
     assert 'gzip -t "$ARQUIVO"' in fonte
     assert 'gunzip -c "$ARQUIVO"' in fonte
     assert "ON_ERROR_STOP=1" in fonte
+
+
+def test_compose_disponibiliza_evidencias_do_corpus_somente_leitura():
+    import json
+    import yaml
+
+    compose = yaml.safe_load(_fonte(COMPOSE))
+    mounts = []
+    for volume in compose["services"]["backend"]["volumes"]:
+        if isinstance(volume, str) and volume.startswith("./"):
+            source, target, *options = volume.split(":")
+            mounts.append((REPO_ROOT / source, Path(target), options))
+    manifest = REPO_ROOT / "editorial-approvals/scoped-corpus-release-20260910.json"
+    evidence_paths = {claim["evidence_path"] for front in json.loads(_fonte(manifest))["provenance"].values() for claim in front.values()}
+    required = {str(manifest.relative_to(REPO_ROOT)), *evidence_paths}
+    for relative in evidence_paths:
+        evidence = json.loads(_fonte(REPO_ROOT / relative))
+        required.update(reference["path"] for reference in evidence["references"])
+    rc2 = _fonte(REPO_ROOT / ".github/workflows/rc2-acceptance.yml")
+    for relative in sorted(required):
+        if relative.startswith(("docs/", "releases/", "backend/")):
+            assert relative in rc2, f"Evidência ausente da montagem RC2: {relative}"
+        runtime = Path("/") / relative
+        matches = [(source / runtime.relative_to(target), options)
+                   for source, target, options in mounts
+                   if runtime == target or target in runtime.parents]
+        assert matches, f"Evidência ausente do container: {relative}"
+        assert any("ro" in options and source.is_file()
+                   and source.read_bytes() == (REPO_ROOT / relative).read_bytes()
+                   for source, options in matches), relative

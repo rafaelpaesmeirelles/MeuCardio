@@ -1,0 +1,21 @@
+{
+  "runtime_manifest_path": "/editorial-approvals/full-corpus-release-20260907.json",
+  "canonical_counts": {
+    "documentos": 3009,
+    "galeria": 281,
+    "exames": 423,
+    "evidencias": 3363,
+    "estudos": 2061,
+    "medicamentos": 206,
+    "checklists": 473,
+    "casos_clinicos": 915,
+    "trilhas": 555,
+    "material_paciente": 448,
+    "emergencia": 77,
+    "doencas_especializadas": 326,
+    "triagem_sintomas": 23
+  },
+  "valid": false,
+  "error_type": "RuntimeError",
+  "error": "Autorização integral diverge do total canônico: manifesto=11581, atual=12160."
+}

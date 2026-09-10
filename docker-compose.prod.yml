@@ -72,6 +72,13 @@ services:
       - ./triagem-sintomas:/triagem-sintomas:ro
       - ./controlados:/controlados:ro
       - ./editorial-approvals:/editorial-approvals:ro
+      # Evidências exatas da autorização do corpus, somente leitura.
+      - ./docs/scoped-corpus-release-evidence-20260910.json:/docs/scoped-corpus-release-evidence-20260910.json:ro
+      - ./docs/scoped-corpus-theme-normalization-20260910.json:/docs/scoped-corpus-theme-normalization-20260910.json:ro
+      - ./docs/HANDOFF-producao-prevalentes-20260909.md:/docs/HANDOFF-producao-prevalentes-20260909.md:ro
+      - ./docs/prevalentes-round2-release-application-20260909.md:/docs/prevalentes-round2-release-application-20260909.md:ro
+      - ./releases/scientific-20260909/reviewed-content.json:/releases/scientific-20260909/reviewed-content.json:ro
+      - ./backend/app/services/canonical_themes.py:/backend/app/services/canonical_themes.py:ro
       - ./backend/migrations/versions:/app/migrations/versions
       - userfiles:/uploads
       - examefiles:/exames-pacientes

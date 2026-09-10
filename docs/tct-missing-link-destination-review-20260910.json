@@ -1,0 +1,704 @@
+{
+  "scope": "Read-only identity and bibliographic reconciliation; not clinical review or permission to restore/publish source content.",
+  "diagnostic_head": "266cde7454ec808f37dd4ab0ef6d83415b607c63",
+  "inspected_head": "266cde7454ec808f37dd4ab0ef6d83415b607c63",
+  "approval_manifest": "editorial-approvals/scoped-corpus-release-20260910.json",
+  "approval_manifest_sha256": "a528b0090743558b5ce828ecd1b98ef9260c99fb59089fd0267bd7466b9f24a0",
+  "history_note": "All14 old URLs occur as documents in040bfd514207a4dea52b577a5483b1715df0dce6, a different Git lineage, NOT an ancestor of the inspected candidate. Historical presence/review flags do not establish current publication authorization.",
+  "route_proof": "frontend/src/App.tsx: biblioteca/:slug,doencas/:slug,exames/:slug,estudos/:slug,evidencias/:slug are root-relative authenticated routes.",
+  "counts": {
+    "old_urls": 14,
+    "links": 20,
+    "approved_same_entity": 7,
+    "approved_partial_scope": 1,
+    "no_integral_approved_destination": 6
+  },
+  "items": [
+    {
+      "old_url": "/biblioteca/ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca",
+      "occurrences": 2,
+      "source_paths": [
+        "content/Insuficiência_cardíaca/bio-adm-adrenomedulina-biomarcador-e-alvo-terapeutico-na-insuficiencia-cardiaca-aguda.md",
+        "content/Insuficiência_cardíaca/biomarcadores-de-fibrose-miocardica-na-insuficiencia-cardiaca-fibroblastos-galectina-3-e-imagem.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Insuficiência_cardíaca/ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "27522630",
+            "31422111",
+            "39809935",
+            "41524052",
+            "41899087",
+            "42235631",
+            "42418867",
+            "42425178"
+          ],
+          "dois": [
+            "10.1016/j.amjmed.2019.07.041.",
+            "10.1016/j.ijcard.2026.134665.",
+            "10.1016/j.jchf.2016.06.007.",
+            "10.1016/j.rec.2026.05.003.",
+            "10.1016/j.yexmp.2026.105063.",
+            "10.1038/s41598-024-84622-7.",
+            "10.31083/rcm42797.",
+            "10.3390/jcm15062156."
+          ]
+        }
+      ],
+      "status": "approved_partial_scope",
+      "certainty": "moderada",
+      "new_type": "exame",
+      "new_slug": "ca-125-antigeno-carboidrato-125-como-marcador-seriado-de-congestao-na-insuficiencia-cardiaca-aguda",
+      "new_url": "/exames/ca-125-antigeno-carboidrato-125-como-marcador-seriado-de-congestao-na-insuficiencia-cardiaca-aguda",
+      "canonical_title": "CA-125 (antígeno carboidrato 125) como marcador seriado de congestão na insuficiência cardíaca aguda",
+      "catalog_path": "exames/metadados.json",
+      "approval_front": "exames",
+      "shared_pmids": [
+        "42235631"
+      ],
+      "doi": null,
+      "note": "Mesmo biomarcador e contexto de congestão/IC aguda; PMID42235631 compartilhado. A ficha de exame não equivale integralmente à revisão histórica de2025–2026 e seus ensaios guiados porCA125."
+    },
+    {
+      "old_url": "/biblioteca/exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular",
+      "occurrences": 1,
+      "source_paths": [
+        "content/Hipertensão/poluicao-ar-ruido-e-mudanca-climatica-na-hipertensao-position-paper-esh-2026.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Hipertensão/exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "16269585",
+            "17520054",
+            "19573547",
+            "19700500",
+            "20664538",
+            "21546419",
+            "21872294",
+            "21914522",
+            "22523484",
+            "24061511",
+            "24552958",
+            "27810857",
+            "29793197",
+            "34253004",
+            "8624771",
+            "9303014"
+          ],
+          "dois": [
+            "10.1016/j.envpol.2018.04.129.",
+            "10.1016/j.kjms.2011.05.003.",
+            "10.1016/j.scitotenv.2011.07.058.",
+            "10.1016/j.taap.2009.06.017.",
+            "10.1038/clpt.2010.132.",
+            "10.1093/aje/kwi330.",
+            "10.1093/aje/kwp191.",
+            "10.1093/aje/kww002.",
+            "10.1136/bmj.d2431.",
+            "10.1155/2012/198793.",
+            "10.1161/01.atv.16.4.504.",
+            "10.1161/01.str.28.9.1717.",
+            "10.1289/ehp.9686.",
+            "10.1515/reveh-2014-0007.",
+            "10.1515/reveh-2021-0004.",
+            "10.7326/0003-4819-159-10-201311190-00719."
+          ]
+        }
+      ],
+      "status": "approved_same_entity",
+      "certainty": "alta",
+      "new_type": "doenca",
+      "new_slug": "cardiotoxicidade-cronica-por-arsenico",
+      "new_url": "/doencas/cardiotoxicidade-cronica-por-arsenico",
+      "canonical_title": "Cardiotoxicidade crônica por arsênico inorgânico ambiental e ocupacional",
+      "catalog_path": "doencas/metadados.json",
+      "approval_front": "doencas_especializadas",
+      "shared_pmids": [
+        "16269585",
+        "17520054",
+        "19573547",
+        "19700500",
+        "20664538",
+        "21546419",
+        "21872294",
+        "21914522",
+        "22523484",
+        "24061511",
+        "24552958",
+        "27810857",
+        "29793197",
+        "34253004",
+        "8624771",
+        "9303014"
+      ],
+      "doi": null,
+      "note": "Mesma entidade: exposição crônica ambiental/ocupacional a arsênico inorgânico;16 PMIDs compartilhados."
+    },
+    {
+      "old_url": "/biblioteca/inclisirana-sem-estatina-de-base-victorion-mono-e-difference",
+      "occurrences": 1,
+      "source_paths": [
+        "content/Prevenção_e_lipídios/edicao-de-base-do-pcsk9-verve-102-dose-unica-para-reducao-vitalicia-de-ldl.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Prevenção_e_lipídios/inclisirana-sem-estatina-de-base-victorion-mono-e-difference.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "32187462",
+            "40392667",
+            "40884558",
+            "42203164"
+          ],
+          "dois": [
+            "10.1016/j.ahj.2026.107493.",
+            "10.1016/j.jacc.2025.04.049.",
+            "10.1056/NEJMoa1912387.",
+            "10.1093/eurheartj/ehaf685,",
+            "10.1093/eurheartj/ehaf685."
+          ]
+        }
+      ],
+      "status": "sem_equivalente_integral_aprovado",
+      "certainty": "alta_sobre_limite_identificado",
+      "new_url": null,
+      "note": "O documento histórico reúne Mono e Difference. O documento semelhante atual reúne Mono e INITIATE e está em quarentena. Dois estudos aprovados, Mono(40392667) e Difference(40884558), são destinos separados bibliograficamente exatos para cada ensaio, não um alias único do documento.",
+      "candidates": [
+        {
+          "url": "/estudos/victorion-mono-inclisirana-em-monoterapia-na-prevencao-primaria",
+          "approval": "approved",
+          "relation": "approved"
+        },
+        {
+          "url": "/estudos/victorion-difference-inclisirana-para-atingir-meta-de-ldl",
+          "approval": "approved",
+          "relation": "approved"
+        },
+        {
+          "url": "/biblioteca/inclisirana-como-primeira-linha-o-programa-victorion-mono-e-initiate",
+          "approval": "quarantined",
+          "relation": "quarantined"
+        }
+      ]
+    },
+    {
+      "old_url": "/biblioteca/intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular",
+      "occurrences": 2,
+      "source_paths": [
+        "content/Hipertensão/poluicao-ar-ruido-e-mudanca-climatica-na-hipertensao-position-paper-esh-2026.md",
+        "content/Terapia_intensiva/intoxicacao-por-talio-exposicao-mecanismo-e-repercussao-cardiovascular.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Hipertensão/intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "11159162",
+            "16982939",
+            "17431500",
+            "17431501",
+            "18567711",
+            "23532240",
+            "33775124",
+            "39141382"
+          ],
+          "dois": [
+            "10.1001/jama.2013.2107.",
+            "10.1001/jama.2024.11463.",
+            "10.1093/aje/153.2.164.",
+            "10.1152/ajpheart.00158.2008.",
+            "10.1161/CIRCULATIONAHA.106.628321.",
+            "10.1161/HYPERTENSIONAHA.120.16545.",
+            "10.1289/ehp.9784.",
+            "10.1289/ehp.9785.",
+            "10.3390/ijerph20043513."
+          ]
+        }
+      ],
+      "status": "approved_same_entity",
+      "certainty": "alta",
+      "new_type": "doenca",
+      "new_slug": "saturnismo-cardiovascular",
+      "new_url": "/doencas/saturnismo-cardiovascular",
+      "canonical_title": "Intoxicação crônica por chumbo (saturnismo) e risco cardiovascular",
+      "catalog_path": "doencas/metadados.json",
+      "approval_front": "doencas_especializadas",
+      "shared_pmids": [
+        "11159162",
+        "16982939",
+        "17431500",
+        "17431501",
+        "18567711",
+        "23532240",
+        "33775124",
+        "39141382"
+      ],
+      "doi": null,
+      "note": "Mesma entidade: intoxicação crônica por chumbo/hipertensão e risco cardiovascular;8 PMIDs compartilhados, incluindo TACT/TACT2."
+    },
+    {
+      "old_url": "/biblioteca/lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta",
+      "occurrences": 1,
+      "source_paths": [
+        "content/Doença_coronariana/lipoproteina-a-fator-de-risco-causal-terapias-em-desenvolvimento-e-o-reves-do-lpahorizon.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Prevenção_e_lipídios/lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "40185318"
+          ],
+          "dois": [
+            "10.1016/j.ahj.2025.03.019."
+          ]
+        }
+      ],
+      "status": "candidato_dedicado_quarentenado",
+      "certainty": "alta_sobre_limite_identificado",
+      "new_url": null,
+      "note": "O candidato dedicado ao mesmo topline HORIZON está em quarentena. O panorama aprovado que compartilha PMID40185318 é a própria fonte deste link; redirecionar para ele criaria autolink.",
+      "candidates": [
+        {
+          "url": "/biblioteca/lipoproteina-a-horizon-pelacarsena-nao-atingiu-desfecho-primario-de-mace-topline-2026",
+          "approval": "quarantined",
+          "relation": "quarantined"
+        },
+        {
+          "url": "/biblioteca/lipoproteina-a-fator-de-risco-causal-terapias-em-desenvolvimento-e-o-reves-do-lpahorizon",
+          "approval": "approved",
+          "relation": "approved_self"
+        }
+      ]
+    },
+    {
+      "old_url": "/biblioteca/ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice",
+      "occurrences": 1,
+      "source_paths": [
+        "content/Farmacologia/ninerafaxstat-modulador-da-energetica-miocardica-ensaios-improve-hcm-e-improve-dice.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Insuficiência_cardíaca/ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "38599256",
+            "38752753",
+            "41410037",
+            "42250280"
+          ],
+          "dois": [
+            "10.1016/j.jacc.2024.03.387.",
+            "10.1097/CRD.0000000000000719.",
+            "10.1161/CIRCULATIONAHA.125.074041.",
+            "10.2337/dbi26-0002."
+          ]
+        }
+      ],
+      "status": "somente_a_propria_fonte",
+      "certainty": "alta_sobre_limite_identificado",
+      "new_url": null,
+      "note": "O único documento aprovado identificado com IMPROVE-DiCE PMID41410037 é a própria fonte do link. Compartilha também38599256 e38752753, mas não constitui destino independente.",
+      "candidates": [
+        {
+          "url": "/biblioteca/ninerafaxstat-modulador-da-energetica-miocardica-ensaios-improve-hcm-e-improve-dice",
+          "approval": "approved",
+          "relation": "approved_self"
+        }
+      ]
+    },
+    {
+      "old_url": "/biblioteca/policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma",
+      "occurrences": 1,
+      "source_paths": [
+        "content/Pericárdio/granulomatose-com-poliangiite-gpa-e-acometimento-cardiovascular.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Aorta_e_doença_arterial_periférica/policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "12077711",
+            "15380048",
+            "1575597",
+            "16427754",
+            "27097818",
+            "29200026",
+            "29535124",
+            "31041726",
+            "31768631",
+            "32459198",
+            "34533099",
+            "35238756",
+            "35868738",
+            "37236870",
+            "38396936",
+            "449538",
+            "775252",
+            "9213383",
+            "9669970"
+          ],
+          "dois": [
+            "10.1186/ar1218.",
+            "10.1186/ar1218;"
+          ]
+        }
+      ],
+      "status": "approved_same_entity",
+      "certainty": "alta",
+      "new_type": "doenca",
+      "new_slug": "policondrite-recidivante-cardiovascular",
+      "new_url": "/doencas/policondrite-recidivante-cardiovascular",
+      "canonical_title": "Policondrite recidivante com acometimento cardiovascular",
+      "catalog_path": "doencas/metadados.json",
+      "approval_front": "doencas_especializadas",
+      "shared_pmids": [
+        "12077711",
+        "29200026",
+        "29535124",
+        "31768631",
+        "35868738",
+        "37236870",
+        "449538",
+        "775252",
+        "9213383",
+        "9669970"
+      ],
+      "doi": null,
+      "note": "Mesma policondrite com aortite, lesão valvar e aneurisma;10 PMIDs compartilhados."
+    },
+    {
+      "old_url": "/biblioteca/poluicao-do-ar-prevencao-cardiovascular-esc-2021-aha-2020",
+      "occurrences": 1,
+      "source_paths": [
+        "content/Geral/carga-global-de-doenca-cardiovascular-o-estudo-gbd-2023.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Ambiente_e_cardiologia/poluicao-do-ar-prevencao-cardiovascular-esc-2021-aha-2020.md",
+          "sha": "593911877e8c604d398f97aff86698a3159da9ed",
+          "pmids": [
+            "33150789",
+            "34458905"
+          ],
+          "dois": [
+            "10.1093/eurheartj/ehab484.",
+            "10.1161/CIR.0000000000000931."
+          ]
+        },
+        {
+          "path": "content/Prevenção_e_lipídios/poluicao-do-ar-prevencao-cardiovascular-esc-2021-aha-2020.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "33150789",
+            "34458905"
+          ],
+          "dois": [
+            "10.1093/eurheartj/ehab484.",
+            "10.1161/CIR.0000000000000931."
+          ]
+        }
+      ],
+      "status": "sem_equivalente_integral_aprovado",
+      "certainty": "alta_sobre_limite_identificado",
+      "new_url": null,
+      "note": "O documento histórico reúne ESC2021 PMID34458905 e declaração AHA2020 PMID33150789. Foram encontradas três evidências ESC2021 aprovadas; não há registro único aprovado equivalente ao conjunto ESC+AHA. Não substituir por estudo de Pope/Mustafic, com bibliografia e desenho distintos.",
+      "candidates": [
+        {
+          "url": "/evidencias/esc-2021-evitar-exposicao-de-longo-prazo-a-poluicao-do-ar-em-pacientes-de-alto-risco",
+          "approval": "approved",
+          "relation": "approved_partial"
+        },
+        {
+          "url": "/evidencias/esc-2021-rastreio-oportunistico-de-risco-cardiovascular-em-regioes-com-alta-poluicao-do-ar",
+          "approval": "approved",
+          "relation": "approved_partial"
+        },
+        {
+          "url": "/evidencias/esc-2021-medidas-populacionais-para-reduzir-poluicao-do-ar-e-mortalidade-cardiovascular",
+          "approval": "approved",
+          "relation": "approved_partial"
+        }
+      ]
+    },
+    {
+      "old_url": "/biblioteca/pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado",
+      "occurrences": 1,
+      "source_paths": [
+        "content/Cardiologia_pediátrica/progeria-de-hutchinson-gilford-mecanismo-da-aterosclerose-acelerada-rastreio-cardiovascular-e-lonafarnib.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Aorta_e_doença_arterial_periférica/pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "20301292",
+            "23408347",
+            "23968982",
+            "24800819",
+            "25277047",
+            "27319272",
+            "27927085",
+            "28486967",
+            "29432933",
+            "29519353",
+            "32309291",
+            "39581064"
+          ],
+          "dois": [
+            "10.1016/j.ancard.2016.04.027.",
+            "10.1016/j.atherosclerosis.2018.02.006.",
+            "10.1016/j.atherosclerosis.2024.119051.",
+            "10.1016/j.avsg.2014.09.013.",
+            "10.1016/j.jacc.2017.12.062.",
+            "10.1024/0301-1526/a000583.",
+            "10.1159/000505026.",
+            "10.1161/ATVBAHA.113.301901.",
+            "10.1186/s13023-017-0639-8.",
+            "10.1371/journal.pone.0096003.",
+            "10.3389/fgene.2013.00004."
+          ]
+        }
+      ],
+      "status": "approved_same_entity",
+      "certainty": "alta",
+      "new_type": "doenca",
+      "new_slug": "pseudoxantoma-elastico",
+      "new_url": "/doencas/pseudoxantoma-elastico",
+      "canonical_title": "Pseudoxantoma Elástico",
+      "catalog_path": "doencas/metadados.json",
+      "approval_front": "doencas_especializadas",
+      "shared_pmids": [
+        "20301292",
+        "23408347",
+        "23968982",
+        "24800819",
+        "25277047",
+        "27319272",
+        "27927085",
+        "28486967",
+        "29432933",
+        "32309291"
+      ],
+      "doi": null,
+      "note": "Mesma entidade ABCC6/calcificação arterial e avaliação cardiovascular;10 PMIDs compartilhados."
+    },
+    {
+      "old_url": "/biblioteca/quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao",
+      "occurrences": 2,
+      "source_paths": [
+        "content/Hipertensão/hipertensao-baixa-renda-vulnerabilidade-social-intervencoes-comunitarias.md",
+        "content/Hipertensão/polipilula-anti-hipertensiva-combinacao-em-comprimido-unico-e-adesao-medicamentosa.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Hipertensão/quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "34469767",
+            "38477128",
+            "38501351",
+            "38584159",
+            "39210715",
+            "39881316",
+            "40178246",
+            "40283054"
+          ],
+          "dois": [
+            "10.1016/S0140-6736(21)01922-X.",
+            "10.1038/s41440-024-01658-y.",
+            "10.1093/eurheartj/ehae178.",
+            "10.1097/HJH.0000000000003683.",
+            "10.1097/HJH.0000000000004024.",
+            "10.1161/HYPERTENSIONAHA.123.22284.",
+            "10.1186/s12916-025-03892-8.",
+            "10.3390/medicina61040764."
+          ]
+        }
+      ],
+      "status": "approved_same_entity",
+      "certainty": "alta",
+      "new_type": "estudo",
+      "new_slug": "quartet-quadripill-de-quarto-de-dose-versus-monoterapia-na-has",
+      "new_url": "/estudos/quartet-quadripill-de-quarto-de-dose-versus-monoterapia-na-has",
+      "canonical_title": "QUARTET — combinação quádrupla em quarto de dose versus monoterapia na HAS",
+      "catalog_path": "estudos/metadados.json",
+      "approval_front": "estudos",
+      "shared_pmids": [
+        "34469767"
+      ],
+      "doi": "10.1016/S0140-6736(21)01922-X",
+      "note": "Mesmo ensaio QUARTET, PMID34469767, DOI10.1016/S0140-6736(21)01922-X. Registro do ensaio principal não reproduz todos os desdobramentos da revisão histórica."
+    },
+    {
+      "old_url": "/biblioteca/retatrutida-agonista-triplo-gip-glp-1-glucagon-em-diabetes-tipo-2-e-a-lacuna-do-desfecho-cardiovascular",
+      "occurrences": 1,
+      "source_paths": [
+        "content/Diabetes_e_cardiologia/retatrutida-e-marcadores-de-risco-cardiovascular-no-diabetes-tipo-2-e-na-obesidade.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Diabetes_e_cardiologia/retatrutida-agonista-triplo-gip-glp-1-glucagon-em-diabetes-tipo-2-e-a-lacuna-do-desfecho-cardiovascular.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "37385280",
+            "41090431",
+            "42250575"
+          ],
+          "dois": [
+            "10.1016/S0140-6736(23)01053-X.",
+            "10.1016/S0140-6736(26)00967-0.",
+            "10.1111/dom.70209."
+          ]
+        }
+      ],
+      "status": "candidato_dedicado_quarentenado",
+      "certainty": "alta_sobre_limite_identificado",
+      "new_url": null,
+      "note": "O candidato TRANSCEND-T2D-1 contém os três PMIDs do alvo histórico(37385280,41090431,42250575), mas está em quarentena. O panorama de marcadores aprovado é a própria fonte do link; não usar como alias.",
+      "candidates": [
+        {
+          "url": "/biblioteca/retatrutida-agonista-triplo-gip-glp-1-glucagon-e-risco-cardiovascular-transcend-t2d-1",
+          "approval": "quarantined",
+          "relation": "quarantined"
+        },
+        {
+          "url": "/biblioteca/retatrutida-e-marcadores-de-risco-cardiovascular-no-diabetes-tipo-2-e-na-obesidade",
+          "approval": "approved",
+          "relation": "approved_self"
+        }
+      ]
+    },
+    {
+      "old_url": "/biblioteca/sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025",
+      "occurrences": 3,
+      "source_paths": [
+        "content/Fibrilação_atrial/cirurgia-bariatrica-e-fibrilacao-atrial-incidencia-complicacoes-periablacao-e-recorrencia-pos-ablacao.md",
+        "content/Fibrilação_atrial/colchicina-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-por-cateter.md",
+        "content/Fibrilação_atrial/isglt2-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-metanalise-2025.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Fibrilação_atrial/sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "41134438",
+            "41206792",
+            "41357094",
+            "42289243"
+          ],
+          "dois": [
+            "10.1007/s10840-025-02146-0.",
+            "10.1007/s10840-026-02268-z",
+            "10.1007/s10840-026-02268-z);",
+            "10.1007/s10840-026-02268-z.",
+            "10.1016/j.metabol.2026.156678,",
+            "10.1016/j.metabol.2026.156678.",
+            "10.1161/circulationaha.125.077447,",
+            "10.1161/circulationaha.125.077447.",
+            "10.3389/fcvm.2025.1710123,",
+            "10.3389/fcvm.2025.1710123."
+          ]
+        }
+      ],
+      "status": "sem_equivalente_integral_aprovado",
+      "certainty": "alta_sobre_limite_identificado",
+      "new_url": null,
+      "note": "O documento histórico reúne DARE-AF PMID41206792 e metanálise41357094. Há documento aprovado da metanálise, mas não foi encontrado destino canônico aprovado para DARE-AF. O documento da metanálise é também uma das três fontes do link; ali a substituição seria autolink.",
+      "candidates": [
+        {
+          "url": "/biblioteca/isglt2-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-metanalise-2025",
+          "approval": "approved",
+          "relation": "approved_partial_and_one_self"
+        }
+      ]
+    },
+    {
+      "old_url": "/biblioteca/sifilis-cardiovascular-terciaria-aortite-aneurisma-e-estenose-ostial",
+      "occurrences": 1,
+      "source_paths": [
+        "content/Cardiologia_pediátrica/sifilis-congenita-transmissao-transplacentaria-quadro-clinico-e-acometimento-cardiovascular.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Aorta_e_doença_arterial_periférica/sifilis-cardiovascular-terciaria-aortite-aneurisma-e-estenose-ostial.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "2679075",
+            "30073493",
+            "30869043",
+            "32271807",
+            "32580086",
+            "33744210",
+            "34292926",
+            "35550616",
+            "38917233",
+            "39902879",
+            "40806930"
+          ],
+          "dois": []
+        }
+      ],
+      "status": "approved_same_entity",
+      "certainty": "alta",
+      "new_type": "doenca",
+      "new_slug": "sifilis-cardiovascular-terciaria",
+      "new_url": "/doencas/sifilis-cardiovascular-terciaria",
+      "canonical_title": "Sífilis cardiovascular terciária",
+      "catalog_path": "doencas/metadados.json",
+      "approval_front": "doencas_especializadas",
+      "shared_pmids": [
+        "2679075",
+        "30073493",
+        "30869043",
+        "32271807",
+        "32580086",
+        "33744210",
+        "34292926",
+        "35550616",
+        "38917233",
+        "39902879",
+        "40806930"
+      ],
+      "doi": null,
+      "note": "Mesma sífilis terciária/aortite/aneurisma/estenose ostial;11 PMIDs compartilhados."
+    },
+    {
+      "old_url": "/biblioteca/terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1",
+      "occurrences": 2,
+      "source_paths": [
+        "content/Cardiomiopatias/cardiomiopatia-por-prkag2-fenocopia-glicogenica-pre-excitacao-e-doenca-de-conducao-progressiva.md",
+        "content/Cardiomiopatias/doenca-de-danon-lamp2-fenocopia-de-cardiomiopatia-hipertrofica-e-terapia-genica-rp-a501.md"
+      ],
+      "historical": [
+        {
+          "path": "content/Cardiomiopatias/terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1.md",
+          "sha": "040bfd514207a4dea52b577a5483b1715df0dce6",
+          "pmids": [
+            "39556016"
+          ],
+          "dois": [
+            "10.1056/NEJMoa2412392."
+          ]
+        }
+      ],
+      "status": "approved_same_entity",
+      "certainty": "alta",
+      "new_type": "estudo",
+      "new_slug": "terapia-genica-aav9-lamp2b-na-doenca-de-danon-fase-1",
+      "new_url": "/estudos/terapia-genica-aav9-lamp2b-na-doenca-de-danon-fase-1",
+      "canonical_title": "Terapia Gênica com AAV9.LAMP2B (RP-A501) na Doença de Danon — Ensaio de Fase 1",
+      "catalog_path": "estudos/metadados.json",
+      "approval_front": "estudos",
+      "shared_pmids": [
+        "39556016"
+      ],
+      "doi": "10.1056/NEJMoa2412392",
+      "note": "Mesmo RP-A501/AAV9.LAMP2B, fase1, PMID39556016 e DOI10.1056/NEJMoa2412392. Não equivale às atualizações regulatórias da fase2 contidas no documento histórico."
+    }
+  ]
+}

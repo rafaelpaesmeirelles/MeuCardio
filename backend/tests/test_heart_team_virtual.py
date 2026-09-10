@@ -514,49 +514,62 @@ def test_migration_is_reversible_and_db_immutable():
     assert "def downgrade" in source
 
 
-def test_cost_reservation_uses_postgres_advisory_lock():
-    source = inspect.getsource(service._reserve_call)
-    assert "pg_advisory_xact_lock" in source
-    assert "monthly_cost_ceiling" in source
-
-
-def test_concurrent_cost_reservation_allows_only_one_under_shared_ceiling(monkeypatch):
-    shared_lock = threading.Lock()
-    cases = [SimpleNamespace(id=1, owner_id=7, reserved_cost_micros=0), SimpleNamespace(id=2, owner_id=7, reserved_cost_micros=0)]
-
-    class Query:
-        def __init__(self, expression): self.expression = str(expression)
-        def filter(self, *_args): return self
-        def scalar(self):
-            if "heart_team_cost_ledger" in self.expression: return 0
-            return sum(case.reserved_cost_micros for case in cases)
-
-    class LockedDB:
+def test_legacy_cost_reservation_keeps_audit_lock_without_second_financial_gate(monkeypatch):
+    commits = []
+    class AuditDB:
         bind = SimpleNamespace(dialect=SimpleNamespace(name="postgresql"))
-        def __init__(self): self.locked = False
-        def execute(self, *_args, **_kwargs): shared_lock.acquire(); self.locked = True
-        def query(self, expression): return Query(expression)
-        def add(self, _row): pass
-        def commit(self):
-            if self.locked: self.locked = False; shared_lock.release()
-        def refresh(self, _row): pass
+        def execute(self, statement, params):
+            assert "pg_advisory_xact_lock" in str(statement)
+        def add(self, row): self.row = row
+        def commit(self): commits.append(True)
+        def refresh(self, row): pass
+        def query(self, *args): pytest.fail("Legacy tariff must not deny an already funded journey")
+    monkeypatch.setattr(service.settings, "heart_team_monthly_cost_ceiling_micros", 1)
+    db = AuditDB()
+    case = SimpleNamespace(id=1, owner_id=7, reserved_cost_micros=0)
+    row = service._reserve_call(db, case, agent_key="imaging", phase="independent", input_chars=100)
+    assert row.owner_id == 7 and row.reserved_micros > 1
+    assert case.reserved_cost_micros == row.reserved_micros and commits
 
-    reserve = service._estimate_cost_micros(1, 2200)
-    monkeypatch.setattr(service.settings, "heart_team_monthly_cost_ceiling_micros", reserve + 1)
+
+def test_concurrent_heart_team_journeys_share_wallet_budget(monkeypatch):
+    from app.services import ai_wallet
+    from app.services.ia import usage_control as accounting
+    shared_lock = threading.Lock()
+    barrier = threading.Barrier(2)
+    cost = accounting.cost_micros("gpt-4o-mini", 1000, 2200)
+    remaining = [cost]
     outcomes = []
-    def run(case):
-        db = LockedDB()
-        try:
-            service._reserve_call(db, case, agent_key="x", phase="independent", input_chars=1)
-            outcomes.append("ok")
-        except service.HeartTeamBudgetExceeded:
-            outcomes.append("blocked")
-            if db.locked: db.commit()
-    threads = [threading.Thread(target=run, args=(case,)) for case in cases]
+    reserved_keys = []
+    def reserve(**kwargs):
+        assert kwargs["owner_id"] == 7 and kwargs["feature"] == "heart_team"
+        assert kwargs["max_cost_micros"] == cost
+        with shared_lock:
+            if remaining[0] < cost:
+                raise ai_wallet.AIWalletBudgetExceeded("Crédito insuficiente")
+            remaining[0] -= cost
+            reserved_keys.append(kwargs["operation_key"])
+            return {"created": True}
+    monkeypatch.setattr(ai_wallet, "reserve", reserve)
+    monkeypatch.setattr(ai_wallet, "settle", lambda **kwargs: None)
+    def run():
+        with accounting.ai_usage_scope(7, "heart_team") as scope:
+            accounting.plan_token_budgets("openai", [{"model": "gpt-4o-mini", "input_tokens": 1000, "max_output_tokens": 2200}])
+            try:
+                scope.reserve(cost, "gpt-4o-mini")
+                scope.spent = cost
+                scope.pending = 0
+                outcomes.append("ok")
+            except ai_wallet.AIWalletBudgetExceeded:
+                outcomes.append("blocked")
+            finally:
+                barrier.wait(timeout=3)
+    threads = [threading.Thread(target=run) for _ in range(2)]
     for thread in threads: thread.start()
-    for thread in threads: thread.join(timeout=2)
+    for thread in threads: thread.join(timeout=5)
+    assert all(not thread.is_alive() for thread in threads)
     assert sorted(outcomes) == ["blocked", "ok"]
-
+    assert len(reserved_keys) == 1 and remaining == [0]
 
 def test_final_review_requires_all_suggestions_and_dual_confirmation():
     from app.api.heart_team import final_review
@@ -622,6 +635,7 @@ def test_orchestrator_actually_uses_isolated_first_round_inputs(monkeypatch):
     monkeypatch.setattr(service, "_knowledge_graph_fingerprint", lambda *_args, **_kwargs: "graph-v1")
     monkeypatch.setattr(service, "_call", fake_call)
     monkeypatch.setattr(service, "audit_event", lambda *_args, **_kwargs: None)
+    monkeypatch.setattr(service, "_apply_accepted_budget", lambda *_: None)
     service.HeartTeamOrchestrator(db, provider=object()).analyze(case, actor_id=1)
     assert len(first_inputs) == 3
     assert len({id(value) for value in first_inputs}) == 3
@@ -643,6 +657,7 @@ def test_mandatory_evidence_failure_never_reaches_awaiting_review(monkeypatch):
     monkeypatch.setattr(service, "purge_expired_cache", lambda *_: 0); monkeypatch.setattr(service, "_cache_get", lambda *_: None); monkeypatch.setattr(service, "_call", fake_call); monkeypatch.setattr(service, "audit_event", lambda *_args, **_kwargs: None)
     monkeypatch.setattr(service, "resolve_related_content", lambda *_args, **_kwargs: [])
     monkeypatch.setattr(service, "_knowledge_graph_fingerprint", lambda *_args, **_kwargs: "graph-v1")
+    monkeypatch.setattr(service, "_apply_accepted_budget", lambda *_: None)
     service.HeartTeamOrchestrator(db, provider=object()).analyze(case, actor_id=1)
     assert case.status == "unusable"
     assert case.result == {}

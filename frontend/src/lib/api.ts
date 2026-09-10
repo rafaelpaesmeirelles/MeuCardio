@@ -34,6 +34,7 @@ export class ApiError extends Error {
 
 type DetalheEstruturado = {
   erro?: unknown;
+  message?: unknown;
   campos?: unknown;
   bloqueios?: unknown;
   itens?: unknown;
@@ -65,7 +66,7 @@ function mensagensDeLista(valor: unknown): string[] {
 
 function mensagemEstruturada(detail: DetalheEstruturado, fallback: string): string {
   const partes: string[] = [];
-  const erro = textoPermitido(detail.erro);
+  const erro = textoPermitido(detail.erro) ?? textoPermitido(detail.message);
   if (erro) partes.push(erro);
   const campos = mensagensDeLista(detail.campos);
   if (campos.length) partes.push(`Campos pendentes: ${campos.join(", ")}.`);

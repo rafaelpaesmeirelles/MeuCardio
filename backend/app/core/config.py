@@ -162,8 +162,10 @@ class Settings(BaseSettings):
     whatsapp_approved_template_names: str = ""
     heart_team_enabled: bool = False
     heart_team_files_dir: str = "/heart-team-files"
-    heart_team_clinical_model: str = ""
-    heart_team_max_output_tokens: int = 2200
+    heart_team_ai_provider: str = "openai"
+    heart_team_clinical_model: str = "gpt-5.6-sol"
+    heart_team_max_output_tokens: int = 8192
+    heart_team_reasoning_effort: str = "medium"
     heart_team_source_limit: int = 16
     heart_team_cache_ttl_seconds: int = 3600
     heart_team_monthly_cost_ceiling_micros: int = 25_000_000
@@ -240,6 +242,24 @@ class Settings(BaseSettings):
     # checkouts/trocas enquanto o lançamento comercial não estiver aberto.
     # Portal e webhooks continuam ativos para assinaturas já existentes.
     subscriptions_enabled: bool = False
+    # Catálogo aprovado em 09/09/2026; revisão final antes de abrir vendas.
+    commercial_price_basico_centavos: int = 9990
+    commercial_price_basico_mail_centavos: int = 11990
+    commercial_price_ia_centavos: int = 14990
+    commercial_price_completo_centavos: int = 16990
+    ai_wallet_monthly_credit_centavos: int = 4000
+    ai_wallet_markup_bps: int = 40000
+    ai_wallet_monthly_cost_ceiling_centavos: int = 1000
+    ai_wallet_pricing_version: str = "pilot-2026-09"
+    # Centros institucionais exigem orçamento próprio explícito.
+    ai_wallet_institutional_monthly_cost_ceiling_centavos: int = 10000
+    ai_usage_enforcement_enabled: bool = True
+    ai_model_prices_json: str = "{}"
+    ai_billing_usd_brl: float = 6.0
+    ai_journey_budgets_json: str = "{}"
+    ai_credit_topups_enabled: bool = False
+    ai_credit_topup_packages_centavos: str = "2990,5990,11990"
+
     stripe_publishable_key: str = ""
     stripe_secret_key: str = ""
     stripe_webhook_secret: str = ""

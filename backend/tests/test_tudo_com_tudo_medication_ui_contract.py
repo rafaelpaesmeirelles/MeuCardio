@@ -71,7 +71,14 @@ def test_qualquer_assunto_e_organizado_sem_expandir_tema_amplo_por_inferencia():
     assert "`/grafo/relacionados?${query.toString()}`" in fonte
     assert 'limite_por_tipo: "6"' in fonte
     assert "mergeGraphGroups" in fonte
-    assert "Conexão clínica verificável" in fonte
+    # Labels now distinguish direct relations, topic context and negative
+    # clinical relations instead of presenting every edge as the same claim.
+    assert "connectionLabel(r)" in fonte
+    assert 'contraindicated_in: "Contraindicação relacionada — verificar o contexto"' in fonte
+    assert 'monitor_with: "Monitorização relacionada"' in fonte
+    assert 'x.context_only || x.relation_scope === "structured_clinical_topic"' in fonte
+    for label in ("Mesmo tema clínico", "Relação contextual determinística", "Relação direta"):
+        assert label in fonte
     assert "if (!medicamentoForte)" not in fonte
     assert "temasUnicos.length === 1" not in fonte
 

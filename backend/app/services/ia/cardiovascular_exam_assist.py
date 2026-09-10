@@ -20,6 +20,8 @@ from pydantic import BaseModel, ConfigDict, Field, HttpUrl, field_validator
 
 from app.core.config import settings
 
+from app.services.ia.usage_control import metered_responses_post, plan_requests, plan_token_budgets, input_token_bound
+
 PROMPT_VERSION = "cardiovascular-exam-assist-v2-2026-08-25"
 RESPONSES_URL = "https://api.openai.com/v1/responses"
 DEFAULT_MODEL = "gpt-5.6"
@@ -302,7 +304,7 @@ def _response_text_and_sources(payload: dict) -> tuple[str, list[dict], int]:
 
 def _post(request: dict) -> tuple[dict, str, list[dict], int]:
     with httpx.Client(timeout=httpx.Timeout(180.0, connect=15.0)) as client:
-        response = client.post(RESPONSES_URL, headers={
+        response = metered_responses_post(client, RESPONSES_URL, headers={
             "Authorization": f"Bearer {settings.openai_api_key}", "Content-Type": "application/json",
         }, json=request)
     response.raise_for_status()
@@ -345,6 +347,16 @@ def analyze_exam(files: list[ClinicalFile], exam_type: str, clinical_question: s
         exam_type, clinical_question, report_text, clinical_context, files,
     )}, *[_input_item(file, index) for index, file in enumerate(files, start=1)]]
     base = {"model": model, "max_output_tokens": settings.ai_max_output_tokens, "store": False}
+    # Reserve both interpretation and evidence search before sending the files.
+    first_bound = input_token_bound({**base, "instructions": CLINICAL_PROMPT,
+        "input": [{"role": "user", "content": content}], "schema": CLINICAL_SCHEMA}, model) + 4096
+    second_bound = (settings.ai_max_output_tokens * 8 + len(EVIDENCE_PROMPT.encode("utf-8"))
+                    + len(json.dumps(EVIDENCE_SCHEMA).encode("utf-8")) + 8192 + 75_000)
+    plan_token_budgets("openai", [
+        {"model": model, "input_tokens": first_bound, "max_output_tokens": settings.ai_max_output_tokens},
+        {"model": model, "input_tokens": second_bound, "max_output_tokens": settings.ai_max_output_tokens,
+         "web_searches": 3},
+    ])
     clinical_raw, clinical_text, _, _ = _post({**base, "instructions": CLINICAL_PROMPT,
         "input": [{"role": "user", "content": content}], "text": {"format": {
             "type": "json_schema", "name": "cardiovascular_clinical_interpretation", "strict": True,

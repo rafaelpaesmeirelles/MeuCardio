@@ -1,3 +1,4 @@
+from types import SimpleNamespace
 from app.services import rag
 from app.services.ia.provedor import Resposta
 
@@ -30,7 +31,7 @@ def test_stream_encaminha_status_de_tool_sem_tratar_como_final(monkeypatch):
         pergunta="Mostre meu plano de trabalho dos próximos 7 dias.",
         historico=[],
         modo="pessoal",
-        user=object(),
+        user=SimpleNamespace(id=1),
     ))
 
     assert eventos[0] == {"status": "Preparando a resposta…"}

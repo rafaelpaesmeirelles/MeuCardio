@@ -108,11 +108,28 @@ def test_cockpit_expoe_lra_kdigo_sem_prescricao_automatica():
     assert "PaO₂/FiO₂, suporte e gate de edema cardiogênico" in pagina
 
 
-def test_auditoria_descobre_calculadoras_de_registros_modulares():
-    auditoria = (ROOT / "scripts" / "audit_tudo_com_tudo.py").read_text(encoding="utf-8")
-
-    assert 'glob("*calculators*.py")' in auditoria
-
+def test_auditoria_descobre_registro_modular_e_exclui_calculadora_nao_implementada(tmp_path, monkeypatch):
+    import importlib.util
+    from types import SimpleNamespace
+    from app.services import calculators
+    spec = importlib.util.spec_from_file_location("audit_registry_contract", ROOT / "scripts/audit_tudo_com_tudo.py")
+    auditor = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(auditor)
+    for directory in ("content", "doencas", "medicamentos"):
+        (tmp_path / directory).mkdir()
+    for relative in ("doencas/relacoes-explicitas.json", "doencas/relacoes-transversais.json", "medicamentos/interacoes.json"):
+        (tmp_path / relative).write_text("[]")
+    (tmp_path / "content/prova.md").write_text(
+        "---\nslug: prova\nreview_status: revisado\n---\n"
+        "[Disponível](/calculadoras/registro-modular) [Pendente](/calculadoras/ainda-indisponivel)\n")
+    monkeypatch.setattr(auditor, "ROOT", tmp_path)
+    monkeypatch.setattr(auditor, "_load", lambda _name: [])
+    monkeypatch.setattr(calculators, "REGISTRY", {
+        "registered": SimpleNamespace(slug="registro-modular", status="implementada"),
+        "pending": SimpleNamespace(slug="ainda-indisponivel", status="planejada"),
+    })
+    result = auditor.audit()
+    assert {item["target"] for item in result["broken_references"]} == {"ainda-indisponivel"}
 
 def test_lote_acido_base_preserva_gates_editoriais_e_conexoes_bidirecionais():
     slug = "acidose-metabolica-compensacao-respiratoria-e-anion-gap-na-uco"
