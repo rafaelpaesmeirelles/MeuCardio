@@ -18,6 +18,7 @@ import unicodedata
 from sqlalchemy import text
 
 from app.services import calculators as calc
+from app.services.document_editorial_taxonomy import document_section_sql, study_section_sql
 
 # O corpus científico canônico possui 13 frentes persistidas. As calculadoras
 # clínicas vivem num registro validado em memória e entram como uma 14ª frente
@@ -214,17 +215,12 @@ INTERNAL_MARKER_SQL_PATTERN = (
 )
 
 
-# Presentation categories only: no relevance, ranking or publication expansion.
-# Precedence mirrors the existing search UI for the four document subdivisions.
-DOCUMENT_SECTION_SQL = """CASE
-  WHEN frente <> 'documento' THEN frente
-  WHEN unaccent(lower(coalesce(kind, '') || ' ' || coalesce(title, '')))
-       ~ '(^|[^a-z0-9])(flux|algoritm|flowchart)' THEN 'fluxo'
-  WHEN unaccent(lower(coalesce(kind, '') || ' ' || coalesce(title, '')))
-       ~ '(^|[^a-z0-9])(diretr|guideline|consens|posicionamento)' THEN 'diretriz'
-  WHEN unaccent(lower(coalesce(kind, '') || ' ' || coalesce(title, '')))
-       ~ '(^|[^a-z0-9])(protoc|condut|manejo|tratamento|terapia|abordagem)' THEN 'conduta'
-  ELSE 'geral' END"""
+# Editorial facet only; canonical fronts and relevance stay unchanged.
+DOCUMENT_SECTION_SQL = (
+    "CASE WHEN frente = 'estudo' THEN " + study_section_sql("kind")
+    + " WHEN frente <> 'documento' THEN frente ELSE "
+    + document_section_sql("kind") + " END"
+)
 
 
 def _search_sql(match_predicate: str, *, disease: bool = False, include_counts: bool = False):

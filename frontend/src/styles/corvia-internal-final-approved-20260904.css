@@ -524,6 +524,58 @@ html[data-corvia-theme="dark"] .galaxy-theme-toggle__canvas-live {
   #root .spaces-choice__cards small { font-size: .76rem !important; line-height: 1.42 !important; }
   #root .spaces-choice__cards em { margin-top: 2px !important; font-size: .72rem !important; }
   #root .spaces-choice > footer { padding: 8px 0 4px !important; font-size: .72rem !important; }
-  html[data-corvia-theme="light"] #root .spaces-home__topbar .spaces-brand > span { display: none !important; }
-  html[data-corvia-theme="dark"] #root .spaces-home__topbar .spaces-brand > span { display: flex !important; }
+  #root .spaces-home__topbar .spaces-brand > span { display: flex !important; }
+}
+
+/* 10/09 — contenção real do grid mobile e mesma marca nos dois temas.
+   minmax(0,1fr) impede a largura intrínseca do cabeçalho de alargar os cards;
+   não usamos corte/overflow como substituto de dimensionamento. */
+@media (max-width: 900px) {
+  #root .spaces-choice { grid-template-columns: minmax(0, 1fr); }
+  #root .spaces-choice > header,
+  #root .spaces-choice__content,
+  #root .spaces-choice__cards,
+  #root .spaces-choice__cards > button { min-width: 0; max-width: 100%; }
+  #root .spaces-choice > header { gap: 12px; }
+  #root .spaces-choice__cards { grid-template-columns: minmax(0, 1fr) !important; }
+  #root .spaces-choice__cards :is(strong, small, em) {
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  #root .spaces-choice__cards em svg { flex: 0 0 16px; }
+  #root .spaces-choice__brand-cluster { gap: 8px !important; }
+  #root .spaces-choice > header .spaces-brand { gap: 6px !important; }
+  #root .spaces-choice > header .spaces-brand > img { width: 40px !important; height: 40px !important; }
+  #root .spaces-choice > header .spaces-brand > span { display: flex !important; }
+  #root .spaces-choice > header .spaces-brand strong { font-size: .98rem !important; line-height: 1 !important; }
+  #root .spaces-choice > header .spaces-brand small { display: block !important; margin-top: 3px !important; font-size: .28rem !important; letter-spacing: .16em !important; }
+  #root .spaces-choice__brand-cluster .galaxy-theme-toggle {
+    flex: 0 0 44px !important;
+    width: 44px !important;
+    height: 44px !important;
+    margin-left: 0 !important;
+  }
+  #root .spaces-choice > header .spaces-user { flex: 0 1 58px; min-width: 44px !important; }
+  #root .spaces-choice > header .spaces-user__avatar { width: 44px !important; height: 44px !important; flex-basis: 44px !important; }
+}
+
+/* Marca completa, conta e busca legível não cabem em uma única linha estreita.
+   A busca recebe uma linha própria, preservando os três modos logo abaixo. */
+@media (max-width: 600px) {
+  #root .spaces-home__topbar {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    grid-template-rows: 64px 44px 46px !important;
+  }
+  #root .spaces-home__topbar .spaces-home__brand-cluster { grid-column: 1 !important; grid-row: 1 !important; }
+  #root .spaces-home__topbar > .spaces-user { grid-column: 2 !important; grid-row: 1 !important; }
+  #root .spaces-home__topbar .spaces-everything-search { grid-column: 1 / -1 !important; grid-row: 2 !important; min-width: 0; }
+  #root .spaces-home__topbar > nav { grid-column: 1 / -1 !important; grid-row: 3 !important; }
+}
+
+/* Restaura o azul aprovado para o tema escuro: a regra global com #root não pode apagar VIA. */
+html[data-corvia-theme="dark"] #root .spaces-brand strong b { color: #5f8fe8 !important; }
+@media (max-width: 900px) {
+  #root .spaces-choice__brand-cluster .galaxy-theme-toggle__image { width: 100% !important; height: 100% !important; }
 }

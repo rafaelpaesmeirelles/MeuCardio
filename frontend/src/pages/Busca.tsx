@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api, ApiError, PaginaDe } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
+import { documentSection, studySection } from "../lib/documentEditorialTaxonomy";
 import { exactSearchAnchors } from "../lib/searchAnchors";
 import TctDiseaseOverview from "../components/TctDiseaseOverview";
 
@@ -90,6 +91,7 @@ const REL_LABELS: Record<string, string> = {
 const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 function secao(r: Res): Secao {
   if (r.secao && r.secao in SECOES) return r.secao;
+  if (r.frente === "estudo") return studySection(r.kind) as Secao;
   const exact = r.frente || r.kind;
   if (exact in SECOES) return exact as Secao;
   const f = norm(exact);
@@ -98,14 +100,12 @@ function secao(r: Res): Secao {
   if (/^(evidencia|evidencias|evidence)$/.test(f)) return "evidencia";
   if (/^(exame|exames|lab test|lab tests)$/.test(f)) return "exame";
   if (/^(galeria|imagem|imagens|gallery)$/.test(f)) return "galeria";
-  const t = norm(`${r.kind} ${r.title}`);
-  if (/\b(flux|algoritm|flowchart)/.test(t)) return "fluxo";
-  if (/\b(diretr|guideline|consens|posicionamento)/.test(t)) return "diretriz";
-  if (/\b(protoc|condut|manejo|tratamento|terapia|abordagem)/.test(t)) return "conduta";
-  return "geral";
+  return documentSection(r.kind) as Secao;
 }
 function rota(r: Res): string {
   const frente = r.frente || "documento";
+  if (frente === "estudo") return `/estudos/${encodeURIComponent(r.slug)}`;
+  if (frente === "documento") return `/biblioteca/${encodeURIComponent(r.slug)}`;
   if (frente === "medicamento") return `/medicamentos?slug=${encodeURIComponent(r.slug)}`;
   if (frente === "emergencia") return `/emergencia?protocolo=${encodeURIComponent(r.slug)}`;
   if (frente === "triagem_sintoma") return `/triagem-sintomas?slug=${encodeURIComponent(r.slug)}`;

@@ -24,6 +24,7 @@ from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.models.checklist import DischargeChecklist
+from app.services.editorial_kind_overrides import runtime_document_kind
 from app.models.content import Document, DocumentRevision
 from app.models.drug import Drug
 from app.models.evidence import EvidenceRecord
@@ -747,6 +748,7 @@ def _summary_body(guideline: Guideline, analysis: dict, impacts: list[dict]) -> 
 
 def _ensure_summary_document(db: Session, guideline: Guideline, analysis: dict, impacts: list[dict]) -> Document:
     slug = f"corvia-intelligence-{guideline.slug}"[:255]
+    verified_kind = runtime_document_kind(guideline)
     body = _summary_body(guideline, analysis, impacts)
     doc = db.query(Document).filter(Document.slug == slug).first()
     source_refs = [x for x in [guideline.url, f"https://doi.org/{guideline.doi}" if guideline.doi else None] if x]
@@ -755,7 +757,7 @@ def _ensure_summary_document(db: Session, guideline: Guideline, analysis: dict, 
         doc = Document(
             slug=slug,
             title=str(analysis.get("title_pt") or guideline.titulo)[:500],
-            kind="diretriz",
+            kind=verified_kind,
             theme=str(analysis.get("theme") or guideline.tema or TEMA_PADRAO)[:80],
             summary=str(analysis.get("summary_pt") or "")[:12000],
             body_md=body,
@@ -784,6 +786,8 @@ def _ensure_summary_document(db: Session, guideline: Guideline, analysis: dict, 
         doc.published = True
         doc.version += 1
         doc.reviewed_at = datetime.now(timezone.utc)
+    # Editorial metadata is refreshed even when the generated body is identical.
+    doc.kind = verified_kind
     link = db.query(GuidelineLink).filter(
         GuidelineLink.guideline_id == guideline.id,
         GuidelineLink.item_type == SUMMARY_ITEM_TYPE,

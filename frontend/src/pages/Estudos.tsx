@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import EditorialDocumentList from "../components/EditorialDocumentList";
 import { api } from "../lib/api";
 import { Carregando } from "../components/Estado";
 import { areaDaCardiologia } from "../lib/taxonomiaCardiologia";
@@ -146,13 +147,13 @@ export default function Estudos() {
       />
 
       <div className="cc-metrics">
-        <ClinicalMetric label="Catálogo" value={totalCatalogo || "—"} detail="registros científicos" icon="evidencia" />
+        <ClinicalMetric label="Catálogo" value={totalCatalogo || "—"} detail="registros estruturados de estudos" icon="evidencia" />
         <ClinicalMetric label="Desenhos" value={tipos.length || "—"} detail="tipos classificados" icon="conhecimento" />
         <ClinicalMetric label="Áreas" value={areas.length || "—"} detail="áreas da cardiologia" icon="doencas" />
         <ClinicalMetric label="Mais frequente" value={desenhoMaisFrequente ? humanizarTipo(desenhoMaisFrequente.study_type) : "—"} detail={desenhoMaisFrequente ? `${desenhoMaisFrequente.count} registros` : undefined} icon="indicadores" />
       </div>
 
-      <ClinicalSection eyebrow="Encontrar evidência" title="Filtre o que importa" description="No mobile, filtros ficam em campos compactos em vez de ocupar a tela com dezenas de chips.">
+      <ClinicalSection eyebrow="Encontrar evidência" title="Filtre o que importa" description="Busca e assunto filtram as duas coleções. Área da Cardiologia e desenho filtram os registros estruturados do catálogo de estudos; os documentos da Biblioteca possuem classificação editorial própria.">
         <div className="cc-filter-grid cc-filter-grid--4">
           <label>
             <span>Buscar estudo ou patologia</span>
@@ -208,6 +209,8 @@ export default function Estudos() {
         )}
         {nextOffset != null && itens && <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}><button type="button" className="botao botao--secundario" disabled={carregandoMais} onClick={() => void carregarMais()}>{carregandoMais ? "Carregando estudos…" : `Carregar mais · ${Math.max(totalEncontrados - itens.length, 0)} restantes`}</button></div>}
       </ClinicalSection>
+
+      <EditorialDocumentList section="estudo" title="Estudos e revisões da Biblioteca" query={busca} theme={tema} />
 
       <ClinicalSection eyebrow="Conhecimento conectado" title="Do estudo à decisão">
         <div className="cc-context-grid">

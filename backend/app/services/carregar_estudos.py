@@ -7,6 +7,8 @@ Uso:
 import json
 import sys
 
+from app.services.editorial_kind_overrides import load_editorial_registry, canonical_editorial_value, json_sha256
+
 from app.core.db import SessionLocal
 from app.models.study import ScientificStudy
 from app.services.scientific_loader_safety import (
@@ -29,6 +31,7 @@ _COLUNAS = {c.key for c in ScientificStudy.__table__.columns}
 
 def carregar(caminho_json: str) -> dict:
     itens = json.load(open(caminho_json, encoding="utf-8"))
+    editorial_registry = load_editorial_registry()
     db = SessionLocal()
     novos, atualizados = 0, 0
     try:
@@ -40,6 +43,11 @@ def carregar(caminho_json: str) -> dict:
                 and k in _COLUNAS
                 and v is not None
             }
+            if "study_type" in item:
+                item["study_type"] = canonical_editorial_value(
+                    "estudo", item["slug"], "study_type", item["study_type"],
+                    json_sha256(bruto), registry=editorial_registry,
+                )
             note = source_review_note(bruto)
             if note is not None:
                 item["review_note"] = note

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
+import { validateMobileSpaces } from "./mobile-spaces-geometry.mjs";
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const home = read("src/pages/CardiologySpacesHome.tsx");
@@ -39,6 +40,7 @@ const nonCatalogShellRoutes = new Set([
   "ecg-ia", // alias histórico → IA para Exames
   "assinatura", // fluxo técnico → tour rápido de assinatura
   "admin/usuarios-online", // alias administrativo → Rede profissional
+  "admin/atividade", // subpágina acessível pela central administrativa
 ]);
 
 test("approved image composition is encoded as a product contract", () => {
@@ -168,6 +170,8 @@ test("every authenticated primary Shell route is catalogued or explicitly classi
   assert.ok(shellStart >= 0 && shellEnd > shellStart, "o bloco autenticado do Shell precisa ser localizável");
   assert.ok(shellRoutePaths.length > 30, "o inventário autenticado não pode encolher silenciosamente");
 
+  assert.match(read("src/pages/Admin.tsx"), /<Link to="\/admin\/atividade"/, "a subpágina de atividade precisa continuar acessível pela central administrativa");
+
   const primaryRoutes = [...new Set(shellRoutePaths.filter((path) => !path.includes(":") && !nonCatalogShellRoutes.has(path)))];
   const missing = primaryRoutes.filter((path) => !catalogPrimaryPaths.has(`/${path}`));
   assert.deepEqual(missing, [], `funções autenticadas fora de Todas as funções: ${missing.join(", ")}`);
@@ -227,4 +231,17 @@ test("new Google account connection stays hidden behind an opt-in flag", () => {
   assert.match(agenda, /GOOGLE_ACCOUNT_CONNECT_VISIBLE \|\| item\.provider !== "google_calendar"/);
   assert.match(agenda, /gridTemplateColumns: `repeat\(\$\{PROVEDORES_DE_CONEXAO\.length\}/);
   assert.match(myAccount, /GOOGLE_ACCOUNT_CONNECT_VISIBLE \? "Google, Microsoft e Apple" : "Microsoft e Apple"/);
+});
+
+
+test("mobile geometry rejects hidden wordmarks and clipped cards even when body overflow is masked", () => {
+  const box = (left, right, top=0, bottom=44) => ({left,right,top,bottom,width:right-left,height:bottom-top,visible:true});
+  const sample = {width:320, choice:true, header:box(0,320), brand:box(16,122), wordmark:box(62,122),
+    galaxy:box(130,174), identity:box(260,304), avatar:box(260,304), cards:[0,1,2].map(() => ({box:box(16,304),text:[{left:90,right:286}]}))};
+  assert.deepEqual(validateMobileSpaces(sample), []);
+  assert.ok(validateMobileSpaces({...sample,wordmark:{...sample.wordmark,visible:false}}).includes("wordmark: not visible"));
+  assert.ok(validateMobileSpaces({...sample,cards:[{box:box(16,380),text:[]},...sample.cards.slice(1)]}).includes("card 0: outside viewport"));
+  assert.ok(validateMobileSpaces({...sample,cards:[{box:box(16,304),text:[{left:90,right:330}]},...sample.cards.slice(1)]}).includes("card 0: clipped text"));
+  assert.ok(validateMobileSpaces({...sample,galaxy:box(110,154)}).includes("brand/galaxy: overlap"));
+  assert.ok(validateMobileSpaces({...sample,galaxyImage:box(94,212)}).includes("galaxy image: overflow or overlap"));
 });

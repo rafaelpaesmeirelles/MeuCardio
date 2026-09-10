@@ -168,6 +168,7 @@ jobs:
           import fs from 'node:fs';
           import path from 'node:path';
 
+          const { measureMobileSpaces, validateMobileSpaces } = await import(`file://${process.env.GITHUB_WORKSPACE}/frontend/scripts/mobile-spaces-geometry.mjs`);
           const base = 'http://127.0.0.1:8080';
           const out = path.join(process.env.GITHUB_WORKSPACE, 'visual-qa', 'screenshots');
           const reportPath = path.join(process.env.GITHUB_WORKSPACE, 'visual-qa', 'report.json');
@@ -330,6 +331,53 @@ jobs:
             await page.screenshot({ path: path.join(out, `${mode}-${name}.png`), fullPage: false });
           }
 
+          async function inspectMobileSpacesMatrix(page) {
+            const matrix = [];
+            const workModes = [['complete','Completo'],['essential','Essencial'],['scientific','Ciência & Ensino']];
+            for (const width of [320,360,393,430]) {
+              await page.setViewportSize({width,height:900});
+              await page.goto(`${base}/`, {waitUntil:'networkidle'});
+              await selectCompleteMode(page);
+              for (const theme of ['light','dark']) {
+                if (await page.locator('html').getAttribute('data-corvia-theme') !== theme) {
+                  await page.locator('.galaxy-theme-toggle').click();
+                }
+                await page.locator('.spaces-brand-button').click();
+                await page.locator('.spaces-choice').waitFor({state:'visible'});
+                const capture = async (mode) => {
+                  await page.evaluate(() => document.fonts.ready);
+                  const metrics = await page.evaluate(measureMobileSpaces);
+                  const name = `mobile-${width}-${theme}-${mode}`;
+                  if (metrics.theme !== theme) report.failures.push(`${name}: expected theme ${theme}, rendered ${metrics.theme}`);
+                  report.failures.push(...validateMobileSpaces(metrics).map((error) => `${name}: ${error}`));
+                  matrix.push({name,mode,width,requestedTheme:theme,...metrics});
+                  await page.screenshot({path:path.join(out,`${name}.png`),fullPage:false});
+                };
+                await capture('choice');
+                for (const [mode,label] of workModes) {
+                  if (await page.locator('.spaces-choice').isVisible()) {
+                    await page.locator('.spaces-choice__cards button').filter({hasText:label}).click();
+                  } else {
+                    await page.getByRole('navigation',{name:'Modo de trabalho'}).getByRole('button',{name:label,exact:true}).click();
+                  }
+                  await page.locator(`.spaces-home--mode-${mode}`).waitFor({state:'visible'});
+                  await capture(mode);
+                }
+              }
+            }
+            for (const light of matrix.filter((entry) => entry.theme === 'light')) {
+              const dark = matrix.find((entry) => entry.theme === 'dark' && entry.width === light.width && entry.mode === light.mode);
+              for (const key of ['brand','wordmark','galaxy','search']) {
+                if (!light[key] && !dark?.[key]) continue;
+                if (!dark?.[key] || ['left','top','width','height'].some((part) => Math.abs(light[key][part]-dark[key][part]) > 1)) {
+                  report.failures.push(`${light.width}/${light.mode}: ${key} geometry changes with theme`);
+                }
+              }
+            }
+            report.mobileSpacesMatrix = matrix;
+            if (matrix.length !== 32) report.failures.push(`mobile spaces matrix incomplete: ${matrix.length}/32`);
+          }
+
           async function assertCatalog(page, mode, requiredLinks) {
             await page.locator('.spaces-context-rail__all').click();
             await page.locator('.spaces-catalog').waitFor({ state: 'visible' });
@@ -369,6 +417,7 @@ jobs:
             await mobile.page.screenshot({ path: path.join(out, 'mobile-todas-funcoes.png'), fullPage: false });
             const moreVisible = await mobile.page.locator('.spaces-catalog').isVisible();
             if (!moreVisible) report.failures.push('mobile/catálogo: catálogo de funções não abriu');
+            await inspectMobileSpacesMatrix(mobile.page);
             await mobile.context.close();
           } catch (error) {
             report.failures.push(`capture runner: ${error?.stack || error}`);

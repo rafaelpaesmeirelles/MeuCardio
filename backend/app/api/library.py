@@ -1,7 +1,7 @@
 import re
 
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy import func, select
+from sqlalchemy import Text, cast, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.commands.reconcile_content import FRONTS as RECONCILIATION_FRONTS
@@ -20,6 +20,8 @@ from app.models.patient_material import PatientMaterial
 from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
+from app.services.catalog_search import literal_like
+from app.services.document_editorial_taxonomy import DOCUMENT_SECTIONS, document_section, document_section_expression
 from app.services.clinical_text import clinical_text_without_internal_overrides
 from app.services.content_areas import content_area_counts
 from app.services.clinical_markdown_links import rewrite_clinical_markdown_links
@@ -58,6 +60,7 @@ def _card(d: Document) -> dict:
         "slug": d.slug,
         "title": d.title,
         "kind": d.kind,
+        "secao": document_section(d.kind),
         "theme": d.theme,
         "summary": clinical_text_without_internal_overrides(d.summary),
         "tags": d.tags,
@@ -154,18 +157,30 @@ def area_counts(db: Session = Depends(get_db), _=Depends(current_user)):
 def list_documents(
     theme: str | None = None,
     kind: str | None = None,
+    secao: str | None = None,
+    q: str | None = Query(None, max_length=200),
     limit: int = Query(100, ge=1, le=200),
     offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
-    q = db.query(Document).filter(Document.published.is_(True))
+    if secao is not None and secao not in DOCUMENT_SECTIONS:
+        raise HTTPException(status_code=422, detail="Seção editorial inválida.")
+    query = db.query(Document).filter(Document.published.is_(True))
+    if q and q.strip():
+        query = query.filter(or_(*[
+            func.unaccent(func.lower(func.translate(cast(column, Text), "₀₁₂₃₄₅₆₇₈₉", "0123456789"))).like(
+                func.unaccent(func.lower("%" + literal_like(q.strip()) + "%")), escape="!",
+            ) for column in (Document.title, Document.summary, Document.theme)
+        ]))
+    if secao:
+        query = query.filter(document_section_expression(Document.kind) == secao)
     if theme:
-        q = q.filter(Document.theme == theme)
+        query = query.filter(Document.theme == theme)
     if kind:
-        q = q.filter(Document.kind == kind)
-    total = q.count()
-    items = q.order_by(Document.title, Document.id).offset(offset).limit(limit).all()
+        query = query.filter(Document.kind == kind)
+    total = query.count()
+    items = query.order_by(Document.title, Document.id).offset(offset).limit(limit).all()
     next_offset = offset + len(items)
     return {
         "total": total,
