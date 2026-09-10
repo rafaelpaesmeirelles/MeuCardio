@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "decision_id": "publication-http-retry-20260910",
+  "repository": "rafaelpaesmeirelles/MeuCardio",
+  "head_branch": "codex/fix-publication-http-retry-20260910",
+  "base_sha": "0f341021314669c5fcb8bf81e15ec4f95c7c6934",
+  "pull_request": 923,
+  "authorization": {
+    "date": "2026-09-10",
+    "instruction": "Sem novo ci backend",
+    "mode": "authorized-no-backend-ci",
+    "source": "Original explicit user instruction recorded earlier in this ongoing session remains in force for completing the authorized scientific-reading and Intelligence work. The focused HTTP retry defect found after deployment does not revoke it. This is a separately bounded decision, not an authorization inherited from the PR922 decision document.",
+    "scope": "Only PR923 on codex/fix-publication-http-retry-20260910 and its exact confirmed main integration: correctly classify HTTPX response status and preserve sanitized HTTP diagnostics and safe retries in the scientific publication library. No historical queue mutation, paid execution, model/pricing/budget changes or alteration of clinical approval guards is authorized by this CI decision. Corpus and all release gates remain mandatory. No authorization inherited from PR918, PR919, PR920, PR921 or PR922."
+  },
+  "local_evidence": [
+    "docs/publication-http-retry-audit-20260910.md"
+  ]
+}

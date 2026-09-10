@@ -19,7 +19,8 @@ from app.models.scientific_publication_asset import ScientificPublicationAsset a
 from app.models.guideline import Guideline
 from app.services import cofre, scientific_document_ai as translator
 from app.services.scientific_reading import MODELS, entity_sources, normalize_doi, published_query
-from app.services.ia.usage_control import ai_usage_scope, plan_requests
+from app.services.ia.usage_control import ai_usage_scope, plan_requests, AIUsageError
+from app.services.scientific_processing_errors import safe_error_diagnostic, failure_status, NONBILLED_REJECTIONS
 
 API = 'https://www.ebi.ac.uk/europepmc/webservices/rest'
 MAX_BYTES = 8 * 1024 * 1024
@@ -255,10 +256,16 @@ def _process(db, asset):
     if len(completed) < len(chunks):
         index = len(completed)
         request = _request_chunk(chunks[index])
-        asset.status = 'ai_processing'
+        operation_key = 'publication:' + hashlib.sha256((str(asset.id) + ':' + asset.source_sha256 + ':' + str(index) + ':' + json.dumps(request, sort_keys=True)).encode()).hexdigest()
+        generation = int(progress.get('retry_generation') or 0)
+        if generation:
+            operation_key += ':retry:' + str(generation)
+        # Persist the exact operation before egress, including crash reconciliation.
+        progress['active_operation_key'] = operation_key
+        asset.progress, asset.status = progress, 'ai_processing'
         db.commit()
         with ai_usage_scope(None, 'editorial', cost_center='editorial') as scope:
-            scope.operation_key = 'publication:' + hashlib.sha256((str(asset.id) + ':' + asset.source_sha256 + ':' + str(index) + ':' + json.dumps(request, sort_keys=True)).encode()).hexdigest()
+            scope.operation_key = operation_key
             plan_requests('openai', [request])
             payload = translator._post_response(request)
             result = json.loads(translator._response_text(payload))
@@ -284,6 +291,74 @@ def _process(db, asset):
         db.commit()
     return {'status': asset.status, 'id': asset.id, 'completed_chunks': len(completed), 'total_chunks': len(chunks)}
 
+def _financial_state(db, asset, error):
+    """Read the durable receipt; never release, settle or rewrite a wallet here."""
+    from app.models.ai_wallet import AIWalletOperation
+    from app.services.ai_wallet import AIWalletError
+    operation_key = (asset.progress or {}).get('active_operation_key')
+    if not operation_key:
+        return 'unknown'
+    row = db.query(AIWalletOperation).filter(
+        AIWalletOperation.operation_key == operation_key,
+        AIWalletOperation.cost_center == 'editorial',
+        AIWalletOperation.feature == 'editorial',
+    ).populate_existing().one_or_none()
+    if row is None:
+        # The budget guard stopped this known operation before a provider request.
+        return 'not_started' if isinstance(error, (AIWalletError, AIUsageError)) else 'unknown'
+    if (row.state == 'settled' and row.actual_cost_micros == 0 and
+            row.tokens_input == 0 and row.tokens_output == 0):
+        return 'settled_zero'
+    return 'unknown'  # Includes charged, pending and unreconciled earlier work.
+
+
+def _record_failure(db, asset, error):
+    from app.services.ai_wallet import AIWalletError
+    diagnostic = safe_error_diagnostic(error)
+    processing_ai = asset.status == 'ai_processing'
+    financial = _financial_state(db, asset, error) if processing_ai else 'not_applicable'
+    budget_error = isinstance(error, (AIWalletError, AIUsageError))
+    # This pipeline uses HTTPX against one fixed provider endpoint. Local budget
+    # errors (even status 403) and arbitrary status attributes are not responses.
+    provider_rejection = (not budget_error and isinstance(error, httpx.HTTPStatusError)
+        and str(error.response.request.url) == translator.RESPONSES_URL
+        and diagnostic['http_status'] in NONBILLED_REJECTIONS)
+    # A zero receipt alone is not evidence that a request was rejected.
+    if financial == 'settled_zero' and not provider_rejection:
+        financial = 'unknown'
+    if isinstance(error, SourceUnavailable):
+        status = 'blocked_quality' if error.status == 'failed' else error.status
+        reason = error.reason
+    else:
+        status = failure_status(processing_ai=processing_ai, financial_state=financial,
+                                status=diagnostic['http_status'], budget_error=budget_error)
+        reason = 'Não foi possível concluir esta etapa; nova tentativa programada.'
+        if status == 'budget_wait':
+            if diagnostic['provider_code'] == 'insufficient_quota':
+                reason = 'O fornecedor informou cota indisponível; nova tentativa em uma hora, sujeita ao orçamento editorial.'
+            elif diagnostic['http_status'] == 429:
+                reason = 'O fornecedor recusou a requisição com HTTP 429; nova tentativa em uma hora, sujeita ao orçamento editorial.'
+            else:
+                reason = 'Processamento aguardando saldo ou autorização; nova tentativa em uma hora, sujeita ao orçamento editorial.'
+        elif status == 'cost_unknown':
+            reason = 'Resultado de custo incerto; aguarda reconciliação e não será repetido automaticamente.'
+    progress = dict(asset.progress or {})
+    diagnostic.update(phase='translation' if processing_ai else 'source_processing',
+                      financial_state=financial, at=now().isoformat())
+    progress['last_error'] = diagnostic
+    # The prior receipt stays intact. A new key is allowed only with positive
+    # zero-cost proof for this exact operation and an explicit rejection.
+    if (processing_ai and financial == 'settled_zero' and
+            provider_rejection and
+            status in {'budget_wait', 'failed'}):
+        progress['retry_generation'] = int(progress.get('retry_generation') or 0) + 1
+    asset.progress, asset.status, asset.reason = progress, status, reason
+    asset.attempts += 1
+    asset.retry_at = None if status == 'cost_unknown' else now() + timedelta(hours=1 if status == 'budget_wait' else 24)
+    db.commit()
+    return {'status': status, 'id': asset.id, 'error_type': diagnostic['error_type'], 'diagnostic': diagnostic}
+
+
 def process_one_publication():
     # Dedicated connection holds the global advisory lock across commits and
     # provider requests. A crash releases it without a stale processing lease.
@@ -303,14 +378,7 @@ def process_one_publication():
                     return _process(db, asset)
                 except Exception as error:
                     db.rollback(); asset = db.get(Asset, asset_id)
-                    from app.services.ai_wallet import AIWalletError
-                    budget = isinstance(error, AIWalletError) or getattr(error, 'status_code', None) in (402, 403, 409, 429)
-                    asset.status = 'budget_wait' if budget else ('blocked_quality' if error.status == 'failed' else error.status) if isinstance(error, SourceUnavailable) else 'cost_unknown' if asset.status == 'ai_processing' else 'failed'
-                    asset.reason = 'Processamento aguardando saldo ou autorização do centro editorial.' if budget else error.reason if isinstance(error, SourceUnavailable) else 'Não foi possível concluir esta etapa; nova tentativa programada.'
-                    if asset.status == 'cost_unknown': asset.reason = 'Resultado de custo incerto; aguarda reconciliação e não será repetido automaticamente.'
-                    asset.attempts += 1
-                    asset.retry_at = now() + timedelta(hours=1 if budget else 24)
-                    db.commit()
-                    return {'status': asset.status, 'id': asset_id, 'error_type': type(error).__name__}
+                    return _record_failure(db, asset, error)
+
         finally:
             lock.execute(text('SELECT pg_advisory_unlock(:key)'), {'key': LOCK_ID}); lock.commit()
