@@ -246,7 +246,7 @@ jobs:
                   isLogin,
                   loginTheme: isLogin ? document.querySelector('.login-gateway')?.getAttribute('data-login-theme') || '' : null,
                   sampleVisible: visible(selectors.panel), brandVisible: visible(selectors.brand),
-                  sampleBackground: style?.backgroundImage !== 'none' ? style?.backgroundImage : style?.backgroundColor || '',
+                  sampleBackground: isLogin && style?.backgroundImage !== 'none' ? style?.backgroundImage : style?.backgroundColor || '',
                   canonicalMain: visible(selectors.root), logo: visible(selectors.logo),
                   heroVisual: visible(selectors.hero),
                   rootRect: rect(selectors.root),
