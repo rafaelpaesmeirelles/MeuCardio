@@ -1,0 +1,126 @@
+{
+  "required_evidence_files": 466,
+  "coverage_before": 447,
+  "coverage_after": 466,
+  "added": 19,
+  "rc2_missing": [],
+  "production_missing": [],
+  "bash_syntax": "passed",
+  "yaml_parse": "passed",
+  "proofs": [
+    {
+      "path": "docs/scoped-corpus-review-supersessions-20260910.json",
+      "sha256": "bfbfb6b19ba647d7f75545e438f487192c210eeea5d48d14adde2966ef32782b",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica.json",
+      "sha256": "52900e55ba962c371e36fd9bab9e8695c5a1ca02d31db08915800b777184f0e5",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema.md",
+      "sha256": "ed910802e654d9bf430eb19b4b03646b146f27d864d95bd053836d7c24dbdea9",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta.md",
+      "sha256": "6c851ad1f417ace3375e09d586c7caa419ed9675b05ebdda79720a41072f8e6f",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/profilaxia-com-penicilina-na-febre-reumatica-por-que-a-injecao-regular.json",
+      "sha256": "ec46f19e56570843de9114c84a942ecdc5d16f6185448dc39b90fa8742dfa43c",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco.md",
+      "sha256": "88fb15451820c344a5507470d0656e41c23f1c3b7280d7bb8c2ae5c36d8d6b48",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular.md",
+      "sha256": "6890cafc47e6860df67aa84340a6d3761603cb2d56eb21f6646e5bb8d7540ab0",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta.json",
+      "sha256": "3974a3484ed069920047efd60b4b5cccc776c6612f664e3c3bffa3d0a40db4e5",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica.json",
+      "sha256": "90bdc0fb0089370ecc57ae06bc8145746349a704cc52a46c13032ce3ebfdf1f0",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema.md",
+      "sha256": "c86296dab6258b67c95239a10b25da35bfb5e7062694b675d4a0fac82d59d470",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta.md",
+      "sha256": "37154da0a8a3aee4961f8ac11f8dd3b454a28a82503d8f2cf5f29114d8a06fa5",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/profilaxia-com-penicilina-na-febre-reumatica-por-que-a-injecao-regular.json",
+      "sha256": "9e9429745b97fb1f8a8f8fb3527c484ab99da79647288aee2bccd4a433f3d369",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco.md",
+      "sha256": "9e713ddd518484c7936f5ae2c24ec05aa1874bc98f6c6def6fa60b4b42b073b2",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular.md",
+      "sha256": "d40d78a4252c1f60e209c89159ceb54d6d11083b4a7f3479152be098fd7d4476",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta.json",
+      "sha256": "edcdffe09a88caf2e6acc441153b698abdcd3e56bfc65604cf64b6abbf265fb6",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910-unpublished/reviewed-package.json",
+      "sha256": "0f2b139fba0ecd111f935603aad2390a1c1f4afe452d8d2e58cd2a19a915c993",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910/canonical-integration.json",
+      "sha256": "625bf15746f765468df8402530cbbd7f978918647f014b6a2941533195696de6",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910/supplement-canonical-manifest.json",
+      "sha256": "dcc4920247abe9af76c14fbfda0e717ab8fcf5e1ebbc823ac7784835cde14018",
+      "tracked": true,
+      "approval_reference_match": true
+    },
+    {
+      "path": "releases/scientific-20260910/supplement-publication-items.json",
+      "sha256": "a58a56846520d607745e40a9e2e23274cfcb6a4268ca704be45c81dff6e6aa40",
+      "tracked": true,
+      "approval_reference_match": true
+    }
+  ]
+}

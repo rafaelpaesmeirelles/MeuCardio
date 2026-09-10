@@ -489,11 +489,14 @@ class AuthorizedNoBackendCITests(unittest.TestCase):
                         if args == ("rev-parse", "HEAD^{tree}"): return candidate_tree
                         if args == ("rev-parse", f"{head}^{{tree}}"): return "pr-tree"
                         self.fail(f"Unexpected git request: {args}")
+                    # This fixture exercises PR918 only. New scoped decisions
+                    # have independent owner-decision and real-gate-shell tests.
                     with self.subTest(merge_sha=merge_sha, candidate_tree=candidate_tree), \
                          patch.object(sys, "argv", argv), \
                          patch.dict(os.environ, {"EVENT_NAME": "push", "PR_NUMBER": "", "REPOSITORY": "rafaelpaesmeirelles/MeuCardio"}), \
                          patch.object(module, "github", github), patch.object(module, "git", git), \
                          patch.object(module.subprocess, "run"), patch.object(module, "classify_paths") as fallback, \
+                         patch.object(module, "scoped_owner_decision", return_value=None), \
                          patch.object(module, "section_visibility_owner_decision", return_value=None), \
                          patch.object(module, "editorial_classification_owner_decision", return_value=None), \
                          patch.object(module, "feature_discovery_owner_decision", return_value=None), \

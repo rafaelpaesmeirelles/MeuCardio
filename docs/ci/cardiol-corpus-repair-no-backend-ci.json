@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "decision_id": "cardiol-corpus-repair-20260910",
+  "repository": "rafaelpaesmeirelles/MeuCardio",
+  "head_branch": "codex/cardiol-gate-fixtures-20260910",
+  "base_sha": "c7b57852d461586cf68b0b2c45770ebd17c4bdd7",
+  "pull_request": 928,
+  "authorization": {
+    "date": "2026-09-10",
+    "instruction": "Sem novo ci backend",
+    "mode": "authorized-no-backend-ci",
+    "source": "Explicit user instruction in this ongoing session remains in force while completing the authorized deploy. This independently records the exact follow-up PR; it does not inherit another PR exception.",
+    "scope": "Only this PR and its exact main integration: reconcile obsolete link-unavailability dispositions against the existing approved corpus, preserve source evidence verification, correct isolated gate fixtures and expose required approved evidence files to the reconciliation container. No new clinical approval, content-body change, paid IA, wallet or historical queue mutation; all other release gates remain mandatory."
+  },
+  "local_evidence": [
+    "docs/cardiol-corpus-gate-repair-20260910.md"
+  ]
+}
