@@ -1,0 +1,1120 @@
+{
+  "generated_utc": "2026-09-10T22:28:08.092819+00:00",
+  "cutoff": "2026-09-10",
+  "scope": "SBC/ABC guidelines and position statements published 2025-2026; primary-source candidates pending repository/database comparison",
+  "query": "(JOURNAL:\"Arq Bras Cardiol\") AND FIRST_PDATE:[2025-01-01 TO 2026-09-10] AND (TITLE:guideline OR TITLE:position OR TITLE:consensus OR TITLE:diretriz OR TITLE:posicionamento)",
+  "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+  "raw_hits": 18,
+  "candidate_count": 14,
+  "notes": [
+    "No new original document added to collection; no database changes. XML read solely for metadata/license verification.",
+    "EuropePMC DOI entry Subscription required is inconsistent with OA PMC copies in these metadata; rely on original XML license individually.",
+    "Date from EuropePMC firstPublicationDate may differ from journal issue/electronic dates; preserve XML dates.",
+    "Do not assume candidate absent from collection; parent must compare DOI and titles.",
+    "Metadata scope corrected: related_articles and licenses from original article/front/article-meta only; cited-reference notices separately reference_article_alerts. Publisher translations identified only by root sub-article article-type=translation. A cited-reference retraction is not a retraction of the citing guideline."
+  ],
+  "candidates": [
+    {
+      "title": "Guideline on Stress Echocardiography - 2026.",
+      "doi": "10.36660/abc.20260223",
+      "pmid": "42307309",
+      "pmcid": "PMC13398863",
+      "metadata_first_publication_date": "2026-06-15",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20260223",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20260223"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13398863"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13398863?pdf=render"
+        }
+      ],
+      "is_open_access_metadata": "Y",
+      "license_status": "verified_from_original_article_meta",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false,
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13398863/fullTextXML",
+      "xml_status": 200,
+      "xml_title": "Diretriz sobre Ecocardiografia de Estresse – 2026",
+      "publication_dates_xml": [
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {},
+          "text": "4 5 2026",
+          "year": "2026",
+          "month": "5",
+          "day": "4"
+        }
+      ],
+      "license_statements": [
+        {
+          "xml_path": "article/front/article-meta/permissions",
+          "attributes": {},
+          "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+          "license_elements": [
+            {
+              "attributes": {},
+              "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+            }
+          ],
+          "links": []
+        }
+      ],
+      "original_languages": [
+        "en",
+        "pt"
+      ],
+      "related_articles": [],
+      "original_language": "pt",
+      "publisher_translations": [
+        {
+          "xml_path": "article/sub-article[@id=S1]",
+          "id": "S1",
+          "language": "en",
+          "type": "publisher_translation",
+          "license_statements": [],
+          "license_note": "Root article license recorded separately; do not infer independent license from reference list."
+        }
+      ],
+      "reference_article_alerts": [],
+      "other_related_article_nodes": [],
+      "metadata_scope_checked": true
+    },
+    {
+      "title": "Erratum: Guideline for Chronic Coronary Syndrome - 2025.",
+      "doi": "10.36660/abc.20260565",
+      "pmid": "42585521",
+      "pmcid": null,
+      "metadata_first_publication_date": "2026-07-01",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20260565",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20260565"
+        }
+      ],
+      "is_open_access_metadata": "N",
+      "license_status": "not_verified",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": true
+    },
+    {
+      "title": "Position Statement on Cardiovascular Emergencies at Sporting Events - 2026.",
+      "doi": "10.36660/abc.20260220",
+      "pmid": "42233839",
+      "pmcid": "PMC13155795",
+      "metadata_first_publication_date": "2026-05-29",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20260220",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20260220"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13155795"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13155795?pdf=render"
+        }
+      ],
+      "is_open_access_metadata": "Y",
+      "license_status": "verified_from_original_article_meta",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false,
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13155795/fullTextXML",
+      "xml_status": 200,
+      "xml_title": "Posicionamento sobre Emergências Cardiovasculares para Eventos Esportivos – 2026",
+      "publication_dates_xml": [
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {},
+          "text": "28 4 2026",
+          "year": "2026",
+          "month": "4",
+          "day": "28"
+        }
+      ],
+      "license_statements": [
+        {
+          "xml_path": "article/front/article-meta/permissions",
+          "attributes": {},
+          "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+          "license_elements": [
+            {
+              "attributes": {},
+              "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+            }
+          ],
+          "links": []
+        }
+      ],
+      "original_languages": [
+        "en",
+        "pt"
+      ],
+      "related_articles": [],
+      "original_language": "pt",
+      "publisher_translations": [
+        {
+          "xml_path": "article/sub-article[@id=S1]",
+          "id": "S1",
+          "language": "en",
+          "type": "publisher_translation",
+          "license_statements": [],
+          "license_note": "Root article license recorded separately; do not infer independent license from reference list."
+        }
+      ],
+      "reference_article_alerts": [],
+      "other_related_article_nodes": [],
+      "metadata_scope_checked": true
+    },
+    {
+      "title": "Position Statement on the Diagnosis and Treatment of Electrical Storm - 2026.",
+      "doi": "10.36660/abc.20260215",
+      "pmid": "42233837",
+      "pmcid": "PMC13155779",
+      "metadata_first_publication_date": "2026-05-29",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20260215",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20260215"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13155779"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13155779?pdf=render"
+        }
+      ],
+      "is_open_access_metadata": "Y",
+      "license_status": "verified_from_original_article_meta",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false,
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13155779/fullTextXML",
+      "xml_status": 200,
+      "xml_title": "Posicionamento sobre Diagnóstico e Tratamento da Tempestade Elétrica – 2026",
+      "publication_dates_xml": [
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {},
+          "text": "28 4 2026",
+          "year": "2026",
+          "month": "4",
+          "day": "28"
+        }
+      ],
+      "license_statements": [
+        {
+          "xml_path": "article/front/article-meta/permissions",
+          "attributes": {},
+          "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+          "license_elements": [
+            {
+              "attributes": {},
+              "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+            }
+          ],
+          "links": []
+        }
+      ],
+      "original_languages": [
+        "en",
+        "pt"
+      ],
+      "related_articles": [],
+      "original_language": "pt",
+      "publisher_translations": [
+        {
+          "xml_path": "article/sub-article[@id=S1]",
+          "id": "S1",
+          "language": "en",
+          "type": "publisher_translation",
+          "license_statements": [],
+          "license_note": "Root article license recorded separately; do not infer independent license from reference list."
+        }
+      ],
+      "reference_article_alerts": [
+        {
+          "xml_path": "article/body/sec[@id=ref-list1]/sec[@id=ref-list1_sec2]/ref-list/ref[@id=B80]/mixed-citation[@id=element-citation80]/related-article",
+          "attributes": {
+            "related-article-type": "retraction-forward",
+            "ext-link-type": "pmcid",
+            "{http://www.w3.org/1999/xlink}href": "PMC3826015"
+          },
+          "reference_id": "B80",
+          "reference_text": "80. Prabhakaran AJ. Additive Effect of Propofol and Fentanyl Precipitating Cardiogenic Shock. J Pharmacol Pharmacother. 2013;4(3):217–219. doi: 10.4103/0976-500X.114612. 80 Prabhakaran AJ. Additive Effect of Propofol and Fentanyl Precipitating Cardiogenic Shock. J Pharmacol Pharmacother. 2013;4(3):217-9. doi: 10.4103/0976-500X.114612.",
+          "scope": "cited_reference_not_the_SBC_guideline"
+        },
+        {
+          "xml_path": "article/body/sec[@id=ref-list1]/sec[@id=ref-list1_sec2]/ref-list/ref[@id=B80]/mixed-citation[@id=mixed-citation80]/related-article",
+          "attributes": {
+            "related-article-type": "retraction-forward",
+            "ext-link-type": "pmcid",
+            "{http://www.w3.org/1999/xlink}href": "PMC3826015"
+          },
+          "reference_id": "B80",
+          "reference_text": "80. Prabhakaran AJ. Additive Effect of Propofol and Fentanyl Precipitating Cardiogenic Shock. J Pharmacol Pharmacother. 2013;4(3):217–219. doi: 10.4103/0976-500X.114612. 80 Prabhakaran AJ. Additive Effect of Propofol and Fentanyl Precipitating Cardiogenic Shock. J Pharmacol Pharmacother. 2013;4(3):217-9. doi: 10.4103/0976-500X.114612.",
+          "scope": "cited_reference_not_the_SBC_guideline"
+        }
+      ],
+      "other_related_article_nodes": [],
+      "metadata_scope_checked": true
+    },
+    {
+      "title": "Position Statement on the Management of Antithrombotic and Anticoagulant Therapy in Dengue - 2026.",
+      "doi": "10.36660/abc.20260216",
+      "pmid": "42233838",
+      "pmcid": "PMC13155784",
+      "metadata_first_publication_date": "2026-05-29",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20260216",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20260216"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13155784"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13155784?pdf=render"
+        }
+      ],
+      "is_open_access_metadata": "Y",
+      "license_status": "verified_from_original_article_meta",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false,
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13155784/fullTextXML",
+      "xml_status": 200,
+      "xml_title": "Posicionamento sobre o Manejo de Antitrombóticos e Anticoagulantes em Dengue – 2026",
+      "publication_dates_xml": [
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {},
+          "text": "28 4 2026",
+          "year": "2026",
+          "month": "4",
+          "day": "28"
+        }
+      ],
+      "license_statements": [
+        {
+          "xml_path": "article/front/article-meta/permissions",
+          "attributes": {},
+          "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+          "license_elements": [
+            {
+              "attributes": {},
+              "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+            }
+          ],
+          "links": []
+        }
+      ],
+      "original_languages": [
+        "en",
+        "pt"
+      ],
+      "related_articles": [],
+      "original_language": "pt",
+      "publisher_translations": [
+        {
+          "xml_path": "article/sub-article[@id=S1]",
+          "id": "S1",
+          "language": "en",
+          "type": "publisher_translation",
+          "license_statements": [],
+          "license_note": "Root article license recorded separately; do not infer independent license from reference list."
+        }
+      ],
+      "reference_article_alerts": [],
+      "other_related_article_nodes": [],
+      "metadata_scope_checked": true
+    },
+    {
+      "title": "Guideline for Chronic Coronary Syndrome - 2025.",
+      "doi": "10.36660/abc.20250619",
+      "pmid": "41294178",
+      "pmcid": "PMC13400070",
+      "metadata_first_publication_date": "2025-11-21",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20250619",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20250619"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13400070"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13400070?pdf=render"
+        }
+      ],
+      "is_open_access_metadata": "Y",
+      "license_status": "verified_from_original_article_meta",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false,
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13400070/fullTextXML",
+      "xml_status": 200,
+      "xml_title": "Diretriz de Síndrome Coronariana Crônica – 2025",
+      "publication_dates_xml": [
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "epub"
+          },
+          "text": "16 9 2025",
+          "year": "2025",
+          "month": "9",
+          "day": "16"
+        },
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "collection"
+          },
+          "text": "2025",
+          "year": "2025",
+          "month": null,
+          "day": null
+        }
+      ],
+      "license_statements": [
+        {
+          "xml_path": "article/front/article-meta/permissions",
+          "attributes": {},
+          "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+          "license_elements": [
+            {
+              "attributes": {},
+              "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+            }
+          ],
+          "links": []
+        }
+      ],
+      "original_languages": [
+        "en",
+        "pt"
+      ],
+      "related_articles": [
+        {
+          "xml_path": "article/front/article-meta/related-article",
+          "attributes": {
+            "related-article-type": "correction-forward",
+            "journal-id": "Arq Bras Cardiol",
+            "journal-id-type": "nlm-ta",
+            "ext-link-type": "pubmed",
+            "{http://www.w3.org/1999/xlink}href": "42585521"
+          },
+          "text": "Errata: Diretriz de Síndrome Coronariana Crônica – 2025. 123 7 7 2026 e20260565 e20260565 Arq Bras Cardiol 10.36660/abc.20260565 42585521"
+        }
+      ],
+      "original_language": "pt",
+      "publisher_translations": [
+        {
+          "xml_path": "article/sub-article[@id=S1]",
+          "id": "S1",
+          "language": "en",
+          "type": "publisher_translation",
+          "license_statements": [],
+          "license_note": "Root article license recorded separately; do not infer independent license from reference list."
+        }
+      ],
+      "reference_article_alerts": [
+        {
+          "xml_path": "article/back/ref-list/ref[@id=B98]/element-citation/related-article",
+          "attributes": {
+            "related-article-type": "retraction-forward",
+            "ext-link-type": "pmc",
+            "{http://www.w3.org/1999/xlink}href": "PMC8055540"
+          },
+          "reference_id": "B98",
+          "reference_text": "98 Liu A Wijesurendra RS Liu JM Forfar JC Channon KM Jerosch-Herold M Diagnosis of Microvascular Angina Using Cardiac Magnetic Resonance J Am Coll Cardiol 2018 71 9 969 979 10.1016/j.jacc.2017.12.046 29495996 PMC5835222",
+          "scope": "cited_reference_not_the_SBC_guideline"
+        }
+      ],
+      "other_related_article_nodes": [],
+      "metadata_scope_checked": true
+    },
+    {
+      "title": "Position Statement on Multimodal Cardiac Imaging in Patients with Systemic Diseases - 2026.",
+      "doi": "10.36660/abc.20260221",
+      "pmid": "42233840",
+      "pmcid": "PMC13155782",
+      "metadata_first_publication_date": "2026-05-29",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20260221",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20260221"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13155782"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13155782?pdf=render"
+        }
+      ],
+      "is_open_access_metadata": "Y",
+      "license_status": "verified_from_original_article_meta",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false,
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13155782/fullTextXML",
+      "xml_status": 200,
+      "xml_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+      "publication_dates_xml": [
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {},
+          "text": "28 4 2026",
+          "year": "2026",
+          "month": "4",
+          "day": "28"
+        }
+      ],
+      "license_statements": [
+        {
+          "xml_path": "article/front/article-meta/permissions",
+          "attributes": {},
+          "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+          "license_elements": [
+            {
+              "attributes": {},
+              "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+            }
+          ],
+          "links": []
+        }
+      ],
+      "original_languages": [
+        "en",
+        "pt"
+      ],
+      "related_articles": [],
+      "original_language": "pt",
+      "publisher_translations": [
+        {
+          "xml_path": "article/sub-article[@id=S1]",
+          "id": "S1",
+          "language": "en",
+          "type": "publisher_translation",
+          "license_statements": [],
+          "license_note": "Root article license recorded separately; do not infer independent license from reference list."
+        }
+      ],
+      "reference_article_alerts": [],
+      "other_related_article_nodes": [],
+      "metadata_scope_checked": true
+    },
+    {
+      "title": "Brazilian Guideline on Dyslipidemias and Prevention of Atherosclerosis - 2025.",
+      "doi": "10.36660/abc.20250640",
+      "pmid": "41379178",
+      "pmcid": "PMC12674852",
+      "metadata_first_publication_date": "2025-12-01",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20250640",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20250640"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC12674852"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC12674852?pdf=render"
+        }
+      ],
+      "is_open_access_metadata": "Y",
+      "license_status": "verified_from_original_article_meta",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false,
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12674852/fullTextXML",
+      "xml_status": 200,
+      "xml_title": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025",
+      "publication_dates_xml": [
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "epub"
+          },
+          "text": "13 10 2025",
+          "year": "2025",
+          "month": "10",
+          "day": "13"
+        },
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "collection"
+          },
+          "text": "2025",
+          "year": "2025",
+          "month": null,
+          "day": null
+        }
+      ],
+      "license_statements": [
+        {
+          "xml_path": "article/front/article-meta/permissions",
+          "attributes": {},
+          "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+          "license_elements": [
+            {
+              "attributes": {},
+              "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+            }
+          ],
+          "links": []
+        }
+      ],
+      "original_languages": [
+        "en",
+        "pt"
+      ],
+      "related_articles": [],
+      "original_language": "pt",
+      "publisher_translations": [
+        {
+          "xml_path": "article/sub-article[@id=S1]",
+          "id": "S1",
+          "language": "en",
+          "type": "publisher_translation",
+          "license_statements": [],
+          "license_note": "Root article license recorded separately; do not infer independent license from reference list."
+        }
+      ],
+      "reference_article_alerts": [],
+      "other_related_article_nodes": [],
+      "metadata_scope_checked": true
+    },
+    {
+      "title": "2025 Brazilian Evidence-based Guideline on the Management of Obesity and Prevention of Cardiovascular Disease and Obesity-Associated Complications: A Position Statement by Five Medical Societies.",
+      "doi": "10.36660/abc.20250621",
+      "pmid": "41379177",
+      "pmcid": "PMC13148858",
+      "metadata_first_publication_date": "2025-12-01",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20250621",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20250621"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13148858"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13148858?pdf=render"
+        }
+      ],
+      "is_open_access_metadata": "Y",
+      "license_status": "verified_from_original_article_meta",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false,
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13148858/fullTextXML",
+      "xml_status": 200,
+      "xml_title": "Diretriz Brasileira Baseada em Evidências de 2025 para o Manejo da Obesidade e Prevenção de Doenças Cardiovasculares e Complicações Associadas à Obesidade: Uma Declaração de Posicionamento de Cinco Sociedades Médicas",
+      "publication_dates_xml": [
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "epub"
+          },
+          "text": "13 10 2025",
+          "year": "2025",
+          "month": "10",
+          "day": "13"
+        },
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "collection"
+          },
+          "text": "2025",
+          "year": "2025",
+          "month": null,
+          "day": null
+        }
+      ],
+      "license_statements": [
+        {
+          "xml_path": "article/front/article-meta/permissions",
+          "attributes": {},
+          "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+          "license_elements": [
+            {
+              "attributes": {},
+              "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+            }
+          ],
+          "links": []
+        }
+      ],
+      "original_languages": [
+        "en",
+        "pt"
+      ],
+      "related_articles": [],
+      "original_language": "pt",
+      "publisher_translations": [
+        {
+          "xml_path": "article/sub-article[@id=S1]",
+          "id": "S1",
+          "language": "en",
+          "type": "publisher_translation",
+          "license_statements": [],
+          "license_note": "Root article license recorded separately; do not infer independent license from reference list."
+        }
+      ],
+      "reference_article_alerts": [],
+      "other_related_article_nodes": [],
+      "metadata_scope_checked": true
+    },
+    {
+      "title": "Brazilian Guideline for the Evaluation and Diagnosis of Chest Pain in the Emergency Department - 2025.",
+      "doi": "10.36660/abc.20250620",
+      "pmid": "41379176",
+      "pmcid": "PMC12981354",
+      "metadata_first_publication_date": "2025-12-01",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20250620",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20250620"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC12981354"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC12981354?pdf=render"
+        }
+      ],
+      "is_open_access_metadata": "Y",
+      "license_status": "verified_from_original_article_meta",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false,
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12981354/fullTextXML",
+      "xml_status": 200,
+      "xml_title": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025",
+      "publication_dates_xml": [
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "epub"
+          },
+          "text": "13 10 2025",
+          "year": "2025",
+          "month": "10",
+          "day": "13"
+        },
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "collection"
+          },
+          "text": "2025",
+          "year": "2025",
+          "month": null,
+          "day": null
+        }
+      ],
+      "license_statements": [
+        {
+          "xml_path": "article/front/article-meta/permissions",
+          "attributes": {},
+          "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+          "license_elements": [
+            {
+              "attributes": {},
+              "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+            }
+          ],
+          "links": []
+        }
+      ],
+      "original_languages": [
+        "en",
+        "pt"
+      ],
+      "related_articles": [],
+      "original_language": "pt",
+      "publisher_translations": [
+        {
+          "xml_path": "article/sub-article[@id=S1]",
+          "id": "S1",
+          "language": "en",
+          "type": "publisher_translation",
+          "license_statements": [],
+          "license_note": "Root article license recorded separately; do not infer independent license from reference list."
+        }
+      ],
+      "reference_article_alerts": [],
+      "other_related_article_nodes": [],
+      "metadata_scope_checked": true
+    },
+    {
+      "title": "Brazilian Atrial Fibrillation Guidelines - 2025.",
+      "doi": "10.36660/abc.20250618",
+      "pmid": "41294177",
+      "pmcid": "PMC13400077",
+      "metadata_first_publication_date": "2025-11-21",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20250618",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20250618"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13400077"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC13400077?pdf=render"
+        }
+      ],
+      "is_open_access_metadata": "Y",
+      "license_status": "verified_from_original_article_meta",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false,
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13400077/fullTextXML",
+      "xml_status": 200,
+      "xml_title": "Diretriz Brasileira de Fibrilação Atrial – 2025",
+      "publication_dates_xml": [
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "epub"
+          },
+          "text": "16 9 2025",
+          "year": "2025",
+          "month": "9",
+          "day": "16"
+        },
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "collection"
+          },
+          "text": "2025",
+          "year": "2025",
+          "month": null,
+          "day": null
+        }
+      ],
+      "license_statements": [
+        {
+          "xml_path": "article/front/article-meta/permissions",
+          "attributes": {},
+          "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+          "license_elements": [
+            {
+              "attributes": {},
+              "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+            }
+          ],
+          "links": []
+        }
+      ],
+      "original_languages": [
+        "en",
+        "pt"
+      ],
+      "related_articles": [],
+      "original_language": "pt",
+      "publisher_translations": [
+        {
+          "xml_path": "article/sub-article[@id=S1]",
+          "id": "S1",
+          "language": "en",
+          "type": "publisher_translation",
+          "license_statements": [],
+          "license_note": "Root article license recorded separately; do not infer independent license from reference list."
+        }
+      ],
+      "reference_article_alerts": [],
+      "other_related_article_nodes": [],
+      "metadata_scope_checked": true
+    },
+    {
+      "title": "Positioning Statement on the Use of Point-of-Care Ultrasound in Cardiovascular Medicine - 2026.",
+      "doi": "10.36660/abc.20260222",
+      "pmid": "42307308",
+      "pmcid": null,
+      "metadata_first_publication_date": "2026-06-15",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20260222",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20260222"
+        }
+      ],
+      "is_open_access_metadata": "N",
+      "license_status": "not_verified",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false
+    },
+    {
+      "title": "Position Statement on Cardiometabolic Health Across the Woman's Life Course - 2025.",
+      "doi": "10.36660/abc.20250615",
+      "pmid": "41294176",
+      "pmcid": "PMC12674840",
+      "metadata_first_publication_date": "2025-11-21",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20250615",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20250615"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC12674840"
+        },
+        {
+          "availability": "Open access",
+          "availabilityCode": "OA",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC12674840?pdf=render"
+        }
+      ],
+      "is_open_access_metadata": "Y",
+      "license_status": "verified_from_original_article_meta",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false,
+      "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12674840/fullTextXML",
+      "xml_status": 200,
+      "xml_title": "Posicionamento sobre a Saúde Cardiometabólica ao Longo do Ciclo de Vida da Mulher – 2025",
+      "publication_dates_xml": [
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "epub"
+          },
+          "text": "17 9 2025",
+          "year": "2025",
+          "month": "9",
+          "day": "17"
+        },
+        {
+          "xml_path": "article/front/article-meta/pub-date",
+          "attributes": {
+            "pub-type": "collection"
+          },
+          "text": "2025",
+          "year": "2025",
+          "month": null,
+          "day": null
+        }
+      ],
+      "license_statements": [
+        {
+          "xml_path": "article/front/article-meta/permissions",
+          "attributes": {},
+          "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+          "license_elements": [
+            {
+              "attributes": {},
+              "text": "https://creativecommons.org/licenses/by/4.0/ This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+            }
+          ],
+          "links": []
+        }
+      ],
+      "original_languages": [
+        "en",
+        "pt"
+      ],
+      "related_articles": [],
+      "original_language": "pt",
+      "publisher_translations": [
+        {
+          "xml_path": "article/sub-article[@id=S1]",
+          "id": "S1",
+          "language": "en",
+          "type": "publisher_translation",
+          "license_statements": [],
+          "license_note": "Root article license recorded separately; do not infer independent license from reference list."
+        }
+      ],
+      "reference_article_alerts": [],
+      "other_related_article_nodes": [],
+      "metadata_scope_checked": true
+    },
+    {
+      "title": "Brazilian Guidelines of Hypertension - 2025.",
+      "doi": "10.36660/abc.20250624",
+      "pmid": "41294179",
+      "pmcid": null,
+      "metadata_first_publication_date": "2025-11-21",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "source": "Europe PMC / PubMed primary publication metadata",
+      "doi_url": "https://doi.org/10.36660/abc.20250624",
+      "original_urls": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.36660/abc.20250624"
+        }
+      ],
+      "is_open_access_metadata": "N",
+      "license_status": "not_verified",
+      "acquisition_status": "candidate_only_no_corpus_changes",
+      "is_erratum": false
+    }
+  ],
+  "metadata_scope_revision_utc": "2026-09-10T22:32:11.687056+00:00"
+}

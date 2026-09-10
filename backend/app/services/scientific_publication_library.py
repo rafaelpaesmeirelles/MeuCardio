@@ -98,13 +98,8 @@ def parse_fulltext(xml, expected_doi):
     dois = [normalize_doi(n.text) for n in meta.findall('./article-id') if n.get('pub-id-type') == 'doi']
     if expected_doi not in dois:
         raise SourceUnavailable('blocked_identity', 'A identidade bibliográfica do texto integral não corresponde à fonte.')
-    license_url = None
-    for element in meta.findall('./permissions/license'):
-        candidates = list(element.attrib.values())
-        for child in element.iter(): candidates.extend(child.attrib.values())
-        for candidate in candidates:
-            if re.fullmatch(r'https?://creativecommons\.org/(licenses/by/(1\.0|2\.0|2\.5|3\.0|4\.0)|publicdomain/zero/1\.0)/?', candidate):
-                license_url = candidate
+    from app.services.scientific_xml_license import extract_article_license
+    license_url = extract_article_license(meta)
     if not license_url:
         raise SourceUnavailable('blocked_license', 'Licença para redistribuição e tradução integral comercial ainda não confirmada.')
     if any(n.tag.rsplit('}', 1)[-1] in ('math', 'inline-formula', 'disp-formula') for n in root.iter()):
