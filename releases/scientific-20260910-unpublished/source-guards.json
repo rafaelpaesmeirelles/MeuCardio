@@ -1,0 +1,2739 @@
+[
+  {
+    "slug": "acc-2025-dap-no-adulto-com-diabetes",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "146658aae2d0fc05da96b9730b0d7a254b58f4cea8b4c87d2971605c614b1345",
+    "record_sha256": "17832cd76008e726fd5bbf4680c2b30aab83debf9f16c8f60c758cef8c46a8ac"
+  },
+  {
+    "slug": "checklist-ambulatorial-suspeita-de-sindrome-aortica-aguda-antes-do-ps",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4ca5b5486eafdeb8073328812c4d74225b7605b223869a8c9f956b50df6bfd31",
+    "record_sha256": "351ef1de1367d8fd92e75ad28d209cf8c8367dd5d46e05f3eb77efd17c2aa134"
+  },
+  {
+    "slug": "doenca-ateroembolica-por-cristais-de-colesterol-diagnostico-e-manejo",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "df6e8ead9f9611c6daa58671c030effec8eb568c9aae6f3fdd099553ed15116e",
+    "record_sha256": "cfa707328e1668de8940fd204ca7cd714699a0cb608e3c3001bbaa2d34982a19"
+  },
+  {
+    "slug": "eritromelalgia-forma-primaria-scn9a-e-forma-secundaria-doenca-mieloproliferativa",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ceda18aba9a4acd516dfa4d7d64f51a8502f62b382ba9c85bd230610bd349c4f",
+    "record_sha256": "bcd3b551bf2e641943a00fc53021854959d54944d3dc5c5186ca284fbf687c3a"
+  },
+  {
+    "slug": "estenose-carotidea-sintomatica-janela-de-14-dias-destino-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "acc19bd31bbb535a8a232c2b62d2d06fb41f706f01c8ac0d35695754b1c6664c",
+    "record_sha256": "4bc2673c0c729c3f4d20dcbddef3b4368ff2c8ae13453e6e429cf0d36f148108"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-carotida-ps-versus-vascular-neurovascular",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "df66230cc4c06b99d963e8cc6e843c1c1c0e601b5d6135dbde5fa22adfb5478b",
+    "record_sha256": "7cacef3d320c97cd9a3a4dee6f3e399cb5647078881d1dbd7b21f8c33e81de8a"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-dap-quando-encaminhar-urgencia-versus-vascular",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "8d56f6dfe89190f7cb5ea15dd7fa9d0b14c56c0c1e859e0951f040bba73d791e",
+    "record_sha256": "9106f16cf39d8a077e5aa24f40e64e9dee390770e59d033020b47d8e7cea8c52"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-suspeita-saa-consultorio-para-ps",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4c8c4fb9771ec1dc2b32c8290ef24c75f6dcf2c5187f003e454b0de1c741befa",
+    "record_sha256": "20dc416000d7205b3686c053d704893a9a1d651d44d578c75c05d9cb4eec352b"
+  },
+  {
+    "slug": "osteogenese-imperfeita-e-acometimento-cardiovascular-dilatacao-de-raiz-aortica-regurgitacao-valvar-e-risco-perioperatorio",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "52146aa13557093e70c493daf5ef6375ed3e0268fa3306112b6b64d93977d633",
+    "record_sha256": "76831b05466b9e4b394b376b9333a003855c04c3f5886768c211fa82ac005837"
+  },
+  {
+    "slug": "poliarterite-nodosa-e-acometimento-cardiovascular-coronarite-microaneurismas-e-cardiopatia-hipertensiva",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "19cf2a43d84cd02f5fda0925aa832a76025e3e104c1893df79ce94c57696e7a9",
+    "record_sha256": "49f025cf321bede2c9721fda036364d1a2659279f0b73382b32f29e85ae7882d"
+  },
+  {
+    "slug": "policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c72aedba0262128ba4b11438c209fda2784fe690f643f6eb82807274bd1fed00",
+    "record_sha256": "a31c9906e0b79b3bd03b4f01617dfe8f8f6ff5f6312f2d06fe192decb57d4254"
+  },
+  {
+    "slug": "pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ea22bace09158cf0ec9161fdd9d2465676a639294878f5b7284d0cb2f42f65b2",
+    "record_sha256": "d4cc4e7849a29da44f46e9b261032af57b67e2d26b49f3d57cfb7d8dca3023dc"
+  },
+  {
+    "slug": "sifilis-cardiovascular-terciaria-aortite-aneurisma-e-estenose-ostial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e45e21bee162bbb105654b48de88f6dcac08c14e1fd93bf762f065860b89e1bf",
+    "record_sha256": "dcb584e7a8d78634c73f0c04541b6fe6e69d3c92802a0d3d0d47915fcb20d53d"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-ait-deficit-focal-estenose-carotidea-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a94172386ec44cec75f502b1a94fbac53debaef4b80bfec420c67d4a9e1cb5f6",
+    "record_sha256": "9aab9f0d06734737c5831503cc7ab5da9e3f54d1e6d90a55b622cb6d0c4472c4"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-aneurisma-de-aorta-abdominal-ameaca-de-rotura",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b75ec3a2443c65909d0a1c0e0ec10ae4f418a90bc3ada776fbb3767d6b4e906d",
+    "record_sha256": "d63cefe43171aef9c9d358dd3296acbfb696cff642b7871c3ce4293de7d18d9f"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-isquemia-critica-ameacadora-de-membro-clti",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "87122db67614018aa71b397779f8f546c3a8e95072a4ffb1a2fad0bd04ac6b3c",
+    "record_sha256": "55bcecae239f186f17c808c4a8b5b2e609b3c125fa6aafb903a27d72b775b8f3"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-suspeita-sindrome-aortica-aguda-ps-imediato",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "12162aa44d86bb2d4e5a91431abf25b59fd9b2eb3a25f5d5e7693f7849dc2532",
+    "record_sha256": "9683e66747febee9f316a7053fe16d0b2c6bd93d2938bece9f4e7a45186eb17f"
+  },
+  {
+    "slug": "sindrome-da-tortuosidade-arterial-slc2a10-glut10-tortuosidade-difusa-fenotipo-e-diferenciacao-de-marfan-loeys-dietz-e-ehlers-danlos-vascular",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ca9e54cab79c99b15e5eca11d4c881f652c230c5c0e9c8719fc6b86bdce50335",
+    "record_sha256": "e7b39ca391d4e5d49f50416999540b2f92f7a905730e6a1affbc7f869c201f3f"
+  },
+  {
+    "slug": "sindrome-de-cogan-acometimento-cardiovascular-aortite-e-insuficiencia-aortica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "611c8c73f4b145fffc8bc41958f93822c4edabc523170ef2769648fde6e46990",
+    "record_sha256": "f48a350f5bb717046db5849212555dc55845e6d99029d8385b64584fa5b72cc9"
+  },
+  {
+    "slug": "aha-2024-arritmias-e-disfuncao-autonomica-covid",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "3507b8e2ac39daede29eb0fd77cb5bc3acebf83a6a089f57b75f55e382a53b52",
+    "record_sha256": "2683424757e4ed7e6190c353b0814016104dca27d8d081c11e828fcb6bfe3bd8"
+  },
+  {
+    "slug": "biosync-cls-pacing-sincope-reflexa-assistolica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "af03e529a03d32a051f22550535feb2f3a437218871c1e5f4a92d3d008e0030c",
+    "record_sha256": "209dbf93cc5c0b60dc54415532070d35012b72b84d1a1adba6228fb696c7fa1a"
+  },
+  {
+    "slug": "bloqueio-bifascicular-no-consultorio-sinais-vermelhos-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "acc15255c36b44f408561087c12171e0493219d2be0676c726871334cb387c23",
+    "record_sha256": "0235efc120ebfb4e9fe8cc34b0642a8ebc65fda3a5204b279e16bd633b1015e8"
+  },
+  {
+    "slug": "bloqueio-cardiaco-progressivo-familiar-genetica-scn5a-sobreposicao-brugada-e-manejo",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "fe0b6d6a7206d963030ed79e9724b61c7134db280f7c282ff9774470887a7e65",
+    "record_sha256": "247872f492268ba89286abff68c905d794ec93a05d0892eeb482117d3a3d3ef4"
+  },
+  {
+    "slug": "cpvt-quando-dispensar-o-betabloqueador-e-quando-dispensar-o-cdi-registro-internacional-e-lcsd",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:17.554881+00:00",
+    "body_sha256": "15e9a3e3d40fdcab5d018c5622367d88d939782544ecaa7aac4ae2fe6b76163a",
+    "record_sha256": "e41157fd3282827e09b3bb215ca9eb3abf7c23da092eab011d73c5f2769ae714"
+  },
+  {
+    "slug": "etripamil-nasal-para-reversao-da-taquicardia-supraventricular-paroxistica-rapid-e-node-303",
+    "version": 3,
+    "updated_at": "2026-09-10 01:53:17.741665+00:00",
+    "body_sha256": "da6908bb2106aed4a77a73dd374e20759d46ba8140b464f7e0e9abaf68296d31",
+    "record_sha256": "9110ba22753cc866f5acfe73f7d2c783c79248eb1ac02241d5b317eee16fc5d2"
+  },
+  {
+    "slug": "fibrilacao-ventricular-mediada-por-purkinje-ablacao-de-gatilho-versus-substrato",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:17.854627+00:00",
+    "body_sha256": "f502a5e33317b118325069f26d4595fd02133e3a6ee96b4f3aea71c6a54e750a",
+    "record_sha256": "a7bad4fb1d4f04870cdbd8cca5ad552d2bd8314b9e69404fbdd8babfa7186696"
+  },
+  {
+    "slug": "fluxograma-sinalizadores-ambulatoriais-bradicardia-e-bloqueio-av",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "2f9f3bf8a6037f34c4f5f20e1e9be627304c52129d04ca573de448a30a91bc7c",
+    "record_sha256": "adba78207b9dae0843362a1863def1fed72ccd23613fb4114b949f6547943d49"
+  },
+  {
+    "slug": "fluxograma-sinalizadores-ambulatoriais-pvc-frequente",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "97ce9af3c233e0b2280a28b70104a1cf1dc04452b0e8a2e30c40ced235f61f9b",
+    "record_sha256": "4b8250cbacbe0dc18becd0d7f9415cda0e11f3d1439409fd3c603e50480bbbad"
+  },
+  {
+    "slug": "fluxograma-sinalizadores-ambulatoriais-qt-longo",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "52df00e0b2e95e6cced3b589dc46c407cfb97e8cb7a4594fe9cc1e1351a7f361",
+    "record_sha256": "9019e1ba3252d0701d4da4842df8743d95d4ec1159677138f7b87901e13fb585"
+  },
+  {
+    "slug": "fluxograma-sinalizadores-ambulatoriais-svt-e-pre-excitacao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4d64d9ee2351b3822f167ebed6c12508d8925054a181455e37ca0f72f26d8f70",
+    "record_sha256": "c1b054438b4add5025e0d49e0c5f141ae36aeb1f702cd7bf5f063c95a058756f"
+  },
+  {
+    "slug": "mtmr4-gene-modificador-na-sindrome-do-qt-longo-efeito-oposto-em-lqt1-e-lqt2",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:18.056859+00:00",
+    "body_sha256": "ba7d295129c11cd778a22fff17e312fd1645db937537ce65595e0d7fa41aa473",
+    "record_sha256": "a0a0b4e7c2cb6d26d8257d73c42cbb34b21b4cd71a122759a53ea32ee68f43f8"
+  },
+  {
+    "slug": "post-2-fludrocortisona-sincope-vasovagal-recorrente",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "cba28e2132f6c32d535a8d3c9076a3ccdc4a64c513b5b094036d9d1478abc172",
+    "record_sha256": "d5b435b925783843806685b77e35a6e9ea642be48994ea72367c0e3b3c20f975"
+  },
+  {
+    "slug": "post-4-midodrina-prevencao-sincope-vasovagal",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "438e291191236cc51de1e23857c78ba0b9d9d6c4f16bb4f93fd334fe489ea3ac",
+    "record_sha256": "8992a9a51b58f7eb49ad7a809858dc4d3db412dd715647ac9c5afaad853e8c0a"
+  },
+  {
+    "slug": "pots-ivabradina-propranolol-placebo-ensaio-randomizado-2026",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "085e0f745dc93f72970236c39849ce994400ebfd52c4587054c905ae93cf9f80",
+    "record_sha256": "34f2b3b91993ed79b3c7fe2fd998009235989cda1b06c0914e46b769bc1609dd"
+  },
+  {
+    "slug": "pots-posicionamento-canadense-2020-diagnostico-e-manejo",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "14d4f8a0abc6297fe9e785a57a78f447fc3859ecc9f814b2d39ac3795ae01055",
+    "record_sha256": "f847bda5439a832865616c114113230988e964a7eda6167764ec86f664096a85"
+  },
+  {
+    "slug": "pre-excitacao-wpw-no-consultorio-sinais-vermelhos-quando-ir-ao-ps",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "edaf58feec08dcb0d669ff11dfce05097d03e51d79f48a8b1ba344d55daf080f",
+    "record_sha256": "33edb892a10be21815e1b69e47cc1e3191bbc5060c9229a502dd3e5ef79d9337"
+  },
+  {
+    "slug": "pvc-frequente-no-consultorio-sinais-vermelhos-quando-ir-ao-ps",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "525a03e92968d925a2c65006d3af59e3abe228a55c814489d564b03bc8eee818",
+    "record_sha256": "f7cbfb25b50edc9df70cdf148189cd6ba313d08872d4b72ffcbd19cdc3a9699f"
+  },
+  {
+    "slug": "qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "0aace1c5a6410c99c6498109c3131419f64e4097059791ecccd5967fb8336b6d",
+    "record_sha256": "944f703d21dc447ca1d412c16ae97db5a014b8b1448d810e27372e89a620b0bb"
+  },
+  {
+    "slug": "risco-nao-modificavel-na-sindrome-de-brugada-sexo-mutacao-scn5a-e-escore-poligenico",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:18.236981+00:00",
+    "body_sha256": "864042754db68aa30fd956844cbfa30ae6517686e47de7cc43901b32f7bcf025",
+    "record_sha256": "891bca8942f2fcbfc819bafd8232e101e83ed53d58b790511187c2944f327ef1"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-bradicardia-e-bloqueio-av-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "af2e03989abaf0016f9b7b23bc08aa6c91853bb7f8edf2ec46b9a654451e0d4d",
+    "record_sha256": "e790510018a2b0052bfcb81103b10dd59e0ad62b318a5ee8cb540622ee8fb99b"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-carga-de-pvc-quando-escalar-ablacao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "2c4d27fd843f27895bf9e61c74201cbeff1816a9362ce325b3ac8671d30ac30c",
+    "record_sha256": "d617414d740107429a86d85bbc599e8ec3da7736a9e42531d3d45d07daad4f62"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "034199e202f3dbe9ec5140d48807fb659bee217e5eee922341770ff8043704b9",
+    "record_sha256": "4bd1e3d07110f1af2e2daa19859b1588f2cd3c2d61af194e033d5485bedd303e"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-svt-recorrente-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "2c8d6dfbe00a58a904e6a452b9ed32bd8483e9353c78d353fe50f6e14989de8b",
+    "record_sha256": "ff3435d3656f9aa1d930698a9c3833b5dccef8259169b8f2e4e4251858d51d20"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-taquicardia-ventricular-nao-sustentada-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "82479c34956c4be0b1ddf2ad915d0cd588f9841cd286f04e2783c6810e86bdc5",
+    "record_sha256": "d9bba6cb27e1e64825f74c6b1a5c6488255a332cbdea0c90a4f3d5ccd4757e94"
+  },
+  {
+    "slug": "sincope-vasovagal-recorrente-evidencia-farmacologica-e-pacing",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ec29185df1348a92b4353e8576d796a7f88454e533ad8cf516bdf5de12ae88dd",
+    "record_sha256": "9d04c1b4e549b61602eaa04a139882f7dc16f96c81129f2105fd9ead67c126e8"
+  },
+  {
+    "slug": "cadillac-risk-score-predicao-de-mortalidade-apos-angioplastia-primaria-no-iam",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:18.710205+00:00",
+    "body_sha256": "5ee1b9220db8f0bb3a07e5ee582acf78ac81d0007a388c0cbf9406dd6cd86ca0",
+    "record_sha256": "d373dcab2c09b0b878779683ecc1d3f43d69889ecbd8b8c965a17b32be167bb3"
+  },
+  {
+    "slug": "escore-iabp-shock-ii-estratificacao-de-risco-de-mortalidade-no-choque-cardiogenico-pos-iam",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:19.161495+00:00",
+    "body_sha256": "9cbde4548ca69c356e75bf180300b95f997bb084c77bc0ccff368d6de2c38195",
+    "record_sha256": "b5be77708498fa0feb92ea7ce437dfeebe2d55ac8765aff89d370041d1ea61bd"
+  },
+  {
+    "slug": "escore-ncdr-cathpci-predicao-de-mortalidade-apos-intervencao-coronaria-percutanea",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:19.215595+00:00",
+    "body_sha256": "e9f9a0eae22a62335e70c7b4d438c1bf2769d4e4a655659c9a6387a7f7000b14",
+    "record_sha256": "199c6291b5505c863eddbed5d1c8464084de65bcb9356aebc40fb371d6efd0da"
+  },
+  {
+    "slug": "qrisk3-risco-cardiovascular-em-10-anos-derivacao-e-validacao-na-coorte-qresearch",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:19.639410+00:00",
+    "body_sha256": "ee4d3c980a491fcb2fc8bfba83c556cc91b580192b51a42b1fea5b61d3f1e3ba",
+    "record_sha256": "dae9e5d968b65aa622ab3719f768dea793390814f40a952e7aeeb3a91e8a212a"
+  },
+  {
+    "slug": "qrisk3-risco-cardiovascular-total-na-atencao-primaria-britanica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "9995f03d5fc8ff867eee2c35a7332a3c2c30e7238af4317eca8f7d78cdcf011a",
+    "record_sha256": "b5aa21c459a58eeee2743558f6abd96d2a2ed41bbef17e5df668922be80e3196"
+  },
+  {
+    "slug": "acc-aha-2026-atleta-tatico-avaliacao-cardiovascular-e-aptidao-para-servico",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4f056b45e70eacb5133cece2123fd425c9c41ad5ad8f16f5658964daf82e0c30",
+    "record_sha256": "1db102bf07bb82f5909a3cab2d19560c8091a9e698362262f5857e6a7bd7ae30"
+  },
+  {
+    "slug": "dor-toracica-no-atleta-ambulatorial-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "3cf95b97fd7d8a0c05850b8db817f241e670809a1c2ddc4de5546f412de74e68",
+    "record_sha256": "a2455d4fcc504a86f70bf1505ca58789c7b9dc554e5d8d1e81f269293004bcab"
+  },
+  {
+    "slug": "exames-pendentes-antes-da-liberacao-pos-miocardite-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "25ce920e09d6623050a53f838a5fe7dee745bde4990bfad5d628ce9b77e4e3ac",
+    "record_sha256": "0b83a91e74726be67c43d429ffe3f2dfb5cfd07bfe6a85b50077e827381646c8"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-gate-liberacao-pos-miocardite-atleta",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "93d21fe8cd30ffa9ddd9963a4883c6b3a282d4dc76982275133a7d1a8b496e03",
+    "record_sha256": "b93eab80b7f35cba161ee048ef07a97ecec18cb6b179bded9541074ab091f184"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-hipertensao-atleta-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c9b1cf1a3d2c2c7e4b6a731fc58d19021c44536232e77a39af94b7404255ab79",
+    "record_sha256": "a3a95030916dafc44e24d8137a669be8d6c7e11f48a53c8b25ef1f3ec43cf0b7"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-sinalizadores-atleta-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b0cb987e7daffb54b62df167f8090d89385f3334efd1f2c693c83d6ffa34679b",
+    "record_sha256": "ee3ecd5f27bb660c57ec1cd7ef4030fad6113e2d267b3c04fb8356e9610fedbd"
+  },
+  {
+    "slug": "gate-ambulatorial-liberacao-retorno-pos-miocardite-no-atleta",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "1d79dc4e6b3dd537a7cf3f876cb18f7b08932cb89eac1adada09cd81d9c7dbd4",
+    "record_sha256": "d258437af1aec4aa1d0d71a45817d7165a2ffbb7756bc4a3778e6cc373d72fea"
+  },
+  {
+    "slug": "pa-nao-controlada-no-atleta-ambulatorial-destino-esporte",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e9f5d73bfdd6cf4cb7625b6cb080b24501d16cb23ad0b304ece9ad51e9f55ce1",
+    "record_sha256": "9fcd12f52cfcfb99159519c8569acb4cb1b55662bb5b3b974008f5130e91c77d"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-hipertensao-no-atleta-quando-restringir-e-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "42eb19cec067bfdd4a7e4d848c6f79bc46b90961ce988c5b1e9986869afc4a75",
+    "record_sha256": "7bebc2400f1bd98e62052c72cf08dfd54ad4f359c253bf93101a15f42dfde1a2"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-no-atleta-quando-suspender-e-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e0cdbf1810db00c2b82a44680e2b499511194794f8f75cf3bb326974010f96c6",
+    "record_sha256": "b836252cd3b612d84e74ae60907e9ec016e57e465e501e69b2c60d717513ee60"
+  },
+  {
+    "slug": "acc-2026-prejuizo-cognitivo-e-fragilidade-no-idoso-com-doenca-cardiovascular",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "538689582ba39d2adf4340db9432525dcf801d76566d7e84bc8abab3546d7a7b",
+    "record_sha256": "62cf8d4e48b1055c01833a3825ccdf1c4a600a882d314adadc97765b54e5c7e1"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-hipotensao-ortostatica-idoso-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "8b6bf378040f47402779a3abe964ce634a4606f546d4e80a2aee34d12773782c",
+    "record_sha256": "86fce81dc50a893ecede52c2573931a3cbc09df925cd9eb8038e842748c23778"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-queda-sincope-idoso-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "8f6295ff11b584d019d17c43db40b8892e17bb997e6e03c42a3d874afaec9262",
+    "record_sha256": "49e9eff51c03747dabc03e2a5cddd61dcf9fd8e3ded51c5651d9f7e89b315c32"
+  },
+  {
+    "slug": "hipertireoidismo-apatico-no-idoso-fenotipo-atipico-fibrilacao-atrial-e-insuficiencia-cardiaca",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "7d32bccabae774260abdb62c7d4cb446ce6857f3c40e5d1c355134f73ceb0885",
+    "record_sha256": "1b3c7ccd25db206ceeb70eafb00a60177e152e91887d21d5fc1088b09ccb48b2"
+  },
+  {
+    "slug": "quedas-farmacos-cv-ortostatismo-idoso-quando-encaminhar-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "934e2052c1b29da8c93525c5dd616a85f999b755810618e3ef26a66d5bea2762",
+    "record_sha256": "043a70798ddf86aae0dd192599bad8f0624e09483608c51dbebdb7ba9274b754"
+  },
+  {
+    "slug": "sca-atipica-idoso-fragil-sinalizadores-ambulatoriais-consultorio",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "771aab9055304b2d556b2cc1116dbcc207217ff2027efdd049beaa07b78e5485",
+    "record_sha256": "e23e23159ae3ad4ac6a924ffcef2b467b3b11d1cb78d60e32a37c70e062d838b"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-hipotensao-ortostatica-idoso-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a6fa05763e6fb0e61270dc0adc2d94fcd0508d0b41b734add0ce3a3c2ad927f5",
+    "record_sha256": "ddc4b6bffebc92800839acde0e93635ce44893fa468a649b2057ee7241f27317"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-queda-sincope-idoso-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d1f20ddae3e4b5be20a84d53d06fb64fbe12bf707ed42100e545dd8d4cbcb842",
+    "record_sha256": "043d3339001660f1ff7c38d75853710e8aa3b7e9cd443b122686792282ed7331"
+  },
+  {
+    "slug": "dor-toracica-ou-sincope-no-seguimento-pos-cal-kawasaki-destino-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e65ae633035d7a379c8a581a59782a0f11a7139604a7b206b1c63cc19308cf79",
+    "record_sha256": "ddb27f1d2166b37829a3f3f6c755a57e53a82659dc58c4f0c619a07eebd861c5"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-pediatria-dor-sincope-palpitacoes-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "3c40e04eb563194851157ea67138d11be830e97ec8a9a2fc72cf722d1cde9fc1",
+    "record_sha256": "27a1f7e7437ba3a5667e244c7998f522b16c73891c241277913897467cac94a6"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-seguimento-kawasaki-mis-c-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "082e8e04e1c9545aac5469b3240bd2ffaf5d732a1a0a59cc57fd0c30c42a0eb9",
+    "record_sha256": "98504c066aed4e84907dc2d2b91c4a575a16e441bf1e6137fa337ea2f211813d"
+  },
+  {
+    "slug": "palpitacoes-ambulatoriais-na-crianca-quando-ps-vs-cardiologista-pediatrico",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "f4f360577b4d031997452fef949ded8db274c43ef15381bbabd5bb9510ebdf4c",
+    "record_sha256": "1cd8d7d2985847fb70d4449bac92c4153f66a1a49edc1174ab4a71dd5d1dc849"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pediatria-dor-sincope-palpitacoes-ps-vs-especialista",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "fe203de6bd3e1dc2282a77e4faabafc08ba74acd506fd48252e01f69949e4c24",
+    "record_sha256": "12054ad1e7f2724199666b24731a3a2580cce0625c44ab981b01fa21e042525b"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-seguimento-pos-kawasaki-e-mis-c-ps-vs-especialista",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d75014ab2d6603cd068fd027d04149f6aa003be8925140e5fef4cb2795173e98",
+    "record_sha256": "971c05bc31ac3177d4896e3dec8566cc0fb366a944afbb5acbc0c0062fca6929"
+  },
+  {
+    "slug": "aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "92e3ad204b87db2dae706bf5b62a9c98fd07f489de355701dd8c6d4398f2c78f",
+    "record_sha256": "47bdcdf2089b7e816d7968fd6b49cfff32120c3a61c32d09635fb418ddc74a2d"
+  },
+  {
+    "slug": "chagas-ambulatorial-forma-indeterminada-quando-escalar-avaliacao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e41b1e020c1c580ec10a012f82abdd28586fc18e12a91d3ca64b63750168873c",
+    "record_sha256": "8f15b168d882fdb37c632e7f056414667c3db887d0aebeac3f19e79b5a765053"
+  },
+  {
+    "slug": "fibrilacao-atrial-na-cardiomiopatia-hipertrofica-anticoagulacao-independente-do-cha2ds2-vasc",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b5931923bf1a1a8330206a62a419470f2b604c6d069a906f7804debb11afa56f",
+    "record_sha256": "d89c030ccdc597fb7a44db3172788679699c1b07939b9a48bab214c2825fbd06"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-cardiomiopatia-chagasica-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "6816e529e762f1c769e6fdf4e8854a5d3ea28828c8bf693b2eb9aa762d0e9013",
+    "record_sha256": "5c90e4043be028491a1cdebd7947f6ba71fe87e6a5db9e70363c824b552283a4"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-cardiomiopatia-quando-escalar-imagem-genetica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d462d8c1f6cc8f5dd1ad704dc7c353cd6cb73ac6baeabfca53b907f129ae356b",
+    "record_sha256": "ac7d4647923e3dfac360e46e7fc711d052dad5a0b405ac1eaa37a20b4ea9bdad"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "df5708436a16d731cfe7bc88fd3dbf3c2775f71457b7542c7ea8a0dc1a2297de",
+    "record_sha256": "1fee67cbeec32afdc65af1b1a0424252064f2bbefbd15061f8f33b0c39f2d51a"
+  },
+  {
+    "slug": "mavacamten-em-cmh-obstrutiva-elegivel-para-reducao-septal-o-ensaio-valor-hcm",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "11f26f47398ffc1a32de3047bf594796cfdac2d514caf048c60fa5a6dc26edc8",
+    "record_sha256": "5129ad36e0fe0f8906fa820d0e8d3a4799a49419e0c07c3cce30a5487b9eaafb"
+  },
+  {
+    "slug": "preditores-de-recuperacao-da-feve-na-cardiomiopatia-dilatada-nao-isquemica-rm-lge-strain-e-genetica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "14b6df316a69d13b49f76236d9f50ed8602b0bfd1755a87e58edd68823e6dfd5",
+    "record_sha256": "62becacae24ebbf15221b067efff106ee3f2c4fb6409bd24dfcb3a4ec01da817"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "43b859a56e44920e2c04063f97ac090508ecd1137c576ad2a219884dcc0d3aa3",
+    "record_sha256": "6ce09fcfebdbc8cece5f53afde1b2ad2fe986961e49c22e07b2ded342f62d4d1"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-cardiomiopatia-chagasica-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "61216c1d99cb7deb22c0a430c75148596c9f20371d25e76bb1cc4e53426e6b5f",
+    "record_sha256": "2c1548a2e4b138b28def5d129117e5e6b6feab146a1e4f0183112c5d3a6e3194"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-dcm-quando-referir-aconselhamento-genetico",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b4b676d0b4fcee433b690290798b50cfddfdf1dcb4f75d0945798c69401c7270",
+    "record_sha256": "277915a01abd238266edf327d41ce4b917677c8ee2b3ee8f3f85a52e3db64d7b"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-cardiomiopatia-hipertrofica-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "63ff800578b375b28b263f3dfc7d3184f17d687f6f020d5b05c0ce4be41fea1f",
+    "record_sha256": "b73f557ff9f252e4cb430fb895531a86e95a2d363f5dc5b529445d496fa3894a"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-suspeita-de-amiloidose-cardiaca",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "1e0cd799f87b6c028a299f78e0c56c91792b938a2f65cbf00e2b0068757082dd",
+    "record_sha256": "fb1206346a49b4326dc96a24ee94ce3f59f72d0877c059df470dae39e71d4e9a"
+  },
+  {
+    "slug": "terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "580b28a87354ebca93e53a51ce4cef503a4c0db4e557524fc4b8c2a89a47fbf1",
+    "record_sha256": "71b8e0cfc3f5a818f49b4bd30feb41f4ead002a67f0a5a92fdf9fb0070de6a31"
+  },
+  {
+    "slug": "cardiotoxicidade-do-interferon-arritmia-cardiomiopatia-e-isquemia-miocardica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "762ab8f9657eb4f0e68cec83197997b18bfd9a96319e6b42965734f5bb2f70a7",
+    "record_sha256": "fcd4822730f8b4027809588d425da2332391ebe18ac35be6ff2921e12453983f"
+  },
+  {
+    "slug": "cardiotoxicidade-do-osimertinibe-insuficiencia-cardiaca-e-eixo-gata4-mylk3",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:20.129464+00:00",
+    "body_sha256": "9b5dcd1a30ef62f1637e486e1fb6ba1f133649b9d079eda278546bb2284ed5a3",
+    "record_sha256": "03ef84829d36ca7db0adbff58e3c73ea1e46f26fc0d27e50ed259458170ce3dd"
+  },
+  {
+    "slug": "doenca-cardiaca-por-radiacao-checklist-ambulatorial-de-alarme",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "babe2ee1d03f02c657394910d08a949cbb6051e9fc91325fe90d3c47dd027ed7",
+    "record_sha256": "58f33f98fe270b5643432111c47224a419d178ebd856e135143dd86f0ef62bcb"
+  },
+  {
+    "slug": "empagliflozina-como-cardioprotecao-primaria-contra-antraciclina-modelo-suino-jacc-cardiooncology-2025",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:20.319638+00:00",
+    "body_sha256": "215fada43c9c427a890a561b891a7e518340e7ffd9852ab84cee60f6faef9575",
+    "record_sha256": "f48466ec4dce14ff369a3a6e64dd81dd394d83f0cfbad23b34df4c4f02fdf159"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-doenca-cardiaca-por-radiacao-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ceab796b80640c40cd0aa651e11e4c0a8b8133f46bc39281bb1e6e65a6897c09",
+    "record_sha256": "93ff13c127db0582b925cad8c04de20651855996fa36ad9880a3b0d3a1ed057c"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-hipertensao-por-vegf-tki-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5736ae6e0faf549989b01e6902ae6f9adc15f48bb090447df4ff4d9e03284dd5",
+    "record_sha256": "c56abfd100e4e0bb21b2b3ea4fa1fd33daf846132c68c9ba48aa8ceaec25254b"
+  },
+  {
+    "slug": "fluxograma-suspeita-miocardite-por-inibidor-de-checkpoint-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e9b0bca8a584954f5045d972f7a0f14be1e3dfe0046b9ba6941a5db0eeaa9536",
+    "record_sha256": "8f7238c4fa0acc15604b7b63384efcbae5b42182f78a46198f573de35bb807dd"
+  },
+  {
+    "slug": "hipertensao-por-vegf-tki-checklist-ambulatorial-de-alarme",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "269436691e2584b43b018f0e9ae4067ca3aea9e618ed7ab9a8a029433c4a618a",
+    "record_sha256": "f5c100dd780188f1a67c9cc295b43b62226f947c66f2dd801bc4215cdb933bd6"
+  },
+  {
+    "slug": "pirtobrutinibe-btk-nao-covalente-versus-ibrutinibe-o-ensaio-bruin-cll-314",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:21.621198+00:00",
+    "body_sha256": "99a90f5097041ce0829adeea33cb8168e73d73e1f652f1df32650ce02e5f1b7d",
+    "record_sha256": "2e55d29d47b6f0ed6945ed41efbc838120ecad8091b2ebf0c141f06d10e9bd49"
+  },
+  {
+    "slug": "radioterapia-da-mama-dose-a-descendente-anterior-versus-dose-media-ao-coracao",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:21.761316+00:00",
+    "body_sha256": "e47d00262d55388657a3bc76a2c1e94e3ebd219b501a947e81ea1fe397898812",
+    "record_sha256": "3a7269276786bdc0bcf2cc5751b22f5974c15925572b75dec1279bf913c4a071"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-cardiotoxicidade-tardia-pos-antraciclina",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4dc14314030693116796510dd7295170b23d27ce6712b55c70b19e05e085a818",
+    "record_sha256": "bed47cd3fc209d7f2125df39e726f951ea40c798f6ef62c339c803b7a3ea7fec"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-doenca-cardiaca-por-radiacao-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4c815e2497b6b94c25d0e8351196f07a0280533c342afa7cf0ed7f0e82b8fd56",
+    "record_sha256": "214af9e82acc6f246eb98c94f037af2cce5170b842b1cdb211cc11dc9ec13244"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-hipertensao-por-vegf-tki-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "9fa433657d6c793ecd24671c7d53150a7e4db2d5c9672362790f9b659a6ddfc4",
+    "record_sha256": "09ee71b5677c91a17b3fa48d7ade8b8a89756f2c2d3a10272b64563df04fe7e5"
+  },
+  {
+    "slug": "vigilancia-ambulatorial-pos-trastuzumabe-quando-escalar-imagem-e-biomarcador",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4c301694ccf9e3d9c8fe20e485f098c8d4e3174fccfb97f6eded5afd0928cdef",
+    "record_sha256": "e2dd1b1ed1d9f1e7f47ffc142c9b7d9867d1a45da86ffa114845a4b2439aa21f"
+  },
+  {
+    "slug": "eisenmenger-cianose-ambulatorial-o-que-nao-fazer-sem-doses",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "f214914ae0b6065544f7bca7e899a152989b0c64c561b259fda18e6aa2b1bbc5",
+    "record_sha256": "e73ae681404b06a4b80862377c1a318ca5c63d336adadacb0ad8179886825983"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-achd-sintoma-novo-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "16837495329bd37110d502c37dacfba104abde2d91fa41a8471f37ef59f2c250",
+    "record_sha256": "a620766bb9169f1f39db955ad031d8943d0eac31dfb16b6eb57bd5c28cb4f483"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-eisenmenger-cianose-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a1465580d71f6b05e531515a63bec62078fd6f95d9ef0d199e99a6c34728b990",
+    "record_sha256": "5e5a9270fd37c37be804e7339ade30807983d05e0164393198ca6706c4a7e731"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-eisenmenger-cianose-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "3553f54a25b955e52faba0d70754e81de859891a4062b19db26958c94dfc2179",
+    "record_sha256": "b2a8ceb7148a74c8c782d877dc49908de106b04a2a7053af2a009ba8fc2ba378"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-em-cardiopatia-congenita-do-adulto-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ff7022a9c202d02199093bb71eb392879cca180af04f886d300e03c3cc3ad3dc",
+    "record_sha256": "a378fae6d9154705dd1833d58719cb26f850630a01318b2c4659e553071ed5a6"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pos-fontan-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "02c187c4a8882932a40a8778535f2995631f2c94aee218029f65e27e21c0e674",
+    "record_sha256": "5ebca486d92bce116f5d91cd49ff0cb7133277766cbdc771053ab92510a03ec3"
+  },
+  {
+    "slug": "checklist-ambulatorial-capacidade-consentimento-consulta-cardiologica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "6a94db3b402f22d738432aa252161825b60bcaa149b68faae2ef05270206d851",
+    "record_sha256": "d1ebae3f9c2a2e6afa9eda6b1fdd38cb75c99f3a9d1ad529f1849ec7bfc7cf55"
+  },
+  {
+    "slug": "checklist-ambulatorial-discordancia-familiar-quando-escalar-etica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "668b26a67221ce6bb6ed34db61ad4b1735e7ad3fefd0cba82872adf64d049963",
+    "record_sha256": "1f9b9cc061828f88e3f0cc19fba6f87e509ac619c983363bbd294938186b79ee"
+  },
+  {
+    "slug": "decisao-compartilhada-entre-tavi-e-troca-cirurgica-da-valva-aortica-o-estudo-impact-sdm",
+    "version": 3,
+    "updated_at": "2026-09-10 01:53:31.625607+00:00",
+    "body_sha256": "bc0c26f6a968a351f5761105714808133865d4c2d02cd220fe52147211a8631d",
+    "record_sha256": "9d1d60ae1f4960d99ad8cdff44e83f607d4289c1bbe38018306989cb107df3a7"
+  },
+  {
+    "slug": "fechamento-do-loop-letramento-limitado-e-teach-back-schillinger",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4bb614932eee333a1bfd69d923fb11aa1b76ff5bf308323a9692f59811161769",
+    "record_sha256": "a4e876739c7f54686f675db38878a7c2fac172c296697a409f00cd2d3e6a9780"
+  },
+  {
+    "slug": "ferramenta-de-comunicacao-de-risco-cardiovascular-your-heart-forecast-o-ensaio-dany",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:31.848231+00:00",
+    "body_sha256": "d464396d57d633eeaa6e3a8a6aacbb8b34fc36c7bd352455c869a320c5cf0a7e",
+    "record_sha256": "6a205d441c37e8526913243f335bcfafcc88dd81d8a418d27588d22551684246"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-capacidade-sdm-e-mas-noticias-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "cadba742d4bb252b37d9e2adcfd18a36dd7ecf59be39256cff2bdd41db5db507",
+    "record_sha256": "aefb1f748d7fbe2edb3136a2187a1848d3e776f1ff3209a6d1753346c9e1f3ac"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-discordancia-familiar-escalada-etica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "9d9ec1f98e21e2ece853d6fe428406a3fd9fc5c711c2895c387c97c8e8e77ae2",
+    "record_sha256": "ddef7fbc5de41a4af42e4664dc6e0609ea7480f56dafa8d45bac709338909eb0"
+  },
+  {
+    "slug": "ia-generativa-para-rascunho-de-respostas-a-mensagens-do-portal-do-paciente",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:32.096123+00:00",
+    "body_sha256": "31727ad20d92377ce005650c25037b579c9e798568d7a97d62befc15cbffaa89",
+    "record_sha256": "0dd7bd38069642651a5b3a4db14fb3bd7bb94d385e9d3a1f05acfffd1f9c20c2"
+  },
+  {
+    "slug": "protocolo-operacional-teach-back-na-alta-cardiologica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "6172c6913b92b67bb96bfa209103e6fd659c33d286a391b359d3140c60a3085c",
+    "record_sha256": "725bfc5ce4d3f4ade9b791577ee27a07d56f76b8bbfd9ca74e49f8d071fca72e"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-capacidade-e-sdm-no-consultorio-cardiologico",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "fd813b6a8ac50c1a1dbdccd944f935f967a15cbab58d773c4cacf1297e956019",
+    "record_sha256": "2d5314a740b45695a698057313f2db1f57e6d8aa4107ad953fe137112e7308ce"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-discordancia-familiar-escalada-etica-cardiologia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ce8a1e612384ddadfc768817d696f533eee388e5e594af237a20d2a865e4dba1",
+    "record_sha256": "f671e16c4fbf1b5a6c27dbf6315c71102fd787dd26730ab2757f8efe68e2e566"
+  },
+  {
+    "slug": "aha-acc-2026-risco-predito-e-beneficio-esperado-na-sindrome-ckm",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4e8c7102133593fb97562ad6604c1499636a970a8e411d9b1caf3d0285326219",
+    "record_sha256": "0d2e2e2ad53c1f4e1e745550eeadd183f3c3fe6f4c21ba29b5fd6e3085a58b03"
+  },
+  {
+    "slug": "angina-ccs-persistente-no-diabetes-quando-discutir-revascularizacao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "8f84cbcce7eb3e5280b7da58edc971f4c7ad698e383c2166d0149b3c16373239",
+    "record_sha256": "0a1b96f3144fad2726e0b5379dc85214548f41f88e67943ba77fc30963c6c09f"
+  },
+  {
+    "slug": "finerenona-reduz-fibrilacao-atrial-de-novo-no-espectro-cardio-renal-metabolico-fine-heart",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:33.718938+00:00",
+    "body_sha256": "30b90e5018c8d00bb7bedac724c13192d78042ce4d27b13636ce254094a70ab0",
+    "record_sha256": "f0c023f08cfb85043b9dda5d23a0017f8e5fe2399f946e9326b845df1d904114"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-ascvd-diabetes-destino-encaminhamento",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "21f7b1acee25be977ac4f9bd0270317df2812eab87289d03b7b7aebc10a4304e",
+    "record_sha256": "548a213ae260fd91ad51a62e3ca434330545c6470c0ada5b74d908f9191be3b9"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-sinalizadores-diabetes-cv-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "7cb94f002242c1c6df608af17f5b1a8f067c9c1a0db9959cc28c958a910a0f2e",
+    "record_sha256": "8b8d82f5119e5c7fd77324e68dc17555fa1888ca17ee40ab9620336f1e0b4acf"
+  },
+  {
+    "slug": "insulina-semanal-icodec-seguranca-cardiovascular-e-hipoglicemia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "1313c170d4da58e23dc072063b61121d5c2fc7a02b70f04a8290fc36c3ff861b",
+    "record_sha256": "69c406954cf3163098eba58ac03574188a93150d168d761847f3167986328da6"
+  },
+  {
+    "slug": "lesao-de-orgao-alvo-e-muito-alto-risco-cv-no-diabetes-esc-2023",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "0734bb65a57c7c57f71ebd4ca02d0d806e28d19218935ac3189b65519d400fb4",
+    "record_sha256": "8d7fe11ffc481bfa1e67d32dc609bd69a09f040f821b64eab10acf5ddc78eeb9"
+  },
+  {
+    "slug": "rastreamento-de-insuficiencia-cardiaca-e-fibrilacao-atrial-no-diabetes-esc-2023",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a36ff6445e9734e4cd5f772d5b30e638b3bc77f8e0f297026a80f98fe7d6e942",
+    "record_sha256": "461f38603d6834926315b0fada1bcad0313f83c03574c7e350944a4fc1fac55c"
+  },
+  {
+    "slug": "retatrutida-agonista-triplo-gip-glp-1-glucagon-em-diabetes-tipo-2-e-a-lacuna-do-desfecho-cardiovascular",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a22ab67947cf2b651bdeaf65f722b37dde87b39eacdf869ca69895e0f7049476",
+    "record_sha256": "8cd16301ebe1c1f2421c3d6e9f7d93dfc85efe442fe59adb188cde794c8f3536"
+  },
+  {
+    "slug": "retatrutida-agonista-triplo-gip-glp-1-glucagon-e-risco-cardiovascular-transcend-t2d-1",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:34.399606+00:00",
+    "body_sha256": "64f37df04ef6803f7e65cc5a613d1d30d51d070d74633f8c3ba4600492183928",
+    "record_sha256": "9acafb4b0d81c790e5b52b9446ad2d918d902ec40f67c8a94174ff3b83a8cb95"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-ascvd-no-diabetes-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5fddb072ba512bc1181f01a873c04325d362b6c18512b5b6675d2f8953e5938f",
+    "record_sha256": "886200c984c081d78e6acd8854555733cf71d47da38cc5f14e826fd2b2c1e949"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-hipoglicemia-grave-no-consultorio-de-cardiologia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "0f94ff0988746dd3aff4800991c727b262e31be34498e6df036eb5514d4d092b",
+    "record_sha256": "9282573be81d5e257be59f906f92f65a40a43db4379463b8376553cd77bc1e3b"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-intolerancia-e-alarme-sglt2-glp1-sem-doses",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4604ebd2255c9feca618ebb5426c87438cc82f7c6f82c83addd5615e5e9052eb",
+    "record_sha256": "2e9750f9ffd50b78a4edf1c48290aa9f066d963e2b72f4c8b99267716f926607"
+  },
+  {
+    "slug": "tempo-no-alvo-time-in-range-e-mortalidade-cardiovascular-no-diabetes-tipo-2",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "84ffb9b0d313c2ccb2e766fb6ea3e635cd2d1c9607dc3b65ddc61da96fe2631c",
+    "record_sha256": "c92274f67186a82e46434d0512c8f21e8cca7505e303ce31a5dc61211c07d389"
+  },
+  {
+    "slug": "variabilidade-glicemica-e-risco-de-fibrilacao-atrial-no-diabetes",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "0c5c679f9f7af8d000241fa6353a940888f5b58b58fe5d15bd23263acb9eddc3",
+    "record_sha256": "de17bd9ae1a19d14832cae896a258472dc4ad48a655a5109dae86853b5ef99fc"
+  },
+  {
+    "slug": "alerta-remoto-de-cied-no-ambulatorio-quando-ligar-clinica-vs-ps",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "6c8d54eb636c2bfe1f638a2a23ddb249920005340dec4cbd508de20eaf871215",
+    "record_sha256": "b59b47bcf984e50a655190fe25f4e381ca99529bab93b37ce2d795aa0e0934ba"
+  },
+  {
+    "slug": "carga-de-fibrilacao-atrial-detectada-por-cied-apos-inicio-de-antiarritmico-uma-analise-multicentrica",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:34.823787+00:00",
+    "body_sha256": "e7c9c4256e572872aec4717f0e425418d982b0a74d243a5ecfa5754667153506",
+    "record_sha256": "2c77a0e38a8c439fdb14b2c75eafa2119fc8a0c543ca8c19aab0adc1d3a12dcc"
+  },
+  {
+    "slug": "checklist-ambulatorial-pre-rm-em-portador-de-cied-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "8872fff18a7f2f673a308b4acf59092b3fc5e18f14776060d40ac18e148cc0b5",
+    "record_sha256": "5fc7cd54aaa57a7d04c3f72201da779df38c2e7d953556c196719aa1d334e335"
+  },
+  {
+    "slug": "choque-do-cdi-no-ambulatorio-triagem-apropriado-versus-inapropriado-primeira-consulta",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "791f7cd3983c29bd7bc1d55875be4b7c6f2b51d533a4e88bfaab1e49cd99cf9b",
+    "record_sha256": "afa102560aea998489d4b120a2682114458a4db50922216d40222bcd6517b0dc"
+  },
+  {
+    "slug": "fluxograma-alerta-remoto-cied-destino-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d9a5427822bb72fd605d99c300bc4dab9a4d3c374538f4214cfb4b66687c313c",
+    "record_sha256": "280b0fb736772caf0ae0eb25d3074b232316fa2249881d3f87ddaeb86d2c8f86"
+  },
+  {
+    "slug": "fluxograma-pos-choque-cdi-ambulatorial-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "17810594f0f0128fe945eb51585e8f900617c35dfbdb9da041bbc9ad62877aec",
+    "record_sha256": "c0b5cb7aebf3dc591652b3c08d189f09d84842fe8732f9e9b5df812c7b46146a"
+  },
+  {
+    "slug": "fluxograma-pre-rm-com-cied-destino-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "6d968dd46fe074118956d89238067c5d06a5b1435397783eb39fb3c2f5a70da8",
+    "record_sha256": "c83f9255101f2427b34b006ea734950407e1e4990c1d768b94307c805e524eba"
+  },
+  {
+    "slug": "inicio-espontaneo-de-taquiarritmia-ventricular-na-sindrome-de-brugada-o-registro-start-brs",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:35.204694+00:00",
+    "body_sha256": "7ef9ab32231970762cb22e8ac1d3ba03489afbc7bdf43dc723843133b3158e12",
+    "record_sha256": "adc79be57f8e0e7a7d66e1bb690a5809d9065efb0f9f54044f7726b032a5b5b7"
+  },
+  {
+    "slug": "monitoramento-remoto-nao-e-servico-de-emergencia-24h",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a11d6d5ddd1ee1b34c99a4b6f67f575252a086624110eac8419d270b9ea15491",
+    "record_sha256": "7bd83a5f708ec25cae6b3ea9c5c701b62e134983074e34753b7361656422509f"
+  },
+  {
+    "slug": "rm-urgente-em-portador-de-cied-quando-nao-esperar-o-centro",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "19d6a1222f8abd78f470d4a759ad792686abf58e55fee9ce547ec9800bf04db0",
+    "record_sha256": "1c8a78460490991d50ff056c6d36a32456a0ab56a10d9f85a3c841b5486c15ec"
+  },
+  {
+    "slug": "sensor-implantavel-de-veia-cava-inferior-para-monitorizacao-de-congestao-o-programa-future-hf",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:35.426824+00:00",
+    "body_sha256": "304d6c34b8ce3a4b628daf9e7bb8199b3e5447d17bc6498282b0204e3fc2d58d",
+    "record_sha256": "9e18827665aaf6e514a83367634106870c23c93f0d5c9daca9a22fbf8fb2dc5f"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-disfuncao-de-eletrodo-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5ab2e2d23176be3077badeae3e435f852d0eacc971bdf7e1545f87cba236c851",
+    "record_sha256": "9997f091589759a6cd3ebfeedfec763d16da9cbf2713c3d3883c5f99d2513bfe"
+  },
+  {
+    "slug": "sistema-modular-marca-passo-sem-eletrodo-e-cdi-subcutaneo-em-comunicacao-sem-fio-o-ensaio-modular-atp",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:35.447310+00:00",
+    "body_sha256": "9f2a754a5ca826a68ffaf02dab7c0d8e7a14f678ff05950a19ab166b28ad80e9",
+    "record_sha256": "0849e19b3e243dd04ae4f9eb78544c311712872d91606df5d6c7f1c48b322be5"
+  },
+  {
+    "slug": "acc-2025-analise-quantitativa-de-placa-coronaria-na-pratica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "06026d5e4befe68759086e9745794602cc5a2b87cfc16d4046537f68d4023f3d",
+    "record_sha256": "adac8130fd868fc23b1f0a99b527a9cb4a065ad3137a148e04d9ea628a2568a2"
+  },
+  {
+    "slug": "acesso-e-sangramento-pos-pci-ambulatorial-alarme-sem-doses",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "447d647e0f3302846c0618041d845d9df3a05ac3a3f2838394b5dcb0019ad020",
+    "record_sha256": "fc0ef841bb40901b8ca6bb0de7c232cbec57d59c1f99f79de87477b715ff3ef0"
+  },
+  {
+    "slug": "clear-synergy-oasis-9-espironolactona-rotineira-apos-infarto-agudo-do-miocardio",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ebc82fc7937f651642479d44e5cdccaa9398d46fb649859e343e07bbd9261530",
+    "record_sha256": "8b39b0ab29ba75647f76045150d205350a4ef55508c7731363ac67025cc4d1b5"
+  },
+  {
+    "slug": "deficiencia-de-ferro-na-sindrome-coronariana-aguda",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "29b44dd927bb00798c85b360197998086c1299e28ce7a3089da440c178fe14ba",
+    "record_sha256": "82356983745873163bfc1d96e7db73228be009661d66ba6471afc7caacdb79a2"
+  },
+  {
+    "slug": "desescalonamento-guiado-por-genotipo-cyp2c19-dan-dapt-e-revisao-sistematica-2026",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "150acdc74f2583f8305236edd4c098683a0ecd105067a8cd958033645ba24570",
+    "record_sha256": "726562c744fe460ad9c2905bd11604447543897555bd32ab505719435685bd7a"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-dor-toracica-cronica-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "1be6b7f473f30b53607b96cc0bb602107e6d5d23e8d333a6b81908365e6787be",
+    "record_sha256": "4fbc99befb209139db05b3ebdfd80786c24716847a8133df8530cd4f2f8fdc2f"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-pos-pci-destino-ps-vs-retorno",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d933d68cc69418557e13b79e4bd26bcc1ee02fd67406f29830bae2196406cdc0",
+    "record_sha256": "298ce6c4302246379e0860ff3adfed0d7f78ebaacf21eb32f2c46223ad1a9bdc"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-suspeita-inoca-minoca-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e9c47f8812995366bfe899dcf97c93a97fd4d374cbca3bd8a589f4af31853f16",
+    "record_sha256": "5c7156c0a0e695b2e8183b817807ad939be275c49a33ea7d5ca56e8e722cb5ff"
+  },
+  {
+    "slug": "inibicao-do-fator-xia-apos-sindrome-coronariana-aguda-racional-do-librexia-acs",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b271587cbbd8721aa91f59dfecf74855f32175dd05d77f5a68e25e1f7a0d8874",
+    "record_sha256": "78d512ee79a500adebc8ee07c4c8b0c3a6326673a848bd10a1056c416ba49976"
+  },
+  {
+    "slug": "pos-angiografia-sem-obstrucao-ambulatorial-alarme-e-encaminhamento",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "9587503fdff86146c2c80bd6e19547673718638117ddc743f48f3e8e6bcb35c1",
+    "record_sha256": "c1fce90c09b15ff46722d9d044babdacde03589ad2b25a2fac69bf5fca7e711f"
+  },
+  {
+    "slug": "pos-iam-ambulatorial-sinais-de-alarme-nas-primeiras-semanas",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c622e9b63a085bf2dbf7ab7989ea25e83fee9f89e5e8c85d2496c048d9cb224e",
+    "record_sha256": "567567bd33299a95971126bcfd51dd70c1ff837dad0d7b87505778a33b200f43"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-angina-instabilizando-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "6029ec9245700e2ca1b3c4c6a2895f49e4ab63b8d537f3110e92cfb2d92df337",
+    "record_sha256": "f73cd79ec449b0637f82702f4a77e18ba9f92727c84877dd22358722bf82c39a"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pos-pci-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "7096e5ed9ba6e16b6d53779171199a128b04a833a600a556dd89a85794b7f84e",
+    "record_sha256": "ee9752cb9b8f02677f405d7962b8345149a4bc46fd121eb8db653022abcec1ea"
+  },
+  {
+    "slug": "suspeita-ambulatorial-inoca-minoca-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ca436b27ecd068836d20b62fa7d3d8bbb49e0dbc0ddf18451b691744371ae93d",
+    "record_sha256": "8fa61e09bd80e3ac1331cb11dd1b3863934985e9342f5f61f457e5eea1bcf191"
+  },
+  {
+    "slug": "checklist-ambulatorial-pos-ei-higiene-oral-e-alarmes",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "3b64fb152beab1dbc6b07c9b5c103f1e34485a6d60c9b39e85f5a69ef1f39186",
+    "record_sha256": "6583228fe7e9502c029fc32a485ed3a50e6a9cb500b2645dc5d7e291cc55e6cf"
+  },
+  {
+    "slug": "endocardite-checklist-ambulatorial-febre-protese-dispositivo",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "bf949b43278f5af3cb988c5cf387564d1ef0831cb35985edabfce6193e52d0cf",
+    "record_sha256": "51d07eb0d8c3ffbbf7d5a71218cf31c21de22ae460aaf0faffe8582876d25ee7"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-pos-tratamento-endocardite-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "285d2288164a6ebda15533d3dba65903441a18e26ce2ce9995f102054be9135c",
+    "record_sha256": "ad4931de091165dbd18681a7a2db136d11b6849e45ec51c283860690dce77f02"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-suspeita-endocardite-febre-valvula-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "fa5295a670425adc5236587904dcf405d7bdfb64838ee5fcdc8a2e58ccb80968",
+    "record_sha256": "b6ffdc3387d3aee896dbc094a3001af5a587e006596e2f390a9a30e0a843e099"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pos-tratamento-endocardite-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ab733da6e8c7612e28db43894ac729e1aa659b3f35e06ba86c554693d36f82d6",
+    "record_sha256": "baba19a946e021927a017139b26ac214d767c4b36b49492f4ee5ef3c27453633"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-suspeita-endocardite-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e70eb2610e92e71a350d810817baf2dbfdee8016a979562a95150bb04e7bc3eb",
+    "record_sha256": "ca4dba0c5ea49d9986b2828b66c964d3d828b0fedddc79c556829b4c01eb6840"
+  },
+  {
+    "slug": "checklist-ambulatorial-aine-no-retorno-cardiologico",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "0d246cd6e5e77b9fc3a857c63b2102e255b9292de1e99f884190ffcc75da771c",
+    "record_sha256": "89e051dc7e80bbcfbbb1177910136dacb0b27586159325428eb7a9d630bcaed5"
+  },
+  {
+    "slug": "checklist-ambulatorial-pde5-no-retorno-cardiologico",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "11e06ae1e61127d1ec3d1574059115d95b1844b3f16a53de285c4768445b1cc1",
+    "record_sha256": "1bd68ecd6c5e58c5d1372d6cd82329fe5df1af25c06dea0c61432303a4cb4c67"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-aine-quando-evitar-e-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c4082b535c712840ec01d633ac006ab588d0c89a91eaa4850210b47f62cbbad6",
+    "record_sha256": "64125afeb04eced02e5a4f6a30e42da7ec79c8c233dcff972c75d872cdc0e1e6"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-pde5-quando-evitar-e-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d1a79e19f048bfacc07892093c95f51196da3b82dc20513052249eb261cbd467",
+    "record_sha256": "4193cfea1f7df368b9db94449c51f2b6dd37f174e0eee14a7912671d9a83816f"
+  },
+  {
+    "slug": "fluxograma-monitoramento-amiodarona-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "06bb84bf1f69ae00697807ca604d675d819b22dee1d7e0795d6ea84ca8e02e97",
+    "record_sha256": "4a30cbe40372fdd0a004b74eab776051c886e85cb441e5f77e9feac8ae8cd4e7"
+  },
+  {
+    "slug": "fluxograma-sinalizadores-ambulatoriais-doac-sangramento",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "93fb56fcc50b3f5afb30324e54aa628e2ad22e03c005e3038a6ee8d2ce239b0f",
+    "record_sha256": "6b8d690cc38904af70c09c32f712bda82f7999664d5a4afdd5d23463af27c801"
+  },
+  {
+    "slug": "fluxograma-sinalizadores-ambulatoriais-varfarina",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "46d306053d970b909fe549005cb9e7ee3aa2d9b31d89af764c682b7fda25f9ee",
+    "record_sha256": "16bbff3f2c9d7d0a964d2ce619b63d2618c4230b010ef40e949400afd5577a57"
+  },
+  {
+    "slug": "inr-elevado-sem-sangramento-no-consultorio-conduta-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e3a46e6704fff2508592d254934d901d26a233639ed3040c117e94fa0a1cfacf",
+    "record_sha256": "caa3b6f75f81f57ca871227f59352c10a787870de3279bc5bacffe2e606b57dc"
+  },
+  {
+    "slug": "milvexian-sca-ensaio-librexia-acs-interrompido-por-futilidade",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:43.355160+00:00",
+    "body_sha256": "111357d468da4ca087358ad8948390a7b0c118db40b5b9450566e08f1d658c6c",
+    "record_sha256": "26546d2994f53b4585bf3c645f7d067b972475c28308d9c51c3502249d188a17"
+  },
+  {
+    "slug": "monitoramento-ambulatorial-da-amiodarona-tireoide-figado-pulmao-e-olho",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "fda8a3c1603e9b60f7cecccb63b937dfe845584ec1b3eee4801a19b12c9df4b5",
+    "record_sha256": "ac015b091d195e155248feb3e42a19c1da0ce3f413f86c65ac4696b135a61ae1"
+  },
+  {
+    "slug": "sangramento-menor-doac-no-consultorio-conduta-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "7803796e2f979f306cd1c652671c8d33d83239870a94817a4810eb68f71c000e",
+    "record_sha256": "2abf54d7e6162600d496c3bb6f1d124f15b872a8d9fa12d5eac6694e814c2881"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-aine-no-paciente-cardiologico",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4cee661b837673a315a832dacda35ac22d199e594b678969f072984fd10bbf83",
+    "record_sha256": "39bfc6a230bd062eff3f90745bb252b016d6aa3a9d25c8e263f3c39a9d91ca88"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-toxicidade-da-digoxina",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "dbd713bf586430e19fda015f8a77f1f8051391479d0f69a8b00af644efe6e65c",
+    "record_sha256": "d7dea5491546867d4a9047b85dda0ded2e4115b6421ec59aeed3dcb130f9b3f4"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "76861b14e85ddf2f0b70b5e22161eb742a84776da60b7f704bb88e2f8c78f86a",
+    "record_sha256": "515b6b12dfa872d194c474ebe289f2474a2672bef561d68e76daec345fc0d2a1"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pde5-e-nitrato",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4be624b8f6e78b26e6efa0263fa5378e35c5a54b88a34af241f799d580090a38",
+    "record_sha256": "b551d5bd449ed0e4af19c7eea638d55d683b663413394c2c194ef735b46e3209"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-varfarina-inr-sangramento-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d2e796e4806a99b74d985542c83a1568e63adf2d484c7a6643254ba2bef5befe",
+    "record_sha256": "ae0db5d32c99c070a3bc178aa52875e55590a14530a8f2becadae457fbe86f84"
+  },
+  {
+    "slug": "vutrisiran",
+    "version": 3,
+    "updated_at": "2026-09-10 01:53:44.064231+00:00",
+    "body_sha256": "ba1bf0cad26ff885137535628627fb626c75c5f35920febecaaa78096d4f76b0",
+    "record_sha256": "7700d3733662c85eb306562c8794c2324b396c6d668daee5d5a477878f4631d4"
+  },
+  {
+    "slug": "checklist-ambulatorial-alarme-cardite-suspeita-fra",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d534e1b5c4793aff28530b9efa3e338499eb81dc75c0afcd666b335d3a25eff1",
+    "record_sha256": "668e0581b64af7f25f4ad02141579ec0dfaf36ddbb2c797eb0521c89de3344f4"
+  },
+  {
+    "slug": "checklist-ambulatorial-alarme-progressao-cardiopatia-reumatica",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "42a09109c1e792487f8bec175202f93a4aef9479b2b730df7b975a3b5c38b3e5",
+    "record_sha256": "27ba3407d57bfd0ac0b3dcfe025477028ae9e6867dac39cf7561d0f1a3c35eb9"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-dose-perdida-benzatina-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "098d8d7a87c10c7123464764b0c055f30c379dbc93c39e688069245ccf9377ca",
+    "record_sha256": "f74d5de6fde468075c3e2c86d6e6001e7b3369f144cb40c81df052b33df7ee9c"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-suspeita-fra-destino-hospital",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "2e47ace16223fd87511a401487b515a1043488b0fe3c5ac79ddea14a18d56fda",
+    "record_sha256": "8708fc52a9b72c3e89a55d6af51757a485f00dee62bce088f52ce50bb80e68c2"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-profilaxia-benzatina-dose-perdida-quando-agir",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ee60071a9e524ef6e213e7abb17fef955f70e94ae4b901d691583fee31e21e32",
+    "record_sha256": "a691f266251f909653b472487d215113baa193c8e9a1039d9456a4362cb95dfc"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-suspeita-febre-reumatica-aguda-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "14b0754a93be46f0320ce9c66f461c584f0149ebd965cae92b24b595aad6fce9",
+    "record_sha256": "4e1d8044b2f969da5ecc1a2a65b90b6c2ce4c286391dd39372e4eb9152b8eec9"
+  },
+  {
+    "slug": "closure-af-oclusao-do-apendice-atrial-esquerdo-versus-terapia-medica-em-alto-risco",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:44.843384+00:00",
+    "body_sha256": "5195d57c0c9ca8a3c6e899d2c8e6f7f3a04bb90626db3bdafce31861e6c9c60c",
+    "record_sha256": "d0449396afd11866193767bd701649e057acf793601fce5cf3e04cd0b838065c"
+  },
+  {
+    "slug": "fa-e-drc-anticoagulacao-enquadramento-de-ajuste-sem-doses-esc-2024",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a6272e89aef682081b682981705f6c3326860bec423d42a6e6acb9b8a9941a04",
+    "record_sha256": "00ac1ba6400fe8d6eb40d8ceeef3af648a25c2c73adfcb9e96deba929abf45d7"
+  },
+  {
+    "slug": "fa-pos-ablacao-principios-de-anticoagulacao-de-retorno-esc-2024",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5015752ff54ae095991ad6b462a5ba1074732dbaf5d6ca8d35d826a23a403dde",
+    "record_sha256": "0221a4bcab1ff7c7d3381f40cdb7a671a2d1cd661e2e1ca189f264a1b25a39cf"
+  },
+  {
+    "slug": "finerenona-e-prevencao-de-fibrilacao-atrial-incidente-a-analise-agrupada-fine-heart",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ce60efbdb47147762f5226a06ee38185269e84cb45ed253e100ac6a556fec286",
+    "record_sha256": "46401c016230c58d11317d099b00f4141ffd8895949780dbdd04ecb46eeb7522"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-pos-cardioversao-fa-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5670e12016b366f56cb0a3054ae72ef5ca24e8d6ecbf8eee7c2d2d2710ba90e9",
+    "record_sha256": "e8f229b73d2efb176a2bf67ca4afab7c35a0bceefc39c463d781c074c30ca37b"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-sinalizadores-fa-nao-anticoag-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a79b6d58556e63140111432b3b4aedbbef5bfc99418fb994c76d164b0f79ca0b",
+    "record_sha256": "95b65d48b49fc05db6cfcaba95e0da968935a3cc46a9e634c137d9c40d3ed604"
+  },
+  {
+    "slug": "perda-de-peso-no-idoso-com-fibrilacao-atrial-persistente-o-ensaio-lose-af",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:45.840283+00:00",
+    "body_sha256": "1ac63a53828a3079999042459b659e9ce47d33302053e8088bf2da85220709ff",
+    "record_sha256": "5173672c4bd5fad7cffcca096f42993b43ca057ac41393a965ba7247638f1e85"
+  },
+  {
+    "slug": "recorrencia-leve-pos-cardioversao-fa-retorno-precoce-nao-ps",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "9ad6c4694657e41cde61c24adffe7b67eb517234450fa4124f42894e5eada353",
+    "record_sha256": "5c1f4d78e3cab4ad985b0c5468d49fd488d8705e70cc8f26957fd1aa91d1739d"
+  },
+  {
+    "slug": "sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "fa8aaab5b4d1278f4af8ec74a53cdd667e4045e4b16598016dd7e4304e49a8f3",
+    "record_sha256": "308a8b2edd3d956ade475fa8fc41b7c43191c26f5138da056ff9371056c02983"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-falha-controle-frequencia-e-novos-sintomas-de-ic-na-fa",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ff6dae181ba07e5afaf22fb7c0a9d5d89126a858488eea59583cf702d67fbe2d",
+    "record_sha256": "55c929bee9ef25976203d1585e57f98312270472d27d15efb91a9d02963a3b59"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pos-ablacao-fa-alarme-complicacao-nao-recorrencia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "0884f8126dba8086bcf4eb5470c13564be45a8c12b28c4dfbcba4cfc0b5424f3",
+    "record_sha256": "3bf4005a89c13fbf2fc0d885c9531bfde59e5b187781f3a68d73634b08b62bfe"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pos-cardioversao-fa-quando-voltar-ao-ps",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b750dbe57a8ddf8f6dc047c00e07519d722121fb5d45e65a87085e4bbe753986",
+    "record_sha256": "bb5c017b2a6368b414185ca219d991d11c95a14ad133a0c1dfeae7bb6ff0527b"
+  },
+  {
+    "slug": "timing-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial-elan-timing-optimas-e-catalyst",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "131b40d5d4624accb6cf256bd41d00d6b98d532917f120166f0d25aeacaec3cb",
+    "record_sha256": "2b9fc97d0772b2e70fe6640237fd9476b1463186ba12b3a6e13e00c9539b4ef2"
+  },
+  {
+    "slug": "timing-de-doac-apos-avc-por-fibrilacao-atrial-optimas-e-a-metanalise-catalyst",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:46.025149+00:00",
+    "body_sha256": "c49f0c2d6aa1d3c6eca15e5eebed8a498dd5bc328ad1f7c7cda65dd663b5d8ae",
+    "record_sha256": "aed4bc506c7e0f3e76382ea93508ce5e79198102873dcd79a8819ddfb1287c74"
+  },
+  {
+    "slug": "albuminuria-e-tfge-como-eixo-transversal-de-risco-cardiovascular",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "01973c5f938fb976e233502c1f81d4766856b82611e0ff6c86ec222015b2bd51",
+    "record_sha256": "1b5be1590ff075d5b1b3e4b049227ba8009051e54752032c091b9469a73b7b4f"
+  },
+  {
+    "slug": "checklist-ambulatorial-tireoide-no-paciente-cardiologico",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c3bd80d64ce38bb7d2e77c2e29888dd024902aee1c68d8caeb2e87acc14f395f",
+    "record_sha256": "70e00e7469cc9325386f456c998daf9716f15d686206564c8bb261eaa63ec0a2"
+  },
+  {
+    "slug": "exposicao-a-luz-artificial-a-noite-e-incidencia-de-doenca-cardiovascular-uk-biobank",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:46.874283+00:00",
+    "body_sha256": "4657d35c4a5b26915092ef82be3e334e7cdbda40a72d8dc7249a7689d86570cc",
+    "record_sha256": "88a2d904b361a60d02bd5a7290dbcac36501bb28e8081567f0eb5a3f6aa16758"
+  },
+  {
+    "slug": "exposicao-a-pfas-quimicos-eternos-e-incidencia-de-doenca-cardiovascular-o-estudo-dppos",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:46.906905+00:00",
+    "body_sha256": "4c92212da39552b495b7eaf67de4f57be08ab75e40dbf12cd16798a32e73cc75",
+    "record_sha256": "1973b3ed6a63a48551824f6c3cb977b186bf563a5a62e3b1c34eed08893e7578"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-tireoide-quando-pedir-tsh-e-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "250576c818ef63e35d9e3ea05afa03c6b2f5f21ad3375155b0eae8df0fe5014e",
+    "record_sha256": "6b754151240f2ebdd0356460453edf1fee7595cff7ae06cafed6596ea5d22912"
+  },
+  {
+    "slug": "fluxograma-imunizacao-do-cardiopata-adulto-acc-2026",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c7c1a11404e2a8bd209fabd4ab446a0d38a920e2b8207c4b39ffab3f01ffea4d",
+    "record_sha256": "64ece3d96b45d3d289db8323f748c8a0a4f2a29ee036184a8dafef9b248bd414"
+  },
+  {
+    "slug": "fluxograma-sinalizadores-ambulatoriais-vacinacao-cardiopata",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "1162a93fbd70a6d5ad01336cd80862bf652f2235c7fd9201cfb969ff197bed6f",
+    "record_sha256": "ce215a192b44878ba79f83a8fb7432accd37c6a759012d33ffc0ee9526ac1eec"
+  },
+  {
+    "slug": "imunizacao-do-cardiopata-pni-sbim-2026-versus-acc-2026",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e627dd4a3228372a967c61d309d029610872caa0f572365447bf8b5951053d94",
+    "record_sha256": "ec16fe8b57ce6da419e17f40c28f7e144380e51a916b576c665ddbd277e4522f"
+  },
+  {
+    "slug": "imunizacoes-do-adulto-como-parte-do-cuidado-cardiovascular-acc-2026",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "7aed69dd43b4240d9a501d38fcdd46873864e871f2dacbfc11f0bc6c0c4ac6b4",
+    "record_sha256": "77c7392b43f539d865f40d69b8b2c24d1719acc193c2acd0f1cb5f5d66424319"
+  },
+  {
+    "slug": "pasc-cardiovascular-acc-2022-avaliacao-e-manejo",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "2c6ecf33f22f3c656d260fd8ff4e601d1bd044e6251780c6059ebc94b12984ea",
+    "record_sha256": "738b41761d3629a1fed865b10e118050eca9b6869d53bbba40514d1fe4550ebd"
+  },
+  {
+    "slug": "regularidade-do-sono-e-eventos-cardiovasculares-maiores-indice-sri-no-uk-biobank",
+    "version": 3,
+    "updated_at": "2026-09-10 01:53:47.883852+00:00",
+    "body_sha256": "0cf2215b96c0a20d2d45cf40208581b7f210cb340c813f6055e02bb2ec6360be",
+    "record_sha256": "66b2de9d5922176ff27c216459909365ddeba27e36fc5c9d2eda6857c9e128e3"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-disfuncao-tireoidiana-no-retorno-cardiologico",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "2c609f4d7a91869554b2dc25d668d7f79de470570f55010e7026298db152d5be",
+    "record_sha256": "1a405e937caa6ce8f17b336cdb57711f4df98732003701577936d36c3fc38f95"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-vacinacao-cardiopata-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a793cb029fc6ab6b9b89209a6b2acd3da6ecee83419c3d1f3d9d140c13d10294",
+    "record_sha256": "c1d6051f4d7e469cf1931f8ce17b1e8b9429698bf4a28f69f527168abd9f7e79"
+  },
+  {
+    "slug": "sindrome-de-sjogren-primaria-e-acometimento-cardiovascular-no-adulto",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ad0bbcefda74c725d022720d6bdb0c1c23407d45cb956fed8f312013d97d6908",
+    "record_sha256": "df209ed24e7a52b5c25205c0f6567cb3208c222a972b8270a4a6b5247967246e"
+  },
+  {
+    "slug": "tres-equacoes-prevent-cvd-ascvd-hf-quando-usar-cada-uma",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "8d424f2ef6e9372aabf3480cb2ed891acc36e6a131236bfe8bd7d8e36268b46f",
+    "record_sha256": "63bae08543b8815d56e1b4485e606bba648d3de32a0c621c2bce2172ee91f251"
+  },
+  {
+    "slug": "vacinacao-cardiopata-no-consultorio-pos-sca-ic-checklist",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e463dd3fff1114896f12631991e5788f8894b17ee0237c414f34baad29adffd6",
+    "record_sha256": "20185eca5b0e0a36d2c5a874ea074e42e6d788eb1dc8b03eec55f7ae240419db"
+  },
+  {
+    "slug": "doenca-arterial-periferica-apos-desfechos-gestacionais-adversos-coorte-sueca-de-coirmas-2026",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:48.895676+00:00",
+    "body_sha256": "88df1868caf334e899220c5535a67b4619e9530cbf41c007328194c0835fd74d",
+    "record_sha256": "e5d337f609481e0f51657582d6bdf82ef2f4c1d18488f3f77d31197ee5f9eea8"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-gravidez-cardiopatia-piora-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c583f8df7a6bfac34dbae8c8c47b01f88a6d947721687c0a05351e8f15fa3fc1",
+    "record_sha256": "653465c61a70086275b70086ea5e8e239fb19cb8dcb70e23623a61b85cd1a086"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-ppcm-puerperio-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "7e8d713540278199f7f6cd0ee6fcdfe08ae48bb8a2f82dfe04f4e64dc9c30b04",
+    "record_sha256": "558c2f821baf24ec9094eac4fad9064fbbcda05ab3fb021fa093c8c7907401ea"
+  },
+  {
+    "slug": "gravidez-checklist-ambulatorial-de-alarme",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "3767aa730624ec09ebb5b692e74ff719fe7e5776f2d0935448f8c0775c8e9c4b",
+    "record_sha256": "18cd1d1596571e6864a9fcd2dace7b70f1d4b701f444cabe7e0e537a06aeaf8d"
+  },
+  {
+    "slug": "hipertensao-na-gestacao-e-risco-de-demencia-o-million-women-study-2025",
+    "version": 1,
+    "updated_at": "2026-09-10 01:52:51.989620+00:00",
+    "body_sha256": "352831e3439448d0537ff8032a790d5389efdcaa2b935b8daa70d7509650e5b5",
+    "record_sha256": "8e2d8ffaa4c066efd8e4550c64897bd438d80f7e2a996a92b5484ac44c4c1355"
+  },
+  {
+    "slug": "ppcm-checklist-ambulatorial-alarme-pos-parto",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d7f1202e24c360be4fd30b2940b7b9f0ad90be4176bc407c402ba768226fb1b3",
+    "record_sha256": "707753709d6e0bee6759f4d5c637a3da443810bffe29b22329434557b6a0e76b"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-gravidez-cardiopatia-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ae1519f53a64ae6da531690e28dfa81663b9e6b4725a1ee381693eb304dc36ff",
+    "record_sha256": "6936a0bb04ee7e37eb01260a8ff5f35dbd919a2231c0a813e440d55156144652"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-ppcm-puerperio-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "48196fec921ff97baf24cd36b038c37f19d6e17fa3d0fefe950770dddea0d401",
+    "record_sha256": "08ea9fd14bebe803fa9ba3a22ec1c13b981b40b7ee9cf690cc0d94688cbee271"
+  },
+  {
+    "slug": "aha-acc-risco-prevent-para-iniciar-anti-hipertensivo-prevencao-primaria",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "789b88ae4684494a57499c830c2b895d5b4c82c7663f55669bc8acc0278035a3",
+    "record_sha256": "110977e86d474c2c99c56072ef1a7629566ac23cb0a9dd91842ec4ad70de0a97"
+  },
+  {
+    "slug": "amilorida-5-versus-10-mg-e-a-razao-clortalidona-hidroclorotiazida-ensaio-fatorial-brasileiro-jaha-2026",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "9dafff71417ec191423bbcd2f72d6de58ff8a3e7bdacfdda487b0e9dcdee2691",
+    "record_sha256": "9292d47d5931a7ba5a28f21731d5fd313d9217e3acdb6dbecefc25a77414fde2"
+  },
+  {
+    "slug": "denervacao-renal-por-radiofrequencia-aos-3-anos-seguimento-final-do-spyral-htn-on-med",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:50.448139+00:00",
+    "body_sha256": "a68a610bcf0cc057c0eb5448a0974477d9582cc713cf3bdb9c48c8807ed8ebf9",
+    "record_sha256": "3783256ba1caae5d35b66bad57b64eb8a749ea16663574eae6bccc9e1236018c"
+  },
+  {
+    "slug": "desprescricao-de-anti-hipertensivos-no-idoso-fragil-mortalidade-hospitalizacao-e-o-ensaio-retreat-frail",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a722263955894201db4a87d23a80a5b227baffb8dc7e49f8f15c310df7f49d2f",
+    "record_sha256": "8bd13f9e0878b308f16f4454fae79c3db80393cae4f71014d4e688ebdd5121e3"
+  },
+  {
+    "slug": "destino-da-investigacao-de-secundaria-centro-has-endocrino-nefrologia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "39c3e72469572e121ce6818e4320448a1ff0f0abf166b4aeba32513aeeea2743",
+    "record_sha256": "5aba3172176b9065d0de98fb7c9c1b3d50bc798fc4a330a4f5dd84f4810318ee"
+  },
+  {
+    "slug": "esaxerenona-antagonista-nao-esteroidal-seletivo-do-receptor-mineralocorticoide-escort-ht-e-excite-ht",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "61e2225f98216d11274a84beb8dff5eb0c4025b1539f2df17f0f62cb2ee3c519",
+    "record_sha256": "1fbc849009cf0e151b8199c00a5a010d6fe48298c4b2f4aa70a5cfc68d6035be"
+  },
+  {
+    "slug": "esc-2024-versus-aha-acc-2025-quando-iniciar-farmaco-e-qual-meta",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b8c5f074b997e5806d867f04724631a9c30e7e950bda85d2a14800ac2c6f6897",
+    "record_sha256": "b302bb58727f353d16a7fe98b0f4fb12b6b0506968db7c84e0ec3ab6b061dca8"
+  },
+  {
+    "slug": "exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "de17aa1ad9e1168fc6b6aee119b4006f66ab7da5de8d8edb8dfd1271d410927f",
+    "record_sha256": "46d8ff51f432e1105d1957a2d5601b10d0263eee7ba10128fe54aece21d066ec"
+  },
+  {
+    "slug": "fluxograma-destino-ambulatorial-suspeita-hipertensao-secundaria",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "3ad5efe8a0255b908980cfa6dfe0bfcb65db631801b864f9cad16623d2031ee2",
+    "record_sha256": "8c4bd8243ceb680d2c5ea716b7acd940aeba7865a9c789d4d8d0ab8373bb1d3b"
+  },
+  {
+    "slug": "fluxograma-iniciar-anti-hipertensivo-pelo-prevent-aha-acc",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e80fd9fabbaacb0f09a91d6ccb02ee3d2ca40bb935434fb60a3ca76c78d47d8d",
+    "record_sha256": "f149dcf5d2384aff151a757ed0de72d8e55fc66d4e4da41e1e9cc5f78dda8770"
+  },
+  {
+    "slug": "fluxograma-sinais-de-alarme-ambulatoriais-hipertensao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "3b8df6a4b6a581ea7d4e184652aff218179cd6bd4355aa873283988e5c79882b",
+    "record_sha256": "72d4bee3192e90589e09d7fe0a65a322a6ca7ed1210c8789024eb12826d2fd70"
+  },
+  {
+    "slug": "fluxograma-timing-encaminhamento-ambulatorial-hipertensao-resistente",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c8c4372a2ce256ca104a0a7bb411ca97e8fcf7ec2d4bcbb08a4cd1f158c27b5f",
+    "record_sha256": "372cbe1828a020fafae0c38b6bb08d7ebf0e099d480157fcc7e88fda773f9684"
+  },
+  {
+    "slug": "hipertensao-induzida-por-anti-inflamatorios-nao-esteroidais-mecanismo-e-antagonismo-do-anti-hipertensivo",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "9be74b9de81e57dd4caa799de5b524752bb7a1ee99fd36aa37e4852418b8c231",
+    "record_sha256": "66618300016d82d94e0505e67bb2f0c568cd32ac3f142f34416249948617152e"
+  },
+  {
+    "slug": "hipertensao-induzida-por-esteroides-anabolizantes-androgenicos-mecanismo-prevalencia-e-rastreio",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "686c48b6c3627602afc0aa52d8fe0d700642f773d3a824b47cb536d19fad0b35",
+    "record_sha256": "de556a7a59b116ec35864158ad9af3f49e26f324e61ca93a0289deb27afb50a3"
+  },
+  {
+    "slug": "intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "14833394a284b54605c840f87fefe38b8baa300177070154b8b45e9b0a185011",
+    "record_sha256": "78076cf9e9282c53eba2992f81d88fe2ed0f9004ab2dda978193b9c3971b80ba"
+  },
+  {
+    "slug": "labetalol-versus-nifedipina-na-hipertensao-pos-parto-risco-de-reinternacao",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:50.981544+00:00",
+    "body_sha256": "3f96d8ba48d29f1c834aabe7dde121a41229aa1d52a892ae0b66fe9b29286a72",
+    "record_sha256": "b185de2eb6ac1c0723d5d6c2d3aae904956d2c068234a907189480afb485d025"
+  },
+  {
+    "slug": "pa-muito-elevada-no-consultorio-sem-lesao-aguda-conduta-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "79d81ec307e247a74e95800ca675897c11c14df13ac1dc9244854965392ae4b6",
+    "record_sha256": "66a822ffee153df22472ed120fc53b000498c0fd220bd0aa18684f002b8b1320"
+  },
+  {
+    "slug": "ponte-ambulatorial-enquanto-espera-centro-has-na-resistente",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c36901e2f5169eebe27064bfab8f4b516e7797e0a2cbedcd5e063869e8727e2d",
+    "record_sha256": "d09d8521e493aa6da3d8c74916da9d22e8820286aef9b27e8f925e032ebc7366"
+  },
+  {
+    "slug": "quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b3e0542b21511edc92cde6ad2bc796e05632345569ed8775aafbeee027f484d9",
+    "record_sha256": "04c0c6d7ab134270408d99f4103f2687176683bd5786fc8113fbb6224f884650"
+  },
+  {
+    "slug": "sbc-2025-versus-esc-2024-versus-aha-acc-qual-mapa-usar-no-consultorio-brasileiro",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b0695c476c353ebbc4c36764c8ecdb49de2a212b01ff9973823f5805b6e04ab8",
+    "record_sha256": "647de5bb67ad13adacbeea6e2b5dc4f64ded03bfd7bbbe05fcf1bf868bc847df"
+  },
+  {
+    "slug": "sinais-de-alarme-ambulatoriais-na-hipertensao-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "2ab614f84b155e1d583d63c546a7a2bb5c7234190ead4311a443dbc561dbc5aa",
+    "record_sha256": "74b5de5bb9de7d8cba35e06558e43bfbfb73eccb03870d0afac6246eab885bea"
+  },
+  {
+    "slug": "suspeita-ambulatorial-de-hipertensao-secundaria-quando-escalar-investigacao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "2108adfe5232ead994d447b39528fdc6c37ff159e396d566b3525f0a7251531d",
+    "record_sha256": "a50b0161e889022a90aa9eb85c24814ada4c59fb27454e7d25c2db653c0e2503"
+  },
+  {
+    "slug": "timing-de-encaminhamento-ambulatorial-na-hipertensao-resistente",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5b7cdbfcc5512e14ff7625a59c8336a7379b3f60a71daeb4f37fc3434c552fc0",
+    "record_sha256": "68776bcd1e4483594d474cda15e0fb200dfaa03eaea4710f6e4e01024881fdaf"
+  },
+  {
+    "slug": "tirzepatida-e-semaglutida-efeito-sobre-a-pressao-arterial-metanalise-de-32-ensaios",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:51.375330+00:00",
+    "body_sha256": "95180486aa92e66a30c677268b96a2cf791d5b159dbcb48991b1c98dbbcc339f",
+    "record_sha256": "6d6bccd4eea3e30b8510484793c128d4c3133d92a5220f268ecfc2640e3b014e"
+  },
+  {
+    "slug": "vicadrostat-terceiro-inibidor-da-aldosterona-sintase-da-drc-a-hipertensao",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:51.408692+00:00",
+    "body_sha256": "3133c9573ecdde3447ad3a9c84b65c01dac03c9a279eb35f2b84a3dd0a7b5ff9",
+    "record_sha256": "73afc4ce8fd97ec3670724a2e73ae0d97d9608df176fe2daa7e100861c5f8e91"
+  },
+  {
+    "slug": "denervacao-da-arteria-pulmonar-na-hipertensao-pulmonar-do-grupo-2-ensaio-padn-hf-ph",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:51.636367+00:00",
+    "body_sha256": "920e4ed34e4df22cdd9b81e65268a81149d3ff5de925a1fcda277f24352e995d",
+    "record_sha256": "55fe8fa6ac8c5542d79162fa8887e0296ca4756c50a4b9fb7f43b078e5e41cf9"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-hap-quando-escalar-ou-referenciar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5ef3998aa16e20deaee75d8c3fdf18d3fd3f79e2a3cb02d52efd5b6773869f0d",
+    "record_sha256": "e519dc879143b3e3bdb47789b9a1c28bb4ab2ad24d8142463cebba3feeef8600"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-sincope-na-hap-para-ps",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "939d3c9aa6e1777c6ca4e02729671a90bc502968b5bdcd155f9ad4eb6a33959f",
+    "record_sha256": "348fa0fc921bc7fcf3d64b08c89388d9b0b9f00b6fe66984f30bd5a51851bfb3"
+  },
+  {
+    "slug": "hipertensao-pulmonar-persistente-do-recem-nascido-metanalise-em-rede-terapias-2024",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:52.476487+00:00",
+    "body_sha256": "78915e9b3d9be7765e28aa172497256c858e38da377ca3ddb8e425bbea0595bc",
+    "record_sha256": "11b9fe003fbebb3f1cd355840e5fa6f215d7e10dab495d9769719d5c0bf12c48"
+  },
+  {
+    "slug": "imatinibe-inalado-av-101-hap-impahct-fase-2b-negativo",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:52.577678+00:00",
+    "body_sha256": "82dd7809d419e4144ffc6ee7488790d927c76cb34faeb8d40b857688fefc6101",
+    "record_sha256": "9b7ddc030d34b6d7d992a42cee3f7354d26442f623325d3e0afffd066b7dd2bc"
+  },
+  {
+    "slug": "selexipague-na-cteph-inoperavel-ou-persistente-recorrente-o-ensaio-select",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:52.864827+00:00",
+    "body_sha256": "b54dc17819439c077e43b9816be4605717f0b1c10431c228f185c9575f182b9f",
+    "record_sha256": "bf40ff8989d1a3e9d3ccd4bfe48789bbd14d49148cd3fe2ca6dff7361428c1fc"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-piora-na-hap",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "0782e8c6db6a292a9cde123ca8e8f7ac558f360740a9ed87f8cf86457ab173f5",
+    "record_sha256": "fb11a9b0d54eb546485976755aefea1851c6a54162746764d43931e7df0e3275"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-falencia-de-vd-na-hp",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "146a52259719d5ff25761dbe28eb87d1e641dbcb4158f67257d1674ffee50096",
+    "record_sha256": "545f9995a1545c47b374fa58f65ebde5f5299d9283c1cc2ce4e35820215ebfef"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-nao-tratar-hp-grupo-2-3-como-hap",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "41f5163ca884b50828570dfbbe27931127e428bc2be601fcdfb48f2b61c8a5e2",
+    "record_sha256": "57f6d8f31ec44e209730b6df69f5b21e0aa5091386a65244e023b69a8edf3b54"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-suspeita-de-cteph-quando-referenciar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "af5d241aaffad02d2f1dbbf200175619e60e7cec493ff55f7fb217422ab8addc",
+    "record_sha256": "b546d83b70771368a57f25d80dc6105b86ee5c5d09a6745f4d58b9424fb19929"
+  },
+  {
+    "slug": "ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "90211ac4ceaf1d92246dbbce319651c45cf98f35f59bee836aeea79befee2ef2",
+    "record_sha256": "d7a1397ca3c0b9b788cdfcfd62eb12086d2fb594727f6b1822e09dda7c5306bc"
+  },
+  {
+    "slug": "cardiomiopatia-por-deficiencia-de-tiamina-beriberi-cardiaco-e-reversibilidade-com-reposicao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "2986627c9c33fef6ed0ee0a2a8f17fa45cf55778dddb0fc5597ea5cb6950b55b",
+    "record_sha256": "18fe4565876c006e6807d184af0aacb82e5b686fd55f8a357f12b2b1943ecc4b"
+  },
+  {
+    "slug": "checklist-ambulatorial-encaminhar-ferro-endovenoso-na-ic",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "6d867eb690ddeff27c64e0a43968df0432f5706702600ba2b9cbece9359ae42d",
+    "record_sha256": "7e066fea7624102276b21a07384afdbc011b4b8c3677d7ee8eb3367cb390d06b"
+  },
+  {
+    "slug": "checklist-ambulatorial-i-need-help-encaminhamento-ic-avancada",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d28845b396a192ec3c6dc9300eb5cdb97e4f3af10c7ae94959b654cc4b203957",
+    "record_sha256": "1a5ced10bca8a471ff3bed243038e82b8954a2e1ad4ebe22a6d2db2be6b16d42"
+  },
+  {
+    "slug": "dapagliflozina-pos-infarto-agudo-do-miocardio-sem-diabetes-ou-ic-o-ensaio-dapa-mi",
+    "version": 1,
+    "updated_at": "2026-09-10 01:52:51.989620+00:00",
+    "body_sha256": "9e7e5d8bf433188fe01da560c17381e923bca91f67cf7cdb0f2513f516de4e58",
+    "record_sha256": "1a0ba000a33260e5c00e52c3e96c88a7d25ad3d486d0711c7c38081897cc3f85"
+  },
+  {
+    "slug": "ferro-endovenoso-na-icfer-pos-ironman-definicao-de-deficiencia-e-adjudicacao-de-causas-2024",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:53.984567+00:00",
+    "body_sha256": "3e1262de9692c63abd22f6184b43b80f63be579bda2b63a29bfc6823947135b1",
+    "record_sha256": "2808662ada818aa821d685c99ef79493e9747c97bcb2d67f542ecc5ad65def5f"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-creatinina-e-potassio-ic-drc-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "aeaa2f38d5c254bf5dae3886d9e3c748add5e36b7d738a7e472a3f19c902f30c",
+    "record_sha256": "cc804364829f61c97af5700bb9b2f201dc036377ddbf9fdcd19d429efb4e214b"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-deficiencia-de-ferro-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "42045e41046ed653bcde39d7435dacb783a0d76e8ad6198bcd8ada23bdad08cd",
+    "record_sha256": "2ffc2a3c9a51aaba29d6eef0a82a42f43300c3f16678fa6a573299634fdcaaea"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-ic-avancada-destino-centro-especializado",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4e2855946f1f807d82c551a0fb87fcb15436975e3d28fbe02655ad06a067d03c",
+    "record_sha256": "23c7260b9798b54fa49448e9e5edc87824db1e00bfb585c00a7d8596f79f90b4"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-ic-piora-progressiva-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "161fbe55947da36f2b561aa30e236112345d5740e52d5e839aef75d9c2aeae62",
+    "record_sha256": "6cc8309b21489ffcb602fad7cf2318c8618bfd6b920b7f6f254a1bbeeb344c44"
+  },
+  {
+    "slug": "helios-b-vutrisirana-amiloidose-cardiaca-transtirretina-mortalidade-eventos-cardiovasculares",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "f46729214523b7c8295a5949ed0518f9627892ef38419983d6289273eac4ba38",
+    "record_sha256": "8b4395d308f42dae8abf40e39db247640aeffb80cadb83d28833c4b02681df74"
+  },
+  {
+    "slug": "hiperpotassemia-ambulatorial-na-ic-com-drc-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "9aa76fa4809aacd8d6c590bd2402563b6538b00e50ce1948799f465ed618ecba",
+    "record_sha256": "819be3dc15202b35553ee9050e946b0fa9e60ee857c4a1b134474c19f6f575e5"
+  },
+  {
+    "slug": "hiperpotassemia-e-farmacos-prognosticos-na-ic-com-drc-seguranca-sem-abandonar-beneficio",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "471fc9efeb84894ef5145688a865c4d14e72d01b7dfabaff7cbfc59f82287e90",
+    "record_sha256": "2bf02acadc666555ee4b74e230c9f4dbe0c15bfe1e2062d1108dc66b37caa44e"
+  },
+  {
+    "slug": "hipocloremia-na-insuficiencia-cardiaca-fisiopatologia-e-resposta-ao-tiazidico",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "424f3ce7ce364b2e7bdc516ca692c2f73b9a89fc805ea7786f54beba865d7fdb",
+    "record_sha256": "ea27a9ed41294f612a1331106925d390aeff76a31fdc3912845b19a44f06e8d0"
+  },
+  {
+    "slug": "manejo-farmacologico-da-insuficiencia-cardiaca-na-amiloidose-cardiaca-digoxina-e-bloqueadores-de-canal-de-calcio-al-versus-attr",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "9a4737f70d38f236d06a054039e9894789714bef8c44480b975405ec0ea924a6",
+    "record_sha256": "784edae51ace882e487e36c4120614d2a5b2591d014717cd0b7b92ea04278770"
+  },
+  {
+    "slug": "ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d26e55de30e81f882afd1776acb513f94c7a66140c5119af53bf62b7bd7a3ffa",
+    "record_sha256": "b12962b86f8a4b30b58942799de00c812a26473781cb242611728da7ca3ac597"
+  },
+  {
+    "slug": "piora-de-creatinina-sob-gdmt-ambulatorial-quando-encaminhar-nefrologia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "1cc3271cb1b6f209ffc9a822a7201e4dbbd35d6b167bc49c2b54fd853919a8df",
+    "record_sha256": "d40634e367e6e2dc4ded9919bf7fb0523840405d9e816d56ea226c8de677a75e"
+  },
+  {
+    "slug": "pos-alta-de-ic-checklist-de-alarme-nas-duas-primeiras-semanas",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4fe8234ab48bd5d8f0ae4c3de2d39a8d458d7aae85df9c558427121bec3e0a58",
+    "record_sha256": "ec2512e9c6c58b604beecf22e2dfc525433194f6a17e1735f413b37035879005"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-descompensacao-de-ic-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e429fcf4907e8318c0a027a0ff00d3044e8aca6dee5ddcbe78e8ec0d0bc031d9",
+    "record_sha256": "debcae079e461f8fbe95886f8c883e227810a1961131c2593963a704ecef38c7"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-deficiencia-de-ferro-na-ic-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "fb557dbd819d72ac03c7d045c4048b337cdfc396be9d65dc62644ebb25f4e4dd",
+    "record_sha256": "b2b32338627bbf673e036796ee629d09a93ac22d6179c87e66442be25f50db95"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-ic-avancada-quando-encaminhar-centro-lvad-transplante",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "48985b6b1aefe1342f220d62d60e7f1907a5c42abba0b6631e1da1b23903541b",
+    "record_sha256": "737cedb34b32ffcadd7c977f5f705485845a4e906f662f3678b5b277d3cb67d7"
+  },
+  {
+    "slug": "terapia-de-ativacao-barorreflexa-barostim-na-icfer-beat-hf-e-o-ensaio-confirmatorio-benefit-hf",
+    "version": 2,
+    "updated_at": "2026-09-10 01:53:56.756032+00:00",
+    "body_sha256": "2a0b82babef8dfa46e46652232cdf4f9a874fe9708cf021567251e295d2bfa20",
+    "record_sha256": "be2be83281cb0ec32364bb8af964ae5050b860e763a428981e0a75ce0255332c"
+  },
+  {
+    "slug": "terapia-quadrupla-icfer-doenca-renal-cronica-avancada-e-dialise",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5a7d10ba5942813294526c27a8fc2f46c7dbe4d439d2786e4318a1e365b41209",
+    "record_sha256": "07d11aa225dd5c90dc06e0f668a70ea304d10bdbb135f84ce7a2f68a96a4b40e"
+  },
+  {
+    "slug": "airtrip-anakinra-pericardite-recorrente",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "495e1a8363854c99a67a643f39f8c0f27cf6ce6e3c392b626ba7cb7f37888053",
+    "record_sha256": "7ecfdbbfa73fb2a8459c286932bedb08a4e1130c9d08d0f8335b463410370969"
+  },
+  {
+    "slug": "constricao-pericardica-checklist-ambulatorial-de-alarme",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "270ab37d22d9793f501014c98908032c51281c16207826b18bc643c6c6586a2d",
+    "record_sha256": "85b153638ffac484551c6467687aef6d09ce8e3b46c7861470da3e7e4f1234c4"
+  },
+  {
+    "slug": "copps-2-colchicina-perioperatoria-sindrome-pos-pericardiotomia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "1d73dacefa1254b87d4b1085de3aba9ce9ed9ac44511f67ec7bbb84980a7a20c",
+    "record_sha256": "a2d16d0e7caf6f6e58516999ebe8e61adb0f391df6474cd46795c4dad85e8b80"
+  },
+  {
+    "slug": "copps-colchicina-prevencao-sindrome-pos-pericardiotomia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c9171aef46f63a69744750b23eb157d13e4bde1eb6ed5f2944a72811c6d9aff5",
+    "record_sha256": "7dd0ae4b409eb6b67f695bdfb8ac79c882dfc77ea5ced44c14b7173ccf1af1dc"
+  },
+  {
+    "slug": "corp-2-colchicina-multiplas-recorrencias-pericardite",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "6876bef8ca4a880287d10107ac0b0df833dfaf109e403d9d4c87efd1cb85f645",
+    "record_sha256": "504069922d6bdb317f8cdbcf01895cfdeb6e4f0eae8ffc6fc3cbc559d8cf9655"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-miocardite-risco-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "499304b07438d34dde452b8ed08fdc3a544713f123bf0b0fbbd4bc6d10476f39",
+    "record_sha256": "ba3f14ddd1eed07394a1d6a214224c3446aecc7db0a07cd14d46062595e3be75"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-pericardite-piora-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "581f562e89bbbcf6af64ed9a2068ebb624efb76856d0885e39dfa5d4cd229b8b",
+    "record_sha256": "42b8897e9e1c12718f994fbcd5eec0efadfdf357f9a763b996362d30609e2de0"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-suspeita-constricao-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "8e8e0708b6f8d0527098f06fffc9db642b5e3363fa7bb7981f4e23dcd7bc98c8",
+    "record_sha256": "b9164eebe44c037ed9ca7b829841273082418e7c8f26fe982ab05720c96947e9"
+  },
+  {
+    "slug": "miocardite-checklist-ambulatorial-de-alarme",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "56970968a96dddf5f880ff933448684237bb99341256b791fd0318a76c0e137d",
+    "record_sha256": "8fdf3b4f3d2bb17c7355874293a627f1c0fca3bcfaa9c95926242353fbcb4a1f"
+  },
+  {
+    "slug": "pericardite-checklist-ambulatorial-de-alarme",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "75f8b9577b1181376490e46a4118378ef430a419176c78b481b90f507ff46a87",
+    "record_sha256": "b8952b1e78b251b0a6d1c730b42497146d562de69c2f8ed1efdd9f78e229eea9"
+  },
+  {
+    "slug": "pericardite-recorrente-esc-acc-2025-fenotipo-e-escalonamento",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "f7059ead2f562cfe9b6ee8e7ab7f54e6dd79bfab2a1488445ee0f72ef0738c10",
+    "record_sha256": "f1deca12bdbb2260a7b805d46f8a7adbf3f00cffb0026d1b4b3bc229c2e10359"
+  },
+  {
+    "slug": "rhapsody-rilonacept-pericardite-recorrente",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "78cb2874a48b0bdc042e349b2aa42b8bdc0dcae7283ac506b995f5cc20f39f21",
+    "record_sha256": "84c645d39a92bf188f787beaf2168da555526c5a1aae5382ed395e44d16c4758"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-miocardite-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b4a2bc6ac1d2cace1ff3b51bcec38bfa2babfc9719d56bb475e8a6c2198cdeff",
+    "record_sha256": "b9c8190953041d1f32d4e8eff572ec049bb1529fd136ee348ede726a5bb9fb0a"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pericardite-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "24c4f55f3ebcfe3785dd37ac6e5a4682bf7b204cfc01e75c7c04cce8eb85b529",
+    "record_sha256": "88556c604e6c8e583f9d5b9ca53d15f7aca851a85f18c6be38f067dd8a3a0cdc"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-suspeita-constricao-pericardica-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "cc27940a2fc15420cfaf7d87a68d811b4188ccdcf4842c6c8f76aa1c033088f1",
+    "record_sha256": "ab54a7c4cb1cc31b430d57800cff66293e596287867a48ac50b597c36187f5a3"
+  },
+  {
+    "slug": "sindrome-pos-lesao-cardiaca-pcis-esc-2025-diagnostico-prevencao-manejo",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4ca506ee2b2a8aef508f1e60f6101a4f366bab22b73cf2f7d5cd8bccf07a194e",
+    "record_sha256": "9afb5dd628a57cc7464d98617510686984595abb719be45445e9da0ff0108e60"
+  },
+  {
+    "slug": "contraste-e-peri-procedimento-na-drc-principios-de-seguranca",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "475bd74183e5d11334185a9ca72c0c67314127f8cedcbfedc5aa8422e93ce9b1",
+    "record_sha256": "340dd23d0e3b6294b2cfd4b5eacb65626a3c86d22f648454b0eb862859870f83"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-risco-cardiovascular-preoperatorio-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "fe1f5be2ab7894b7b023240045811858b64cef0c1b4ec510b0ce9b1b1c76201e",
+    "record_sha256": "54b2007bf461ab42d23f86d9c7696044cbe9d28a10bc2c76e29157037b4d4ed3"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-sintomas-cardiacos-pos-operatorios-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "7ec0ec707d22480f799d8babc2da265487b638fad59a50773235c55851eb7ae0",
+    "record_sha256": "763e0a376690f35c1070d8f6b99c5f3ba4f2bf1058e38f4e9a83de0f98a5a1e4"
+  },
+  {
+    "slug": "mins-apos-alta-seguimento-ambulatorial-alarme-e-retorno",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a8a9ac72e39fc09f29064244391fd44d3d503db4af733c32dadf7b7fb933a33a",
+    "record_sha256": "f17289f37d9d9f0a6886d0709c16bb0b743e99c78dd7ab9f2266f57e1602b7e6"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-para-adiar-cirurgia-eletiva-nao-cardiaca",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "cfc29ab07235af4784a355ac2a2c0ec61ed4501e35b2b1f0e1d6c23c43f61b13",
+    "record_sha256": "299b8a118a3766cc0d2074ecacb55dbc503caaabf0eb1975cb5813296d180f1c"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-sintomas-cardiacos-pos-cirurgia-nao-cardiaca-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5225c22b1d3537416c399cadabc2d22e69bc7cb480387cb97e81c2ce25fdc0f0",
+    "record_sha256": "76f3e7c5aae7fc337512fc00baed417a9608d217d0172b8268bdc9447b589c46"
+  },
+  {
+    "slug": "stent-coronario-recente-e-cirurgia-eletiva-janela-de-risco-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a1cb8f3bedd7b435ffe76592a53d04f37776b3fdd2689ffc2301c36f9b6eff40",
+    "record_sha256": "db349858a73e71797041c7ffed05e39d0229ec63ddf248f2c820110fca3e1dd6"
+  },
+  {
+    "slug": "checklist-ambulatorial-aos-conhecida-adesao-cpap-e-alarmes",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "263bd78432f7ec54a62e44e04139e5ebdfcabbcf5bc55ab3206f225dd355ac4e",
+    "record_sha256": "b13841de98aba8b961d1b7c1078e79a10a75e2b1578b3e19698070103feacdd5"
+  },
+  {
+    "slug": "checklist-ambulatorial-encaminhar-clinica-de-lipidios-ldl-refratario-hofh",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "07f335b5cd671c10a919484bbca24d65ef116e61ce4476a2202d1f5064d6a501",
+    "record_sha256": "0d389fc9e1a103ee9d61f203ecb775e840747f12dc8e4a1657ce4f8e4bc7d432"
+  },
+  {
+    "slug": "corcal-outcomes-escore-de-calcio-versus-pooled-cohort-equation-para-guiar-estatina-em-prevencao-primaria",
+    "version": 2,
+    "updated_at": "2026-09-10 01:54:00.015779+00:00",
+    "body_sha256": "7a8f15f86ecfcb9433b441e043519d60940bcb245e03ac9cea45cf06eae26184",
+    "record_sha256": "e088fa7e074137d9a17e967546bb59566548bec26e5512b87158362062896727"
+  },
+  {
+    "slug": "estratificacao-de-risco-para-exercicio-na-reabilitacao-cardiaca",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e76d4c0915623f85678038d1ef4b1c0d067b521ae2322a1c0d4f1ed12280d46e",
+    "record_sha256": "23204fdb1dab017c195e626e67df806fad74dbaf3e26e655abaaa84eb896d6d1"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-aos-rastreio-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "1602abb53744a96cc5b6724c25f280d5902245de6dea0158fc21d312d3e8ae80",
+    "record_sha256": "af9c3368cea33665ba8aa6c2e15386d5d51db7c5cac1ca6a4297584d3c14f7d7"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-cascata-hf-destino-e-lipidologia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "545bc2de6924130f06bcd7e8c320e0800a3f221fb7e93866c57a3025d1d3b672",
+    "record_sha256": "7cde8bad372501d2683043e1381e93defec75de97581aecc71c7c4843a96e2af"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-sams-destino-ck-e-especialidade",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5fa93a544edcc61cdda7c7175b2e4a5826ee393f79279015f0b4ef17f177065c",
+    "record_sha256": "1f091464a09eb8eed41215187ad4e8f96c607cb97ae7deb759b4433613457e8e"
+  },
+  {
+    "slug": "fluxograma-destino-modelo-de-entrega-reabilitacao-cardiaca-ambulatorial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "442fa67fc95af29d66b23081e74bf6bab7db5f18f77172d635b5dbb5d038c971",
+    "record_sha256": "4100c3fc1c2a2f7f0542caaa7cd23427f85c065eb239c9d8810be44c6607b623"
+  },
+  {
+    "slug": "fluxograma-sinalizadores-ambulatoriais-intolerancia-estatina",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "3e8aa432ccca530220e3a415e17651be57dede1d884c2cc2b447b400d449f35b",
+    "record_sha256": "b111ddaf465554ca75d21044dd27bdc80e3e2c1713f3b180826d09b37aeeb7bd"
+  },
+  {
+    "slug": "hepa-pressao-arterial-jacc-2025",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5d9ba73a378360cd2e5e589145523162d9a6d86f90d944ef6735ce66ca058555",
+    "record_sha256": "05a9671bf0c45736b4816e2091835227aec5313b3f8a556a317a56711a91cd1f"
+  },
+  {
+    "slug": "inclisirana-como-primeira-linha-o-programa-victorion-mono-e-initiate",
+    "version": 1,
+    "updated_at": "2026-09-10 01:54:01.444279+00:00",
+    "body_sha256": "89645c40cb292b6779639a014cd8b5c0e44616094af280928a58655c3b8af417",
+    "record_sha256": "6ec786e20ed2ef3bb5d897fe99ebe1229d998bfd66c33ebeb85283be78f42be2"
+  },
+  {
+    "slug": "inclisirana-sem-estatina-de-base-victorion-mono-e-difference",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "dc2a173f8f83a4c25b79f7036caee279c87a5e8693db4badd61a46f233522cf3",
+    "record_sha256": "d9dc85979fef21dc15530b99d7d3f55c4a77ecedd498cb72b88c03356cb38155"
+  },
+  {
+    "slug": "indicacoes-contraindicacoes-e-fases-da-reabilitacao-cardiaca",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d1aeada0f831bf37cac6dd44d96add637dff7d29564bc43b46e4da119e5ccb60",
+    "record_sha256": "f4e7388c609a6e1dee5dc0395da2ac082ecb77205f032af5e94e26ddf8b52889"
+  },
+  {
+    "slug": "lepodisiran-e-fosfolipidios-oxidados-na-lipoproteina-a-analise-post-hoc-do-ensaio-alpaca",
+    "version": 2,
+    "updated_at": "2026-09-10 01:54:02.238203+00:00",
+    "body_sha256": "9fed480153e293954827e62bcb22a0b711363e1db12317f739dbddbfe61f680e",
+    "record_sha256": "3fa9ef493d5dcea77b2c909bfd2daa2b817ea27200cf6f56eb9f7ee19cb3d05c"
+  },
+  {
+    "slug": "lepodisiran-sirna-duracao-estendida-lipoproteina-a-fase-3",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "00120d0964e2064fe3a50f9e6a973da5d7400f6a49a26312b76b8010f0a8446e",
+    "record_sha256": "0b98dfb0d1eff565217c4bb22638a9f8291adc50309269e60a6367328fd45625"
+  },
+  {
+    "slug": "lipoproteina-a-e-estenose-aortica-calcificada-do-mendeliano-ao-ensaio-episode",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b1617865291cb6a421415301fb3f5f43ae0533fc1175fda97da0f35ddc8b9884",
+    "record_sha256": "d80bd443d68b694a920e6ec9312a1fa5f3768ed09c0c91b221ea5bd535a60c28"
+  },
+  {
+    "slug": "lipoproteina-a-horizon-pelacarsena-nao-atingiu-desfecho-primario-de-mace-topline-2026",
+    "version": 1,
+    "updated_at": "2026-09-10 01:54:02.547387+00:00",
+    "body_sha256": "5da9bb969778ea87376adb7199c0dc692a491c600beb9458908978f17ac624d2",
+    "record_sha256": "097465a65874cc537f6287eeb80b9ae686d962f3bca71a16a0637308fece51d2"
+  },
+  {
+    "slug": "lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "d0d9600af817359bfb1c95a4a1e881073e67e091653a7f8b63e0aa25bcb7fc99",
+    "record_sha256": "38707b8e2108bdd6e8e23dbbe94aa46aa6bca607d85bba4f054d6a741a2db143"
+  },
+  {
+    "slug": "orion-4-hps-4-timi-65-o-desenho-do-primeiro-ensaio-de-desfecho-cardiovascular-com-inclisirana",
+    "version": 2,
+    "updated_at": "2026-09-10 01:54:02.892092+00:00",
+    "body_sha256": "2b8e30b1ab52fa5419719deeb933e0d64084c355245e50674475049e5cdc4437",
+    "record_sha256": "c3a0e3b0259e9486322f5dfa8a016e2b25486d2736bad5ab993248570f3c2aae"
+  },
+  {
+    "slug": "poluicao-do-ar-prevencao-cardiovascular-esc-2021-aha-2020",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e4d1cd769f2bd902e14e11fd83aeb1adb25d7ab6d586d357311e9befdcaab83d",
+    "record_sha256": "c69ca11781ff49a18fe3e1f8c4ee3533f445066f0903d1589f3cf20a21a38cf8"
+  },
+  {
+    "slug": "poluicao-pm25-mortalidade-rio-abc-2026",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "84825c205a6a33e2b299a167990b1c09f96e4027c47582f238c838e2b7397513",
+    "record_sha256": "774f1fde6892eec23282f4ff3f0f9650e6bbab4cf8e8764700465674258b4d37"
+  },
+  {
+    "slug": "prevent-escore-10-anos-aha-2024",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c9c5dc75619148bf04e91bfd579b1009e0a5a2c381a71fe9bc447b63d3b49faa",
+    "record_sha256": "1c0ca0ec75b1341a218fb45cea1d1c83ddc0221ef413b32df8f184480f3590fa"
+  },
+  {
+    "slug": "quando-pausar-o-exercicio-na-sessao-de-reabilitacao-cardiaca-sintomas-de-alarme",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "a0b727e2cfa62ddc6a84e62afb89088451ec4267299d00132999b0e9b5a00342",
+    "record_sha256": "0182da8309c4fd4be8b5ab94bb5e298c78859748e8fff20049980a0920d39e1a"
+  },
+  {
+    "slug": "reabilitacao-cardiaca-domiciliar-ou-hibrida-quando-escalar-para-presencial",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "8470f44bcc9c50cb81d6f1334d38169dea7d9093891a6170c6f8b2f33416c09b",
+    "record_sha256": "53f1f41d2c6a9fbebd4acd4b0591a817f0b8686a1f82d7218b9f4dea14724184"
+  },
+  {
+    "slug": "retorno-ao-programa-de-reabilitacao-cardiaca-apos-doenca-intercorrente",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "31303ef42aebc948ce072a33869bf5687192150c6778236c7e7f2bf24ebf760b",
+    "record_sha256": "9bc8fce0686046a11719171f0fc0433e7cd9bbdd9fe94f51cb5dacc14bb704c1"
+  },
+  {
+    "slug": "retorno-ao-trabalho-apos-evento-cardiaco-liberacao-ambulatorial-na-reabilitacao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ce5c9094591655ead6c48c3f76893bf1a60a21c7150fe121463081358ad495c7",
+    "record_sha256": "ece8818dd4cf7f7d9c926e0d465ef9a4f9af77cef421872b048df1e33c08d61c"
+  },
+  {
+    "slug": "risco-de-abandono-na-reabilitacao-cardiaca-ambulatorial-sinais-e-retencao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "8696b110b70a70735bdfe32c5a349147e9b6f83068e4182a6a51c056ae292b20",
+    "record_sha256": "96277037453f54e152b48f19c7b6847fc8c7b920302dd0c097f0d9d2e91ec842"
+  },
+  {
+    "slug": "sams-no-consultorio-sinais-vermelhos-quando-ir-ao-ps",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "dd6473b4374f1b13cc654c5bc390ada00ca670b322aa8f73751a103b9771edc6",
+    "record_sha256": "54effd56345387580f10787de80d142bdef6fb4b6c4cc378db0c83727c56241b"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-aos-quando-rastrear-e-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b1d44b62938bddf6e868e5d2b2b50ba90ea3b71dbea37a1b2892ad608b4c8bbb",
+    "record_sha256": "1bb8f1c106c3296adfaad18773e2e1e5b04572c67487d7a55cb2287cb65563e7"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-intolerancia-a-estatina-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "fbdbde2f40f23a9dadfe1f35fc734f99faeadc00905e969e4bca989ef6258dd5",
+    "record_sha256": "a93d1e7478ce95b989a2fdbe71ffdb9e9eb0567e26e1e27856453dc1822cb42e"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-rastreio-familiar-cascata-hf-quando-iniciar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "cb014e17453600d5e16e1747b68898a13f55055698224ac3086508265bb39fa4",
+    "record_sha256": "d276d39e27e18e9b8eca9099e111b0369ae9d8493760a5f2a50d36703c60ab50"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-sams-quando-suspender-e-escalar-labs",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "8eb9e6ef7f343269a8cac6abc2e20718716ec447f7ae93cd93a7630f5ace35c3",
+    "record_sha256": "a9f0cd6e58bf3191adf92ed556dfef65de6334406df9cd29203ae304c12033b1"
+  },
+  {
+    "slug": "umbrella-review-poluicao-cardiovascular-2022",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b22b547c15fae851926095a57de0b8cf6af6ceedb748e0994904601dd2f40e59",
+    "record_sha256": "907eab916e1e4492828ab4b3566db4a9d5a0b314284206dda64a33e6313dcb91"
+  },
+  {
+    "slug": "checklist-ambulatorial-alarme-crise-psiquiatrica-cardiopata",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "71337406803d5a31121fcc3ff94dff5f1a3e6e17de25b98498c05fe9ca069df0",
+    "record_sha256": "5fdff4292cadedb4fc44918c98d5a6a7a5b87d8e126555fcbe8d7826b30522c2"
+  },
+  {
+    "slug": "checklist-ambulatorial-alarme-qt-psicofarmaco-cardiopata",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "04b6181bbd053264e531c33bb2ae3cb2e6189d88279b2ac47c1e99e9fe32d3ee",
+    "record_sha256": "b07771bfc8f2877cead93282a7d74b6cf992603f8c16c99594e8d46b00059436"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-crise-psiquiatrica-destino-cardiologia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "554b3a4ec863794c49646e9c22a11aec813aa1ccc38e3cddce51487da91e54d2",
+    "record_sha256": "ca8507d24ec4b461fd3d4276b5be4c1bb8df1aa0e248ddd243d62dc424d20ba9"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-qt-psicofarmaco-destino-cardiologia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "0d44fa2d55de01738d67b0950562ba88dc21ecbb67c24e8f99d25e96f265d60a",
+    "record_sha256": "1d348ff46177e6a602c0c53df87f797a66d6d6825d8908727d5fade1984f1692"
+  },
+  {
+    "slug": "isolamento-social-solidao-e-risco-de-doenca-cardiovascular-incidente-metanalise-de-wang-2025",
+    "version": 2,
+    "updated_at": "2026-09-10 01:54:04.160336+00:00",
+    "body_sha256": "3b64d29f8da2ad1b26773d937ca251cdc347bd6e2f878d32e450d17e98d9e99e",
+    "record_sha256": "72426f48913653512d1d04c644bc03af29f865a3f066a210a95711678d684025"
+  },
+  {
+    "slug": "psicopatologia-pos-traumatica-e-risco-cardiovascular-coorte-caso-controle-dinamarquesa-de-sumner-2026",
+    "version": 1,
+    "updated_at": "2026-09-10 01:54:04.292221+00:00",
+    "body_sha256": "a53f8f06305441dc8e8a3a6119b21a04d98b0e8a27ab4bfa256163b1413d0653",
+    "record_sha256": "6776b66d51ab17bea7a64e3e5cd5d63aaf936faf8b619ab1d0555c9c5037fb88"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-crise-psiquiatrica-no-consultorio-de-cardiologia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c05166180fef87009c121b2ef02812e119c1de3e41b54ce1cda1e10278dfc95a",
+    "record_sha256": "081e1f00c99ac2d38427db5887c47e71ecf6729b00e9f9b23368dbd848bb9ed8"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-preocupacao-qt-psicofarmaco-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "859d4af56bed58373e07499d458f02911c52584abacfc27b7e3472a077e028a9",
+    "record_sha256": "be1f7e27d10a6916f424c8df7ea446da6219b6fee6448d82a4f8866ae3b3af36"
+  },
+  {
+    "slug": "candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "f8eec21ec3b32d675667fc3c6a6d580a901c6a43013ce620625ff7e1193f87c6",
+    "record_sha256": "3244ef39efbaca4d9f7404e579ed8b1c5f15741a178e6ade1561622e6a273fd2"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-sincope-pos-avaliacao-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "be758aa4b10f20174d344842341c7a70683e72973dc22c41259c26e025b9f20b",
+    "record_sha256": "3e63461fd786f592d8d660ea3fa3adac2a9b0d1e7410dd169055a4d9c5214f8b"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-sincope-recorrente-eps-versus-ilr-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "33ca66860b23e9a078236f6a4e04c2e808bfd7620c21842233193361504221b0",
+    "record_sha256": "c8b7fdf1caf4a95dbd0fda2636d3081e05928e756760f73541266f3115f4e3a7"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-sincope-pos-alta-quando-retornar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "fe311dd78c602ab28643f907a281b2c982245bacc18dfa85ef782d2267488b2e",
+    "record_sha256": "a48180fe4af51f082be3b015f221f82b1cd80b4252f57d6bf117d2a3120e4c29"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e322d67c2267a942aa40c5254da3f9979fd5829632c0c2f53dde2625d92d8ce5",
+    "record_sha256": "6ca9f09302bb4aaf47e6b759b58a29f7c87348d8ef5f0ceb5cbce9e2d88eb366"
+  },
+  {
+    "slug": "sincope-gate-ambulatorial-retorno-atividades-trabalho-direcao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "325d8924eabae5f5f0111511962b5d8bb4c946685edb65038b3b1095a0376dc7",
+    "record_sha256": "84ec4f3e1d2c566d2566e35adf9248b88861cde3cb78d9f3cddaf120f0d374dc"
+  },
+  {
+    "slug": "angiotensina-ii-guiada-por-renina-na-vasoplegia-pos-cirurgia-cardiaca-o-estudo-piloto-de-munster",
+    "version": 2,
+    "updated_at": "2026-09-10 01:54:05.352496+00:00",
+    "body_sha256": "119288df5602077fde531aec92f7027fd40c133d255955ade9e2f23bd0012f95",
+    "record_sha256": "8c90aea7ac679ab2beca365637fa5fb666bb088e37ee534ea766103422a89d46"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-pos-tmcs-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "b8e81316ef926b9aa39a10a5ae6c585ecc4a46f16c551b0fa35eb89b87a815a3",
+    "record_sha256": "b99ca7915eed456dfcd31cca511f87ab7719eecce6dd3df3237ddf7155456fa6"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-sinalizadores-pos-uti-cardiologia-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "93c8a7cac2d804f55403805a8e05f7186c6e77e7772ec7dc42c58d3f5510a8af",
+    "record_sha256": "7c73fea01e765d67aacaeb9ff4adb54cf09e57d0fcf36f8ac020ea2d54268485"
+  },
+  {
+    "slug": "hemoadsorcao-cardiopulmonar-em-cirurgia-cardiaca-para-endocardite-infecciosa-o-ensaio-remove",
+    "version": 1,
+    "updated_at": "2026-09-10 01:52:51.989620+00:00",
+    "body_sha256": "f8cbac02938c6351c9aa8d409fe5758d086a57dff8827e646003cf82c50eef19",
+    "record_sha256": "21f5a2ddc5f2f3cd79d33e7b455532ff3bfe976e22504266a578d0338d1d5b17"
+  },
+  {
+    "slug": "seguimento-ambulatorial-pos-tmcs-ponte-temporaria-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c7816a0dd7e8e4f1a161074a1251e7faec238729672dcad807ff107ed50d026b",
+    "record_sha256": "f4d3aea9e6586d067aaff0471bc2fdcdeda71a3dd14df0879e15eb9c61c23070"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pos-alta-uti-infeccao-dispositivo-ic-cognicao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "cbbccf3d3dd1c3a188df058e65002d9c688872fab1088ebfe4674bc47f62665d",
+    "record_sha256": "73cfdb0d6e64f8fb2e009eb14d4aad1a897c9d7732ed40d8d20d616e1d316e13"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pos-tmcs-sitio-vascular-ic-avancada",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "5d1c875ae9f44c63603a9d7c7a038660284c74bf50a8aea0c3dbabe4abffbadc",
+    "record_sha256": "91f0563f4fd695e949c28c61be6ae259f9182a3f98d3e645da52c209cdfbeb49"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pos-uti-choque-cardiogenico-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "dcc138606deab47a573143ee066a72a44351151714f4b3628c8e04c97f4d70a6",
+    "record_sha256": "229b9960a4a12681940a0de933d335b9c2b60f57079266fbd84c497d65eefe6a"
+  },
+  {
+    "slug": "transporte-intra-parada-precoce-versus-rcp-prolongada-na-cena-para-parada-refrataria-o-ensaio-evidence",
+    "version": 1,
+    "updated_at": "2026-09-10 01:54:07.506055+00:00",
+    "body_sha256": "b63818fa818503bc66b5bfbacf5140b824da8b53d64a32857340ef7bdd9b3b5f",
+    "record_sha256": "c32b4e415b93cc29f8d2e0e5eb82bf54bb7bc551177db2cbc4f001c939cf8967"
+  },
+  {
+    "slug": "acc-2026-doac-prevencao-primaria-e-secundaria-sintese-corvia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "25983038dc8759517dcf85d1879aced8996596154632628d548bd1053b45d4e9",
+    "record_sha256": "995ff52ae5c1a87a1a7bde89de1825f789e08f305f912a84421a6fd66cb3a7ac"
+  },
+  {
+    "slug": "fluxograma-destino-ambulatorial-tev-associado-ao-cancer",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "1c4b6f45a0cb156034440a4eff42b6f9d94bd99cda1571e4e4176e122d22604c",
+    "record_sha256": "128a8d668f6077bafb4ac47aed6a22a1026b38cd6142409d2757728ccc12c8a1"
+  },
+  {
+    "slug": "fluxograma-sinalizadores-ambulatoriais-tvp-destino",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "0fe571ce3eadfc50e6c7e87ece96bacb9a5f3f13e2232e26b7ceaf7d052a9e25",
+    "record_sha256": "d45f0430802f6bd1e2f36b43036c4f0df338de93a938a592fa25503616638984"
+  },
+  {
+    "slug": "roxi-vte-i-e-ii-anticorpos-anti-fator-xi-na-profilaxia-de-tev-pos-artroplastia-de-joelho",
+    "version": 2,
+    "updated_at": "2026-09-10 01:54:08.508473+00:00",
+    "body_sha256": "a64a59ecb02f312ee29f4de2def2a4f0fe5b9a3d52fd9faa93af7284f427eb19",
+    "record_sha256": "1fbdea26980baa976ecba5c3cf491d909ad1b83151db9da18b5c72fc986a07e8"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-pos-tep-quando-reencaminhar-urgencia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "028c6f8aacf71257fd9bcac9d224d948172966862f551bd46bb8ceb996ee2f95",
+    "record_sha256": "7384b458cc74b913e62f746f7d6ca3ea177d99455d913ebf77b4406ad3b3d6b9"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-tev-associado-ao-cancer-destino-ps-vs-oncologia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "897405de7d949a3f609eb8847dcc682cd64bfc55926d97b91593b1981b199a18",
+    "record_sha256": "538368d7c086210c4c0ec3865731f47f650e24554db7234376a958eb5e9711bc"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-tvp-quando-escalar-urgencia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "30416a958b662d6e4305408c5e19a5fe18b66086e70bf0b81b14ac8ae5e66cb3",
+    "record_sha256": "d87819f838e20ae0018a54e73bdf2738dc417ddd22a35b01e779c693be892fac"
+  },
+  {
+    "slug": "tep-subsegmentar-isolado-anticoagular-ou-vigiar-stopape-e-metanalise-2026",
+    "version": 2,
+    "updated_at": "2026-09-10 01:54:08.653629+00:00",
+    "body_sha256": "57b727b36e37e60a5924f2802f7cb9402171248f9e2d0e95371277412154048c",
+    "record_sha256": "0d8d4b7729c70eb1c69a82644b7737e5bcf1345a06ace4947314c4b95cf4fac4"
+  },
+  {
+    "slug": "tev-associado-ao-cancer-quando-escalar-hematologia-oncologia-vs-urgencia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4759c2fed33ba98f63e08758970d58cc8d059d2657b039eb45ccad9154937296",
+    "record_sha256": "e5da1c113eb4d622444f0aaba4855da7b38d0b88044585de59fc7f0c7976550a"
+  },
+  {
+    "slug": "tromboprofilaxia-farmacologica-pos-cesarea-a-lacuna-de-evidencia-randomizada-e-os-ensaios-piloto",
+    "version": 1,
+    "updated_at": "2026-09-10 01:52:51.989620+00:00",
+    "body_sha256": "fe1059e975f57606870ff0253888641aa306b61d2b83698073f117e8655f27eb",
+    "record_sha256": "5432552681a28b4e520e5dbbc792c0395ce6fd1435e5277c6ba9d8ec8bc527b3"
+  },
+  {
+    "slug": "tvp-confirmada-no-consultorio-ambulatorial-versus-internacao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "ac22c46e7e3486b8e5e709fa08df2c5691b98be2d3c70ad18072ad7bb69b330a",
+    "record_sha256": "8db4d3ab7077bca49627458d76055e446511ffc13ce110a733d8cb16ddeb5952"
+  },
+  {
+    "slug": "estenose-aortica-moderada-com-icfer-tavi-antecipado-tavr-unload",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "2d75bc388ba160c4ab1cfff3a25ed3353bae7fb9cbdd3feb50cca02d3e8a8d2b",
+    "record_sha256": "4da97e74e57786b6dadc0cd1d8dded648bc690e9f5d9917f60a8097ff477a020"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-bicuspide-aortopatia-e-ea-assintomatica-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4141c8072e40ab97a60be12f448fc2f61d52448140c2b7b9b66e58efeafa82b2",
+    "record_sha256": "42a4816f7756f54b35d173cbd378dccf33ba1e60bc34646f525e202f591c1d82"
+  },
+  {
+    "slug": "fluxograma-ambulatorial-valvopatia-quando-escalar-para-heart-team",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "880bdf573844ce4d1660ddb4d75e1817f6b206439e4de8b92c5863055b634f46",
+    "record_sha256": "dcaac936f5124e93eef2117d4f01480a84df3a8e6f2c3ad4504081a84a35b144"
+  },
+  {
+    "slug": "regurgitacao-aortica-aguda-emergencia-endocardite-e-dissecacao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "18cabf3494e68b0719ee42b9c6580f85501c91b5923a4131737de4919a9b4fff",
+    "record_sha256": "2e95e58079c3a72c7539e0030e25d2f59e19ce2dbd77c4d35570d8762968ee0c"
+  },
+  {
+    "slug": "reshape-hf2-teer-insuficiencia-mitral-funcional-moderada-a-grave",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "bcf2091144e51b328efce09a93a01feba063240c870fe6a57cc2631ade304440",
+    "record_sha256": "89af29825c54d6b80c2a39fad711bde7b56c23ac5786c72ae9638c279f975304"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-aortopatia-em-valva-aortica-bicuspide-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c80673550fe2c60f4af9bd87212847350e2b6bf39aa4a74a98bcf017f9cce45f",
+    "record_sha256": "33a9bc64b86c0b85d3f849f80c5bbeba8fc3ef4cb14c8f51baed5f305a001382"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-disfuncao-de-protese-valvar-quando-escalar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "626d2e4da138eee1377387e4801933bbc917cc7585dbdf13b4ba59cae651f18b",
+    "record_sha256": "b048ac8ebd3da7b7284196440d9fc938a97b6323663d4ef1cc81d224bc845553"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-estenose-aortica-assintomatica-grave-vigilancia",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4d03a603b4ac4e52db09972ec17f427bc6aeb7f216e9bf7b4de395c826003718",
+    "record_sha256": "1af8ce9968bae13962d41170c44e04ccc56c9d2c4e3ef1e731a50fba047235de"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-estenose-aortica-sintomatica-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "93f80f744fa9994006216bae991422dda832911e665ac38190c72c8e6bec726d",
+    "record_sha256": "94eb8fe611fb2e616e2c91f49543ab7dd1a570f3fc27bb3eb40eaed4938b01f2"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-estenose-mitral-reumatica-quando-encaminhar",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4ac17132199f6b2c3e4885d22e8f5496e60929ed1762b6c46adca48f56c32e24",
+    "record_sha256": "cab7096e69f538d6a5658110b0edcb4f1f6c325284adba034976a0e917094b35"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-insuficiencia-mitral-descompensando",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "c8b18ad35c86ea45253605a3a3e88f1f90ec1a90c478bfb77b7b3aef445e5b0d",
+    "record_sha256": "9f6d0d02ddaf636bcffe5d977fc1b36ace8cc748ec0dab0d38579e05f2395c12"
+  },
+  {
+    "slug": "sinalizadores-ambulatoriais-de-insuficiencia-tricuspide-red-flags",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "0a0abef8bfe39bff2785f0056f69eee32edaba3966a75c4c6fb3ed5e56d1bb7e",
+    "record_sha256": "38c98055ea22b7d59091ecd5b6f91d758e6006a706cd4e6698a42c276077c3ff"
+  },
+  {
+    "slug": "tavi-anel-aortico-pequeno-escolha-de-protese-ensaio-smart-2024",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "4f1c9b2df525da6964c13bc38a48bf16f405ac77ee8145b46e8781610c0dddc6",
+    "record_sha256": "417fdeab45e9580f714ef7b545749f3020eb55820b6d6065900b461c54fde05b"
+  },
+  {
+    "slug": "tavi-em-valva-aortica-bicuspide-evidencia-especifica-alem-dos-ensaios-pivotais",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "6bfe4111955f5c5c6f35a6931c7b04255d456c0a5b6cfeeeb554a96d3f1cbdf7",
+    "record_sha256": "29c9176d1cf8be99048e8b48493ea333fe072a373e3ff5a3a0cba837ce0df262"
+  },
+  {
+    "slug": "trombose-subclinica-de-folheto-halt-apos-tavi-incidencia-preditores-e-anticoagulacao",
+    "version": 1,
+    "updated_at": "2026-09-10 01:53:04.465188+00:00",
+    "body_sha256": "e1e9ef7ba690326726d85335fb15645a9259cee9f628e909cd771bfc16529101",
+    "record_sha256": "392e159e46dd95eb49b1c0fbb291ecb52ccbd7b6d635bf360d6922335a0299dd"
+  }
+]

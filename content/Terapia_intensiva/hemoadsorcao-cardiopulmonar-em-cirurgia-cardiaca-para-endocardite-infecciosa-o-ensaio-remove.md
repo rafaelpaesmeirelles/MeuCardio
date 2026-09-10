@@ -1,11 +1,34 @@
 ---
-title: "Hemoadsorção na Circulação Extracorpórea para Endocardite Infecciosa: o Ensaio REMOVE e a Revisão de 2024-2025"
+title: 'Hemoadsorção na Circulação Extracorpórea para Endocardite Infecciosa: o Ensaio REMOVE e a Revisão de 2024-2025'
 slug: hemoadsorcao-cardiopulmonar-em-cirurgia-cardiaca-para-endocardite-infecciosa-o-ensaio-remove
-theme: "Terapia intensiva"
+theme: Terapia intensiva
 kind: estudo
 review_status: revisado
-source_refs: ["Diab M, Lehmann T, Bothe W, Akhyari P, Platzer S, Wendt D, et al; REMOVE Trial Investigators. Cytokine Hemoadsorption During Cardiac Surgery Versus Standard Surgical Care for Infective Endocarditis (REMOVE): Results From a Multicenter Randomized Controlled Trial. Circulation. 2022;145(13):959-968. DOI: 10.1161/CIRCULATIONAHA.121.056940. PMID: 35213213. NCT03266302.", "Matejic-Spasic M, Lindstedt S, Lebreton G, Dzemali O, Suwalski P, Folliguet T, et al. The role of hemoadsorption in cardiac surgery - a systematic review. BMC Cardiovasc Disord. 2024;24(1):258. DOI: 10.1186/s12872-024-03938-4. PMID: 38762715. PMCID: PMC11102180 — revisão financiada/coautorada por funcionários da CytoSorbents, conflito de interesse declarado no próprio artigo.", "Caldonazo T, Doenst T, Fazzini L, Kirov H, Hagel S, Lehmann T, et al; REMOVE Trial Investigators. Sex differences on the effect of hemoadsorption during cardiac surgery - A REMOVE trial post-hoc analysis. Int J Cardiol. 2025;435:133371. DOI: 10.1016/j.ijcard.2025.133371. PMID: 40414542."]
-legacy_source: "Documento novo, escrito em 09/09/2026. O tema Terapia intensiva já cobre extensamente cirurgia cardíaca no pós-operatório (síndrome de baixo débito pós-CEC, ácido tranexâmico, insuficiência aórtica aguda por endocardite exigindo cirurgia, trombose de prótese valvar), mas nenhum documento tratava da hemoadsorção intraoperatória (CytoSorb integrado à circulação extracorpórea) como estratégia de modulação da resposta inflamatória sistêmica — dispositivo comercialmente ativo e usado fora de ensaio em endocardite infecciosa, transplante cardíaco e cirurgia aórtica, cujo único ensaio randomizado pivotal (REMOVE, 2022) foi negativo e continua sendo reanalisado e contestado por literatura observacional financiada pelo fabricante até 2025."
+source_refs:
+- 'Diab M, Lehmann T, Bothe W, Akhyari P, Platzer S, Wendt D, et al; REMOVE Trial Investigators. Cytokine Hemoadsorption
+  During Cardiac Surgery Versus Standard Surgical Care for Infective Endocarditis (REMOVE): Results From a Multicenter
+  Randomized Controlled Trial. Circulation. 2022;145(13):959-968. DOI: 10.1161/CIRCULATIONAHA.121.056940. PMID:
+  35213213. NCT03266302.'
+- 'Matejic-Spasic M, Lindstedt S, Lebreton G, Dzemali O, Suwalski P, Folliguet T, et al. The role of hemoadsorption
+  in cardiac surgery - a systematic review. BMC Cardiovasc Disord. 2024;24(1):258. DOI: 10.1186/s12872-024-03938-4.
+  PMID: 38762715. PMCID: PMC11102180 — revisão financiada/coautorada por funcionários da CytoSorbents, conflito
+  de interesse declarado no próprio artigo.'
+- 'Caldonazo T, Doenst T, Fazzini L, Kirov H, Hagel S, Lehmann T, et al; REMOVE Trial Investigators. Sex differences
+  on the effect of hemoadsorption during cardiac surgery - A REMOVE trial post-hoc analysis. Int J Cardiol. 2025;435:133371.
+  DOI: 10.1016/j.ijcard.2025.133371. PMID: 40414542.'
+legacy_source: Documento novo, escrito em 09/09/2026. O tema Terapia intensiva já cobre extensamente cirurgia cardíaca
+  no pós-operatório (síndrome de baixo débito pós-CEC, ácido tranexâmico, insuficiência aórtica aguda por endocardite
+  exigindo cirurgia, trombose de prótese valvar), mas nenhum documento tratava da hemoadsorção intraoperatória (CytoSorb
+  integrado à circulação extracorpórea) como estratégia de modulação da resposta inflamatória sistêmica — dispositivo
+  comercialmente ativo e usado fora de ensaio em endocardite infecciosa, transplante cardíaco e cirurgia aórtica,
+  cujo único ensaio randomizado pivotal (REMOVE, 2022) foi negativo e continua sendo reanalisado e contestado por
+  literatura observacional financiada pelo fabricante até 2025.
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Hemoadsorção na Circulação Extracorpórea para Endocardite Infecciosa: o Ensaio REMOVE e a Revisão de 2024-2025
@@ -23,7 +46,7 @@ Diab M et al., Circulation. 2022;145(13):959-968 (PMID 35213213), NCT03266302. E
 - Citocinas (incluindo IL-1β e IL-18) medidas nos primeiros 50 pacientes
 
 ### Resultados
-- **ΔSOFA (desfecho primário)**: **1,79 ± 3,75** (hemoadsorção) vs. **1,93 ± 3,53** (controle) — **sem diferença** (IC95% -1,30 a 0,83; **p=0,6766**)
+- **ΔSOFA (desfecho primário)**: **1,79 ± 3,75** (hemoadsorção) vs. **1,93 ± 3,53** (controle) — sem diferença demonstrada; comparação pelo modelo misto ajustado do protocolo: IC95% −1,30 a 0,83; **p=0,6766**
 - **Mortalidade em 30 dias**: **21% (hemoadsorção) vs. 22% (controle)** — **p=0,782**
 - **Duração de ventilação mecânica, uso de vasopressor e de terapia renal substitutiva**: sem diferença entre os grupos
 - **IL-1β e IL-18 ao final da integração do dispositivo à CEC**: **significativamente menores** no grupo hemoadsorção — ou seja, o dispositivo cumpriu seu mecanismo proposto (remoção de citocina), mas isso **não se traduziu em qualquer desfecho clínico relevante**
@@ -34,30 +57,29 @@ Diab M et al., Circulation. 2022;145(13):959-968 (PMID 35213213), NCT03266302. E
 ## O que veio depois — 2024 e 2025
 O tema não se encerrou com o resultado negativo de 2022; ao contrário, permanece ativamente disputado, o que é o próprio motivo de este documento existir agora:
 
-- **Revisão sistemática de 2024** (Matejic-Spasic M et al., BMC Cardiovasc Disord. 2024;24(1):258, PMID 38762715): reuniu 29 publicações, 1.057 pacientes tratados com hemoadsorção e 988 controles, quase todas observacionais e heterogêneas. Concluiu que o uso "parece justificado em casos selecionados de alto risco" (EI, cirurgia de aorta, transplante cardíaco, cirurgia de emergência sob antitrombótico) — mas **três dos autores são funcionários da CytoSorbents** (fabricante do dispositivo), conflito de interesse declarado no próprio artigo, e a própria revisão pede "ensaios randomizados controlados maiores" para definir seleção de paciente, dose e momento da terapia. Ou seja: a promoção do uso em subgrupos vem de dado observacional financiado pelo fabricante, não de nova evidência randomizada que supere o REMOVE
+- **Revisão sistemática de 2024** (Matejic-Spasic M et al., BMC Cardiovasc Disord. 2024;24(1):258, PMID 38762715): reuniu 29 publicações, 1.057 pacientes tratados com hemoadsorção e 988 controles, com desenhos heterogêneos, incluindo estudos randomizados e observacionais. Concluiu que o uso "parece justificado em casos selecionados de alto risco" (EI, cirurgia de aorta, transplante cardíaco, cirurgia de emergência sob antitrombótico) — mas **três dos autores são funcionários da CytoSorbents** (fabricante do dispositivo), conflito de interesse declarado no próprio artigo, e a própria revisão pede "ensaios randomizados controlados maiores" para definir seleção de paciente, dose e momento da terapia. O conflito exige avaliação crítica, mas não prova que todos os estudos incluídos foram financiados pelo fabricante. A revisão descritiva de populações heterogêneas não estabelece benefício confirmatório em cirurgia de EI
 - **Reanálise post-hoc do próprio REMOVE por sexo, publicada em 2025** (Caldonazo T et al., Int J Cardiol. 2025;435:133371, PMID 40414542): dos 282 pacientes originais, 73 (25,9%) mulheres e 209 (74,1%) homens. **Nenhum subgrupo por sexo mostrou diferença significativa** em ΔSOFA (mulheres: diferença de médias -2,13, IC95% -5,20 a 0,93, p=0,163; homens: 0,31, IC95% -0,91 a 1,53, p=0,612) nem em mortalidade em 30 dias (mulheres: HR 0,54, IC95% 0,23-1,24, p=0,132; homens: HR 1,17, IC95% 0,61-2,21, p=0,634). Os próprios autores do REMOVE, revisitando os dados três anos depois, **reafirmam a ausência de benefício também quando estratificado por sexo**
-- Em paralelo, a literatura de 2025 continua produzindo **séries de casos pequenas e não controladas** (por exemplo, série de 4 pacientes em cirurgia valvar por EI) relatando queda de marcadores inflamatórios e de necessidade de vasopressor — o mesmo padrão de evidência observacional favorável que já existia antes do REMOVE e que o próprio ensaio randomizado não confirmou em desfecho clínico
 
 ## Por que o desenho do REMOVE sustenta a conclusão negativa
 - **Multicêntrico (17 centros), com tamanho amostral definido a priori e desfecho primário objetivo (SOFA)** — não é um ensaio pequeno de único centro, o tipo de desenho mais suscetível a resultado espúrio
-- **O mecanismo proposto foi confirmado (queda de IL-1β e IL-18) e mesmo assim não houve efeito clínico** — isso enfraquece a hipótese de que "faltou dose" ou "faltou tempo de exposição" como explicação para o resultado negativo; a citocina foi removida e o paciente não melhorou por isso
-- **Ausência de cegamento é uma limitação real**, mas afeta principalmente desfechos subjetivos — SOFA e mortalidade em 30 dias são desfechos objetivos, pouco suscetíveis a viés de aferição por falta de cegamento
-- A literatura favorável ao dispositivo publicada depois (2024-2025) é **observacional, retrospectiva ou com conflito de interesse financeiro declarado** — nenhum novo ensaio randomizado independente contradisse o REMOVE até o momento desta redação
+- **A queda de IL-1β e IL-18 não se acompanhou de benefício demonstrado no desfecho primário.** Isso não identifica a causa do resultado nem exclui hipóteses sobre seleção, exposição ou dose; tais explicações requerem testes próprios
+- **Ausência de cegamento é uma limitação real**, e pode influenciar decisões de suporte, cointervenções e componentes do SOFA, como vasopressores e avaliação neurológica. Mortalidade tem aferição mais objetiva, mas não elimina todos os vieses
+- Resultados observacionais e análises de subgrupo não substituem a comparação randomizada na população do REMOVE
 
 ## O que isso muda na prática da UTI cardiológica
 - **Hemoadsorção intraoperatória com CytoSorb não deve ser adotada como prática rotineira em cirurgia cardíaca para endocardite infecciosa** com base na expectativa de reduzir disfunção orgânica ou mortalidade — a evidência randomizada disponível (REMOVE) é negativa para ambos os desfechos, e a reanálise de 2025 não encontrou benefício em nenhum subgrupo por sexo
 - Se um serviço decide usar o dispositivo mesmo assim (por exemplo, por protocolo institucional ou pressão comercial), **a decisão deve ser comunicada como não sustentada por ensaio randomizado**, e não apresentada à família ou à equipe como terapia de eficácia comprovada
 - A queda de citocinas circulantes **não é um desfecho substituto validado** neste contexto — serve de alerta geral para qualquer terapia adjuvante de UTI cujo racional se apoie apenas em marcador inflamatório, sem desfecho clínico confirmado
-- Vigilância editorial permanente é justificada: como a promoção do dispositivo continua ativa via literatura observacional financiada pelo fabricante, é esperado que novos estudos favoráveis continuem sendo publicados sem que isso represente nova evidência de nível equivalente ao REMOVE
+- Novas publicações devem ser avaliadas por desenho, população, precisão e conflitos declarados, sem presumir que o resultado será favorável ou que todo estudo terá o mesmo financiamento
 
 ## Armadilhas clínicas
 - **Confundir queda de proteína C-reativa, procalcitonina ou lactato com benefício clínico** — várias séries de caso e registros reportam essas quedas como "resultado positivo"; o REMOVE mostrou que a queda de citocina medida diretamente (IL-1β, IL-18) não se traduziu em SOFA nem mortalidade menores
-- **Atribuir peso de diretriz a uma revisão sistemática de 2024 que inclui autores empregados do fabricante** — a revisão é transparente sobre o conflito de interesse, mas o texto deste documento não deve ser lido como recomendação de uso, e sim como registro de que a controvérsia comercial continua ativa apesar do ensaio randomizado negativo
+- **Atribuir peso de diretriz a uma revisão sistemática de 2024 que inclui autores empregados do fabricante** — a revisão é transparente sobre o conflito de interesse, mas o texto deste documento não deve ser lido como recomendação de uso, e sim como análise crítica de evidência heterogênea e de conflitos declarados
 - **Extrapolar o resultado do REMOVE (endocardite infecciosa) para outros cenários de hemoadsorção** — o próprio corpo de evidência para transplante cardíaco, cirurgia de aorta ou choque séptico refratário (fora do escopo deste documento) é distinto e não foi avaliado aqui; não fundir populações
-- **Tratar "ensaio aberto" como motivo suficiente para descartar o resultado** — a ausência de cegamento é limitação real, mas os desfechos primário e secundários do REMOVE são objetivos (escore SOFA calculado, mortalidade), não dependem de julgamento subjetivo do avaliador
+- **Tratar "ensaio aberto" como motivo suficiente para descartar o resultado** — a ausência de cegamento é limitação real, mas os desfechos primário e secundários do REMOVE são objetivos (escore SOFA calculado, mortalidade), alguns componentes do SOFA e decisões terapêuticas podem ser influenciados pelo conhecimento da alocação
 
 ## Síntese
-O REMOVE é, até o momento desta redação, o único ensaio randomizado multicêntrico dedicado a testar hemoadsorção intraoperatória (CytoSorb) especificamente em cirurgia cardíaca para endocardite infecciosa, e o resultado foi consistentemente negativo para o desfecho primário (ΔSOFA) e para mortalidade em 30 dias, apesar de o dispositivo ter cumprido seu mecanismo proposto de remoção de citocina. A reanálise por sexo publicada em 2025 pelos próprios investigadores do REMOVE reafirma essa ausência de benefício em ambos os subgrupos. A literatura observacional que continua a favorecer o uso do dispositivo — incluindo uma revisão sistemática de 2024 coautorada por funcionários do fabricante — não substitui esse resultado randomizado e deve ser lida com essa ressalva explícita na decisão clínica.
+O REMOVE é um ensaio randomizado multicêntrico que testou hemoadsorção intraoperatória (CytoSorb) especificamente em cirurgia cardíaca para endocardite infecciosa, e o resultado foi consistentemente negativo para o desfecho primário (ΔSOFA) e para mortalidade em 30 dias, apesar de o dispositivo ter cumprido seu mecanismo proposto de remoção de citocina. A reanálise por sexo publicada em 2025 pelos próprios investigadores do REMOVE reafirma essa ausência de benefício em ambos os subgrupos. A literatura posterior que discute possíveis benefícios em cenários selecionados — incluindo a revisão de 2024, com coautores empregados do fabricante e estudos de desenhos variados — não substitui esse resultado randomizado e deve ser lida com essa ressalva explícita na decisão clínica.
 
 ## Tudo com Tudo
 
@@ -69,6 +91,5 @@ O REMOVE é, até o momento desta redação, o único ensaio randomizado multic�
 - [Classificação SCAI de Estágios do Choque Cardiogênico](/biblioteca/classificacao-scai-de-estagios-do-choque-cardiogenico)
 - [Trombose Obstrutiva de Prótese Valvar na UCO: Cirurgia, Fibrinólise e Heart Team](/biblioteca/trombose-obstrutiva-de-protese-valvar-na-uco-cirurgia-fibrinolise-e-heart-team)
 
-## Revisão editorial CorVIA
-
-Revisado em 09/09/2026 com fontes públicas rastreáveis (PubMed/PMC). PMID, DOI, autoria, ano, n de cada estudo conferidos diretamente no resumo indexado antes da redação; nenhum dado citado de memória.
+## Fonte da revisão sistemática
+Métodos e declaração de conflito de interesse conferidos no [texto integral PMC11102180](https://pmc.ncbi.nlm.nih.gov/articles/PMC11102180/). A ausência de diferença significativa não estabelece equivalência ou exclusão de benefício em toda população.

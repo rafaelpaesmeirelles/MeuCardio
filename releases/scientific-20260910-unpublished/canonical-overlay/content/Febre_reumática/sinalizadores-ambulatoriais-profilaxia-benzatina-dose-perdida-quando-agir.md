@@ -1,0 +1,113 @@
+---
+slug: sinalizadores-ambulatoriais-profilaxia-benzatina-dose-perdida-quando-agir
+title: 'Sinalizadores ambulatoriais: dose perdida de penicilina benzatina e quando agir'
+kind: protocolo
+theme: Febre reumática
+summary: 'Pacote operacional de consultório: o que fazer quando a aplicação intramuscular de penicilina G benzatina
+  atrasa ou falta, quais sinais exigem PS agora versus retorno precoce, e como separar falha de adesão de suspeita
+  de recorrência — sem reescrever doses nem a duração por categoria de risco.'
+tags: []
+source_refs:
+- 'World Health Organization. WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart
+  disease. Geneva: WHO; 2024. ISBN 978-92-4-010007-7. PMID: 39631006. NCBI Bookshelf: NBK609707 — profilaxia secundária
+  forte; intervenções de adesão devem acompanhar a prescrição.'
+- 'Gerber MA; Baltimore RS; Eaton CB. Prevention of rheumatic fever and diagnosis and treatment of acute Streptococcal
+  pharyngitis: a scientific statement from the American Heart Association Rheumatic Fever, Endocarditis, and Kawasaki
+  Disease Committee of the Council on Cardiovascular Disease in the Young, the Interdisciplinary Council on Functional
+  Genomics and Translational Biology, and the Interdisciplinary Council on Quality of Care and Outcomes Research:
+  endorsed by the American Academy of Pediatrics. Circulation. 2009;119:1541. DOI: 10.1161/CIRCULATIONAHA.109.191959.
+  PMID: 19246689.'
+- 'Ralph AP; Noonan S; Boardman C. Prescribing for people with acute rheumatic fever. Aust Prescr. 2017;40:70. DOI:
+  10.18773/austprescr.2017.011. PMID: 28507400.'
+- 'Rwebembera J; Marangou J; Mwita JC. 2023 World Heart Federation guidelines for the echocardiographic diagnosis
+  of rheumatic heart disease. Nat Rev Cardiol. 2024;21:250. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787.'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: false
+---
+
+# Sinalizadores ambulatoriais: dose perdida de penicilina benzatina e quando agir
+
+Este protocolo responde a uma pergunta de **consultório / atenção primária / pós-alta**: o paciente em profilaxia secundária **atrasou ou perdeu a aplicação intramuscular** de penicilina G benzatina — **quando agir agora**, quando **retornar em dias**, e quando **suspeitar de recorrência ou progressão** da cardiopatia reumática.
+
+Não substitui:
+- escolha do antibiótico e **duração por gravidade** — [fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema](/biblioteca/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema) e [profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco](/biblioteca/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco);
+- estadiamento ecocardiográfico subclínico WHF 2023 — [fluxograma-cardiopatia-reumatica-subclinica-estadiamento-whf-2023](/biblioteca/fluxograma-cardiopatia-reumatica-subclinica-estadiamento-whf-2023);
+- transição gestacional/puerperal — [cardiopatia-reumatica-na-gestacao-transicao-de-cuidado-ao-puerperio-rhdaustralia-2020](/biblioteca/cardiopatia-reumatica-na-gestacao-transicao-de-cuidado-ao-puerperio-rhdaustralia-2020).
+
+Árvore: [fluxograma-ambulatorial-dose-perdida-benzatina-destino](/biblioteca/fluxograma-ambulatorial-dose-perdida-benzatina-destino). Checklist de progresso/alarme: [checklist-ambulatorial-alarme-progressao-cardiopatia-reumatica](/biblioteca/checklist-ambulatorial-alarme-progressao-cardiopatia-reumatica).
+
+## Princípio
+
+A OMS 2024 recomenda profilaxia antibiótica secundária em quem tem FR ou CR (**forte**) e afirma que **intervenções para adesão devem acompanhar a prescrição** (PMID 39631006). A interrupção da benzatina é uma falha de sistema tão frequente quanto de indivíduo (Ralph 2017, PMID 28507400). Este documento **não protocola dose, intervalo-padrão nem duração** — só o **destino operacional** quando a dose falha ou surgem alarmes clínicos.
+
+## Dose atrasada ou perdida → o que fazer (sem inventar regime)
+
+| Situação | Destino operacional |
+|---|---|
+| Atraso curto, paciente assintomático, sem febre/artrite/dispneia nova | **Reagendar aplicação o mais cedo possível** no serviço responsável; reforçar calendário e barreiras (transporte, estoque, medo da injeção) |
+| Dose omitida ≥1 ciclo previsto, ainda assintomático | **Providenciar aplicação o mais cedo possível**, conforme esquema prescrito; registrar o gap; checar se o serviço tem estoque e data garantida |
+| Dose omitida + sinais de possível recorrência de FR (febre, artrite migratória, coreia, cardite suspeita) | **Não esperar a próxima aplicação** — avaliar como suspeita de recorrência (critérios de Jones / fluxo já publicado); se instável → PS |
+| Recorrência documentada apesar de profilaxia prescrita | Revisão especializada do diagnóstico, adesão e esquema canônico; não ajustar intervalo genericamente por atraso |
+| Falhas repetidas por logística/estoque | Ativar rede (atenção primária, farmácia, registro de faltosos); OMS 2024 trata adesão como parte da prescrição |
+
+**Conduta transversal:** não inventar dose de reposição neste documento; usar o esquema e a duração dos protocolos clínicos vinculados.
+
+## Sinalizadores → encaminhar agora (PS / emergência)
+
+| Domínio | Sinais |
+|---|---|
+| Hemodinâmico / IC | Dispneia em repouso, ortopneia, edema agudo, hipotensão, hipoperfusão |
+| Arrítmico / embolia | Palpitação com instabilidade, síncope, déficit focal sugestivo de AVC/AIT |
+| Recorrência grave / cardite | Febre + deterioração, insuficiência cardíaca nova, artrite incapacitante com toxemia |
+| Endocardite / infecção grave | Febre com toxemia, deterioração, sinais de IC ou embolia em paciente com valvopatia/prótese |
+
+**Conduta:** PS agora nos alarmes acima. Febre persistente em pessoa com valvopatia ou prótese, mesmo estável, exige investigação prioritária no mesmo dia; usar o hospital se não houver acesso seguro. Não aplicar benzatina e adiar a avaliação por duas semanas.
+
+## Sem alarme de PS → retorno precoce (ambulatorial)
+
+1. Confirmar o **gap**: última data aplicada, próximo ciclo previsto, motivo (estoque, dor, transporte, esquecimento, reação local).
+2. Exame focado: sinais vitais, sopro novo/mudança, congestão, artrite, coreia, faringite.
+3. Se disponível e mudar conduta: ECG se palpitações; eco se suspeita de progressão valvar ou cardite (ponte para WHF 2023 / fluxograma subclínico).
+4. Contato e triagem clínica no mesmo dia se sintomas novos; avaliação presencial conforme gravidade e acesso, sem espera fixa quando houver suspeita de recorrência; sem consulta extra obrigatória por atraso assintomático se a aplicação e o plano estiverem garantidos.
+5. Orientação escrita: alarmes da tabela + como remarcar a intramuscular.
+
+## Referência especializada (sem PS)
+
+Encaminhar quando:
+- falhas **repetidas** de adesão apesar de plano escrito e rede de suporte;
+- dúvida sobre **manter, estender ou ajustar intervalo** após recorrência (ponte ao fluxograma de duração/esquema e AHA 2009);
+- suspeita de **progressão de estágio** WHF (A→B ou B→C/D) no eco de seguimento — usar [fluxograma-cardiopatia-reumatica-subclinica-estadiamento-whf-2023](/biblioteca/fluxograma-cardiopatia-reumatica-subclinica-estadiamento-whf-2023);
+- valvopatia sintomática / indicação de intervenção — fora do escopo deste pacote.
+
+## Checklist de 90 segundos
+
+1. Alarme da tabela (IC, síncope, AVC, toxemia)? → **PS agora**.
+2. Só dose perdida, assintomático? → **reagendar IM o mais cedo possível** e confirmar acesso, inclusive após um ciclo omitido.
+3. Sintomas leves novos (febre baixa, artralgia, cansaço) sem hipoperfusão? → **avaliação pronta e investigação de recorrência**, com urgência conforme gravidade.
+4. Recorrência sob 28 dias / alta incidência com falhas? → **especialista** (intervalo AHA 2009; duração no fluxograma de profilaxia).
+5. **Não** protocolar doses, UI ou mg neste documento.
+
+## Armadilhas
+
+Tratar atraso como sem consequências em área endêmica; liberar com dispneia nova para aplicar na UBS amanhã; confundir este pacote com o fluxograma de **duração** ou com o de **estadiamento WHF**; inventar dose de catch-up; omitir barreiras de estoque/dor que a OMS e Ralph reconhecem como núcleo da adesão.
+
+## Limite da evidência
+
+Não há prazo fixo de retorno que permita adiar investigação de recorrência sintomática. A OMS 2024 exige adesão junto da prescrição, mas não fixa um único corte de horas para retorno após dose perdida. O encurtamento para 21 dias (AHA 2009) é **contexto**, não uma dose inventada aqui.
+
+## Conteúdo relacionado
+
+- [fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema](/biblioteca/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema)
+- [profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco](/biblioteca/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco)
+- [fluxograma-cardiopatia-reumatica-subclinica-estadiamento-whf-2023](/biblioteca/fluxograma-cardiopatia-reumatica-subclinica-estadiamento-whf-2023)
+- [febre-reumatica-fr-e-cardiopatia-reumatica-cr-prevencao-diagnostico-e-manejo](/biblioteca/febre-reumatica-fr-e-cardiopatia-reumatica-cr-prevencao-diagnostico-e-manejo)
+- [farmacocinetica-populacional-da-benzilpenicilina-e-desafios-da-reformulacao-de-acao-prolongada](/biblioteca/farmacocinetica-populacional-da-benzilpenicilina-e-desafios-da-reformulacao-de-acao-prolongada)
+
+## Salvaguardas de adesão e diagnóstico
+
+Atraso isolado assintomático não é emergência nem exige retorno artificial: garantir aplicação o mais cedo possível e resolver estoque, transporte, dor ou medo. Não dobrar dose, inventar reposição, reiniciar série ou encurtar intervalo; seguir prescrição e protocolo dedicado. Falhas repetidas pedem intervenção de adesão; recorrência documentada pede avaliação especializada.
+
+Febre, artrite migratória, coreia e sopro novo abrem investigação pelos critérios de Jones e diferenciais, sem confirmar recorrência isoladamente. Instabilidade, IC, deterioração ou manifestações neurológicas graves exigem avaliação imediata. Profilaxia não depende de eco anual para continuar; indicação/duração seguem história de FR/cardite/RHD e diretriz específica.

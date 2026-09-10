@@ -1,11 +1,32 @@
 ---
-title: "Quando Iniciar o Anticoagulante Após AVC por Fibrilação Atrial: OPTIMAS e a Metanálise CATALYST"
+title: 'Quando Iniciar o Anticoagulante Após AVC por Fibrilação Atrial: OPTIMAS e a Metanálise CATALYST'
 slug: timing-de-doac-apos-avc-por-fibrilacao-atrial-optimas-e-a-metanalise-catalyst
-theme: "Fibrilação atrial"
+theme: Fibrilação atrial
 kind: estudo
 review_status: revisado
-source_refs: ["Werring DJ, Dehbi HM, Ahmed N, et al; OPTIMAS investigators. Optimal timing of anticoagulation after acute ischaemic stroke with atrial fibrillation (OPTIMAS): a multicentre, blinded-endpoint, phase 4, randomised controlled trial. Lancet. 2024 Oct 23:S0140-6736(24)02197-4. DOI: 10.1016/S0140-6736(24)02197-4. PMID: 39491870. ISRCTN17896007, NCT03759938. Errata publicada em Lancet. 2025 Jan 4;405(10472):32, DOI 10.1016/S0140-6736(24)02802-2 — existe e NÃO foi lida nesta redação, declarada em vez de omitida", "Dehbi HM, Fischer U, Åsberg S, et al. Collaboration on the optimal timing of anticoagulation after ischaemic stroke and atrial fibrillation: a systematic review and prospective individual participant data meta-analysis of randomised controlled trials (CATALYST). Lancet. 2025;406(10498):43-51. DOI: 10.1016/S0140-6736(25)00439-8. PMID: 40570866. PROSPERO CRD42024522634. Ambos os registros lidos na íntegra (abstract completo via PubMed E-utilities esearch/efetch) em 08/09/2026"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A biblioteca já cobre timing de anticoagulação em duas situações vizinhas — reinício após hemorragia intracraniana (SoSTART/PRESTIGE-AF/COCROACH) e anticoagulação empírica no AVC criptogênico sem FA documentada (NAVIGATE ESUS/RE-SPECT ESUS/ARCADIA) — mas nenhum documento tratava da pergunta mais comum na prática: paciente com FA já conhecida ou recém-diagnosticada, que teve um AVC isquêmico, e a dúvida é quantos dias esperar antes de iniciar o DOAC. É uma pergunta distinta das duas já cobertas, e só ganhou resposta de ensaio pivotal grande e de metanálise de dados individuais em 2024-2025."
+source_refs:
+- 'Werring DJ, Dehbi HM, Ahmed N, et al; OPTIMAS investigators. Optimal timing of anticoagulation after acute ischaemic
+  stroke with atrial fibrillation (OPTIMAS): a multicentre, blinded-endpoint, phase 4, randomised controlled trial.
+  Lancet. 2024 Oct 23:S0140-6736(24)02197-4. DOI: 10.1016/S0140-6736(24)02197-4. PMID: 39491870. ISRCTN17896007,
+  NCT03759938. Errata publicada em Lancet. 2025 Jan 4;405(10472):32, DOI 10.1016/S0140-6736(24)02802-2 — existe
+  e NÃO foi lida nesta redação, declarada em vez de omitida'
+- 'Dehbi HM, Fischer U, Åsberg S, et al. Collaboration on the optimal timing of anticoagulation after ischaemic
+  stroke and atrial fibrillation: a systematic review and prospective individual participant data meta-analysis
+  of randomised controlled trials (CATALYST). Lancet. 2025;406(10498):43-51. DOI: 10.1016/S0140-6736(25)00439-8.
+  PMID: 40570866. PROSPERO CRD42024522634. Ambos os registros lidos na íntegra (abstract completo via PubMed E-utilities
+  esearch/efetch) em 08/09/2026'
+legacy_source: 'Documento novo, escrito em 08/09/2026. A biblioteca já cobre timing de anticoagulação em duas situações
+  vizinhas — reinício após hemorragia intracraniana (SoSTART/PRESTIGE-AF/COCROACH) e anticoagulação empírica no
+  AVC criptogênico sem FA documentada (NAVIGATE ESUS/RE-SPECT ESUS/ARCADIA) — mas nenhum documento tratava da pergunta
+  mais comum na prática: paciente com FA já conhecida ou recém-diagnosticada, que teve um AVC isquêmico, e a dúvida
+  é quantos dias esperar antes de iniciar o DOAC. É uma pergunta distinta das duas já cobertas, e só ganhou resposta
+  de ensaio pivotal grande e de metanálise de dados individuais em 2024-2025.'
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Quando Iniciar o Anticoagulante Após AVC por Fibrilação Atrial: OPTIMAS e a Metanálise CATALYST
@@ -26,7 +47,7 @@ Werring DJ et al.; OPTIMAS investigators. Lancet. 2024 Oct 23:S0140-6736(24)0219
 - **Hemorragia intracraniana sintomática**: **11 de 1.814 (0,6%)** no grupo precoce vs. **12 de 1.807 (0,7%)** no grupo tardio — diferença de risco ajustada 0,001 (IC95% -0,004 a 0,006; p=0,78)
 - Conclusão do próprio ensaio: início precoce (até 4 dias) foi **não inferior** ao início tardio, e os achados **não sustentam a prática comum e recomendada por diretrizes** de retardar o início do DOAC após AVC isquêmico associado à FA
 
-Isoladamente, o OPTIMAS respondeu "esperar não é necessário" — mas não teve poder para mostrar que começar cedo é **melhor**, só que não é pior.
+O OPTIMAS demonstrou não inferioridade dentro da margem e da população estudadas; o teste sequencial de superioridade não foi significativo. Isso não prova equivalência nem dispensa avaliação clínica e de imagem.
 
 ## A metanalise catalyst (dehbi/werring, lancet 2025)
 Dehbi HM, Fischer U, Åsberg S, et al. Lancet. 2025;406(10498):43-51 (PMID 40570866). PROSPERO CRD42024522634. Revisão sistemática com **metanálise prospectiva de dados de participantes individuais**, reunindo os únicos quatro ensaios randomizados elegíveis identificados em busca até 16 de março de 2025 em PubMed, Cochrane CENTRAL e Embase: **TIMING** (NCT02961348), **ELAN** (NCT03148457), **OPTIMAS** (NCT03759938) e **START** (NCT03021928).
@@ -40,18 +61,18 @@ Dehbi HM, Fischer U, Åsberg S, et al. Lancet. 2025;406(10498):43-51 (PMID 40570
 - **Hemorragia intracraniana sintomática**: **10 de 2.683 (0,4%)** vs. **10 de 2.746 (0,4%)** — **OR 1,02 (IC95% 0,43-2,46; p=0,96)**, sem sinal de aumento com início precoce
 - **Interpretação do próprio estudo**: em pessoas com AVC isquêmico agudo e FA, o início precoce do DOAC (até 4 dias) **reduziu** o desfecho composto de AVC isquêmico recorrente, hemorragia intracerebral sintomática ou AVC inclassificável em 30 dias, sem sinal de aumento de sangramento — achados que **sustentam o início precoce do DOAC na prática clínica**
 
-## Por que optimas isolado nao mostrou superioridade e a metanalise sim
-Não é contradição, é poder estatístico. O OPTIMAS sozinho (3.621 pacientes) foi desenhado e teve poder para demonstrar não inferioridade, não superioridade — e seu próprio desfecho primário absoluto (3,3% vs. 3,3%) não mostrou diferença numérica alguma nessa amostra isolada. A metanálise de dados individuais junta os quatro ensaios (TIMING, ELAN, OPTIMAS e START, 5.441 participantes) e ganha poder suficiente para separar os grupos: 2,1% vs. 3,0% no desfecho composto, com redução consistente do componente de AVC isquêmico recorrente e sem custo em hemorragia. A leitura correta não é "o OPTIMAS foi superado pela metanálise" — é que o próprio OPTIMAS entrou como um dos quatro pilares que, somados, tiveram poder para mostrar o benefício que nenhum ensaio isolado antes conseguia demonstrar sozinho.
+## Por que os resultados não são intercambiáveis
+CATALYST amplia a amostra e harmoniza janelas de início, mas também usa desfecho e horizonte diferentes: 30 dias e sem embolia sistêmica no composto principal, versus 90 dias no OPTIMAS. Não se pode atribuir a diferença apenas a poder estatístico. A metanálise inclui o próprio OPTIMAS; não é evidência inteiramente independente. A estimativa de hemorragia intracerebral tem intervalo amplo, compatível com efeitos em ambas as direções.
 
 ## Sintese pratica
-- Entre 2024 e 2025, a evidência de maior qualidade disponível — um ensaio pivotal de não inferioridade (OPTIMAS) e uma metanálise prospectiva de dados individuais de quatro ensaios (CATALYST) — converge na mesma direção: **não há necessidade de retardar o início do DOAC** após AVC isquêmico agudo associado à FA, e iniciar **até 4 dias** do início dos sintomas é, no mínimo, tão seguro quanto esperar, e no conjunto dos quatro ensaios, **associado a menos AVC recorrente sem mais sangramento**
-- **VERIFICAÇÃO HUMANA NECESSÁRIA**: nenhum dos dois estudos discutidos aqui restringe a inclusão por tamanho do infarto, transformação hemorrágica prévia ou gravidade extrema do AVC de forma explícita no resumo consultado — a decisão individual em infartos muito extensos, com transformação hemorrágica já presente na imagem, ou em pacientes com contraindicação específica, deve ser feita por quem assiste o paciente, com base no texto completo dos artigos e critérios de exclusão detalhados de cada ensaio, não só neste resumo
+- Em pacientes elegíveis semelhantes aos incluídos nos ensaios, os resultados apoiam considerar DOAC nos primeiros 4 dias, após avaliação clínica e neuroimagem. Não demonstram que toda pessoa com AVC deva ser anticoagulada nessa janela.
+- O protocolo OPTIMAS excluiu **PH2** (hematoma em mais de 30% do infarto com efeito de massa significativo), outra hemorragia intracraniana clinicamente relevante e contraindicação clínica ao início precoce. HI1, HI2 e PH1 não eram exclusões automáticas, mas isso não elimina avaliação individual. Excluiu também contraindicação ao DOAC, como prótese mecânica, indicação de antagonista da vitamina K e insuficiência renal grave. [Registro primário](https://www.isrctn.com/pdf/17896007).
 - Este documento não estabelece dose nem escolha de DOAC — ver o fluxograma de escolha e ajuste de dose já existente nesta pasta
 
 ## Armadilhas clinicas
 - Tratar "início precoce" como sinônimo de "no dia do AVC" — a definição operacional nos dois estudos é **até 4 dias** do início dos sintomas, não imediato
 - Extrapolar automaticamente para AVC hemorrágico, FA valvar reumática ou pacientes já anticoagulados com transformação hemorrágica estabelecida na imagem — a população estudada é AVC **isquêmico** agudo com FA, e a decisão nesses cenários específicos exige avaliação individualizada, fora do escopo destes dois estudos
-- Ler "superioridade não identificada" no OPTIMAS isolado como "início precoce não traz benefício" — o próprio ensaio não tinha poder estatístico para essa pergunta; quem responde é a metanálise de dados individuais, que junta as quatro amostras
+- Ler "superioridade não identificada" no OPTIMAS isolado como "início precoce não traz benefício" — a superioridade não foi demonstrada nesse desenho; CATALYST analisa um horizonte e um conjunto de dados diferentes
 - Confundir esta pergunta (quando iniciar o DOAC após AVC isquêmico em quem já tem FA) com a pergunta, distinta, de anticoagulação empírica no AVC criptogênico **sem** FA documentada — são populações e desenhos diferentes, tratados em documento próprio desta pasta
 
 ## Tudo com Tudo

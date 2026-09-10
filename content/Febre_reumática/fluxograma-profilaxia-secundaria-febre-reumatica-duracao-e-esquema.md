@@ -1,96 +1,90 @@
 ---
-title: "Fluxograma: Profilaxia secundária da febre reumática — escolha do antibiótico e duração por gravidade"
+title: 'Fluxograma: Profilaxia secundária da febre reumática — escolha do antibiótico e duração por gravidade'
 slug: fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema
-theme: "Febre reumática"
+theme: Febre reumática
 kind: fluxograma
 fonte_producao: chatgpt
 review_status: revisado
-review_note: "PMID 28507400 (Ralph AP et al., Prescribing for people with acute rheumatic fever, Aust Prescr 2017;40(2):70-75) conferido via PubMed E-utilities (esummary) nesta sessão — título, revista, volume, páginas e autoria batendo exatamente; note-se que a autoria completa correta é Ralph AP, Noonan S, Boardman C, Halkon C, Currie BJ, distinta da citação (com 'Wade V') já usada em documento existente desta pasta. PMID 19246689 (Gerber MA et al., AHA Scientific Statement, Circulation 2009) já verificado e em uso em registro de evidência publicado desta biblioteca, reconferido para este documento. Nenhum PMID inventado; nenhum valor numérico de dose ou duração foi alterado em relação ao documento-fonte já publicado nesta pasta. Pendente revisão médica independente antes de uso assistencial."
-source_refs: ["Ralph AP, Noonan S, Boardman C, Halkon C, Currie BJ. Prescribing for people with acute rheumatic fever. Australian Prescriber. 2017;40(2):70-75. PMID: 28507400 — esquemas de penicilina G benzatina e eritromicina, e durações por categoria de gravidade.", "Gerber MA, Baltimore RS, Eaton CB, et al. Prevention of Rheumatic Fever and Diagnosis and Treatment of Acute Streptococcal Pharyngitis: A Scientific Statement From the American Heart Association. Circulation. 2009;119(11):1541-1551. DOI: 10.1161/CIRCULATIONAHA.109.191959. PMID: 19246689 — recomendação de encurtar o intervalo para 21 dias em população de alta incidência ou após recorrência com o esquema de 28 dias."]
+review_note: Fluxos clínicos revistos integralmente. Separada escolha da via de duração, eliminando indicação automática
+  de injeção em cardiopatia grave. Durações atualizadas pela tabela 10.3 australiana de agosto de 2025 e distinção
+  entre ausência de envolvimento cardíaco e cardite prévia; dose/intervalo pela tabela 10.2, com protocolo brasileiro
+  identificado. Retirada atribuição não sustentada à AHA de 21 dias para toda população de alta incidência, equivalência
+  com dose de erradicação e minimização do episódio inicial. Incluída adrenalina intramuscular imediata na suspeita
+  de anafilaxia. Vínculos clínicos conferidos dentro do suplemento.
+source_refs:
+- Menzies School of Health Research (ARF/RHD Writing Group). Australian guideline for the prevention, diagnosis
+  and management of acute rheumatic fever and rheumatic heart disease. Edition 3.3, August 2025. Chapter 10, Tables
+  10.2–10.3, pages 155–157 and 160. https://www.rhdaustralia.org.au/wp-content/uploads/2025/09/Australian-ARF-RHD-Guideline-2025_August_1.pdf
+- World Health Organization. WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart
+  disease. 2024. Section 4.7. https://www.ncbi.nlm.nih.gov/books/NBK609686/
+- Sanyahumbi A et al. J Am Heart Assoc. 2022;11:e024517. DOI 10.1161/JAHA.121.024517. PMID 35049336. https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/
+- Cardona V et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13:100472.
+  DOI 10.1016/j.waojou.2020.100472. https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/
+- Sociedade Brasileira de Cardiologia et al. Diretrizes brasileiras para o diagnóstico, tratamento e prevenção da
+  febre reumática. Arq Bras Cardiol. 2009;93(3 supl.4):1–18. Seção de profilaxia secundária. https://www.scielo.br/j/abc/a/BgMJ45rh8cKSsHpK7bTbjwM/?format=html
+summary: Fluxo para escolher uma via segura e definir o marco de reavaliação da profilaxia secundária após febre
+  reumática documentada, conforme referência australiana de 2025.
+published: true
+gaps: []
+source_tier: A
+tags: []
 ---
 
-# Fluxograma: Profilaxia secundária da febre reumática — escolha do antibiótico e duração por gravidade
+# Fluxograma: profilaxia secundária da febre reumática — esquema e duração
 
-A profilaxia antibiótica secundária é a intervenção isolada mais eficaz para
-evitar recorrência da febre reumática — e é a recorrência, não o episódio
-índice, o principal mecanismo de agravamento progressivo do dano valvar
-reumático. Uma vez fechado o diagnóstico do episódio agudo (fluxograma dos
-critérios de Jones, já publicado neste tema), duas perguntas organizam a
-receita: **há alergia à penicilina** e **qual é a gravidade atual da
-cardiopatia reumática**, documentada clínica e ecocardiograficamente. A duração
-não deve ser inferida apenas pela intensidade da cardite no episódio agudo.
+Organizar a profilaxia exige duas decisões: **qual esquema o paciente pode manter com segurança** e **por quanto tempo**. O fluxo utiliza a diretriz australiana de agosto de 2025, com a recomendação da OMS de 2024 sobre a alternativa oral. Conciliar a aplicação no Brasil com o protocolo assistencial local.
 
-## Árvore de decisão
+## 1. Escolher fármaco e via
 
 ```mermaid
 flowchart TD
-  R0["Diagnóstico confirmado de febre reumática aguda,<br/>ou cardiopatia reumática já estabelecida —<br/>indicação de profilaxia secundária"] --> D1{"Há alergia confirmada<br/>à penicilina?"}
-
-  D1 -->|"Sim"| C1(["Eritromicina 250 mg por via oral a cada 12 horas —<br/>criança: 10 mg/kg/dose (máx. 250 mg), a cada 12h —<br/>esquema alternativo, mesma duração da categoria<br/>de gravidade do paciente"])
-
-  D1 -->|"Não"| D2{"Qual é a gravidade atual da<br/>cardiopatia reumática ao eco e<br/>na avaliação clínica?"}
-
-  D2 -->|"Sem cardiopatia reumática,<br/>ou cardiopatia leve"| C2(["Penicilina G benzatina intramuscular, dose por peso,<br/>por no mínimo 10 anos após o último episódio<br/>ou até os 21 anos de idade — o que ocorrer depois;<br/>reavaliar clinicamente e por ecocardiograma antes de cessar"])
-
-  D2 -->|"Cardiopatia reumática moderada,<br/>assintomática e com função<br/>ventricular preservada"| C3(["Penicilina G benzatina intramuscular, dose por peso,<br/>até os 35 anos e por pelo menos 10 anos após<br/>o último episódio; reavaliar antes de cessar"])
-
-  D2 -->|"Cardiopatia grave, cirurgia valvar<br/>prévia, ou cardiopatia moderada<br/>com sintomas"| C4(["Penicilina G benzatina intramuscular, dose por peso,<br/>até os 40 anos e por pelo menos 10 anos após<br/>o último episódio, ou por período mais longo;<br/>individualizar com especialista"])
-
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3,C4 conduta;
+  R0["Confirmar indicação de profilaxia secundária"] --> D1{"Há alergia verdadeira à penicilina?"}
+  D1 -->|"Sim ou história de reação grave a esclarecer"| A1["Avaliação especializada e alternativa não penicilínica apropriada; não fazer teste ou reexposição improvisados"]
+  D1 -->|"Não"| D2{"A via intramuscular é adequada considerando risco cardiovascular, acesso, dor, adesão e preferência?"}
+  D2 -->|"Sim"| A2["Penicilina G benzatina intramuscular em local preparado para reconhecer e tratar reações"]
+  D2 -->|"Não ou risco elevado"| A3["Discutir penicilina V oral e planejar adesão diária; individualizar com o especialista"]
+  A1 --> R1["Definir duração separadamente, conforme história e doença atual"]
+  A2 --> R1
+  A3 --> R1
 ```
 
-## A dose por peso e o intervalo, que não são ramos da árvore
+Na referência australiana, a benzatina é aplicada em **1.200.000 UI para peso ≥20 kg** ou **600.000 UI para <20 kg**, por via intramuscular profunda, habitualmente a cada **28 dias**. A dose e a técnica em crianças muito pequenas precisam de planejamento pediátrico. O esquema pode ser de **21 dias** em recorrência apesar de adesão completa ao de 28 dias ou quando o impacto de uma recorrência seria especialmente grave. A diretriz brasileira de 2009 utiliza **21 dias**; documentar o protocolo adotado.
 
-**Dose de penicilina G benzatina, igual nas três durações**: 1.200.000 UI
-(cerca de 900 mg) por via intramuscular profunda em dose única, em quem pesa
-20 kg ou mais; 600.000 UI (cerca de 450 mg) em quem pesa menos de 20 kg. É a
-mesma dose usada para tratar o episódio agudo (erradicação estreptocócica),
-mas aqui administrada repetidamente, não uma única vez — não confundir as
-duas indicações.
+Quando escolhida a alternativa oral, a tabela australiana apresenta penicilina V **250 mg a cada 12 horas**; em alergia grave confirmada, apresenta eritromicina **250 mg a cada 12 horas**. Não misturar automaticamente alternativas de diferentes diretrizes: confirmar faixa etária, alergia, interações e protocolo local. A via oral não elimina a necessidade de adesão nem muda sozinha a duração.
 
-**Intervalo padrão: a cada 28 dias.** Mas a declaração científica da AHA de
-2009 é explícita: em **população de alta incidência de febre reumática**, ou
-em paciente que **recorreu apesar de já estar em uso do esquema de 28 dias**,
-encurtar o intervalo para **21 dias** é justificado — o nível sérico
-protetor de penicilina pode cair abaixo do limiar de proteção antes de
-completar a quarta semana. Esse ajuste de intervalo é ortogonal à duração
-total do tratamento (que segue definida pela gravidade, coluna acima): um
-paciente pode estar na faixa "até os 35 anos" e, dentro dela, receber a dose
-a cada 21 dias em vez de 28.
+## 2. Definir o marco de reavaliação
 
-**A eritromicina segue a mesma duração por gravidade** do esquema com
-penicilina — a alergia muda o fármaco, não o prazo de manutenção.
+Este segundo fluxo se aplica a **episódio documentado de febre reumática**. A classificação considera ECG, ecocardiograma e evolução clínica, não apenas a descrição antiga da intensidade da cardite.
 
-**A classificação usada para definir a duração é a cardiopatia reumática
-atual, não uma lembrança da gravidade da cardite aguda.** Antes de interromper
-a profilaxia, é necessária reavaliação clínica e ecocardiográfica, além de
-considerar exposição futura ao estreptococo e tempo desde o último surto.
+```mermaid
+flowchart TD
+  R0["Há episódio documentado de febre reumática?"] -->|"Não"| A0["Usar critérios específicos para cardiopatia diagnosticada sem episódio reconhecido ou para rastreamento; avaliação especializada"]
+  R0 -->|"Sim"| D1{"Houve envolvimento cardíaco no episódio ou há cardiopatia reumática estabelecida?"}
+  D1 -->|"Não; ECG e eco normais e seguimento apropriado"| A1["Pelo menos 5 anos após o último episódio ou até 21 anos, o que terminar mais tarde"]
+  D1 -->|"Sim"| D2{"Qual é a doença atual?"}
+  D2 -->|"Cardite prévia sem lesão persistente ou doença leve"| A2["Pelo menos 10 anos após o último episódio ou até 21 anos, o que terminar mais tarde"]
+  D2 -->|"Doença moderada, sem complicações de estágio D"| A3["Pelo menos 10 anos após o último episódio ou até 35 anos, o que terminar mais tarde"]
+  D2 -->|"Doença grave ou estágio D, incluindo complicações ou cirurgia valvar"| A4["Pelo menos 10 anos após o último episódio ou até 40 anos, o que terminar mais tarde; considerar prolongamento"]
+  A1 --> R1["Antes de suspender: reavaliar clínica, ecocardiograma, recorrências, estabilidade valvar e exposição ao estreptococo"]
+  A2 --> R1
+  A3 --> R1
+  A4 --> R1
+```
 
-## O que a árvore não mostra
+Um episódio aos 25 anos, com ECG e ecocardiograma normais durante a doença e seguimento apropriado, não permite suspender imediatamente por já ter ultrapassado 21 anos: na referência utilizada, ainda é necessário cumprir o prazo mínimo de cinco anos. Havendo envolvimento cardíaco, essa regra muda. A data calculada nunca dispensa a reavaliação antes da suspensão.
 
-**Reação adversa grave à penicilina benzatina é rara, mas descrita**,
-sobretudo em paciente com doença valvar já grave — a via intramuscular
-recorrente e a logística de reaplicação a cada 3-4 semanas são, na prática,
-os maiores obstáculos à adesão de longo prazo, mais do que o efeito adverso
-em si.
+## Pontos que mudam a decisão
 
-**Erradicação do episódio agudo é dose única, não profilaxia.** O tratamento
-antibiótico do surto agudo de febre reumática (mesma penicilina G benzatina,
-mesma dose por peso, mas administrada uma única vez para erradicar o
-estreptococo do grupo A) é etapa distinta, coberta no documento de graduação
-e tratamento da cardite reumática aguda desta pasta — a profilaxia secundária
-começa depois, e é ela que se repete indefinidamente pelo prazo definido
-acima.
+**Doença grave não impõe a via intramuscular.** A AHA de 2022 e a OMS de 2024 orientam considerar a alternativa oral em pacientes selecionados com risco cardiovascular elevado. Essa escolha ocorre antes do ramo de duração; não é uma exceção escondida após a prescrição.
 
-**"O que ocorrer depois" pode prolongar o tratamento além dos 21 anos.** Um paciente que
-teve o primeiro episódio aos 25 anos, sem cardite, já ultrapassou os 21 anos
-de idade — nesse caso vale a regra dos 10 anos após o episódio, e não a idade
-cronológica, porque a instrução manda usar o que vier **depois** dos dois
-critérios, não o primeiro que se cumprir.
+**Ausência de rash não exclui anafilaxia.** Se ocorrer reação com suspeita de anafilaxia, adrenalina intramuscular deve ser administrada prontamente, inclusive em valvopatia grave. A possibilidade de colapso vasovagal ou cardiovascular não justifica esperar por manifestações cutâneas.
 
-**Populações de alta incidência concentram a maior parte da carga global de
-febre reumática**, e é justamente nelas que interrupções no fornecimento de
-penicilina benzatina e a dificuldade logística da aplicação intramuscular
-recorrente mais comprometem a adesão de longo prazo — um problema de sistema
-de saúde, não só de prescrição individual.
+**Erradicação aguda e profilaxia são indicações diferentes.** Não transportar automaticamente dose, faixa de peso ou duração de uma para a outra. O esquema preventivo é repetido pelo prazo definido; não se resume à dose usada durante o episódio agudo.
+
+**Há situações fora desta árvore.** Diagnóstico possível/provável, alterações de rastreamento e cardiopatia sem história reconhecida de febre reumática têm critérios próprios. Cirurgia não elimina automaticamente a profilaxia; em doença avançada, a duração pode ser prolongada conforme risco e estabilidade.
+
+## Tudo com Tudo
+
+- [Profilaxia secundária: duração por categoria de risco](/biblioteca/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco) — fundamentos e limites dos prazos.
+- [Segurança da penicilina benzatina](/biblioteca/seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular) — seleção da via e avaliação do risco.
+- [Reação aguda: diferenciação e conduta](/biblioteca/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta) — conduta diante de instabilidade após a aplicação.

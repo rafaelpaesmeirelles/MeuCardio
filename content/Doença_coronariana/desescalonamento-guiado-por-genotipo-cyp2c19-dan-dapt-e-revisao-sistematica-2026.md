@@ -1,0 +1,93 @@
+---
+slug: desescalonamento-guiado-por-genotipo-cyp2c19-dan-dapt-e-revisao-sistematica-2026
+title: 'Desescalonamento Guiado por Genótipo CYP2C19 na Síndrome Coronariana Aguda: o Ensaio DAN-DAPT, a Custo-Efetividade
+  e a Revisão Sistemática de 2026'
+kind: documento
+theme: Doença coronariana
+summary: null
+tags: []
+source_refs:
+- 'Jacobsen MR, Jabbari R, Grove EL, Mæng M, Veien K, Hougaard M, Freeman P, Kelbæk H, Charlot MG, Engstrøm T, Sørensen
+  R. Genotype-guided de-escalation and abbreviation of dual antiplatelet therapy in patients with myocardial infarction
+  and high bleeding risk: Design and rationale of the investigator-initiated, multicenter, randomized, controlled
+  trial, DAN-DAPT. Am Heart J. 2025;285:74-81. DOI: 10.1016/j.ahj.2025.02.020. PMID: 40015616. Artigo de desenho
+  e racional do ensaio (protocolo publicado) — resultados clínicos ainda não disponíveis; texto conferido via PubMed
+  E-utilities (efetch) nesta sessão.'
+- 'van den Broek WWA, Azzahhafi J, Chan Pin Yin DRPP, van der Sangen NMR, Sivanesan S, Dijksman LM, Walhout RJ,
+  Tjon Joe Gin M, Breet NJ, Langerveld J, Vlachojannis GJ, van Bommel RJ, Appelman Y, van Schaik RHN, Henriques
+  JPS, Kikkert WJ, Ten Berg JM. Cost-effectiveness of implementing a genotype-guided de-escalation strategy in patients
+  with acute coronary syndrome. Eur Heart J Cardiovasc Pharmacother. 2025;11(3):230-240. DOI: 10.1093/ehjcvp/pvae087.
+  PMID: 39537191. Modelo de decisão/Markov; abstract conferido via PubMed E-utilities nesta sessão.'
+- 'Kochkarian T, Ismail A, Chaabo O, Motiwala A, Hayek SS. Personalized Antithrombotic Therapy After Percutaneous
+  Coronary Intervention: A Systematic Review of Risk-Stratified Approaches. Catheter Cardiovasc Interv. 2026 Jul
+  6 (publicação eletrônica antes da impressão). DOI: 10.1002/ccd.70733. PMID: 42410742. Revisão sistemática de 80
+  estudos, mais de 330.000 pacientes; abstract conferido via PubMed E-utilities nesta sessão.'
+- 'Galo J, Granillo MR, Rubio PM, Mhaimeed O, Kastrati A, Kaul S, Baber U, Gibson CM, Marmagkiolis K, Kesarwani
+  M, Ben-Dor I, Waksman R. Expert perspectives on de-escalation of antiplatelet therapy - Beyond the Guidelines:
+  Insights from the Cardiovascular Research Technologies 2026 meeting. Cardiovasc Revasc Med. 2026;89:1-13. DOI:
+  10.1016/j.carrev.2026.06.009. PMID: 42443024. Síntese de painel de especialistas (CRT 2026); abstract conferido
+  via PubMed E-utilities nesta sessão.'
+- ClinicalTrials.gov NCT05262803. Registro e braços consultados08/09/2026; última atualização15/03/2024, recrutando,
+  sem resultados. https://clinicaltrials.gov/study/NCT05262803
+- Pereira NL et al. TAILOR-PCI. JAMA2020;324:761–771. DOI10.1001/jama.2020.12443. https://jamanetwork.com/journals/jama/fullarticle/2769725
+- 'Byrne RA et al. 2023 ESC Guidelines for acute coronary syndromes. DOI10.1093/eurheartj/ehad191. Texto primário
+  disponibilizado por sociedade: https://sochicar.cl/wp-content/uploads/2023/09/ehad191.pdf'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# Desescalonamento Guiado por Genótipo CYP2C19 na Síndrome Coronariana Aguda: o Ensaio DAN-DAPT, a Custo-Efetividade e a Revisão Sistemática de 2026
+
+## Perguntas diferentes: escolha do fármaco e duração da DAPT
+
+A genotipagem CYP2C19 informa a capacidade de ativar clopidogrel. Ela não determina isoladamente a duração da dupla antiagregação (DAPT), nem substitui avaliação de sangramento e risco isquêmico. Desescalonar de ticagrelor/prasugrel para clopidogrel e suspender um dos antiplaquetários são intervenções distintas.
+
+POPular Genetics e TAILOR-PCI avaliaram estratégias e comparadores diferentes. TAILOR-PCI comparou seleção guiada com clopidogrel convencional e não atingiu significância no desfecho primário pré-especificado. Não deve ser descrito como confirmação universal de segurança ou eficácia do desescalonamento em alto risco hemorrágico. [TAILOR-PCI](https://doi.org/10.1001/jama.2020.12443).
+
+## DAN-DAPT: o ensaio desenhado para responder à pergunta de alto risco hemorrágico
+
+Jacobsen et al. (Am Heart J, 2025; PMID 40015616) publicaram o desenho e o racional do DAN-DAPT, ensaio dinamarquês, multicêntrico, randomizado, controlado, com iniciativa de investigador. A população-alvo são pacientes com infarto agudo do miocárdio **e alto risco hemorrágico** submetidos a ICP — o mesmo tipo de paciente que hoje é candidato à abreviação não guiada de DAPT (como no MASTER DAPT, já documentado no acervo). A intervenção testada é a genotipagem CYP2C19: não portadores de alelos de perda de função recebem clopidogrel + AAS, enquanto portadores permanecem com prasugrel ou ticagrelor + AAS; os braços guiados comparam duração de 6 ou3 meses, contra o padrão de 6 meses de prasugrel ou ticagrelor + AAS. O desenho planeja recrutar 2.700 pacientes em centros de ICP dinamarqueses, com dois desfechos coprimários em 1 ano: eventos clínicos adversos líquidos (morte por qualquer causa, reinfarto, trombose definida de stent, AVC ou BARC 3–5) e sangramento BARC 2–5.
+
+É importante ser preciso sobre o que esta citação representa: **é um artigo de desenho e racional (protocolo publicado), não um relato de resultados**. O registro NCT05262803 consultado em 08/09/2026, última atualização publicada 15/03/2024, informava recrutamento e nenhum resultado depositado. O artigo 2025 planejava 2.700 participantes; o registro mais antigo mostra 2.808 planejados, não uma amostra analisada. Não foi identificado resultado clínico nas fontes conferidas. Isso é registrado aqui como lacuna futura explícita, não como achado.
+
+## A peça que já tem resultado: custo-efetividade da desescalonação guiada por genótipo
+
+Diferente do DAN-DAPT, o estudo de van den Broek et al. (Eur Heart J Cardiovasc Pharmacother, 2025; PMID 39537191) já tem resultado — não clínico, mas econômico. Usando modelagem de árvore de decisão e Markov aplicada ao sistema de saúde holandês, os autores compararam a desescalonação guiada por genótipo de ticagrelor/prasugrel para clopidogrel (em pacientes com SCA) contra a terapia antiplaquetária padrão não guiada. O resultado: a estratégia guiada por genótipo foi **custo-poupadora em 96% das simulações** e **aumentou os anos de vida ajustados por qualidade (QALY) em 87% das simulações**, ao longo do horizonte de simulação de vida do paciente. Em outras palavras — pelo menos no contexto holandês modelado — o modelo estima economia e ganho de qualidade de vida; isso não demonstra segurança clínica nem reproduz economias observadas em outro sistema de saúde, quando comparada à estratégia padrão sem genotipagem.
+
+A ressalva necessária: é um modelo, não um ensaio pragmático com custo real medido; os parâmetros de efetividade clínica que alimentam o modelo têm como base inicial o registro FORCE-ACS, seguido de projeção de longo prazo, não de um ensaio de desfecho clínico dedicado à desescalonação guiada em alto risco hemorrágico (essa é justamente a lacuna que o DAN-DAPT tenta preencher). E o modelo foi calibrado para o sistema de saúde e os custos holandeses — a transposição direta para o SUS ou para a saúde suplementar brasileira não é automática, por diferença de custo de genotipagem, de eventos e de estrutura de reembolso.
+
+## Onde a genotipagem se encaixa entre as outras formas de personalização: a revisão sistemática de 2026
+
+Kochkarian et al. (Catheter Cardiovasc Interv, 2026; PMID 42410742) publicaram uma revisão sistemática ampla — 80 estudos, mais de 330.000 pacientes — comparando estratégias personalizadas de terapia antitrombótica pós-ICP contra o DAPT fixo de 12 meses. O achado central: estratégias personalizadas — que os autores agrupam em três famílias: **terapia guiada por genótipo**, **DAPT ultracurta (≤1 mês) seguida de monoterapia com inibidor de P2Y12**, e **DAPT de 3 meses** — reduzem sangramento de forma substancial, com redução relativa estimada entre 25% e 65% conforme a estratégia e a população. Em populações de alto risco hemorrágico especificamente, a DAPT abreviada seguida de monoterapia de P2Y12 reduziu sangramento maior em até 65%, sem aumento de trombose de stent na maioria dos ensaios incluídos. A mesma revisão ressalta heterogeneidade isquêmica e o sinal de mais infarto no STOPDAPT-2 ACS após retirada de AAS em 1–2 meses sobre clopidogrel. Essa exceção impede recomendar indistintamente a mesma abreviação a toda SCA. A conclusão dos autores é que a evidência acumulada já sustenta substituir o DAPT fixo de 12 meses por algoritmos guiados por risco — nos quais a genotipagem CYP2C19 é uma das ferramentas, não a única.
+
+Esse enquadramento é útil clinicamente: ele posiciona a genotipagem não como uma estratégia concorrente e isolada, mas como uma entre várias formas de individualizar o tratamento antiplaquetário — ao lado da abreviação por tempo fixo (já documentadas no acervo em MASTER DAPT, TWILIGHT, STOPDAPT-2) e do desescalonamento não guiado por critério clínico (TALOS-AMI). A pergunta prática deixou de ser "genotipar ou não" isoladamente e passou a ser "qual ferramenta de personalização, ou combinação delas, cabe neste paciente".
+
+## O consenso de especialistas de 2026: para onde a prática está indo
+
+Galo et al. (Cardiovasc Revasc Med, 2026; PMID 42443024) sintetizaram as discussões de um painel de especialistas no encontro Cardiovascular Research Technologies (CRT) 2026 especificamente sobre desescalonamento de terapia antiplaquetária pós-ICP. O painel endossou a monoterapia com inibidor de P2Y12 — preferencialmente clopidogrel — em vez de AAS, como terapia de manutenção após a fase inicial de DAPT, com uma **janela de desescalonamento de 1 a 3 meses** após a ICP. Para pacientes com fibrilação atrial concomitante, a recomendação foi a suspensão precoce do AAS, mantendo anticoagulante oral direto associado a clopidogrel. A conclusão do painel, nas palavras dos autores, é que a evidência sustenta "uma mudança fundamental do paradigma tradicional de aspirina para a vida toda, em direção a estratégias individualizadas de desescalonamento baseadas em P2Y12" — um movimento de prática consistente com o que a revisão sistemática de Kochkarian et al. mostra em números.
+
+Vale notar que esse consenso de especialistas trata sobretudo do *eixo temporal* da desescalonação (quando trocar, e para qual monoterapia) — ele não resolve, isoladamente, a pergunta sobre se a decisão de trocar deve ser guiada por genótipo, por teste de função plaquetária, ou por critério puramente clínico de tempo/risco. É um documento de opinião de especialistas informada por evidência (não um ensaio randomizado nem uma diretriz formal de sociedade), e deve ser lido com esse peso — como retrato de para onde a prática está caminhando, não como recomendação normativa.
+
+## Aplicação clínica
+
+- Quando um resultado genético é usado, a decisão precisa seguir o fenótipo e o protocolo apropriado. No DAN-DAPT, alelos CYP2C19*2/*3 de perda de função impedem o desescalonamento protocolar para clopidogrel; não se trata de trocar todos os genotipados.
+- As estratégias de abreviação e desescalonamento exigem seleção por risco e momento clínico. A ESC 2023 não recomenda desescalonamento nos primeiros 30 dias após SCA; alternativas posteriores não são uma regra universal. [Diretriz ESC 2023](https://doi.org/10.1093/eurheartj/ehad191).
+- A faixa de 25%–65% de redução de sangramento reúne estudos distintos; não prova equivalência entre genotipagem, abreviação sem teste e diferentes monoterapias. Considerar os sinais isquêmicos específicos, inclusive STOPDAPT-2 ACS.
+- Modelo econômico holandês e opinião de painel não estabelecem benefício individual nem recomendam testar sistematicamente toda a população brasileira. O painel CRT 2026 é uma revisão narrativa de especialistas, sem busca sistemática formal; suas posições não substituem uma diretriz.
+
+## Limites da evidência — resumo explícito
+
+(1) O DAN-DAPT é citado por seu desenho e racional, não por resultado clínico — isso é dito de forma explícita ao longo do texto e repetido aqui para não haver ambiguidade; nenhum número de eficácia ou segurança do DAN-DAPT foi ou pode ser apresentado nesta síntese. (2) O estudo de custo-efetividade é um modelo de decisão calibrado para o sistema de saúde holandês, com parâmetros iniciais derivados do registro FORCE-ACS — não é medição direta de custo real, e não é diretamente transponível para o Brasil. (3) A revisão sistemática de Kochkarian et al. agrupa três estratégias de personalização distintas (genótipo, DAPT ultracurta com monoterapia, DAPT de 3 meses) numa faixa única de redução de sangramento (25%-65%); o abstract consultado não permite atribuir, isoladamente, qual fração desse efeito é específica da estratégia guiada por genótipo. (4) O documento de Galo et al. é uma síntese de opinião de painel de especialistas apresentada em congresso (CRT 2026), não uma diretriz formal de sociedade nem um ensaio randomizado — tem menor força de evidência do que os outros três documentos citados. (5) As fontes conferidas incluem o protocolo e o registro DAN-DAPT sem resultados depositados; essa verificação não constitui prova exaustiva de inexistência de qualquer outra publicação.
+
+## Tudo com Tudo
+
+- [Farmacogenômica do Clopidogrel: Genotipagem CYP2C19 e Escolha do Antiplaquetário](/biblioteca/farmacogenomica-do-clopidogrel-genotipagem-cyp2c19-e-escolha-do-antiplaquetario)
+- [Fluxograma: Duração e desescalonamento da terapia antiplaquetária dupla (DAPT) após ICP](/biblioteca/fluxograma-duracao-e-desescalonamento-da-dapt-apos-icp)
+- [TALOS-AMI: desescalonar ticagrelor → clopidogrel no 1º mês, sem teste, no IAM estabilizado](/biblioteca/talos-ami-desescalonamento-nao-guiado-ticagrelor-para-clopidogrel)
+- [MASTER DAPT: um mês de dupla antiagregação após PCI em alto risco hemorrágico](/biblioteca/master-dapt-dapt-abreviada-em-alto-risco-hemorragico)
+- [Síndrome Coronariana Aguda: Duração de DAPT (Complemento Final)](/biblioteca/sindrome-coronariana-aguda-duracao-de-dapt-complemento-final)
+- [TWILIGHT: ticagrelor em monoterapia após 3 meses de DAPT](/biblioteca/twilight-ticagrelor-monoterapia-apos-3-meses-de-dapt)
+- [STOPDAPT-2: DAPT de 1 mês seguida de clopidogrel em monoterapia](/biblioteca/stopdapt-2-dapt-de-1-mes-seguida-de-clopidogrel-monoterapia)

@@ -1,17 +1,44 @@
 ---
-title: "Sistema Modular de Marca-passo sem Eletrodo e CDI Subcutâneo em Comunicação sem Fio: o Ensaio MODULAR ATP"
+title: 'Sistema Modular de Marca-passo sem Eletrodo e CDI Subcutâneo em Comunicação sem Fio: o Ensaio MODULAR ATP'
 slug: sistema-modular-marca-passo-sem-eletrodo-e-cdi-subcutaneo-em-comunicacao-sem-fio-o-ensaio-modular-atp
-theme: "Dispositivos"
+theme: Dispositivos
 kind: estudo
 review_status: revisado
-source_refs: ["Knops RE, Lloyd MS, Roberts PR, Wright DJ, Boersma LVA, Doshi R, Friedman PA, Neuzil P, Blomström-Lundqvist C, Bongiorni MG, Burke MC, Gras D, Kutalek SP, Amin AK, Fu EY, Epstein LM, Tolosana JM, Callahan TD, Aasbo JD, Augostini R, Manyam H, Nair DG, Mondésert B, Su WW, Pepper C, Miller MA, Grammes J, Saleh K, Marquie C, Merchant FM, Cha YM, Cunnington C, Frankel DS, West J, Matznick E, Swackhamer B, Brisben AJ, Weinstock J, Stein KM, Reddy VY, Mont L; MODULAR ATP Investigators. A Modular Communicative Leadless Pacing-Defibrillator System. N Engl J Med. 2024;391(15):1402-1412. DOI: 10.1056/NEJMoa2401807. PMID: 38767244. Epub 18/05/2024.", "Lloyd MS, Reddy VY, Roberts P, Doshi RN, Wright DL, Boersma LVA, Friedman PA, Neuzil P, Blomström-Lundqvist C, Bongiorni MG, Burke MC, Gras D, Kutalek SP, Marijon E, Tolosana JM, Amin AK, Epstein LM, Aasbo JD, Callahan TD, Brisben AJ, West J, Matznick E, Speakman B, Bachman TN, Mont L, Knops RE. One-Year Outcomes of the MODULAR ATP Trial: A Novel Leadless Pacemaker in Wireless Communication With a Subcutaneous Implantable Cardioverter Defibrillator. Circ Arrhythm Electrophysiol. 2026;19(1):e014395. DOI: 10.1161/CIRCEP.125.014395. PMID: 41231774. PMCID: PMC12822781. Epub 13/11/2025."]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta Dispositivos já cobre o CDI subcutâneo (S-ICD) isoladamente — inclusive seu ensaio randomizado de longo prazo contra o transvenoso (PRAETORIAN-XL) — e cobre marca-passos sem eletrodo com comunicação implante-a-implante entre dois dispositivos leadless no próprio coração (Aveir DR i2i, biatrial/biventricular). Nenhum documento tratava do problema estrutural do S-ICD isolado — não conseguir entregar estimulação antitaquicárdica (ATP) por não ter eletrodo intracárdico — nem da solução testada para isso: um marca-passo sem eletrodo implantado no ventrículo direito, em comunicação sem fio com um S-ICD já implantado, formando um sistema 'modular' capaz de entregar ATP sem exigir eletrodo transvenoso. É esse sistema, e os dois desfechos publicados do mesmo ensaio (resultado pivotal em 6 meses no NEJM 2024, e seguimento de 1 ano/mediana 23,4 meses no Circulation: Arrhythmia and Electrophysiology 2025/2026), que este documento cobre — tema ainda ausente na pasta."
+source_refs:
+- 'Knops RE, Lloyd MS, Roberts PR, Wright DJ, Boersma LVA, Doshi R, Friedman PA, Neuzil P, Blomström-Lundqvist C,
+  Bongiorni MG, Burke MC, Gras D, Kutalek SP, Amin AK, Fu EY, Epstein LM, Tolosana JM, Callahan TD, Aasbo JD, Augostini
+  R, Manyam H, Nair DG, Mondésert B, Su WW, Pepper C, Miller MA, Grammes J, Saleh K, Marquie C, Merchant FM, Cha
+  YM, Cunnington C, Frankel DS, West J, Matznick E, Swackhamer B, Brisben AJ, Weinstock J, Stein KM, Reddy VY, Mont
+  L; MODULAR ATP Investigators. A Modular Communicative Leadless Pacing-Defibrillator System. N Engl J Med. 2024;391(15):1402-1412.
+  DOI: 10.1056/NEJMoa2401807. PMID: 38767244. Epub 18/05/2024.'
+- 'Lloyd MS, Reddy VY, Roberts P, Doshi RN, Wright DL, Boersma LVA, Friedman PA, Neuzil P, Blomström-Lundqvist C,
+  Bongiorni MG, Burke MC, Gras D, Kutalek SP, Marijon E, Tolosana JM, Amin AK, Epstein LM, Aasbo JD, Callahan TD,
+  Brisben AJ, West J, Matznick E, Speakman B, Bachman TN, Mont L, Knops RE. One-Year Outcomes of the MODULAR ATP
+  Trial: A Novel Leadless Pacemaker in Wireless Communication With a Subcutaneous Implantable Cardioverter Defibrillator.
+  Circ Arrhythm Electrophysiol. 2026;19(1):e014395. DOI: 10.1161/CIRCEP.125.014395. PMID: 41231774. PMCID: PMC12822781.
+  Epub 13/11/2025.'
+legacy_source: 'Documento novo, escrito em 09/09/2026. A pasta Dispositivos já cobre o CDI subcutâneo (S-ICD) isoladamente
+  — inclusive seu ensaio randomizado de longo prazo contra o transvenoso (PRAETORIAN-XL) — e cobre marca-passos
+  sem eletrodo com comunicação implante-a-implante entre dois dispositivos leadless no próprio coração (Aveir DR
+  i2i, biatrial/biventricular). Nenhum documento tratava do problema estrutural do S-ICD isolado — não conseguir
+  entregar estimulação antitaquicárdica (ATP) por não ter eletrodo intracárdico — nem da solução testada para isso:
+  um marca-passo sem eletrodo implantado no ventrículo direito, em comunicação sem fio com um S-ICD já implantado,
+  formando um sistema ''modular'' capaz de entregar ATP sem exigir eletrodo transvenoso. É esse sistema, e os dois
+  desfechos publicados do mesmo ensaio (resultado pivotal em 6 meses no NEJM 2024, e seguimento de 1 ano/mediana
+  23,4 meses no Circulation: Arrhythmia and Electrophysiology 2025/2026), que este documento cobre — tema ainda
+  ausente na pasta.'
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Sistema Modular de Marca-passo sem Eletrodo e CDI Subcutâneo em Comunicação sem Fio: o Ensaio MODULAR ATP
 
 ## O problema que o desenho tenta resolver
-O CDI subcutâneo (S-ICD) tem, por desenho, menos complicações relacionadas a eletrodo intracárdico que o CDI transvenoso convencional — mas paga um preço estrutural por isso: **sem eletrodo dentro do coração, o S-ICD isolado não consegue entregar estimulação antibradicardia contínua, ressincronização, nem estimulação antitaquicárdica (ATP)** — a terapia de baixa energia que, num CDI transvenoso, frequentemente interrompe uma taquicardia ventricular monomórfica sem precisar de choque. Isso deixa o candidato a S-ICD com uma escolha binária: aceitar que toda terapia para taquiarritmia ventricular sustentada venha por choque (doloroso, com impacto psicológico e em qualidade de vida), ou abrir mão da vantagem de complicação do S-ICD e optar por um sistema transvenoso só para ter acesso à ATP. O **MODULAR ATP** testa uma terceira via: implantar, no mesmo paciente, um **marca-passo sem eletrodo (leadless)** no ventrículo direito — capaz de comunicação sem fio bidirecional com um **S-ICD** já implantado — de modo que o S-ICD, ao detectar uma taquiarritmia, possa comandar o marca-passo leadless a entregar ATP, e o marca-passo leadless possa fornecer estimulação antibradicardia contínua independente do S-ICD.
+O CDI subcutâneo (S-ICD) tem, por desenho, menos complicações relacionadas a eletrodo intracárdico que o CDI transvenoso convencional — mas paga um preço estrutural por isso: **sem eletrodo dentro do coração, o S-ICD isolado não consegue entregar estimulação antibradicardia contínua, ressincronização, nem estimulação antitaquicárdica (ATP)** — a terapia de baixa energia que, num CDI transvenoso, frequentemente interrompe uma taquicardia ventricular monomórfica sem precisar de choque. Isso deixa o candidato a S-ICD com uma escolha binária: aceitar que toda terapia para taquiarritmia ventricular sustentada venha por choque (doloroso, com impacto psicológico e em qualidade de vida), ou abrir mão da vantagem de complicação do S-ICD e optar por um sistema transvenoso só para ter acesso à ATP. O **MODULAR ATP** testa uma terceira via: implantar, no mesmo paciente, um **marca-passo sem eletrodo (leadless)** no ventrículo direito — capaz de comunicação sem fio unidirecional do S-ICD para o marca-passo com um **S-ICD** (qualquer componente pode ser implantado primeiro) — de modo que o S-ICD, ao detectar uma taquiarritmia, possa comandar o marca-passo leadless a entregar ATP, e o marca-passo leadless possa fornecer estimulação antibradicardia contínua independente do S-ICD.
 
 ## Desenho — dois desfechos do mesmo ensaio, dois horizontes de tempo
 MODULAR ATP (NCT04798768) é um estudo multinacional, de braço único (sem grupo controle), com dois artigos publicados a partir da mesma coorte:
@@ -46,16 +73,16 @@ MODULAR ATP (NCT04798768) é um estudo multinacional, de braço único (sem grup
 
 ## Por que o desenho importa tanto quanto o resultado
 - **Estudo de braço único, sem grupo controle** — o desempenho é comparado contra metas de desempenho pré-especificadas (performance goals), não contra um comparador ativo (por exemplo, CDI transvenoso convencional com ATP). Isso é adequado para uma pergunta de viabilidade/segurança de tecnologia nova, mas não permite afirmar superioridade sobre o padrão transvenoso — apenas que o sistema modular atinge metas de desempenho técnico predefinidas.
-- **Taxa de sucesso da ATP (61,3%-67,3%) é da ordem do que se descreve historicamente para ATP em CDI transvenoso**, mas a comparação direta entre os dois sistemas não foi feita neste ensaio — a leitura correta é "a ATP funciona de forma comparável quando entregue por este sistema modular", não "este sistema é equivalente ao transvenoso", comparação que exigiria um desenho randomizado direto, inexistente até a data desta sessão.
-- **A taxa de complicação do sistema completo (88,5% livre de complicação em 1 ano) é sensivelmente menor que a taxa isolada do marca-passo leadless (97,2%)** — o paciente que recebe os dois componentes (S-ICD + marca-passo leadless) acumula o risco de complicação de ambos, não apenas do componente novo; esse ponto merece destaque na conversa com o paciente sobre risco total do sistema combinado, não apenas do dispositivo mais recente.
+- **A ATP interrompeu parte dos episódios tratados**, mas o ensaio não comparou diretamente sua eficácia com a ATP de um CDI transvenoso. Não demonstra equivalência entre os sistemas.
+- **A taxa livre de complicação do sistema completo (88,5% em 1 ano) é menor que a taxa livre de complicação maior isolada do marca-passo leadless (97,2%)** — o paciente que recebe os dois componentes (S-ICD + marca-passo leadless) acumula o risco de complicação de ambos, não apenas do componente novo; esse ponto merece destaque na conversa com o paciente sobre risco total do sistema combinado, não apenas do dispositivo mais recente.
 - **Aceleração de arritmia pela ATP em 10,1% dos episódios (1 ano)** é um evento adverso conhecido de qualquer terapia de ATP (não exclusivo deste sistema), mas deve constar explicitamente na discussão de risco-benefício com o paciente, junto da eficácia de 67,3%.
 - **Financiamento pela Boston Scientific**, fabricante dos dois componentes do sistema (marca-passo leadless e S-ICD) — os dois artigos declaram múltiplos autores com vínculo financeiro (consultoria, ações, emprego) com a empresa, incluindo funcionários da Boston Scientific como coautores. Isso não invalida os dados (o desenho de metas de desempenho pré-especificadas e a revisão por pares em NEJM e Circulation: Arrhythmia and Electrophysiology mitigam parcialmente o risco), mas deve ser explicitado.
 - **Mediana de seguimento de 23,4 meses no artigo de "1 ano"** é maior que 12 meses — os autores descrevem isso no próprio resumo; a leitura do título ("One-Year Outcomes") não deve ser tomada como limite estrito do seguimento reportado.
 
 ## O que isso muda na prática
-- Para o paciente com indicação de CDI **sem** necessidade de estimulação crônica bradicárdica ou ressincronização, mas para quem a ausência de ATP no S-ICD isolado era historicamente um argumento contra a escolha do subcutâneo, o sistema modular **oferece pela primeira vez uma via de ATP sem eletrodo transvenoso** — ampliando, em tese, o grupo de pacientes elegíveis ao S-ICD além dos que hoje o escolhem apenas pelo perfil de complicação de eletrodo.
+- Para o paciente com indicação de CDI **sem** necessidade de estimulação crônica bradicárdica ou ressincronização, mas para quem a ausência de ATP no S-ICD isolado era historicamente um argumento contra a escolha do subcutâneo, o sistema modular **investiga uma via de ATP sem eletrodo transvenoso** — ampliando, em tese, o grupo de pacientes elegíveis ao S-ICD além dos que hoje o escolhem apenas pelo perfil de complicação de eletrodo.
 - A decisão de implantar os dois componentes (marca-passo leadless + S-ICD) em vez de um CDI transvenoso convencional com ATP **ainda não tem comparação direta randomizada** — a escolha, hoje, depende de julgamento clínico sobre o perfil de risco individual (idade, expectativa de necessidade futura de eletrodo, risco de infecção de bolsa/eletrodo), não de evidência comparativa de eficácia.
-- O sistema está disponível apenas onde os dois componentes (EMPOWER™ leadless pacemaker e EMBLEM™ S-ICD, Boston Scientific) tiverem aprovação regulatória e comunicação certificada entre si — **VERIFICAÇÃO HUMANA NECESSÁRIA** quanto ao status regulatório e à disponibilidade comercial do sistema modular no Brasil na data de leitura deste documento, já que aprovação por agência regulatória (FDA, ANVISA) não foi objeto de nenhum dos dois artigos consultados nesta sessão.
+- O sistema modular é investigacional na página oficial norte-americana do fabricante consultada em 10/09/2026, que informa ausência de venda. Os resultados do ensaio não comprovam autorização de uso no Brasil. [Informação do fabricante](https://www.bostonscientific.com/us/en/healthcare-professionals/products/defibrillators/emblem-mri-subcutaneous-implantable-defibrillator-s-icd-system/fp90000132.html).
 
 ## Armadilhas clínicas
 - **Ler "97,5%-97,2% livre de complicação do marca-passo leadless" como taxa de complicação do sistema inteiro** — a taxa do sistema completo (marca-passo + S-ICD) foi de 88,5% em 1 ano, sensivelmente menor.

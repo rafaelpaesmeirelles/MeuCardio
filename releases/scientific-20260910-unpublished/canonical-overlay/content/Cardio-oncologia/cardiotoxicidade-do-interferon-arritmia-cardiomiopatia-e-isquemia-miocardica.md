@@ -1,0 +1,98 @@
+---
+slug: cardiotoxicidade-do-interferon-arritmia-cardiomiopatia-e-isquemia-miocardica
+title: 'Cardiotoxicidade do Interferon: Arritmia, Cardiomiopatia e Isquemia Miocárdica'
+kind: documento
+theme: Cardio-oncologia
+summary: null
+tags: []
+source_refs:
+- 'Sonnenblick M, Rosin A. Cardiotoxicity of interferon. A review of 44 cases. Chest. 1991;99(3):557-561. PMID:
+  1704826'
+- 'Zimmerman S, Adkins D, Graham M, Petruska P, Bowers C, Vrahnos D, Spitzer G. Irreversible, severe congestive
+  cardiomyopathy occurring in association with interferon alpha therapy. Cancer Biother. 1994;9(4):291-299. PMID:
+  7719376'
+- 'Le Corguillé M, Pochmalicki G, Eugène C. Cardiovascular complications of alpha interferon. Gastroenterol Clin
+  Biol. 2007;31(12):1081-1084. PMID: 18176361'
+- 'Zhao W, Ji F, Yu S, Li Z, Deng H. Dilated cardiomyopathy and hypothyroidism associated with pegylated interferon
+  and ribavirin treatment for chronic hepatitis C: case report and literature review. Braz J Infect Dis. 2014;18(1):110-113.
+  PMID: 24120833'
+- 'Qu C, Zheng Z, Liu W, Jiao J, Zhu J. A case of chronic hepatitis C patient of myocardial ischemia accompanied
+  with interstitial pneumonia induced by pegylated interferon alpha-2a. Int J Clin Exp Pathol. 2014;7(8):5232-5235.
+  PMID: 25197402'
+- 'Lenci I, Piccolo P, Francioso S, Di Paolo D, Galante A, Angelico M. Recurrent myocardial ischaemia during combination
+  antiviral therapy in a patient with chronic hepatitis C and normal aminotransferase levels. Dig Liver Dis. 2008;40(9):785-790.
+  PMID: 17913610'
+- 'Rauw J, Ahmed S, Petrella T. Pericardial effusion and tamponade following interferon alpha treatment for locally
+  advanced melanoma. Med Oncol. 2012;29(2):1304-1307. PMID: 21499929'
+- 'Mordoh J, Pampena MB, Aris M, Blanco PA, Lombardo M, von Euw EM, et al. Phase II Study of Adjuvant Immunotherapy
+  with the CSF-470 Vaccine Plus BCG Plus GM-CSF vs Medium-Dose Interferon Alpha 2B in Stages IIB, IIC, and III Cutaneous
+  Melanoma Patients. Front Immunol. 2017;8:625. PMID: 28620382'
+- 'Kiladjian JJ. Pegylated interferon: the who, why, and how. Hematology Am Soc Hematol Educ Program. 2024;2024(1):535-540.
+  PMID: 39644027'
+- 'Abu-Tineh M, Kassem N, Abdulla MA, Ismail OM, Ghasoub R, Aldapt MB, Yassin MA. Outcome of Pregnancy in the Era
+  of Pegylated Interferon Alpha 2a in Females with Essential Thrombocythemia: An Experience from Qatar. Case Rep
+  Oncol. 2020;13(1):336-340. PMID: 32308601'
+- 'Tefferi A, Vannucchi AM, Barbui T. Essential thrombocythemia: 2024 update on diagnosis, risk stratification,
+  and management. Am J Hematol. 2024;99(4):697-718. PMID: 38269572'
+- 'Tefferi A, Barbui T. Polycythemia vera: 2024 update on diagnosis, risk-stratification, and management. Am J Hematol.
+  2023;98(9):1465-1487. PMID: 37357958'
+- BESREMi (ropeginterferon alfa-2b-njft). US prescribing information, seção5.3. DailyMed. https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9583405d-53a0-49dc-88eb-5e6384ebabcb
+- PEGASYS (peginterferon alfa-2a). US prescribing information, seção5.3. DailyMed. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=de61685e-2b8c-4e22-84bb-869e13600440
+- AASLD/IDSA. HCV Guidance. https://www.hcvguidelines.org/guidance/initial-treatment-of-adults-with-hcv-infection/
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: false
+---
+
+# Cardiotoxicidade do Interferon: Arritmia, Cardiomiopatia e Isquemia Miocárdica
+
+## Contexto atual e histórico
+
+O interferon-alfa mantém relevância citorredutora em neoplasias mieloproliferativas, incluindo policitemia vera e trombocitemia essencial, conforme indicação e formulação. Nas hepatites, distinguir o antigo esquema de hepatite C com interferon e ribavirina do uso selecionado de peginterferon na hepatite B: **ribavirina não é o tratamento combinado padrão da hepatite B**. A orientação atual AASLD/IDSA para hepatite C utiliza antivirais de ação direta; falta de acesso não deve ser convertida em recomendação automática de retomar esquemas com interferon. Melanoma e outros cenários oncológicos contribuíram para a casuística histórica.
+
+Na hematologia, respostas moleculares com interferon não equivalem por si sós a comprovação de prevenção de transformação leucêmica, fibrose ou morte. Kiladjian (PMID 39644027) descreveu perspectivas promissoras, enquanto Tefferi e Barbui (PMID 37357958) advertiram contra usar redução isolada de carga alélica como comprovação de modificação da doença. A seleção citorredutora deve seguir o contexto clínico (também PMID 38269572).
+
+Há experiência com interferon, particularmente alfa peguilado, em gestantes com neoplasia mieloproliferativa que necessitam de citorredução. Os dois casos de Abu-Tineh et al. (PMID 32308601) não demonstram segurança de todas as formulações nem dispensam avaliação hematológica/obstétrica e bula aplicável. Essa experiência não se estende à associação com ribavirina, contraindicada na gestação.
+
+## O que os estudos demonstram
+
+A revisão clássica de Sonnenblick e Rosin (PMID 1704826) reuniu **44 casos de toxicidade em pacientes com câncer**, com diferentes interferons; não era predominantemente uma coorte de hepatite C. Descreveu arritmias, cardiomiopatia e manifestações isquêmicas. A maioria dos casos melhorou após retirada, mas seleção e publicação de relatos impedem estimar incidência populacional ou prever recuperação individual. A ausência de relação clara com dose/duração nessa revisão não prova ausência de qualquer efeito dose-dependente.
+
+No pequeno ensaio de Mordoh et al. (PMID 28620382), 31 pacientes com melanoma foram randomizados, 11 para interferon; houve toxicidade cardíaca de grau 2–3 em um desses 11. Esse denominador reduzido, em um regime específico, não estima o risco de toda a classe.
+
+### Arritmias e disfunção ventricular
+
+Arritmias supraventriculares e outros distúrbios do ritmo são descritos. Febre, alterações metabólicas/endócrinas e comedicações podem contribuir; efeitos diretos sobre miocárdio ou eletrofisiologia permanecem hipóteses, não mecanismos comprovados em cada caso (Le Corguillé et al., PMID 18176361).
+
+Zhao et al. (PMID 24120833) descreveram mulher de 41 anos com cardiomiopatia, FEVE de 32% e hipotireoidismo durante peginterferon/ribavirina, seguida de recuperação após suspensão e suporte. A presença de hipotireoidismo e tratamentos simultâneos limita atribuição exclusiva ao interferon. Zimmerman et al. (PMID 7719376) relataram disfunção grave persistente em paciente com mieloma e exposição prévia à doxorrubicina; os autores não consideraram causalidade definitiva. **Recuperação é possível, não garantida.** Não é correto distinguir mecanisticamente essa cardiomiopatia das antraciclinas apenas pela reversibilidade descrita em relatos.
+
+### Isquemia e outras manifestações
+
+Não há base robusta para classificar isquemia como a manifestação mais rara: algumas revisões a descrevem entre as apresentações frequentes e a cardiomiopatia como incomum. No caso de Qu et al. (PMID 25197402), alterações isquêmicas/perfusionais e pulmonares apareceram durante tratamento combinado e melhoraram após retirada. Isso apoia suspeita, sem demonstrar um mecanismo coronariano único.
+
+Lenci et al. (PMID 17913610) documentaram recorrência de alterações semelhantes à isquemia em duas exposições ao esquema peginterferon/ribavirina, concomitantes a queda de hemoglobina. **Anemia por ribavirina é uma explicação contribuinte importante**, e vasoespasmo microvascular foi uma hipótese não confirmada. Derrame pericárdico com tamponamento foi relatado por Rauw et al. (PMID 21499929), indicando que apresentações graves exigem atendimento imediato.
+
+## Prevenção e avaliação
+
+Revisar história cardiovascular, sintomas, comedicações e tratamentos cardiotóxicos prévios antes de iniciar. A bula norte-americana de BESREMi recomenda monitorização próxima em pessoas com antecedente cardiovascular e **evitar uso em doença cardiovascular grave ou instável**, incluindo hipertensão não controlada, insuficiência cardíaca NYHA≥II, arritmia grave, estenose coronariana importante, angina instável ou infarto/AVC recente. Essa advertência é mais específica que apenas presumir menor reserva cardíaca.
+
+A bula de PEGASYS recomenda cautela em cardiopatia prévia e informa que pacientes com cardiopatia significativa ou instável não devem receber PEGASYS/ribavirina, porque a anemia associada à ribavirina pode agravá-la. Verificar o produto, indicação e bula local; não presumir intercambialidade dos alertas ou frequências entre alfa, beta e formulações peguiladas.
+
+Palpitação, síncope, dor torácica ou dispneia novas orientam ECG e investigação conforme apresentação. Ecocardiograma avalia disfunção/congestão; hemograma, eletrólitos e função tireoidiana podem identificar fatores contribuintes. Suspeita de síndrome coronariana aguda requer investigação e tratamento urgente, sem atribuição prematura a vasoespasmo medicamentoso. Considerar outras causas de dispneia, inclusive toxicidade pulmonar.
+
+## Manejo e recuperação
+
+Diante de toxicidade clinicamente relevante, interromper o fármaco suspeito conforme gravidade e bula, coordenando a decisão com a equipe responsável pela doença de base. Tratar insuficiência cardíaca, arritmia, isquemia ou tamponamento segundo a apresentação; não aguardar reversibilidade para iniciar cuidados necessários.
+
+Imagem e avaliação seriadas documentam evolução. **Melhora após retirada aumenta a plausibilidade de uma reação adversa, mas não confirma causalidade por si só**, especialmente quando anemia, disfunção tireoidiana, infecção ou outros tratamentos mudam simultaneamente. Também não se deve excluir a contribuição medicamentosa apenas porque a recuperação foi incompleta.
+
+Reintrodução não é um teste diagnóstico de rotina. Só deve ser discutida excepcionalmente após reavaliar alternativas, gravidade do evento e restrições da formulação, com equipe multidisciplinar e plano de monitorização. A recorrência descrita por Lenci ilustra o risco; ausência de protocolo validado não justifica reexposição a uma toxicidade grave.
+
+## Tudo com Tudo
+
+- [Cardio-Oncologia: Prevenção e Manejo de Toxicidade Cardiovascular Relacionada ao Câncer](/biblioteca/cardio-oncologia-prevencao-e-manejo-de-toxicidade-cardiovascular-relacionada-ao-cancer)
+- [Poliarterite Nodosa e Acometimento Cardiovascular: Coronarite, Microaneurismas e Cardiopatia Hipertensiva Secundária](/biblioteca/poliarterite-nodosa-e-acometimento-cardiovascular-coronarite-microaneurismas-e-cardiopatia-hipertensiva)
+- [Crioglobulinemia e Vasculite Cardiovascular: Pericardite, Miocardite e Acometimento Coronariano na Doença por Imunocomplexos de Crioglobulina](/biblioteca/crioglobulinemia-e-vasculite-cardiovascular-pericardite-miocardite-e-vasculite-coronariana)
+- [Eritromelalgia: Forma Primária por Canalopatia SCN9A/Nav1.7 e Forma Secundária por Doença Mieloproliferativa](/biblioteca/eritromelalgia-forma-primaria-scn9a-e-forma-secundaria-doenca-mieloproliferativa)

@@ -1,17 +1,37 @@
 ---
-title: "Transporte Intra-Parada Precoce vs. RCP Prolongada na Cena para Parada Refratária: o Ensaio EVIDENCE"
+title: 'Transporte Intra-Parada Precoce vs. RCP Prolongada na Cena para Parada Refratária: o Ensaio EVIDENCE'
 slug: transporte-intra-parada-precoce-versus-rcp-prolongada-na-cena-para-parada-refrataria-o-ensaio-evidence
-theme: "Terapia intensiva"
+theme: Terapia intensiva
 kind: estudo
 review_status: revisado
-source_refs: ["Burns B, Marschner IC, Buscher H, Coggins A, Oliver M, Maruno K, McNulty R, Hawkins S, Facer R, Pradhananga B, Kushwaha V, Salt G, Seppelt I, Mallows J, Li V, Kachwalla H, Buttfield A, Fridgant Y, Kruit N, Dutton N, Arnold J, Milligan J, Smith J, Cartwright B, Carey R, Bendall J, Asha S, Wright K, Allan M, Curtis K, Ware S, Dyson S, Sackley M, Taing C, Austin DE, Ferguson I, Morton RL, Keech A, Dennis M; EVIDENCE trial investigators. Expedited transfer from the scene for refractory out-of-hospital cardiac arrest in Australia: a prospective, multicentre, parallel, open label, randomised clinical trial. Lancet Respir Med. 2025;13(10):921-932. DOI: 10.1016/S2213-2600(25)00130-4. PMID: 40854321. Trial registration: ACTRN12621000668808."]
-legacy_source: "Documento novo, escrito em 09/09/2026. Verificado por grep em toda a pasta content/Terapia_intensiva/ (termos 'EVIDENCE trial', 'expedited', 'transporte intra-parada', 'ACTRN12621000668808', 'Sydney'): nenhum documento existente cobre esta pergunta. O documento de RCP extracorpórea (ARREST/INCEPTION) trata de eCPR vs. RCP convencional já dentro do hospital; o documento de shock team/transferência (ACC 2025) trata de choque cardiogênico já com pulso, não de parada refratária sem RCE. O ensaio EVIDENCE responde a uma terceira pergunta, anterior às duas: uma vez que a parada é refratária ainda na cena, é melhor transportar logo (RCP intra-transporte) ou prolongar a reanimação no local antes de mover o paciente? Abstract completo lido verbatim via efetch do PubMed nesta sessão (PMID 40854321) antes da redação; nenhum número foi escrito de memória."
+source_refs:
+- 'Burns B, Marschner IC, Buscher H, Coggins A, Oliver M, Maruno K, McNulty R, Hawkins S, Facer R, Pradhananga B,
+  Kushwaha V, Salt G, Seppelt I, Mallows J, Li V, Kachwalla H, Buttfield A, Fridgant Y, Kruit N, Dutton N, Arnold
+  J, Milligan J, Smith J, Cartwright B, Carey R, Bendall J, Asha S, Wright K, Allan M, Curtis K, Ware S, Dyson S,
+  Sackley M, Taing C, Austin DE, Ferguson I, Morton RL, Keech A, Dennis M; EVIDENCE trial investigators. Expedited
+  transfer from the scene for refractory out-of-hospital cardiac arrest in Australia: a prospective, multicentre,
+  parallel, open label, randomised clinical trial. Lancet Respir Med. 2025;13(10):921-932. DOI: 10.1016/S2213-2600(25)00130-4.
+  PMID: 40854321. Trial registration: ACTRN12621000668808.'
+legacy_source: 'Documento novo, escrito em 09/09/2026. Verificado por grep em toda a pasta content/Terapia_intensiva/
+  (termos ''EVIDENCE trial'', ''expedited'', ''transporte intra-parada'', ''ACTRN12621000668808'', ''Sydney''):
+  nenhum documento existente cobre esta pergunta. O documento de RCP extracorpórea (ARREST/INCEPTION) trata de eCPR
+  vs. RCP convencional já dentro do hospital; o documento de shock team/transferência (ACC 2025) trata de choque
+  cardiogênico já com pulso, não de parada refratária sem RCE. O ensaio EVIDENCE responde a uma terceira pergunta,
+  anterior às duas: uma vez que a parada é refratária ainda na cena, é melhor transportar logo (RCP intra-transporte)
+  ou prolongar a reanimação no local antes de mover o paciente? Abstract completo lido verbatim via efetch do PubMed
+  nesta sessão (PMID 40854321) antes da redação; nenhum número foi escrito de memória.'
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Transporte Intra-Parada Precoce vs. RCP Prolongada na Cena para Parada Refratária: o Ensaio EVIDENCE
 
-## Definicao
-Os documentos já existentes nesta biblioteca sobre parada cardiorrespiratória tratam de perguntas adjacentes, mas distintas: o documento de RCP extracorpórea (`rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception.md`, ensaios ARREST e INCEPTION) compara eCPR contra RCP convencional **uma vez que o paciente já chegou a um centro capaz de iniciar ECMO**; o documento de shock team (`shock-team-e-transferencia-para-centro-de-choque-cardiogenico-niveis-de-cuidado-acc-2025.md`) trata de transferência de paciente **já com retorno de circulação espontânea (RCE)** e em choque cardiogênico. Nenhum dos dois responde à pergunta operacional que surge ainda na cena, antes de qualquer RCE: diante de uma parada cardíaca extra-hospitalar (PCR-EH) que não respondeu à reanimação avançada padrão, é melhor **interromper a reanimação no local e transportar rapidamente com compressão mecânica contínua** para um centro com capacidade de cateterismo e eCPR, ou **prolongar a reanimação avançada na própria cena** antes de considerar o transporte? O ensaio EVIDENCE (Austrália) foi desenhado especificamente para responder a essa pergunta.
+## Definição
+O EVIDENCE compara transporte precoce durante a parada, mantendo reanimação e compressões mecânicas, com suporte avançado mais prolongado na cena. Transportar durante a parada não significa interromper a RCP. Ensaios de eCPR, como ARREST e INCEPTION, avaliam estratégias distintas e têm diferenças de seleção, momento da randomização e organização da rede; não podem ser reduzidos a uma única comparação iniciada dentro do hospital.
 
 ## O ensaio EVIDENCE (Burns, Lancet Respiratory Medicine 2025)
 Burns B et al.; EVIDENCE trial investigators. Lancet Respir Med. 2025;13(10):921-932 (PMID 40854321; DOI 10.1016/S2213-2600(25)00130-4; ACTRN12621000668808). Ensaio prospectivo, multicêntrico, paralelo, aberto, randomizado, de superioridade, conduzido na região metropolitana de Sydney, Nova Gales do Sul, Austrália, por paramédicos do New South Wales Ambulance, com recrutamento entre **15 de julho de 2021 e 3 de março de 2024** e seguimento até 6 meses (último paciente acompanhado em 29 de agosto de 2024).
@@ -28,37 +48,31 @@ Burns B et al.; EVIDENCE trial investigators. Lancet Respir Med. 2025;13(10):921
 
 **Resultados**:
 - **206 pacientes recrutados**; 8 considerados inelegíveis a posteriori e 1 excluído por falha do aplicativo de randomização, restando **197 pacientes analisados**: **102 no grupo transporte expedito (intervenção)** e **95 no grupo cuidado padrão (controle)**
-- Idade mediana de **57 anos** (variação 47-64); **82% homens**; 40% brancos
+- Idade mediana de **57 anos**; **82% homens**; 40% brancos
 - **Desfecho primário**: **15/102 (15%) no grupo intervenção vs. 15/95 (16%) no grupo controle** — diferença de risco de **-1,1%** (IC95% -12,2% a 10,0%); risco relativo ajustado de **0,95** (IC95% 0,50-1,8); **p=0,87 — sem diferença significativa**
 - **38 pacientes (19%) tiveram evento adverso grave**: 35 (92% dos eventos) foram lesão hipóxica cerebral (17 no braço intervenção, 18 no braço controle), 1 acidente vascular cerebral, 1 hemorragia pulmonar e 1 hemorragia gastrointestinal (estes três últimos, todos no braço controle). Eventos adversos distribuídos de forma equilibrada entre os grupos; nenhum evento adverso inesperado identificado
 
-## Conclusao do proprio ensaio
+## Conclusão do ensaio
 **"Entre pacientes com parada cardiorrespiratória extra-hospitalar refratária, o transporte intra-parada expedito não melhorou significativamente a sobrevida com desfecho neurológico favorável. No entanto, o estudo pode ter sido subdimensionado para detectar um efeito de tratamento menor do que o esperado."**
 
-## Sintese pratica
-O EVIDENCE testou uma pergunta puramente logística e operacional — quando a reanimação já não está funcionando na cena, mover o paciente rapidamente (com compressão mecânica) para um centro capaz de cateterismo/eCPR é melhor do que insistir no local? A resposta, neste ensaio, foi **neutra**: não houve diferença de sobrevida com bom desfecho neurológico entre as duas estratégias (15% vs. 16%), e o intervalo de confiança da diferença de risco (-12,2% a 10,0%) é largo o bastante para não excluir nem um benefício moderado nem um prejuízo moderado de qualquer uma das estratégias. Combinado ao já registrado nesta biblioteca sobre eCPR (ARREST vs. INCEPTION — resultados também divergentes e amostras pequenas/moderadas), o EVIDENCE reforça um padrão recorrente na cadeia de sobrevivência da parada refratária: nenhuma das intervenções logísticas ou tecnológicas testadas até agora (transporte expedito, eCPR) tem, isoladamente, evidência randomizada robusta e consistente de benefício em sobrevida neurológica — o que não equivale a dizer que nenhuma delas ajuda em sistemas ou pacientes específicos, apenas que a generalização ampla não é sustentada pelos dados disponíveis. Na prática, a escolha entre transportar cedo ou prolongar a reanimação no local continua dependendo de fatores locais não testados aqui: tempo estimado de transporte, disponibilidade de compressão mecânica, distância ao centro com eCPR, e protocolo já estabelecido do serviço de emergência.
+## Síntese prática
+O EVIDENCE testou uma pergunta puramente logística e operacional — quando a reanimação já não está funcionando na cena, mover o paciente rapidamente (com compressão mecânica) para um centro capaz de cateterismo/eCPR é melhor do que insistir no local? A resposta, neste ensaio, foi **neutra**: não houve diferença de sobrevida com bom desfecho neurológico entre as duas estratégias (15% vs. 16%), e o intervalo de confiança da diferença de risco (-12,2% a 10,0%) é largo o bastante para não excluir nem um benefício moderado nem um prejuízo moderado de qualquer uma das estratégias. O resultado não demonstrou superioridade, mas a precisão é limitada. Não determina sozinho a eficácia de eCPR, angiografia ou de cada componente do pacote. Na prática, a escolha entre transportar cedo ou prolongar a reanimação no local continua dependendo de fatores locais não testados aqui: tempo estimado de transporte, disponibilidade de compressão mecânica, distância ao centro com eCPR, e protocolo já estabelecido do serviço de emergência.
 
-## Armadilhas clinicas
+## Armadilhas clínicas
 - **Não interpretar "p=0,87" como prova de que a estratégia de transporte é irrelevante** — o ensaio foi aberto, possivelmente subdimensionado (o próprio artigo reconhece isso), e o intervalo de confiança da diferença de risco é largo; ausência de significância estatística não é equivalente a demonstração de equivalência
 - **Não extrapolar para todos os sistemas de emergência** — o ensaio foi conduzido em uma única região metropolitana (Grande Sydney) com paramédicos treinados em compressão mecânica e via de acesso rápido a 15 centros de cateterismo; sistemas com tempos de transporte muito diferentes, sem compressão mecânica, ou sem rede de centros receptores podem ter resultado distinto
-- **Não confundir com o ensaio ARREST/INCEPTION (já registrado nesta biblioteca)** — aquele testa eCPR vs. RCP convencional **dentro do hospital**; o EVIDENCE testa uma decisão de transporte **ainda na cena**, anterior a qualquer decisão sobre eCPR
+- **Não confundir com ARREST ou INCEPTION**: eCPR é uma intervenção posterior à seleção e ao transporte, com protocolos próprios; o INCEPTION também envolveu identificação e randomização pré-hospitalar
 - **Não assumir que a lesão hipóxica cerebral (92% dos eventos adversos graves) foi causada pela estratégia de transporte** — a distribuição foi praticamente igual entre os dois braços (17 vs. 18), consistente com a gravidade basal da população (parada já refratária), não com um efeito específico do transporte expedito
 - **Não usar este resultado isoladamente para justificar abandono de protocolos locais de transporte rápido para eCPR** — a neutralidade do desfecho primário não invalida sistemas regionais já estruturados; ela apenas mostra que a estratégia de transporte, isoladamente, não foi superior à reanimação prolongada na cena nesta amostra
 
-## O que este documento não cobre
-**Análise de subgrupo por ritmo inicial (chocável vs. AESP)** — o desfecho primário foi estratificado por ritmo na randomização, mas o abstract consultado nesta sessão não fornece os valores numéricos separados por subgrupo de ritmo — **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de citar um resultado específico por tipo de ritmo inicial.
-
-**Tempo de transporte e tempo até angiografia/eCPR em cada braço** — variáveis operacionais centrais para entender o mecanismo do resultado neutro, não detalhadas no abstract; requerem consulta ao artigo completo.
-
-**Proporção de pacientes que efetivamente receberam eCPR ou angiografia coronária em cada braço** — não descrita no abstract; é informação relevante para avaliar se a "estratégia padrão" também deu acesso equivalente às mesmas terapias, como o desenho do estudo sugere.
-
-**Custo-efetividade e viabilidade de replicação em sistemas de emergência brasileiros** — não avaliado pelo ensaio, que foi conduzido inteiramente em um sistema pré-hospitalar australiano com recursos e treinamento específicos (compressão mecânica padronizada, rede de 15 centros receptores).
+## Limites da síntese
+Não são atribuídos resultados a subgrupos de ritmo nem inferidas diferenças de tempo até eCPR/angiografia não discriminadas nesta síntese. A conclusão é restrita ao pacote randomizado e ao desfecho global. O ensaio não estabeleceu equivalência e não avaliou custo-efetividade de implantação no Brasil.
 
 ## Tudo com Tudo
-- [/biblioteca/rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception](/biblioteca/rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception) — pergunta adjacente e posterior: uma vez que o paciente chega ao hospital, eCPR supera RCP convencional? (ARREST e INCEPTION, resultados divergentes, mesmo padrão de neutralidade/incerteza do EVIDENCE)
-- [/biblioteca/shock-team-e-transferencia-para-centro-de-choque-cardiogenico-niveis-de-cuidado-acc-2025](/biblioteca/shock-team-e-transferencia-para-centro-de-choque-cardiogenico-niveis-de-cuidado-acc-2025) — mesma lógica de rede regionalizada e transferência para centro de maior capacidade, mas aplicada a choque cardiogênico já com RCE, não à parada refratária
-- [/biblioteca/coronariografia-imediata-apos-parada-cardiaca-sem-supra-de-st-coact-e-tomahawk](/biblioteca/coronariografia-imediata-apos-parada-cardiaca-sem-supra-de-st-coact-e-tomahawk) — o que fazer no centro receptor após a chegada do paciente pós-parada, decisão que só se torna relevante se o transporte (testado pelo EVIDENCE) efetivamente ocorrer
-- [/biblioteca/pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide](/biblioteca/pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide) — decisões do cardiologista nas primeiras 24 horas, aplicáveis apenas aos pacientes que atingem RCE, o desfecho que toda a cadeia pré-hospitalar tenta viabilizar
-- [/biblioteca/parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019](/biblioteca/parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019) — diretriz de suporte avançado de vida que define os critérios de reanimação prolongada e refratariedade usados como porta de entrada do EVIDENCE
-- [/biblioteca/via-aerea-na-parada-extra-hospitalar-airways-2-e-part-e-o-que-o-paramedic2-mediu](/biblioteca/via-aerea-na-parada-extra-hospitalar-airways-2-e-part-e-o-que-o-paramedic2-mediu) — mesmo gênero de ensaio pragmático conduzido por paramédicos em PCR-EH, testando uma variável operacional de cena com resultado neutro sobre desfecho neurológico
-- [/biblioteca/cuidados-pos-parada-cardiaca-na-uco-aha-2025-oxigenacao-pressao-temperatura-neuroprognostico](/biblioteca/cuidados-pos-parada-cardiaca-na-uco-aha-2025-oxigenacao-pressao-temperatura-neuroprognostico) — diretriz-guarda-chuva do manejo pós-parada, que pressupõe que o paciente já chegou ao hospital com RCE — etapa anterior a essa é exatamente o que o EVIDENCE testou
+- [rcp extracorporea ecpr na parada refrataria arrest e inception](/biblioteca/rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception) — evidência complementar sobre eCPR em protocolos e populações próprios
+- [shock team e transferencia para centro de choque cardiogenico niveis de cuidado acc 2025](/biblioteca/shock-team-e-transferencia-para-centro-de-choque-cardiogenico-niveis-de-cuidado-acc-2025) — mesma lógica de rede regionalizada e transferência para centro de maior capacidade, mas aplicada a choque cardiogênico já com RCE, não à parada refratária
+- [coronariografia imediata apos parada cardiaca sem supra de st coact e tomahawk](/biblioteca/coronariografia-imediata-apos-parada-cardiaca-sem-supra-de-st-coact-e-tomahawk) — o que fazer no centro receptor após a chegada do paciente pós-parada, decisão que só se torna relevante se o transporte (testado pelo EVIDENCE) efetivamente ocorrer
+- [pos rosc primeiras 24 horas o que o cardiologista decide](/biblioteca/pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide) — decisões do cardiologista nas primeiras 24 horas, aplicáveis apenas aos pacientes que atingem RCE, o desfecho que toda a cadeia pré-hospitalar tenta viabilizar
+- [parada cardiorrespiratoria no adulto suporte avancado sbc 2019](/biblioteca/parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019) — contexto brasileiro de suporte avançado; os critérios do EVIDENCE foram definidos pelo protocolo australiano
+- [via aerea na parada extra hospitalar airways 2 e part e o que o paramedic2 mediu](/biblioteca/via-aerea-na-parada-extra-hospitalar-airways-2-e-part-e-o-que-o-paramedic2-mediu) — mesmo gênero de ensaio pragmático conduzido por paramédicos em PCR-EH, testando uma variável operacional de cena com resultado neutro sobre desfecho neurológico
+- [cuidados pos parada cardiaca na uco aha 2025 oxigenacao pressao temperatura neuroprognostico](/biblioteca/cuidados-pos-parada-cardiaca-na-uco-aha-2025-oxigenacao-pressao-temperatura-neuroprognostico) — diretriz-guarda-chuva do manejo pós-parada, que pressupõe que o paciente já chegou ao hospital com RCE — etapa anterior a essa é exatamente o que o EVIDENCE testou

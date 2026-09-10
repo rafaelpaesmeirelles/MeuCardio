@@ -1,0 +1,23 @@
+{
+  "release_id": "scientific-20260910",
+  "pack_sha256": "6a80a614e5992b4f9553c0f22328d0d895c660d9b5b73b0d144a8a3c41e62da4",
+  "mode": "check",
+  "records": 398,
+  "stats": {
+    "documento:updated": 393,
+    "documento:created": 2,
+    "caso_clinico:created": 2,
+    "material_paciente:updated": 1
+  },
+  "verified_relations": 1802,
+  "unlinked": 0,
+  "previously_deactivated_relations": 1423,
+  "planned_reactivations": 1423,
+  "reactivated_relations": 0,
+  "completed_at": "2026-09-10T21:51:37.130366+00:00",
+  "durable_writes": 0,
+  "earlier_review_backup_preserved_on_host": {
+    "path": "/var/backups/corvia-scientific-20260910/corvia-391-before-reviewed-20260910T210417506258Z.json.gz",
+    "sha256": "7851f5cb9b4b3619b0c10534f1e1c29fdf47c6dfc1e2685f127f136c41ad7846"
+  }
+}

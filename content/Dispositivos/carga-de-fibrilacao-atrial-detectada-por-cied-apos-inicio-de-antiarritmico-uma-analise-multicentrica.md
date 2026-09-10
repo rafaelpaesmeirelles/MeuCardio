@@ -1,11 +1,32 @@
 ---
-title: "Carga de Fibrilação Atrial Detectada por CIED Após Início de Antiarrítmico: uma Análise Multicêntrica"
+title: 'Carga de Fibrilação Atrial Detectada por CIED Após Início de Antiarrítmico: uma Análise Multicêntrica'
 slug: carga-de-fibrilacao-atrial-detectada-por-cied-apos-inicio-de-antiarritmico-uma-analise-multicentrica
-theme: "Dispositivos"
+theme: Dispositivos
 kind: estudo
 review_status: revisado
-source_refs: ["Schwartz SM, Peigh G, Culler K, Knight BP, Wan EY, Biviano A, Passman RS. Multicenter analysis of device-detected atrial fibrillation burden reduction after antiarrhythmic drug initiation. Heart Rhythm O2. 2026;7(3):465-471. DOI: 10.1016/j.hroo.2025.12.019. PMID: 41908184. PMCID: PMC13031027. Publicação eletrônica 08/01/2026 (eCollection março/2026)."]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta Dispositivos já cobre vários usos de dados gerados por CIED (dispositivo cardíaco eletrônico implantável) — telemonitoramento remoto ligado a mortalidade (IN-TIME), rendimento diagnóstico do monitor cardíaco implantável, e o algoritmo multissensor de descompensação (HeartLogic/MultiSENSE vs. OptiVol/DOT-HF) — e a pasta Fibrilação_atrial cobre o uso da carga de FA subclínica detectada por dispositivo como gatilho para decisão de anticoagulação (NOAH-AFNET 6, ARTESiA). Nenhum documento tratava de uma pergunta distinta das duas anteriores: uma vez que o paciente já está em controle de ritmo farmacológico, a carga de FA registrada pelo próprio CIED pode servir como métrica objetiva de resposta ao antiarrítmico — ou seja, usar o dispositivo não para diagnosticar FA nem para decidir sobre anticoagulante, mas para acompanhar se o fármaco iniciado está funcionando. É esse ângulo — carga de FA como marcador de resposta terapêutica ao antiarrítmico, não como gatilho diagnóstico ou de anticoagulação — que este documento cobre, a partir de um estudo multicêntrico retrospectivo publicado em 2026."
+source_refs:
+- 'Schwartz SM, Peigh G, Culler K, Knight BP, Wan EY, Biviano A, Passman RS. Multicenter analysis of device-detected
+  atrial fibrillation burden reduction after antiarrhythmic drug initiation. Heart Rhythm O2. 2026;7(3):465-471.
+  DOI: 10.1016/j.hroo.2025.12.019. PMID: 41908184. PMCID: PMC13031027. Publicação eletrônica 08/01/2026 (eCollection
+  março/2026).'
+- 'Métodos completos: https://pmc.ncbi.nlm.nih.gov/articles/PMC13031027/'
+legacy_source: 'Documento novo, escrito em 09/09/2026. A pasta Dispositivos já cobre vários usos de dados gerados
+  por CIED (dispositivo cardíaco eletrônico implantável) — telemonitoramento remoto ligado a mortalidade (IN-TIME),
+  rendimento diagnóstico do monitor cardíaco implantável, e o algoritmo multissensor de descompensação (HeartLogic/MultiSENSE
+  vs. OptiVol/DOT-HF) — e a pasta Fibrilação_atrial cobre o uso da carga de FA subclínica detectada por dispositivo
+  como gatilho para decisão de anticoagulação (NOAH-AFNET 6, ARTESiA). Nenhum documento tratava de uma pergunta
+  distinta das duas anteriores: uma vez que o paciente já está em controle de ritmo farmacológico, a carga de FA
+  registrada pelo próprio CIED pode servir como métrica objetiva de resposta ao antiarrítmico — ou seja, usar o
+  dispositivo não para diagnosticar FA nem para decidir sobre anticoagulante, mas para acompanhar se o fármaco iniciado
+  está funcionando. É esse ângulo — carga de FA como marcador de resposta terapêutica ao antiarrítmico, não como
+  gatilho diagnóstico ou de anticoagulação — que este documento cobre, a partir de um estudo multicêntrico retrospectivo
+  publicado em 2026.'
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Carga de Fibrilação Atrial Detectada por CIED Após Início de Antiarrítmico: uma Análise Multicêntrica
@@ -19,7 +40,7 @@ Schwartz SM, Peigh G, Culler K, Knight BP, Wan EY, Biviano A, Passman RS. Heart 
 - Idade média **73,6 ± 12,2 anos**; **78 (61%) homens**
 - Carga de FA quantificada pelo próprio dispositivo em **até 6 meses antes** e **12 meses depois** do início do AAD
 - **Tempo médio até a primeira medição de carga pós-AAD: 5,0 ± 6,8 meses**; **98 pacientes (76,6%)** tiveram mais de uma interrogação pós-início registrada
-- Análises de subgrupo pré-especificadas: **amiodarona vs. antiarrítmico não amiodarona**, e **carga basal alta (≥90%) vs. baixa (≤20%)**
+- Análises de subgrupo: **amiodarona vs. antiarrítmico não amiodarona**, e **carga basal alta (≥90%) vs. baixa (≤20%)**
 
 ## Resultados
 - **Carga de FA mediana**: **5,9%** antes do AAD (IQR 1,3%-29,7%) → **0,2%** (IQR 0%-2,9%) na primeira interrogação pós-início → **0,1%** (IQR 0%-1,5%) na interrogação final
@@ -33,7 +54,7 @@ Schwartz SM, Peigh G, Culler K, Knight BP, Wan EY, Biviano A, Passman RS. Heart 
 - **O intervalo até a primeira medição pós-AAD foi muito variável** (média 5,0 meses, mas desvio-padrão de 6,8 meses) — não houve protocolo fixo de interrogação; parte da "melhora" registrada pode refletir simplesmente o momento em que o dispositivo foi interrogado, não um efeito medicamentoso estável.
 - **O desfecho é um marcador substituto (carga de FA), não um desfecho clínico**: o estudo não relata acidente vascular cerebral, hospitalização, qualidade de vida, necessidade de cardioversão ou de ablação subsequente, nem eventos adversos do próprio antiarrítmico (proarritmia, disfunção tireoidiana ou pulmonar por amiodarona, bradicardia). Redução de carga é um sinal de resposta, não prova de benefício clínico.
 - **Carga final mediana não foi zero** (0,1%, IQR até 1,5%) — ou seja, a maioria dos pacientes manteve algum grau de FA residual detectável; "redução" aqui não equivale a "cura" ou a reversão para ritmo sinusal permanente.
-- **O artigo não detalha concomitância com ablação por cateter**: não fica claro, no resumo consultado nesta redação, se algum paciente foi a ablação no mesmo período de acompanhamento — se houve, o efeito atribuído ao AAD isoladamente pode estar contaminado pelo procedimento. **VERIFICAÇÃO HUMANA NECESSÁRIA** para quem for citar este estudo como evidência isolada do efeito farmacológico puro: conferir o texto completo quanto a esse ponto.
+- **Foram excluídas intervenções adicionais de controle de ritmo no período**, incluindo cardioversão, ablação ou início de outro antiarrítmico. Essa seleção, confirmada nos métodos completos, reduz essa fonte de confusão, mas não transforma o desenho pré/pós em comparação causal controlada.
 
 ## O que isso muda na prática
 - Em pacientes com CIED que iniciam antiarrítmico para controle de ritmo, a **carga de FA registrada pelo próprio dispositivo é uma métrica objetiva e granular de resposta ao tratamento**, disponível sem exame adicional — um complemento útil à avaliação sintomática e ao Holter/ECG periódico, já que capta episódios assintomáticos e permite comparação numérica direta entre antes e depois.
@@ -44,9 +65,9 @@ Schwartz SM, Peigh G, Culler K, Knight BP, Wan EY, Biviano A, Passman RS. Heart 
 ## Armadilhas clínicas
 - **Confundir "redução de carga" com "eliminação da arritmia"** — a carga mediana final não foi zero; a maioria dos pacientes manteve FA residual detectável pelo dispositivo.
 - **Tratar este desenho pré/pós, sem controle, como prova causal do efeito do antiarrítmico** — regressão à média e flutuação espontânea da carga de FA são explicações alternativas plausíveis para parte da redução observada.
-- **Usar a carga de FA pós-AAD, isoladamente, para decidir suspender anticoagulação** — este estudo não trata de risco de AVC; essa decisão segue o referencial de carga-limiar de NOAH-AFNET 6/ARTESiA, não este.
+- **Usar a carga de FA pós-AAD, isoladamente, para decidir suspender anticoagulação** — este estudo não trata de risco de AVC; em FA clínica, anticoagulação depende do risco tromboembólico e do contexto clínico. NOAH-AFNET6/ARTESiA estudaram arritmia subclínica detectada por dispositivo e não validam retirada após resposta a antiarrítmico.
 - **Extrapolar a magnitude do efeito (redução mediana >90%) para serviços sem seguimento estruturado por CIED** — a coorte veio de dois centros acadêmicos terciários com vigilância intensiva.
-- **Ignorar a possível contaminação por ablação concomitante** — o resumo consultado não esclarece esse ponto; ver alerta de verificação humana acima antes de citar o estudo como efeito farmacológico puro.
+- **Ignorar a seleção da amostra** — excluíram-se pacientes com intervenção adicional de ritmo; a magnitude da resposta não representa necessariamente todos os pacientes que iniciam antiarrítmico.
 - **Esquecer que o estudo não reporta segurança do antiarrítmico** — nenhum evento adverso (proarritmia, toxicidade de amiodarona) é discutido nos números aqui apresentados; a decisão de manter o fármaco depende também dessa vigilância, não coberta por este documento.
 
 ## Conteúdo CorVIA conectado

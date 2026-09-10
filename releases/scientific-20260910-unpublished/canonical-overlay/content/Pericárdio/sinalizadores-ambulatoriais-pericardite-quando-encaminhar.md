@@ -1,0 +1,98 @@
+---
+slug: sinalizadores-ambulatoriais-pericardite-quando-encaminhar
+title: 'Sinalizadores ambulatoriais de pericardite: quando encaminhar à emergência e quando retorno precoce'
+kind: protocolo
+theme: Pericárdio
+summary: 'Pacote operacional de consultório: reconhecer alarme de tamponamento/miopericardite e falha terapêutica
+  precoce na pericardite, distinguir PS agora versus retorno precoce versus referência especializada — sem reescrever
+  doses nem o escalonamento anti-IL-1.'
+tags: []
+source_refs:
+- 'Schulz-Menger J; Collini V; Gröschel J. 2025 ESC Guidelines for the management of myocarditis and pericarditis.
+  Eur Heart J. 2025;46:3952. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297.'
+- 'Imazio M; Brucato A; Cemin R. A randomized trial of colchicine for acute pericarditis. N Engl J Med. 2013;369:1522.
+  DOI: 10.1056/NEJMoa1208536. PMID: 23992557.'
+- 'Klein AL; Imazio M; Cremer P. Phase 3 Trial of Interleukin-1 Trap Rilonacept in Recurrent Pericarditis. N Engl
+  J Med. 2021;384:31. DOI: 10.1056/NEJMoa2027892. PMID: 33200890.'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: false
+---
+
+# Sinalizadores ambulatoriais de pericardite: quando encaminhar e quando reavaliar em dias
+
+Este protocolo responde a uma pergunta de **consultório / pós-alta**: diante de pericardite aguda ou recorrente conhecida, **quais sinais exigem pronto-socorro agora**, quais pedem **retorno ambulatorial precoce**, e quando **referir especialidade** para escalada (sem protocolar o degrau farmacológico aqui).
+
+Não substitui:
+- diagnóstico e primeira linha da pericardite aguda — [pericardite-aguda-diagnostico-tratamento-e-prevencao-de-recorrencia](/biblioteca/pericardite-aguda-diagnostico-tratamento-e-prevencao-de-recorrencia) e [fluxograma-pericardite-aguda-esc-2025](/biblioteca/fluxograma-pericardite-aguda-esc-2025);
+- escalonamento terapêutico da recorrente refratária (colchicina → corticoide / anti-IL-1) — [fluxograma-pericardite-recorrente-refrataria-escalonamento-terapeutico](/biblioteca/fluxograma-pericardite-recorrente-refrataria-escalonamento-terapeutico);
+- conduta imediata de tamponamento — [fluxograma-tamponamento-cardiaco](/biblioteca/fluxograma-tamponamento-cardiaco).
+
+Árvore: [fluxograma-ambulatorial-pericardite-piora-destino](/biblioteca/fluxograma-ambulatorial-pericardite-piora-destino). Checklist de alarme: [pericardite-checklist-ambulatorial-de-alarme](/biblioteca/pericardite-checklist-ambulatorial-de-alarme).
+
+## Princípio
+
+**Pericardite ambulatorial é majoritariamente inflamatória e tratável fora do hospital**, mas um subconjunto tem marcadores de alto risco que mudam o destino (ESC 2025, PMID 40878297). Colchicina reduz recorrência no primeiro episódio (ICAP, PMID 23992557); recorrência refratária com inflamação objetiva abre caminho a anti-IL-1 (RHAPSODY, PMID 33200890) — **este documento só decide quando ir ao PS, quando voltar em dias e quando referir**, não doses.
+
+## Sinalizadores → encaminhar agora (PS / emergência)
+
+| Domínio | Sinais |
+|---|---|
+| Hemodinâmico / tamponamento | Hipotensão, sinais de congestão jugular ou hipoperfusão, pulso paradoxal, pré-síncope/síncope, deterioração rápida com derrame conhecido |
+| Respiratório / dor atípica grave | Dispneia em repouso nova, hipoxemia, dor torácica em repouso intensa com instabilidade |
+| Miopericardite / isquemia | Troponina elevada conhecida com piora clínica, arritmia sintomática, dor anginosa típica não explicada só por pericardite |
+| Infecção / sistêmico grave | Febre alta com toxemia, imunossupressão + suspeita bacteriana/purulenta, trauma torácico recente com derrame |
+| Derrame de risco | Derrame com deterioração hemodinâmica/respiratória ou suspeita de tamponamento |
+
+**Conduta:** não “esperar o próximo retorno”. Encaminhar; se tamponamento, seguir [fluxograma-tamponamento-cardiaco](/biblioteca/fluxograma-tamponamento-cardiaco).
+
+## Sem emergência e sem marcadores de alto risco → retorno precoce
+
+1. Confirmar tendência: dor pleurítica típica, atrito, febre baixa, adesão a AAS/AINE + colchicina, restrição de exercício.
+2. Exame focado: sinais vitais, atrito, congestão, sinais de hipoperfusão.
+3. Se disponível e mudar conduta: ECG, PCR/CRP, eco se suspeita de derrame ou falha clínica.
+4. Retorno em **24–72 h** se dor/PCR ainda elevados com estabilidade clínica confirmada; em **≤7 dias** se melhoria parcial com rede de suporte.
+5. Orientação escrita dos alarmes da tabela + restrição de exercício até remissão (ESC 2025).
+
+## Referência especializada após definir necessidade de hospitalização
+
+Encaminhar cardiologia / centro com experiência em doença pericárdica quando:
+- **primeira falha** clara à primeira linha bem feita (dose/duração adequadas) com recorrência ou curso incessante;
+- **recorrências múltiplas** ou dependência de corticoide;
+- necessidade de discutir **anti-IL-1** (cenário RHAPSODY / escada ESC 2025) — usar o fluxograma de escalonamento, não este pacote;
+- etiologia duvidosa (neoplasia, tuberculose, autoimune) sem instabilidade.
+
+## Checklist de90segundos
+
+Antes de programar retorno, verificar também os marcadores maiores/menores de risco listados abaixo: qualquer um requer avaliação hospitalar e investigação etiológica, mesmo sem instabilidade.
+
+1. Alarme da tabela (tamponamento, miopericardite grave, toxemia)? → **PS agora**.
+2. Dor/inflamação em evolução com estabilidade e sem critérios maiores/menores de alto risco? → **retorno 24–72 h** (ou ≤7 dias se brando).
+3. Recorrência apesar de colchicina bem feita / corticoide-dependência? → **referência especializada** + [fluxograma-pericardite-recorrente-refrataria-escalonamento-terapeutico](/biblioteca/fluxograma-pericardite-recorrente-refrataria-escalonamento-terapeutico).
+4. Não protocolar doses de AINE, colchicina, corticoide ou anti-IL-1 neste documento.
+
+## Armadilhas
+
+Liberar com dispneia + derrame “para ver em 2 semanas”; tratar toda dor residual leve como emergência; atrasar PS por “aguardar PCR”; usar este pacote no lugar do escalonamento terapêutico ou do fluxograma de tamponamento.
+
+## Limite da evidência
+
+Prazos de retorno (24–72 h / ≤7 dias) são **marcos operacionais** deste pacote para triagem ambulatorial. A ESC 2025 define critérios de risco e hospitalização; não fixa um único corte universal de horas para retorno precoce em consultório.
+
+## Slugs relacionados (existentes)
+
+- [pericardite-aguda-diagnostico-tratamento-e-prevencao-de-recorrencia](/biblioteca/pericardite-aguda-diagnostico-tratamento-e-prevencao-de-recorrencia)
+- [fluxograma-pericardite-aguda-esc-2025](/biblioteca/fluxograma-pericardite-aguda-esc-2025)
+- [fluxograma-pericardite-recorrente-refrataria-escalonamento-terapeutico](/biblioteca/fluxograma-pericardite-recorrente-refrataria-escalonamento-terapeutico)
+- [fluxograma-tamponamento-cardiaco](/biblioteca/fluxograma-tamponamento-cardiaco)
+- [inibidores-de-il-1-na-pericardite-recorrente-e-derrame-pericardico-neoplasico](/biblioteca/inibidores-de-il-1-na-pericardite-recorrente-e-derrame-pericardico-neoplasico)
+
+## Critérios que precedem o retorno ambulatorial
+
+Febre >38 °C, curso subagudo, derrame grande (>20 mm ao eco), tamponamento ou ausência de resposta ao AAS/AINE após tratamento adequado são marcadores maiores; acometimento miocárdico, imunossupressão, trauma e anticoagulação oral são marcadores menores. Qualquer marcador requer avaliação hospitalar e investigação etiológica; estabilidade hemodinâmica não autoriza simplesmente aguardar consulta. Derrame grande estável ou anticoagulação isolada não equivalem a tamponamento: emergência imediata depende de repercussão/instabilidade; organizar hospitalização e avaliação rápida mesmo sem choque.
+
+Não esperar a tríade de Beck: ela é pouco sensível. Integrar sinais vitais, perfusão, pulso paradoxal, sintomas e ecocardiograma urgente quando houver suspeita. Ausência da tríade não exclui tamponamento.
+
+Recorrência precisa de sustentação objetiva; dor isolada não justifica anti-IL-1. Confirmar adesão, dose e duração adequadas da primeira linha no protocolo canônico. Febre/toxemia exige considerar etiologia bacteriana, tuberculose e outras causas. Restringir exercício até remissão, por pelo menos um mês, com duração e retorno individualizados (ESC 2025); envolvimento miocárdico exige orientação específica. Os prazos ambulatoriais só valem na ausência de alto risco e com acesso seguro.

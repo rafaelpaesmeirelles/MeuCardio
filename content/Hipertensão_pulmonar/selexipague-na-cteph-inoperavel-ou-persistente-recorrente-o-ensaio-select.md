@@ -1,17 +1,28 @@
 ---
-title: "Selexipague na CTEPH Inoperável ou Persistente/Recorrente: o Ensaio SELECT (Negativo)"
+title: 'Selexipague na CTEPH Inoperável ou Persistente/Recorrente: o Ensaio SELECT (Negativo)'
 slug: selexipague-na-cteph-inoperavel-ou-persistente-recorrente-o-ensaio-select
-theme: "Hipertensão pulmonar"
+theme: Hipertensão pulmonar
 kind: estudo
 review_status: revisado
-source_refs: ["Kim NH, Channick R, Delcroix M, et al. Efficacy and safety of selexipag in patients with inoperable or persistent/recurrent CTEPH (SELECT randomised trial). Eur Respir J. 2024;64(4):2400193. DOI: 10.1183/13993003.00193-2024. PMID: 39326918. PMCID: PMC11447286. NCT03689244"]
-legacy_source: "Documento novo, sessão de expansão de conteúdo (09/09/2026). Fonte primária conferida no PubMed via E-utilities e no texto completo (PMC11447286) nesta sessão — título, revista, ano, DOI, PMID e todos os números clínicos conferidos linha a linha contra o artigo original."
+source_refs:
+- 'Kim NH, Channick R, Delcroix M, et al. Efficacy and safety of selexipag in patients with inoperable or persistent/recurrent
+  CTEPH (SELECT randomised trial). Eur Respir J. 2024;64(4):2400193. DOI: 10.1183/13993003.00193-2024. PMID: 39326918.
+  PMCID: PMC11447286. NCT03689244'
+legacy_source: Documento novo, sessão de expansão de conteúdo (09/09/2026). Fonte primária conferida no PubMed via
+  E-utilities e no texto completo (PMC11447286) nesta sessão — título, revista, ano, DOI, PMID e todos os números
+  clínicos conferidos linha a linha contra o artigo original.
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Selexipague na CTEPH Inoperável ou Persistente/Recorrente: o Ensaio SELECT (Negativo)
 
 ## Por que este documento existe
-O selexipague (agonista oral seletivo do receptor IP de prostaciclina) tem eficácia estabelecida na hipertensão arterial pulmonar (HAP) pelo ensaio GRIPHON. Era razoável testar a hipótese de que o mesmo mecanismo beneficiaria pacientes com hipertensão pulmonar tromboembólica crônica (CTEPH) inoperável ou persistente/recorrente após tratamento intervencionista — população com opções farmacológicas mais limitadas (apenas o riociguat tem indicação formal consolidada nesse cenário). O SELECT testou essa hipótese em um desenho robusto, de fase 3, e **não confirmou benefício**. Registrar esse resultado negativo — com os números reais — evita que a busca por "selexipague" ou "SELECT" no contexto de CTEPH encontre uma lacuna ou, pior, uma extrapolação indevida da eficácia do GRIPHON (que foi feito em HAP, não em CTEPH).
+O selexipague (agonista oral seletivo do receptor IP de prostaciclina) tem eficácia estabelecida na hipertensão arterial pulmonar (HAP) pelo ensaio GRIPHON. Era razoável testar a hipótese de que o mesmo mecanismo beneficiaria pacientes com hipertensão pulmonar tromboembólica crônica (CTEPH) inoperável ou persistente/recorrente após tratamento intervencionista — população com opções farmacológicas mais limitadas (o riociguate é uma opção estabelecida nesse cenário; outras aprovações variam conforme a jurisdição). O SELECT testou essa hipótese em um desenho robusto, de fase 3, e **não confirmou benefício**. Registrar esse resultado negativo — com os números reais — evita que a busca por "selexipague" ou "SELECT" no contexto de CTEPH encontre uma lacuna ou, pior, uma extrapolação indevida da eficácia do GRIPHON (que foi feito em HAP, não em CTEPH).
 
 ## Desenho
 Ensaio fase 3, multicêntrico, randomizado, duplo-cego, controlado por placebo, de grupos paralelos, com desenho **sequencial em grupo** (análises intercalares planejadas, com regras de interrupção por futilidade ou eficácia) — **NCT03689244**. Realizado em **117 centros de 31 países**, com randomização ocorrida em 65 desses centros, distribuídos por Ásia, Europa Oriental, América Latina, América do Norte, Europa Ocidental e Austrália. Período do estudo: **23 de janeiro de 2019 a 7 de junho de 2022**.
@@ -60,11 +71,11 @@ Nenhuma diferença entre grupos foi observada nos desfechos secundários/explora
 Estes achados de subgrupo **não permitem concluir eficácia em nenhuma população específica** — são hipóteses para estudos futuros, não confirmação de benefício.
 
 ## Segurança
-- Duração média do tratamento: **11,8 ± 8,0 meses** (selexipague) vs. **11,4 ± 7,7 meses** (placebo). Dose máxima tolerada individual média: **1.001,6 ± 534,7 µg 2×/dia** (selexipague) vs. **1.271,9 ± 524,2 µg 2×/dia** (placebo) — o grupo placebo atingiu doses "equivalentes" mais altas por não sofrer os efeitos limitantes de titulação do fármaco ativo.
+- Duração média do tratamento: **11,8 ± 8,0 meses** (selexipague) vs. **11,4 ± 7,7 meses** (placebo). Dose máxima tolerada individual média: **1.001,6 ± 534,7 µg 2×/dia** (selexipague) vs. **1.271,9 ± 524,2 µg 2×/dia** (placebo) — valores nominais de titulação, não equivalência farmacológica. A atribuição da diferença exclusivamente à tolerabilidade é interpretativa.
 - Qualquer evento adverso: **98,4% (selexipague) vs. 82,8% (placebo)**.
 - Evento adverso relacionado ao tratamento: **85,9% vs. 48,4%**.
 - Descontinuação por evento adverso: **12,5% vs. 6,3%**.
-- Evento adverso grave (SAE): **14,1% (selexipague) vs. 25,0% (placebo)** — menor no braço ativo.
+- Evento adverso grave (SAE): **14,1% (selexipague) vs. 25,0% (placebo)** — numericamente menor no braço ativo, sem estabelecer superioridade de segurança.
 - SAE relacionado ao tratamento: **0% em ambos os grupos**.
 - Hospitalização por evento adverso: **14,1% vs. 21,9%**.
 - Óbitos durante o período duplo-cego (emergentes do tratamento, ocorridos até 3 dias após a última dose): **2 (3,1%) em cada grupo** — selexipague: insuficiência ventricular direita e pneumonia; placebo: insuficiência respiratória aguda e óbito (causa registrada no artigo original como "insuficiência respiratória aguda e óbito", sem maior detalhamento etiológico disponível no texto publicado). Um óbito adicional no grupo selexipague, **11 dias** após a última dose, por síndrome de disfunção de múltiplos órgãos, **não foi considerado emergente do tratamento** pelos investigadores.
@@ -73,13 +84,20 @@ Estes achados de subgrupo **não permitem concluir eficácia em nenhuma populaç
 Nenhum sinal de segurança novo foi identificado além do perfil já conhecido do selexipague (efeitos de classe do agonismo do receptor IP).
 
 ## Interpretação clínica
-O SELECT foi o **maior ensaio global já conduzido em CTEPH** e o primeiro estudo farmacológico randomizado nessa condição a incluir explicitamente pacientes com história de BPA — refletindo a era atual de manejo multimodal (PEA, BPA e terapia farmacológica combinados). Apesar do desenho robusto, estratificação cuidadosa e análise sequencial em grupo, **não houve evidência de benefício do selexipague sobre a RVP ou sobre desfechos clínicos secundários** (TC6M, tempo até piora clínica) nesta população heterogênea de CTEPH inoperável ou persistente/recorrente. O estudo foi encerrado por futilidade após a primeira análise intercalar planejada.
+O SELECT foi um ensaio global de selexipague em CTEPH, incluindo pacientes com história de BPA — refletindo a era atual de manejo multimodal (PEA, BPA e terapia farmacológica combinados). Apesar do desenho robusto, estratificação cuidadosa e análise sequencial em grupo, **não houve evidência de benefício do selexipague sobre a RVP ou sobre desfechos clínicos secundários** (TC6M, tempo até piora clínica) nesta população heterogênea de CTEPH inoperável ou persistente/recorrente. O estudo foi encerrado por futilidade após a primeira análise intercalar planejada.
 
 ### O que não deve ser concluído
 - Este resultado **não invalida a eficácia do selexipague na HAP** (GRIPHON) — trata-se de população e fisiopatologia distintas (doença tromboembólica organizada vs. arteriopatia pulmonar primária).
 - Os achados post-hoc favoráveis a subgrupos (uso concomitante de estimulador da guanilato-ciclase solúvel, exclusão de Ásia/América Latina) são **exploratórios, não confirmatórios**, e não devem orientar decisão terapêutica individual.
 - O "efeito placebo inexplicado" limita a interpretação, mas não muda a conclusão prática: **o desfecho primário pré-especificado não foi atingido**.
-- Não há, neste estudo, comparação direta com riociguat (que continua sendo o único vasodilatador específico com indicação formal consolidada para CTEPH inoperável ou persistente/recorrente, pelos ensaios CHEST-1/CHEST-2).
+- Não há, neste estudo, comparação direta com riociguat (com evidência própria em CTEPH pelos ensaios CHEST-1/CHEST-2).
 
 ## Mensagem prática
 **O selexipague não demonstrou benefício sobre a resistência vascular pulmonar ou sobre desfechos clínicos secundários em CTEPH inoperável ou persistente/recorrente.** O SELECT — ensaio fase 3, randomizado, duplo-cego, com 128 pacientes em 31 países — foi interrompido por futilidade na primeira análise intercalar (razão de RVP semana 20/basal de 0,95; IC 95% 0,84-1,07; p=0,412), sem sinal de segurança novo além do perfil já conhecido do fármaco. Este documento existe para que a busca por "selexipague em CTEPH" ou "SELECT trial CTEPH" na literatura de hipertensão pulmonar encontre o resultado real — negativo — em vez de uma lacuna ou de extrapolação indevida da eficácia do GRIPHON na HAP.
+
+## Conteúdo CorVIA conectado
+- [Riociguate na HAP e na CTEPH: PATENT-1 e CHEST-1](/biblioteca/riociguate-na-hap-e-na-cteph-os-ensaios-patent-1-e-chest-1)
+- [Estratificação de risco e terapia combinada na HAP](/biblioteca/estratificacao-de-risco-e-terapia-combinada-inicial-na-hipertensao-arterial-pulmonar): população distinta, sem extrapolar seus resultados para CTEPH.
+
+## Nota regulatória
+Não se deve interpretar riociguate como a única aprovação existente mundialmente: a EMA autoriza treprostinila subcutânea (Trepulmix) em adultos com CTEPH inoperável ou persistente/recorrente após cirurgia, classe funcional III–IV, para capacidade de exercício. Isso não modifica o resultado negativo do SELECT. [EMA — Trepulmix](https://www.ema.europa.eu/en/medicines/human/EPAR/trepulmix).

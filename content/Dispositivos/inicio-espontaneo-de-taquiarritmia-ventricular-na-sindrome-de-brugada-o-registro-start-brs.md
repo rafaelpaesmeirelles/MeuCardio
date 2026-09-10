@@ -1,11 +1,27 @@
 ---
-title: "Início Espontâneo de Taquiarritmia Ventricular na Síndrome de Brugada: o Registro START-BrS Distingue TV Monomórfica de Polimórfica"
+title: 'Início Espontâneo de Taquiarritmia Ventricular na Síndrome de Brugada: o Registro START-BrS Distingue TV
+  Monomórfica de Polimórfica'
 slug: inicio-espontaneo-de-taquiarritmia-ventricular-na-sindrome-de-brugada-o-registro-start-brs
-theme: "Dispositivos"
+theme: Dispositivos
 kind: estudo
 review_status: revisado
-source_refs: ["Milman A, Nademanee K, Kamakura T, Marcus G, Chimparlee N, Sukhabote K, Aiba T, Sieira J, de Asmundis C, Scrocco C, et al; START-BrS. Clinical Profile and Mode of Initiation of Spontaneous Ventricular Tachyarrhythmias in Patients With Brugada Syndrome (START-BrS). JACC Clin Electrophysiol. 2026;12(8):1866-1881. DOI: 10.1016/j.jacep.2026.02.038. PMID: 41979546"]
-legacy_source: "Documento novo. A pasta Dispositivos já cobre estratificação de risco e indicação de CDI na síndrome de Brugada de forma indireta (ver documentos de Arritmias sobre EEF/escore de Sieira/critério DST-Tiso), e cobre separadamente a programação de CDI para reduzir terapia inapropriada (MADIT-RIT). Não havia, até esta sessão, documento dedicado ao registro que caracteriza como a taquiarritmia ventricular efetivamente se inicia no Brugada — achado registrado majoritariamente por CDI (94,9% dos episódios) e com implicação direta para discriminação de arritmia e programação de zona/ATP no dispositivo."
+source_refs:
+- 'Milman A, Nademanee K, Kamakura T, Marcus G, Chimparlee N, Sukhabote K, Aiba T, Sieira J, de Asmundis C, Scrocco
+  C, et al; START-BrS. Clinical Profile and Mode of Initiation of Spontaneous Ventricular Tachyarrhythmias in Patients
+  With Brugada Syndrome (START-BrS). JACC Clin Electrophysiol. 2026;12(8):1866-1881. DOI: 10.1016/j.jacep.2026.02.038.
+  PMID: 41979546'
+legacy_source: Documento novo. A pasta Dispositivos já cobre estratificação de risco e indicação de CDI na síndrome
+  de Brugada de forma indireta (ver documentos de Arritmias sobre EEF/escore de Sieira/critério DST-Tiso), e cobre
+  separadamente a programação de CDI para reduzir terapia inapropriada (MADIT-RIT). Não havia, até esta sessão,
+  documento dedicado ao registro que caracteriza como a taquiarritmia ventricular efetivamente se inicia no Brugada
+  — achado registrado majoritariamente por CDI (94,9% dos episódios) e com implicação direta para discriminação
+  de arritmia e programação de zona/ATP no dispositivo.
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Início Espontâneo de Taquiarritmia Ventricular na Síndrome de Brugada: o Registro START-BrS Distingue TV Monomórfica de Polimórfica
@@ -31,17 +47,14 @@ O achado central e verificável do estudo é conceitual, não uma recomendação
 
 - **Discriminação de arritmia e revisão de episódio**: ao revisar o eletrograma armazenado de um choque em paciente com Brugada, não se deve presumir automaticamente que todo episódio seja polimórfico/FV — uma morfologia mais organizada e regular pode representar MVT genuína, não um artefato de sobredetecção, e merece leitura tão cuidadosa quanto qualquer outra TV monomórfica em cardiopatia estrutural.
 - **A distinção clínica (idade mais avançada, padrão induzido por fármaco, etnia branca) pode ajudar a antecipar, no perfil do paciente, quem tem maior probabilidade de apresentar MVT** — informação útil para individualizar a conversa sobre o que esperar do dispositivo, não para mudar por si só a zona de detecção.
-- **O estudo não avalia terapia** (não reporta se ATP foi tentado, nem taxa de sucesso de ATP versus choque nesses episódios) — portanto, **não constitui evidência para expandir o uso de ATP como terapia primária no Brugada**. Essa é uma pergunta clínica distinta e não respondida por este registro. **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de usar este achado para justificar mudança de programação de zona/ATP em um paciente individual — a decisão continua sendo, hoje, de julgamento clínico apoiado em diretriz de prevenção de morte súbita, não neste registro descritivo.
+- **O estudo não avalia terapia** (não reporta se ATP foi tentado, nem taxa de sucesso de ATP versus choque nesses episódios) — portanto, **não constitui evidência para expandir o uso de ATP como terapia primária no Brugada**. Essa é uma pergunta clínica distinta e não respondida por este registro. A decisão de programação deve seguir avaliação especializada e recomendações próprias; este registro descritivo não testa mudança de zona ou uso de ATP.
 
 ## Limitações
 - Desenho **retrospectivo e observacional**, dependente de disponibilidade e qualidade do armazenamento eletrográfico do CDI (ou, numa minoria, do ECG de superfície) — não há grupo controle nem randomização, e o estudo não estabelece causalidade sobre por que a MVT ocorre no subgrupo descrito.
-- **94,9% dos episódios vieram de eletrograma de CDI** — logo, a própria composição da amostra depende de quem já tinha indicação e implante de CDI; pacientes com Brugada sem CDI (por exemplo, assintomáticos sem indicação) não estão representados, o que pode enviesar a caracterização do "verdadeiro" espectro de início de TVA na doença.
+- **A documentação veio predominantemente de CDI (94,9%)** — logo, a própria composição da amostra depende de quem já tinha indicação e implante de CDI; pacientes sem documentação de taquiarritmia não estão representados; a pequena fração com ECG de superfície não elimina esse viés, o que pode enviesar a caracterização do "verdadeiro" espectro de início de TVA na doença.
 - O resumo consultado nesta sessão **não relata desfecho de terapia** (sucesso de ATP, número de choques por episódio, tempo até termo da arritmia) — qualquer inferência sobre conduta terapêutica a partir deste registro extrapola o que foi efetivamente medido.
-- Achados de associação (idade, etnia, padrão induzido por fármaco) são **descritivos de uma coorte multicêntrica internacional**, sem ajuste multivariado detalhado no resumo disponível — **VERIFICAÇÃO HUMANA NECESSÁRIA** quanto à robustez estatística dessas associações no artigo completo antes de comunicá-las como preditores validados.
+- Achados de associação (idade, etnia, padrão induzido por fármaco) são **descritivos de uma coorte multicêntrica internacional**, sem ajuste multivariado detalhado no resumo disponível — portanto, são descrições de associação nessa série e não preditores validados para orientar programação.
 - Este documento não substitui os referenciais já publicados nesta biblioteca sobre indicação de CDI e estratificação de risco na síndrome de Brugada (ver seção de conteúdo conectado) — o START-BrS caracteriza o **mecanismo de início** da arritmia em quem já teve o evento, não **quem deve receber CDI**.
-
-## Fonte e ressalva geral
-O estudo citado (PMID 41979546) foi localizado e consultado nesta sessão via PubMed/E-utilities (esearch + esummary + efetch), com o abstract estruturado conferido linha a linha antes da transcrição de qualquer número; nenhum dado foi escrito de memória. Onde o resumo disponível não permite confirmar um detalhe (por exemplo, ajuste estatístico multivariado ou dados de terapia/ATP), isso está sinalizado como `VERIFICAÇÃO HUMANA NECESSÁRIA` no corpo do texto, em vez de omitido ou presumido.
 
 ## Conteúdo CorVIA conectado
 - [Cardiodesfibrilador Implantável: Fundamentos e Prevenção Secundária](/biblioteca/cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria)

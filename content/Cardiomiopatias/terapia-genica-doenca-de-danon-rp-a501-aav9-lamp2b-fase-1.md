@@ -1,0 +1,59 @@
+---
+slug: terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1
+title: 'Terapia Gênica para Doença de Danon: RP-A501 (AAV9.LAMP2B) — Resultados de Fase 1'
+kind: documento
+theme: Cardiomiopatias
+summary: null
+tags: []
+source_refs:
+- 'Greenberg B, Taylor M, Rossano JW, et al. Phase 1 Study of AAV9.LAMP2B Gene Therapy in Danon Disease. N Engl
+  J Med. 2025;392(10):972-983. DOI: 10.1056/NEJMoa2412392. PMID: 39556016.'
+- ClinicalTrials.gov. Gene Therapy for Male Patients With Danon Disease Using RP-A501 (AAV9.LAMP2B). NCT03882437.
+- Taylor MRG, Adler ED. Danon Disease. GeneReviews. Revisão23/05/2024. https://www.ncbi.nlm.nih.gov/books/NBK554742/
+- Rocket Pharmaceuticals. Atualização de segurança fase2 e retomada do protocolo, 2025–2026. https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-provides-update-phase-2-clinical-trial-rp
+  ; https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-fda-has-lifted-clinical-hold/
+  ; https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-positive-clinical-safety-update
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# Terapia Gênica para Doença de Danon: RP-A501 (AAV9.LAMP2B) — Resultados de Fase 1
+
+## Por que a doença de Danon é diferente das outras fenocópias de CMH
+A doença de Danon é uma cardiomiopatia monogênica rara, ligada ao X, causada por mutações de perda de função no gene **LAMP2** (proteína de membrana lisossomal tipo 2), com padrão de herança que faz os homens hemizigotos apresentarem doença tipicamente mais precoce e grave que as mulheres heterozigotas. O fenótipo cardíaco mais comum é hipertrofia ventricular esquerda maciça e progressiva — muitas vezes confundida com cardiomiopatia hipertrófica (CMH) sarcomérica clássica —, mas o curso é mais agressivo: insuficiência cardíaca refratária e necessidade de transplante já na adolescência ou no início da vida adulta em muitos casos masculinos. A tríade clássica é cardiomiopatia, miopatia esquelética e deficiência intelectual; também pode haver retinopatia, e o eletrocardiograma frequentemente mostra pré-excitação ventricular (padrão Wolff-Parkinson-White ou PR curto) — pista que ajuda a diferenciar de CMH sarcomérica no rastreio de fenocópias (ver `cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa.md` e `fluxograma-cardiomiopatia-hipertrofica-esc-2023.md`). Até a publicação coberta neste documento, **não existia nenhuma terapia dirigida ao mecanismo molecular da doença** — o manejo era inteiramente de suporte (terapia padrão de insuficiência cardíaca, CDI para prevenção de morte súbita e transplante cardíaco precoce), em contraste com outras fenocópias glicogênicas/lisossomais de CMH que já têm tratamento específico, como a doença de Pompe (reposição enzimática, ver `doenca-de-pompe-acometimento-cardiaco-fenocopia-de-cardiomiopatia-hipertrofica-e-terapia-de-reposicao-enzimatica.md`) e a doença de Fabry (terapia de reposição enzimática ou chaperona, ver `doenca-de-fabry-acometimento-cardiaco-red-flags-e-tratamento-especifico-esc-2023.md`).
+
+## O ensaio: RP-A501 (AAV9.LAMP2B), fase 1, aberto, sem grupo controle
+Sete pacientes do sexo masculino com doença de Danon confirmada geneticamente (cinco com 15 anos ou mais; dois entre 11 e 14 anos) receberam **uma única infusão intravenosa** de RP-A501 — um vetor adenoassociado sorotipo 9 (AAV9) carregando o transgene **LAMP2B** — sob um regime imunossupressor transitório com prednisona, tacrolimo ou sirolimo, e rituximabe. O desfecho primário combinou segurança/eventos tóxicos, transdução e expressão da proteína LAMP2 no miocárdio, e estabilização ou redução de sintomas de insuficiência cardíaca, com estabilização ou melhora da estrutura e função cardíacas. Desfechos secundários incluíram resposta imunológica ao vetor, incidência de insuficiência cardíaca terminal e sobrevida global. É um desenho de fase 1, **aberto e sem grupo placebo concorrente** — apropriado para uma primeira avaliação de segurança em doença ultrarrara, mas não permite atribuir causalidade definitiva aos achados de eficácia.
+
+## Resultados em 24 a 54 meses de seguimento
+- **Segurança**: um paciente apresentou microangiopatia trombótica mediada por complemento (grau 4), com trombocitopenia e lesão renal aguda — evento já descrito como complicação rara, mas grave, de terapia gênica sistêmica com AAV em outros programas. Três pacientes tiveram exacerbação relacionada a glicocorticoide (grau 3) da miopatia esquelética de base da doença de Danon. Um paciente com disfunção sistólica do VE já presente no basal teve progressão da insuficiência cardíaca e foi transplantado 5 meses após a infusão.
+- **Desfecho combinado de sobrevida**: nos 24 a 54 meses de seguimento acumulado, **todos os sete pacientes estavam vivos**, com resolução completa dos eventos adversos relatados.
+- **Eficácia (nos seis pacientes com função cardíaca basal normal)**: expressão de proteína LAMP2 no miocárdio confirmada por biópsia, associada a redução em relação ao basal ou estabilização do índice de massa do VE — sem grupo controle concorrente, o que limita a força causal dessa associação.
+
+## O que este desenho NÃO permite concluir
+Fase 1 aberta, em sete pacientes, sem comparador — esse estudo fornece sinal inicial de atividade, sem comparação controlada capaz de estimar o efeito causal com precisão. O evento de microangiopatia trombótica confirma que a toxicidade sistêmica de AAV em dose alta é um risco real e não teórico nesta plataforma, e o caso de progressão para transplante mesmo pós-terapia mostra que pacientes com disfunção sistólica já estabelecida no momento da infusão podem não se beneficiar a tempo. **Não confundir "sete pacientes vivos com expressão proteica documentada" com "terapia aprovada e eficaz"** — RP-A501 permanece investigacional, sem aprovação regulatória por nenhuma agência até a data deste documento.
+
+## Segurança do programa após o corte da fase 1
+
+Os sete sobreviventes descritos são os participantes do artigo de fase 1, não todo o programa subsequente. O patrocinador comunicou um óbito após evento grave e infecção sistêmica no estudo de fase 2, com suspensão clínica pela FDA em maio de 2025. Informou liberação em agosto de 2025 após modificação do protocolo; em agosto de 2026 relatou três pacientes tratados sob o protocolo modificado sem os eventos de segurança específicos observados anteriormente. São atualizações do patrocinador sobre segurança/desenvolvimento, não resultados revisados por pares de eficácia. Não permitem afirmar segurança definitiva ou indicação clínica aprovada.
+
+## Onde isso se encaixa na prática hoje
+O manejo da doença de Danon continua sendo de suporte: otimização de terapia de insuficiência cardíaca, avaliação seriada de risco arrítmico com consideração oportuna e individualizada de CDI (o fenótipo tem alto risco de morte súbita, de forma análoga a outras cardiomiopatias monogênicas graves — ver `cardiomiopatia-por-lmna-laminopatia-cardiaca-e-distrofia-de-emery-dreifuss-risco-arritmico-e-indicacao-de-cdi.md`), e avaliação precoce para transplante cardíaco em homens hemizigotos, dado o curso tipicamente mais agressivo. O diagnóstico molecular (sequenciamento de LAMP2) é indispensável tanto para confirmar o fenótipo quanto para o rastreamento familiar em cascata, já que se trata de doença ligada ao X (ver `fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita.md`). RP-A501 não deve ser oferecido fora de ensaio clínico registrado.
+
+## Armadilhas clínicas
+- **Tratar os resultados de fase 1 aberta como evidência de eficácia estabelecida** — sete pacientes, sem controle concorrente; associação de expressão proteica com estabilização de massa ventricular não substitui desfecho clínico duro em RCT
+- **Minimizar o risco de microangiopatia trombótica mediada por complemento** — é o mesmo mecanismo de toxicidade sistêmica já relatado em outros programas de terapia gênica com AAV em dose alta; monitorização laboratorial seriada (plaquetas, função renal, complemento) é parte do protocolo de segurança, não um extra
+- **Assumir que pacientes com disfunção sistólica já estabelecida se beneficiarão da terapia gênica a tempo** — o caso do documento que evoluiu para transplante 5 meses após a infusão sugere janela terapêutica limitada, com melhor racional em fase pré-disfuncional
+- **Confundir doença de Danon com CMH sarcomérica clássica sem investigar red flags** — pré-excitação ventricular, miopatia esquelética, deficiência intelectual leve e retinopatia pigmentar em paciente do sexo masculino com hipertrofia importante devem disparar sequenciamento de LAMP2, já que a fenocópia muda tanto o prognóstico quanto a elegibilidade para ensaios de terapia dirigida
+- **Oferecer RP-A501 fora de protocolo de pesquisa registrado** — sem aprovação regulatória até a data deste documento
+
+## Tudo com Tudo
+- [Doença de Pompe: Acometimento Cardíaco, Fenocópia de Cardiomiopatia Hipertrófica e Terapia de Reposição Enzimática](/biblioteca/doenca-de-pompe-acometimento-cardiaco-fenocopia-de-cardiomiopatia-hipertrofica-e-terapia-de-reposicao-enzimatica) — outra fenocópia lisossomal/glicogênica de CMH com terapia específica já aprovada (reposição enzimática), paralelo direto ao racional terapêutico dirigido discutido aqui
+- [Doença de Fabry: Acometimento Cardíaco, Red Flags e Tratamento Específico (ESC 2023)](/biblioteca/doenca-de-fabry-acometimento-cardiaco-red-flags-e-tratamento-especifico-esc-2023) — terceira fenocópia de depósito com red flags de diagnóstico diferencial e tratamento etiológico específico já estabelecido
+- [Cardiomiopatia Hipertrófica: Diagnóstico, Estratificação de Risco e Tratamento (ESC 2023) — Versão Completa](/biblioteca/cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa) — diretriz de referência para investigação de hipertrofia ventricular esquerda, incluindo o rastreio ativo de fenocópias como Danon
+- [Fluxograma: Cardiomiopatia hipertrófica — diagnóstico, risco de morte súbita e obstrução (ESC 2023)](/biblioteca/fluxograma-cardiomiopatia-hipertrofica-esc-2023) — algoritmo diagnóstico onde a pré-excitação ventricular e outros red flags direcionam a investigação de fenocópia em vez de CMH sarcomérica
+- [Cardiomiopatia por LMNA (Laminopatia Cardíaca) e Distrofia Muscular de Emery-Dreifuss: Risco Arrítmico Desproporcional à Fração de Ejeção e Indicação de CDI](/biblioteca/cardiomiopatia-por-lmna-laminopatia-cardiaca-e-distrofia-de-emery-dreifuss-risco-arritmico-e-indicacao-de-cdi) — outra cardiomiopatia monogênica de alto risco arrítmico, que não autoriza transferir diretamente seus critérios de CDI para Danon
+- [Fluxograma: Investigação genética na cardiomiopatia com história familiar de morte súbita — EHRA/HRS/APHRS/LAHRS 2022](/biblioteca/fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita) — algoritmo de investigação genética e rastreamento familiar em cascata, diretamente aplicável à natureza ligada ao X da doença de Danon

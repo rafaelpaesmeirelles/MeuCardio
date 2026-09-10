@@ -1,0 +1,86 @@
+---
+slug: ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca
+title: 'CA125 (antígeno de carboidrato 125) como biomarcador de congestão na insuficiência cardíaca: o que a evidência
+  de 2025-2026 mostra'
+kind: documento
+theme: Insuficiência cardíaca
+summary: null
+tags: []
+source_refs:
+- 'de la Espriella R, Santas E, Miñana G, Lorenzo M, Núñez G, Mollar A, Rodríguez E, Bayés-Genís A, Fudim M, Petrie
+  MC, Docherty KF, Bodí V, Sanchis J, Núñez E, Núñez J. Carbohydrate antigen 125 trajectories during the transitional
+  phase predict short-term outcomes after admission for acute heart failure. Rev Esp Cardiol (Engl Ed). 2026. DOI:
+  10.1016/j.rec.2026.05.003. PMID: 42235631.'
+- 'Revuelta-López E, de la Espriella R, Miñana G, Santas E, Villar S, Sanchis J, Bayés-Genís A, Núñez J. The modulating
+  effect of circulating carbohydrate antigen 125 on ST2 and long-term recurrent morbidity burden. Sci Rep. 2025;15.
+  DOI: 10.1038/s41598-024-84622-7. PMID: 39809935.'
+- 'Asaftei A, Ceasovschih A, Constantin M, Rusu-Zota G, Alexa RE, Lionte C, Sorodoc L, Sorodoc V. Biomarkers for
+  congestion assessment and prognosis in acute heart failure: A systematic review. Exp Mol Pathol. 2026;147:105063.
+  DOI: 10.1016/j.yexmp.2026.105063. PMID: 42418867.'
+- 'Jaramillo-Hidalgo J, Ramos M, Quezada-Feijoó M, Toro R, García-Calderón N, Gómez-Pavón FJ. Plasma CA125 as a
+  Prognostic Marker in Very Elderly Patients Hospitalized for Acute Heart Failure. J Clin Med. 2026;15(6):2156.
+  DOI: 10.3390/jcm15062156. PMID: 41899087.'
+- 'Appiani F, López-Vilella R, Donoso V, Martínez-Solé J, Soriano V, Huélamo S, Beltrán S, Astudillo AE, Company
+  M, Guerrero B, Martínez L, Almenar-Bonet L. Combination of the Fibrosis 4 Index and Carbohydrate Antigen 125 to
+  Predict Morbidity and Mortality in Acute Heart Failure. Rev Cardiovasc Med. 2025;26(12). DOI: 10.31083/rcm42797.
+  PMID: 41524052.'
+- 'Cevallos Castro AP, Llàcer P, Soler L, et al. Chronic Obstructive Pulmonary Disease and CA125 Levels in Ambulatory
+  Chronic Heart Failure. Int J Cardiol. 2026;461:134665. DOI: 10.1016/j.ijcard.2026.134665. PMID: 42425178.'
+- 'Núñez J et al. CHANCE-HF: a randomized study. JACC Heart Fail. 2016;4:833-843. DOI: 10.1016/j.jchf.2016.06.007.
+  PMID: 27522630.'
+- 'Núñez J et al. CA125-Guided Diuretic Treatment Versus Usual Care in Patients With Acute Heart Failure and Renal
+  Dysfunction. Am J Med. 2020;133:370-380.e4. DOI: 10.1016/j.amjmed.2019.07.041. PMID: 31422111.'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# CA125 (antígeno de carboidrato 125) como biomarcador de congestão na insuficiência cardíaca: o que a evidência de 2025-2026 mostra
+
+## Por que isso importa
+
+A insuficiência cardíaca (IC) tem, hoje, um biomarcador prognóstico dominante e bem estabelecido — o peptídeo natriurético (BNP/NT-proBNP) — e este acervo já documenta em profundidade seu papel diagnóstico, prognóstico e os limites de usá-lo como alvo terapêutico guiado (GUIDE-IT). O que ainda não está documentado aqui é um biomarcador diferente, com mecanismo biológico distinto e que voltou a gerar produção científica relevante e recente (2025-2026): o **CA125**, também chamado de antígeno de carboidrato 125 ou MUC16, historicamente conhecido em oncologia ginecológica como marcador de câncer de ovário. Na IC, a elevação pode ter origem não neoplásica; o CA125 é liberado por células mesoteliais das cavidades serosas (pleura, pericárdio, peritônio) quando distendidas ou inflamadas por congestão sistêmica, o que o torna, em teoria, um marcador mais diretamente ligado à **congestão de terceiro espaço** do que os peptídeos natriuréticos, que refletem principalmente estresse de parede miocárdica. É essa complementaridade mecanística — não uma substituição do BNP/NT-proBNP — que motiva a produção científica recente sobre o tema.
+
+## O que o CA125 mede, e por que não é o mesmo que peptídeo natriurético
+
+O CA125 é sintetizado e liberado por células mesoteliais em resposta a estiramento e a estímulo inflamatório da serosa — o mesmo tecido que reveste as cavidades pleural, pericárdica e peritoneal. Isso explica por que, na prática clínica, o CA125 tende a se elevar mais em pacientes com sinais de congestão sistêmica de terceiro espaço (derrame pleural, ascite, edema periférico importante) do que em pacientes com congestão predominantemente hemodinâmica/intracardíaca sem extravasamento para serosas. A revisão sistemática de Asaftei et al. (Exp Mol Pathol, 2026; PMID 42418867), que avaliou CA-125, adrenomedulina (ADM), sST2 e sCD146 em 39 estudos de IC aguda, descreve o CA-125 como um marcador que "correlacionou-se consistentemente com congestão sistêmica", com níveis mais altos na admissão predizendo maior mortalidade, e conclui que esses quatro marcadores fornecem informação "mecanisticamente complementar" aos peptídeos natriuréticos — ou seja, não redundante.
+
+Um achado recente e direto sobre esse ponto: em coorte ambulatorial de IC crônica, a presença de DPOC (comorbidade que pode afetar a interpretação do biomarcador; derrame pleural não deve ser atribuído automaticamente à DPOC) associou-se de forma independente a CA125 mais alto, junto com a presença de derrame pleural (Cevallos Castro et al., Int J Cardiol, 2026; PMID 42425178) — reforçando o vínculo mecanístico entre CA125 e envolvimento serosal, distinto do estresse de parede ventricular medido pelo BNP/NT-proBNP.
+
+## O que a evidência de 2025-2026 mostra
+
+**Trajetória do CA125 após a alta prediz desfecho de curto prazo.** Um estudo recente do grupo espanhol (de la Espriella et al., Rev Esp Cardiol, 2026; PMID 42235631) acompanhou 3.980 pacientes internados por IC aguda e descreveu uma trajetória bifásica do CA125 após a alta: um pico precoce por volta do décimo dia pós-alta, seguido de queda acentuada no primeiro mês. Elevações do CA125 nessa janela associaram-se a maior risco de reinternação (aumento de 27% no hazard por unidade de incremento do CA125 transformado em logaritmo, não por 1 U/mL) e maior risco de mortalidade precoce, particularmente dentro de 60 dias. Os autores propõem que monitorar essa trajetória no período pós-alta — a "fase de transição", já reconhecida como janela de vulnerabilidade máxima na IC aguda — poderia refinar a estratificação de risco e, potencialmente, orientar intensidade de descongestão residual, embora o estudo seja observacional e não teste uma estratégia de intervenção.
+
+**CA125 modula o valor prognóstico do sST2.** Em coorte de 160 pacientes com IC aguda e disfunção renal, Revuelta-López et al. (Sci Rep, 2025; PMID 39809935) descreveram uma associação prognóstica dependente do estrato de CA125, sem demonstrar mecanismo biológico causal: o sST2 (outro biomarcador prognóstico já em uso crescente) previu o desfecho composto de reinternação cardiovascular ou renal **apenas quando o CA125 estava elevado (>35 U/mL)** — quando o CA125 era normal, não se demonstrou associação preditiva significativa do sST2 nessa amostra. O achado de subanálise do IMPROVE-HF é exploratório: não comprova que congestão seja condição necessária para o valor de sST2, nem valida automaticamente uma estratégia multimarcador de tratamento.
+
+**Combinação com marcador de fibrose hepática (FIB-4) identifica subgrupo de pior evolução.** Em coorte de 402 pacientes internados por IC aguda, Appiani et al. (Rev Cardiovasc Med, 2025; PMID 41524052) mostraram que pacientes com FIB-4 e CA125 elevados simultaneamente tiveram maior prevalência de congestão sistêmica/mista e maior morbidade — embora, nesse estudo específico, a diferença de sobrevida entre grupos não tenha alcançado significância estatística. O achado reforça o CA125 como marcador de fenótipo congestivo mais do que como preditor isolado de mortalidade em amostras desse tamanho.
+
+**Em muito idosos, um limiar exploratório se associou ao prognóstico.** Em 210 pacientes ≥80 anos (idade média 89,8 anos, maioria mulheres e frágeis) internados por IC aguda, Jaramillo-Hidalgo et al. (J Clin Med, 2026; PMID 41899087) encontraram que CA125 ≥100 U/mL — um limiar mais alto do que o habitualmente usado em populações gerais (35 U/mL) — predisse de forma independente mortalidade e o composto de morte ou reinternação em 12 meses, sem demonstrar isoladamente a associação independente com reinternação. Importante: nesse mesmo estudo, medidas de dependência funcional tiveram poder preditivo maior do que o biomarcador isoladamente, o que os autores interpretam como o CA125 agregando informação complementar à avaliação geriátrica, não substituindo-a.
+
+## Ensaios de estratégia guiada: existem, com limitações
+
+É incorreto afirmar que nunca houve ensaio randomizado de tratamento guiado por CA125. O CHANCE-HF (2016) randomizou 380 pacientes após IC aguda e com CA125 elevado para estratégia guiada ou cuidado usual. O protocolo combinou ajuste de diuréticos, maior acompanhamento e incentivo ao uso de estatinas visando CA125 ≤35 U/mL. Reduziu o composto em análise de tempo até primeiro evento e eventos recorrentes, com resultado impulsionado por reinternações, sem benefício de mortalidade demonstrado. Não é possível atribuir o efeito exclusivamente à titulação do diurético ou ao biomarcador separado do acompanhamento adicional.
+
+Outro ensaio aberto randomizou 160 pacientes com IC aguda e disfunção renal para diurético guiado por CA125 ou cuidado usual (publicação eletrônica em 2019, Am J Med 2020; PMID 31422111). Portanto, há evidência de intervenção específica, ainda limitada em tamanho, abrangência e protocolos. Isso não torna CA125 um alvo obrigatório de rotina nem justifica ignorar perfusão, sintomas, função renal e eletrólitos. Também é incorreto agrupar ENACT-HF com ensaios randomizados: seu desenho foi de implementação antes/depois, distinto do PUSH-AHF.
+
+## Implicações práticas — com os limites explícitos
+
+- **Como marcador prognóstico complementar**, o CA125 tem evidência observacional consistente e recente de que agrega informação sobre congestão sistêmica e risco de reinternação/mortalidade, de forma mecanisticamente distinta do BNP/NT-proBNP (mais ligado a estresse de parede) — plausível de considerar em pacientes com sinais de congestão de terceiro espaço (derrame pleural, ascite) onde o BNP pode subestimar a gravidade.
+- **Pontos de corte não são universais**: 35 U/mL é o valor de referência mais usado nos estudos gerais de IC aguda, mas uma coorte de muito idosos estudou ≥100 U/mL; isso não valida um novo limiar obrigatório por idade. Não há um ponto de corte único validado para todas as faixas etárias e cenários clínicos.
+- **Não titular diuréticos ou decidir alta apenas por CA125.** Protocolos guiados foram testados, mas a decisão clínica integra congestão, perfusão, função renal, eletrólitos e resposta ao tratamento; não há fundamento para uma proibição geral baseada em suposta inexistência de ensaios.
+- O CA125 não é uma medida específica de IC: pode se elevar em condições que geram estiramento/inflamação serosal (derrame pleural por diversas causas, doença hepática com ascite, algumas neoplasias, doenças autoimunes), e DPOC também pode influenciar sua interpretação — a interpretação exige sempre correlação clínica, não leitura isolada do valor.
+
+## Limites desta síntese
+
+A maior parte dos dados mais recentes (2025-2026) sobre CA125 na IC vem de um núcleo relativamente concentrado de grupos de pesquisa espanhóis (de la Espriella, Núñez J, Revuelta-López, Bayés-Genís — parcialmente sobrepostos entre os estudos citados), o que limita a generalização geográfica e étnica dos achados. Os estudos prognósticos recentes não substituem nem anulam os ensaios guiados anteriores, agora incluídos nesta síntese. Os pontos de corte variam entre estudos e faixas etárias sem uma diretriz que os unifique. Este documento deve ser lido como uma síntese de sinal biológico e prognóstico emergente, não como recomendação de mudança de prática clínica.
+
+## Tudo com Tudo
+
+- [Hipocloremia na insuficiência cardíaca: fisiopatologia e o efeito do cloro sérico na resposta ao tiazídico associado ao diurético de alça](/biblioteca/hipocloremia-na-insuficiencia-cardiaca-fisiopatologia-e-resposta-ao-tiazidico)
+- [Natriurese Guiada por Sódio Urinário na Descongestão da IC Aguda: PUSH-AHF e ENACT-HF](/biblioteca/natriurese-guiada-por-sodio-urinario-na-descongestao-da-ic-aguda-push-ahf-e-enact-hf)
+- [GUIDE-IT: NT-proBNP guiado não supera o cuidado usual na ICFEr de alto risco](/biblioteca/guide-it-nt-probnp-guiado-versus-cuidado-usual-na-icfer)
+- [Resistência diurética na insuficiência cardíaca aguda: mecanismos e bloqueio sequencial do néfron](/biblioteca/resistencia-diuretica-na-insuficiencia-cardiaca-aguda-mecanismos-e-bloqueio-sequencial-do-nefron)
+- [Síndrome Cardiorrenal: Classificação em Cinco Tipos e Manejo na Insuficiência Cardíaca](/biblioteca/sindrome-cardiorrenal-classificacao-em-cinco-tipos-e-manejo-na-insuficiencia-cardiaca)
+- [Fragilidade na Insuficiência Cardíaca: Metanálise de Denfeld](/biblioteca/fragilidade-na-insuficiencia-cardiaca-metanalise-de-denfeld)

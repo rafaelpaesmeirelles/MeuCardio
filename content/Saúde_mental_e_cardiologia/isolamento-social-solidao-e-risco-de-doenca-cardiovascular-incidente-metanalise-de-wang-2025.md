@@ -1,47 +1,52 @@
 ---
-title: "Isolamento Social, Solidão e Risco de Doença Cardiovascular Incidente: A Metanálise de Wang 2025 (5,2 Milhões de Participantes)"
+title: 'Isolamento Social, Solidão e Risco Cardiovascular: Leitura Crítica da Metanálise de Wang 2025'
 slug: isolamento-social-solidao-e-risco-de-doenca-cardiovascular-incidente-metanalise-de-wang-2025
-theme: "Saúde mental e cardiologia"
+theme: Saúde mental e cardiologia
 kind: estudo
 review_status: revisado
-source_refs: ["Wang L, Pan H, Cai Z, Li X, Luo L. Association of social isolation, loneliness and risk of cardiovascular diseases: Meta-analysis of cohort studies. BMC Public Health. 2025;25(1):3082. DOI: 10.1186/s12889-025-24300-z. PMID: 40993644. PMCID: PMC12462301"]
-legacy_source: "Documento novo. A pasta já documenta a metanálise de Valtorta 2016 (Heart, PMID 27091846 — doença coronariana e AVC combinados, 16 conjuntos de dados) e o estudo de Löfvenmark 2009 (reinternação em IC, PMID 19539533, n=149). Faltava uma síntese mais recente (busca até fevereiro de 2025) com amostra ampliada (mais de 5 milhões de participantes) e capaz de separar o risco por tipo de exposição (isolamento vs. solidão), por subtipo de desfecho (AVC isolado) e por região geográfica — granularidade ausente nos dois documentos anteriores."
+source_refs:
+- Wang L et al. BMC Public Health. 2025;25:3082. PMID 40993644. DOI 10.1186/s12889-025-24300-z. https://pmc.ncbi.nlm.nih.gov/articles/PMC12462301/
+- Li H et al. J Affect Disord. 2022;298:388-395. PMID 34752807. DOI 10.1016/j.jad.2021.11.008. https://pubmed.ncbi.nlm.nih.gov/34752807/
+legacy_source: Documento novo. A pasta já documenta a metanálise de Valtorta 2016 (Heart, PMID 27091846 — doença
+  coronariana e AVC combinados, 16 conjuntos de dados) e o estudo de Löfvenmark 2009 (reinternação em IC, PMID 19539533,
+  n=149). Faltava uma síntese mais recente (busca até fevereiro de 2025) com amostra ampliada (mais de 5 milhões
+  de participantes) e capaz de separar o risco por tipo de exposição (isolamento vs. solidão), por subtipo de desfecho
+  (AVC isolado) e por região geográfica — granularidade ausente nos dois documentos anteriores.
+summary: A conferência das tabelas de Wang 2025 com os estudos citados encontrou confusão entre participantes e
+  pessoas-ano, classificação geográfica incorreta e intervalo incompatível com a estimativa pontual. Esta leitura
+  explica por que o total anunciado e as conclusões quantitativas de subgrupos não devem orientar decisões clínicas.
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Isolamento Social, Solidão e Risco de Doença Cardiovascular Incidente: A Metanálise de Wang 2025
+# Isolamento Social, Solidão e Risco Cardiovascular: Leitura Crítica da Metanálise de Wang 2025
 
-## Por que mais um documento sobre o mesmo tema
-Esta pasta já registra que solidão e isolamento social aumentam o risco de doença coronariana e AVC (metanálise de Valtorta et al., 2016, PMID 27091846: RR 1,29 para DAC e RR 1,32 para AVC, com 16 conjuntos de dados longitudinais até 2015) e que solidão percebida aumenta reinternação em insuficiência cardíaca crônica (Löfvenmark et al., 2009, PMID 19539533, amostra pequena de 149 pacientes suecos). A metanálise de Wang et al. (BMC Public Health, 2025) atualiza a pergunta com busca em duas bases até 10/02/2025, amostra muito maior, e traz um nível de granularidade que os dois documentos anteriores não tinham: risco separado por tipo de exposição (isolamento social versus solidão), por subtipo de desfecho cardiovascular (AVC isolado), por duração de seguimento e por região geográfica.
+## Pergunta e desenho
+Wang e colaboradores buscaram estudos em PubMed e Embase até 10 de fevereiro de 2025 e reuniram seis coortes sobre isolamento social, solidão e doença cardiovascular. Usaram modelo de efeitos aleatórios e avaliação Newcastle–Ottawa. O estudo é observacional e sua síntese não demonstra que uma intervenção contra solidão previna eventos cardiovasculares. [Artigo completo e tabelas](https://pmc.ncbi.nlm.nih.gov/articles/PMC12462301/).
 
-## O estudo
-Wang L, Pan H, Cai Z, Li X, Luo L. "Association of social isolation, loneliness and risk of cardiovascular diseases: Meta-analysis of cohort studies." BMC Public Health. 2025;25(1):3082 (PMID 40993644; PMCID PMC12462301; DOI 10.1186/s12889-025-24300-z). Busca em PubMed e Embase, do início das bases até 10 de fevereiro de 2025. Risco de viés avaliado pela escala de Newcastle-Ottawa (NOS); *hazard ratios* (HR) com IC95% agrupados por modelo de efeitos randômicos; viés de publicação avaliado por funil e teste de Egger.
+Esta leitura confronta os números publicados com as fontes citadas. As inconsistências abaixo impedem adotar sem ressalvas o tamanho amostral anunciado e a hierarquia de subgrupos.
 
-- **6 estudos de coorte incluídos**, totalizando **5.253.128 participantes**
-- Seguimento de **4 a 11,3 anos**, com estudos originais publicados entre **1996 e 2022**
-- **Todos os estudos classificados como de alta qualidade** (escore NOS ≥ 7)
+## Participantes não são pessoas-ano
+A tabela 1 atribui ao estudo de Li uma amostra de 3.700.915 pessoas e classifica sua população como chinesa. O artigo de Li estudou **339.616 participantes do UK Biobank**, acompanhados por aproximadamente **3,7 milhões de pessoas-ano**. Portanto, a tabela troca uma medida de tempo de observação por número de participantes e confunde a localização da coorte com a afiliação dos autores. [Estudo de Li](https://pubmed.ncbi.nlm.nih.gov/34752807/).
 
-## Achados principais
-- **Risco combinado de doença cardiovascular incidente em quem tem isolamento social ou solidão: HR 1,17 (IC95% 1,10-1,25)**, com heterogeneidade alta (I² = 85,1%; p<0,001)
-- **Análise de subgrupo por tipo de exposição**: histórico de isolamento social associou-se a risco discretamente maior que solidão — **HR 1,39 (IC95% 1,15-1,68)**, I² = 90,2%, p=0,001
-- **Análise de subgrupo por duração de seguimento**: risco mais alto no seguimento de 4-7 anos comparado a 7-9 e a 10-11 anos — **HR 1,87 (IC95% 1,67-2,10)**, I² = 0%, p<0,001
-- **Análise de subgrupo por desfecho**: entre os desfechos cardiovasculares avaliados, **AVC teve o maior risco associado — HR 1,23 (IC95% 1,07-1,43)**, I² = 74,5%, p=0,004
-- **Análise de subgrupo por região**: populações asiáticas com risco discretamente maior que norte-americanas e europeias — **HR 1,46 (IC95% 1,12-1,91)**, I² = 0%, p=0,005
+Consequentemente, o total de 5,2 milhões anunciado na metanálise não deve ser reproduzido como número confirmado de pessoas. Substituir uma célula e somar novamente também não resolve toda a questão: as coortes precisam ser avaliadas quanto a sobreposição de participantes e extração de cada desfecho. Esta síntese não fabrica um novo tamanho amostral nem recalcula o efeito agrupado.
 
-## Conclusão dos próprios autores
-**"O aumento do risco de doença cardiovascular entre indivíduos com isolamento social ou solidão reforça a importância de priorizar o cuidado desses pacientes na prática clínica e na enfermagem. Contudo, a alta heterogeneidade encontrada na metanálise sugere a necessidade de mais estudos para validar e explorar essa associação de forma mais completa."**
+## Subgrupos exigem mais que significância dentro de cada grupo
+A classificação geográfica incorreta de uma coorte compromete a interpretação de resultados por continente. Não há fundamento para usar a conclusão de maior risco na Ásia como uma regra de estratificação clínica.
 
-## Síntese prática
-O achado central (HR 1,17) é compatível em magnitude com o que Valtorta já havia descrito em 2016 (RR 1,29-1,32) — reforço, não contradição, do que já está registrado nesta pasta. O valor agregado deste estudo de 2025 está nas análises de subgrupo: isolamento social objetivo parece pesar mais que a percepção subjetiva de solidão (HR 1,39 vs. o valor agregado geral de 1,17); o risco relativo é maior nos primeiros 4-7 anos de seguimento, o que é clinicamente relevante para estratificação de prioridade na anamnese; e AVC desponta como o desfecho cardiovascular mais fortemente associado dentre os avaliados. A diferença por região (Ásia > América do Norte/Europa) deve ser lida com cautela — é um achado de subgrupo com número pequeno de estudos por região, não um dado para generalizar diretamente à população atendida no Brasil.
+Além disso, a tabela 3 mostra uma estimativa pontual de doença coronariana que fica fora do próprio intervalo de confiança. Esse par é internamente incompatível. Não é possível escolher por inferência qual elemento está correto, e o resultado não é utilizado aqui.
 
-## Limitações, declaradas com honestidade
-Apenas **6 estudos de coorte** compõem a metanálise — número pequeno para a robustez das análises de subgrupo, que devem ser lidas como hipótese-geradoras, não como estimativas definitivas. A **heterogeneidade estatística é alta** no desfecho principal (I² = 85,1%), o que os próprios autores reconhecem como limitação e motivo para pedir mais estudos. Os estudos originais incluídos foram publicados entre **1996 e 2022** — a metanálise é recente, mas parte dos dados-fonte é antiga, com possível sobreposição de coortes já incluídas em Valtorta 2016. O resumo consultado relata avaliação de viés de publicação por funil e teste de Egger, mas **não traz o valor numérico do teste** — dado que não deve ser inferido nem fabricado aqui (`VERIFICAÇÃO HUMANA NECESSÁRIA` para quem precisar do valor exato, mediante leitura do artigo completo). Como nos documentos já registrados nesta pasta sobre o mesmo tema, o desenho é observacional: a metanálise não demonstra que reduzir isolamento social ou solidão efetivamente previne evento cardiovascular, apenas que a associação existe e é estatisticamente robusta apesar da heterogeneidade.
+Comparar o tamanho de associações calculadas em subconjuntos diferentes não demonstra interação entre eles. Assim, a tabela não permite concluir que isolamento seja sempre mais nocivo que solidão, que os primeiros anos exijam maior prioridade assistencial ou que determinado desfecho deva orientar a anamnese com base no maior número pontual.
 
-## Armadilhas clínicas
-- Tratar este HR 1,17 como contraditório ao RR 1,29-1,32 de Valtorta 2016 — são estudos com métodos, período de busca e conjunto de coortes diferentes, mas apontam na mesma direção e ordem de grandeza; a leitura correta é de reforço cumulativo de evidência, não de conflito
-- Ignorar que isolamento social objetivo (HR 1,39) e solidão subjetiva (o construto de menor peso dentro do HR agregado de 1,17) não são a mesma coisa clinicamente — a distinção conceitual já registrada no documento sobre Valtorta 2016 nesta pasta se confirma aqui com estimativas de risco diferentes por subgrupo
-- Generalizar a diferença regional (Ásia > América do Norte/Europa) como se fosse uma regra populacional validada — é um subgrupo de poucos estudos, não uma estratificação de risco pronta para uso em anamnese fora do contexto em que foi gerada
-- Interpretar a heterogeneidade alta (I² = 85,1%) como fragilidade que invalida o achado — o próprio desfecho central segue estatisticamente significativo mesmo com essa heterogeneidade, mas ela deve ser comunicada como limitação ao discutir o dado, não omitida
-- Concluir que os dados aqui demonstram benefício de intervenção contra isolamento/solidão — a metanálise é puramente observacional, e a lacuna de estudos de intervenção já foi registrada nos outros documentos desta pasta sobre o mesmo tema
+## O que permanece útil
+Isolamento social e solidão representam exposições distintas; a pergunta sobre sua associação com saúde cardiovascular continua pertinente. Entretanto, a significância estatística de uma metanálise não corrige erros de extração, sobreposição potencial ou heterogeneidade. Uma pontuação elevada de qualidade das coortes também não valida automaticamente a transcrição e a síntese feitas na revisão.
+
+O valor deste documento é metodológico: conferir denominadores, unidades de observação, país da população, coerência de intervalos e comparabilidade dos subgrupos antes de traduzir uma revisão em recomendação. As estimativas agrupadas de Wang não são apresentadas como magnitudes de risco prontas para aconselhamento. Essa restrição não equivale a provar ausência de associação; limita o uso deste estudo específico.
+
+Para a discussão clínica mais ampla, os textos conectados abaixo tratam das exposições psicossociais com seus próprios desenhos e limitações. Não se infere, desta metanálise, benefício de uma intervenção específica ou uma indicação farmacológica.
 
 ## Conteúdo CorVIA conectado
 - [Solidão e isolamento social como fator de risco cardiovascular](/biblioteca/solidao-e-isolamento-social-como-fator-de-risco-cardiovascular)

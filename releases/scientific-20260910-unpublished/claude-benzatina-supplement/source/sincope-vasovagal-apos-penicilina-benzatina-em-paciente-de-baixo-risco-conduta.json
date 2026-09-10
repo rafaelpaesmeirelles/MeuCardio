@@ -1,0 +1,20 @@
+{
+  "slug": "sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta",
+  "titulo": "Tontura e desmaio logo após a injeção de penicilina benzatina: é alergia?",
+  "tema": "Febre reumática",
+  "nivel": "básico",
+  "enunciado": "Menino de 12 anos, em profilaxia secundária regular de febre reumática há 2 anos, sem cardite residual ao ecocardiograma mais recente (cardiopatia reumática borderline, função ventricular normal, assintomático). Cerca de 2 minutos após receber a injeção intramuscular de penicilina G benzatina, fica pálido, sua frio e refere tontura, perdendo brevemente a consciência. O pulso carotídeo é palpável e cheio. Não há tosse, sibilo, rouquidão, urticária ou edema de face. Ao ser colocado em decúbito dorsal com as pernas elevadas, recupera a consciência em menos de um minuto e a pressão arterial normaliza.",
+  "pergunta": "Qual é a conduta mais adequada neste momento?",
+  "opcoes": [
+    "Administrar adrenalina intramuscular imediatamente, por suspeita de anafilaxia",
+    "Manter o paciente em decúbito, considerar manobra de contrapressão isométrica se tolerada, e observá-lo por pelo menos 30 minutos, sem administrar adrenalina",
+    "Suspender definitivamente a penicilina benzatina e trocar para eritromicina, por reação adversa confirmada",
+    "Não é necessária nenhuma conduta adicional nem observação, já que os sintomas já melhoraram ao deitar"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "O quadro descrito — início em minutos, pulso carotídeo preservado/cheio, palidez e pele fria e úmida, melhora rápida em decúbito — corresponde ao padrão clínico de reação vasovagal, não de anafilaxia, segundo a tabela de diferenciação clínica do advisory presidencial da AHA (2022, PMID 35049336): a ausência de sinais respiratórios (tosse, sibilo, estridor) e cutâneos (urticária, angioedema) torna anafilaxia pouco provável, e o pulso carotídeo preservado com melhora postural rápida é característico do vasovagal. Como o paciente pertence ao grupo de risco BAIXO da estratificação da mesma fonte (cardiopatia reumática borderline, assintomático, função ventricular normal), a conduta é decúbito, manobra de contrapressão isométrica se tolerada, e observação por pelo menos 30 minutos — sem necessidade de adrenalina, que é reservada para quadros com critério de anafilaxia. Trocar definitivamente para via oral não está indicado nesse grupo de baixo risco, e não observar o paciente descumpriria a boa prática padrão de monitorização pós-aplicação recomendada pelo mesmo advisory.",
+  "source_refs": [
+    "Sanyahumbi A, Ali S, Benjamin IJ, Karthikeyan G, Okello E, Sable CA, Taubert K, Wyber R, Zuhlke L, Carapetis JR, Beaton AZ; American Heart Association. Penicillin Reactions in Patients With Severe Rheumatic Heart Disease: A Presidential Advisory From the American Heart Association. J Am Heart Assoc. 2022;11(5):e024517. DOI: 10.1161/JAHA.121.024517. PMID: 35049336 — tabela de diferenciação clínica vasovagal vs. anafilaxia e estratificação de risco (Tabela 1), texto integral conferido."
+  ],
+  "review_status": "pendente_revisao"
+}

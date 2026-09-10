@@ -1,0 +1,27 @@
+{
+  "approval_basis": "Publicação emergencial de todo o conteúdo revisado autorizada pelo proprietário. Decisão editorial explícita do coordenador após comparação integral das quatro fontes em 10/09/2026: manter as duas fichas de estudo complementares às sínteses. Revisão assistida por IA, sem assinatura humana atribuída.",
+  "decision": "supersede_two_previous_duplicate_exclusions",
+  "items": {
+    "pirtobrutinibe-btk-nao-covalente-versus-ibrutinibe-o-ensaio-bruin-cll-314": {
+      "body_sha256": "83db9c963e83d85c72e6d6c749501e0a941e82ecc87cbce53b1657c3d76d0271",
+      "kind": "estudo",
+      "new_reviewed_package_sha256": "0f2b139fba0ecd111f935603aad2390a1c1f4afe452d8d2e58cd2a19a915c993",
+      "previous_exclusion_package_sha256": "9c5a671b37558f3bb71ac338d9069845ccc95c373f25bf22a4d474f71a9c92c9",
+      "previous_merge_into": "pirtobrutinibe-inibidor-de-btk-nao-covalente-e-menor-toxicidade-cardiovascular",
+      "reason": "A ficha kind=estudo detalha desenho, estratificação, ORR por população e situação regulatória do BRUIN CLL-314; o destino anterior kind=documento reúne BRUIN fase1/2, CLL-314 e metanálise em rede. Os formatos revisados são complementares, não cópias literais.",
+      "source_path": "content/Cardio-oncologia/pirtobrutinibe-btk-nao-covalente-versus-ibrutinibe-o-ensaio-bruin-cll-314.md",
+      "source_sha256": "dd62787e50a8a11bd2c7e67fd43a8f93233a88d1fac5f56201dc441f0425354c"
+    },
+    "tirzepatida-e-semaglutida-efeito-sobre-a-pressao-arterial-metanalise-de-32-ensaios": {
+      "body_sha256": "d8024534d21789d54feee3373506060b3f5fddc591d408357aa449d27f3fb94f",
+      "kind": "estudo",
+      "new_reviewed_package_sha256": "0f2b139fba0ecd111f935603aad2390a1c1f4afe452d8d2e58cd2a19a915c993",
+      "previous_exclusion_package_sha256": "9c5a671b37558f3bb71ac338d9069845ccc95c373f25bf22a4d474f71a9c92c9",
+      "previous_merge_into": "agonistas-de-glp-1-gip-e-pressao-arterial-magnitude-e-risco-diferencial-de-hipotensao",
+      "reason": "A ficha kind=estudo detalha Chen, 32 ensaios, busca, eventos adversos, subgrupos e limitações; o destino anterior kind=documento é síntese multifuentes de Chen e retatrutida. Os formatos revisados são complementares, não cópias literais.",
+      "source_path": "content/Hipertensão/tirzepatida-e-semaglutida-efeito-sobre-a-pressao-arterial-metanalise-de-32-ensaios.md",
+      "source_sha256": "c2bacc1117bb19c0c167288d0ce62157f6ff56d926d5574c3b71bb623bab14bd"
+    }
+  },
+  "scope": "Somente as duas fontes e hashes finais listados; todas as demais exclusões anteriores continuam vigentes."
+}

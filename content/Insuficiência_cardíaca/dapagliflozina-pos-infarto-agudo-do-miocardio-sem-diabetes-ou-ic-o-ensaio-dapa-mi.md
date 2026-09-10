@@ -1,11 +1,28 @@
 ---
-title: "Dapagliflozina Após Infarto Agudo do Miocárdio Sem Diabetes ou Insuficiência Cardíaca Prévia: o Ensaio DAPA-MI"
+title: 'Dapagliflozina Após Infarto Agudo do Miocárdio Sem Diabetes ou Insuficiência Cardíaca Prévia: o Ensaio DAPA-MI'
 slug: dapagliflozina-pos-infarto-agudo-do-miocardio-sem-diabetes-ou-ic-o-ensaio-dapa-mi
-theme: "Insuficiência cardíaca"
+theme: Insuficiência cardíaca
 kind: estudo
 review_status: revisado
-source_refs: ["James S, Erlinge D, Storey RF, McGuire DK, de Belder M, Eriksson N, Andersen K, Austin D, Arefalk G, Carrick D, Hofmann R, Hoole SP, Jones DA, Lee K, Tygesen H, Johansson PA, Langkilde AM, Ridderstråle W, Parvaresh Rizi E, Deanfield J, Oldgren J; DAPA-MI Trial Committees and Investigators. Dapagliflozin in Myocardial Infarction without Diabetes or Heart Failure. NEJM Evid. 2024;3(2):EVIDoa2300286. DOI: 10.1056/EVIDoa2300286. PMID: 38320489. Epub 2023 Nov 11 (apresentado no AHA Scientific Sessions 2023). NCT04564742 — abstract completo conferido no PubMed via E-utilities nesta sessão (09/09/2026)."]
-legacy_source: "Documento novo, escrito em 09/09/2026. A biblioteca já tinha o EMPACT-MI (empagliflozina pós-IAM, prevenção de IC incidente em paciente de alto risco sem IC prévia) e o EMMY (citado apenas no legacy_source do EMPACT-MI, não coberto em arquivo próprio), mas nenhum documento tratava do DAPA-MI — o ensaio-espelho com dapagliflozina, de desenho registry-based e desfecho primário por win ratio hierárquico, que é justamente o tipo de comparação metodológica que falta nesta pasta. Conferido por grep (sglt2, sacubitril, finerenona, tirzepatida, semaglutida) e por título antes de escrever; não há duplicata."
+source_refs:
+- 'James S, Erlinge D, Storey RF, McGuire DK, de Belder M, Eriksson N, Andersen K, Austin D, Arefalk G, Carrick
+  D, Hofmann R, Hoole SP, Jones DA, Lee K, Tygesen H, Johansson PA, Langkilde AM, Ridderstråle W, Parvaresh Rizi
+  E, Deanfield J, Oldgren J; DAPA-MI Trial Committees and Investigators. Dapagliflozin in Myocardial Infarction
+  without Diabetes or Heart Failure. NEJM Evid. 2024;3(2):EVIDoa2300286. DOI: 10.1056/EVIDoa2300286. PMID: 38320489.
+  Epub 2023 Nov 11 (apresentado no AHA Scientific Sessions 2023). NCT04564742 — abstract completo conferido no PubMed
+  via E-utilities nesta sessão (09/09/2026).'
+legacy_source: Documento novo, escrito em 09/09/2026. A biblioteca já tinha o EMPACT-MI (empagliflozina pós-IAM,
+  prevenção de IC incidente em paciente de alto risco sem IC prévia) e o EMMY (citado apenas no legacy_source do
+  EMPACT-MI, não coberto em arquivo próprio), mas nenhum documento tratava do DAPA-MI — o ensaio-espelho com dapagliflozina,
+  de desenho registry-based e desfecho primário por win ratio hierárquico, que é justamente o tipo de comparação
+  metodológica que falta nesta pasta. Conferido por grep (sglt2, sacubitril, finerenona, tirzepatida, semaglutida)
+  e por título antes de escrever; não há duplicata.
+summary: null
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Dapagliflozina Após Infarto Agudo do Miocárdio Sem Diabetes ou IC Prévia: o Ensaio DAPA-MI
@@ -28,7 +45,7 @@ O método de win ratio foi **adotado por emenda durante a condução do ensaio**
 
 ## Resultados
 - **Desfecho primário (composto hierárquico por win ratio)**: significativamente mais "vitórias" para dapagliflozina do que para placebo — **win ratio 1,34 (IC95% 1,20-1,50; p<0,001)**
-- Esse resultado positivo foi **impulsionado principalmente pelos componentes cardiometabólicos** da hierarquia (peso corporal, classe funcional, diabetes incidente, fibrilação atrial), não pelos desfechos clínicos duros
+- Esse resultado positivo foi **impulsionado principalmente pelos componentes cardiometabólicos** da hierarquia (sobretudo peso corporal e diabetes incidente), não pelos desfechos clínicos duros
 - **Composto de morte cardiovascular ou hospitalização por IC** (o desfecho "tradicional", tempo-até-o-evento): **50/2.019 (2,5%) com dapagliflozina vs. 52/1.998 (2,6%) com placebo** — **HR 0,95 (IC95% 0,64-1,40)** — **sem diferença estatisticamente significativa**
 - As taxas de outros eventos cardiovasculares foram baixas, e as diferenças entre os grupos **não atingiram significância estatística nominal**
 - **Segurança**: nenhuma preocupação de segurança identificada
@@ -48,21 +65,21 @@ Os dois ensaios respondem à mesma pergunta geral — SGLT2i pós-IAM previne de
 | N | 4.017 | 6.522 |
 | Desenho | Registry-based, win ratio hierárquico | Tradicional, evento-guiado, tempo-até-1º-evento |
 | Definição de risco de entrada | Disfunção sistólica de VE documentada no IAM-índice | Congestão que exigiu tratamento **ou** FEVE nova <45%, **mais** ≥1 fator de risco adicional |
-| Desfecho primário tradicional (morte CV/hosp. por IC) | HR 0,95 (IC95% 0,64-1,40) — neutro | HR 0,90 (IC95% 0,76-1,06; p=0,21) — neutro |
+| Composto de morte e hospitalização por IC | Morte **cardiovascular**/hospitalização por IC: HR 0,95 (IC95% 0,64–1,40), sem diferença demonstrada; não foi o primário hierárquico final | Morte **por qualquer causa**/primeira hospitalização por IC: HR 0,90 (IC95% 0,76–1,06; p=0,21), primário não significativo |
 
-**A convergência é o achado mais importante**: dois ensaios independentes, com fármacos diferentes da mesma classe, populações de entrada distintas e métodos estatísticos diferentes, **chegam ao mesmo resultado neutro** para o desfecho clínico duro de morte cardiovascular ou hospitalização por IC no pós-IAM precoce sem IC crônica prévia. Isso fortalece — não enfraquece — a conclusão de que a janela pós-IAM imediato, numa população sem IC estabelecida, não é onde os iSGLT2 mostram o benefício robusto que têm em ICFEr e ICFEp crônicas (DAPA-HF, EMPEROR-Reduced, EMPEROR-Preserved, DELIVER, já cobertos nesta biblioteca).
+Os ensaios não demonstraram benefício em seus respectivos compostos de morte e hospitalização por IC, mas esses desfechos não são idênticos. O EMPACT-MI incluiu morte por qualquer causa e apresentou sinal favorável em hospitalizações por IC nas análises secundárias. Isso não converte seu primário em positivo nem prova ausência de qualquer benefício pós-IAM. As indicações independentes por IC, doença renal ou diabetes devem ser avaliadas pelos respectivos critérios.
 
 ## O que isso muda na prática
 - O DAPA-MI **não** estabelece indicação de dapagliflozina rotineira em todo paciente pós-IAM sem diabetes e sem IC prévia, apenas com base em disfunção sistólica de VE no índice — o desfecho clínico duro pré-especificado foi neutro
-- Os ganhos cardiometabólicos observados (peso, classe funcional, prevenção de diabetes incidente, FA/flutter) são reais dentro do desenho do estudo, mas **não substituem** um desfecho positivo de morte/hospitalização por IC como base de indicação isolada nessa população específica
+- Os ganhos cardiometabólicos observados (principalmente peso e diabetes incidente; cada componente tem sua própria incerteza) são reais dentro do desenho do estudo, mas **não substituem** um desfecho positivo de morte/hospitalização por IC como base de indicação isolada nessa população específica
 - Em paciente pós-IAM que **já preenche critério independente** para iSGLT2 (diabetes tipo 2, IC crônica estabelecida com FE reduzida ou preservada, ou doença renal crônica), a indicação permanece firme por essas vias — o que o DAPA-MI e o EMPACT-MI **não sustentam** é iniciar o fármaco **só** pelo IAM recente, na ausência desses outros critérios
-- Reforça, na prática, a mesma leitura do EMPACT-MI: a extensão do dano miocárdico e a reperfusão seguem sendo os determinantes prognósticos centrais no pós-IAM imediato; um fármaco de efeito predominantemente hemodinâmico/metabólico parece não ter substrato ou tempo suficiente, nessa janela estreita, para modificar o composto duro de IC/morte
+- O estudo não testou uma explicação mecanística para a ausência de diferença no composto tradicional; não permite atribuí-la a falta de substrato ou de tempo para ação do medicamento
 
 ## Armadilhas clínicas
 - Ler "win ratio 1,34, p<0,001" isoladamente e concluir que o ensaio "foi positivo para prevenção de IC" — o componente hierárquico superior (morte, hospitalização por IC) não foi o que impulsionou o resultado agregado
 - Confundir DAPA-MI com o DICTATE-AHF (dapagliflozina iniciada nas primeiras 24h de internação por **IC aguda já instalada**, já coberto nesta biblioteca) — populações opostas: DICTATE-AHF trata IC aguda manifesta, DAPA-MI **exclui** IC crônica prévia e testa prevenção pós-IAM
 - Extrapolar o resultado cardiometabólico positivo (peso, diabetes incidente, classe funcional) como evidência de benefício sobre desfechos clínicos duros — são componentes de menor prioridade na hierarquia do win ratio, e o composto tradicional de morte CV/hospitalização por IC foi neutro
-- Assumir que o desenho *registry-based* (usando SWEDEHEART/NICOR) enfraquece a validade do achado — o desenho é uma escolha metodológica válida e cada vez mais usada para reduzir custo/tempo de ensaios pragmáticos, mas **não deve ser confundido** com um estudo observacional: a randomização e o cegamento do fármaco (não do desfecho) foram mantidos
+- Assumir que o desenho *registry-based* (usando SWEDEHEART/NICOR) enfraquece a validade do achado — o desenho é uma escolha metodológica válida e cada vez mais usada para reduzir custo/tempo de ensaios pragmáticos, mas **não deve ser confundido** com um estudo observacional: a alocação foi randomizada e o tratamento duplo-cego
 
 ## Tudo com Tudo
 
@@ -72,3 +89,5 @@ Os dois ensaios respondem à mesma pergunta geral — SGLT2i pós-IAM previne de
 - [Inibidores de SGLT2 na ICFEr: DAPA-HF e EMPEROR-Reduced](/biblioteca/inibidores-de-sglt2-na-icfer-dapa-hf-e-emperor-reduced)
 - [Inibidores de SGLT2 na ICFEp: Empagliflozina (EMPEROR-Preserved) e Dapagliflozina (DELIVER)](/biblioteca/inibidores-de-sglt2-na-icfep-empagliflozina-emperor-preserved-e-dapagliflozina-deliver)
 - [Eventos de Piora da Insuficiência Cardíaca (WHF): Definição Padronizada e Desfechos Hierárquicos Além da Hospitalização](/biblioteca/eventos-de-piora-da-insuficiencia-cardiaca-definicao-padronizada-e-desfechos-hierarquicos)
+
+Fonte para o comparador: [EMPACT-MI, NEJM](https://www.nejm.org/doi/full/10.1056/NEJMoa2314051).

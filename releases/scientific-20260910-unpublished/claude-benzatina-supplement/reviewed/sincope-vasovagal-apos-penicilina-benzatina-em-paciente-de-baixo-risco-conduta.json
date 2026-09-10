@@ -1,0 +1,29 @@
+{
+  "slug": "sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta",
+  "titulo": "Tontura e desmaio logo após a injeção de penicilina benzatina: é alergia?",
+  "tema": "Febre reumática",
+  "nivel": "básico",
+  "enunciado": "Menino de 12 anos, em profilaxia secundária regular de febre reumática há 2 anos, sem lesão valvar residual ao ecocardiograma mais recente, com função ventricular normal e assintomático. Cerca de 2 minutos após receber a injeção intramuscular de penicilina G benzatina, fica pálido, sua frio e refere tontura, perdendo brevemente a consciência. O pulso carotídeo é palpável e cheio. Não há tosse, sibilo, rouquidão, urticária ou edema de face. Ao ser colocado em decúbito dorsal com as pernas elevadas, recupera a consciência em menos de um minuto e a pressão arterial normaliza.",
+  "pergunta": "Qual é a conduta mais adequada neste momento?",
+  "opcoes": [
+    "Administrar adrenalina intramuscular imediatamente, por suspeita de anafilaxia",
+    "Manter decúbito e observação, com reavaliação clínica; considerar contrapressão somente após recuperação da consciência, sem indicação atual de adrenalina para o episódio vasovagal completamente resolvido",
+    "Suspender definitivamente a penicilina benzatina e trocar para eritromicina, por reação adversa confirmada",
+    "Não é necessária nenhuma conduta adicional nem observação, já que os sintomas já melhoraram ao deitar"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "O conjunto do episódio favorece síncope vasovagal: palidez, sudorese, breve perda de consciência e recuperação rápida e completa da consciência e da pressão ao deitar. A ausência de urticária isoladamente não exclui anafilaxia, e o pulso carotídeo não é um teste de exclusão. Neste caso, sem comprometimento persistente, cabe decúbito, observação por pelo menos30 min e reavaliação. Contrapressão só pode ser tentada por paciente consciente e capaz. Se surgir suspeita de anafilaxia, hipotensão recorrente ou nova deterioração, acionar emergência e administrar adrenalina IM sem esperar sinais de pele. O episódio resolvido não demonstra alergia à penicilina nem exige troca definitiva de fármaco. AHA 2022 e WAO 2020 fundamentam a diferenciação e essas precauções.",
+  "source_refs": [
+    "Sanyahumbi A et al. J Am Heart Assoc. 2022;11:e024517. DOI 10.1161/JAHA.121.024517. PMID 35049336. https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/",
+    "Cardona V et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13:100472. DOI 10.1016/j.waojou.2020.100472. https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/"
+  ],
+  "review_status": "revisado",
+  "documentos_relacionados": [
+    "seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular",
+    "fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta",
+    "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco"
+  ],
+  "review_note": "Caso lido integralmente. Corrigida contradição sem lesão residual/borderline; contrapressão somente após despertar. Resposta mantém vasovagal pela recuperação completa, sem usar ausência de rash como exclusão de anafilaxia. Incluída reavaliação e adrenalina imediata se suspeita surgir; vínculos a síntese/fluxo/profilaxia revisados.",
+  "published": false,
+  "gaps": []
+}

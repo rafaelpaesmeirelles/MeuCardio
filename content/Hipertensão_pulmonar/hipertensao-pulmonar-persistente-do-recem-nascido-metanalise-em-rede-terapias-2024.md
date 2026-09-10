@@ -1,48 +1,61 @@
 ---
-title: "Hipertensão Pulmonar Persistente do Recém-Nascido: a Metanálise em Rede de Terapias Combinadas (Fei et al., 2024)"
+title: 'Hipertensão Pulmonar Persistente do Recém-Nascido: Leitura Crítica da Metanálise em Rede de Fei 2024'
 slug: hipertensao-pulmonar-persistente-do-recem-nascido-metanalise-em-rede-terapias-2024
-theme: "Hipertensão pulmonar"
+theme: Hipertensão pulmonar
 kind: estudo
-review_status: pendente_revisao
-source_refs: ["Fei Q, Pan J, Zhang F, Lin Y, Yuan T. Comparison of Different Treatments of Persistent Pulmonary Hypertension of the Newborn: A Systematic Review and Network Meta-Analysis. Crit Care Med. 2024;52(6):e314-e322. DOI: 10.1097/CCM.0000000000006227. PMID: 38363176 — metanálise em rede de 23 ensaios clínicos randomizados (902 recém-nascidos, 16 estratégias terapêuticas) comparando esquemas de tratamento para hipertensão pulmonar persistente do recém-nascido (PPHN); identifica óxido nítrico inalado em concentração mediana associado a sildenafila oral como a estratégia de maior eficácia, e sildenafila oral associada a milrinona intravenosa como alternativa preferencial quando o óxido nítrico inalado não está disponível"]
-legacy_source: "Documento novo, sessão de expansão de conteúdo (09/09/2026). Fonte primária localizada e conferida no PubMed via E-utilities (esearch, esummary e efetch em XML e em MEDLINE) e cruzada no Europe PMC nesta sessão — PMID 38363176, título, periódico, volume, fascículo, páginas e DOI coincidentes nas três consultas. review_status = pendente_revisao porque o texto completo está bloqueado por paywall (sem PMCID disponível) e o abstract publicado não define explicitamente o desfecho composto de \"eficácia\" usado no ranqueamento SUCRA, não traz os dados individuais das outras 14 das 16 estratégias comparadas, nem detalha eventos adversos por braço de tratamento; além disso, a frase do próprio abstract sobre o desfecho de mortalidade repete o mesmo valor numérico (OR 25,13) já usado para a comparação de eficácia de sildenafila oral + milrinona, o que impede confirmar com segurança se se trata de um resultado de mortalidade distinto ou de uma reprodução do dado de eficácia no texto publicado. Esses pontos estão sinalizados como VERIFICAÇÃO HUMANA NECESSÁRIA no corpo do texto, não inventados nem resolvidos por inferência. A direção geral do achado (as duas combinações de melhor desempenho, e a ordem de preferência entre elas) está confirmada com segurança em três formatos independentes da mesma fonte."
+review_status: revisado
+source_refs:
+- 'Fei Q, Pan J, Zhang F, Lin Y, Yuan T. Comparison of Different Treatments of Persistent Pulmonary Hypertension
+  of the Newborn: A Systematic Review and Network Meta-Analysis. Crit Care Med. 2024;52(6):e314-e322. DOI: 10.1097/CCM.0000000000006227.
+  PMID: 38363176 — metanálise em rede de 23 ensaios clínicos randomizados (902 recém-nascidos, 16 estratégias terapêuticas)
+  comparando esquemas de tratamento para hipertensão pulmonar persistente do recém-nascido (PPHN); identifica óxido
+  nítrico inalado em concentração mediana associado a sildenafila oral como a estratégia de maior eficácia, e sildenafila
+  oral associada a milrinona intravenosa como alternativa preferencial quando o óxido nítrico inalado não está disponível'
+legacy_source: Documento novo, sessão de expansão de conteúdo (09/09/2026). Fonte primária localizada e conferida
+  no PubMed via E-utilities (esearch, esummary e efetch em XML e em MEDLINE) e cruzada no Europe PMC nesta sessão
+  — PMID 38363176, título, periódico, volume, fascículo, páginas e DOI coincidentes nas três consultas. review_status
+  = pendente_revisao porque o texto completo está bloqueado por paywall (sem PMCID disponível) e o abstract publicado
+  não define explicitamente o desfecho composto de "eficácia" usado no ranqueamento SUCRA, não traz os dados individuais
+  das outras 14 das 16 estratégias comparadas, nem detalha eventos adversos por braço de tratamento; além disso,
+  a frase do próprio abstract sobre o desfecho de mortalidade repete o mesmo valor numérico (OR 25,13) já usado
+  para a comparação de eficácia de sildenafila oral + milrinona, o que impede confirmar com segurança se se trata
+  de um resultado de mortalidade distinto ou de uma reprodução do dado de eficácia no texto publicado. Esses pontos
+  estão sinalizados como VERIFICAÇÃO HUMANA NECESSÁRIA no corpo do texto, não inventados nem resolvidos por inferência.
+  A direção geral do achado (as duas combinações de melhor desempenho, e a ordem de preferência entre elas) está
+  confirmada com segurança em três formatos independentes da mesma fonte.
+summary: A rede de Fei reúne 23 ensaios e 902 recém-nascidos, mas a classificação das combinações não estabelece
+  um esquema terapêutico neonatal. Esta leitura crítica discute comparadores, imprecisão e limites do relato de
+  mortalidade, sem reproduzir doses ou hierarquias como recomendação clínica.
+tags: []
+evidence_level: null
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Hipertensão Pulmonar Persistente do Recém-Nascido: a Metanálise em Rede de Terapias Combinadas (Fei et al., 2024)
+# Hipertensão Pulmonar Persistente do Recém-Nascido: Leitura Crítica da Metanálise em Rede de Fei 2024
 
-## Por que a pergunta terapêutica na PPHN é diferente da HP do adulto
-A hipertensão pulmonar persistente do recém-nascido (PPHN) é uma falha na transição circulatória fetal-neonatal: a resistência vascular pulmonar, que deveria cair abruptamente ao nascimento, permanece elevada, mantendo *shunt* direita-esquerda através do canal arterial e/ou forame oval e produzindo hipoxemia refratária desproporcional ao achado pulmonar. É uma condição fisiopatologicamente distinta dos cinco grupos de hipertensão pulmonar do adulto descritos na classificação ESC/ERS (documento relacionado nesta base trata da classificação em cinco grupos) — não há cateterismo cardíaco direito de rotina no recém-nascido criticamente hipoxêmico, o diagnóstico é predominantemente clínico e ecocardiográfico, e a urgência terapêutica é medida em horas, não em semanas. O óxido nítrico inalado (iNO) é historicamente considerado o tratamento padrão-ouro, mas seu custo e disponibilidade limitada em cenários de recursos escassos motivaram décadas de ensaios com alternativas orais, intravenosas e combinadas — cujo resultado agregado é justamente o que esta metanálise em rede tentou sintetizar.
+## A pergunta estudada
+Fei e colaboradores compararam tratamentos para hipertensão pulmonar persistente do recém-nascido em uma metanálise em rede de efeitos aleatórios. A busca em PubMed, Embase e Cochrane terminou em 27 de janeiro de 2023; foram incluídos 23 ensaios randomizados, com 902 recém-nascidos e 16 estratégias terapêuticas. [Artigo original](https://pubmed.ncbi.nlm.nih.gov/38363176/).
 
-## O estudo: metanálise em rede de 23 ensaios, 902 recém-nascidos
-Fei Q, Pan J, Zhang F, Lin Y, Yuan T (Crit Care Med. 2024;52(6):e314-e322, DOI 10.1097/CCM.0000000000006227, PMID 38363176) realizaram busca eletrônica em PubMed, Embase e Cochrane Library com dados até **27 de janeiro de 2023**, incluindo **23 ensaios clínicos randomizados** com **902 recém-nascidos** com PPHN. Os autores compararam **16 estratégias terapêuticas diferentes** entre si e contra terapia convencional (CON), usando metanálise em rede de efeitos aleatórios com comparações diretas e indiretas, e classificaram a probabilidade de cada estratégia ser a melhor pela área sob a curva de classificação cumulativa (SUCRA — quanto mais próximo de 1, maior a probabilidade de ser a opção superior).
+O resumo dos autores coloca a combinação de óxido nítrico inalado com sildenafila oral no primeiro lugar do ranking de eficácia, seguida de sildenafila com milrinona. A certeza atribuída pelos autores foi moderada e baixa, respectivamente. Isso descreve o resultado da rede; não constitui uma recomendação independente de tratamento.
 
-## Resultados: as duas combinações que se destacaram
-- **Óxido nítrico inalado em concentração mediana (10-20 ppm, "MNO") associado a sildenafila oral (1-3 mg/kg/dose a cada 6-8 horas, "OSID")** apresentou a **melhor eficácia** entre as 16 estratégias: **MNO + OSID vs. terapia convencional — odds ratio (OR) 27,53 (IC 95% 2,36-321,75), SUCRA 0,818, classificada em 1º lugar**, com qualidade de evidência classificada pelos autores como **moderada**.
-- **Sildenafila oral associada a milrinona intravenosa ("OSID + milrinona")** teve o **segundo melhor desempenho em eficácia**: **OSID + milrinona vs. terapia convencional — OR 25,13 (IC 95% 1,67-377,78), SUCRA 0,811, classificada em 2º lugar**, com qualidade de evidência classificada como **baixa**.
-- Para o desfecho de **mortalidade**, o abstract publicado registra a mesma combinação (terapia convencional vs. OSID + milrinona) com **OR 25,13 (IC 95% 1,67-377,78) e SUCRA 0,786, "classificada em último lugar"** — mas repete exatamente o mesmo valor numérico de OR já usado para o desfecho de eficácia. **Isso é sinalizado aqui como VERIFICAÇÃO HUMANA NECESSÁRIA**: não é possível, a partir do abstract disponível publicamente (sem acesso ao texto completo, que está bloqueado por paywall e não tem PMCID), confirmar se este é de fato um resultado de mortalidade independente e distinto, ou uma reprodução/erro de digitação do dado de eficácia no texto do próprio artigo. Este documento não resolve essa ambiguidade por inferência — apenas a relata.
-- Os autores **não detalharam no abstract** os resultados numéricos das outras 14 estratégias terapêuticas comparadas nem os dados de eventos adversos por braço — **VERIFICAÇÃO HUMANA NECESSÁRIA** para quem precisar desses números específicos; eles podem constar apenas no texto completo (indisponível para conferência nesta sessão).
+## O que o ranking permite interpretar
+Uma metanálise em rede combina comparações diretas e indiretas. Seu resultado depende de os estudos serem suficientemente comparáveis em população, gravidade, cuidados concomitantes e definição dos desfechos. Randomização dentro de cada ensaio não elimina essas exigências entre ensaios distintos.
 
-## Conclusão dos próprios autores
-"MNO + OSID é o tratamento mais eficaz para PPHN. Se o iNO não estiver disponível, OSID + milrinona é preferível" (tradução direta da conclusão do abstract).
+SUCRA resume a posição relativa no ranking. Não corresponde à porcentagem de recém-nascidos que melhora, à redução absoluta de mortalidade nem à certeza de que uma intervenção é clinicamente superior. O primeiro lugar não substitui a avaliação da precisão ou da segurança.
 
-## Interpretação clínica
-Esta metanálise em rede reforça, com uma síntese formal de 23 ensaios randomizados, uma hierarquia terapêutica que já orientava a prática: **óxido nítrico inalado continua sendo o eixo central do tratamento da PPHN**, e a adição de **sildenafila oral** parece agregar benefício sobre o iNO isolado. Quando o iNO não está disponível — cenário real em unidades neonatais de recursos limitados, inclusive parte da realidade assistencial brasileira fora de centros terciários — a combinação de **sildenafila oral com milrinona intravenosa** desponta como a alternativa de melhor eficácia relativa entre as estratégias sem iNO, ainda que sustentada por evidência de qualidade **baixa** (ao contrário da combinação com iNO, sustentada por qualidade **moderada**). A magnitude dos odds ratios (>25 em ambos os casos) é expressiva, mas os **intervalos de confiança extremamente amplos** (chegando a variar de pouco acima de 1 até mais de 300) refletem o número reduzido de estudos e pacientes por comparação dentro da rede — um alerta típico de metanálise em rede com poucos ensaios por nó, que pede cautela na magnitude absoluta do efeito, mesmo quando a direção do achado é consistente.
+As comparações de eficácia destacadas no resumo usam terapia convencional como referência. Portanto, não é correto convertê-las automaticamente em prova de benefício da adição de sildenafila sobre óxido nítrico isolado. Os intervalos apresentados são muito amplos, compatíveis com elevada imprecisão; uma ordenação aparente não fornece uma estimativa estável do tamanho do benefício.
 
-## O que não deve ser concluído
-- Este estudo **não é um ensaio clínico primário** — é uma síntese estatística de ensaios preexistentes, sujeita às limitações de qualidade e heterogeneidade dos estudos originais incluídos.
-- **Não deve ser interpretado como mudança de diretriz formal**: os autores propõem uma hierarquia baseada em SUCRA, não uma nova recomendação de sociedade médica.
-- **A ambiguidade do dado de mortalidade (ver acima) não deve ser lida como sinal de segurança confirmado, nem como sinal de dano confirmado**, da combinação sildenafila oral + milrinona — o dado, como publicado no abstract, não permite essa conclusão com segurança.
-- **Milrinona intravenosa isolada, ou outras das 14 estratégias não detalhadas no abstract, não devem ser presumidas equivalentes ou inferiores** com base neste documento — seus resultados individuais não estão disponíveis aqui.
-- A busca dos autores tem corte em **janeiro de 2023**; ensaios publicados após essa data não estão incorporados nesta rede.
+## Mortalidade e segurança: limite do relato disponível
+O resumo repete a mesma estimativa numérica nas descrições de eficácia e mortalidade da combinação sildenafila–milrinona, invertendo o comparador. Essa repetição, isoladamente, não demonstra erro de publicação. Entretanto, sem a correspondência independente com os eventos, contrastes e tabelas de mortalidade, o número não pode ser apresentado como benefício de sobrevida confirmado. Por esse motivo, esta leitura não utiliza uma estimativa quantitativa de mortalidade.
 
-## Armadilhas clínicas
-- **Extrapolar diretamente para a prática um "OR > 25" sem considerar o intervalo de confiança extremamente amplo** que o acompanha — a imprecisão estatística é parte central do resultado, não um detalhe acessório.
-- **Tratar esta metanálise como evidência de mesmo peso que um ensaio clínico randomizado dedicado** — ela sintetiza estudos com qualidade heterogênea (moderada para MNO + OSID, baixa para OSID + milrinona) e não substitui julgamento clínico individualizado à beira do leito.
-- **Suspender ou postergar o óxido nítrico inalado quando disponível**, com base na leitura superficial deste resumo — o próprio estudo mantém o iNO como parte da combinação de melhor eficácia, e não propõe substituí-lo quando acessível.
-- **Aceitar como definitivo o dado isolado de mortalidade** sem reconhecer a inconsistência numérica sinalizada nesta síntese como VERIFICAÇÃO HUMANA NECESSÁRIA.
+Também não atribui segurança comparativa às estratégias com base na ausência de eventos adversos no resumo. Ausência de descrição não equivale à ausência de dano.
 
-## Mensagem prática
-Numa metanálise em rede de **23 ensaios randomizados e 902 recém-nascidos** com PPHN, **óxido nítrico inalado (10-20 ppm) combinado a sildenafila oral** teve a maior probabilidade de ser a estratégia mais eficaz (SUCRA 0,818, evidência moderada), e **sildenafila oral combinada a milrinona intravenosa** foi a segunda melhor opção (SUCRA 0,811, evidência baixa) — a alternativa de referência quando o iNO não está disponível. O dado de mortalidade associado a essa segunda combinação apresenta uma inconsistência numérica no abstract publicado que não pôde ser resolvida com o texto completo (bloqueado por paywall) e é sinalizada aqui como pendência de verificação, não como conclusão.
+## Implicação clínica
+O trabalho contribui para formular perguntas sobre terapias combinadas; não justifica transformar um ranking em prescrição neonatal. Foram retiradas desta síntese as doses agrupadas dos estudos e a proposta de uma alternativa preferencial automática quando o óxido nítrico não está disponível. A rede, por si, não valida essa substituição em todos os recém-nascidos ou em qualquer estrutura assistencial.
+
+O documento é uma leitura crítica de evidência, sem algoritmo de escolha ou escalonamento de vasodilatadores. Os materiais sobre hipertensão pulmonar do adulto conectados abaixo oferecem contexto conceitual e não permitem extrapolar indicações ou doses para recém-nascidos.
 
 ## Conteúdo CorVIA conectado
 - [Óxido Nítrico Inalado na Insuficiência Ventricular Direita Aguda por Hipertensão Pulmonar: o Ensaio PHiNO](/biblioteca/oxido-nitrico-inalado-na-insuficiencia-ventricular-direita-aguda-por-hipertensao-pulmonar-ensaio-phino)

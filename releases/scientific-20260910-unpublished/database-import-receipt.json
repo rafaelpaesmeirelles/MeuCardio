@@ -1,0 +1,18 @@
+{
+  "release_id": "scientific-20260910-unpublished",
+  "package_sha256": "0f2b139fba0ecd111f935603aad2390a1c1f4afe452d8d2e58cd2a19a915c993",
+  "mode": "apply-reviewed",
+  "matched": 391,
+  "changes": 339,
+  "already_matching": 52,
+  "published": 0,
+  "backup": "/tmp/corvia-391-before-reviewed-20260910T210417506258Z.json.gz",
+  "backup_container": "meucardio-backend-1",
+  "independent_verification": {
+    "verified_at": "2026-09-10T21:05:38.476382+00:00",
+    "matched": 391,
+    "reviewed": 391,
+    "published": 0,
+    "field_mismatches": []
+  }
+}

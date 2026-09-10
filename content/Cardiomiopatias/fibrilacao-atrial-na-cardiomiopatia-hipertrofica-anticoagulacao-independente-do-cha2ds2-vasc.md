@@ -1,0 +1,85 @@
+---
+slug: fibrilacao-atrial-na-cardiomiopatia-hipertrofica-anticoagulacao-independente-do-cha2ds2-vasc
+title: 'Fibrilação Atrial na Cardiomiopatia Hipertrófica: Anticoagulação Independente do CHA₂DS₂-VASc'
+kind: documento
+theme: Cardiomiopatias
+summary: null
+tags: []
+source_refs:
+- 'Alasmar R, Ibrahim R, AlHammouri H, et al. Direct Oral Anticoagulants Versus Warfarin in Patients with Atrial
+  Fibrillation and Hypertrophic Cardiomyopathy: A Retrospective Cohort Study. Am J Cardiovasc Drugs. 2026;26(3):375-381.
+  DOI: 10.1007/s40256-026-00791-y. PMID: 41838376'
+- 'Julakanti RR, Gilreath KM, Debertin J, et al. Risk Factors for Left Atrial Thrombus in Patients with Hypertrophic
+  Cardiomyopathy and Atrial Fibrillation. J Am Soc Echocardiogr. 2026 Jun 10. DOI: 10.1016/j.echo.2026.06.001. PMID:
+  42269731'
+- 'Liu M, Huang S, Kawana M, Wheeler MT, Parikh V, Perez MV. Distinct mechanistic features of atrial fibrillation
+  in hypertrophic cardiomyopathy. Heart Rhythm. 2026 May 7. DOI: 10.1016/j.hrthm.2026.03.1958. PMID: 41956264'
+- 'Rowin EJ, Siontis KC, Owens A, et al. Atrial fibrillation in hypertrophic cardiomyopathy: a unique clinical entity
+  requiring dedicated study. Heart Rhythm. 2026;23(8):e1672-e1682. DOI: 10.1016/j.hrthm.2026.03.1961. PMID: 41956263'
+- 'Aglan A, Fath AR, Silver JS, Harnish P, Hook B, Maron MS, Rowin EJ. Atrial fibrillation recurrence and outcomes
+  in patients with hypertrophic cardiomyopathy: insights from a nationwide real-world cohort. Heart Rhythm. 2026;23(9):e1823-e1833.
+  DOI: 10.1016/j.hrthm.2026.03.1906. PMID: 42029363'
+- 'Angelescu CM, Iosifescu TA, Căldăraru CI, et al. New Insights in the Diagnosis and Treatment of Atrial Fibrillation
+  in Patients with Hypertrophic Obstructive Cardiomyopathy. J Clin Med. 2026;15(8):3014. DOI: 10.3390/jcm15083014.
+  PMID: 42074815'
+- 'Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur
+  Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID: 37622657'
+- Ommen SR et al. 2024 AHA/ACC/AMSSM/HRS/PACES/SCMR Guideline for the Management of Hypertrophic Cardiomyopathy.
+  DOI10.1161/CIR.0000000000001250. Recomendações de FA clínica/subclínica, DOAC e ablação conferidas. https://www.ahajournals.org/doi/pdf/10.1161/CIR.0000000000001250
+- 'Joglar JA et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. DOI10.1161/CIR.0000000000001193.
+  Exceções para DOAC: estenose mitral moderada/grave e prótese mecânica.'
+evidence_level: null
+source_tier: A
+review_status: revisado
+gaps: []
+published: true
+---
+
+# Fibrilação Atrial na Cardiomiopatia Hipertrófica: Anticoagulação Independente do CHA₂DS₂-VASc
+
+## Por que a fibrilação atrial na CMH exige uma régua própria
+
+A fibrilação atrial (FA) é a arritmia sustentada mais comum na cardiomiopatia hipertrófica (CMH), ocorrendo em cerca de 20% a 25% dos pacientes ao longo do seguimento, e está associada a piora de sintomas, maior risco de acidente vascular cerebral (AVC) e piora de insuficiência cardíaca (Rowin EJ et al., Heart Rhythm 2026, PMID 41956263). O ponto central — e a razão para tratar esse cenário separadamente da FA "genérica" — é que os instrumentos de estratificação de risco tromboembólico desenvolvidos e validados para a população geral com FA não se aplicam adequadamente aos pacientes com CMH.
+
+Isso não é uma nuance acadêmica. Diretrizes de cardiomiopatias já recomendam anticoagulação em paciente com CMH e FA clínica (paroxística, persistente ou permanente), salvo contraindicação, **independentemente da pontuação no escore CHA₂DS₂-VASc** (Arbelo E et al., Eur Heart J 2023, PMID 37622657; Angelescu CM et al., J Clin Med 2026, PMID 42074815). Um paciente jovem, sem hipertensão, diabetes, insuficiência cardíaca prévia ou história de AVC — que poderia pontuar baixo no CHA₂DS₂-VASc — ainda assim deve ser anticoagulado se tiver CMH e desenvolver FA.
+
+## O mecanismo: por que a CMH muda o risco tromboembólico
+
+O racional fisiopatológico é que a CMH não é apenas hipertrofia ventricular associada a FA incidental: há evidência de miopatia atrial específica da doença, distinta da FA que ocorre em corações sem cardiomiopatia estrutural. Revisão mecanística recente descreve essa entidade como caracterizada por remodelamento atrial estrutural (dilatação e fibrose) e alterações biofísicas — incluindo disfunção de canais iônicos — que juntas produzem um substrato pró-trombótico e pró-arrítmico mais agressivo do que a FA isolada (Liu M et al., Heart Rhythm 2026, PMID 41956264). Esses mecanismos ajudam a formular hipóteses sobre o risco; a revisão mecanística não valida uma regra individual de anticoagulação baseada em fibrose ou tamanho atrial na ausência de FA.
+
+Na prática clínica, essa miopatia atrial se traduz em números concretos: mesmo sob anticoagulação, o risco de trombo em átrio esquerdo não é desprezível. Um estudo com 693 pacientes com CMH e FA submetidos a ecocardiograma transesofágico identificou trombo em 8,5% dos casos, e a menor velocidade de esvaziamento do apêndice atrial esquerdo (LAAEV) permaneceu o preditor independente mais forte de trombo em análise multivariada, entre as variáveis examinadas (Julakanti RR et al., J Am Soc Echocardiogr 2026, PMID 42269731). A amostra foi selecionada pela realização de ETE; os 8,5% não estimam prevalência em toda CMH com FA. O achado reforça atenção a trombo residual e avaliação individual antes de cardioversão, sem demonstrar necessidade universal de ETE após anticoagulação adequada.
+
+## Escolha do anticoagulante: DOAC ou varfarina
+
+A diretriz AHA/ACC2024 já recomenda DOAC como primeira opção para CMH com FA clínica, independentemente do CHA₂DS₂-VASc. A preferência não depende de aguardar um novo ensaio dedicado. Exceções relevantes são prótese valvar mecânica e estenose mitral moderada ou grave; insuficiência mitral isolada, inclusive a associada à CMH, não exige varfarina por si só.
+
+Coorte retrospectiva pareada por escore de propensão, em CMH **obstrutiva**, excluindo AVC prévio, com 3.307 pacientes em cada braço (DOAC versus varfarina) derivada da rede TriNetX, encontrou menor incidência de AVC isquêmico com DOAC (3,5% vs 4,8%) e menor taxa de hospitalização por todas as causas (64,5% vs 68,7%), sem diferenças estatisticamente significativas em mortalidade ou sangramentos avaliados; isso não prova equivalência de segurança (Alasmar R et al., Am J Cardiovasc Drugs 2026, PMID 41838376). Os próprios autores ressaltam tratar-se de estudo observacional retrospectivo, sujeito a viés residual não capturado pelo pareamento, e não de ensaio clínico randomizado — a coorte apoia a preferência já existente em diretriz, sem provar superioridade causal.
+
+## Controle de ritmo, ablação e por que os desfechos são piores do que na FA "comum"
+
+Quando a FA é mal tolerada, controle de ritmo com cardioversão ou antiarrítmicos pode ser útil. Ablação é uma opção na FA sintomática quando fármacos são ineficazes, contraindicados ou não são a preferência do paciente; não é obrigatoriamente superior a fármacos em toda CMH. Escolha do antiarrítmico exige considerar função ventricular, QT, função renal, comorbidades e toxicidade. [Diretriz AHA/ACC2024](https://doi.org/10.1161/CIR.0000000000001250).
+
+Ainda assim, a evidência mais recente mostra que os desfechos de controle de ritmo na CMH são consistentemente inferiores aos observados em pacientes com FA sem cardiomiopatia estrutural. Coorte nacional americana (dados TriNetX, 2015–2025), com 2,5 milhões de pacientes com FA dos quais 1,2% tinham CMH, avaliou em 1 ano recorrência que exigia nova intervenção (antiarrítmico, cardioversão ou ablação), encontrando taxa maior na CMH após o diagnóstico inicial (19,6% vs 14,6%; hazard ratio 1,25; p<0,001), com recorrência igualmente mais alta após cardioversão e após ablação. Insuficiência cardíaca associada e FA persistente (em vez de paroxística) foram preditores independentes de recorrência. Um achado com implicação prática direta: ablação realizada mais precocemente no curso da doença associou-se a menor recorrência do que ablação tardia (Aglan A et al., Heart Rhythm 2026, PMID 42029363) — associação sujeita a seleção e confusão de indicação, que não demonstra um prazo obrigatório para ablação nem superioridade causal do tratamento precoce.
+
+A revisão de 2026 resume o estado da arte: FA-CMH deve ser tratada como entidade clínica distinta da FA em coração estruturalmente normal, com taxas mais baixas de sucesso de controle de ritmo tanto por ablação quanto por antiarrítmicos, o que justifica desenvolvimento de estratégias terapêuticas dirigidas a essa população específica, em vez da simples extrapolação de protocolos da FA genérica (Rowin EJ et al., Heart Rhythm 2026, PMID 41956263).
+
+## Implicações práticas para a decisão clínica
+
+- Na FA clínica associada à CMH, o escore tromboembólico baixo não deve impedir anticoagulação indicada; avaliar contraindicações e risco hemorrágico.
+- Para FA subclínica detectada por dispositivo, confirmar o traçado e considerar duração/carga: a diretriz2024 recomenda anticoagulação para episódios >24 horas; entre >5 minutos e <24 horas, a decisão é individual, ponderando risco tromboembólico e hemorrágico. Episódios breves ou artefatos não recebem automaticamente a mesma regra da FA clínica.
+- DOAC é a primeira opção quando elegível. Prótese mecânica ou estenose mitral moderada/grave exigem estratégia com antagonista da vitamina K. Ajustar por função renal e interações.
+- Discutir controle de ritmo e possibilidade de ablação conforme sintomas e preferências, comunicando a possibilidade de recorrência e de procedimentos adicionais. Sucesso aparente do ritmo não elimina automaticamente a indicação de anticoagulação.
+
+## Limitações da evidência atual
+
+A maior parte dos dados mais recentes citados aqui é observacional (coortes retrospectivas baseadas em bancos de dados administrativos como TriNetX), sujeita a viés de confusão residual, de indicação e de definição de desfecho entre instituições. Não há, até o momento desta síntese, ensaio clínico randomizado comparando diretamente DOAC versus varfarina especificamente em pacientes com CMH e FA, nem ensaio randomizado comparando o momento ideal de ablação. As recomendações de anticoagulação universal independente do CHA₂DS₂-VASc derivam de consenso de diretriz apoiado por evidência observacional de risco tromboembólico elevado, não de ensaio dedicado com desfecho de AVC como variável primária. Essas lacunas devem ser comunicadas ao paciente na decisão compartilhada, especialmente quando o perfil de sangramento individual for motivo de preocupação.
+
+## Tudo com Tudo
+
+- [Cardiomiopatia Hipertrófica: Diagnóstico, Estratificação de Risco e Tratamento (ESC 2023) — Versão Completa](/biblioteca/cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa)
+- [Cardiomiopatia Hipertrófica: Diagnóstico e Tratamento (Diretriz Brasileira 2024)](/biblioteca/cardiomiopatia-hipertrofica-diagnostico-e-tratamento-diretriz-brasileira-2024)
+- [HCM Risk-SCD: Estratificação de Risco de Morte Súbita na Cardiomiopatia Hipertrófica](/biblioteca/hcm-risk-scd-escore-de-risco-de-morte-subita-na-cardiomiopatia-hipertrofica)
+- [Taquicardiomiopatia (Cardiomiopatia Induzida por Taquicardia): Reconhecimento e Reversibilidade](/biblioteca/taquicardiomiopatia-cardiomiopatia-induzida-por-taquicardia-reconhecimento-e-reversibilidade)
+- [Fluxograma: indicação de ablação por cateter na fibrilação atrial (ESC 2024)](/biblioteca/fluxograma-indicacao-ablacao-cateter-fa-esc-2024)
+- [Fluxograma: Escolha e ajuste de dose de DOAC na fibrilação atrial — função renal, idade, peso e interações](/biblioteca/fluxograma-escolha-e-dose-de-doac-na-fa-por-funcao-renal-idade-e-peso)
+- [Cardiomiopatia hipertrófica: exercício, esporte competitivo e decisão compartilhada](/biblioteca/cardiomiopatia-hipertrofica-exercicio-esporte-competitivo)
