@@ -404,6 +404,8 @@ jobs:
               }
               await page.screenshot({path:path.join(out,`${name}-intelligence-controls.png`),fullPage:false});
               await page.locator('.spaces-home__topbar .spaces-brand').evaluate(element => element.scrollIntoView({block:'start',inline:'nearest',behavior:'instant'}));
+              // Reset the QA's explicit monitor scroll, not just the brand's own offset.
+              await page.evaluate(() => window.scrollTo({top:0,left:0,behavior:'instant'}));
             }
             (report.scientificIntelligenceSurfaces ??= []).push(metrics);
           }

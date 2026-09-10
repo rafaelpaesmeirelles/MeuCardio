@@ -22,7 +22,7 @@ export function measureMobileSpaces() {
   } : null;
   return {
     identityName,
-    width:innerWidth, theme:document.documentElement.dataset.corviaTheme, choice,
+    width:innerWidth, height:innerHeight, scrollX, scrollY, theme:document.documentElement.dataset.corviaTheme, choice,
     header:rect(header), brand:withinHeader('.spaces-brand'), wordmark:withinHeader('.spaces-brand strong'),
     galaxy:withinHeader('.galaxy-theme-toggle'), galaxyImage:withinHeader('.galaxy-theme-toggle__image'), identity:withinHeader('.spaces-user'), avatar:withinHeader('.spaces-user__avatar'),
     search:withinHeader('.spaces-everything-search'), input:withinHeader('.spaces-everything-search input'),
@@ -42,6 +42,7 @@ export function validateMobileSpaces(m, expectedIdentityName) {
     const r=m[key];
     if (!r?.visible) errors.push(`${key}: not visible`);
     else if (r.left < -1 || r.right > m.width + 1) errors.push(`${key}: outside viewport`);
+    else if (r.top < -1 || r.bottom > m.height + 1) errors.push(`${key}: outside vertical viewport`);
   }
   const overlaps=(a,b) => a?.visible && b?.visible && a.left < b.right-1 && a.right > b.left+1 && a.top < b.bottom-1 && a.bottom > b.top+1;
   for (const [a,b] of [['brand','galaxy'],['galaxy','identity'],['brand','identity'],['search','brand'],['search','identity']]) {

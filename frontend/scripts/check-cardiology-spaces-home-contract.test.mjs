@@ -241,6 +241,7 @@ test("mobile geometry rejects hidden wordmarks and clipped cards even when body 
     identityName:{...box(200,304,48,80),text:"Profa. Dra. Alexandriana",scrollWidth:104,clientWidth:104,textRects:[{left:204,right:300,top:50,bottom:78}]}, cards:[0,1,2].map(() => ({box:box(16,304),text:[{left:90,right:286}]}))};
   assert.deepEqual(validateMobileSpaces(sample), []);
   assert.ok(validateMobileSpaces({...sample,wordmark:{...sample.wordmark,visible:false}}).includes("wordmark: not visible"));
+  assert.ok(validateMobileSpaces({...sample,header:{...sample.header,top:-58,bottom:26}}).includes("header: outside vertical viewport"));
   assert.ok(validateMobileSpaces({...sample,cards:[{box:box(16,380),text:[]},...sample.cards.slice(1)]}).includes("card 0: outside viewport"));
   assert.ok(validateMobileSpaces({...sample,cards:[{box:box(16,304),text:[{left:90,right:330}]},...sample.cards.slice(1)]}).includes("card 0: clipped text"));
   assert.ok(validateMobileSpaces({...sample,galaxy:box(110,154)}).includes("brand/galaxy: overlap"));
