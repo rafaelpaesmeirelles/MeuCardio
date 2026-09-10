@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.core.security import current_user
 from app.models.study import ScientificStudy
+from app.services.document_editorial_taxonomy import study_section, study_section_expression
 from app.services.study_slug_aliases import canonical_study_slug
 
 router = APIRouter(prefix="/api/studies", tags=["estudos"])
@@ -28,7 +29,7 @@ def _contem_sem_acentos(column, value: str):
 def _card(s: ScientificStudy) -> dict:
     return {
         "id": s.id, "slug": s.slug, "title": s.title, "study_type": s.study_type,
-        "journal": s.journal, "year": s.year, "theme": s.theme,
+        "journal": s.journal, "year": s.year, "theme": s.theme, "secao": study_section(s.study_type),
     }
 
 
@@ -64,11 +65,16 @@ def themes(db: Session = Depends(get_db), _=Depends(current_user)):
 @router.get("")
 def list_studies(
     study_type: str | None = None, theme: str | None = None,
+    secao: str | None = None,
     q: str | None = Query(None, max_length=200),
     limit: int = Query(60, ge=1, le=500), offset: int = Query(0, ge=0),
     db: Session = Depends(get_db), _=Depends(current_user),
 ):
     query = db.query(ScientificStudy).filter(ScientificStudy.published.is_(True))
+    if secao is not None:
+        if secao not in {"estudo", "diretriz"}:
+            raise HTTPException(status_code=422, detail="Seção editorial inválida.")
+        query = query.filter(study_section_expression(ScientificStudy.study_type) == secao)
     if study_type:
         query = query.filter(ScientificStudy.study_type == study_type)
     if theme:
@@ -81,7 +87,7 @@ def list_studies(
             _contem_sem_acentos(ScientificStudy.tags, q),
         ))
     total = query.count()
-    items = query.order_by(ScientificStudy.title).offset(offset).limit(limit).all()
+    items = query.order_by(ScientificStudy.title, ScientificStudy.id).offset(offset).limit(limit).all()
     has_more = offset + len(items) < total
     return {
         "total": total,

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "decision_id": "editorial-classifications-20260910",
+  "repository": "rafaelpaesmeirelles/MeuCardio",
+  "head_branch": "codex/fix-editorial-classifications-20260910",
+  "base_sha": "4c58de6fb7cd64bd8767f062d9ef0ee814870cda",
+  "pull_request": 920,
+  "authorization": {
+    "date": "2026-09-10",
+    "instruction": "Sem novo ci backend",
+    "mode": "authorized-no-backend-ci",
+    "source": "Explicit user instruction recorded earlier in this session and still in force; the subsequent editorial-classification review and mobile Home/choice correction requests did not revoke it. The user did not repeat the no-backend-CI instruction in these subtasks.",
+    "scope": "Only PR920: editorial-classification review plus the user-requested mobile Home/choice regressions in light and dark themes, and its exact confirmed main integration; no authorization inherited from PR918 or PR919."
+  },
+  "local_evidence": [
+    "docs/editorial-classification-audit-20260910.md"
+  ]
+}

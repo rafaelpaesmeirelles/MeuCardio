@@ -50,6 +50,10 @@ from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.models.study_track import StudyTrackProgress
+from app.services.editorial_kind_overrides import (
+    REGISTRY_PATH as EDITORIAL_KIND_REGISTRY_PATH, load_editorial_registry,
+    validate_editorial_sources, editorial_registry_scope, validate_materialized_editorial_values,
+)
 from app.services.carregar_triagem_sintomas import load_triage_records
 from app.services.corpus_release_authorization import (
     build_front_fingerprint,
@@ -735,6 +739,13 @@ def _immutable_release_sources(prepared, authorization_path: Path):
             evidence = json.loads(copy_evidence(path).read_text())
             for reference in evidence.get("references", []):
                 copy_evidence(reference["path"])
+        # Separate metadata ledger: frozen independently, never added to or
+        # substituted for the existing scientific publication authorization.
+        editorial_registry = load_editorial_registry()
+        editorial_dir = snapshot_root / "backend/app/services"
+        editorial_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(editorial_registry["registry_path"], editorial_dir / "editorial_kind_registry.json")
+        shutil.copy2(editorial_registry["evidence_path"], editorial_dir / Path(editorial_registry["evidence_file"]))
         # Read-only files prevent accidental mutation by native loaders. The
         # validated snapshot, rather than later reads of live sources, is used.
         for path in snapshot_root.rglob("*"):
@@ -767,6 +778,9 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False,
 
 def _reconcile_prepared(prepared, *, publish_reviewed: bool, allow_partial: bool,
                         authorization_path: Path, evidence_root: Path) -> dict[str, Any]:
+    frozen_registry_path = evidence_root / "backend/app/services/editorial_kind_registry.json"
+    registry = load_editorial_registry(frozen_registry_path if frozen_registry_path.is_file() else EDITORIAL_KIND_REGISTRY_PATH)
+    editorial_preflight = validate_editorial_sources(evidence_root, registry)
     loads: dict[str, Any] = {}
     canonical_slugs = {
         front: state[1]
@@ -821,7 +835,7 @@ def _reconcile_prepared(prepared, *, publish_reviewed: bool, allow_partial: bool
     finally:
         preflight_db.close()
 
-    with publication_quarantine(freeze_during_load, {front: config["model"] for front, config in FRONTS.items()}):
+    with editorial_registry_scope(registry), publication_quarantine(freeze_during_load, {front: config["model"] for front, config in FRONTS.items()}):
         for front, config in FRONTS.items():
             (
                 loads[front],
@@ -830,6 +844,10 @@ def _reconcile_prepared(prepared, *, publish_reviewed: bool, allow_partial: bool
             ) = _load_front(front, config, prepared=prepared[front])
             if loaded_slugs != canonical_slugs[front] or loaded_intents != publication_intents[front]:
                 raise RuntimeError(f"Frente {front}: estado preparado divergiu durante a carga.")
+
+    rechecked_registry = load_editorial_registry(registry["registry_path"])
+    if validate_editorial_sources(evidence_root, rechecked_registry) != editorial_preflight:
+        raise RuntimeError("Editorial metadata evidence changed during import")
 
     # The bytes consumed by the native loaders must still match the approved
     # snapshot. Recheck before promotion rather than trusting prepared slugs.
@@ -840,6 +858,7 @@ def _reconcile_prepared(prepared, *, publish_reviewed: bool, allow_partial: bool
 
     db = SessionLocal()
     try:
+        loads["editorial_metadata"] = {**editorial_preflight, "materialized": validate_materialized_editorial_values(db, registry)}
         loads["controlados"] = _load_controlled_substances(db)
         migrated_study_track_progress = _migrate_study_track_progress(db)
         (

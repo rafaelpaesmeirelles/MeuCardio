@@ -468,6 +468,8 @@ log "Confirmando migrations de forma idempotente."
 backend_exec python -m app.commands.migrate
 log "Reconciliando as 13 frentes científicas e publicando somente conteúdo revisado."
 backend_exec python -m app.commands.reconcile_content --publish-reviewed
+log "Aplicando somente reclassificações editoriais runtime vinculadas a identidade e evidência. Texto e publicação permanecem preservados."
+backend_exec python -m app.commands.apply_editorial_classifications --apply
 # O reconciliador aplica a autorização do snapshot e suas exclusões.
 # Não executar promoção genérica depois dele: ela poderia republicar quarentena.
 # Correção coordenada de 03/09/2026 (seção "arquitetura de deploy"): a indexação

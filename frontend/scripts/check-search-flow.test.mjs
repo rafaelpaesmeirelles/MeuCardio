@@ -33,6 +33,10 @@ function transpile(source, name) {
 }
 const anchors = await readFile(path.join(root, 'src/lib/searchAnchors.ts'), 'utf8');
 await writeFile(path.join(temp, 'searchAnchors.mjs'), transpile(anchors, 'searchAnchors.ts'));
+const editorialSections = JSON.parse(await readFile(path.join(root, 'src/lib/documentEditorialTaxonomy.json'), 'utf8'));
+let editorialHelper = await readFile(path.join(root, 'src/lib/documentEditorialTaxonomy.ts'), 'utf8');
+editorialHelper = editorialHelper.replace('import sections from "./documentEditorialTaxonomy.json";', `const sections = ${JSON.stringify(editorialSections)};`);
+await writeFile(path.join(temp, 'documentEditorialTaxonomy.mjs'), transpile(editorialHelper, 'documentEditorialTaxonomy.ts'));
 let source = await readFile(path.join(root, 'src/pages/Busca.tsx'), 'utf8');
 assert.ok(source.includes('import { api, ApiError, PaginaDe } from "../lib/api";'));
 source = source.replace('import { api, ApiError, PaginaDe } from "../lib/api";', `
@@ -47,6 +51,7 @@ const Vazio = ({ titulo }) => <p>{titulo}</p>;
 source = source.replace('import TctDiseaseOverview from "../components/TctDiseaseOverview";', `
 const TctDiseaseOverview = ({ disease }) => <aside>{disease.name}</aside>;
 `);
+source = source.replace('"../lib/documentEditorialTaxonomy"', '"./documentEditorialTaxonomy.mjs"');
 source = source.replace('"../lib/searchAnchors"' , '"./searchAnchors.mjs"');
 await writeFile(path.join(temp, 'Busca.mjs'), transpile(source, 'Busca.tsx'));
 const { default: Busca } = await import(pathToFileURL(path.join(temp, 'Busca.mjs')));
@@ -267,4 +272,27 @@ test('a failed section request keeps its cursor and can retry without duplicate 
   await click(sectionMore(renderer, 'diretriz'));
   assert.match(nodeText(section(renderer, 'diretriz')), /Diretriz recuperada/);
   assert.equal(calls.filter(url => url.includes('secao=') && url.includes('offset=0')).length, 2);
+});
+
+
+test('editorial study and calculator documents retain Library routes and neutral titles stay neutral', async t => {
+  const { renderer } = await mount(t, 'tema', async url => url.startsWith('/drugs?') ? { items: [] } : page([
+    { ...item('trial', 'Ensaio clínico', 'documento'), kind: 'estudo' },
+    { ...item('neutral', 'Miopatia: comentário sobre consenso', 'documento'), kind: 'documento' },
+    { ...item('same-score', 'Documento de escore', 'documento'), kind: 'calculadora', secao: 'calculadora' },
+    { ...item('same-score', 'Calculadora executável', 'calculadora'), kind: 'calculadora', secao: 'calculadora' },
+  ]));
+  assert.equal(section(renderer, 'estudo').findByType('a').props.href, '/biblioteca/trial');
+  assert.equal(section(renderer, 'geral').findByType('a').props.href, '/biblioteca/neutral');
+  assert.deepEqual(section(renderer, 'calculadora').findAllByType('a').map(a => a.props.href).sort(), ['/biblioteca/same-score', '/calculadoras/same-score']);
+});
+
+
+test('formal ScientificStudy in guidance retains its studies URL and trial names do not promote it', async t => {
+  const { renderer } = await mount(t, 'tema', async url => url.startsWith('/drugs?') ? { items: [] } : page([
+    { ...item('sepsis', 'Sepsis-3', 'estudo'), kind: 'consenso' },
+    { ...item('consensus', 'CONSENSUS trial', 'estudo'), kind: 'ensaio_clinico' },
+  ]));
+  assert.equal(section(renderer, 'diretriz').findByType('a').props.href, '/estudos/sepsis');
+  assert.equal(section(renderer, 'estudo').findByType('a').props.href, '/estudos/consensus');
 });

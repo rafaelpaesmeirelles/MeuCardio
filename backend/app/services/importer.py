@@ -21,6 +21,7 @@ de publicação já tomada por um humano.
 """
 
 import re
+from hashlib import sha256
 from pathlib import Path
 from typing import Any, Mapping
 
@@ -29,6 +30,7 @@ import frontmatter
 from app.core.config import settings
 from app.core.db import SessionLocal
 from app.models.content import Document, DocumentRevision
+from app.services.editorial_kind_overrides import load_editorial_registry, canonical_editorial_value
 from app.services.scientific_loader_safety import enforce_safe_publication
 
 
@@ -147,6 +149,7 @@ def import_directory(path: str | None = None) -> dict:
     if not root.exists():
         return {"erro": f"{root} não existe"}
 
+    editorial_registry = load_editorial_registry()
     db = SessionLocal()
     novos = atualizados = inalterados = 0
     duplicados: list[str] = []
@@ -157,7 +160,8 @@ def import_directory(path: str | None = None) -> dict:
     try:
         for md in sorted(root.rglob("*.md")):
             try:
-                post = frontmatter.load(md)
+                source_bytes = md.read_bytes()
+                post = frontmatter.loads(source_bytes.decode("utf-8"))
                 meta, body = post.metadata, post.content.strip()
                 if not body:
                     vazios.append(
@@ -211,7 +215,10 @@ def import_directory(path: str | None = None) -> dict:
 
                 doc.title = title
                 doc.theme = meta.get("theme") or md.parent.name
-                doc.kind = meta.get("kind", "modulo")
+                doc.kind = canonical_editorial_value(
+                    "documento", slug, "kind", meta.get("kind", "modulo"),
+                    sha256(source_bytes).hexdigest(), registry=editorial_registry,
+                )
                 doc.summary = meta.get("summary")
                 doc.tags = list(meta.get("tags") or [])
                 doc.source_refs = list(meta.get("source_refs") or [])

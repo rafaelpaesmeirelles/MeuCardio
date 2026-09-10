@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import EditorialDocumentList from "../components/EditorialDocumentList";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import {
@@ -61,7 +62,6 @@ type Notificacao = {
 
 type RespostaAtualizacoes = { cutoff: string; items: Atualizacao[] };
 type RespostaNotificacoes = { cutoff: string; items: Notificacao[] };
-type DiretrizBiblioteca = { slug: string; title: string; theme: string };
 
 function dataBr(valor: string) {
   return new Date(valor).toLocaleDateString("pt-BR", { timeZone: "UTC" });
@@ -175,19 +175,17 @@ function CardAtualizacao({ item }: { item: Atualizacao }) {
 export default function Diretrizes() {
   const [atualizacoes, setAtualizacoes] = useState<RespostaAtualizacoes | null>(null);
   const [notificacoes, setNotificacoes] = useState<RespostaNotificacoes | null>(null);
-  const [diretrizes, setDiretrizes] = useState<DiretrizBiblioteca[] | null>(null);
   const [erro, setErro] = useState("");
+  const [buscaBiblioteca, setBuscaBiblioteca] = useState("");
 
   useEffect(() => {
     Promise.all([
       api.get<RespostaAtualizacoes>("/guideline-updates"),
       api.get<RespostaNotificacoes>("/guideline-updates/me?include_read=true"),
-      api.get<{ items: DiretrizBiblioteca[] }>("/library/documents?kind=diretriz&limit=200"),
     ])
-      .then(([lista, alertas, biblioteca]) => {
+      .then(([lista, alertas]) => {
         setAtualizacoes(lista);
         setNotificacoes(alertas);
-        setDiretrizes(biblioteca.items);
       })
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar as atualizações."));
   }, []);
@@ -209,8 +207,6 @@ export default function Diretrizes() {
     }
   }
 
-  if (erro) return <Erro mensagem={erro} />;
-  if (!atualizacoes || !notificacoes || !diretrizes) return <Carregando texto="Verificando publicações oficiais…" />;
 
   return (
     <div className="cc-page cc-guidelines-page">
@@ -226,8 +222,10 @@ export default function Diretrizes() {
         meta={<><span className="selo">fontes oficiais</span><span className="selo">leitura em português</span><span className="selo">Tudo com Tudo</span></>}
       />
 
+      {erro && <Erro mensagem={erro} />}
+
       <div className="cc-metrics">
-        <ClinicalMetric label="Publicações" value={atualizacoes.items.length} detail={`desde ${dataBr(atualizacoes.cutoff)}`} icon="documento" />
+        <ClinicalMetric label="Publicações" value={atualizacoes?.items.length ?? "…"} detail={atualizacoes ? `desde ${dataBr(atualizacoes.cutoff)}` : "Radar de publicações"} icon="documento" />
         <ClinicalMetric label="Novas para você" value={naoLidas.length} detail="alertas ainda não lidos" icon="evidencia" />
         <ClinicalMetric label="Analisadas" value={analisadas} detail="com síntese clínica em português" icon="check" />
         <ClinicalMetric label="Atualizaram o CorVIA" value={aplicadas} detail={`${organizacoes} organizações monitoradas`} icon="sincronizar" />
@@ -261,7 +259,7 @@ export default function Diretrizes() {
       )}
 
       <ClinicalSection eyebrow="Monitoramento" title="Publicações identificadas" description="Cada trabalho oferece Resumo CorVIA, leitura clínica em português dentro do CorVIA e fonte original quando disponíveis.">
-        {atualizacoes.items.length === 0 ? (
+        {!atualizacoes ? (erro ? <p>Radar temporariamente indisponível. As coleções do acervo continuam disponíveis abaixo.</p> : <Carregando texto="Verificando publicações oficiais…" />) : atualizacoes.items.length === 0 ? (
           <ClinicalEmpty title="Nenhuma nova publicação oficial identificada" description="O CorVIA Intelligence continua consultando sociedades, periódicos e indexadores estruturados." />
         ) : (
           <div className="cc-guideline-list">
@@ -274,13 +272,9 @@ export default function Diretrizes() {
         )}
       </ClinicalSection>
 
-      <ClinicalSection eyebrow="Biblioteca clínica" title="Guidelines conectadas">
-        <div className="cc-context-grid">
-          {diretrizes.map((item) => (
-            <ClinicalContextLink key={item.slug} to={`/biblioteca/${item.slug}`} icon="evidencia" title={item.title} detail={item.theme} />
-          ))}
-        </div>
-      </ClinicalSection>
+      <label>Buscar diretriz ou consenso no acervo<input type="search" value={buscaBiblioteca} onChange={e => setBuscaBiblioteca(e.target.value)} aria-label="Buscar diretriz ou consenso no acervo" /></label>
+      <EditorialDocumentList section="diretriz" title="Diretrizes e consensos da Biblioteca" query={buscaBiblioteca} />
+      <EditorialDocumentList source="studies" section="diretriz" title="Diretrizes e consensos do catálogo de estudos" query={buscaBiblioteca} />
 
       <ClinicalSection eyebrow="Conhecimento conectado" title="Da diretriz à decisão">
         <div className="cc-context-grid">

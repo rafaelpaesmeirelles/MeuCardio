@@ -146,7 +146,7 @@ def search(
     # Deduplicate by its typed canonical identity before counting or slicing.
     calculadoras = list({item["slug"]: {**item, "secao": "calculadora"}
                          for item in calculadoras}.values())
-    if frente == "calculadora" or secao == "calculadora":
+    if frente == "calculadora":
         rows = calculadoras[offset:offset + limit]
         next_offset = offset + len(rows)
         return {
@@ -206,7 +206,7 @@ def search(
         por_frente["calculadora"] = len(calculadoras)
     por_secao = {str(section): int(count) for section, count in page["por_secao"].items()}
     if calculadoras:
-        por_secao["calculadora"] = len(calculadoras)
+        por_secao["calculadora"] = por_secao.get("calculadora", 0) + len(calculadoras)
     total = sum(por_frente.values())
     next_offset = offset + len(rows)
     return {
