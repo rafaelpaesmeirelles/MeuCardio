@@ -122,7 +122,33 @@ jobs:
             docker cp "$dir" "$BACKEND_ID:/$dir"
           done
           # The scoped publication validator also checks transitive evidence hashes.
-          for file in docs/scoped-corpus-release-evidence-20260910.json docs/scoped-corpus-theme-normalization-20260910.json docs/HANDOFF-producao-prevalentes-20260909.md docs/prevalentes-round2-release-application-20260909.md releases/scientific-20260909/reviewed-content.json backend/app/services/canonical_themes.py; do
+          for file in \
+            docs/scoped-corpus-release-evidence-20260910.json \
+            docs/scoped-corpus-theme-normalization-20260910.json \
+            docs/HANDOFF-producao-prevalentes-20260909.md \
+            docs/prevalentes-round2-release-application-20260909.md \
+            releases/scientific-20260909/reviewed-content.json \
+            backend/app/services/canonical_themes.py \
+            docs/scoped-corpus-review-supersessions-20260910.json \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica.json \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema.md \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta.md \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/profilaxia-com-penicilina-na-febre-reumatica-por-que-a-injecao-regular.json \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco.md \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular.md \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/reviewed/sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta.json \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica.json \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema.md \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/fluxograma-reacao-aguda-a-penicilina-benzatina-na-cardiopatia-reumatica-diferenciacao-e-conduta.md \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/profilaxia-com-penicilina-na-febre-reumatica-por-que-a-injecao-regular.json \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco.md \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/seguranca-da-penicilina-benzatina-na-cardiopatia-reumatica-grave-alergia-vasovagal-ou-comprometimento-cardiovascular.md \
+            releases/scientific-20260910-unpublished/claude-benzatina-supplement/source/sincope-vasovagal-apos-penicilina-benzatina-em-paciente-de-baixo-risco-conduta.json \
+            releases/scientific-20260910-unpublished/reviewed-package.json \
+            releases/scientific-20260910/canonical-integration.json \
+            releases/scientific-20260910/supplement-canonical-manifest.json \
+            releases/scientific-20260910/supplement-publication-items.json \
+          ; do
             test -f "$file"
             docker compose exec -T backend mkdir -p "/$(dirname "$file")"
             docker cp "$file" "$BACKEND_ID:/$file"
