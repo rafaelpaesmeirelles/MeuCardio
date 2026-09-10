@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "decision_id": "cardiol-release-gate-20260910",
+  "repository": "rafaelpaesmeirelles/MeuCardio",
+  "head_branch": "codex/cardiol-release-gate-20260910",
+  "base_sha": "f6703bdb0391693ddfc3c164479e1372bf8c4fca",
+  "pull_request": null,
+  "authorization": {
+    "date": "2026-09-10",
+    "instruction": "Sem novo ci backend",
+    "mode": "authorized-no-backend-ci",
+    "source": "Explicit ongoing user instruction and subsequent instruction to proceed through deployment. This records the narrow configuration correction, not authority inherited from PR926.",
+    "scope": "Only this identified PR and its exact main integration: register the two explicit Cardiol owner-decision keys in the existing risk gate. No backend suites, paid AI, patient data, wallet, clinical or application-runtime changes. Existing deployment gates remain mandatory."
+  },
+  "local_evidence": [
+    "docs/cardiol-release-gate-20260910.md"
+  ]
+}
