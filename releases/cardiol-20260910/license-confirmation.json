@@ -1,0 +1,331 @@
+{
+  "evidence": [
+    {
+      "doi": "10.36660/abc.20260223",
+      "queried_url": "https://api.crossref.org/works/10.36660/abc.20260223",
+      "http_status": 429,
+      "licenses": [],
+      "publisher_resource": null,
+      "links": [],
+      "relation": null,
+      "method": "Crossref publisher-deposited work metadata; original files untouched",
+      "publisher_verification": {
+        "queried_url": "https://doi.org/10.36660/abc.20260223",
+        "resolved_url": "https://abccardiol.org/article/diretriz-sobre-ecocardiografia-de-estresse-2026/",
+        "http_status": 200,
+        "method": "DOI resolves publisher article; inspect linked publisher JATS",
+        "discovered_xml_urls": [
+          "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260223/0066-782x-abc-123-4-e20260223.xml"
+        ],
+        "xml_http_status": 200,
+        "xml_url": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260223/0066-782x-abc-123-4-e20260223.xml",
+        "original_xml_sha256": "a958c96b35220b549a1d8962eb45d446514a406cc985b54d0eb3e47ca2ec73ad",
+        "license_evidence": [
+          {
+            "path": "article/front/article-meta/permissions/license",
+            "attributes": {
+              "license-type": "open-access",
+              "{http://www.w3.org/XML/1998/namespace}lang": "en",
+              "{http://www.w3.org/1999/xlink}href": "http://creativecommons.org/licenses/by/4.0/"
+            },
+            "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+          }
+        ]
+      }
+    },
+    {
+      "doi": "10.36660/abc.20260220",
+      "queried_url": "https://api.crossref.org/works/10.36660/abc.20260220",
+      "http_status": 200,
+      "licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2026-01-01T00:00:00Z",
+            "timestamp": 1767225600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2026-01-01T00:00:00Z",
+            "timestamp": 1767225600000
+          },
+          "content-version": "am",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2026-01-01T00:00:00Z",
+            "timestamp": 1767225600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "publisher_resource": {
+        "primary": {
+          "URL": "https://abccardiol.org/article/posicionamento-sobre-emergencias-cardiovasculares-para-eventos-esportivos-2026/"
+        }
+      },
+      "links": [
+        {
+          "URL": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260220/0066-782x-abc-123-4-e20260220.x98474.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "relation": {
+        "is-translation-of": [
+          {
+            "id-type": "doi",
+            "id": "10.36660/abc.20260220i",
+            "asserted-by": "subject"
+          },
+          {
+            "id-type": "doi",
+            "id": "10.36660/abc.20260220i",
+            "asserted-by": "object"
+          }
+        ]
+      },
+      "method": "Crossref publisher-deposited work metadata; original files untouched"
+    },
+    {
+      "doi": "10.36660/abc.20260215",
+      "queried_url": "https://api.crossref.org/works/10.36660/abc.20260215",
+      "http_status": 200,
+      "licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2026-01-01T00:00:00Z",
+            "timestamp": 1767225600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2026-01-01T00:00:00Z",
+            "timestamp": 1767225600000
+          },
+          "content-version": "am",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2026-01-01T00:00:00Z",
+            "timestamp": 1767225600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "publisher_resource": {
+        "primary": {
+          "URL": "https://abccardiol.org/article/posicionamento-sobre-diagnostico-e-tratamento-da-tempestade-eletrica-2026/"
+        }
+      },
+      "links": [
+        {
+          "URL": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260215/0066-782x-abc-123-4-e20260215.x98474.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "relation": {
+        "is-translation-of": [
+          {
+            "id-type": "doi",
+            "id": "10.36660/abc.20260215i",
+            "asserted-by": "subject"
+          },
+          {
+            "id-type": "doi",
+            "id": "10.36660/abc.20260215i",
+            "asserted-by": "object"
+          }
+        ]
+      },
+      "method": "Crossref publisher-deposited work metadata; original files untouched"
+    },
+    {
+      "doi": "10.36660/abc.20260216",
+      "queried_url": "https://api.crossref.org/works/10.36660/abc.20260216",
+      "http_status": 200,
+      "licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2026-01-01T00:00:00Z",
+            "timestamp": 1767225600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2026-01-01T00:00:00Z",
+            "timestamp": 1767225600000
+          },
+          "content-version": "am",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2026-01-01T00:00:00Z",
+            "timestamp": 1767225600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "publisher_resource": {
+        "primary": {
+          "URL": "https://abccardiol.org/article/posicionamento-sobre-o-manejo-de-antitromboticos-e-anticoagulantes-em-dengue-2026/"
+        }
+      },
+      "links": [
+        {
+          "URL": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260216/0066-782x-abc-123-4-e20260216.x98474.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "relation": {
+        "is-translation-of": [
+          {
+            "id-type": "doi",
+            "id": "10.36660/abc.20260216i",
+            "asserted-by": "subject"
+          },
+          {
+            "id-type": "doi",
+            "id": "10.36660/abc.20260216i",
+            "asserted-by": "object"
+          }
+        ]
+      },
+      "method": "Crossref publisher-deposited work metadata; original files untouched"
+    },
+    {
+      "doi": "10.36660/abc.20260221",
+      "queried_url": "https://api.crossref.org/works/10.36660/abc.20260221",
+      "http_status": 429,
+      "licenses": [],
+      "publisher_resource": null,
+      "links": [],
+      "relation": null,
+      "method": "Crossref publisher-deposited work metadata; original files untouched",
+      "publisher_verification": {
+        "queried_url": "https://doi.org/10.36660/abc.20260221",
+        "resolved_url": "https://abccardiol.org/article/posicionamento-sobre-avaliacao-multimodalidade-em-imagem-cardiaca-em-pacientes-com-doencas-sistemicas-2026/",
+        "http_status": 200,
+        "method": "DOI resolves publisher article; inspect linked publisher JATS",
+        "discovered_xml_urls": [
+          "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260221/0066-782x-abc-123-4-e20260221.xml"
+        ],
+        "xml_http_status": 200,
+        "xml_url": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260221/0066-782x-abc-123-4-e20260221.xml",
+        "original_xml_sha256": "a6c75e837bd7f9b14295df45675be01f350fbdfc02edc9ade8fea6dbff866675",
+        "license_evidence": [
+          {
+            "path": "article/front/article-meta/permissions/license",
+            "attributes": {
+              "license-type": "open-access",
+              "{http://www.w3.org/XML/1998/namespace}lang": "en",
+              "{http://www.w3.org/1999/xlink}href": "http://creativecommons.org/licenses/by/4.0/"
+            },
+            "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+          }
+        ]
+      }
+    },
+    {
+      "doi": "10.36660/abc.20260222",
+      "queried_url": "https://api.crossref.org/works/10.36660/abc.20260222",
+      "http_status": 404,
+      "licenses": [],
+      "publisher_resource": null,
+      "links": [],
+      "relation": null,
+      "method": "Crossref publisher-deposited work metadata; original files untouched"
+    }
+  ],
+  "verified_utc": "2026-09-10T22:55:34.536428+00:00",
+  "scope": "Five 2026 SBC originals with unspecified Creative Commons Attribution version in PMC JATS; verify exact version using publisher-deposited metadata or publisher JATS. Original files not modified."
+}

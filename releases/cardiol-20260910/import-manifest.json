@@ -1,0 +1,603 @@
+{
+  "schema_version": 1,
+  "release": "cardiol-20260910",
+  "verified_utc": "2026-09-10T22:55:34.536428+00:00",
+  "scope": "Curated offline import of 13 publisher originals; no clinical approval, AI calls or paid queue transition.",
+  "source_manifests": [
+    {
+      "file": "checksums.json",
+      "sha256": "a6a5f965a63b233b3ba2b163998272ff21fce3f6ca1436a02d3882576a9a2ec0"
+    },
+    {
+      "file": "acquisition.json",
+      "sha256": "c2e0a181acac2d99ec27806fc5d48428f92ba921312642c0a8435b8295cb6a2f"
+    },
+    {
+      "file": "source-recovery.json",
+      "sha256": "02826d3e62771de323118538757b824fc062ac004f2efb0a960ee62d28a2db5a"
+    },
+    {
+      "file": "discovery.json",
+      "sha256": "1a63284fcc0481e74a70e92f0b9dda1083c9bc554894eccb75f1da5d3fbea211"
+    }
+  ],
+  "documents": [
+    {
+      "file": "originals/10.36660-abc.20250615.xml",
+      "bytes": 1388296,
+      "sha256": "332672f75db36d1ecc56bf546a4dce4f50b8a413f9bfc9a6fbea29ab39cabdb0",
+      "doi": "10.36660/abc.20250615",
+      "title": "Posicionamento sobre a Saúde Cardiometabólica ao Longo do Ciclo de Vida da Mulher – 2025",
+      "year": 2025,
+      "language": "pt",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12674840/fullTextXML",
+      "pmcid": "PMC12674840",
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "original_article_permissions",
+        "doi": "10.36660/abc.20250615",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12674840/fullTextXML",
+        "xml_path": "article/front/article-meta/permissions"
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20250618.xml",
+      "bytes": 1815232,
+      "sha256": "eb5c6024fc46f57c20c51f5c89b4ce48624a74bba0837624bb32e53e8f561ddb",
+      "doi": "10.36660/abc.20250618",
+      "title": "Diretriz Brasileira de Fibrilação Atrial – 2025",
+      "year": 2025,
+      "language": "pt",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13400077/fullTextXML",
+      "pmcid": "PMC13400077",
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "original_article_permissions",
+        "doi": "10.36660/abc.20250618",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13400077/fullTextXML",
+        "xml_path": "article/front/article-meta/permissions"
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20250619.xml",
+      "bytes": 2130067,
+      "sha256": "b1f36e64976d2f48b2afb38bd9f18cb9f7dd3277f110ea28fa92a31e3d520803",
+      "doi": "10.36660/abc.20250619",
+      "title": "Diretriz de Síndrome Coronariana Crônica – 2025",
+      "year": 2025,
+      "language": "pt",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13400070/fullTextXML",
+      "pmcid": "PMC13400070",
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "original_article_permissions",
+        "doi": "10.36660/abc.20250619",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13400070/fullTextXML",
+        "xml_path": "article/front/article-meta/permissions"
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20250620.xml",
+      "bytes": 1081320,
+      "sha256": "04774f9ea81eedf2158b09335c5796bfa2a8bb9e78f6a754ccf412a9de296fa0",
+      "doi": "10.36660/abc.20250620",
+      "title": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025",
+      "year": 2025,
+      "language": "pt",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12981354/fullTextXML",
+      "pmcid": "PMC12981354",
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "original_article_permissions",
+        "doi": "10.36660/abc.20250620",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12981354/fullTextXML",
+        "xml_path": "article/front/article-meta/permissions"
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20250621.xml",
+      "bytes": 427913,
+      "sha256": "bdf376dfe716cd1a408618d5d6e7d74c96b7a25d2d2c794d16d80fbcc017c1a2",
+      "doi": "10.36660/abc.20250621",
+      "title": "Diretriz Brasileira Baseada em Evidências de 2025 para o Manejo da Obesidade e Prevenção de Doenças Cardiovasculares e Complicações Associadas à Obesidade: Uma Declaração de Posicionamento de Cinco Sociedades Médicas",
+      "year": 2025,
+      "language": "pt",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13148858/fullTextXML",
+      "pmcid": "PMC13148858",
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "original_article_permissions",
+        "doi": "10.36660/abc.20250621",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13148858/fullTextXML",
+        "xml_path": "article/front/article-meta/permissions"
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20250624.xml",
+      "bytes": 2581779,
+      "sha256": "480282352a4e49188a088a533a1d74c18e6e904360458e20cc63222cb6e01776",
+      "doi": "10.36660/abc.20250624",
+      "title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+      "year": 2025,
+      "language": "pt",
+      "source_url": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782X-abc-122-09-e20250624/0066-782X-abc-122-09-e20250624.xml",
+      "pmcid": null,
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "versioned_source_recovery",
+        "doi": "10.36660/abc.20250624",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "file": "source-recovery.json",
+        "source_url": "https://abccardiol.org/article/diretriz-brasileira-de-hipertensao-arterial-2025/",
+        "statement": "article/front/article-meta/permissions/license xlink:href"
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20250640.xml",
+      "bytes": 1805790,
+      "sha256": "f20ea87cc2ef84ed6e243674cf1abfe2a0d47eab28510cae5f9882982e934d02",
+      "doi": "10.36660/abc.20250640",
+      "title": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025",
+      "year": 2025,
+      "language": "pt",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12674852/fullTextXML",
+      "pmcid": "PMC12674852",
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "original_article_permissions",
+        "doi": "10.36660/abc.20250640",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12674852/fullTextXML",
+        "xml_path": "article/front/article-meta/permissions"
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20260215.xml",
+      "bytes": 464818,
+      "sha256": "ff2e506498575026123e519cdfde3f7ca67175490503abcf8392f3eba9112b86",
+      "doi": "10.36660/abc.20260215",
+      "title": "Posicionamento sobre Diagnóstico e Tratamento da Tempestade Elétrica – 2026",
+      "year": 2026,
+      "language": "pt",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13155779/fullTextXML",
+      "pmcid": "PMC13155779",
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "publisher_metadata_confirmation",
+        "doi": "10.36660/abc.20260215",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "evidence": {
+          "doi": "10.36660/abc.20260215",
+          "queried_url": "https://api.crossref.org/works/10.36660/abc.20260215",
+          "http_status": 200,
+          "licenses": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "am",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "publisher_resource": {
+            "primary": {
+              "URL": "https://abccardiol.org/article/posicionamento-sobre-diagnostico-e-tratamento-da-tempestade-eletrica-2026/"
+            }
+          },
+          "links": [
+            {
+              "URL": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260215/0066-782x-abc-123-4-e20260215.x98474.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "relation": {
+            "is-translation-of": [
+              {
+                "id-type": "doi",
+                "id": "10.36660/abc.20260215i",
+                "asserted-by": "subject"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.36660/abc.20260215i",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "method": "Crossref publisher-deposited work metadata; original files untouched"
+        }
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20260216.xml",
+      "bytes": 270170,
+      "sha256": "9b8ec7ca701a35706e6b19dda30987355ff08fe81086f4648f0e1210f895092d",
+      "doi": "10.36660/abc.20260216",
+      "title": "Posicionamento sobre o Manejo de Antitrombóticos e Anticoagulantes em Dengue – 2026",
+      "year": 2026,
+      "language": "pt",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13155784/fullTextXML",
+      "pmcid": "PMC13155784",
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "publisher_metadata_confirmation",
+        "doi": "10.36660/abc.20260216",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "evidence": {
+          "doi": "10.36660/abc.20260216",
+          "queried_url": "https://api.crossref.org/works/10.36660/abc.20260216",
+          "http_status": 200,
+          "licenses": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "am",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "publisher_resource": {
+            "primary": {
+              "URL": "https://abccardiol.org/article/posicionamento-sobre-o-manejo-de-antitromboticos-e-anticoagulantes-em-dengue-2026/"
+            }
+          },
+          "links": [
+            {
+              "URL": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260216/0066-782x-abc-123-4-e20260216.x98474.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "relation": {
+            "is-translation-of": [
+              {
+                "id-type": "doi",
+                "id": "10.36660/abc.20260216i",
+                "asserted-by": "subject"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.36660/abc.20260216i",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "method": "Crossref publisher-deposited work metadata; original files untouched"
+        }
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20260220.xml",
+      "bytes": 323388,
+      "sha256": "15695c8a8cdad03c519ca4ad3fdc488d7f2e4c034003f673388947676022338d",
+      "doi": "10.36660/abc.20260220",
+      "title": "Posicionamento sobre Emergências Cardiovasculares para Eventos Esportivos – 2026",
+      "year": 2026,
+      "language": "pt",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13155795/fullTextXML",
+      "pmcid": "PMC13155795",
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "publisher_metadata_confirmation",
+        "doi": "10.36660/abc.20260220",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "evidence": {
+          "doi": "10.36660/abc.20260220",
+          "queried_url": "https://api.crossref.org/works/10.36660/abc.20260220",
+          "http_status": 200,
+          "licenses": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "am",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "publisher_resource": {
+            "primary": {
+              "URL": "https://abccardiol.org/article/posicionamento-sobre-emergencias-cardiovasculares-para-eventos-esportivos-2026/"
+            }
+          },
+          "links": [
+            {
+              "URL": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260220/0066-782x-abc-123-4-e20260220.x98474.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "relation": {
+            "is-translation-of": [
+              {
+                "id-type": "doi",
+                "id": "10.36660/abc.20260220i",
+                "asserted-by": "subject"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.36660/abc.20260220i",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "method": "Crossref publisher-deposited work metadata; original files untouched"
+        }
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20260221.xml",
+      "bytes": 1427634,
+      "sha256": "ba737de560d628dcfba21e63fac94d236f1a069c0d80150d3b7d06a4afa4ac3e",
+      "doi": "10.36660/abc.20260221",
+      "title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+      "year": 2026,
+      "language": "pt",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13155782/fullTextXML",
+      "pmcid": "PMC13155782",
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "publisher_metadata_confirmation",
+        "doi": "10.36660/abc.20260221",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "evidence": {
+          "doi": "10.36660/abc.20260221",
+          "queried_url": "https://api.crossref.org/works/10.36660/abc.20260221",
+          "http_status": 429,
+          "licenses": [],
+          "publisher_resource": null,
+          "links": [],
+          "relation": null,
+          "method": "Crossref publisher-deposited work metadata; original files untouched",
+          "publisher_verification": {
+            "queried_url": "https://doi.org/10.36660/abc.20260221",
+            "resolved_url": "https://abccardiol.org/article/posicionamento-sobre-avaliacao-multimodalidade-em-imagem-cardiaca-em-pacientes-com-doencas-sistemicas-2026/",
+            "http_status": 200,
+            "method": "DOI resolves publisher article; inspect linked publisher JATS",
+            "discovered_xml_urls": [
+              "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260221/0066-782x-abc-123-4-e20260221.xml"
+            ],
+            "xml_http_status": 200,
+            "xml_url": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260221/0066-782x-abc-123-4-e20260221.xml",
+            "original_xml_sha256": "a6c75e837bd7f9b14295df45675be01f350fbdfc02edc9ade8fea6dbff866675",
+            "license_evidence": [
+              {
+                "path": "article/front/article-meta/permissions/license",
+                "attributes": {
+                  "license-type": "open-access",
+                  "{http://www.w3.org/XML/1998/namespace}lang": "en",
+                  "{http://www.w3.org/1999/xlink}href": "http://creativecommons.org/licenses/by/4.0/"
+                },
+                "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20260223.xml",
+      "bytes": 1180935,
+      "sha256": "8dc1a6fe988699c3d28c52c26d43606c32d9edb358e181b95da2a019f18e0989",
+      "doi": "10.36660/abc.20260223",
+      "title": "Diretriz sobre Ecocardiografia de Estresse – 2026",
+      "year": 2026,
+      "language": "pt",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13398863/fullTextXML",
+      "pmcid": "PMC13398863",
+      "format": "jats_xml",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "publisher_metadata_confirmation",
+        "doi": "10.36660/abc.20260223",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "evidence": {
+          "doi": "10.36660/abc.20260223",
+          "queried_url": "https://api.crossref.org/works/10.36660/abc.20260223",
+          "http_status": 429,
+          "licenses": [],
+          "publisher_resource": null,
+          "links": [],
+          "relation": null,
+          "method": "Crossref publisher-deposited work metadata; original files untouched",
+          "publisher_verification": {
+            "queried_url": "https://doi.org/10.36660/abc.20260223",
+            "resolved_url": "https://abccardiol.org/article/diretriz-sobre-ecocardiografia-de-estresse-2026/",
+            "http_status": 200,
+            "method": "DOI resolves publisher article; inspect linked publisher JATS",
+            "discovered_xml_urls": [
+              "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260223/0066-782x-abc-123-4-e20260223.xml"
+            ],
+            "xml_http_status": 200,
+            "xml_url": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-4-e20260223/0066-782x-abc-123-4-e20260223.xml",
+            "original_xml_sha256": "a958c96b35220b549a1d8962eb45d446514a406cc985b54d0eb3e47ca2ec73ad",
+            "license_evidence": [
+              {
+                "path": "article/front/article-meta/permissions/license",
+                "attributes": {
+                  "license-type": "open-access",
+                  "{http://www.w3.org/XML/1998/namespace}lang": "en",
+                  "{http://www.w3.org/1999/xlink}href": "http://creativecommons.org/licenses/by/4.0/"
+                },
+                "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "file": "originals/10.36660-abc.20260565.pdf",
+      "bytes": 126470,
+      "sha256": "1f6c9c71139f16b066ea2b4bf2cfbd50dea3ac30711d960c18c54316c018b6ad",
+      "doi": "10.36660/abc.20260565",
+      "title": "Errata: Diretriz de Síndrome Coronariana Crônica – 2025",
+      "year": 2026,
+      "language": "pt",
+      "source_url": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782x-abc-123-7-e20260565/0066-782x-abc-123-7-e20260565.x98474.pdf",
+      "pmcid": null,
+      "format": "pdf",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "method": "versioned_source_recovery",
+        "doi": "10.36660/abc.20260565",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "file": "source-recovery.json",
+        "source_url": "https://api.crossref.org/works/10.36660/abc.20260565",
+        "statement": "Crossref deposited license vor; PDF footer confirms Creative Commons Attribution"
+      },
+      "corrects_doi": "10.36660/abc.20250619",
+      "correction_scope": "Adds Erika Maria Gonçalves Campana and Ricardo Stein to authorship, institutions and conflict disclosures. Does not change clinical recommendations.",
+      "original_text_file": "readable/10.36660-abc.20260565.txt",
+      "original_text_sha256": "54c7c825ee7223d7ced6435f4ce66d5329c842533042c0584bc8efe7ec0120e8",
+      "original_text_bytes": 3467,
+      "original_text_extraction": {
+        "method": "pdftotext-layout",
+        "pages": 1,
+        "review": "Texto integral da página conferido: título, autoria, tabela de conflitos, ambos DOIs, licença e rodapé. Sem resumo, tradução ou IA."
+      }
+    }
+  ]
+}

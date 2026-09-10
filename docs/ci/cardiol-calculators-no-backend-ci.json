@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "decision_id": "cardiol-calculators-20260910",
+  "repository": "rafaelpaesmeirelles/MeuCardio",
+  "head_branch": "codex/cardiol-acervo-20260910",
+  "base_sha": "1522a30a5c80604fb932f5cb7ac0c8fe1a6e9715",
+  "pull_request": 926,
+  "authorization": {
+    "date": "2026-09-10",
+    "instruction": "Sem novo ci backend",
+    "mode": "authorized-no-backend-ci",
+    "source": "Explicit user instruction in this ongoing conversation; user subsequently asked to proceed with calculators, Cardiol acquisition and deployment. This records that decision without a backend test certificate.",
+    "scope": "Only PR926 and its exact main integration, including calculator work preserved from PR925 and the curated Cardiol originals reader/importer. No paid execution, historical queue or wallet mutations, model/pricing changes, source-license invention, or clinical approval is authorized by this CI decision. All existing web/scientific release gates remain required."
+  },
+  "local_evidence": [
+    "docs/cardiol-calculators-release-20260910.md"
+  ]
+}

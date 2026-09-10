@@ -42,6 +42,19 @@ def changed_followup_paths(baseline: str, pr_head: str, candidate: str) -> list[
     subprocess.run(["git", "merge-base", "--is-ancestor", baseline, pr_head], check=True, capture_output=True)
     return git("diff", "--no-renames", "--name-only", "--diff-filter=ACDMRTUXB", f"{baseline}..{candidate}").splitlines()
 
+CARDIOL_SCOPE = {
+    "manifest": "docs/ci/cardiol-calculators-no-backend-ci.json",
+    "head_branch": "codex/cardiol-acervo-20260910",
+    "repository": "rafaelpaesmeirelles/MeuCardio",
+    "decision_id": "cardiol-calculators-20260910",
+    "base_sha": "1522a30a5c80604fb932f5cb7ac0c8fe1a6e9715",
+    "minimum_pull_request": 926,
+    "local_evidence": "docs/cardiol-calculators-release-20260910.md",
+    "decision_document": "docs/ci/cardiol-calculators-owner-decision.md",
+    "suite_key": "backend-risk-v1-authorized-no-backend-ci-cardiol-calculators-20260910",
+}
+
+
 SECTION_BRANCH = "codex/fix-tct-section-visibility-20260910"
 SECTION_BASE = "02ad2d6a38301667a82eb60444b531d1e1fcd4e1"
 SECTION_DECISION = "tct-section-visibility-20260910"
@@ -230,7 +243,9 @@ def main() -> int:
     event, number = os.environ.get("EVENT_NAME", ""), os.environ.get("PR_NUMBER", "")
     context = dict(event=event, number=number, head_ref=os.environ.get("PR_HEAD_REF", ""),
                    repository=os.environ.get("REPOSITORY", ""))
-    decision = publication_http_retry_owner_decision(root, **context)
+    decision = scoped_owner_decision(root, scope=CARDIOL_SCOPE, **context)
+    if decision is None:
+        decision = publication_http_retry_owner_decision(root, **context)
     if decision is None:
         decision = universal_favorites_owner_decision(root, **context)
     if decision is None:

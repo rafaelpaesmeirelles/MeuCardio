@@ -30,6 +30,7 @@ function artifactPath(value: string | null | undefined, entityType: string, slug
   return value === expected || value === `/api${expected}` ? expected : undefined;
 }
 function statusText(artifact: { status: string; reason?: string | null }): string {
+  if (artifact.status === "original_pt") return "Original disponível em português, sem tradução por IA.";
   if (artifact.status === "available") return "Disponível";
   if (["pending", "processing", "queued"].includes(artifact.status)) return "Em processamento";
   if (artifact.status === "blocked_license") return "A autorização da fonte para disponibilizar a tradução integral ainda não foi confirmada.";
@@ -107,6 +108,7 @@ export default function ScientificReadingAccess({ entityType, slug, lazy = false
   const originalExternal = externalUrl(source?.original.url ?? source?.url);
   const originalStored = source?.original.status === "available" && artifactPath(source.original.url, entityType, current?.slug, source.key, "original");
   const originalReadable = source && originalStored && artifactPath(source.original.read_url, entityType, current?.slug, source.key, "original-text");
+  const nativePortuguese = source?.translation_pt.status === "original_pt" && Boolean(originalReadable);
   const translationReady = source?.translation_pt.status === "available" && artifactPath(source.translation_pt.url, entityType, current?.slug, source.key, "translation");
   return <section className="scientific-reading-access cartao" aria-label="Leitura científica: resumo, tradução integral e original">
     <h2>Leitura científica</h2>
@@ -121,8 +123,8 @@ export default function ScientificReadingAccess({ entityType, slug, lazy = false
           <p className="scientific-reading-access__reference">{source.title || source.doi || source.url || "Fonte científica"}</p>
           {(source.authors || source.journal || source.year) && <p>{[Array.isArray(source.authors) ? source.authors.join(", ") : source.authors, source.journal, source.year].filter(Boolean).join(" · ")}</p>}
           <div className="scientific-reading-access__options">
-            <div><button className="btn" type="button" disabled={source.summary_pt.status !== "available" || !source.summary_pt.text} onClick={() => setReading({ title: "Resumo da fonte em português", text: source.summary_pt.text! })}>Resumo em português</button><small>{statusText(source.summary_pt)}</small></div>
-            <div><button className="btn" type="button" disabled={!translationReady || busy} onClick={() => void openArtifact(source.translation_pt, "translation")}>Tradução integral em português</button><small>{statusText(source.translation_pt)}</small></div>
+            <div><button className="btn" type="button" disabled={source.summary_pt.status !== "available" || !source.summary_pt.text} onClick={() => setReading({ title: source.summary_pt.origin === "publisher_abstract" ? "Resumo em português publicado pelos autores" : "Resumo da fonte em português", text: source.summary_pt.text! })}>Resumo em português</button><small>{statusText(source.summary_pt)}</small></div>
+            <div><button className="btn" type="button" disabled={(!translationReady && !nativePortuguese) || busy} onClick={() => void (nativePortuguese ? openArtifact(source.original, "original-text") : openArtifact(source.translation_pt, "translation"))}>{nativePortuguese ? "Texto integral em português" : "Tradução integral em português"}</button><small>{statusText(source.translation_pt)}</small></div>
             <div>{originalReadable && <button className="btn primario" type="button" disabled={busy} onClick={() => void openArtifact(source.original, "original-text")}>Ler original no CorVIA</button>}
               {originalStored ? <button className="btn" type="button" disabled={busy} onClick={() => void openArtifact(source.original, "original")}>Baixar original{source.original.media_type?.includes("xml") ? " (XML)" : ""}</button>
               : originalExternal ? <a className="btn" href={originalExternal} target="_blank" rel="noopener noreferrer">Original na fonte ↗</a>

@@ -36,14 +36,15 @@ O parser ignorava a licença como texto em `ali:license_ref`, campo padronizado 
 Fonte: https://jats.nlm.nih.gov/publishing/tag-library/1.4/element/ali-license_ref.html
 20 testes isolados aprovados em 0,26 s; revisão independente favorável. Sem backend CI completo ou focal.
 
-## Pendências para disponibilização no site
+## Integração preparada nesta rodada
 
-- Arquivos estão preservados neste lote para integração; NÃO estão importados no acervo público nem publicados em produção.
-- O pipeline atual só adquire Europe PMC JATS; HAS foi recuperada diretamente no editor e a errata é PDF. Esses formatos/caminhos precisam do adaptador de importação.
-- Entre os seis JATS iniciais com CC-BY 4.0 explícita, apenas Obesidade passa também os limites atuais de texto/fórmulas após a correção ALI. Cinco excedem 300 mil caracteres; SCC contém fórmulas. Nenhum limite foi removido nem texto truncado.
-- Cinco artigos declaram Creative Commons Attribution sem versão/URI no XML; a versão precisa ser confirmada antes do caminho comercial automatizado.
-- O parser atual concatena português original e inglês editorial. Não traduzir novamente para português nem cobrar IA desnecessária por esses originais.
-- POCUS 2026 (`10.36660/abc.20260222`) permanece sem original/licença verificáveis; o DOI informado pelo PubMed retornou 404 no resolvedor/Crossref.
+- Novo leitor de originais separado da tradução paga: lê a raiz JATS no idioma original, sem concatenar subartigos traduzidos. Limite próprio de 8 MiB/2 milhões de caracteres; DOI, hash, licença e segurança XML verificados. Fórmulas/tabelas são representadas em texto com aviso, mantendo os bytes originais para consulta.
+- Os cinco artigos com licença genérica no XML tiveram CC-BY 4.0 confirmada por depósito do editor no Crossref ou por XML vinculado na página editorial. Evidências em `license-confirmation.json`; bytes originais preservados.
+- `import-manifest.json` fixa os 13 arquivos e suas evidências. Importador offline por padrão, plano de banco somente leitura e aplicação explícita pós-deploy. Original já adquirido/processamento pago/estado protegido permanecem intactos.
+- Originais em português ficam fora da fila paga (`original_ready`); a interface oferece “Texto integral em português”, sem alegar tradução por IA. PDF é servido autenticado como PDF, e nunca passado ao parser XML. A errata também possui texto integral extraído offline por pdftotext -layout (1 página), fixado por hash em readable/, para leitura interna sem depender do visor PDF do navegador. A API confere o hash do PDF e o hash próprio do texto.
+- Nenhum dos 12 JATS possui abstract editorial principal em português: os resumos não foram inventados nem marcados disponíveis.
+- POCUS 2026 (`10.36660/abc.20260222`) segue sem original/licença verificáveis. Sua aquisição continua pendente.
+- Os arquivos ainda não foram importados/publicados no instante deste registro; resultado real de aplicação será registrado separadamente após a release.
 
 ## Revisão clínica
 
