@@ -16,3 +16,5 @@
 html[data-corvia-theme="light"] #root .favorites-page :is(a,h2 a,button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled)) { color:var(--texto,#18354b) !important; opacity:1 !important; }
 html[data-corvia-theme="light"] #root .favorites-page :is(button:not(:disabled),a.botao,input:not(:disabled),select:not(:disabled),textarea:not(:disabled)) { background:var(--cv-panel,#e1eff6) !important; border-color:var(--texto-secundario,#49677b) !important; box-shadow:none !important; }
 html[data-corvia-theme="light"] #root .favorites-page :is(input,textarea)::placeholder { color:var(--texto-secundario,#49677b) !important; opacity:1 !important; }
+
+html[data-corvia-theme="dark"] #root .favorites-page .scientific-reading-access > button.btn:not(:disabled) { color:var(--cv-text,#e4edf3) !important; background:#061725 !important; }
