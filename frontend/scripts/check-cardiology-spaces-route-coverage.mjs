@@ -8,8 +8,8 @@ const read = (relative) => fs.readFileSync(path.join(root, relative), "utf8");
 const app = read("src/App.tsx");
 const context = read("src/components/ClinicalRouteContext.tsx");
 const registry = read("src/lib/clinicalRouteRegistry.ts");
-// Inventário explícito: App.tsx e registro possuem os mesmos 76 padrões autenticados.
-const EXPECTED_AUTHENTICATED_PATTERNS = 76;
+// Inventário explícito: App.tsx e registro possuem os mesmos 77 padrões autenticados.
+const EXPECTED_AUTHENTICATED_PATTERNS = 77;
 
 const shellStart = app.indexOf('<Route element={<Shell />}>');
 if (shellStart < 0) throw new Error("Não foi possível localizar o bloco autenticado <Shell /> em App.tsx.");

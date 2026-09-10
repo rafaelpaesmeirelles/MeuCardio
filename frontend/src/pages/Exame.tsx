@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
@@ -75,6 +76,8 @@ export default function Exame() {
           </ul>
         </div>
       )}
+
+      <ScientificReadingAccess entityType="exame" slug={slug} />
 
       <TudoSobreEsteTema tema={t.theme} excluirTipo="exame" excluirSlug={slug} />
 

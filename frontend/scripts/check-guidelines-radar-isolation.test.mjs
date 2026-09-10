@@ -41,6 +41,8 @@ const { default: EditorialDocumentList } = await import(pathToFileURL(path.join(
 
 let pageSource = await readFile(path.join(root, 'src/pages/Diretrizes.tsx'), 'utf8');
 pageSource = pageSource.replace('"../components/EditorialDocumentList"', '"./EditorialDocumentList.mjs"');
+pageSource = pageSource.replace('import ScientificIntelligenceMonitor from "../components/ScientificIntelligenceMonitor";', 'const ScientificIntelligenceMonitor = () => null;');
+pageSource = pageSource.replace('import ScientificReadingAccess from "../components/ScientificReadingAccess";', 'const ScientificReadingAccess = () => null;');
 pageSource = pageSource.replace('import { api, ApiError } from "../lib/api";', `
 const api = { get: (...args) => globalThis.corviaSearchFixture.get(...args) };
 class ApiError extends Error {}

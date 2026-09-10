@@ -2559,3 +2559,18 @@ body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
     min-height: 40px;
   }
 }
+
+/* Requested feature discovery: consistent emphasis in both approved themes. */
+.spaces-catalog .spaces-action.spaces-action--featured {
+  border-color: var(--spaces-accent, #2fc8d2);
+  box-shadow: inset 3px 0 var(--spaces-accent, #2fc8d2);
+  font-weight: 700;
+}
+.spaces-action__highlight {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: inherit;
+}

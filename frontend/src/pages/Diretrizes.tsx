@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import EditorialDocumentList from "../components/EditorialDocumentList";
+import ScientificIntelligenceMonitor from "../components/ScientificIntelligenceMonitor";
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import {
@@ -157,6 +159,7 @@ function CardAtualizacao({ item }: { item: Atualizacao }) {
             <p><small>Leitura clínica original em português produzida pelo CorVIA a partir das fontes científicas disponíveis. Não depende do Google Tradutor e não reproduz tradução integral de conteúdo protegido.</small></p>
           </div>
         )}
+        <ScientificReadingAccess entityType="diretriz" slug={item.slug} lazy />
       </div>
       <div className="cc-guideline-row__side">
         <span className={`selo ${statusClass(item.status)}`}>{statusLabel(item.status)}</span>
@@ -165,14 +168,14 @@ function CardAtualizacao({ item }: { item: Atualizacao }) {
         ) : item.summary_pt ? (
           <a href={`#publicacao-${item.slug}`}>Resumo CorVIA</a>
         ) : null}
-        {leituraDisponivel && <a href={`#leitura-portugues-${item.slug}`}>Traduzido</a>}
-        {item.url && <a href={item.url} target="_blank" rel="noopener noreferrer">Original ↗</a>}
+        {leituraDisponivel && <a href={`#leitura-portugues-${item.slug}`}>Leitura em português</a>}
+        {item.url && <a href={item.url} target="_blank" rel="noopener noreferrer">Página da publicação ↗</a>}
       </div>
     </article>
   );
 }
 
-export default function Diretrizes() {
+export default function Diretrizes({ intelligenceOnly = false }: { intelligenceOnly?: boolean } = {}) {
   const [atualizacoes, setAtualizacoes] = useState<RespostaAtualizacoes | null>(null);
   const [notificacoes, setNotificacoes] = useState<RespostaNotificacoes | null>(null);
   const [erro, setErro] = useState("");
@@ -212,8 +215,8 @@ export default function Diretrizes() {
     <div className="cc-page cc-guidelines-page">
       <ClinicalPageHeader
         eyebrow="CorVIA Intelligence"
-        title="Diretrizes e alertas clínicos"
-        description="Novas publicações são detectadas, analisadas e resumidas em português. Em cada trabalho, você pode abrir o Resumo CorVIA, uma leitura clínica em português dentro do próprio CorVIA ou a publicação original. Mudanças clínicas só são aplicadas automaticamente quando a fonte primária sustenta explicitamente a mudança e uma segunda verificação independente confirma o override; situações ambíguas permanecem sinalizadas para revisão."
+        title={intelligenceOnly ? "CorVIA Intelligence" : "Diretrizes e alertas clínicos"}
+        description="Acompanhe novas publicações identificadas nas fontes científicas monitoradas e as sínteses clínicas disponíveis em português. Em cada trabalho, você pode abrir o Resumo CorVIA, uma leitura clínica em português dentro do próprio CorVIA ou a publicação original. Mudanças clínicas só são aplicadas automaticamente quando a fonte primária sustenta explicitamente a mudança e uma segunda verificação independente confirma o override; situações ambíguas permanecem sinalizadas para revisão."
         icon="documento"
         actions={[
           { to: "/evidencias", label: "Evidências", icon: "evidencia" },
@@ -222,13 +225,14 @@ export default function Diretrizes() {
         meta={<><span className="selo">fontes oficiais</span><span className="selo">leitura em português</span><span className="selo">Tudo com Tudo</span></>}
       />
 
+      {intelligenceOnly && <ScientificIntelligenceMonitor />}
       {erro && <Erro mensagem={erro} />}
 
       <div className="cc-metrics">
-        <ClinicalMetric label="Publicações" value={atualizacoes?.items.length ?? "…"} detail={atualizacoes ? `desde ${dataBr(atualizacoes.cutoff)}` : "Radar de publicações"} icon="documento" />
+        <ClinicalMetric label="Publicações com síntese" value={atualizacoes?.items.length ?? "…"} detail={atualizacoes ? `desde ${dataBr(atualizacoes.cutoff)}` : "Radar de publicações"} icon="documento" />
         <ClinicalMetric label="Novas para você" value={naoLidas.length} detail="alertas ainda não lidos" icon="evidencia" />
         <ClinicalMetric label="Analisadas" value={analisadas} detail="com síntese clínica em português" icon="check" />
-        <ClinicalMetric label="Atualizaram o CorVIA" value={aplicadas} detail={`${organizacoes} organizações monitoradas`} icon="sincronizar" />
+        <ClinicalMetric label="Atualizaram o CorVIA" value={aplicadas} detail={`${organizacoes} organizações nestas sínteses`} icon="sincronizar" />
       </div>
 
       {naoLidas.length > 0 && (
@@ -248,7 +252,7 @@ export default function Diretrizes() {
                   ) : item.guideline.summary_pt ? (
                     <a className="botao" href={`#publicacao-${item.guideline.slug}`}>Resumo CorVIA</a>
                   ) : null}
-                  {temLeituraPortugues(item.guideline) && <a className="botao botao--secundario" href={`#leitura-portugues-${item.guideline.slug}`}>Traduzido</a>}
+                  {temLeituraPortugues(item.guideline) && <a className="botao botao--secundario" href={`#leitura-portugues-${item.guideline.slug}`}>Leitura em português</a>}
                   {item.guideline.url && <a className="botao botao--secundario" href={item.guideline.url} target="_blank" rel="noopener noreferrer">Original ↗</a>}
                   <button className="botao botao--secundario" type="button" onClick={() => void marcarLida(item.notification_id)}>Marcar como lido</button>
                 </div>
@@ -258,9 +262,9 @@ export default function Diretrizes() {
         </ClinicalSection>
       )}
 
-      <ClinicalSection eyebrow="Monitoramento" title="Publicações identificadas" description="Cada trabalho oferece Resumo CorVIA, leitura clínica em português dentro do CorVIA e fonte original quando disponíveis.">
+      <ClinicalSection eyebrow="Monitoramento" title="Sínteses clínicas disponíveis" description="Cada trabalho oferece Resumo CorVIA, leitura clínica em português dentro do CorVIA e fonte original quando disponíveis.">
         {!atualizacoes ? (erro ? <p>Radar temporariamente indisponível. As coleções do acervo continuam disponíveis abaixo.</p> : <Carregando texto="Verificando publicações oficiais…" />) : atualizacoes.items.length === 0 ? (
-          <ClinicalEmpty title="Nenhuma nova publicação oficial identificada" description="O CorVIA Intelligence continua consultando sociedades, periódicos e indexadores estruturados." />
+          <ClinicalEmpty title="Nenhuma síntese disponível nesta coleção" description="Consulte o monitor para acompanhar as publicações identificadas e o estado das fontes." />
         ) : (
           <div className="cc-guideline-list">
             {atualizacoes.items.map((item) => (
@@ -272,9 +276,11 @@ export default function Diretrizes() {
         )}
       </ClinicalSection>
 
+      {!intelligenceOnly && <>
       <label>Buscar diretriz ou consenso no acervo<input type="search" value={buscaBiblioteca} onChange={e => setBuscaBiblioteca(e.target.value)} aria-label="Buscar diretriz ou consenso no acervo" /></label>
       <EditorialDocumentList section="diretriz" title="Diretrizes e consensos da Biblioteca" query={buscaBiblioteca} />
       <EditorialDocumentList source="studies" section="diretriz" title="Diretrizes e consensos do catálogo de estudos" query={buscaBiblioteca} />
+      </>}
 
       <ClinicalSection eyebrow="Conhecimento conectado" title="Da diretriz à decisão">
         <div className="cc-context-grid">

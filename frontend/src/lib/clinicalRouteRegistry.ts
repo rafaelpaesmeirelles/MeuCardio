@@ -110,7 +110,7 @@ function route(definition: ClinicalRouteDefinition): ClinicalRouteDefinition {
 }
 
 /**
- * Fonte única para os 75 padrões autenticados declarados em App.tsx.
+ * Fonte única para os padrões autenticados declarados em App.tsx.
  *
  * O roteador continua responsável por lazy loading e gates de renderização.
  * Esta tabela governa identidade, navegação, layout e descoberta. Detalhes,
@@ -163,6 +163,7 @@ export const CLINICAL_ROUTES = [
   route({ path: "/casos-clinicos/:slug", name: "Caso clínico", space: "ensino", group: "conhecimento", icon: "doencas", layout: "focus", intelligence: false, kind: "detail", parent: "/casos-clinicos" }),
 
   // Pesquisa
+  route({ path: "/intelligence", name: "CorVIA Intelligence", shortName: "Intelligence", space: "pesquisa", group: "conhecimento", icon: "sincronizar", layout: "data", intelligence: false, catalog: true, featured: true }),
   route({ path: "/biblioteca", name: "Biblioteca científica", shortName: "Biblioteca", space: "pesquisa", group: "conhecimento", icon: "conhecimento", layout: "data", intelligence: true, catalog: true }),
   route({ path: "/biblioteca/:slug", name: "Documento científico", shortName: "Documento", space: "pesquisa", group: "conhecimento", icon: "conhecimento", layout: "reading", intelligence: true, kind: "detail", parent: "/biblioteca" }),
   route({ path: "/documentos-cientificos-ia", name: "Documento científico IA", shortName: "Documento IA", space: "pesquisa", group: "conhecimento", icon: "assistente", layout: "focus", intelligence: false, catalog: true, featured: true }),
@@ -246,8 +247,8 @@ export function resolveClinicalRoute(pathname: string): ClinicalRouteDefinition 
 export function routeAvailable(definition: ClinicalRouteDefinition, isAdmin: boolean) {
   if (definition.gate === "admin") return isAdmin;
   if (definition.gate === "admin-ai") return isAdmin && (heartTeamEnabled() || whatsappAssistantEnabled());
-  if (definition.gate === "heart-team") return heartTeamEnabled();
-  if (definition.gate === "whatsapp") return whatsappAssistantEnabled();
+  if (definition.gate === "heart-team") return definition.kind === "page" || heartTeamEnabled();
+  if (definition.gate === "whatsapp") return definition.kind === "page" || whatsappAssistantEnabled();
   return definition.gate !== "no-product-access";
 }
 

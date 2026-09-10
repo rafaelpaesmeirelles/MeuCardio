@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
@@ -39,15 +40,7 @@ export default function Estudo() {
         <BotaoFavorito itemType="estudo" itemId={s.id} />
       </div>
 
-      <div className="acoes-linha" style={{ marginTop: "1rem", flexWrap: "wrap" }} aria-label="Opções de leitura do trabalho científico">
-        <a className="btn primario" href="#resumo-corvia">Resumo CorVIA</a>
-        <a className="btn" href="#leitura-portugues">Traduzido</a>
-        {s.url && (
-          <a className="btn" href={s.url} target="_blank" rel="noopener noreferrer">
-            Original ↗
-          </a>
-        )}
-      </div>
+      <ScientificReadingAccess entityType="estudo" slug={slug} />
 
       <div id="resumo-corvia" className="cartao" style={{ marginTop: "1rem", scrollMarginTop: "1rem" }}>
         <p className="eyebrow">Resumo CorVIA</p>
@@ -68,7 +61,7 @@ export default function Estudo() {
         {s.doi && <div>DOI: {s.doi}</div>}
         {s.pmid && <div>PMID: {s.pmid}</div>}
         <p style={{ color: "var(--texto-secundario)", margin: "0.55rem 0 0" }}>
-          O Resumo CorVIA é a versão curta. A opção Traduzido abre a leitura clínica em português dentro do próprio CorVIA; Original abre a fonte científica.
+          O resumo e a leitura clínica abaixo são conteúdo editorial CorVIA. As versões da publicação original estão identificadas nas opções de leitura científica.
         </p>
       </div>
 

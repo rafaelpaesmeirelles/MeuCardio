@@ -55,6 +55,22 @@ EDITORIAL_DECISION = "editorial-classifications-20260910"
 EDITORIAL_MANIFEST = "docs/ci/editorial-classifications-no-backend-ci.json"
 EDITORIAL_REPOSITORY = "rafaelpaesmeirelles/MeuCardio"
 
+FEATURE_BRANCH = "codex/fix-feature-discovery-20260910"
+FEATURE_BASE = "db0a3ff71a184e2d6711168427e7565d6e0c9e48"
+FEATURE_DECISION = "feature-discovery-20260910"
+FEATURE_MANIFEST = "docs/ci/feature-discovery-no-backend-ci.json"
+FEATURE_REPOSITORY = "rafaelpaesmeirelles/MeuCardio"
+
+FEATURE_SCOPE = {
+    "manifest": FEATURE_MANIFEST, "head_branch": FEATURE_BRANCH,
+    "repository": FEATURE_REPOSITORY, "decision_id": FEATURE_DECISION,
+    "base_sha": FEATURE_BASE, "minimum_pull_request": 921,
+    "local_evidence": "docs/feature-discovery-audit-20260910.md",
+    "decision_document": "docs/ci/feature-discovery-owner-decision.md",
+    "suite_key": "backend-risk-v1-authorized-no-backend-ci-feature-discovery-20260910",
+}
+
+
 SECTION_SCOPE = {
     "manifest": SECTION_MANIFEST, "head_branch": SECTION_BRANCH,
     "repository": SECTION_REPOSITORY, "decision_id": SECTION_DECISION,
@@ -79,6 +95,10 @@ def section_visibility_owner_decision(root: Path, **context):
 
 def editorial_classification_owner_decision(root: Path, **context):
     return scoped_owner_decision(root, scope=EDITORIAL_SCOPE, **context)
+
+
+def feature_discovery_owner_decision(root: Path, **context):
+    return scoped_owner_decision(root, scope=FEATURE_SCOPE, **context)
 
 
 def scoped_owner_decision(root: Path, *, event: str, number: str,
@@ -170,7 +190,9 @@ def main() -> int:
     event, number = os.environ.get("EVENT_NAME", ""), os.environ.get("PR_NUMBER", "")
     context = dict(event=event, number=number, head_ref=os.environ.get("PR_HEAD_REF", ""),
                    repository=os.environ.get("REPOSITORY", ""))
-    decision = editorial_classification_owner_decision(root, **context)
+    decision = feature_discovery_owner_decision(root, **context)
+    if decision is None:
+        decision = editorial_classification_owner_decision(root, **context)
     if decision is None:
         decision = section_visibility_owner_decision(root, **context)
     if decision is not None:

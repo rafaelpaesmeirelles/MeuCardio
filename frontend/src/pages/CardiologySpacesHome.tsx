@@ -6,7 +6,7 @@ import MapaDeslocamento, { type RotaDeslocamento } from "../components/MapaDeslo
 import { CoracaoHolografico } from "../components/PreHomeBrand";
 import GalaxyThemeToggle from "../components/GalaxyThemeToggle";
 import UniverseStars from "../components/UniverseStars";
-import ScientificTimelineCard from "../components/ScientificTimelineCard";
+import ScientificIntelligenceMonitor from "../components/ScientificIntelligenceMonitor";
 import { mobilitySchedule, scheduleDateTime } from "../lib/mobilitySchedule";
 import { api, assetUrl, type Usuario } from "../lib/api";
 import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
@@ -22,7 +22,7 @@ type ScientificSpaceId = "descobrir" | "evidencias" | "aprender" | "ensinar" | "
 type SpaceId = ClinicalSpaceId | ScientificSpaceId;
 type Tone = "cyan" | "blue" | "violet" | "rose" | "teal";
 type ShelfId = "now" | "next" | "references" | "essential";
-type Action = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean };
+type Action = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; featured?: boolean };
 type Space = {
   id: SpaceId;
   label: string;
@@ -341,34 +341,37 @@ const SCIENTIFIC_SPACES: Space[] = [
 
 const CATALOG: Array<{ title: string; actions: Action[] }> = [
   { title: "Clínica & Decisão", actions: [
+    ["/heart-team", "Heart Team Virtual", "round"],
     ["/doencas", "Guia de Doenças", "doencas"], ["/medicamentos", "Medicamentos", "medicamento"],
     ["/exames", "Exames", "clinica"], ["/calculadoras", "Calculadoras", "calculadora"],
     ["/emergencia", "Emergências", "emergencia"], ["/cardiologia-intensiva", "Cardiologia Intensiva & UCO", "clinica"],
     ["/checklists", "Checklists", "check"], ["/triagem-sintomas", "Triagem de sintomas", "triagem"],
     ["/interacoes", "Interações medicamentosas", "medicamento"], ["/condicoes", "Condições especiais", "check"],
     ["/fluxogramas", "Fluxogramas clínicos", "seta"], ["/avaliacao-preoperatoria", "Avaliação pré-operatória", "clinica"],
-  ].map(([to, label, icon]) => ({ to, label, icon: icon as NomeIcone })) },
+  ].map(([to, label, icon]) => ({ to, label, icon: icon as NomeIcone, featured: ["/heart-team", "/whatsapp-assistant", "/intelligence"].includes(to) })) },
   { title: "Assistência", actions: [
+    ["/whatsapp-assistant", "Assistente WhatsApp", "comunicacao"],
     ["/exames-ia", "IA para Exames", "ecg"], ["/prontuario", "Prontuário", "pacientes"],
     ["/round", "Round hospitalar", "round"], ["/receituario", "Prescrição", "prescricao"],
     ["/documentos", "Documentos & Solicitações", "documento"], ["/agenda", "Agenda", "agenda"],
     ["/corvia-mail", "CorVIA Mail", "mail"], ["/caixa-de-email", "Caixa de e-mail unificada", "mail"],
     ["/assistente", "Apoio CorVIA", "assistente"], ["/telediagnostico", "Telediagnóstico & Consultoria", "evidencia"],
     ["/material-paciente", "Material para paciente", "documento"],
-  ].map(([to, label, icon]) => ({ to, label, icon: icon as NomeIcone })) },
+  ].map(([to, label, icon]) => ({ to, label, icon: icon as NomeIcone, featured: ["/heart-team", "/whatsapp-assistant", "/intelligence"].includes(to) })) },
   { title: "Ciência & Ensino", actions: [
+    ["/intelligence", "CorVIA Intelligence", "sincronizar"],
     ["/evidencias", "Estudos & Evidências", "evidencia"], ["/estudos", "Estudos clínicos", "evidencia"],
     ["/documentos-cientificos-ia", "Documentos científicos IA", "assistente"], ["/trilhas/timeline", "Timeline do conhecimento", "seta"],
     ["/trilhas", "Trilhas", "seta"], ["/casos-clinicos", "Casos clínicos", "doencas"],
     ["/diretrizes", "Diretrizes & Guidelines", "conhecimento"], ["/biblioteca", "Biblioteca científica", "conhecimento"],
     ["/galeria", "Atlas & Galeria", "galeria"], ["/apresentacao", "Modo apresentação", "documento"],
     ["/exportar", "Exportar conteúdo", "documento"],
-  ].map(([to, label, icon]) => ({ to, label, icon: icon as NomeIcone })) },
+  ].map(([to, label, icon]) => ({ to, label, icon: icon as NomeIcone, featured: ["/heart-team", "/whatsapp-assistant", "/intelligence"].includes(to) })) },
   { title: "Produtividade & Rede", actions: [
     ["/indicadores", "Indicadores & Métricas", "indicadores"], ["/favoritos", "Notas & Favoritos", "favorito"],
     ["/busca", "Busca avançada", "busca"], ["/busca?modo=tudo-com-tudo", "Tudo com Tudo", "sincronizar"],
     ["/usuarios-online", "Rede profissional", "pacientes"], ["/sincronizacao", "Contas conectadas", "sincronizar"],
-  ].map(([to, label, icon]) => ({ to, label, icon: icon as NomeIcone })) },
+  ].map(([to, label, icon]) => ({ to, label, icon: icon as NomeIcone, featured: ["/heart-team", "/whatsapp-assistant", "/intelligence"].includes(to) })) },
   { title: "Conta & Administração", actions: [
     { to: "/minha-conta", label: "Minha Conta", icon: "conta" },
     { to: "/privacidade", label: "Segurança & Privacidade", icon: "check" },
@@ -381,9 +384,7 @@ const CATALOG: Array<{ title: string; actions: Action[] }> = [
     { to: "/fila-telediagnostico", label: "Fila de telediagnóstico", icon: "evidencia", adminOnly: true },
     { to: "/receitas-para-assinatura", label: "Receitas para assinatura", icon: "prescricao", adminOnly: true },
   ] },
-  ...((heartTeamEnabled() || whatsappAssistantEnabled()) ? [{ title: "Inteligência integrada", actions: [
-    ...(heartTeamEnabled() ? [{ to: "/heart-team", label: "Heart Team Virtual", icon: "round" as NomeIcone }] : []),
-    ...(whatsappAssistantEnabled() ? [{ to: "/whatsapp-assistant", label: "Assistente Pessoal no WhatsApp", icon: "comunicacao" as NomeIcone }] : []),
+  ...((heartTeamEnabled() || whatsappAssistantEnabled()) ? [{ title: "Operações de IA", actions: [
     { to: "/admin/operacoes-ia", label: "Operações e custos de IA", icon: "indicadores" as NomeIcone, adminOnly: true },
   ] }] : []),
 ];
@@ -764,7 +765,7 @@ function StellarRouteMiniMap({
 }
 
 function ActionLink({ action, compact = false }: { action: Action; compact?: boolean }) {
-  return <Link className={`spaces-action${compact ? " spaces-action--compact" : ""}`} data-feature={action.to === "/exames-ia" ? "exam-ai" : undefined} to={action.to}><Icone nome={action.icon} /><span>{action.label}</span></Link>;
+  return <Link className={`spaces-action${compact ? " spaces-action--compact" : ""}${action.featured ? " spaces-action--featured" : ""}`} data-feature={action.to === "/exames-ia" ? "exam-ai" : undefined} to={action.to}><Icone nome={action.icon} /><span>{action.label}{action.featured && <small className="spaces-action__highlight">Destaque</small>}</span></Link>;
 }
 
 function useDialogFocus(open: boolean) {
@@ -1553,7 +1554,7 @@ export default function CardiologySpacesHome() {
           <Link to="/busca?modo=tudo-com-tudo" className="spaces-day__item spaces-day__item--cyan"><i /><span><strong>Tudo com Tudo</strong><small>Explorar relações</small></span></Link>
           <Link to="/trilhas" className="spaces-day__item spaces-day__item--violet"><i /><span><strong>Trilhas</strong><small>Continuar aprendizagem</small></span></Link>
           <Link to="/favoritos" className="spaces-day__item spaces-day__item--rose"><i /><span><strong>Favoritos</strong><small>Retomar leituras</small></span></Link>
-          <ScientificTimelineCard />
+          <ScientificIntelligenceMonitor compact />
         </> : <>
           {dayItems.length ? dayItems.slice(0, 3).map((item) => {
             const itemSpace = inferClinicalSpace(item);

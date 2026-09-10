@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Descoberta diária de novas diretrizes oficiais publicadas a partir de
+# Entrada de contingência para o radar adaptativo de publicações desde
 # 10/08/2026. A rotina só cria o alerta factual e a fila de revisão; não altera
 # automaticamente recomendações ou conteúdo clínico.
 #
-# Instalar no host de produção após o deploy:
-#   crontab -e
-#   30 7 * * * /opt/meucardio/infra/guideline_cron.sh >> /opt/meucardio/infra/guideline_cron.log 2>&1
+# Produção usa o serviço supervisionado intelligence-radar (4h / 1h em picos).
+# Não instalar um segundo cron: esta entrada compartilha a trava/cadência do
+# worker e permanece disponível para manutenção operacional autorizada.
 set -euo pipefail
 
 PROJETO="/opt/meucardio"

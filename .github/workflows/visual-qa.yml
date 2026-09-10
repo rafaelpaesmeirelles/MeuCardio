@@ -150,14 +150,25 @@ jobs:
           docker compose exec -T backend python -m app.commands.create_admin \
             --email visual-qa@teste.local \
             --password visual-qa-seguro-123 \
-            --name "Dr. Visual QA"
+            --name "Alexandriana Visual QA"
+          docker compose exec -T backend python - <<'PYPROFILE'
+          from sqlalchemy import select
+          from app.core.db import SessionLocal
+          from app.models.user import User
+          with SessionLocal() as db:
+              user = db.scalar(select(User).where(User.email == "visual-qa@teste.local"))
+              assert user is not None
+              user.full_name = "Alexandriana Visual QA"
+              user.professional_title = "Profa. Dra."
+              db.commit()
+          PYPROFILE
 
       - name: Install ephemeral Chromium runner
         run: |
           mkdir -p /tmp/corvia-visual-qa
           cd /tmp/corvia-visual-qa
           npm init -y >/dev/null
-          npm install --no-audit --no-fund playwright@1.54.2
+          npm install --no-audit --no-fund playwright@1.54.2 pngjs@7.0.0
           npx playwright install --with-deps chromium
 
       - name: Capture canonical surfaces
@@ -165,6 +176,7 @@ jobs:
           mkdir -p visual-qa/screenshots
           cat > /tmp/corvia-visual-qa/capture.mjs <<'JS'
           import { chromium } from 'playwright';
+          import { PNG } from 'pngjs';
           import fs from 'node:fs';
           import path from 'node:path';
 
@@ -331,6 +343,73 @@ jobs:
             await page.screenshot({ path: path.join(out, `${mode}-${name}.png`), fullPage: false });
           }
 
+          async function inspectScientificMonitor(page, name) {
+            const monitor = page.locator('.spaces-home--mode-scientific .spaces-day .scientific-intelligence-monitor.is-compact');
+            const count = await monitor.count();
+            const timelineCount = await page.locator('.spaces-home--mode-scientific .spaces-day .spaces-scientific-timeline, .spaces-home--mode-scientific .spaces-day [aria-label="Minha timeline"]').count();
+            const metrics = {name,count,timelineCount};
+            if (count !== 1) report.failures.push(`${name}: expected exactly one CorVIA Intelligence monitor, found ${count}`);
+            if (timelineCount !== 0) report.failures.push(`${name}: replaced Timeline card is still present`);
+            if (count === 1) {
+              await monitor.locator('.scientific-intelligence-monitor__health').waitFor({state:'visible',timeout:15000});
+              await monitor.locator('h3').evaluate(element => element.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'}));
+              metrics.heading = await monitor.locator('h3').innerText();
+              metrics.openLink = await monitor.locator('a[href="/intelligence"]').isVisible();
+              metrics.health = await monitor.locator('.scientific-intelligence-monitor__health').innerText();
+              metrics.hasCadence = (await monitor.innerText()).includes('Consultas a cada');
+              metrics.box = await monitor.boundingBox();
+              const width = page.viewportSize().width;
+              if (metrics.heading.trim() !== 'CorVIA Intelligence' || !metrics.openLink || !metrics.health || !metrics.hasCadence) report.failures.push(`${name}: monitor missing its title, access link or actual monitoring status`);
+              if (!metrics.box || metrics.box.x < -1 || metrics.box.x + metrics.box.width > width + 1) report.failures.push(`${name}: intelligence monitor outside viewport`);
+              // Capture the real visible viewport, not a tall element clipped by its scrollable aside.
+              await page.screenshot({path:path.join(out,`${name}-intelligence.png`),fullPage:false});
+              metrics.headingContrast = [];
+              const luminance = rgb => rgb.map(value => value / 255).map(value => value <= .04045 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4).reduce((sum,value,index) => sum + value * [.2126,.7152,.0722][index],0);
+              for (const heading of await monitor.locator('h3,h4').all()) {
+                await heading.evaluate(element => element.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'}));
+                const sample = await heading.evaluate(element => {
+                  const box=element.getBoundingClientRect();
+                  const panel=element.closest('.scientific-intelligence-monitor');
+                  const panelBox=panel.getBoundingClientRect();
+                  const x=panelBox.left+8, y=(box.top+box.bottom)/2;
+                  return {text:element.textContent.trim(),color:getComputedStyle(element).color,x,y,uncovered:document.elementFromPoint(x,y) === panel};
+                });
+                const png=PNG.sync.read(await page.screenshot({fullPage:false}));
+                const scale=png.width/page.viewportSize().width;
+                const x=Math.floor(sample.x*scale), y=Math.floor(sample.y*scale);
+                const color=sample.color.match(/^rgba?\(([\d.]+)[, ]+([\d.]+)[, ]+([\d.]+)/);
+                if (!sample.uncovered || !color || x < 0 || y < 0 || x >= png.width || y >= png.height) {
+                  report.failures.push(`${name}: cannot verify visible background of heading ${sample.text}`);
+                  continue;
+                }
+                const background=[...png.data.slice((y*png.width+x)*4,(y*png.width+x)*4+3)];
+                const foreground=color.slice(1,4).map(Number);
+                const levels=[luminance(background),luminance(foreground)].sort((a,b)=>a-b);
+                const ratio=(levels[1]+.05)/(levels[0]+.05);
+                metrics.headingContrast.push({text:sample.text,foreground,background,ratio});
+                if (ratio < 4.5) report.failures.push(`${name}: heading ${sample.text} contrast ${ratio.toFixed(2)} < 4.5`);
+              }
+              metrics.controls=[];
+              for (const selector of ['a[href="/intelligence"]','.scientific-intelligence-monitor__refresh']) {
+                const control=monitor.locator(selector);
+                await control.evaluate(element => element.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'}));
+                const access=await control.evaluate(element => {
+                  const box=element.getBoundingClientRect();
+                  const dx=Math.min(8,box.width/4),dy=Math.min(8,box.height/4);
+                  const points=[[box.left+dx,box.top+dy],[box.right-dx,box.top+dy],[box.left+dx,box.bottom-dy],[box.right-dx,box.bottom-dy],[(box.left+box.right)/2,(box.top+box.bottom)/2]];
+                  return {text:element.textContent.trim(),width:box.width,height:box.height,uncovered:points.every(([x,y]) => x>=0 && y>=0 && x<innerWidth && y<innerHeight && element.contains(document.elementFromPoint(x,y)))};
+                });
+                metrics.controls.push(access);
+                if (!access.uncovered) report.failures.push(`${name}: control ${access.text} clipped or covered after scrolling`);
+              }
+              await page.screenshot({path:path.join(out,`${name}-intelligence-controls.png`),fullPage:false});
+              await page.locator('.spaces-home__topbar .spaces-brand').evaluate(element => element.scrollIntoView({block:'start',inline:'nearest',behavior:'instant'}));
+              // Reset the QA's explicit monitor scroll, not just the brand's own offset.
+              await page.evaluate(() => window.scrollTo({top:0,left:0,behavior:'instant'}));
+            }
+            (report.scientificIntelligenceSurfaces ??= []).push(metrics);
+          }
+
           async function inspectMobileSpacesMatrix(page) {
             const matrix = [];
             const workModes = [['complete','Completo'],['essential','Essencial'],['scientific','Ciência & Ensino']];
@@ -349,7 +428,7 @@ jobs:
                   const metrics = await page.evaluate(measureMobileSpaces);
                   const name = `mobile-${width}-${theme}-${mode}`;
                   if (metrics.theme !== theme) report.failures.push(`${name}: expected theme ${theme}, rendered ${metrics.theme}`);
-                  report.failures.push(...validateMobileSpaces(metrics).map((error) => `${name}: ${error}`));
+                  report.failures.push(...validateMobileSpaces(metrics, 'Profa. Dra. Alexandriana').map((error) => `${name}: ${error}`));
                   matrix.push({name,mode,width,requestedTheme:theme,...metrics});
                   await page.screenshot({path:path.join(out,`${name}.png`),fullPage:false});
                 };
@@ -362,12 +441,13 @@ jobs:
                   }
                   await page.locator(`.spaces-home--mode-${mode}`).waitFor({state:'visible'});
                   await capture(mode);
+                  if (mode === 'scientific') await inspectScientificMonitor(page, `mobile-${width}-${theme}-${mode}`);
                 }
               }
             }
             for (const light of matrix.filter((entry) => entry.theme === 'light')) {
               const dark = matrix.find((entry) => entry.theme === 'dark' && entry.width === light.width && entry.mode === light.mode);
-              for (const key of ['brand','wordmark','galaxy','search']) {
+              for (const key of ['brand','wordmark','galaxy','search','identity','avatar','identityName']) {
                 if (!light[key] && !dark?.[key]) continue;
                 if (!dark?.[key] || ['left','top','width','height'].some((part) => Math.abs(light[key][part]-dark[key][part]) > 1)) {
                   report.failures.push(`${light.width}/${light.mode}: ${key} geometry changes with theme`);
@@ -398,6 +478,12 @@ jobs:
             await selectCompleteMode(desktop.page);
             const desktopBrand = await desktop.page.locator('.spaces-brand').first().getAttribute('aria-label').catch(() => null);
             if (desktopBrand !== 'CorVIA Cardiology Spaces') report.failures.push(`desktop/home: branding inválido (${desktopBrand})`);
+            await desktop.page.getByRole('navigation',{name:'Modo de trabalho'}).getByRole('button',{name:'Ciência & Ensino',exact:true}).click();
+            for (const theme of ['light','dark']) {
+              if (await desktop.page.locator('html').getAttribute('data-corvia-theme') !== theme) await desktop.page.locator('.galaxy-theme-toggle').click();
+              await inspectScientificMonitor(desktop.page, `desktop-${theme}-scientific`);
+            }
+            await desktop.page.getByRole('navigation',{name:'Modo de trabalho'}).getByRole('button',{name:'Completo',exact:true}).click();
             const requiredDesktopLinks = ['/triagem-sintomas','/interacoes','/condicoes','/fluxogramas','/biblioteca','/avaliacao-preoperatoria','/telediagnostico','/indicadores','/documentos-cientificos-ia','/apresentacao','/admin','/admin/usuarios','/fila-telediagnostico'];
             await assertCatalog(desktop.page, 'desktop', requiredDesktopLinks);
             await desktop.page.screenshot({ path: path.join(out, 'desktop-todas-funcoes.png'), fullPage: false });
@@ -419,6 +505,7 @@ jobs:
             if (!moreVisible) report.failures.push('mobile/catálogo: catálogo de funções não abriu');
             await inspectMobileSpacesMatrix(mobile.page);
             await mobile.context.close();
+            if (report.scientificIntelligenceSurfaces?.length !== 10) report.failures.push(`scientific intelligence surfaces incomplete: ${report.scientificIntelligenceSurfaces?.length || 0}/10`);
           } catch (error) {
             report.failures.push(`capture runner: ${error?.stack || error}`);
           } finally {

@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Markdown from "react-markdown";
@@ -21,17 +22,6 @@ function fonteMermaid(children: unknown): string | null {
   return texto.trim() || null;
 }
 
-function fonteOriginal(sourceRefs: string[]): string | null {
-  for (const referencia of sourceRefs) {
-    const url = referencia.match(/https?:\/\/[^\s)\]}]+/i)?.[0];
-    if (url) return url.replace(/[.,;]+$/, "");
-
-    const doi = referencia.match(/\b10\.\d{4,9}\/[-._;()/:A-Z0-9]+\b/i)?.[0];
-    if (doi) return `https://doi.org/${doi.replace(/[.,;]+$/, "")}`;
-  }
-  return null;
-}
-
 type Doc = {
   title: string; theme: string; kind: string; summary: string | null; body_md: string;
   source_refs: string[]; review_status: string; version: number;
@@ -50,7 +40,6 @@ export default function Documento() {
   if (!doc) return <Carregando />;
 
   const contemFluxograma = /```mermaid\s/i.test(doc.body_md);
-  const originalUrl = fonteOriginal(doc.source_refs);
   const temResumo = Boolean(doc.summary?.trim());
 
   return (
@@ -63,13 +52,7 @@ export default function Documento() {
         <span className="selo">versão {doc.version}</span>
       </div>
 
-      <div className="acoes-linha" style={{ margin: "0 0 1rem", flexWrap: "wrap" }} aria-label="Opções de leitura do documento científico">
-        {temResumo && <a className="btn primario" href="#resumo-corvia">Resumo CorVIA</a>}
-        <a className="btn" href="#leitura-portugues">Traduzido</a>
-        {originalUrl && (
-          <a className="btn" href={originalUrl} target="_blank" rel="noopener noreferrer">Original ↗</a>
-        )}
-      </div>
+      <ScientificReadingAccess entityType="documento" slug={slug} />
 
       {temResumo && (
         <div id="resumo-corvia" className="cartao" style={{ marginBottom: "1rem", scrollMarginTop: "1rem" }}>

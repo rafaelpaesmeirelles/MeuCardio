@@ -2,7 +2,8 @@ name: CorVIA Intelligence — Scientific radar
 
 on:
   schedule:
-    # O runner acorda de hora em hora; o backend decide se faz varredura completa:
+    # Contingência do worker local intelligence-radar. O cron pode atrasar;
+    # o backend usa tempo decorrido e trava compartilhada para decidir:
     # - dias normais: a cada 4h;
     # - congressos/janelas de publicação: 1/1h;
     # - pico recente de publicações confiáveis: 1/1h até o pico arrefecer.

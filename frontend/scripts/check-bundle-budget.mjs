@@ -80,6 +80,26 @@ for (const path of await listarArquivos(distPath)) {
   }
 }
 
+// O monitor compacto integra a Home precached. O leitor de artefatos é online
+// e deve ficar atrás de import() dinâmico: segui-lo como dependência estática
+// quebraria o shell ao retirar somente o leitor do precache. Validamos o grafo
+// emitido pelo Vite; dynamicImports não são necessários para renderizar Home.
+const monitorEntry = Object.keys(manifest).find(key => /(?:^|\/)ScientificIntelligenceMonitor-[^/]+\.js$/.test(manifest[key].file));
+if (monitorEntry) {
+  const visited = new Set();
+  const inspectStaticImports = key => {
+    if (visited.has(key)) return;
+    visited.add(key);
+    const chunk = manifest[key];
+    if (!chunk) return;
+    if (/ScientificReadingAccess-[^/]+\.(?:js|css)$/.test(chunk.file)) {
+      failures.push("monitor da Home depende estaticamente do leitor científico excluído do precache");
+    }
+    for (const dependency of chunk.imports ?? []) inspectStaticImports(dependency);
+  };
+  inspectStaticImports(monitorEntry);
+}
+
 // Ajustado de 2500 KB para 2750 KB em 07/08/2026: crescimento orgânico de
 // páginas (Avaliação Pré-Operatória, Sincronização de contas, Assistente
 // Clínica/Pessoal etc.) levou o precache real a ~2536 KB, estourando o teto

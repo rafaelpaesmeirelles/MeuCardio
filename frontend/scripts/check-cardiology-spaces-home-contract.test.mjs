@@ -236,12 +236,27 @@ test("new Google account connection stays hidden behind an opt-in flag", () => {
 
 test("mobile geometry rejects hidden wordmarks and clipped cards even when body overflow is masked", () => {
   const box = (left, right, top=0, bottom=44) => ({left,right,top,bottom,width:right-left,height:bottom-top,visible:true});
-  const sample = {width:320, choice:true, header:box(0,320), brand:box(16,122), wordmark:box(62,122),
-    galaxy:box(130,174), identity:box(260,304), avatar:box(260,304), cards:[0,1,2].map(() => ({box:box(16,304),text:[{left:90,right:286}]}))};
+  const sample = {width:320, choice:true, header:box(0,320,0,84), brand:box(16,122), wordmark:box(62,122),
+    galaxy:box(130,174), identity:box(200,304,0,84), avatar:box(230,274),
+    identityName:{...box(200,304,48,80),text:"Profa. Dra. Alexandriana",scrollWidth:104,clientWidth:104,textRects:[{left:204,right:300,top:50,bottom:78}]}, cards:[0,1,2].map(() => ({box:box(16,304),text:[{left:90,right:286}]}))};
   assert.deepEqual(validateMobileSpaces(sample), []);
   assert.ok(validateMobileSpaces({...sample,wordmark:{...sample.wordmark,visible:false}}).includes("wordmark: not visible"));
+  assert.ok(validateMobileSpaces({...sample,header:{...sample.header,top:-58,bottom:26}}).includes("header: outside vertical viewport"));
   assert.ok(validateMobileSpaces({...sample,cards:[{box:box(16,380),text:[]},...sample.cards.slice(1)]}).includes("card 0: outside viewport"));
   assert.ok(validateMobileSpaces({...sample,cards:[{box:box(16,304),text:[{left:90,right:330}]},...sample.cards.slice(1)]}).includes("card 0: clipped text"));
   assert.ok(validateMobileSpaces({...sample,galaxy:box(110,154)}).includes("brand/galaxy: overlap"));
   assert.ok(validateMobileSpaces({...sample,galaxyImage:box(94,212)}).includes("galaxy image: overflow or overlap"));
+});
+
+
+test("mobile identity gate rejects missing, truncated and overlapping professional names", () => {
+  const box=(left,right,top,bottom) => ({left,right,top,bottom,width:right-left,height:bottom-top,visible:true});
+  const name={...box(200,304,48,80),text:"Profa. Dra. Alexandriana",scrollWidth:104,clientWidth:104,textRects:[{left:204,right:300,top:50,bottom:78}]};
+  const sample={width:320,choice:true,header:box(0,320,0,84),brand:box(16,122,0,44),wordmark:box(62,122,0,44),galaxy:box(130,174,0,44),identity:box(200,304,0,84),avatar:box(230,274,0,44),identityName:name,cards:[0,1,2].map(() => ({box:box(16,304,120,200),text:[]}))};
+  assert.deepEqual(validateMobileSpaces(sample,name.text),[]);
+  assert.ok(validateMobileSpaces({...sample,identityName:{...name,visible:false}},name.text).includes("identityName: not visible"));
+  assert.ok(validateMobileSpaces({...sample,identityName:{...name,text:"D."}},name.text).includes("identity name: unexpected text"));
+  assert.ok(validateMobileSpaces({...sample,identityName:{...name,scrollWidth:180}},name.text).includes("identity name: clipped text"));
+  assert.ok(validateMobileSpaces({...sample,identityName:{...name,textRects:[{left:204,right:340,top:50,bottom:78}]}},name.text).includes("identity name: clipped text"));
+  assert.ok(validateMobileSpaces({...sample,identityName:{...name,...box(200,304,20,52)}},name.text).includes("identity name/avatar: overlap"));
 });

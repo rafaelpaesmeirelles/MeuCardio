@@ -1,3 +1,4 @@
+import AIInstallationGate from "./components/AIInstallationGate";
 import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Shell from "./components/Shell";
@@ -35,6 +36,7 @@ const Biblioteca = lazy(() => import("./pages/Biblioteca"));
 const ScientificDocumentAI = lazy(() => import("./pages/ScientificDocumentAI"));
 const Fluxogramas = lazy(() => import("./pages/Fluxogramas"));
 const Diretrizes = lazy(() => import("./pages/Diretrizes"));
+const CorviaIntelligence = lazy(() => import("./pages/CorviaIntelligence"));
 const Galeria = lazy(() => import("./pages/Galeria"));
 const ImagemGaleria = lazy(() => import("./pages/ImagemGaleria"));
 const Documento = lazy(() => import("./pages/Documento"));
@@ -197,6 +199,7 @@ export default function App() {
           <Route path="triagem-sintomas" element={<TriagemSintomas />} />
           <Route path="fluxogramas" element={<Fluxogramas />} />
           <Route path="diretrizes" element={<Diretrizes />} />
+          <Route path="intelligence" element={<CorviaIntelligence />} />
           <Route path="busca" element={<Busca />} />
           <Route path="calculadoras" element={<Calculadoras />} />
           <Route path="calculadoras/:slug" element={<Calculadora />} />
@@ -228,9 +231,9 @@ export default function App() {
           <Route path="cursos/:slug" element={<Navigate to="/trilhas" replace />} />
           <Route path="favoritos" element={<Favoritos />} />
           <Route path="assistente" element={<CommercialFeatureGate feature="ai"><Assistente /></CommercialFeatureGate>} />
-          <Route path="heart-team" element={heartTeamEnabled() ? <CommercialFeatureGate feature="ai"><HeartTeamVirtual /></CommercialFeatureGate> : <Navigate to="/" replace />} />
-          <Route path="heart-team/:caseId" element={heartTeamEnabled() ? <CommercialFeatureGate feature="ai"><HeartTeamVirtual /></CommercialFeatureGate> : <Navigate to="/" replace />} />
-          <Route path="whatsapp-assistant" element={whatsappAssistantEnabled() ? <CommercialFeatureGate feature="ai"><WhatsAppAssistant /></CommercialFeatureGate> : <Navigate to="/minha-conta" replace />} />
+          <Route path="heart-team" element={<CommercialFeatureGate feature="ai"><AIInstallationGate enabled={heartTeamEnabled()} label="Heart Team Virtual"><HeartTeamVirtual /></AIInstallationGate></CommercialFeatureGate>} />
+          <Route path="heart-team/:caseId" element={<CommercialFeatureGate feature="ai"><AIInstallationGate enabled={heartTeamEnabled()} label="Heart Team Virtual"><HeartTeamVirtual /></AIInstallationGate></CommercialFeatureGate>} />
+          <Route path="whatsapp-assistant" element={<CommercialFeatureGate feature="ai"><AIInstallationGate enabled={whatsappAssistantEnabled()} label="Assistente WhatsApp"><WhatsAppAssistant /></AIInstallationGate></CommercialFeatureGate>} />
           <Route path="prontuario" element={<Prontuario />} />
           <Route path="exames-ia" element={<CommercialFeatureGate feature="ai"><CardiovascularExamAI /></CommercialFeatureGate>} />
           <Route path="ecg-ia" element={<CommercialFeatureGate feature="ai"><CardiovascularExamAI /></CommercialFeatureGate>} />

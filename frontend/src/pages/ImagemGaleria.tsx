@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
@@ -75,6 +76,8 @@ export default function ImagemGaleria() {
           ))}
         </div>
       )}
+
+      <ScientificReadingAccess entityType="imagem" slug={slug} />
 
       <TudoSobreEsteTema tema={img.theme} excluirTipo="galeria" excluirSlug={slug} />
 

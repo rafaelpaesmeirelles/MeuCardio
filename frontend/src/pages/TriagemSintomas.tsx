@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Carregando, Erro } from "../components/Estado";
@@ -267,6 +268,8 @@ export default function TriagemSintomas() {
           <p style={{ marginTop: "1rem", fontSize: "0.82rem", color: "var(--texto-secundario)" }}>{assessment.disclaimer}</p>
         </section>
       )}
+
+      {detail && <ScientificReadingAccess entityType="triagem" slug={detail.slug} />}
 
       {detail && <GrafoRelacionados entityType="triagem_sintoma" slug={detail.slug} />}
 

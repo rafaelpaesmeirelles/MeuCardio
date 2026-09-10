@@ -36,6 +36,7 @@ services:
     environment:
       ENVIRONMENT: production
       DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}
+      SCIENTIFIC_PUBLICATION_LIBRARY_DIR: /scientific-publication-library
       # Release Clinical OS: tools reais do Assistente Pessoal ficam disponíveis
       # em produção, ainda condicionadas ao consentimento individual do médico
       # (users.ia_ferramentas_consent_em) e bloqueadas para Investidor.
@@ -88,6 +89,7 @@ services:
       - cursofiles:/materiais-curso
       - whatsappmediafiles:/whatsapp-media
       - heartteamfiles:/heart-team-files
+      - scientific-publication-library:/scientific-publication-library:ro
     command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2"]
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/ready', timeout=2).read()"]
@@ -135,6 +137,43 @@ services:
       - whatsappmediafiles:/whatsapp-media
       - heartteamfiles:/heart-team-files
     command: ["python", "-m", "app.services.whatsapp_heart_team_worker"]
+    restart: unless-stopped
+
+  intelligence-radar:
+    build:
+      context: ./backend
+    env_file: .env
+    environment:
+      ENVIRONMENT: production
+      DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}
+      AI_ENABLED: "true"
+      AI_PROVIDER: "openai"
+    depends_on:
+      backend:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: ["python", "-m", "app.services.guideline_radar_worker"]
+    restart: unless-stopped
+
+  scientific-publication-library-worker:
+    build:
+      context: ./backend
+    env_file: .env
+    environment:
+      ENVIRONMENT: production
+      DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}
+      SCIENTIFIC_PUBLICATION_LIBRARY_DIR: /scientific-publication-library
+      AI_ENABLED: "true"
+      AI_PROVIDER: "openai"
+    depends_on:
+      backend:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - scientific-publication-library:/scientific-publication-library
+    command: ["python", "-m", "app.services.scientific_publication_library_worker"]
     restart: unless-stopped
 
   frontend-build:
@@ -185,5 +224,6 @@ volumes:
   cursofiles:
   whatsappmediafiles:
   heartteamfiles:
+  scientific-publication-library:
   caddy_data:
   caddy_config:

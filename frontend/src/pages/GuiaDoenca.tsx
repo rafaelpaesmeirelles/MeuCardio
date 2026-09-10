@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { Carregando, Erro } from "../components/Estado";
@@ -359,6 +360,8 @@ export default function GuiaDoenca() {
           </div>
         </section>
       )}
+
+      <ScientificReadingAccess entityType="doenca" slug={disease.slug} />
 
       <GrafoRelacionados entityType="doenca" slug={disease.slug} />
 

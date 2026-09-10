@@ -47,31 +47,24 @@ def evaluate_schedule(
     now: datetime | None = None,
     recent_trusted_count: int = 0,
     force: bool = False,
+    last_started_at: datetime | None = None,
 ) -> dict:
     current = _utc(now)
-    if force:
-        return {"run": True, "reason": "manual_force", "window": None}
-
     window = active_high_frequency_window(current)
-    if window is not None:
-        return {"run": True, "reason": "high_frequency_window", "window": window.name}
-
-    if recent_trusted_count >= SURGE_THRESHOLD:
-        return {
-            "run": True,
-            "reason": "publication_surge",
-            "window": None,
-            "recent_trusted_count": recent_trusted_count,
-        }
-
-    if current.hour % NORMAL_INTERVAL_HOURS == 0:
-        return {"run": True, "reason": "normal_4h_cycle", "window": None}
-
+    interval = 1 if window or recent_trusted_count >= SURGE_THRESHOLD else NORMAL_INTERVAL_HOURS
+    reason = "high_frequency_window" if window else (
+        "publication_surge" if recent_trusted_count >= SURGE_THRESHOLD else "normal_4h_cycle"
+    )
+    # Decidir pelo tempo decorrido, nunca pela hora de chegada do scheduler.
+    # GitHub pode atrasar/despachar o cron fora da hora nominal.
+    due_at = _utc(last_started_at) + timedelta(hours=interval) if last_started_at else current
     return {
-        "run": False,
-        "reason": "normal_interval_wait",
-        "window": None,
+        "run": force or current >= due_at,
+        "reason": "manual_force" if force else reason,
+        "window": window.name if window else None,
         "recent_trusted_count": recent_trusted_count,
+        "interval_hours": interval,
+        "next_run_at": due_at.isoformat(),
     }
 
 
@@ -85,18 +78,13 @@ def recent_trusted_publications(db, *, now: datetime | None = None) -> int:
     return sum(1 for item in candidates if is_trusted_official_guideline(item))
 
 
-def decide_radar_run(db, *, now: datetime | None = None, force: bool = False) -> dict:
+def decide_radar_run(
+    db, *, now: datetime | None = None, force: bool = False,
+    last_started_at: datetime | None = None,
+) -> dict:
     current = _utc(now)
-    if force:
-        return evaluate_schedule(now=current, force=True)
-
-    window = active_high_frequency_window(current)
-    if window is not None:
-        return evaluate_schedule(now=current)
-
-    # Ciclos normais de 4h não precisam consultar o histórico para decidir.
-    if current.hour % NORMAL_INTERVAL_HOURS == 0:
-        return evaluate_schedule(now=current)
-
     recent_count = recent_trusted_publications(db, now=current)
-    return evaluate_schedule(now=current, recent_trusted_count=recent_count)
+    return evaluate_schedule(
+        now=current, recent_trusted_count=recent_count, force=force,
+        last_started_at=last_started_at,
+    )

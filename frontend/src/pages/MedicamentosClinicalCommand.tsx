@@ -1,3 +1,4 @@
+import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Icone from "../components/Icone";
@@ -256,6 +257,8 @@ function DetalheMedicamento({ drug, onClose }: { drug: Insight; onClose: () => v
           <ClinicalContextLink to="/assistente" icon="assistente" title="Assistente Clínica" detail="Discutir o contexto" />
         </div>
       </ClinicalSection>
+
+      <ScientificReadingAccess entityType="medicamento" slug={drug.slug} />
 
       <TudoSobreEsteTema
         medicamentoSlug={drug.slug}

@@ -17,6 +17,8 @@
 # ficam de fora de propósito — não são PII sensível na mesma categoria, e
 # cursofiles pode ser grande sem ganho equivalente de risco evitado.
 #
+# A biblioteca científica compartilhada também entra no snapshot: originais
+# autorizados e artefatos derivados são imutáveis por hash, sem dados pessoais.
 # Roda no host, sem expor credenciais adicionais fora do .env.
 set -Eeuo pipefail
 
@@ -97,6 +99,7 @@ declare -A CAMINHO_NO_CONTAINER=(
   [documentofiles]="/documentos-emitidos"
   [certificadosfiles]="/certificados-a1"
   [examefiles]="/exames-pacientes"
+  [scientific-publication-library]="/scientific-publication-library"
 )
 DESTINO_VOLUMES="${BACKUP_DESTINO_VOLUMES:-$DESTINO}"
 mkdir -p "$DESTINO_VOLUMES"
@@ -123,8 +126,8 @@ for nome in "${!CAMINHO_NO_CONTAINER[@]}"; do
   echo "[$(date -Is)] Volume '$nome' empacotado: $arquivo_vol ($(du -h "$arquivo_vol" | cut -f1))"
 done
 
-REMOVIDOS_VOL="$(find "$DESTINO_VOLUMES" -maxdepth 1 \( -name 'kycfiles_*.tar.gz' -o -name 'documentofiles_*.tar.gz' -o -name 'certificadosfiles_*.tar.gz' -o -name 'examefiles_*.tar.gz' \) -mtime "+${RETENCAO_DIAS}" -print -delete | wc -l)"
-find "$DESTINO_VOLUMES" -maxdepth 1 \( -name 'kycfiles_*.tar.gz.sha256' -o -name 'documentofiles_*.tar.gz.sha256' -o -name 'certificadosfiles_*.tar.gz.sha256' -o -name 'examefiles_*.tar.gz.sha256' \) -mtime "+${RETENCAO_DIAS}" -delete
+REMOVIDOS_VOL="$(find "$DESTINO_VOLUMES" -maxdepth 1 \( -name 'kycfiles_*.tar.gz' -o -name 'documentofiles_*.tar.gz' -o -name 'certificadosfiles_*.tar.gz' -o -name 'examefiles_*.tar.gz' -o -name 'scientific-publication-library_*.tar.gz' \) -mtime "+${RETENCAO_DIAS}" -print -delete | wc -l)"
+find "$DESTINO_VOLUMES" -maxdepth 1 \( -name 'kycfiles_*.tar.gz.sha256' -o -name 'documentofiles_*.tar.gz.sha256' -o -name 'certificadosfiles_*.tar.gz.sha256' -o -name 'examefiles_*.tar.gz.sha256' -o -name 'scientific-publication-library_*.tar.gz.sha256' \) -mtime "+${RETENCAO_DIAS}" -delete
 if [[ "$REMOVIDOS_VOL" -gt 0 ]]; then
   echo "[$(date -Is)] Removidos $REMOVIDOS_VOL pacote(s) de volume com mais de ${RETENCAO_DIAS} dias."
 fi
