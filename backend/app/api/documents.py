@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import assinatura_email_ativa, current_user
-from app.core.uploads import UploadRejected, validate_file
+from app.core.uploads import UploadRejected, validate_file_async
 from app.models.audit import AuditLog
 from app.models.clinical_docs import DocumentTemplate, GeneratedDocument
 from app.models.compartilhamento import DocumentShareLink
@@ -675,7 +675,7 @@ async def enviar_assinatura_externa(
     if not conteudo:
         raise HTTPException(status_code=422, detail="Envie o arquivo assinado.")
     try:
-        validate_file(conteudo, arquivo.filename or "documento-assinado.pdf", "exam")
+        await validate_file_async(conteudo, arquivo.filename or "documento-assinado.pdf", "exam")
     except UploadRejected as erro:
         raise HTTPException(status_code=erro.status_code, detail=erro.detail) from None
     if not conteudo.startswith(b"%PDF-"):

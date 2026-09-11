@@ -12,7 +12,7 @@ from starlette.concurrency import run_in_threadpool
 
 from app.core.db import get_db
 from app.core.security import current_user
-from app.core.uploads import UploadRejected, safe_filename, validate_file
+from app.core.uploads import UploadRejected, safe_filename, validate_file_async
 from app.models.audit import AuditLog
 from app.models.scientific_user_document import ScientificUserDocument
 from app.services import cofre
@@ -111,7 +111,7 @@ async def upload_document(
         raise HTTPException(status_code=413, detail="O documento científico precisa ter no máximo 25 MB.")
     try:
         original_name = safe_filename(arquivo.filename, "documento-cientifico")
-        media_type = validate_file(content, original_name, "email")
+        media_type = await validate_file_async(content, original_name, "email")
     except UploadRejected as error:
         raise HTTPException(status_code=error.status_code, detail=error.detail) from error
     if media_type not in {

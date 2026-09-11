@@ -13,11 +13,11 @@ def test_all_public_auth_pages_use_canonical_prehome_shell():
     frame = _read("components/PublicCardiologyFrame.tsx")
     main = _read("main.tsx")
 
-    # /entrar tem a prancha sideral própria aprovada; os demais fluxos de
+    # /entrar tem a entrada arquitetônica própria aprovada; os demais fluxos de
     # autenticação compartilham o frame público do Cardiology Spaces.
-    assert 'className={`login login-gateway login-gateway--public login-gateway--${temaPublico}`}' in login
+    assert 'className={`login login-gateway login-gateway--public login-gateway--${temaPublico} corvia-atelier-login`}' in login
     assert 'data-login-theme={temaPublico}' in login
-    assert 'import "../styles/cardiology-spaces-login.css";' in login
+    assert 'import "../styles/corvia-atelier-login.css";' in login
     assert "PublicCardiologyFrame" not in login
     assert "login prehome" not in login
 
@@ -30,10 +30,10 @@ def test_all_public_auth_pages_use_canonical_prehome_shell():
         assert "login prehome" not in source
 
     for token in (
-        'className={`public-space public-space--${variant} public-space--${tone}`}',
+        'className={`public-space public-space--${variant} public-space--${tone} corvia-atelier-public`}',
         "PublicCorviaBrand",
-        'src="/corvia-mark-canonical.svg"',
-        "CARDIOLOGY SPACES",
+        'src="/atelier/corvia-logo-atelier.svg"',
+        "CorVIA Cardiology Spaces",
         "Ambiente protegido",
         "Acesso profissional · LGPD",
     ):
@@ -103,9 +103,14 @@ def test_no_browser_scale_or_zoom_workaround():
 def test_scoped_light_theme_remains_after_global_contrast_guard():
     main = _read("main.tsx")
     imports = [line.strip() for line in main.splitlines() if line.strip().startswith('import "./styles/')]
-    assert imports[-2:] == [
+    assert imports[-5:] == [
         'import "./styles/clinical-form-control-contrast.css";',
         'import "./styles/cardiology-spaces-light-mode.css";',
+        'import "./styles/corvia-atelier.css";',
+        'import "./styles/corvia-atelier-content.css";',
+        'import "./styles/corvia-atelier-surfaces.css";',
     ]
+    for sheet in ("corvia-atelier.css", "corvia-atelier-content.css", "corvia-atelier-surfaces.css"):
+        assert 'data-corvia-design="atelier"' in _read(f"styles/{sheet}")
     assert 'html[data-corvia-theme="light"]' in _read("styles/cardiology-spaces-light-mode.css")
     assert not any("prehome-register-bridge" in line or "prehome-fidelity-polish" in line for line in imports)

@@ -156,15 +156,18 @@ def test_identidade_de_navegador_canonica():
     assert "<title>CorVIA — Cardiology Spaces</title>" in index
     assert "O caminho do coração" not in index
     assert "Corvia —" not in index  # grafia legada na identidade de navegador
-    assert '<link rel="icon" type="image/svg+xml" href="/corvia-mark-canonical.svg" />' in index
+    assert '<link rel="icon" type="image/svg+xml" href="/atelier/corvia-mark-atelier.svg" />' in index
     assert 'property="og:title" content="CorVIA — Cardiology Spaces"' in index
-    assert 'content="#03101A"' in index  # theme-color alinhado ao manifest
+    assert 'content="#f7f3e8"' in index  # pérola alinhada ao manifest Atelier
+    assert 'theme_color: "#f7f3e8"' in vite
 
     # Manifest PWA canônico e sem referências mortas de assets.
     assert '"CorVIA — Cardiology Spaces"' in vite or "'CorVIA — Cardiology Spaces'" in vite
     assert "logo-horizontal.png" not in vite and "brasao.png" not in vite
     for asset in ("corvia-mark-canonical.svg", "favicon.png", "apple-touch-icon.png",
-                  "icon-192.png", "icon-512.png", "icon-maskable.png"):
+                  "icon-192.png", "icon-512.png", "icon-maskable.png",
+                  "atelier/corvia-mark-atelier.svg", "atelier/corvia-mark-atelier-192.png",
+                  "atelier/corvia-mark-atelier-512.png", "atelier/corvia-logo-atelier.png"):
         assert (ROOT / "frontend/public" / asset).is_file(), f"asset ausente: {asset}"
 
 

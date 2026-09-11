@@ -22,18 +22,19 @@ def test_prehome_approved_visual_contract_precedes_global_contrast_guard():
 def test_prehome_brand_matches_approved_corvia_identity():
     login = read("pages/Entrar.tsx")
     for token in (
-        'className={`login login-gateway login-gateway--public login-gateway--${temaPublico}`}',
+        'className={`login login-gateway login-gateway--public login-gateway--${temaPublico} corvia-atelier-login`}',
         'data-login-theme={temaPublico}',
-        'src="/corvia-mark-canonical.svg"',
-        "CARDIOLOGY SPACES",
-        "Um universo de espaços.",
+        'src="/atelier/corvia-logo-atelier.svg"',
+        "CorVIA · Cardiology Spaces",
+        "Cinco espaços de trabalho.",
         "Uma só cardiologia.",
-        "Consultório, Hospital, Ensino, Pesquisa e Gestão orbitando juntos no seu Universo Profissional.",
-        '<LoginGalaxy theme={temaPublico} />',
+        "Os espaços de trabalho mudam.",
+        "O CorVIA permanece ao seu lado.",
+        'src="/atelier/atelier-entrance.webp"',
         "Ambiente Protegido",
         "Sistema seguro",
         'to="/esqueci-senha"',
-        "cardiology-spaces-login-approved-final.css",
+        "corvia-atelier-login.css",
     ):
         assert token in login
 
@@ -50,27 +51,23 @@ def test_prehome_brand_matches_approved_corvia_identity():
     assert "login-gateway__ring" not in login
     assert "A PLATAFORMA Nº 1" not in login
 
-    # The approved galaxy moved into its own component. Both themes retain a
-    # complete embedded poster while the corresponding animated image loads.
-    galaxy = read("components/LoginGalaxy.tsx")
-    assert 'import LoginGalaxy from "../components/LoginGalaxy"' in login
-    assert 'src={theme === "dark" ? darkGalaxyPoster : lightGalaxyPoster}' in galaxy
-    assert 'loadGalaxy(theme === "light" ? lightSource : darkSource)' in galaxy
-    assert 'className="login-gateway__galaxy-poster"' in galaxy
-    assert 'className="login-gateway__galaxy-canvas"' in galaxy
-    assert '(prefers-reduced-motion: reduce)' in galaxy
-    for asset in ("galaxy-light.webp", "galaxy-dark.webp"):
-        assert (FRONTEND / "assets/login" / asset).is_file()
+    # The architectural entrance replaces the cosmic animation in both
+    # appearances. Real images remain available and motion can be disabled.
+    assert "LoginGalaxy" not in login
+    assert 'width="1536" height="1024"' in login
+    assert "prefers-reduced-motion: reduce" in read("styles/corvia-atelier-login.css")
+    for asset in ("atelier-entrance.webp", "corvia-logo-atelier.svg"):
+        assert (FRONTEND.parent / "public/atelier" / asset).is_file()
 
 
 def test_login_copy_and_all_real_auth_controls_remain_available():
     login = read("pages/Entrar.tsx")
     for token in (
-        "Entre no CorVIA",
+        'id="login-acesso-titulo" tabIndex={-1}>Bem-vindo',
         'name="tema-publico"',
         "Modo claro",
         "Modo escuro",
-        '<form className="login-gateway__form" onSubmit={enviar}>',
+        '<form className="login-gateway__form" onSubmit={enviar} aria-busy={enviando}>',
         'id="email" type="email"',
         'id="senha" type={mostrarSenha ? "text" : "password"}',
         'type="submit" disabled={enviando}',
@@ -79,7 +76,7 @@ def test_login_copy_and_all_real_auth_controls_remain_available():
         "await entrar(email.trim().toLowerCase(), senha, permanecerConectado)",
         'to="/solicitar-acesso"',
         "Novo no CorVIA?",
-        "Solicite seu Acesso",
+        "Solicitar acesso profissional",
     ):
         assert token in login
 
@@ -98,7 +95,7 @@ def test_public_login_no_longer_exposes_native_app_downloads_while_apps_are_paus
     assert "Baixar app" not in login
     assert "Aplicativo para Windows" not in login
     assert all("windows" not in href.lower() and not href.lower().endswith(".exe") for href in hrefs)
-    assert 'className="login-gateway__join" to="/solicitar-acesso"' in login
+    assert 'className="atelier-login__join" to="/solicitar-acesso"' in login
 
 
 def test_approved_prehome_css_keeps_desktop_mobile_and_dark_contracts():

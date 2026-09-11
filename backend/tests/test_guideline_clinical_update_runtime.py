@@ -1,10 +1,14 @@
 from types import SimpleNamespace
+import pytest
 
 from app.models.guideline import Guideline, GuidelineLink
 from app.models.specialty_guide import SpecialtyDisease
 from app.services import guideline_clinical_update as clinical
 from app.services import guideline_clinical_update_runtime as runtime
 from app.services.clinical_text import _safe_http_url, structured_clinical_updates
+from app.services import clinical_change_approvals as approvals
+from app.models.clinical_change_proposal import ClinicalChangeProposal
+from app.core.config import settings
 
 
 def guideline(slug="esc-2026-heart-failure"):
@@ -76,7 +80,8 @@ def test_runtime_install_replaces_core_helpers_with_idempotent_guards(monkeypatc
     monkeypatch.setattr(clinical, "_ensure_summary_document", original_summary)
 
 
-def test_disease_update_keeps_canonical_definition_and_is_idempotent(db):
+def test_owner_approved_disease_update_keeps_definition_and_reapplies_only_exact_snapshot(db, criar_usuario):
+    owner, _ = criar_usuario(email=settings.admin_email, role="admin")
     item = SpecialtyDisease(
         slug="doenca-intelligence-sem-contaminacao-teste",
         name="Doença de teste do Intelligence",
@@ -106,8 +111,15 @@ def test_disease_update_keeps_canonical_definition_and_is_idempotent(db):
     }
 
     try:
-        assert clinical._apply_override(db, source, impact, record=True) is True
+        before = approvals.snapshot(item)
+        with pytest.raises(PermissionError, match="proprietário"):
+            clinical._apply_override(db, source, impact, record=True)
+        proposals = approvals.build_proposals(db, source, {}, [impact], verified_impacts=[impact])
         db.commit()
+        proposal = next(p for p in proposals if p.payload["changes"][0]["item_type"] == "disease")
+        assert proposal.status == "pending" and approvals.snapshot(item) == before
+        assert structured_clinical_updates(db, "disease", item.id) == []
+        approvals.approve(db, proposal.id, proposal.version, owner)
         db.refresh(item)
         first_version = item.version
 
@@ -118,7 +130,7 @@ def test_disease_update_keeps_canonical_definition_and_is_idempotent(db):
             GuidelineLink.guideline_id == source.id,
             GuidelineLink.item_type == "disease",
             GuidelineLink.item_id == item.id,
-            GuidelineLink.origem == clinical.ORIGIN,
+            GuidelineLink.origem == "human_approval",
             GuidelineLink.confirmado.is_(True),
         ).one()
         assert "Mudança confirmada" in (link.trecho or "")
@@ -139,24 +151,30 @@ def test_disease_update_keeps_canonical_definition_and_is_idempotent(db):
         source.superseded_by_id = None
         db.commit()
 
-        item.source_refs = []
-        item.source_urls = []
-        item.review_note = None
+        # Direct replay is still denied. Only the exact, already-approved
+        # before snapshot may be restored after canonical reconciliation.
+        with pytest.raises(PermissionError, match="proprietário"):
+            runtime._guarded_apply_override(db, source, impact, record=False)
+        for field in ("source_refs", "source_urls", "review_note", "version"):
+            setattr(item, field, before[field])
         db.commit()
-        assert runtime._guarded_apply_override(db, source, impact, record=False) is True
-        db.commit()
+        assert structured_clinical_updates(db, "disease", item.id) == []
+        replay = runtime.reapply_confirmed_updates(db)
+        assert replay["reapplied"] == 1 and replay["legacy_unreviewed_overrides_applied"] == 0
         db.refresh(item)
         rehydrated_version = item.version
-        assert rehydrated_version == first_version + 1
+        assert rehydrated_version == first_version
         assert item.source_refs
         assert item.source_urls == ["https://www.escardio.org/teste"]
         assert item.review_note == "CorVIA Intelligence: Mudança confirmada e auditável."
         assert item.summary == "Definição clínica canônica."
-        assert runtime._guarded_apply_override(db, source, impact, record=False) is False
-        db.commit()
+        assert runtime.reapply_confirmed_updates(db)["reapplied"] == 0
         db.refresh(item)
         assert item.version == rehydrated_version
+        assert len(structured_clinical_updates(db, "disease", item.id)) == 1
     finally:
+        db.rollback()
+        db.query(ClinicalChangeProposal).filter(ClinicalChangeProposal.guideline_id == source.id).delete()
         db.query(GuidelineLink).filter(GuidelineLink.guideline_id == source.id).delete()
         db.delete(item)
         db.delete(source)

@@ -239,5 +239,9 @@ def process_meta_message(db, message, *, adapter=None):
         public_result=dict(result);public_result.pop("confirmation_token",None);public_result.pop("undo_token",None)
         return public_result
     except (HTTPException, UploadRejected, WhatsAppProviderError,UnsafeClinicalFile) as exc:
+        if isinstance(exc, UploadRejected) and exc.status_code == 503:
+            # Temporary parser admission failure must roll back the event so
+            # Meta can retry; it is not a permanently processed rejection.
+            raise
         row.status = "failed"; event.status = "failed"; event.failure_code = type(exc).__name__; event.processed_at = utcnow()
         return {"status": "failed", "error": type(exc).__name__}

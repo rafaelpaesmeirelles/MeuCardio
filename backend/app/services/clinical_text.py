@@ -3,6 +3,7 @@ from __future__ import annotations
 """Higiene de textos clínicos expostos por APIs públicas/autenticadas."""
 
 import json
+import hashlib
 import re
 from typing import Any
 from urllib.parse import urlsplit
@@ -52,6 +53,50 @@ def _safe_http_url(value: object) -> str | None:
     return candidate
 
 
+def _approved_change_payload(link_payload, proposal, *, item_type, item_id, slug,
+                             source_snapshot, target_snapshot, approval_proven):
+    """Read-only proof: a human-origin label alone is never authorization."""
+    if not proposal or proposal.status != "approved" or not approval_proven:
+        return None
+    payload = proposal.payload
+    if not isinstance(payload, dict) or not proposal.reviewer_id or not proposal.reviewed_at:
+        return None
+    fingerprint = hashlib.sha256(json.dumps(payload, ensure_ascii=False, sort_keys=True,
+        separators=(",", ":"), default=str).encode()).hexdigest()
+    if fingerprint != proposal.fingerprint or link_payload.get("fingerprint") != fingerprint:
+        return None
+    if (link_payload.get("proposal_id") != proposal.id
+            or link_payload.get("reviewer_id") != proposal.reviewer_id
+            or link_payload.get("mode") != "owner_approved_exact_snapshot"
+            or proposal.guideline_id != source_snapshot.get("id")
+            or source_snapshot.get("superseded_by_id") is not None
+            or payload.get("source") != source_snapshot):
+        return None
+    changes = payload.get("changes")
+    if not isinstance(changes, list):
+        return None
+    matching = [change for change in changes if isinstance(change, dict)
+        and change.get("item_type") == item_type and change.get("item_id") == item_id
+        and change.get("slug") == slug]
+    if len(matching) != 1:
+        return None
+    change = matching[0]
+    impact = change.get("impact")
+    if (not isinstance(impact, dict) or change.get("after") != target_snapshot
+            or impact.get("item_type") != item_type or impact.get("item_id") != item_id
+            or link_payload.get("before") != change.get("before")):
+        return None
+    # Compare all display-bearing fields to the approved snapshot, not to an
+    # arbitrary GuidelineLink JSON that happens to cite a valid proposal id.
+    for field in ("item_type", "item_id", "target_section", "override_pt", "change_summary_pt", "source_url"):
+        if link_payload.get(field) != impact.get(field):
+            return None
+    if (link_payload.get("change_summary_pt") != change.get("change_summary_pt")
+            or link_payload.get("source_url") != change.get("source_url")):
+        return None
+    return {**impact, "applied_at": link_payload.get("applied_at")}
+
+
 def structured_clinical_updates(
     db: Any,
     item_type: str,
@@ -70,7 +115,7 @@ def structured_clinical_updates(
         .filter(
             GuidelineLink.item_type == item_type,
             GuidelineLink.item_id == item_id,
-            GuidelineLink.origem == "intelligence",
+            GuidelineLink.origem.in_(("intelligence", "human_approval")),
             GuidelineLink.confirmado.is_(True),
             Guideline.superseded_by_id.is_(None),
         )
@@ -86,6 +131,23 @@ def structured_clinical_updates(
             continue
         if not isinstance(payload, dict):
             continue
+        if link.origem == "human_approval":
+            from app.models.clinical_change_proposal import ClinicalChangeProposal
+            from app.services import clinical_change_approvals as approvals
+            from app.services.guideline_clinical_update import _get_target
+
+            proposal_id = payload.get("proposal_id")
+            if type(proposal_id) is not int or proposal_id <= 0:
+                continue
+            proposal = db.get(ClinicalChangeProposal, proposal_id)
+            target = _get_target(db, item_type, item_id)
+            if proposal is None or target is None:
+                continue
+            payload = _approved_change_payload(payload, proposal, item_type=item_type,
+                item_id=item_id, slug=target.slug, source_snapshot=approvals.source_identity(guideline),
+                target_snapshot=approvals.snapshot(target), approval_proven=approvals.approval_proof(db, proposal))
+            if payload is None:
+                continue
         change_summary = payload.get("change_summary_pt")
         recommendation = payload.get("override_pt")
         if not change_summary and not recommendation:

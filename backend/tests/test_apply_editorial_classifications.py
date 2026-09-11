@@ -1,7 +1,6 @@
 """Real CLI transactions against the isolated QA database; no provider/network calls."""
 import hashlib
 import json
-import os
 from pathlib import Path
 import subprocess
 import sys
@@ -13,6 +12,7 @@ from sqlalchemy import text
 from app.core.db import SessionLocal
 from app.models.content import Document
 from app.models.guideline import Guideline, GuidelineLink
+from _database_guard import assert_isolated_test_database
 
 SCOPE = 'editorial_metadata_only_no_publication_authorization'
 CAS_FIELDS = (
@@ -59,10 +59,18 @@ def _write_ledger(directory, entries):
     return path
 
 
+@pytest.fixture(autouse=True, scope='module')
+def _isolated_database_before_cleanup():
+    # A module fixture runs before the shared function-level TRUNCATE fixture.
+    # Check the effective engine URL, not an environment name that DATABASE_URL
+    # could silently override; do not open a connection until it passes.
+    assert_isolated_test_database(SessionLocal.kw['bind'].url)
+
+
 @pytest.fixture
 def runtime_ledger(tmp_path):
     # A shared fixture must never accidentally target the deployment database.
-    assert os.environ.get('POSTGRES_DB', '').startswith('corvia_editorial_20260910_')
+    assert_isolated_test_database(SessionLocal.kw['bind'].url)
     marker = 'editorial-cli-' + uuid.uuid4().hex
     ids, guideline_ids, entries, before = [], [], [], {}
     with SessionLocal() as db:

@@ -42,6 +42,7 @@ from app.services.scientific_loader_safety import (
     enforce_safe_publication,
 )
 from migrations.versions import f89s20260901_scientific_loader_metadata as metadata_migration
+from _editorial_fixtures import write_empty_editorial_registry
 
 
 class _PublicationBase(DeclarativeBase):
@@ -1020,8 +1021,9 @@ def test_reconcile_dry_run_reverte_publicacao_e_despublicacoes(monkeypatch):
     db.close()
 
 
-def test_reconcile_fecha_publicacao_inelegivel_antes_de_loader_parcial(monkeypatch):
+def test_reconcile_fecha_publicacao_inelegivel_antes_de_loader_parcial(monkeypatch, tmp_path):
     events = []
+    write_empty_editorial_registry(tmp_path)
 
     class PreflightSession:
         def commit(self):
@@ -1058,7 +1060,7 @@ def test_reconcile_fecha_publicacao_inelegivel_antes_de_loader_parcial(monkeypat
     monkeypatch.setattr(
         reconciliation,
         "_load_full_corpus_authorization",
-        lambda canonical, _sources: (
+        lambda canonical, _sources, **_kwargs: (
             {front: set() for front in canonical},
             None,
         ),
@@ -1091,7 +1093,12 @@ def test_reconcile_fecha_publicacao_inelegivel_antes_de_loader_parcial(monkeypat
     monkeypatch.setattr(reconciliation, "_load_front", load)
 
     with pytest.raises(RuntimeError, match="falha tardia"):
-        reconciliation.reconcile()
+        # This unit tests ordering inside the prepared import, not the outer
+        # schema-2 authorization gate (covered by scoped-publication tests).
+        prepared = {front: reconciliation._prepare_front(front, config)
+                    for front, config in reconciliation.FRONTS.items()}
+        reconciliation._reconcile_prepared(prepared, publish_reviewed=False, allow_partial=True,
+            authorization_path=tmp_path / "unused-publication.json", evidence_root=tmp_path)
 
     assert events == [
         "sync:False:False",

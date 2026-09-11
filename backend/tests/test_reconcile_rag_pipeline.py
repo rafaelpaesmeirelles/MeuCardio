@@ -13,14 +13,20 @@ mesmo quando há conteúdo novo publicado; (2) o comando de backfill indexa
 documento + frente multi corretamente e é idempotente."""
 
 import pytest
+import json
 from sqlalchemy import text
 
 from app.commands.reconcile_content import reconcile
+from app.commands import reconcile_content as reconciliation
 from app.commands.reindex_rag_completo_20260902 import rodar
 from app.core.config import settings
 from app.models.content import Document
 from app.models.evidence import EvidenceRecord
 from app.models.rag import DocumentChunk, KnowledgeChunk
+from app.services.corpus_release_authorization import (
+    FULL_CORPUS_DECISION, FULL_CORPUS_SCOPE, build_front_fingerprint, corpus_inventory_sha256,
+)
+from _editorial_fixtures import write_empty_editorial_registry
 
 
 class _ProvedorFake:
@@ -42,7 +48,7 @@ def _acervo_limpo(db):
     db.commit()
 
 
-def test_reconcile_nunca_chama_rag(db, monkeypatch):
+def test_reconcile_nunca_chama_rag(db, monkeypatch, tmp_path):
     """Invariante da seção "arquitetura de deploy": reconcile() não pode
     depender do provedor de embeddings. Se qualquer caminho de código dentro
     de reconcile() chamar obter_provedor_embeddings, este teste explode —
@@ -53,16 +59,28 @@ def test_reconcile_nunca_chama_rag(db, monkeypatch):
 
     monkeypatch.setattr("app.services.rag.obter_provedor_embeddings", _explode)
     monkeypatch.setattr("app.services.rag_multi.obter_provedor_embeddings", _explode)
-    # Sem relação com o RAG: um release de corpus integral autorizado em
-    # produção (ver `corpus_release_authorization.py`) exigiria os milhares de
-    # itens exatos daquele release — desligado aqui para isolar só o
-    # comportamento de RAG que este teste verifica.
+    # Explicit schema-1 test release: keep the actual authorization/hash checks
+    # and never inherit the changing production schema-2 manifest or corpus.
     from collections import defaultdict
-
-    monkeypatch.setattr(
-        "app.commands.reconcile_content._load_full_corpus_authorization",
-        lambda canonical_slugs, sources: (defaultdict(set), None),
-    )
+    source = tmp_path / "content"
+    source.mkdir()
+    slug = "reconcile-nao-indexa-teste"
+    (source / "fixture.md").write_text(
+        f"---\nslug: {slug}\ntitle: Documento de teste\nkind: documento\ntheme: Farmacologia\n"
+        "source_tier: A\nreview_status: revisado\npublished: true\n---\n## Seção\nConteúdo de teste do documento.\n")
+    fronts = {"documentos": {"path": str(source), "model": Document, "minimum": 1, "loader": None}}
+    fingerprint = {"documentos": build_front_fingerprint(source, {slug}, {slug: "revisado"})}
+    authorization = tmp_path / "test-release.json"
+    authorization.write_text(json.dumps({"schema_version": 1, "release": "isolated-rag-contract",
+        "decision": FULL_CORPUS_DECISION, "scope": FULL_CORPUS_SCOPE,
+        "approval_basis": "Synthetic test fixture only; no real content or publication authorization.",
+        "expected_total": 1, "inventory_sha256": corpus_inventory_sha256(fingerprint), "fronts": fingerprint}))
+    monkeypatch.setattr(reconciliation, "FRONTS", fronts)
+    monkeypatch.setattr(reconciliation, "EDITORIAL_KIND_REGISTRY_PATH", write_empty_editorial_registry(tmp_path))
+    monkeypatch.setattr(reconciliation, "_load_editorial_approvals", lambda: defaultdict(set))
+    monkeypatch.setattr(reconciliation, "_load_controlled_substances", lambda _db: {})
+    monkeypatch.setattr(reconciliation, "_migrate_study_track_progress", lambda _db: 0)
+    monkeypatch.setattr(reconciliation, "backfill_mesmo_tema", lambda _db: {})
 
     db.add(Document(
         slug="reconcile-nao-indexa-teste", title="Documento de teste", kind="documento",
@@ -71,7 +89,7 @@ def test_reconcile_nunca_chama_rag(db, monkeypatch):
     ))
     db.commit()
 
-    resultado = reconcile(publish_reviewed=False, allow_partial=True)
+    resultado = reconcile(publish_reviewed=False, allow_partial=True, authorization_path=authorization)
 
     assert resultado["rag"]["status"] == "nao_executado_aqui"
     assert db.query(DocumentChunk).count() == 0

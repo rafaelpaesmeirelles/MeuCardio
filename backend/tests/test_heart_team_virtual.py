@@ -318,6 +318,23 @@ def test_heart_upload_persists_only_sanitized_bytes_contract():
     assert "guardar(source" not in source
 
 
+def test_heart_upload_preserves_retryable_validation_status(monkeypatch):
+    import asyncio
+    from unittest.mock import AsyncMock, Mock
+    from fastapi import HTTPException
+    from app.api import heart_team as api
+    from app.core.uploads import UploadRejected
+    monkeypatch.setattr(api, "_owned_case", lambda *args, **kwargs: SimpleNamespace(status="draft"))
+    monkeypatch.setattr(api, "validate_file_async", AsyncMock(side_effect=UploadRejected(503, "Validação ocupada")))
+    store = Mock()
+    monkeypatch.setattr(api, "guardar", store)
+    upload = SimpleNamespace(filename="fixture.pdf", read=AsyncMock(return_value=b"synthetic"))
+    with pytest.raises(HTTPException) as exc:
+        asyncio.run(api.upload_attachments(1, files=[upload], user=SimpleNamespace(id=1), db=Mock()))
+    assert exc.value.status_code == 503 and exc.value.detail == "Validação ocupada"
+    store.assert_not_called()
+
+
 def test_heart_team_rbac_requires_approved_medical_profile_and_crm():
     physician = SimpleNamespace(is_active=True, investidor=False, role="medico", status="aprovado", profession="Médico cardiologista", council_name="CRM", council_number="123", council_state="SP", crm=None)
     investor = SimpleNamespace(**{**physician.__dict__, "investidor": True})

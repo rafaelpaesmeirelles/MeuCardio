@@ -6,6 +6,7 @@ import io
 
 import pytest
 from PIL import Image
+from reportlab.pdfgen.canvas import Canvas
 
 from app.core.config import settings
 from app.models.audit import AuditLog
@@ -44,6 +45,14 @@ def _arquivos(**overrides):
     }
     base.update(overrides)
     return base
+
+
+def _pdf_documento_sintetico() -> bytes:
+    output = io.BytesIO()
+    canvas = Canvas(output)
+    canvas.drawString(30, 750, "Documento sintetico para teste KYC")
+    canvas.save()
+    return output.getvalue()
 
 
 def test_status_sem_submissao(client, db, criar_usuario):
@@ -127,7 +136,7 @@ def test_admin_ve_documento_inexistente_no_registro_e_404(client, db, criar_usua
     arquivos = _arquivos()
     del arquivos["doc_pessoal_frente"]
     del arquivos["doc_pessoal_verso"]
-    arquivos["doc_pessoal_digital"] = ("doc.pdf", b"%PDF-1.4 conteudo\n%%EOF", "application/pdf")
+    arquivos["doc_pessoal_digital"] = ("doc.pdf", _pdf_documento_sintetico(), "application/pdf")
     client.post("/api/kyc/submeter", files=arquivos, headers=_headers(token))
     item_id = client.get("/api/admin/kyc", headers=_headers(token_admin)).json()[0]["id"]
 

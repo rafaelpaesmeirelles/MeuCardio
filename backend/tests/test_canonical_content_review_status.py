@@ -5,8 +5,8 @@ editorial posterior. A fronteira de segurança de publicação fica na
 reconciliação: apenas `review_status=revisado` é publicado e qualquer registro
 que deixe de estar revisado é despublicado.
 
-A release schema2 preserva explicitamente nove documentos pendentes dentro de
-56 identidades em quarentena; somente a partição autorizada pode ser publicada.
+A release schema2 define a partição exata vigente. A quantidade de pendências
+pode mudar em uma nova aprovação; a barreira de quarentena não pode mudar.
 """
 
 from __future__ import annotations
@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 import re
+import pytest
 
 from app.services.disease_manifest import load_disease_records
 from app.services.carregar_triagem_sintomas import load_triage_records
@@ -99,17 +100,12 @@ def test_manifesto_nao_marca_como_publicado_um_registro_pendente():
     assert conflitos == []
 
 
-def test_documentos_publicaveis_revisados_e_pendencias_em_quarentena_explicita():
-    import frontmatter
-    release = json.loads((EDITORIAL_APPROVALS_DIR / "scoped-corpus-release-20260910.json").read_text())
-    assert release["schema_version"] == 2
-    approved = set(release["approved"]["documentos"])
-    quarantine = set(release["quarantined"]["documentos"])
+def _assert_document_partition(records, approved, quarantine):
     seen, pending = set(), set()
     assert not approved & quarantine
-    for path in sorted((REPOSITORY_ROOT / "content").rglob("*.md")):
-        post = frontmatter.load(path)
-        slug, status = post.metadata["slug"], post.metadata.get("review_status")
+    for path, metadata in records:
+        slug, status = metadata["slug"], metadata.get("review_status")
+        assert slug not in seen, slug
         seen.add(slug)
         assert status in {"revisado", "pendente_revisao"}, str(path)
         if slug in approved:
@@ -117,9 +113,37 @@ def test_documentos_publicaveis_revisados_e_pendencias_em_quarentena_explicita()
         if status != "revisado":
             pending.add(slug)
             assert slug in quarantine and slug not in approved, slug
-            assert post.metadata.get("published") is not True, slug
+            assert metadata.get("published") is not True, slug
     assert seen == approved | quarantine
-    # Seven uncovered pending sources plus two duplicate originals must remain
-    # visibly pending; the release must never change their status to pass CI.
-    assert len(pending) == 9
-    assert len(quarantine) == 56
+    return pending
+
+
+def test_documentos_publicaveis_revisados_e_pendencias_em_quarentena_explicita():
+    import frontmatter
+    release = json.loads((EDITORIAL_APPROVALS_DIR / "scoped-corpus-release-20260910.json").read_text())
+    assert release["schema_version"] == 2
+    records = [(path, frontmatter.load(path).metadata)
+               for path in sorted((REPOSITORY_ROOT / "content").rglob("*.md"))]
+    _assert_document_partition(records, set(release["approved"]["documentos"]),
+                               set(release["quarantined"]["documentos"]))
+
+
+def test_partition_retains_pending_and_reviewed_quarantine_without_publication():
+    records = [
+        ("approved.md", {"slug": "approved", "review_status": "revisado"}),
+        ("pending.md", {"slug": "pending", "review_status": "pendente_revisao", "published": False}),
+        ("duplicate.md", {"slug": "duplicate", "review_status": "revisado", "published": False}),
+    ]
+    assert _assert_document_partition(records, {"approved"}, {"pending", "duplicate"}) == {"pending"}
+    assert records[1][1]["review_status"] == "pendente_revisao"
+    assert records[1][1]["published"] is False
+
+
+@pytest.mark.parametrize("approved,quarantine,published", [
+    ({"pending"}, set(), False), (set(), set(), False),
+    (set(), {"pending"}, True), ({"pending"}, {"pending"}, False),
+])
+def test_partition_rejects_pending_approval_missing_scope_or_publication(approved, quarantine, published):
+    with pytest.raises(AssertionError):
+        _assert_document_partition([("pending.md", {"slug": "pending", "review_status": "pendente_revisao",
+                                                   "published": published})], approved, quarantine)

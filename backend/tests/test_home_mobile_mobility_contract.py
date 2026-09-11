@@ -196,7 +196,7 @@ def test_navegacao_reorganizada_sem_eliminar_funcoes_protegidas():
 
     for fonte in (desktop, mobile):
         assert "Clínica & Decisão" in fonte
-        assert "Trabalho & Assistência" in fonte
+        assert 'title: "Assistência", items: TRABALHO_ASSISTENCIA' in fonte
         assert "Rede & Conectividade" in fonte
         for rota in (
             "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas",
@@ -213,7 +213,7 @@ def test_navegacao_reorganizada_sem_eliminar_funcoes_protegidas():
     assert "Administração & Conta" in desktop
     assert "/documentos-cientificos-ia" in desktop
 
-    assert "Estudos & Educação" in mobile
+    assert 'title: "Ciência & Ensino", items: ESTUDO_EDUCACAO' in mobile
     assert "Ferramentas & Produtividade" in mobile
     assert "Administração & Conta" in mobile
     assert "/tour?origem=assinatura&modo=quick" in mobile

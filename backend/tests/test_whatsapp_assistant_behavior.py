@@ -1,13 +1,15 @@
 from datetime import timedelta
 import asyncio,json
+import threading
 from types import SimpleNamespace
-from unittest.mock import Mock
+from unittest.mock import AsyncMock, Mock
 
 import pytest
 from fastapi import HTTPException
 
 from app.api import whatsapp as api
 from app.core.config import settings
+from app.core.uploads import UploadRejected
 from app.models.user import User
 from app.models.whatsapp import (
     WhatsAppCommand, WhatsAppHeartTeamJob, WhatsAppLink, WhatsAppMessage,
@@ -101,6 +103,141 @@ def test_public_webhook_response_is_status_only_and_redacts_all_tokens(monkeypat
     response=asyncio.run(api.webhook(Request(),x_hub_signature_256="signed",db=db))
     assert response=={"ok":True,"processed":1,"results":[{"status":"processed"}]}
     assert secret not in repr(response) and "undo-secret" not in repr(response)
+
+
+def test_webhook_rejects_invalid_hmac_before_worker_or_adapter(monkeypatch):
+    class Request:
+        async def body(self): return b'{}'
+    worker = AsyncMock()
+    adapter = Mock()
+    monkeypatch.setattr(api, "feature_guard", lambda: None)
+    monkeypatch.setattr(api, "verify_meta_signature", lambda *args: False)
+    monkeypatch.setattr(api, "_await_webhook_processing", worker)
+    monkeypatch.setattr(api, "get_adapter", adapter)
+    with pytest.raises(HTTPException) as exc:
+        asyncio.run(api.webhook(Request(), x_hub_signature_256="invalid", db=DB()))
+    assert exc.value.status_code == 401
+    worker.assert_not_awaited()
+    adapter.assert_not_called()
+
+
+def test_webhook_worker_preserves_message_commit_and_rollback_order(monkeypatch):
+    events = []
+    db = SimpleNamespace(commit=lambda: events.append("commit"), rollback=lambda: events.append("rollback"))
+    monkeypatch.setattr(api, "iter_meta_messages", lambda payload: payload)
+    def process(_db, message, **kwargs):
+        events.append(message)
+        if message == "invalid": raise ValueError("synthetic failure")
+        return {"status": "processed"}
+    monkeypatch.setattr(api, "process_meta_message", process)
+    assert api._process_webhook_messages(db, ["first", "invalid", "last"], None) == [
+        {"status": "processed"}, {"status": "failed", "error": "ValueError"}, {"status": "processed"}]
+    assert events == ["first", "commit", "invalid", "rollback", "last", "commit"]
+
+
+def test_webhook_admission_is_nonblocking_and_rejected_before_database_use(monkeypatch):
+    class Request:
+        async def body(self): return b'{}'
+    slot = threading.BoundedSemaphore(1)
+    slot.acquire()
+    process = Mock()
+    db = DB()
+    monkeypatch.setattr(api, "_WEBHOOK_WORK_SLOTS", slot)
+    monkeypatch.setattr(api, "feature_guard", lambda: None)
+    monkeypatch.setattr(api, "verify_meta_signature", lambda *args: True)
+    monkeypatch.setattr(api, "get_adapter", Mock)
+    monkeypatch.setattr(api, "process_meta_message", process)
+    try:
+        with pytest.raises(HTTPException) as exc:
+            asyncio.run(asyncio.wait_for(api.webhook(Request(), x_hub_signature_256="signed", db=db), 1))
+        assert exc.value.status_code == 503
+        process.assert_not_called()
+        assert db.commits == 0 and db.rollbacks == 0
+    finally: slot.release()
+
+
+def test_webhook_cancellation_waits_for_worker_and_session_without_blocking_loop(monkeypatch):
+    started, release = threading.Event(), threading.Event()
+    events, worker_threads = [], []
+    db = SimpleNamespace(closed=False)
+    def commit():
+        assert not db.closed
+        worker_threads.append(threading.get_ident())
+        events.append("commit")
+    db.commit = commit
+    db.rollback = lambda: events.append("rollback")
+    monkeypatch.setattr(api, "iter_meta_messages", lambda payload: payload)
+    def process(_db, _message, **kwargs):
+        worker_threads.append(threading.get_ident())
+        started.set()
+        assert release.wait(3), "test worker timed out"
+        assert not db.closed
+        events.append("processed")
+        return {"status": "processed"}
+    monkeypatch.setattr(api, "process_meta_message", process)
+    async def run():
+        async def request():
+            try: await api._await_webhook_processing(db, ["synthetic"], None)
+            finally:
+                db.closed = True
+                events.append("closed")
+        task = asyncio.create_task(request())
+        try:
+            async def entered():
+                while not started.is_set(): await asyncio.sleep(0)
+            await asyncio.wait_for(entered(), 1)
+            # The event loop advances while the synchronous worker is blocked.
+            assert not task.done() and not db.closed
+            for _ in range(2):
+                task.cancel()
+                await asyncio.sleep(0)
+                assert not task.done() and not db.closed
+                assert not api._WEBHOOK_WORK_SLOTS.acquire(blocking=False)
+        finally:
+            release.set()
+        with pytest.raises(asyncio.CancelledError): await asyncio.wait_for(task, 2)
+    asyncio.run(run())
+    assert events == ["processed", "commit", "closed"]
+    assert len(set(worker_threads)) == 1 and worker_threads[0] != threading.get_ident()
+    assert api._WEBHOOK_WORK_SLOTS.acquire(blocking=False)
+    api._WEBHOOK_WORK_SLOTS.release()
+
+
+def test_transient_upload_busy_rolls_back_and_returns_retryable_http_503(monkeypatch):
+    class Request:
+        async def body(self): return b'{}'
+    db = DB()
+    monkeypatch.setattr(api, "feature_guard", lambda: None)
+    monkeypatch.setattr(api, "verify_meta_signature", lambda *args: True)
+    monkeypatch.setattr(api, "get_adapter", Mock)
+    monkeypatch.setattr(api, "iter_meta_messages", lambda payload: ["synthetic"])
+    def busy(*args, **kwargs): raise UploadRejected(503, "Validação temporariamente ocupada")
+    monkeypatch.setattr(api, "process_meta_message", busy)
+    with pytest.raises(HTTPException) as exc:
+        asyncio.run(api.webhook(Request(), x_hub_signature_256="signed", db=db))
+    assert exc.value.status_code == 503
+    assert db.rollbacks == 1 and db.commits == 0
+
+
+@pytest.mark.parametrize("status", [422, 503])
+def test_inbound_transient_validation_does_not_persist_failure_or_send_reply(monkeypatch, status):
+    link, user = link_user()
+    db = DB({WhatsAppWebhookEvent: [], WhatsAppLink: [link], User: [user]})
+    adapter = Mock()
+    reply = Mock()
+    monkeypatch.setattr(inbound, "allow_rate", lambda *args, **kwargs: True)
+    monkeypatch.setattr(inbound, "cifrar_campo", lambda *args: b"encrypted")
+    monkeypatch.setattr(inbound, "_audit", lambda *args, **kwargs: None)
+    def reject(*args): raise UploadRejected(status, "synthetic validation rejection")
+    monkeypatch.setattr(inbound, "_validate_media", reject)
+    monkeypatch.setattr(inbound, "_deliver_reply", reply)
+    message = {"id": "synthetic-busy", "from": "5511999999999", "type": "document", "document": {"id": "fixture"}}
+    if status == 503:
+        with pytest.raises(UploadRejected): inbound.process_meta_message(db, message, adapter=adapter)
+        assert all(row.status != "failed" for row in db.added if isinstance(row, (WhatsAppWebhookEvent, WhatsAppMessage)))
+    else:
+        assert inbound.process_meta_message(db, message, adapter=adapter)["status"] == "failed"
+    reply.assert_not_called()
 
 
 def test_audio_is_downloaded_encrypted_transcribed_then_waits_for_review(monkeypatch):

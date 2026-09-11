@@ -29,8 +29,11 @@ def test_root_has_visible_recovery_instead_of_white_screen():
 def test_service_worker_never_substitutes_api_json_with_spa_shell():
     config = _read("frontend/vite.config.ts")
 
-    assert r"navigateFallbackDenylist: [/^\/api\//]" in config
+    denylist = config.split("navigateFallbackDenylist:", 1)[1].split("]", 1)[0]
+    assert r"/^\/api\//" in denylist
+    assert r"/^\/media\//" in denylist
     assert '!url.pathname.startsWith("/api/")' in config
+    assert '!url.pathname.startsWith("/media/")' in config
 
 
 def test_mobile_media_query_supports_legacy_ios_listener():

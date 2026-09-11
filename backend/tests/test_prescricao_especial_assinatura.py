@@ -1,5 +1,6 @@
 import asyncio
 import io
+from unittest.mock import AsyncMock
 
 import pytest
 from fastapi import HTTPException, UploadFile
@@ -75,10 +76,12 @@ def test_upload_externo_rejeita_pdf_assinado_de_outro_documento(db, criar_usuari
         "ler_bytes",
         lambda _registro: b"%PDF-original-corvia",
     )
-    monkeypatch.setattr(prescricao_especial, "validate_file", lambda *_args, **_kwargs: None)
+    validation = AsyncMock(return_value=None)
+    monkeypatch.setattr(prescricao_especial, "validate_file_async", validation)
 
     upload = UploadFile(filename="assinado.pdf", file=io.BytesIO(b"%PDF-outro-documento-assinado"))
     with pytest.raises(HTTPException) as exc:
         asyncio.run(prescricao_especial.assinatura_externa(g.id, upload, db=db, user=user))
     assert exc.value.status_code == 422
     assert "não corresponde" in str(exc.value.detail)
+    validation.assert_awaited_once_with(b"%PDF-outro-documento-assinado", "assinado.pdf", "exam")

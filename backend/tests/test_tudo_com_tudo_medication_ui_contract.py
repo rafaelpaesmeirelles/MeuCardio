@@ -33,7 +33,12 @@ def test_busca_ancora_medicamento_e_abre_cada_frente_na_rota_correta():
     assert "/drug-insights/" in fonte
     assert "brand_names?.some" in fonte
     assert "commercial_names?.some" in fonte
-    assert "Definição da doença" in fonte
+    overview = (REPO_ROOT / "frontend/src/components/TctDiseaseOverview.tsx").read_text(encoding="utf-8")
+    assert '<h2 id={headingId}>O que é {disease.name}?</h2>' in overview
+    assert 'aria-label={detail ? "Definição" : "Resumo disponível"}' in overview
+    assert '<ClinicalText>{summary}</ClinicalText>' in overview
+    assert '<TctDiseaseOverview disease={primaryDisease} />' in fonte
+    assert fonte.index('<TctDiseaseOverview disease={primaryDisease} />') < fonte.index('<PainelDrug d={drug} />')
     assert "ORDEM_DOENCA" in fonte
     assert '["Visão geral e características", "Fundamentos e conteúdo de referência", "/biblioteca"' in fonte
     assert '["Estudos", "Literatura original e trabalhos científicos", "/estudos"' in fonte

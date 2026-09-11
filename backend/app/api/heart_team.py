@@ -12,7 +12,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user, require_admin
-from app.core.uploads import safe_filename, validate_file
+from app.core.uploads import UploadRejected, safe_filename, validate_file_async
 from app.models.audit import AuditLog
 from app.models.heart_team import (
     HeartTeamAttachment, HeartTeamAuditEvent, HeartTeamCase, HeartTeamFinalReview,
@@ -158,8 +158,11 @@ async def upload_attachments(case_id: int, files: list[UploadFile] = File(...), 
     staged = []
     for upload in files:
         source = await upload.read()
-        filename = safe_filename(upload.filename)
-        media_type = validate_file(source, filename, "clinical_exam")
+        try:
+            filename = safe_filename(upload.filename)
+            media_type = await validate_file_async(source, filename, "clinical_exam")
+        except UploadRejected as exc:
+            raise HTTPException(status_code=exc.status_code, detail=exc.detail) from exc
         try:
             sanitized, sanitized_media_type = sanitize_clinical_file(source, media_type)
         except UnsafeClinicalFile as exc:

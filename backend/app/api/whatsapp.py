@@ -1,12 +1,14 @@
-import json,re
+import asyncio,json,re,threading
 from datetime import timedelta
 from pathlib import Path
 from fastapi import APIRouter,BackgroundTasks,Depends,Header,HTTPException,Query,Request,Response
 from sqlalchemy import func
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
+from starlette.concurrency import run_in_threadpool
 from app.core.config import settings
 from app.core.db import get_db
+from app.core.uploads import UploadRejected
 from app.core.security import current_user,hash_password,require_admin
 from app.models.user import User
 from app.models.whatsapp import *
@@ -20,6 +22,8 @@ from app.services.whatsapp_adapter import get_adapter
 from app.services.whatsapp_jobs import process_pending_heart_team_jobs
 from app.services.whatsapp_inbound import iter_meta_messages,process_meta_message
 from app.services.whatsapp_intents import parse_intent
+
+_WEBHOOK_WORK_SLOTS=threading.BoundedSemaphore(1)
 
 router=APIRouter(prefix="/api/whatsapp-assistant",tags=["whatsapp-assistant"]);public_router=APIRouter(prefix="/api/whatsapp-assistant/meta",tags=["whatsapp-meta"]);admin_router=APIRouter(prefix="/api/admin/whatsapp",tags=["admin-whatsapp"])
 def _raw_pii_allowed(text,kinds):
@@ -148,20 +152,51 @@ def _safe_reply_payload(r):
 def verify(hub_mode:str|None=Query(None,alias="hub.mode"),hub_verify_token:str|None=Query(None,alias="hub.verify_token"),hub_challenge:str|None=Query(None,alias="hub.challenge")):
  if hub_mode=="subscribe" and hub_verify_token==settings.whatsapp_meta_verify_token:return Response(hub_challenge or "")
  raise HTTPException(403,"Inválido")
+def _process_webhook_messages(db,payload,adapter):
+ results=[]
+ for message in iter_meta_messages(payload):
+  try:
+   result=process_meta_message(db,message,adapter=adapter);db.commit();results.append(result)
+  except IntegrityError:
+   db.rollback();results.append({"status":"duplicate"})
+  except UploadRejected as exc:
+   db.rollback()
+   if exc.status_code==503:raise
+   results.append({"status":"failed","error":type(exc).__name__})
+  except Exception as exc:
+   db.rollback();results.append({"status":"failed","error":type(exc).__name__})
+ return results
+
+async def _await_webhook_processing(db,payload,adapter):
+ # One worker owns the complete batch, including its sequential commits and
+ # rollbacks. The request-scoped Session cannot close while it is still used.
+ if not _WEBHOOK_WORK_SLOTS.acquire(blocking=False):
+  raise UploadRejected(503,"O processamento de mensagens está ocupado. Tente novamente em instantes.")
+ def process_and_release():
+  try:return _process_webhook_messages(db,payload,adapter)
+  finally:_WEBHOOK_WORK_SLOTS.release()
+ try:job=asyncio.create_task(run_in_threadpool(process_and_release))
+ except BaseException:
+  _WEBHOOK_WORK_SLOTS.release();raise
+ try:
+  return await asyncio.shield(job)
+ except asyncio.CancelledError:
+  while not job.done():
+   try:await asyncio.shield(job)
+   except asyncio.CancelledError:continue
+   except Exception:break
+  if not job.cancelled():job.exception()
+  raise
+
 @public_router.post("/webhook")
 async def webhook(request:Request,x_hub_signature_256:str|None=Header(None),db:Session=Depends(get_db)):
  feature_guard();body=await request.body()
  if not verify_meta_signature(body,x_hub_signature_256):raise HTTPException(401,"Assinatura inválida")
  try:payload=json.loads(body)
  except ValueError:raise HTTPException(400,"JSON inválido")
- adapter=get_adapter();results=[]
- for message in iter_meta_messages(payload):
-  try:
-   result=process_meta_message(db,message,adapter=adapter);db.commit();results.append(result)
-  except IntegrityError:
-   db.rollback();results.append({"status":"duplicate"})
-  except Exception as exc:
-   db.rollback();results.append({"status":"failed","error":type(exc).__name__})
+ adapter=get_adapter()
+ try:results=await _await_webhook_processing(db,payload,adapter)
+ except UploadRejected as exc:raise HTTPException(status_code=exc.status_code,detail=exc.detail) from exc
  public_results=[{"status":x.get("status") or "processed"} for x in results]
  return {"ok":True,"processed":sum(x.get("status") not in {"duplicate","invalid"} for x in results),"results":public_results}
 @admin_router.post("/retention/purge")

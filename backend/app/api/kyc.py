@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 
 from app.core.db import get_db
 from app.core.security import current_user
-from app.core.uploads import UploadRejected, validate_file
+from app.core.uploads import UploadRejected, validate_file_async
 from app.models.kyc import KycVerification
 from app.models.user import User
 from app.services.investidor_demo import MENSAGEM_MODO_INVESTIDOR
@@ -33,7 +33,7 @@ async def _ler(arquivo: UploadFile | None) -> bytes | None:
     if not conteudo:
         return None
     try:
-        validate_file(conteudo, arquivo.filename or "documento", "exam")
+        await validate_file_async(conteudo, arquivo.filename or "documento", "exam")
     except UploadRejected as erro:
         raise HTTPException(status_code=erro.status_code, detail=f"'{arquivo.filename}': {erro.detail}") from None
     return conteudo

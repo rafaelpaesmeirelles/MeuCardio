@@ -9,6 +9,7 @@ from app.commands import reconcile_content as rc
 from app.models.content import Document
 from app.services import knowledge_graph as kg
 from app.services.scientific_loader_safety import publication_quarantine, enforce_safe_publication
+from _editorial_fixtures import write_empty_editorial_registry
 
 
 def document(slug, published=True):
@@ -123,6 +124,9 @@ def test_native_commits_cannot_reopen_frozen_records_on_later_failure(documents_
     db = documents_only
     db.add_all([document("approved"), document("excluded")])
     db.commit()
+    # This snapshot contains no metadata corrections. Validate a real empty,
+    # hash-bound ledger instead of loading unrelated production evidence.
+    write_empty_editorial_registry(tmp_path)
     source = tmp_path / "content"
     source.mkdir()
     for slug in ("approved", "excluded"):

@@ -3,6 +3,7 @@ import io
 
 import pytest
 from PIL import Image
+from reportlab.pdfgen.canvas import Canvas
 
 from app.core.config import settings
 from app.models.kyc import KycVerification
@@ -21,6 +22,14 @@ def _jpeg(cor: tuple[int, int, int]) -> bytes:
     buf = io.BytesIO()
     Image.new("RGB", (10, 10), color=cor).save(buf, format="JPEG")
     return buf.getvalue()
+
+
+def _pdf_documento_sintetico() -> bytes:
+    output = io.BytesIO()
+    canvas = Canvas(output)
+    canvas.drawString(30, 750, "Documento sintetico para teste KYC")
+    canvas.save()
+    return output.getvalue()
 
 
 def _tornar_convidado(db, user):
@@ -95,7 +104,7 @@ def test_sem_dispensa_documento_profissional_e_selfie_continuam_obrigatorios(cli
     _tornar_convidado(db, user)
 
     apenas_pessoal = {
-        "doc_pessoal_digital": ("doc.pdf", b"%PDF-1.4\n%%EOF", "application/pdf"),
+        "doc_pessoal_digital": ("doc.pdf", _pdf_documento_sintetico(), "application/pdf"),
     }
     resp = client.post("/api/kyc/submeter", files=apenas_pessoal, headers=_headers(token))
     assert resp.status_code == 422

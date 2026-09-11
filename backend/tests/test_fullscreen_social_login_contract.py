@@ -72,35 +72,29 @@ def test_apple_uses_signed_client_secret_and_verified_identity_token():
 
 def test_login_screen_uses_dynamic_viewport_without_social_buttons():
     login = read(FRONTEND / "pages" / "Entrar.tsx")
-    css = compact(read(FRONTEND / "styles" / "cardiology-spaces-login.css"))
+    css = compact(read(FRONTEND / "styles" / "corvia-atelier-login.css"))
     local_styles = [
         line.strip()
         for line in login.splitlines()
         if line.strip().startswith('import "../styles/')
     ]
 
-    assert 'className={`login login-gateway login-gateway--public login-gateway--${temaPublico}`}' in login
+    assert 'className={`login login-gateway login-gateway--public login-gateway--${temaPublico} corvia-atelier-login`}' in login
     assert 'data-login-theme={temaPublico}' in login
     assert 'prehome--login prehome--fullscreen' not in login
-    # Preserve the approved cascade, including the subsequent fidelity and
-    # universe refinements. The earlier lock remains below these final layers.
-    assert local_styles[-5:] == [
-        'import "../styles/corvia-approved-fidelity-20260904.css";',
-        'import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";',
-        'import "../styles/corvia-login-final-approved-20260904.css";',
-        'import "../styles/corvia-login-fidelity-20260905.css";',
-        'import "../styles/login-universe-refinement-20260909.css";',
-    ]
+    # The approved architectural entrance has one scoped sheet; retired
+    # viewport-locked galaxy layers must not be imported by the new login.
+    assert local_styles == ['import "../styles/corvia-atelier-login.css";']
     assert '/auth/social/providers' not in login
     assert '/auth/social/${provider}/start' not in login
     assert 'prehome-social' not in login
-    assert ".login-gateway{" in css
-    assert "height:100svh" in css
-    assert "overflow:hidden" in css
-    assert "@media(max-width:900px)" in css
+    assert "#corvia-login.corvia-atelier-login{" in css
     assert "height:auto" in css
-    assert "min-height:100svh" in css
-    assert "overflow-y:auto" in css
+    assert "min-height:100dvh" in css
+    assert "@media(max-width:760px)" in css
+    assert "height:100svh" not in css
+    assert "height:100dvh" not in css.replace("min-height:100dvh", "")
+    assert "#corvia-login:is(a,button,input):focus-visible" in css
 
 
 def test_login_route_stays_online_first_instead_of_inflating_pwa_preload():

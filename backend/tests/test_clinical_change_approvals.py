@@ -14,12 +14,13 @@ from app.models.clinical_change_proposal import ClinicalChangeProposal
 from app.services import clinical_change_approvals as service
 from app.services import guideline_clinical_update as core
 from app.services import guideline_clinical_update_runtime as runtime
+from _database_guard import assert_isolated_test_database
 
 
 @pytest.fixture(autouse=True)
 def _banco_limpo():
+    assert_isolated_test_database(SessionLocal.kw['bind'].url)
     with SessionLocal() as db:
-        assert db.bind.url.database.startswith("corvia_clinical_approval_")
         db.execute(text("TRUNCATE clinical_change_proposals, guidelines, documents, audit_logs, users RESTART IDENTITY CASCADE"))
         db.commit()
     yield

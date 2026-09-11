@@ -17,7 +17,7 @@ from starlette.concurrency import run_in_threadpool
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user
-from app.core.uploads import UploadRejected, safe_filename, validate_file
+from app.core.uploads import UploadRejected, safe_filename, validate_file_async
 from app.models.audit import AuditLog
 from app.models.user import User
 from app.services.ia import ecg_assist
@@ -88,7 +88,7 @@ async def analisar_ecg_rapido(
         raise HTTPException(status_code=413, detail="O ECG precisa ter no máximo 20 MB.")
     try:
         original_name = safe_filename(arquivo.filename, "ecg")
-        media_type = validate_file(content, original_name, "exam")
+        media_type = await validate_file_async(content, original_name, "exam")
     except UploadRejected as error:
         raise HTTPException(status_code=error.status_code, detail=error.detail) from error
     if media_type not in ecg_assist.supported_media_types():

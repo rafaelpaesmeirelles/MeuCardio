@@ -5,6 +5,7 @@ PDF assinado e valida a assinatura como um leitor real faria).
 """
 import datetime
 import io
+import sys
 
 import pytest
 from cryptography import x509
@@ -70,24 +71,45 @@ def _gerar_pfx_com_intermediaria(*, senha: str = "senha123") -> tuple[bytes, byt
     return pfx, certificado_ca.public_bytes(serialization.Encoding.DER)
 
 
-def _pdf_minimo(texto: str = "Documento de teste — Corvia", paginas: int = 1) -> bytes:
+def _pdf_minimo(texto: str = "Documento de teste — Corvia", paginas: int = 1, *, com_marca: bool = False) -> bytes:
     buf = io.BytesIO()
     c = canvas.Canvas(buf)
     for pagina in range(1, paginas + 1):
+        if com_marca:
+            from app.services.pdf.marca import LOGO
+
+            c.drawImage(str(LOGO), 30, 660, width=225, height=60)
         c.drawString(100, 750, f"{texto} — página {pagina}")
         c.showPage()
     c.save()
     return buf.getvalue()
 
 
-def test_assinar_pdf_produz_assinatura_integra_e_valida():
+@pytest.mark.parametrize("com_marca", [False, True])
+def test_assinar_pdf_produz_assinatura_integra_e_valida(com_marca):
+    from app.core.uploads import validate_file
+    from app.core.pdf_upload_validation import _inspect_pdf_structure
+
+    def inspect(data, filename):
+        if sys.platform == "linux":
+            # Production/CI: exercise the REAL resource-limited subprocess.
+            assert validate_file(data, filename, "exam") == "application/pdf"
+        else:
+            # Local semantics only; unsupported hosts must NOT bypass the
+            # production worker's fail-closed resource checks.
+            _inspect_pdf_structure(data)
+
     pfx = _gerar_pfx()
-    pdf = _pdf_minimo()
+    pdf = _pdf_minimo(com_marca=com_marca)
+    inspect(pdf, "original.pdf")
 
     assinado = pdf_signer.assinar_pdf(pdf, pfx_bytes=pfx, senha="senha123", motivo="Receita médica", local="São Paulo")
 
     assert assinado != pdf
     assert len(assinado) > len(pdf)
+    before_upload_validation = bytes(assinado)
+    inspect(assinado, "assinado.pdf")
+    assert assinado == before_upload_validation
 
     from pyhanko.pdf_utils.reader import PdfFileReader
     from pyhanko.sign.validation import validate_pdf_signature

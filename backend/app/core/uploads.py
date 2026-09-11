@@ -13,10 +13,12 @@ XML sem macros/objetos incorporados.
 
 from __future__ import annotations
 
+import asyncio
 import io
 import os
 import re
 import tempfile
+import threading
 import unicodedata
 import warnings
 import zipfile
@@ -25,7 +27,7 @@ from email import policy
 from email.parser import BytesParser
 from hashlib import sha256
 from pathlib import Path
-from typing import Awaitable, Callable
+from typing import Awaitable, Callable, TypeVar
 
 from PIL import Image, UnidentifiedImageError
 from redis.asyncio import Redis
@@ -41,6 +43,8 @@ _CHUNK_OVERHEAD = 512 * 1024
 _MAX_IMAGE_PIXELS = 25_000_000
 _UPLOAD_LIMIT = 20
 _UPLOAD_WINDOW_SECONDS = 600
+_ASYNC_VALIDATION_SLOTS = threading.BoundedSemaphore(1)
+_ValidationResult = TypeVar("_ValidationResult")
 
 _RATE_SCRIPT = """
 local current = redis.call('INCR', KEYS[1])
@@ -184,11 +188,17 @@ def _verify_pdf(data: bytes, filename: str) -> str:
     if Path(filename).suffix.lower() not in {"", ".pdf"}:
         raise UploadRejected(422, "A extensão não corresponde ao conteúdo PDF.")
 
-    # Recursos ativos não são necessários para ECG, Holter, MAPA ou documentos
-    # anexados e ampliam desnecessariamente o risco no visualizador do usuário.
-    active_markers = (b"/JavaScript", b"/JS", b"/Launch", b"/EmbeddedFile", b"/RichMedia")
-    if any(marker in data for marker in active_markers):
-        raise UploadRejected(422, "PDF com scripts ou conteúdo incorporado não é aceito.")
+    # Inspecionar nomes PDF, não substrings nos bytes: imagens ASCII85/Flate,
+    # texto e assinaturas podem conter /JS por acaso. O parser já utilizado
+    # nas assinaturas resolve nomes escapados (#xx) e objetos comprimidos.
+    # Nenhum byte é regravado: a assinatura criptográfica permanece intacta.
+    from app.core.pdf_upload_validation import PDF_REJECTIONS, PdfInspectionError, validate_pdf_structure
+
+    try:
+        validate_pdf_structure(data)
+    except PdfInspectionError as error:
+        status, detail = PDF_REJECTIONS[error.reason]
+        raise UploadRejected(status, detail) from None
     return "application/pdf"
 
 
@@ -280,6 +290,38 @@ def validate_file(data: bytes, filename: str, kind: str) -> str:
     raise UploadRejected(422, "Anexe PDF, JPEG, PNG, WEBP, DOCX, XLSX, PPTX, TXT ou CSV.")
 
 
+async def validate_file_async(data: bytes, filename: str, kind: str) -> str:
+    return await run_upload_validation_async(validate_file, data, filename, kind)
+
+
+async def run_upload_validation_async(
+    operation: Callable[..., _ValidationResult], *args, **kwargs,
+) -> _ValidationResult:
+    """Bounded admission without blocking the event loop or queueing uploads.
+
+    The synchronous PDF inspector independently caps ALL callers to one child.
+    This extra admission slot prevents async requests queueing retained bodies
+    in the executor. Cancellation does not release it before the thread ends.
+    """
+    if not _ASYNC_VALIDATION_SLOTS.acquire(blocking=False):
+        raise UploadRejected(503, "A validação de arquivos está ocupada. Tente novamente em instantes.")
+
+    def inspect_and_release() -> _ValidationResult:
+        try:
+            return operation(*args, **kwargs)
+        finally:
+            _ASYNC_VALIDATION_SLOTS.release()
+
+    try:
+        future = asyncio.get_running_loop().run_in_executor(None, inspect_and_release)
+    except BaseException:
+        _ASYNC_VALIDATION_SLOTS.release()
+        raise
+    # Retrieve a later exception even if the request was cancelled meanwhile.
+    future.add_done_callback(lambda done: None if done.cancelled() else done.exception())
+    return await asyncio.shield(future)
+
+
 def _parse_files(body: bytes, content_type: str) -> list[tuple[str, bytes]]:
     message = BytesParser(policy=policy.default).parsebytes(
         b"Content-Type: " + content_type.encode("latin-1") + b"\r\nMIME-Version: 1.0\r\n\r\n" + body
@@ -359,7 +401,7 @@ async def _read_and_validate(scope: Scope, receive: Receive, headers: Headers, u
                 413,
                 f"Cada arquivo precisa ter no máximo {upload_policy.max_file_bytes // 1048576} MB.",
             )
-        validate_file(file_data, filename, upload_policy.kind)
+        await validate_file_async(file_data, filename, upload_policy.kind)
 
     delivered = False
 

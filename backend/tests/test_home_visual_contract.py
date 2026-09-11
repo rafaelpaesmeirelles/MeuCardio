@@ -123,7 +123,7 @@ def test_navigation_matches_reference_six_area_information_architecture():
     for source in (desktop, mobile):
         for title in (
             "Clínica & Decisão",
-            "Trabalho & Assistência",
+            'title: "Assistência", items: TRABALHO_ASSISTENCIA',
             "Rede & Conectividade",
         ):
             assert title in source
@@ -142,7 +142,7 @@ def test_navigation_matches_reference_six_area_information_architecture():
     assert "Administração & Conta" in desktop
     assert "/documentos-cientificos-ia" in desktop
 
-    assert "Estudos & Educação" in mobile
+    assert 'title: "Ciência & Ensino", items: ESTUDO_EDUCACAO' in mobile
     assert "Ferramentas & Produtividade" in mobile
     assert "Administração & Conta" in mobile
     assert "/tour?origem=assinatura&modo=quick" in mobile

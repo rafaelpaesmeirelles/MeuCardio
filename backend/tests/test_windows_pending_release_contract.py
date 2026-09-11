@@ -15,9 +15,9 @@ def test_native_installers_are_not_exposed_on_public_login():
     assert "MarcaAndroid" not in login
     assert "/downloads/corvia-cardiology-spaces-windows-1.2.0.exe" not in login
     assert 'href="/downloads/corvia-cardiology-spaces-android-1.2.0.apk"' not in login
-    assert 'className="login-gateway__join" to="/solicitar-acesso"' in login
+    assert 'className="atelier-login__join" to="/solicitar-acesso"' in login
     assert "Novo no CorVIA?" in login
-    assert "Solicite seu Acesso" in login
+    assert "Solicitar acesso profissional" in login
 
 
 def test_automatic_release_is_web_only():

@@ -27,6 +27,7 @@ from app.core.uploads import (
     _UPLOAD_WINDOW_SECONDS,
     _client_key,
     _parse_single_file,
+    run_upload_validation_async,
     validate_file,
 )
 
@@ -85,7 +86,7 @@ async def _read_course_upload(receive: Receive, headers: Headers) -> Receive:
     filename, file_data = _parse_single_file(body, content_type)
     if len(file_data) > _COURSE_MAX_FILE_BYTES:
         raise UploadRejected(413, "O material excede o limite de 40 MB.")
-    validate_course_file(file_data, filename)
+    await run_upload_validation_async(validate_course_file, file_data, filename)
 
     delivered = False
 

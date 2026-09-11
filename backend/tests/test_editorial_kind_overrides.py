@@ -7,6 +7,8 @@ import pytest
 
 from app.services import editorial_kind_overrides as editorial
 from app.services import importer, carregar_estudos, guideline_clinical_update as intelligence
+from app.services import clinical_change_approvals as approvals
+from app.models.content import Document
 
 
 @pytest.fixture(autouse=True)
@@ -83,7 +85,8 @@ def test_evidence_tampering_rejected(tmp_path):
 
 def guideline():
     return SimpleNamespace(id=8, slug="verified-source", org="PUBMED", titulo="Original source title",
-        ano=2026, doi="10.example/trial", url="https://example.test/trial", source_fingerprint="a"*64, tema="Teste")
+        ano=2026, doi="10.example/trial", url="https://example.test/trial", source_fingerprint="a"*64,
+        tema="Teste", published_at=None, superseded_by_id=None)
 
 
 def runtime_entry(g):
@@ -107,12 +110,14 @@ def test_runtime_requires_exact_source_identity_not_ai_title(tmp_path):
 class Query:
     def __init__(self, row): self.row = row
     def filter(self, *args): return self
+    def filter_by(self, **kwargs): return self
     def first(self): return self.row
 
 
 class Session:
     def __init__(self, row=None): self.row, self.added = row, []
     def query(self, model):
+        if model.__name__ == "ClinicalChangeProposal": return Query(None)
         return Query(self.row if model.__name__ != "GuidelineLink" else SimpleNamespace(id=1))
     def add(self, row): self.added.append(row)
     def flush(self):
@@ -153,19 +158,28 @@ def test_structured_study_full_record_hash_and_publication_preserved(tmp_path, m
 
 
 @pytest.mark.parametrize("existing", [False, True])
-def test_runtime_new_and_unchanged_body_get_neutral_kind(tmp_path, monkeypatch, existing):
+def test_runtime_neutral_kind_is_only_proposed_until_owner_approval(tmp_path, monkeypatch, existing):
     registry = ledger(tmp_path)
     g = guideline()
-    row = SimpleNamespace(id=1, slug=f"corvia-intelligence-{g.slug}", kind="diretriz", body_md="same body", version=4, published=False) if existing else None
+    row = Document(id=1, slug=f"corvia-intelligence-{g.slug}", kind="diretriz", body_md="same body", version=4, published=False) if existing else None
     session = Session(row)
     monkeypatch.setattr(intelligence, "_summary_body", lambda *args: "same body")
     with editorial.editorial_registry_scope(registry):
-        result = intelligence._ensure_summary_document(session, g, {}, [])
-    assert result.kind == "documento"
-    assert result.body_md == "same body"
-    if existing:
-        assert result.version == 4 and result.published is False
+        with pytest.raises(PermissionError, match="proprietário"):
+            intelligence._ensure_summary_document(session, g, {}, [])
         assert session.added == []
+        proposals = approvals.build_proposals(session, g, {}, [])
+    assert len(proposals) == 1 and proposals[0].status == "pending"
+    change = proposals[0].payload["changes"][0]
+    assert change["item_type"] == "document_summary"
+    assert change["after"]["kind"] == "documento"
+    assert change["after"]["body_md"] == "same body"
+    assert not any(isinstance(item, Document) for item in session.added)
+    if existing:
+        assert row.kind == "diretriz" and row.version == 4 and row.published is False
+        assert change["before"] == approvals.snapshot(row)
+    else:
+        assert change["before"] is None
 
 
 def test_materialization_check_fails_before_publication(tmp_path):

@@ -1,4 +1,5 @@
 import io
+import sys
 import zipfile
 from pathlib import Path
 
@@ -175,8 +176,21 @@ def test_novos_fluxos_ia_passam_pela_barreira_asgi():
     assert document_response.status_code == 200
 
 
+@pytest.mark.skipif(sys.platform != "linux", reason="Real PDF child requires hard RLIMIT_AS on Linux")
 def test_pdf_clinico_com_javascript_e_rejeitado():
-    pdf = b"%PDF-1.4\n1 0 obj<</JavaScript 2 0 R>>endobj\n%%EOF"
+    from pyhanko.pdf_utils import generic
+    from pyhanko.pdf_utils.writer import PageObject, PdfFileWriter
+
+    writer = PdfFileWriter()
+    contents = writer.add_object(generic.StreamObject(stream_data=b""))
+    writer.insert_page(PageObject(contents, (0, 0, 612, 792)))
+    writer.root["/OpenAction"] = generic.DictionaryObject({
+        "/S": generic.NameObject("/JavaScript"),
+        "/JS": generic.TextStringObject("app.alert('teste')"),
+    })
+    output = io.BytesIO()
+    writer.write(output)
+    pdf = output.getvalue()
     with TestClient(_app()) as client:
         response = client.post(
             "/api/pedidos/42/exame",

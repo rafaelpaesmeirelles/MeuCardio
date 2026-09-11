@@ -18,7 +18,7 @@ from starlette.concurrency import run_in_threadpool
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user
-from app.core.uploads import UploadRejected, safe_filename, validate_file
+from app.core.uploads import UploadRejected, safe_filename, validate_file_async
 from app.models.audit import AuditLog
 from app.models.user import User
 from app.services.ia import cardiovascular_exam_assist
@@ -158,7 +158,7 @@ async def analisar_exame_cardiovascular(
                 raise HTTPException(status_code=413, detail="Os arquivos excedem o limite total de 40 MB.")
             try:
                 filename = safe_filename(upload.filename, f"exame-{index}")
-                media_type = validate_file(content, filename, "clinical_exam")
+                media_type = await validate_file_async(content, filename, "clinical_exam")
             except UploadRejected as error:
                 raise HTTPException(status_code=error.status_code, detail=error.detail) from error
             if media_type not in cardiovascular_exam_assist.supported_media_types():
