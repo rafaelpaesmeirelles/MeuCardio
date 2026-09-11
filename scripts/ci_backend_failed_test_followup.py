@@ -108,10 +108,12 @@ def validate_baseline(run: dict, job: dict, log: str, *, closed_release_verified
         raise ValueError("Unexpected baseline run identity")
     if run.get("repository", {}).get("full_name") != REPOSITORY:
         raise ValueError("Unexpected baseline repository")
-    # pull_requests[].head.sha is live PR metadata, not the run's snapshot.
+    # GitHub mutates the entire pull_requests list: it may disappear on merge
+    # or be reassigned to a later PR on this branch. After the original merge,
+    # ancestry and completed CI have been verified, it is not historical proof.
     # Immutable run.head_sha and job.head_sha above/below bind the actual code.
     associations = run.get("pull_requests", [])
-    if not (closed_release_verified and associations == []) and not any(pr.get("number") == PR_NUMBER and pr.get("head", {}).get("ref") == BRANCH
+    if not closed_release_verified and not any(pr.get("number") == PR_NUMBER and pr.get("head", {}).get("ref") == BRANCH
                and pr.get("base", {}).get("ref") == "main"
                for pr in associations):
         raise ValueError("Baseline run is not associated with the exact PR932 head")

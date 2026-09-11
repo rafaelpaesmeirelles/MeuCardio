@@ -209,24 +209,27 @@ class BaselineProvenanceTests(unittest.TestCase):
         run["pull_requests"][0]["head"]["sha"] = "b" * 40
         self.assertEqual(FOLLOWUP.validate_baseline(run, job, log), hashlib.sha256(log.encode()).hexdigest())
 
-    def test_empty_association_requires_verified_closed_release(self):
+    def test_empty_or_reassigned_association_requires_verified_closed_release(self):
         run, job, log = baseline_evidence()
-        run["pull_requests"] = []
-        with self.assertRaises(ValueError):
-            FOLLOWUP.validate_baseline(run, job, log)
-        self.assertEqual(FOLLOWUP.validate_baseline(run, job, log, closed_release_verified=True),
-                         hashlib.sha256(log.encode()).hexdigest())
+        for associations in ([], [{"number": FOLLOWUP.PR_NUMBER + 1,
+                                    "head": {"ref": FOLLOWUP.BRANCH, "sha": "b" * 40},
+                                    "base": {"ref": "main"}}]):
+            # The same old run is reassociated to the new PR when a branch is reused.
+            run["pull_requests"] = associations
+            with self.subTest(associations=associations):
+                with self.assertRaises(ValueError):
+                    FOLLOWUP.validate_baseline(run, job, log)
+                self.assertEqual(FOLLOWUP.validate_baseline(run, job, log, closed_release_verified=True),
+                                 hashlib.sha256(log.encode()).hexdigest())
 
-    def test_closed_release_flag_never_relaxes_immutable_sha_or_wrong_association(self):
-        for change in ("run", "job", "association"):
+    def test_closed_release_flag_never_relaxes_immutable_run_or_job_sha(self):
+        for change in ("run", "job"):
             run, job, log = baseline_evidence()
             run["pull_requests"] = []
             if change == "run":
                 run["head_sha"] = "0" * 40
             elif change == "job":
                 job["head_sha"] = "0" * 40
-            else:
-                run["pull_requests"] = [{"number": 918}]
             with self.subTest(change=change), self.assertRaises(ValueError):
                 FOLLOWUP.validate_baseline(run, job, log, closed_release_verified=True)
 
