@@ -9,6 +9,12 @@ from pathlib import Path
 import subprocess
 
 from ci_backend_policy import classify_paths, classify_authorized_no_backend_ci, PolicyDecision, _write_github_outputs
+try:
+    from ci_backend_failed_test_followup import resolve_decision as failed_test_followup
+except ModuleNotFoundError as exc:
+    if exc.name != "ci_backend_failed_test_followup":
+        raise
+    from scripts.ci_backend_failed_test_followup import resolve_decision as failed_test_followup
 
 
 def github(path: str, *, raw: bool = False):
@@ -354,6 +360,8 @@ def main() -> int:
                        "backend_ci_executed": False, "test_certificate": None,
                        "scope": "backend CI não executado por decisão do responsável"}
             Path(os.environ.get("RUNNER_TEMP", "/tmp"), "backend-no-ci-owner-decision.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2)+"\n")
+    if decision is None:
+        decision = failed_test_followup(root, **context)
     if decision is None:
         decision = classify_paths(original_paths, repo_root=root)
     if args.github_output:

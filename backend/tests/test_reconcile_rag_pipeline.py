@@ -76,7 +76,11 @@ def test_reconcile_nunca_chama_rag(db, monkeypatch, tmp_path):
         "approval_basis": "Synthetic test fixture only; no real content or publication authorization.",
         "expected_total": 1, "inventory_sha256": corpus_inventory_sha256(fingerprint), "fronts": fingerprint}))
     monkeypatch.setattr(reconciliation, "FRONTS", fronts)
-    monkeypatch.setattr(reconciliation, "EDITORIAL_KIND_REGISTRY_PATH", write_empty_editorial_registry(tmp_path))
+    editorial_registry = write_empty_editorial_registry(tmp_path)
+    # Schema 1 resolves its preferred evidence ledger below REPOSITORY_ROOT;
+    # overriding only the fallback path still selects the real repository.
+    monkeypatch.setattr(reconciliation, "REPOSITORY_ROOT", tmp_path)
+    monkeypatch.setattr(reconciliation, "EDITORIAL_KIND_REGISTRY_PATH", editorial_registry)
     monkeypatch.setattr(reconciliation, "_load_editorial_approvals", lambda: defaultdict(set))
     monkeypatch.setattr(reconciliation, "_load_controlled_substances", lambda _db: {})
     monkeypatch.setattr(reconciliation, "_migrate_study_track_progress", lambda _db: 0)
@@ -92,6 +96,9 @@ def test_reconcile_nunca_chama_rag(db, monkeypatch, tmp_path):
     resultado = reconcile(publish_reviewed=False, allow_partial=True, authorization_path=authorization)
 
     assert resultado["rag"]["status"] == "nao_executado_aqui"
+    metadata = resultado["loads"]["editorial_metadata"]
+    assert metadata["registry_sha256"] == reconciliation.load_editorial_registry(editorial_registry)["registry_sha256"]
+    assert metadata["canonical_claims_checked"] == 0 and metadata["materialized"] == 0
     assert db.query(DocumentChunk).count() == 0
 
 
