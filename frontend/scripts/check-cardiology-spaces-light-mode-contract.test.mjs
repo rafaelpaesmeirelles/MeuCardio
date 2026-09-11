@@ -157,6 +157,70 @@ function contrastRatio(foreground, background) {
   return (values[0] + 0.05) / (values[1] + 0.05);
 }
 
+function declarationValue(rule, property) {
+  assert.ok(rule, `regra ausente para ${property}`);
+  const escaped = property.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const value = rule.body.match(new RegExp(`(?:^|;)\\s*${escaped}\\s*:\\s*([^;!]+)`))?.[1]?.trim();
+  assert.ok(value, `${property} precisa ser explícito no par de contraste`);
+  return value;
+}
+
+test("monitor científico mantém texto, estado e controles contrastantes apenas no tema escuro", () => {
+  const rules = cssRules(readRequired("src/styles/corvia-atelier.css"))
+    .filter(({ header }) => header.includes(".scientific-intelligence-monitor"));
+  assert.ok(rules.length >= 8);
+  for (const { header } of rules) assert.match(header, /^html\[data-corvia-design="atelier"\]\[data-corvia-theme="dark"\]/);
+  const find = suffix => rules.find(({ header }) => header.endsWith(suffix));
+  const panel = declarationValue(find(".scientific-intelligence-monitor"), "background");
+  const button = find(".scientific-intelligence-monitor button");
+  for (const rule of [find(":is(h3, h4, strong, dd)"), find(":is(dt, small, p:not(.scientific-intelligence-monitor__health))"),
+    find(".scientific-intelligence-monitor a"), find(".scientific-intelligence-monitor__health.is-active"),
+    find(".scientific-intelligence-monitor__health:is(.is-degraded, .is-inactive)")]) {
+    assert.ok(contrastRatio(declarationValue(rule, "color"), panel) >= 4.5, rule.header);
+  }
+  const control = declarationValue(button, "background");
+  assert.ok(contrastRatio(declarationValue(button, "color"), control) >= 4.5);
+  assert.ok(contrastRatio(declarationValue(button, "border-color"), control) >= 3);
+  assert.ok(contrastRatio(declarationValue(find(":is(a, button):focus-visible"), "outline-color"), panel) >= 3);
+});
+
+test("favoritos e decisões editoriais escuros resolvem aliases locais e preservam os pares de leitura", () => {
+  const rules = cssRules(readRequired("src/styles/corvia-atelier-content.css"))
+    .filter(({ header }) => /\.favorites-page|\.admin-clinical-changes/.test(header));
+  assert.ok(rules.length >= 10);
+  for (const { header } of rules) assert.match(header, /^html\[data-corvia-design="atelier"\]\[data-corvia-theme="dark"\]/);
+  const tokens = rules.find(({ header }) => header.endsWith(":is(.favorites-page, .admin-clinical-changes)"));
+  const resolved = (value, depth = 0) => {
+    assert.ok(depth < 5, "aliases de cor não podem ser cíclicos");
+    const variable = value.match(/^var\((--[\w-]+)\)$/)?.[1];
+    return variable ? resolved(declarationValue(tokens, variable), depth + 1) : value;
+  };
+  const color = (rule, property) => resolved(declarationValue(rule, property));
+  const panel = color(tokens, "background");
+  for (const token of ["--texto", "--texto-secundario", "--cv-text", "--cv-text-2", "--atelier-teal"]) {
+    assert.ok(contrastRatio(color(tokens, token), panel) >= 4.5, token);
+  }
+  const find = fragment => rules.find(({ header }) => header.includes(fragment));
+  for (const rule of [find(":is(h1, h2, h3, h4, legend, label)"), find(".favorites-page .eyebrow"),
+    find(".favorites-page a:not(.botao)"), find(":is(p, small):not([role=")]) {
+    assert.ok(contrastRatio(color(rule, "color"), panel) >= 4.5, rule.header);
+  }
+  const control = rules.find(({ header }) => header.endsWith(":is(button, a.botao):not(:disabled)"));
+  const controlBackground = color(control, "background");
+  assert.ok(contrastRatio(color(control, "color"), controlBackground) >= 4.5);
+  assert.ok(contrastRatio(color(control, "border-color"), controlBackground) >= 3);
+  const hover = find(":is(button, a.botao):not(:disabled):hover");
+  assert.ok(contrastRatio(color(control, "color"), color(hover, "background")) >= 4.5);
+  assert.ok(contrastRatio(color(control, "border-color"), color(hover, "background")) >= 3);
+  const placeholder = find("::placeholder");
+  assert.equal(declarationValue(placeholder, "opacity"), "1");
+  assert.ok(contrastRatio(color(placeholder, "color"), controlBackground) >= 4.5);
+  assert.equal(color(placeholder, "-webkit-text-fill-color"), color(placeholder, "color"));
+  const action = find(".admin-clinical-changes .botao:not");
+  assert.ok(contrastRatio(color(action, "color"), color(action, "background")) >= 4.5);
+  assert.ok(contrastRatio(declarationValue(find(":focus-visible"), "outline-color"), panel) >= 3);
+});
+
 test("o tema global é independente dos modos e começa claro sem apagar a preferência escura", () => {
   const theme = readRequired("src/lib/corviaTheme.tsx");
   const main = readRequired("src/main.tsx");

@@ -8,8 +8,9 @@ const scene = read("src/components/CardiologySpaceScene.tsx");
 const tour = read("src/pages/CardiologySpacesTour.tsx");
 const tourAlias = read("src/pages/Tour.tsx");
 const app = read("src/App.tsx");
-const styles = read("src/styles/cardiology-spaces-home.css");
-const tourStyles = read("src/styles/cardiology-spaces-tour.css");
+const view = read("src/components/AtelierHomeView.tsx");
+const styles = read("src/styles/corvia-atelier.css");
+const tourStyles = read("src/styles/corvia-atelier-tour.css");
 const login = read("src/pages/Entrar.tsx");
 const desktopNav = read("src/components/ClinicalDesktopNav.tsx");
 const mobileNav = read("src/components/ClinicalMobileNav.tsx");
@@ -38,21 +39,28 @@ const scientificRoutes = [
   "/favoritos",
 ];
 
-test("offers the third experience after login while login chooses only appearance", () => {
+test("science organizes the selected workspace after login without changing login appearance or access", () => {
   assert.match(home, /type Mode = "complete" \| "essential" \| "scientific"/);
-  assert.match(home, /chooseMode\("scientific"\)/);
-  assert.match(home, />Ciência & Ensino</);
-  assert.match(home, /setSelectedSpace\(nextMode === "scientific" \? "descobrir" : "consultorio"\)/);
+  assert.match(view, /<option value="scientific">Ciência & Ensino<\/option>/);
+  assert.match(view, /aria-label="Modo de trabalho" value=\{props\.mode\} onChange=\{\(event\) => props\.onMode/);
+  assert.match(home, /onMode=\{chooseMode\}/);
+  const chooseMode = home.slice(home.indexOf("const chooseMode ="), home.indexOf("function resetMode"));
+  assert.match(chooseMode, /setMode\(nextMode\)/);
+  assert.match(chooseMode, /writeAtelierContext\(usuario\?\.id, \{ space: selectedSpace as FunctionalSpace, mode: nextMode \}\)/);
+  assert.match(chooseMode, /setSearchParams\(\{ espaco: selectedSpace, modo: nextMode \}/);
+  assert.doesNotMatch(chooseMode, /setSelectedSpace\(/, "organization must not switch the selected environment");
+  assert.match(home, /const availableSpaces = SPACES;/);
+  assert.match(home, /mode === "scientific" \? ATELIER_SCIENCE\[id\] : ATELIER_DEFAULTS\[id\]/);
   assert.match(login, /sessionStorage\.removeItem\("corvia:cardiology-spaces:mode"\)/);
   assert.match(login, /id: "light"/);
   assert.match(login, /id: "dark"/);
   assert.doesNotMatch(login, /id: "scientific"/);
-  assert.match(login, /Um universo de espaços\./);
+  assert.match(login, /Cinco espaços de trabalho\.<br \/><em>Uma só cardiologia\./);
   assert.match(login, /Novo no CorVIA/);
-  assert.match(login, /Solicite seu Acesso/);
+  assert.match(login, /to="\/solicitar-acesso">Solicitar acesso profissional/);
 });
 
-test("keeps five scientific journeys and every scientific surface discoverable", () => {
+test("preserves legacy science journey assets and keeps every scientific surface discoverable", () => {
   const scientificJourneys = ["descobrir", "evidencias", "aprender", "ensinar", "produzir"];
   for (const id of scientificJourneys) {
     assert.match(home, new RegExp(`id: "${id}"`));
@@ -95,11 +103,14 @@ test("timeline keeps URL, selected tab, response and related content in the same
   assert.doesNotMatch(timeline, /tema=\{timeline\?\.tema \|\| temaAtivo\}/);
 });
 
-test("preserves canonical hover, keyboard focus and selected behavior", () => {
-  assert.match(home, /onMouseEnter=\{\(\) => setPreviewSpace\(space\.id\)\}/);
-  assert.match(home, /onFocus=\{\(\) => setPreviewSpace\(space\.id\)\}/);
-  assert.match(home, /aria-pressed=\{selectedSpace === space\.id\}/);
-  assert.match(styles, /\.spaces-door\.is-active/);
+test("portal selection is keyboard-native and hover cannot select a different workspace", () => {
+  assert.match(view, /<button type="button" className=\{`atelier-portal/);
+  assert.match(view, /onClick=\{\(\) => props\.onSelect\(space\.id\)\} aria-pressed=\{space\.id === props\.active\.id\}/);
+  assert.doesNotMatch(view, /onMouseEnter=|onFocus=/, "hover/focus must not change the chosen architecture");
+  assert.match(styles, /\.atelier-portal:hover img/);
+  assert.match(styles, /\.atelier-portal\.is-selected img/);
+  assert.match(styles, /:focus-visible\{outline:3px solid/);
+  assert.match(styles, /\.atelier-portal\{[^}]*overflow:hidden/);
 });
 
 test("ships the expanded Cardiology Spaces tour with investor and onboarding gates", () => {
@@ -115,12 +126,17 @@ test("ships the expanded Cardiology Spaces tour with investor and onboarding gat
   assert.match(tourAlias, /pathname: "\/tour", search: location\.search, hash: location\.hash/);
 });
 
-test("keeps the approved heart and compact six-action mobile dock", () => {
-  assert.match(home, /spaces-choice__heart/);
-  assert.match(home, /spaces-home__heart/);
-  assert.match(styles, /@media\(max-width:900px\)/);
-  assert.match(styles, /\.spaces-dock\{[^}]*repeat\(6,minmax\(0,1fr\)\)/);
-  assert.match(styles, /\.spaces-home__heart\s*\{[^}]*width:min\(100vw,650px\)/);
-  assert.match(tourStyles, /@media\s*\(max-width:\s*900px\)/);
-  assert.match(tourStyles, /\.cst__dots\s*\{[^}]*max-width:\s*calc\(100vw - 190px\);[^}]*overflow-x:\s*auto/);
+test("mobile keeps one broad architecture, readable shelves and reachable tour controls", () => {
+  // The approved Atelier replaces the cosmic heart/dock, not its functions.
+  assert.doesNotMatch(home, /spaces-choice__heart|spaces-home__heart|className="spaces-dock"/);
+  assert.match(view, /aria-label="Escolher ambiente"/);
+  assert.match(styles, /\.atelier-portal\.is-selected\{display:block!important;aspect-ratio:1\.22/);
+  assert.match(styles, /\.atelier-shelf\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
+  assert.match(styles, /\.atelier-shelf \.spaces-action>span\{font-size:16px\}/);
+  assert.match(styles, /\.atelier-mobile-spaces button\{[^}]*min-height:44px/);
+  assert.match(view, /onClick=\{props\.onCatalog\}>Todas as funções/);
+  assert.match(view, /onClick=\{props\.onPersonalize\}/);
+  assert.match(tourStyles, /\.cst--atelier button \{[^}]*min-height: 44px/);
+  assert.match(tourStyles, /\.cst-at__stage \{[^}]*overflow: auto/);
+  assert.match(tourStyles, /\.cst-at__controls \{ grid-template-columns: minmax\(0, 1fr\) minmax\(0, 1fr\)/);
 });

@@ -53,6 +53,9 @@ body:has(.corvia-atelier-public) { color-scheme: light; background: #f7f0df; }
 .corvia-atelier-public .public-space__features small { color: #627264; font-size: .875rem; line-height: 1.55; }
 .corvia-atelier-public .public-space__context-status { color: #627264; font-size: .875rem; }
 .corvia-atelier-public .public-space__surface { padding: clamp(22px, 3vw, 38px); background: linear-gradient(125deg, #fffefbcc, #faf7efb3); border-color: #b66d484d; border-radius: 5px; box-shadow: inset 0 1px #fff, 0 20px 50px #5b482013; }
+/* The long signup uses document scrolling; the legacy viewport cap must not
+   leave its overflowing fields underneath the following public footer. */
+#root .corvia-atelier-public.public-space .prehome-card--register { max-height: none; }
 .corvia-atelier-public .public-space__surface::before { background: linear-gradient(90deg, transparent, #d39770, transparent); }
 .corvia-atelier-public :is(.public-space__footer, .public-showcase__footer) { color: #627264; border-top-color: var(--public-line); font-size: .875rem; }
 .corvia-atelier-public :is(.public-space__footer, .public-showcase__footer) a { color: #55695e; font-size: .875rem; }
@@ -122,6 +125,9 @@ body:has(.corvia-atelier-public) { color-scheme: light; background: #f7f0df; }
 #root .corvia-atelier-public.public-space .login-campo .eyebrow { color: #627264; }
 #root .corvia-atelier-public.public-space .prehome-card__eyebrow { color: #5f3427 !important; }
 #root .corvia-atelier-public.public-space :is(.login-campo label, .login-formulario label) { color: #384e43 !important; }
+#root .corvia-atelier-public.public-space :is(.login-formulario__secao-titulo, .login-formulario__aviso strong) { color: #476252 !important; }
+#root .corvia-atelier-public.public-space .login-formulario__secao-nota { color: #627264 !important; }
+#root .corvia-atelier-public.public-space .login-formulario__checavel { min-height: 44px; color: #24312f !important; background: #fffdf5 !important; }
 #root .corvia-atelier-public.public-space :is(.prehome-card__footer, .prehome-divider) { color: #627264 !important; border-color: var(--public-line) !important; }
 #root .corvia-atelier-public.public-space :is(.prehome-link, .prehome-card__footer svg) { color: #08786f !important; }
 #root .corvia-atelier-public.public-space .prehome-secondary { min-height: 44px !important; color: #08786f !important; background: #ffffff66 !important; border-color: #9faf9c77 !important; border-radius: 5px !important; }

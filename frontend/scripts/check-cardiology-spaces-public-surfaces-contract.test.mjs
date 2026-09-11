@@ -151,3 +151,50 @@ test("legal documents preserve the authenticated layout", () => {
   assert.match(legalFrame, /className="legal-page"/);
   assert.match(legalFrame, /<PublicCardiologyFrame/);
 });
+
+test("signup grows with its complete form instead of overflowing below the public footer", () => {
+  const signup = atelierStyles.match(/#root \.corvia-atelier-public\.public-space \.prehome-card--register\s*\{([^}]+)\}/)?.[1];
+  assert.ok(signup, "o cadastro Atelier precisa neutralizar o limite de altura legado");
+  assert.match(signup, /max-height:\s*none\s*;/);
+  assert.doesNotMatch(signup, /(?:^|;)\s*(?:height:\s*\d|overflow(?:-y)?:\s*(?:hidden|clip))/);
+  assert.match(styles, /\.public-space \.prehome-card--register\s*\{[^}]*overflow:\s*visible\s*!important/s);
+});
+
+test("public signup legends, notes and notices override legacy dark text colors accessibly", () => {
+  const rules = [
+    atelierStyles.match(/#root \.corvia-atelier-public\.public-space :is\(\.login-formulario__secao-titulo, \.login-formulario__aviso strong\)\s*\{([^}]+)\}/)?.[1],
+    atelierStyles.match(/#root \.corvia-atelier-public\.public-space \.login-formulario__secao-nota\s*\{([^}]+)\}/)?.[1],
+  ];
+  const luminance = (hex) => {
+    const rgb = hex.match(/[\da-f]{2}/gi).map((channel) => parseInt(channel, 16) / 255);
+    const linear = rgb.map((value) => value <= .04045 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4);
+    return linear[0] * .2126 + linear[1] * .7152 + linear[2] * .0722;
+  };
+  for (const rule of rules) {
+    assert.ok(rule, "os textos auxiliares precisam de proteção escopada contra !important legado");
+    const color = rule.match(/color:\s*(#[\da-f]{6})\s*!important\s*;/i)?.[1];
+    assert.ok(color);
+    for (const surface of ["#fffdf5", "#faf7ef"]) {
+      const a = luminance(color), b = luminance(surface);
+      assert.ok((Math.max(a, b) + .05) / (Math.min(a, b) + .05) >= 4.5, `${color} precisa permanecer legível em ${surface}`);
+    }
+  }
+});
+
+test("signup workplace checkbox keeps a readable pearl surface and a 44px label target", () => {
+  const rule = atelierStyles.match(/#root \.corvia-atelier-public\.public-space \.login-formulario__checavel\s*\{([^}]+)\}/)?.[1];
+  assert.ok(rule, "a correção precisa permanecer isolada no formulário público");
+  assert.match(rule, /min-height:\s*44px\s*;/);
+  const foreground = rule.match(/(?:^|;)\s*color:\s*(#[\da-f]{6})\s*!important\s*;/i)?.[1];
+  const background = rule.match(/background:\s*(#[\da-f]{6})\s*!important\s*;/i)?.[1];
+  assert.ok(foreground && background, "texto e superfície precisam vencer a folha escura legada");
+  const luminance = (hex) => hex.match(/[\da-f]{2}/gi)
+    .map((channel) => parseInt(channel, 16) / 255)
+    .map((value) => value <= .04045 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4)
+    .reduce((sum, value, index) => sum + value * [.2126, .7152, .0722][index], 0);
+  const a = luminance(foreground), b = luminance(background);
+  assert.ok(b >= .75, "a linha deve permanecer clara");
+  assert.ok((Math.max(a, b) + .05) / (Math.min(a, b) + .05) >= 4.5);
+  assert.match(publicPages.solicitar, /<label className="login-formulario__checavel" htmlFor="incluir-local">/);
+  assert.match(publicPages.solicitar, /id="incluir-local" type="checkbox" checked=\{dados\.include_workplace_on_documents\} onChange=/);
+});

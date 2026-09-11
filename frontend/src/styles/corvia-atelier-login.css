@@ -129,6 +129,9 @@
   #corvia-login .atelier-login__copy h1 { font-size: 2.8rem; }
   #corvia-login .atelier-login__access { padding-left: 22px; }
   #corvia-login .atelier-login__access-heading h2 { font-size: 2.45rem; }
+  /* Keep both theme descriptions in the same two-line slot, without changing
+     the one-line desktop entrance used in the presentation film. */
+  #corvia-login .atelier-login__security { min-height: 3em; }
 }
 @media (max-width: 760px) {
   #corvia-login .atelier-login__topbar { min-height: 90px; width: calc(100% - 44px); gap: 14px; padding: 12px 0; }

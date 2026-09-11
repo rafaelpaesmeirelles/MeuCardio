@@ -87,3 +87,17 @@ test("geometria é compartilhada pelos temas, responsiva e oferece foco e movime
   assert.match(entrar, /id="login-acesso-titulo" tabIndex=\{-1\}/);
   assert.match(styles, /\.atelier-login__skip:focus\s*\{\s*transform:\s*none/);
 });
+
+test("aviso de segurança reserva duas linhas nas colunas estreitas sem alterar o desktop amplo", () => {
+  const base = styles.match(/#corvia-login \.atelier-login__security\s*\{([^}]+)\}/)?.[1];
+  assert.ok(base);
+  assert.match(base, /line-height:\s*1\.5\s*;/);
+  assert.doesNotMatch(base, /(?:^|;)\s*(?:min-height|height|max-height):/);
+  const narrowStart = styles.indexOf("@media (max-width: 1150px)");
+  const mobileStart = styles.indexOf("@media (max-width: 760px)", narrowStart);
+  assert.ok(narrowStart >= 0 && mobileStart > narrowStart);
+  const narrow = styles.slice(narrowStart, mobileStart);
+  assert.match(narrow, /#corvia-login \.atelier-login__security\s*\{\s*min-height:\s*3em\s*;\s*\}/);
+  assert.doesNotMatch(narrow, /\.atelier-login__security[^}]*\b(?:overflow:\s*hidden|display:\s*none|visibility:\s*hidden)/);
+  assert.match(entrar, /temaPublico === "light" \? "Sistema seguro" : "Ambiente Protegido"/);
+});

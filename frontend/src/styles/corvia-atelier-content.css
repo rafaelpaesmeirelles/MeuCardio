@@ -551,3 +551,78 @@ html[data-corvia-design="atelier"] #root .cv-app .cv-content .ceai__urgent:not(.
 @media (prefers-reduced-motion: reduce) {
   html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cv-tool-card, .learning-card, .research-evidence-card, .cc-entity-card) { transition: none; }
 }
+
+/* Favorites and editorial decisions retain their dark preference. Declare
+   aliases locally: inherited custom properties were resolved on the light
+   .cv-content surface before these lazy scientific components mounted. */
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content :is(.favorites-page, .admin-clinical-changes) {
+  --atelier-paper: #172328;
+  --atelier-soft: #233532;
+  --atelier-ink: #f4f1e7;
+  --atelier-muted: #b8c3b8;
+  --atelier-line: #8aa399;
+  --atelier-teal: #8cd6c2;
+  --texto: var(--atelier-ink);
+  --texto-secundario: var(--atelier-muted);
+  --texto-terciario: var(--atelier-muted);
+  --superficie: var(--atelier-paper);
+  --superficie-suave: var(--atelier-soft);
+  --cv-text: var(--atelier-ink);
+  --cv-text-2: var(--atelier-muted);
+  --cv-text-3: var(--atelier-muted);
+  --cv-panel: var(--atelier-paper);
+  --borda: var(--atelier-line);
+  color: var(--atelier-ink) !important;
+  background: var(--atelier-paper) !important;
+  color-scheme: dark;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content :is(.favorites-page, .admin-clinical-changes) :is(h1, h2, h3, h4, legend, label) {
+  color: var(--atelier-ink) !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content .favorites-page :is(p, small):not([role="alert"]):not(.eyebrow) {
+  color: var(--atelier-muted) !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content .favorites-page .eyebrow {
+  color: #d39770 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content .favorites-page a:not(.botao) {
+  color: var(--atelier-teal) !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content .favorites-page :is(button, a.botao):not(:disabled) {
+  color: var(--atelier-ink) !important;
+  background: var(--atelier-soft) !important;
+  border-color: var(--atelier-line) !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content .favorites-page :is(button, a.botao):not(:disabled):hover {
+  background: #334941 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content .admin-clinical-changes .botao:not(.botao--secundario):not([class*="perigo"]):not([class*="danger"]) {
+  color: #172328 !important;
+  background: var(--atelier-teal) !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content :is(.favorites-page, .admin-clinical-changes) :is(input, select, textarea):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]) {
+  color: var(--atelier-ink) !important;
+  background: var(--atelier-soft) !important;
+  -webkit-text-fill-color: var(--atelier-ink) !important;
+  caret-color: var(--atelier-ink) !important;
+  border-color: var(--atelier-line) !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content :is(.favorites-page, .admin-clinical-changes) :is(input, textarea):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"])::placeholder {
+  color: var(--atelier-muted) !important;
+  -webkit-text-fill-color: var(--atelier-muted) !important;
+  opacity: 1;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content :is(.favorites-page, .admin-clinical-changes) :is(input, textarea, select):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):-webkit-autofill {
+  -webkit-text-fill-color: var(--atelier-ink) !important;
+  caret-color: var(--atelier-ink) !important;
+  -webkit-box-shadow: 0 0 0 1000px #233532 inset !important;
+  box-shadow: 0 0 0 1000px #233532 inset !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content :is(.favorites-page, .admin-clinical-changes) select :is(option, optgroup) {
+  color: var(--atelier-ink) !important;
+  -webkit-text-fill-color: var(--atelier-ink) !important;
+  background: var(--atelier-soft) !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content :is(.favorites-page, .admin-clinical-changes) :is(button, a, input, select, textarea, summary):focus-visible {
+  outline-color: #8cd6c2 !important;
+}

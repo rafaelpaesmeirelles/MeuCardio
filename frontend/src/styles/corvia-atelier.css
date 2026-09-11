@@ -259,6 +259,38 @@ html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-in
   background: #1d302f !important;
 }
 
+/* The monitor also mounts outside .cv-content. Pair its saved dark theme
+   explicitly; lazy scientific styles must not put pale headings on pearl. */
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .scientific-intelligence-monitor {
+  color: #f4f1e7 !important;
+  background: #172328 !important;
+  border-color: #8aa399 !important;
+  color-scheme: dark;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .scientific-intelligence-monitor :is(h3, h4, strong, dd) {
+  color: #f4f1e7 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .scientific-intelligence-monitor :is(dt, small, p:not(.scientific-intelligence-monitor__health)) {
+  color: #b8c3b8 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .scientific-intelligence-monitor a {
+  color: #8cd6c2 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .scientific-intelligence-monitor button {
+  color: #f4f1e7 !important;
+  background: #233532 !important;
+  border-color: #8aa399 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .scientific-intelligence-monitor :is(a, button):focus-visible {
+  outline-color: #8cd6c2 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .scientific-intelligence-monitor__health.is-active {
+  color: #8cd6c2 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .scientific-intelligence-monitor__health:is(.is-degraded, .is-inactive) {
+  color: #ffd08c !important;
+}
+
 /* The personalizer now has optional history and a search row. The legacy
    six-track grid placed search inside minmax(0,1fr), collapsing its row under
    the control. Use one scroll surface and intrinsic, non-shrinking children. */
