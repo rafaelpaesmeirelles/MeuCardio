@@ -207,7 +207,11 @@ if (monitorEntry) {
 // mede 3134406 B, delta auditado de 165648 B. O novo teto deixa somente 1082 B
 // de margem; entrypoint, gzip, divisão por rotas e teto de chunks opcionais
 // permanecem rigorosamente inalterados.
-const maxPrecacheBytes = 3062 * 1024;
+// Ajustado de 3062 para 3080 KiB em 11/09/2026 por autorização explícita
+// do responsável pelo produto após aprovação visual do PR #930. O build
+// mediu 3141469 B; o novo teto de 3153920 B deixa 12451 B de margem.
+// Entrypoint, gzip, divisão por rotas e chunks opcionais não mudam.
+const maxPrecacheBytes = 3080 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }
