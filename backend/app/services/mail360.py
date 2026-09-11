@@ -120,6 +120,19 @@ def _chamar(metodo: str, caminho: str, headers_extra: dict[str, str] | None = No
             resp = cliente.request(metodo, f"{BASE}{caminho}", headers=headers, **kwargs)
             resp.raise_for_status()
             corpo = resp.json() if resp.content else {}
+            # HTTP acceptance alone is not the provider's operation status.
+            # Mail360 documents status.code in both success/error envelopes.
+            # Never unwrap an error payload as if it were useful message data.
+            if isinstance(corpo, dict) and "status" in corpo:
+                status = corpo["status"]
+                code = status.get("code") if isinstance(status, dict) else None
+                valid_code = type(code) is int or (
+                    isinstance(code, str) and len(code) == 3 and code.isascii() and code.isdigit()
+                )
+                if not valid_code:
+                    raise Mail360Error("Mail360 devolveu status de operação inválido.")
+                if not 200 <= int(code) < 300:
+                    raise Mail360Error(f"Mail360 devolveu erro {int(code)} na operação.")
             return corpo.get("data", corpo) if isinstance(corpo, dict) else corpo
     except httpx.HTTPStatusError as e:
         log.error("Mail360 %s %s devolveu %s: %s", metodo, caminho, e.response.status_code, e.response.text[:300])

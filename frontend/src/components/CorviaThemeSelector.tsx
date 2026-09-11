@@ -10,8 +10,8 @@ type ThemeOption = {
 };
 
 const THEME_OPTIONS: ThemeOption[] = [
-  { theme: "dark", label: "Modo escuro", description: "Imersão cósmica", icon: "lua" },
-  { theme: "light", label: "Modo claro", description: "Observatório orbital", icon: "sol" },
+  { theme: "light", label: "Claro", description: "Superfície perolada", icon: "sol" },
+  { theme: "dark", label: "Escuro", description: "Grafite acolhedor", icon: "lua" },
 ];
 
 export default function CorviaThemeSelector({ variant = "choice" }: { variant?: "choice" | "menu" }) {
@@ -38,10 +38,10 @@ export default function CorviaThemeSelector({ variant = "choice" }: { variant?: 
   return (
     <section className={`corvia-theme-selector corvia-theme-selector--${variant}`} aria-labelledby={titleId}>
       <div className="corvia-theme-selector__intro">
-        <span className="corvia-theme-selector__orbit" aria-hidden="true"><i /><b /></span>
+        <span className="corvia-theme-selector__mark" aria-hidden="true"><Icone nome="configuracao" /></span>
         <span>
-          <strong id={titleId}>APARÊNCIA DO UNIVERSO</strong>
-          <small id={descriptionId}>A mesma identidade CorVIA, sob outra luz.</small>
+          <strong id={titleId}>Aparência do CorVIA</strong>
+          <small id={descriptionId}>Ajuste a luz do seu ambiente.</small>
         </span>
       </div>
       <div
@@ -59,6 +59,7 @@ export default function CorviaThemeSelector({ variant = "choice" }: { variant?: 
               type="button"
               className={selected ? "is-selected" : undefined}
               role="radio"
+              aria-label={`Modo ${option.label.toLocaleLowerCase("pt-BR")} — ${option.description}`}
               aria-checked={selected}
               tabIndex={selected ? 0 : -1}
               onClick={() => setTheme(option.theme)}

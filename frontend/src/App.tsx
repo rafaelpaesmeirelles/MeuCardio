@@ -130,6 +130,20 @@ export default function App() {
     );
   }
 
+  // Token validation belongs to the reset endpoint, independently of an
+  // existing browser session. Keep the legacy activation query intact.
+  const caminhoDeToken = location.pathname.replace(/\/+$/, "");
+  if (caminhoDeToken === "/ativar-conta" || caminhoDeToken === "/redefinir-senha") {
+    return (
+      <RotasSuspensas>
+        <Routes>
+          <Route path="/ativar-conta" element={<Navigate to={{ pathname: "/redefinir-senha", search: location.search, hash: location.hash }} replace />} />
+          <Route path="/redefinir-senha" element={<RedefinirSenha />} />
+        </Routes>
+      </RotasSuspensas>
+    );
+  }
+
   if (carregando) return <Carregando texto="Abrindo a Corvia…" />;
   if (!usuario) {
     return (
@@ -140,7 +154,6 @@ export default function App() {
           <Route path="/entrar" element={<Entrar />} />
           <Route path="/solicitar-acesso" element={<SolicitarAcesso />} />
           <Route path="/esqueci-senha" element={<EsqueciSenha />} />
-          <Route path="/redefinir-senha" element={<RedefinirSenha />} />
           <Route path="/corvia-mail" element={<CorviaMail />} />
           <Route path="/privacidade" element={<PoliticaPrivacidade />} />
           <Route path="/excluir-conta" element={<ExcluirConta />} />

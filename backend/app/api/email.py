@@ -61,7 +61,8 @@ from app.services.agenda_integrada.contacts import list_contacts
 from app.services.agenda_integrada.domain import integration_credentials, store_integration_credentials
 from app.services.email_signature import dados_assinatura, montar_assinatura_html, montar_corpo_com_assinatura
 from app.services.mail360 import Mail360Error
-from app.services.notificar import tentar_enviar_email
+from app.services.notificar import tentar_enviar_email_transacional
+from app.services.account_recovery import destinatario_seguro
 from app.services.apple_mail import AppleMailError
 from app.services.yahoo_mail import YahooMailError
 from app.services import investidor_mail_demo
@@ -580,28 +581,34 @@ class EsqueciSenhaEmail(BaseModel):
 @router.post("/esqueci-senha", status_code=202)
 def esqueci_senha_email(dados: EsqueciSenhaEmail, db: Session = Depends(get_db)):
     """Sempre responde 202 — não confirma se o endereço existe (evita
-    enumeração). O link vai para o e-mail PRINCIPAL da conta Corvia
-    (`users.email`), nunca para o próprio endereço @corvia.med.br: mandar a
-    recuperação para dentro da caixa trancada trancaria de vez quem
-    esqueceu a senha."""
+    enumeração). Prioriza o segundo canal de recuperação; o endereço principal
+    só é usado como fallback se for diferente da caixa trancada. Sem canal
+    independente, não cria token nem envia um link para a própria caixa."""
+    resposta = {"nota": "Se o endereço existir e estiver ativo, um link de redefinição foi gerado."}
     endereco = dados.endereco.strip().lower()
     conta = db.query(EmailAccount).filter(EmailAccount.email_address == endereco).first()
     if conta:
         user = db.get(User, conta.user_id)
-        if user:
+        if user and not user.investidor:
+            destino = (destinatario_seguro(db, user) or "").strip().lower()
+            if not destino or destino == conta.email_address.strip().lower():
+                return resposta
             token = PasswordResetToken(user_id=user.id, alvo="email")
             db.add(token)
             db.commit()
             link = f"/redefinir-senha?token={token.token}&alvo=email"
-            tentar_enviar_email(
-                destinatario=user.email,
+            tentar_enviar_email_transacional(
+                destinatario=destino,
                 assunto="CorvIA Mail — redefinição de senha da caixa de e-mail",
                 corpo=(
                     f"Use este link para redefinir a senha da sua caixa {conta.email_address} "
                     f"(válido por 2 horas): {{DOMINIO}}{link}"
                 ),
+                user_id=user.id,
+                tipo_log="recuperar_senha_email",
+                link=f"{{DOMINIO}}{link}",
             )
-    return {"nota": "Se o endereço existir e estiver ativo, um link de redefinição foi gerado."}
+    return resposta
 
 
 # --------------------------------------------------------------------------

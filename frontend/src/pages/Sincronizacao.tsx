@@ -41,6 +41,8 @@ export default function Sincronizacao() {
   const [consentimento, setConsentimento] = useState(false);
   const [conectando, setConectando] = useState<string | null>(null);
   const [erro, setErro] = useState("");
+  const [erroCarregamento, setErroCarregamento] = useState("");
+  const [carregando, setCarregando] = useState(false);
   const [mensagem, setMensagem] = useState("");
   const [formAberto, setFormAberto] = useState<"apple" | null>(null);
   const [removendo, setRemovendo] = useState<number | null>(null);
@@ -50,12 +52,21 @@ export default function Sincronizacao() {
   });
 
   async function carregar() {
-    const [i, c] = await Promise.all([
-      api.get<IntegracaoExterna[]>("/agenda/integrations"),
-      api.get<CapacidadesSync>("/agenda/capabilities"),
-    ]);
-    setIntegracoes(i);
-    setCapacidades(c);
+    setCarregando(true);
+    try {
+      const [i, c] = await Promise.all([
+        api.get<IntegracaoExterna[]>("/agenda/integrations"),
+        api.get<CapacidadesSync>("/agenda/capabilities"),
+      ]);
+      setIntegracoes(i);
+      setCapacidades(c);
+      setErroCarregamento("");
+    } catch (error) {
+      setErroCarregamento("Não foi possível consultar suas conexões. Nenhuma conta foi alterada. Tente novamente.");
+      throw error;
+    } finally {
+      setCarregando(false);
+    }
   }
 
   useEffect(() => {
@@ -138,7 +149,18 @@ export default function Sincronizacao() {
     } finally { setRemovendo(null); }
   }
 
-  if (!integracoes || !capacidades) return null;
+  if (!integracoes || !capacidades) return (
+    <section aria-labelledby="sincronizacao-titulo">
+      <p className="eyebrow">Sincronize suas contas</p>
+      <h1 id="sincronizacao-titulo">Sincronização de contas</h1>
+      {erroCarregamento ? <div role="alert" className="cartao">
+        <p>{erroCarregamento}</p>
+        <button type="button" className="botao botao--secundario" disabled={carregando} onClick={() => void carregar().catch(() => {})}>
+          {carregando ? "Consultando…" : "Tentar novamente"}
+        </button>
+      </div> : <p role="status">Consultando suas conexões…</p>}
+    </section>
+  );
 
   const conectadas = integracoes.filter((i) => (PROVEDORES_SINCRONIZAVEIS as readonly string[]).includes(i.provider));
   const configurado = (provider: string) =>
@@ -157,6 +179,10 @@ export default function Sincronizacao() {
       </p>
 
       <div className="cartao" style={{ maxWidth: 720 }}>
+        {erroCarregamento && <div role="alert">
+          <p>{erroCarregamento} Os últimos dados recebidos permanecem na tela.</p>
+          <button type="button" className="botao botao--secundario" disabled={carregando} onClick={() => void carregar().catch(() => {})}>Tentar novamente</button>
+        </div>}
         {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
         {mensagem && <p style={{ color: "var(--sucesso)", fontSize: "0.86rem" }}>{mensagem}</p>}
         <p style={{ marginTop: 0, fontSize: "0.78rem", color: "var(--texto-secundario)" }}>

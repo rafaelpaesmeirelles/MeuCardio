@@ -7,6 +7,7 @@ import LogoProvedor from "../components/LogoProvedor";
 import { ApiError, api } from "../lib/api";
 import { googleAccountConnectVisible } from "../lib/cardiologySpacesFeature";
 import { withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
+import "../styles/agenda-adjust.css";
 
 type Visao = "dia" | "semana" | "mes" | "lista";
 
@@ -297,7 +298,7 @@ function apenasDigitos(value: string | null | undefined) {
 
 function Evento({ item, aoCancelar, aoAjustar, aoAbrirPaciente }: {
   item: Agendamento; aoCancelar: (item: Agendamento) => void;
-  aoAjustar: (item: Agendamento) => void;
+  aoAjustar: (item: Agendamento, origem: HTMLElement) => void;
   aoAbrirPaciente: (item: Agendamento) => void;
 }) {
   const compromisso = item.calendar_kind === "commitment";
@@ -311,11 +312,11 @@ function Evento({ item, aoCancelar, aoAjustar, aoAbrirPaciente }: {
       role={compromissoEditavel ? "button" : undefined}
       tabIndex={compromissoEditavel ? 0 : undefined}
       aria-label={compromissoEditavel ? `Editar compromisso ${item.title || "sem título"}` : undefined}
-      onClick={compromissoEditavel ? () => aoAjustar(item) : undefined}
+      onClick={compromissoEditavel ? (event) => aoAjustar(item, event.currentTarget) : undefined}
       onKeyDown={compromissoEditavel ? (event) => {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
-          aoAjustar(item);
+          aoAjustar(item, event.currentTarget);
         }
       } : undefined}
     >
@@ -409,6 +410,7 @@ export default function Agenda() {
   const novoModalRef = useRef<HTMLDivElement>(null);
   const compromissoModalRef = useRef<HTMLDivElement>(null);
   const ajusteModalRef = useRef<HTMLDivElement>(null);
+  const ajusteOrigemRef = useRef<HTMLElement | null>(null);
   const configModalRef = useRef<HTMLDivElement>(null);
   const contasExternasRef = useRef<HTMLElement>(null);
   const cancelarModalRef = useRef<HTMLDivElement>(null);
@@ -418,7 +420,9 @@ export default function Agenda() {
   useEffect(() => {
     const panel = contextoPaciente ? pacienteModalRef.current : ajustando ? ajusteModalRef.current : cancelando ? cancelarModalRef.current : configAberta ? configModalRef.current : compromissoAberto ? compromissoModalRef.current : novoAberto ? novoModalRef.current : null;
     if (!panel) return;
-    const previous = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    // The adjustment input's autoFocus runs before this effect. Keep the actual
+    // trigger captured when opening it, rather than the soon-to-be-removed input.
+    const previous = ajustando ? ajusteOrigemRef.current : document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const oldOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const focusables = () => Array.from(panel.querySelectorAll<HTMLElement>(
@@ -668,7 +672,9 @@ export default function Agenda() {
     } finally { setSalvando(false); }
   }
 
-  function abrirAjusteCompromisso(item: Agendamento) {
+  function abrirAjusteCompromisso(item: Agendamento, origem: HTMLElement) {
+    ajusteOrigemRef.current = origem;
+    setErro("");
     setAjusteCompromisso({
       starts_at: localDateTime(new Date(item.starts_at)), ends_at: localDateTime(new Date(item.ends_at)),
       title: item.title || "", location_id: item.location ? String(item.location.id) : "", notes: item.notes || "",
@@ -1054,7 +1060,7 @@ export default function Agenda() {
       </section>
 
       {mensagem && <div className="agenda-alerta agenda-alerta--sucesso" role="status"><strong>Concluído</strong><span>{mensagem}</span><button onClick={() => setMensagem("")} aria-label="Fechar"><Icone nome="fechar" /></button></div>}
-      {erro && <div className="agenda-alerta" role="alert"><strong>Atenção</strong><span>{erro}</span><button onClick={() => setErro("")} aria-label="Fechar"><Icone nome="fechar" /></button></div>}
+      {erro && !ajustando && <div className="agenda-alerta" role="alert"><strong>Atenção</strong><span>{erro}</span><button onClick={() => setErro("")} aria-label="Fechar"><Icone nome="fechar" /></button></div>}
 
       <section className="agenda-ferramentas">
         <div className="agenda-navegacao">
@@ -1168,7 +1174,7 @@ export default function Agenda() {
         <footer><button className="botao botao--secundario" onClick={() => setCompromissoAberto(false)}>Cancelar</button><button className="botao" disabled={salvando || !novoCompromisso.title.trim()} onClick={salvarCompromisso}>{salvando ? "Salvando…" : "Criar compromisso"}</button></footer>
       </div></div>}
 
-      {ajustando && <div className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="ajustar-compromisso-titulo"><div className="agenda-modal__painel agenda-modal__painel--compacto" ref={ajusteModalRef} tabIndex={-1}>
+      {ajustando && <div className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="ajustar-compromisso-titulo"><div className="agenda-modal__painel agenda-modal__painel--compacto agenda-adjust-panel" ref={ajusteModalRef} tabIndex={-1}>
         <header><div><p className="eyebrow">{ajustando.recurrence === "none" ? "Compromisso" : "Alteração pontual"}</p><h2 id="ajustar-compromisso-titulo">{ajustando.recurrence === "none" ? "Editar compromisso" : "Ajustar somente esta ocorrência"}</h2></div><button onClick={() => setAjustando(null)} aria-label="Fechar"><Icone nome="fechar" /></button></header>
         <div className="agenda-form-grid">
           <p className="span-2 agenda-modal__destaque">{ajustando.recurrence === "none" ? "Altere os dados deste compromisso ou exclua-o com segurança." : "As demais ocorrências da rotina continuarão inalteradas."}</p>
@@ -1178,7 +1184,9 @@ export default function Agenda() {
           <label className="span-2">Local<select value={ajusteCompromisso.location_id} onChange={(e) => setAjusteCompromisso({ ...ajusteCompromisso, location_id: e.target.value })}><option value="">Sem local definido</option>{locais.filter((item) => item.active).map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
           <label className="span-2">Observações<textarea rows={3} value={ajusteCompromisso.notes} onChange={(e) => setAjusteCompromisso({ ...ajusteCompromisso, notes: e.target.value })} /></label>
         </div>
-        <footer className="agenda-modal__acoes-distribuidas"><div className="agenda-modal__acoes-perigo">{ajustando.recurrence !== "none" && <button type="button" className="botao agenda-botao--perigo" disabled={salvando} onClick={() => salvarExcecaoCompromisso("cancel")}>Cancelar esta data</button>}<button type="button" className="botao agenda-botao--perigo agenda-botao--contorno" disabled={salvando || !ajustando.series_id} onClick={() => ajustando.series_id && removerSerie(ajustando.series_id, series.find((item) => item.id === ajustando.series_id)?.title || ajustando.title || "Compromisso", ajustando.recurrence !== "none", true)}>{ajustando.recurrence === "none" ? "Excluir compromisso" : "Encerrar toda a série"}</button></div><div><button type="button" className="botao botao--secundario" onClick={() => setAjustando(null)}>Voltar</button><button type="button" className="botao" disabled={salvando || !ajusteCompromisso.starts_at || !ajusteCompromisso.ends_at || new Date(ajusteCompromisso.ends_at) <= new Date(ajusteCompromisso.starts_at)} onClick={() => salvarExcecaoCompromisso("override")}>{salvando ? "Salvando…" : "Salvar alteração"}</button></div></footer>
+        <footer className="agenda-modal__acoes-distribuidas"><div className="agenda-modal__acoes-perigo">
+          {erro && <div role="alert" style={{ color: "#ae2639", background: "#fffdfa", padding: "0.5rem", borderRadius: 8, flexBasis: "100%", gridColumn: "1 / -1" }}>{erro}</div>}
+          {ajustando.recurrence !== "none" && <button type="button" className="botao agenda-botao--perigo" disabled={salvando} onClick={() => salvarExcecaoCompromisso("cancel")}>Cancelar esta data</button>}<button type="button" className="botao agenda-botao--perigo agenda-botao--contorno" style={{ gridColumn: ajustando.recurrence === "none" ? "1 / -1" : undefined }} disabled={salvando || !ajustando.series_id} onClick={() => ajustando.series_id && removerSerie(ajustando.series_id, series.find((item) => item.id === ajustando.series_id)?.title || ajustando.title || "Compromisso", ajustando.recurrence !== "none", true)}>{ajustando.recurrence === "none" ? "Excluir compromisso" : "Encerrar toda a série"}</button></div><div><button type="button" className="botao botao--secundario" onClick={() => setAjustando(null)}>Voltar</button><button type="button" className="botao" disabled={salvando || !ajusteCompromisso.starts_at || !ajusteCompromisso.ends_at || new Date(ajusteCompromisso.ends_at) <= new Date(ajusteCompromisso.starts_at)} onClick={() => salvarExcecaoCompromisso("override")}>{salvando ? "Salvando…" : "Salvar alteração"}</button></div></footer>
       </div></div>}
 
       {novoAberto && <div className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="novo-agendamento-titulo"><div className="agenda-modal__painel" ref={novoModalRef} tabIndex={-1}>

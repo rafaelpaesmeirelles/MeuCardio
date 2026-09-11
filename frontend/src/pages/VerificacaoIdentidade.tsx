@@ -279,35 +279,52 @@ export default function VerificacaoIdentidade() {
   const [status, setStatus] = useState<StatusKyc | null>(null);
   const [carregando, setCarregando] = useState(true);
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
+  const [erroStatus, setErroStatus] = useState("");
 
   async function recarregarStatus() {
     setCarregando(true);
+    setErroStatus("");
     try {
       const s = await api.get<StatusKyc>("/kyc/status");
       setStatus(s);
       setMostrarFormulario(!s.status || s.status === "rejeitado" || s.status === "reenvio_solicitado");
+    } catch {
+      setStatus(null);
+      setMostrarFormulario(false);
+      setErroStatus("Não foi possível consultar sua verificação de identidade. Nenhuma etapa foi concluída. Tente novamente.");
     } finally {
       setCarregando(false);
     }
   }
 
-  useEffect(() => { recarregarStatus(); }, []);
+  useEffect(() => { void recarregarStatus(); }, []);
 
   async function continuar() {
     // Servidor é quem manda de verdade: busca `/auth/me` de novo e
     // atualiza `usuario.kyc_required` no contexto, pra o gate do App.tsx
     // não bater de volta aqui na próxima navegação.
-    recarregarUsuario();
+    // A recarga encerra a sessão local em caso de falha; o gate de autenticação
+    // continua responsável por impedir acesso à caixa, sem presumir aprovação.
+    await recarregarUsuario();
     navigate("/corvia-mail");
   }
 
-  if (carregando) return <p className="eyebrow">Carregando…</p>;
+  if (carregando) return <p className="eyebrow" role="status">Consultando sua verificação…</p>;
 
   // Investidor nunca participa do KYC; este ramo é apenas defesa contra
   // navegação manual para a rota enquanto a sessão de demonstração estiver ativa.
   if (usuario?.investidor) {
     return <p className="eyebrow">Modo Investidor não exige verificação de identidade.</p>;
   }
+  if (erroStatus) return (
+    <section className="pagina" aria-labelledby="kyc-status-titulo" style={{ maxWidth: 560 }}>
+      <h1 id="kyc-status-titulo">Verificação de identidade</h1>
+      <div className="cartao" role="alert">
+        <p>{erroStatus}</p>
+        <button type="button" className="botao botao--secundario" onClick={() => void recarregarStatus()}>Tentar novamente</button>
+      </div>
+    </section>
+  );
   const tipoConta: TipoConta = usuario?.convidado ? "convidado" : "normal";
   const ehAcessoAutomatico = tipoConta === "convidado";
   const waivers = status?.waivers ?? SEM_DISPENSAS;

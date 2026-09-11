@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import LogoCorviaMail from "../components/LogoCorviaMail";
 import LogoProvedor from "../components/LogoProvedor";
@@ -8,6 +8,7 @@ import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { CHAVE_PENDING_COMPOSE } from "../components/OfertaEnvioEmailPaciente";
 import "../styles/corvia-mail-professional.css";
+import "../styles/corvia-atelier-mail.css";
 
 type Conta = { id: string; provider: "corvia" | "google" | "microsoft" | "yahoo" | "apple"; display_name: string; email_address: string; native: boolean; read_mail: boolean; send_mail: boolean; padrao: boolean };
 type Pasta = { folderId?: string; id?: string; folderName?: string; name?: string; folderType?: string };
@@ -19,6 +20,43 @@ type Contato = { id: number; name: string; emails: string[]; organization: strin
 type Filtro = "todas" | "nao_lidas" | "favoritas" | "anexos";
 type Rascunho = { modo: "nova" | "reply" | "replyall" | "forward"; origem?: string; messageId?: string; de: string; para: string; cc: string; cco: string; assunto: string; corpo: string };
 type CaixaCombinada = { mensagens: Mensagem[]; fontes_com_erro: { origem: string; provider: string; erro: string }[] };
+
+function MailComposerDialog({ children, busy = false, error, onClose }: { children: ReactNode; busy?: boolean; error?: string | null; onClose: () => void }) {
+  const ref = useRef<HTMLDialogElement>(null);
+  const restoreFrame = useRef<number | null>(null);
+  useEffect(() => {
+    if (restoreFrame.current !== null) cancelAnimationFrame(restoreFrame.current);
+    const dialog = ref.current;
+    if (!dialog) return;
+    const origin = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    dialog.showModal();
+    dialog.querySelector<HTMLInputElement>('input[aria-label="Para"]')?.focus();
+    return () => {
+      dialog.close();
+      restoreFrame.current = requestAnimationFrame(() => {
+        if (origin?.isConnected && !document.querySelector('dialog[open], [aria-modal="true"]')) origin.focus();
+      });
+    };
+  }, []);
+  useEffect(() => {
+    if (error) ref.current?.querySelector<HTMLElement>('[role="alert"]')?.focus();
+  }, [error]);
+  return <dialog ref={ref} className="cmp-compose-modal" aria-modal="true" aria-labelledby="cmp-composer-title"
+    onCancel={(event) => { event.preventDefault(); if (!busy) onClose(); }}
+    onClick={(event) => { if (event.target === event.currentTarget && !busy) onClose(); }}
+    onKeyDown={(event) => {
+      if (event.key !== "Tab") return;
+      const dialog = event.currentTarget;
+      const controls = [...dialog.querySelectorAll<HTMLElement>('button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), a[href], [tabindex]')]
+        .filter(element => element.tabIndex >= 0 && element.getClientRects().length > 0);
+      const first = controls[0], last = controls[controls.length - 1];
+      if (!first) { event.preventDefault(); dialog.focus(); }
+      else if (event.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) { event.preventDefault(); first.focus(); }
+    }}>
+    {children}
+  </dialog>;
+}
 
 const CHAVE_CONTA = "corvia.mail.professional.conta";
 const CHAVE_COMBINADAS = "corvia.mail.professional.combinadas";
@@ -193,19 +231,18 @@ function ModoDemonstracaoInvestidor() {
       </section>
 
       {compondo && (
-        <div className="cmp-compose-modal">
-          <button className="cmp-compose-modal__backdrop" aria-label="Fechar" onClick={() => setCompondo(false)} />
+        <MailComposerDialog onClose={() => setCompondo(false)}>
           <section className="cmp-composer">
-            <header><div><small>NOVA MENSAGEM</small><h2>Escrever (demonstração)</h2></div><button onClick={() => setCompondo(false)}>×</button></header>
-            <div className="cmp-field"><label>Para</label><input placeholder="nome@exemplo.com" /></div>
-            <div className="cmp-field cmp-field--subject"><label>Assunto</label><input /></div>
-            <textarea className="cmp-compose-body" placeholder="Este é o modo demonstração — a mensagem não será enviada." />
+            <header><div><small>NOVA MENSAGEM</small><h2 id="cmp-composer-title">Escrever (demonstração)</h2></div><button aria-label="Fechar mensagem" onClick={() => setCompondo(false)}>×</button></header>
+            <div className="cmp-field"><label>Para</label><input aria-label="Para" placeholder="nome@exemplo.com" /></div>
+            <div className="cmp-field cmp-field--subject"><label>Assunto</label><input aria-label="Assunto" /></div>
+            <textarea className="cmp-compose-body" aria-label="Mensagem" placeholder="Este é o modo demonstração — a mensagem não será enviada." />
             <footer>
               <button className="cmp-send" disabled title="Recurso indisponível no modo investidor.">Enviar</button>
               <span>Modo demonstração — nenhum e-mail real é enviado.</span>
             </footer>
           </section>
-        </div>
+        </MailComposerDialog>
       )}
     </main>
   );
@@ -214,6 +251,8 @@ function ModoDemonstracaoInvestidor() {
 export default function CaixaDeEmailProfessional() {
   const navigate = useNavigate(); const { usuario } = useAuth();
   const [semSessao, setSemSessao] = useState(!tokenEmail.get());
+  const [revisaoSessao, setRevisaoSessao] = useState(0);
+  const readerReturnRef = useRef<HTMLElement | null>(null);
   const [endereco, setEndereco] = useState<string | null>(null);
   const [contas, setContas] = useState<Conta[]>([]);
   const [contaId, setContaId] = useState("corvia");
@@ -228,6 +267,7 @@ export default function CaixaDeEmailProfessional() {
   const [carregandoContexto, setCarregandoContexto] = useState(false); const [atualizando, setAtualizando] = useState(false); const [erro, setErro] = useState<string | null>(null); const [aviso, setAviso] = useState<string | null>(null);
   const [compondo, setCompondo] = useState(false); const [rascunho, setRascunho] = useState<Rascunho>(RASCUNHO_VAZIO); const [mostrarCopias, setMostrarCopias] = useState(false); const [anexos, setAnexos] = useState<AnexoEnviado[]>([]); const [verificacoes, setVerificacoes] = useState<Record<string, Verificacao>>({}); const [enviando, setEnviando] = useState(false); const [enviandoAnexo, setEnviandoAnexo] = useState(false); const [contatos, setContatos] = useState<Contato[]>([]);
   const contextoSeq = useRef(0);
+  const leituraSeq = useRef(0);
 
   function falha(e: unknown, fallback: string) { if (e instanceof ApiEmailError && e.status === 401) { setSemSessao(true); return "Sua sessão expirou. Entre novamente."; } return e instanceof ApiEmailError ? e.message : fallback; }
   function sair() { tokenEmail.clear(); navigate("/corvia-mail"); }
@@ -261,7 +301,7 @@ export default function CaixaDeEmailProfessional() {
       const salva = localStorage.getItem(CHAVE_CONTA); const padrao = cs.find((c) => c.padrao)?.id ?? "corvia"; setContaId(salva && cs.some((c) => c.id === salva) ? salva : padrao);
       const bruto = localStorage.getItem(CHAVE_COMBINADAS); if (bruto) { try { const ids = (JSON.parse(bruto) as string[]).filter((id) => cs.some((c) => c.id === id && c.read_mail)); if (ids.length > 1) setCombinadas(new Set(ids)); else localStorage.removeItem(CHAVE_COMBINADAS); } catch { localStorage.removeItem(CHAVE_COMBINADAS); } }
     }).catch((e) => setErro(falha(e, "Não foi possível iniciar o CorvIA Mail.")));
-  }, [semSessao]);
+  }, [semSessao, revisaoSessao]);
 
   useEffect(() => { if (endereco) void carregarContexto(); }, [endereco, contaId, combinadas ? [...combinadas].sort().join("|") : ""]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { if (!endereco) return; apiEmail.get<Contato[]>("/email/contatos?limite=100").then(setContatos).catch(() => setContatos([])); }, [endereco]);
@@ -273,6 +313,7 @@ export default function CaixaDeEmailProfessional() {
 
   async function mudarPasta(id: string) {
     if (combinadas) return; setPastaId(id); setAberta(null); setSelecionadas(new Set()); setAtualizando(true); setErro(null);
+    ++leituraSeq.current;
     try { const params = new URLSearchParams({ limite: "100", inicio: "1", pasta: id }); setMensagens(await apiEmail.get<Mensagem[]>(`${prefixo(contaId)}/mensagens?${params}`)); }
     catch (e) { setErro(falha(e, "Não foi possível carregar a pasta.")); }
     finally { setAtualizando(false); }
@@ -282,10 +323,28 @@ export default function CaixaDeEmailProfessional() {
   function selecionarTodas() { const ids = new Set(contas.filter((c) => c.read_mail).map((c) => c.id)); if (ids.size < 2) return; setCombinadas(ids); localStorage.setItem(CHAVE_COMBINADAS, JSON.stringify([...ids])); }
 
   async function abrirMensagem(m: Mensagem) {
+    readerReturnRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const origem = combinadas ? (m.origem ?? "corvia") : contaId; const id = idMensagem(m); if (!id) return; setErro(null);
-    try { const completa = await apiEmail.get<Mensagem>(`${prefixo(origem)}/mensagens/${encodeURIComponent(id)}`); completa.origem = origem; setAberta(completa); setMensagens((ls) => ls.map((x) => idMensagem(x) === id && (!combinadas || x.origem === origem) ? { ...x, status: "1" } : x));
-      if (origem === "corvia" && temAnexo(completa)) setAnexosRecebidos(await apiEmail.get<AnexoRecebido[]>(`/email/mensagens/${encodeURIComponent(id)}/anexos`).catch(() => [])); else setAnexosRecebidos([]);
-    } catch (e) { setErro(falha(e, "Não foi possível abrir a mensagem.")); }
+    const current = ++leituraSeq.current;
+    const context = contextoSeq.current;
+    const isCurrent = () => current === leituraSeq.current && context === contextoSeq.current;
+    setAnexosRecebidos([]);
+    try {
+      const completa = await apiEmail.get<Mensagem>(`${prefixo(origem)}/mensagens/${encodeURIComponent(id)}`);
+      if (!isCurrent()) return;
+      completa.origem = origem; setAberta(completa); setMensagens((ls) => ls.map((x) => idMensagem(x) === id && (!combinadas || x.origem === origem) ? { ...x, status: "1" } : x));
+      if (origem === "corvia" && temAnexo(completa)) {
+        const attachments = await apiEmail.get<AnexoRecebido[]>(`/email/mensagens/${encodeURIComponent(id)}/anexos`).catch(() => []);
+        if (isCurrent()) setAnexosRecebidos(attachments);
+      }
+    } catch (e) { if (isCurrent()) setErro(falha(e, "Não foi possível abrir a mensagem.")); }
+  }
+
+  function fecharMensagem() {
+    ++leituraSeq.current;
+    setAberta(null);
+    setAnexosRecebidos([]);
+    requestAnimationFrame(() => { if (readerReturnRef.current?.isConnected) readerReturnRef.current.focus(); });
   }
 
   async function agir(acao: "lida" | "nao_lida" | "mover" | "sinalizar", ids: string[], extras: Record<string, string> = {}) {
@@ -314,8 +373,8 @@ export default function CaixaDeEmailProfessional() {
     finally { setAtualizando(false); }
   }
 
-  function novaMensagem() { const de = contas.find((c) => c.padrao && c.send_mail)?.id ?? contas.find((c) => c.send_mail)?.id ?? "corvia"; setRascunho({ ...RASCUNHO_VAZIO, de }); setAnexos([]); setVerificacoes({}); setMostrarCopias(false); setCompondo(true); }
-  function responder(modo: "reply" | "replyall" | "forward") { if (!aberta) return; const origem = aberta.origem ?? contaId; const assunto = aberta.subject ?? "(sem assunto)"; setRascunho({ ...RASCUNHO_VAZIO, modo, origem, messageId: idMensagem(aberta), de: origem, para: modo === "forward" ? "" : extrairEmail(remetente(aberta)), cc: modo === "replyall" ? (aberta.ccAddress ?? "") : "", assunto: /^(re:|enc:)/i.test(assunto) ? assunto : `${modo === "forward" ? "Enc:" : "Re:"} ${assunto}` }); setAnexos([]); setMostrarCopias(modo === "replyall"); setCompondo(true); }
+  function novaMensagem() { setErro(null); const de = contas.find((c) => c.padrao && c.send_mail)?.id ?? contas.find((c) => c.send_mail)?.id ?? "corvia"; setRascunho({ ...RASCUNHO_VAZIO, de }); setAnexos([]); setVerificacoes({}); setMostrarCopias(false); setCompondo(true); }
+  function responder(modo: "reply" | "replyall" | "forward") { if (!aberta) return; setErro(null); const origem = aberta.origem ?? contaId; const assunto = aberta.subject ?? "(sem assunto)"; setRascunho({ ...RASCUNHO_VAZIO, modo, origem, messageId: idMensagem(aberta), de: origem, para: modo === "forward" ? "" : extrairEmail(remetente(aberta)), cc: modo === "replyall" ? (aberta.ccAddress ?? "") : "", assunto: /^(re:|enc:)/i.test(assunto) ? assunto : `${modo === "forward" ? "Enc:" : "Re:"} ${assunto}` }); setAnexos([]); setMostrarCopias(modo === "replyall"); setCompondo(true); }
 
   async function anexar(file: File) { if (rascunho.de !== "corvia") { setErro("Anexos em contas externas ainda não são suportados com segurança. Selecione CorvIA Mail no campo De."); return; } setEnviandoAnexo(true); try { const r = await apiEmail.uploadAnexo(file); setAnexos((a) => [...a, r]); apiEmail.verificarAssinaturaAnexo(file).then((v) => setVerificacoes((x) => ({ ...x, [r.file_id]: v }))).catch(() => {}); } catch (e) { setErro(falha(e, "Não foi possível anexar o arquivo.")); } finally { setEnviandoAnexo(false); } }
 
@@ -344,16 +403,23 @@ export default function CaixaDeEmailProfessional() {
   // logar em lugar nenhum.
   if (usuario?.investidor) return <ModoDemonstracaoInvestidor />;
   if (semSessao) return <Navigate to="/corvia-mail" replace />;
-  if (!endereco) return <div className="cmp-loading"><LogoCorviaMail tamanho="compacto" /><Carregando /></div>;
+  if (!endereco) return <div className="cmp-loading"><LogoCorviaMail tamanho="compacto" />{erro ? <div role="alert"><p>{erro}</p><button type="button" className="botao botao--secundario" onClick={() => { setErro(null); setRevisaoSessao(value => value + 1); }}>Tentar novamente</button></div> : <Carregando />}</div>;
 
   return <main className="cmp-shell">
     <header className="cmp-topbar">
       <div className="cmp-brand"><LogoCorviaMail tamanho="compacto" /><span><strong>CorvIA Mail</strong><small>{combinadas ? `${combinadas.size} contas unificadas` : `${NOMES_PROVEDOR[contaAtual?.provider ?? "corvia"]} · ${contaAtual?.email_address ?? endereco}`}</small></span></div>
-      <label className="cmp-global-search"><span>⌕</span><input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Pesquisar nesta caixa" /></label>
+      <label className="cmp-global-search"><span aria-hidden="true">⌕</span><input aria-label="Pesquisar nesta caixa" value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Pesquisar nesta caixa" /></label>
       <div className="cmp-user">{usuario?.photo_url ? <img src={usuario.photo_url} alt="" /> : <span style={{ background: corAvatar(usuario?.full_name || usuario?.email || endereco) }}>{iniciais(usuario?.full_name || usuario?.email || endereco)}</span>}<div><strong>{usuario?.full_name || "Minha conta"}</strong><small>{usuario?.email}</small></div><button onClick={sair} title="Sair">⏻</button></div>
     </header>
 
-    {erro && <div className="cmp-alert cmp-alert--error"><span>{erro}</span><button onClick={() => setErro(null)}>×</button></div>}
+    <div className="cmp-mobile-actions">
+      <button type="button" className="cmp-compose-primary" onClick={novaMensagem}>＋ Nova mensagem</button>
+      {!combinadas && <select aria-label="Pasta de e-mail" value={pastaId ?? ""} onChange={event => void mudarPasta(event.target.value)}>
+        {pastas.map(pasta => <option key={idPasta(pasta)} value={idPasta(pasta)}>{nomePasta(pasta)}</option>)}
+      </select>}
+    </div>
+
+    {erro && !compondo && <div role="alert" className="cmp-alert cmp-alert--error"><span>{erro}</span><button onClick={() => setErro(null)}>×</button></div>}
     {aviso && <div className="cmp-alert cmp-alert--ok"><span>{aviso}</span><button onClick={() => setAviso(null)}>×</button></div>}
     {fontesComErro.length > 0 && <div className="cmp-alert cmp-alert--warn"><span>{fontesComErro.length} conta(s) não responderam. As demais continuam disponíveis.</span></div>}
 
@@ -376,14 +442,14 @@ export default function CaixaDeEmailProfessional() {
         <div className="cmp-list__header"><div><p>{combinadas ? "Caixa unificada" : nomePasta(pastaAtual ?? {})}</p><h2>{filtradas.length} mensagens</h2></div><button onClick={() => void carregarContexto()} disabled={atualizando || carregandoContexto} title="Atualizar">↻</button></div>
         {!combinadas && selecionadas.size > 0 && <div className="cmp-bulk"><strong>{selecionadas.size}</strong><button onClick={() => void agir("lida", [...selecionadas])}>Lida</button><button onClick={() => void agir("nao_lida", [...selecionadas])}>Não lida</button><button className="danger" disabled={atualizando} onClick={() => void excluirSelecionadas()}>Excluir</button></div>}
         <div className="cmp-list__filters"><button className={filtro === "todas" ? "is-active" : ""} onClick={() => setFiltro("todas")}>Todas</button><button className={filtro === "nao_lidas" ? "is-active" : ""} onClick={() => setFiltro("nao_lidas")}>Não lidas</button><button className={filtro === "favoritas" ? "is-active" : ""} onClick={() => setFiltro("favoritas")}>Favoritas</button></div>
-        <div className="cmp-list__scroll">{carregandoContexto ? <div className="cmp-state"><Carregando /></div> : filtradas.length === 0 ? <div className="cmp-state"><Vazio titulo="Nenhuma mensagem encontrada" /></div> : filtradas.map((m) => { const id = idMensagem(m); const origem = m.origem ?? contaId; const ativa = aberta && idMensagem(aberta) === id && (aberta.origem ?? contaId) === origem; return <article key={`${origem}-${id}`} className={`cmp-message ${naoLida(m) ? "is-unread" : ""} ${ativa ? "is-active" : ""}`}><label className="cmp-message__check"><input type="checkbox" disabled={!!combinadas} checked={selecionadas.has(id)} onChange={() => setSelecionadas((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; })} /></label><button className="cmp-message__open" onClick={() => void abrirMensagem(m)}><span className="cmp-avatar" style={{ background: corAvatar(remetente(m)) }}>{iniciais(remetente(m))}</span><span className="cmp-message__body"><span className="cmp-message__meta"><strong>{remetente(m)}</strong><time>{dataCurta(m)}</time></span><b>{m.subject ?? "(sem assunto)"}</b><small>{m.summary || "Sem prévia disponível"}</small><span className="cmp-message__tags">{combinadas && <i>{NOMES_PROVEDOR[contas.find((c) => c.id === origem)?.provider ?? m.provider ?? "corvia"]}</i>}{temAnexo(m) && <i>⌕ Anexo</i>}</span></span></button>{!combinadas && contaId === "corvia" && <button className={`cmp-star ${favorita(m) ? "is-active" : ""}`} onClick={() => void agir("sinalizar", [id], { sinalizador: favorita(m) ? "flag_not_set" : "followup" })}>{favorita(m) ? "★" : "☆"}</button>}</article>; })}</div>
+        <div className="cmp-list__scroll">{carregandoContexto ? <div className="cmp-state"><Carregando /></div> : filtradas.length === 0 ? <div className="cmp-state"><Vazio titulo="Nenhuma mensagem encontrada" /></div> : filtradas.map((m) => { const id = idMensagem(m); const origem = m.origem ?? contaId; const ativa = aberta && idMensagem(aberta) === id && (aberta.origem ?? contaId) === origem; return <article key={`${origem}-${id}`} className={`cmp-message ${naoLida(m) ? "is-unread" : ""} ${ativa ? "is-active" : ""}`}><label className="cmp-message__check"><input aria-label={`Selecionar mensagem: ${m.subject || "sem assunto"}`} type="checkbox" disabled={!!combinadas} checked={selecionadas.has(id)} onChange={() => setSelecionadas((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; })} /></label><button className="cmp-message__open" onClick={() => void abrirMensagem(m)}><span className="cmp-avatar" style={{ background: corAvatar(remetente(m)) }}>{iniciais(remetente(m))}</span><span className="cmp-message__body"><span className="cmp-message__meta"><strong>{remetente(m)}</strong><time>{dataCurta(m)}</time></span><b>{m.subject ?? "(sem assunto)"}</b><small>{m.summary || "Sem prévia disponível"}</small><span className="cmp-message__tags">{combinadas && <i>{NOMES_PROVEDOR[contas.find((c) => c.id === origem)?.provider ?? m.provider ?? "corvia"]}</i>}{temAnexo(m) && <i>⌕ Anexo</i>}</span></span></button>{!combinadas && contaId === "corvia" && <button aria-label={`${favorita(m) ? "Remover dos favoritos" : "Favoritar"}: ${m.subject || "sem assunto"}`} className={`cmp-star ${favorita(m) ? "is-active" : ""}`} onClick={() => void agir("sinalizar", [id], { sinalizador: favorita(m) ? "flag_not_set" : "followup" })}>{favorita(m) ? "★" : "☆"}</button>}</article>; })}</div>
       </section>
 
       <section className={`cmp-reader ${aberta ? "has-message" : ""}`}>
-        {!aberta ? <div className="cmp-reader__empty"><span>✉</span><h2>Selecione uma mensagem</h2><p>Leia, responda e organize seu correio sem sair desta tela.</p></div> : <><div className="cmp-reader__toolbar"><button onClick={() => responder("reply")}>↩ Responder</button><button onClick={() => responder("replyall")}>↩ Todos</button><button onClick={() => responder("forward")}>↗ Encaminhar</button><span /><button onClick={() => void excluirMensagem(aberta)} className="danger">⌫ Excluir</button></div><header className="cmp-reader__header"><p>{NOMES_PROVEDOR[contas.find((c) => c.id === (aberta.origem ?? contaId))?.provider ?? aberta.provider ?? "corvia"]}</p><h1>{aberta.subject ?? "(sem assunto)"}</h1><div className="cmp-reader__sender"><span className="cmp-avatar cmp-avatar--large" style={{ background: corAvatar(remetente(aberta)) }}>{iniciais(remetente(aberta))}</span><div><strong>{remetente(aberta)}</strong><small>Para: {aberta.toAddress ?? contaAtual?.email_address ?? endereco}</small></div><time>{dataCompleta(aberta)}</time></div></header>{anexosRecebidos.length > 0 && <div className="cmp-attachments"><strong>Anexos</strong>{anexosRecebidos.map((a) => { const aid = a.attachmentId ?? a.attachId ?? ""; const nome = a.attachmentName ?? a.fileName ?? "anexo"; return <button key={aid} onClick={() => void apiEmail.baixarAnexo(idMensagem(aberta), aid, nome)}><span>▱</span><span>{nome}<small>{formatarTamanho(a.attachmentSize ?? a.size)}</small></span><b>Baixar</b></button>; })}</div>}<div className="cmp-reader__content"><CorpoMensagem mensagem={aberta} /></div><footer className="cmp-reader__footer"><button className="cmp-reply" onClick={() => responder("reply")}>↩ Responder</button><button className="cmp-reply cmp-reply--secondary" onClick={() => responder("forward")}>↗ Encaminhar</button></footer></>}
+        {!aberta ? <div className="cmp-reader__empty"><span>✉</span><h2>Selecione uma mensagem</h2><p>Leia, responda e organize seu correio sem sair desta tela.</p></div> : <><div className="cmp-reader__toolbar"><button type="button" onClick={fecharMensagem}>← Voltar à lista</button><button onClick={() => responder("reply")}>↩ Responder</button><button onClick={() => responder("replyall")}>↩ Todos</button><button onClick={() => responder("forward")}>↗ Encaminhar</button><span /><button onClick={() => void excluirMensagem(aberta)} className="danger">⌫ Excluir</button></div><header className="cmp-reader__header"><p>{NOMES_PROVEDOR[contas.find((c) => c.id === (aberta.origem ?? contaId))?.provider ?? aberta.provider ?? "corvia"]}</p><h1>{aberta.subject ?? "(sem assunto)"}</h1><div className="cmp-reader__sender"><span className="cmp-avatar cmp-avatar--large" style={{ background: corAvatar(remetente(aberta)) }}>{iniciais(remetente(aberta))}</span><div><strong>{remetente(aberta)}</strong><small>Para: {aberta.toAddress ?? contaAtual?.email_address ?? endereco}</small></div><time>{dataCompleta(aberta)}</time></div></header>{anexosRecebidos.length > 0 && <div className="cmp-attachments"><strong>Anexos</strong>{anexosRecebidos.map((a) => { const aid = a.attachmentId ?? a.attachId ?? ""; const nome = a.attachmentName ?? a.fileName ?? "anexo"; return <button key={aid} onClick={() => void apiEmail.baixarAnexo(idMensagem(aberta), aid, nome)}><span>▱</span><span>{nome}<small>{formatarTamanho(a.attachmentSize ?? a.size)}</small></span><b>Baixar</b></button>; })}</div>}<div className="cmp-reader__content"><CorpoMensagem mensagem={aberta} /></div><footer className="cmp-reader__footer"><button className="cmp-reply" onClick={() => responder("reply")}>↩ Responder</button><button className="cmp-reply cmp-reply--secondary" onClick={() => responder("forward")}>↗ Encaminhar</button></footer></>}
       </section>
     </section>
 
-    {compondo && <div className="cmp-compose-modal"><button className="cmp-compose-modal__backdrop" aria-label="Fechar" onClick={() => !enviando && setCompondo(false)} /><section className="cmp-composer"><header><div><small>NOVA MENSAGEM</small><h2>{rascunho.modo === "nova" ? "Escrever" : rascunho.modo === "forward" ? "Encaminhar" : "Responder"}</h2></div><button onClick={() => setCompondo(false)}>×</button></header><div className="cmp-from"><span>De</span><select value={rascunho.de} onChange={(e) => { const de = e.target.value; setRascunho((r) => ({ ...r, de })); if (de !== "corvia") setAnexos([]); }}>{contas.filter((c) => c.send_mail).map((c) => <option key={c.id} value={c.id}>{c.email_address} — {NOMES_PROVEDOR[c.provider]}{c.padrao ? " (padrão)" : ""}</option>)}</select></div><div className="cmp-field"><label>Para</label><input value={rascunho.para} onChange={(e) => setRascunho((r) => ({ ...r, para: e.target.value }))} placeholder="nome@exemplo.com" /><button onClick={() => setMostrarCopias((v) => !v)}>Cc/Cco</button></div>{mostrarCopias && <div className="cmp-copy-grid"><label>Cc<input value={rascunho.cc} onChange={(e) => setRascunho((r) => ({ ...r, cc: e.target.value }))} /></label><label>Cco<input value={rascunho.cco} onChange={(e) => setRascunho((r) => ({ ...r, cco: e.target.value }))} /></label></div>}<div className="cmp-field cmp-field--subject"><label>Assunto</label><input value={rascunho.assunto} onChange={(e) => setRascunho((r) => ({ ...r, assunto: e.target.value }))} /></div>{contatos.length > 0 && <div className="cmp-contacts"><span>Contatos</span>{contatos.slice(0, 8).map((c) => <button key={c.id} onClick={() => setRascunho((r) => ({ ...r, para: c.emails[0] || r.para }))}><b>{c.name}</b><small>{c.emails[0]}</small></button>)}</div>}<textarea className="cmp-compose-body" value={rascunho.corpo} onChange={(e) => setRascunho((r) => ({ ...r, corpo: e.target.value }))} placeholder="Escreva sua mensagem..." />{rascunho.de === "corvia" && <div className="cmp-compose-attachments"><label>▱ {enviandoAnexo ? "Anexando…" : "Anexar arquivo"}<input type="file" disabled={enviandoAnexo} onChange={(e) => { const f = e.target.files?.[0]; if (f) void anexar(f); e.currentTarget.value = ""; }} /></label>{anexos.map((a) => <span key={a.file_id}>{a.nome}{verificacoes[a.file_id]?.assinado && <em>✓ assinatura verificada</em>}<button onClick={() => setAnexos((xs) => xs.filter((x) => x.file_id !== a.file_id))}>×</button></span>)}</div>}<footer><button className="cmp-send" onClick={() => void enviar()} disabled={enviando}>{enviando ? "Enviando…" : "Enviar"}</button><span>{rascunho.de !== "corvia" ? "Envio pela conta externa selecionada" : "Envio pelo CorvIA Mail"}</span></footer></section></div>}
+    {compondo && <MailComposerDialog busy={enviando} error={erro} onClose={() => setCompondo(false)}><section className="cmp-composer"><header><div><small>NOVA MENSAGEM</small><h2 id="cmp-composer-title">{rascunho.modo === "nova" ? "Escrever" : rascunho.modo === "forward" ? "Encaminhar" : "Responder"}</h2></div><button aria-label="Fechar mensagem" disabled={enviando} onClick={() => setCompondo(false)}>×</button></header>{erro && <p className="cmp-composer__error" role="alert" tabIndex={-1}>{erro}</p>}<div className="cmp-from"><span>De</span><select aria-label="De" value={rascunho.de} onChange={(e) => { const de = e.target.value; setRascunho((r) => ({ ...r, de })); if (de !== "corvia") setAnexos([]); }}>{contas.filter((c) => c.send_mail).map((c) => <option key={c.id} value={c.id}>{c.email_address} — {NOMES_PROVEDOR[c.provider]}{c.padrao ? " (padrão)" : ""}</option>)}</select></div><div className="cmp-field"><label>Para</label><input aria-label="Para" value={rascunho.para} onChange={(e) => setRascunho((r) => ({ ...r, para: e.target.value }))} placeholder="nome@exemplo.com" /><button onClick={() => setMostrarCopias((v) => !v)}>Cc/Cco</button></div>{mostrarCopias && <div className="cmp-copy-grid"><label>Cc<input value={rascunho.cc} onChange={(e) => setRascunho((r) => ({ ...r, cc: e.target.value }))} /></label><label>Cco<input value={rascunho.cco} onChange={(e) => setRascunho((r) => ({ ...r, cco: e.target.value }))} /></label></div>}<div className="cmp-field cmp-field--subject"><label>Assunto</label><input aria-label="Assunto" value={rascunho.assunto} onChange={(e) => setRascunho((r) => ({ ...r, assunto: e.target.value }))} /></div>{contatos.length > 0 && <div className="cmp-contacts"><span>Contatos</span>{contatos.slice(0, 8).map((c) => <button key={c.id} onClick={() => setRascunho((r) => ({ ...r, para: c.emails[0] || r.para }))}><b>{c.name}</b><small>{c.emails[0]}</small></button>)}</div>}<textarea className="cmp-compose-body" aria-label="Mensagem" value={rascunho.corpo} onChange={(e) => setRascunho((r) => ({ ...r, corpo: e.target.value }))} placeholder="Escreva sua mensagem..." />{rascunho.de === "corvia" && <div className="cmp-compose-attachments"><label>▱ {enviandoAnexo ? "Anexando…" : "Anexar arquivo"}<input type="file" disabled={enviandoAnexo} onChange={(e) => { const f = e.target.files?.[0]; if (f) void anexar(f); e.currentTarget.value = ""; }} /></label>{anexos.map((a) => <span key={a.file_id}>{a.nome}{verificacoes[a.file_id]?.assinado && <em>✓ assinatura verificada</em>}<button onClick={() => setAnexos((xs) => xs.filter((x) => x.file_id !== a.file_id))}>×</button></span>)}</div>}<footer><button className="cmp-send" onClick={() => void enviar()} disabled={enviando}>{enviando ? "Enviando…" : "Enviar"}</button><span>{rascunho.de !== "corvia" ? "Envio pela conta externa selecionada" : "Envio pelo CorvIA Mail"}</span></footer></section></MailComposerDialog>}
   </main>;
 }

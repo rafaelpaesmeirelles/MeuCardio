@@ -1,14 +1,18 @@
-"""Envio de e-mail opcional. Se SMTP não estiver configurado no .env, todas
-as funções aqui retornam False silenciosamente — nada quebra, o sistema só
-passa a depender do painel de admin para esses avisos (reset de senha,
-solicitação de acesso), como já acontecia antes desta funcionalidade existir.
+"""Avisos de acesso pelo transporte institucional e envio SMTP legado.
+
+Avisos transacionais usam o provider configurado e o registro de envio do
+serviço de e-mails. O helper SMTP permanece para os demais alertas legados.
+Falhas de envio não interrompem a recuperação de acesso nem a revisão KYC.
 """
 
 import logging
 import smtplib
 from email.mime.text import MIMEText
+from html import escape
 
 from app.core.config import settings
+from app.core.db import SessionLocal
+from app.services import emails
 
 log = logging.getLogger("meucardio.notificar")
 
@@ -35,23 +39,59 @@ def tentar_enviar_email(destinatario: str, assunto: str, corpo: str) -> bool:
         return False
 
 
+def tentar_enviar_email_transacional(
+    destinatario: str,
+    assunto: str,
+    corpo: str,
+    *,
+    user_id: int,
+    tipo_log: str,
+    link: str | None = None,
+) -> bool:
+    """Adapta avisos textuais de acesso ao pipeline institucional.
+
+    ``link`` é a URL construída pelo chamador, nunca HTML fornecido pelo
+    usuário. A sessão própria impede que o commit de EmailLog confirme uma
+    transação de cadastro/KYC ainda em andamento na sessão do chamador.
+    """
+    try:
+        corpo = corpo.replace("{DOMINIO}", settings.public_url)
+        html = "<p>" + escape(corpo).replace("\n", "<br>") + "</p>"
+        if link:
+            url = escape(link.replace("{DOMINIO}", settings.public_url), quote=True)
+            html = html.replace(url, f'<a href="{url}">{url}</a>')
+        with SessionLocal() as db:
+            resultado = emails.enviar_institucional_paciente(
+                db,
+                user_id=user_id,
+                destinatario=destinatario,
+                assunto=assunto,
+                html=html,
+                tipo_log=tipo_log,
+            )
+            return resultado.enviado
+    except Exception as exc:
+        # Não registrar corpo, token, endereço nem detalhe do erro do provider.
+        log.warning("Falha no aviso transacional %s (%s)", tipo_log, type(exc).__name__)
+        return False
+
+
 def _admins_ativos(db):
     from app.models.user import User
     return db.query(User).filter(User.role == "admin", User.is_active.is_(True)).all()
 
 
 def notificar_admins_nova_solicitacao(db, nome_solicitante: str, email_solicitante: str) -> None:
-    """Avisa todos os admins ativos que há uma solicitação de acesso nova.
-    Sem SMTP configurado, isso não faz nada — o contador na barra de admin
-    (endpoint /api/admin/users?status=pendente) já cumpre esse papel."""
-    if not settings.smtp_configurado:
-        return
+    """Avisa admins ativos pelo canal institucional; o painel segue disponível."""
     corpo = (
         f"{nome_solicitante} ({email_solicitante}) solicitou acesso ao CorVIA Cardiology Spaces.\n"
         f"Revise em: {{DOMINIO}}/admin"
     )
     for admin in _admins_ativos(db):
-        tentar_enviar_email(admin.email, "CorVIA — nova solicitação de acesso", corpo)
+        tentar_enviar_email_transacional(
+            admin.email, "CorVIA — nova solicitação de acesso", corpo,
+            user_id=admin.id, tipo_log="admin_nova_solicitacao", link="{DOMINIO}/admin",
+        )
 
 
 def notificar_admins_kyc_manual(db, *, nome: str, email: str, motivo: str) -> None:
@@ -59,10 +99,8 @@ def notificar_admins_kyc_manual(db, *, nome: str, email: str, motivo: str) -> No
 
     Documentos de identidade NUNCA são anexados ao e-mail: permanecem cifrados
     no cofre KYC e ficam disponíveis somente na ficha administrativa. Assim o
-    admin recebe a pendência sem criar uma segunda cópia de PII em SMTP.
+    admin recebe a pendência sem enviar cópias dos documentos por e-mail.
     """
-    if not settings.smtp_configurado:
-        return
     corpo = (
         f"A validação automática de cadastro de {nome} ({email}) não foi aprovada.\n\n"
         f"Motivo: {motivo}\n\n"
@@ -71,4 +109,7 @@ def notificar_admins_kyc_manual(db, *, nome: str, email: str, motivo: str) -> No
         "Revise em: {DOMINIO}/admin"
     )
     for admin in _admins_ativos(db):
-        tentar_enviar_email(admin.email, "CorVIA — cadastro exige revisão manual", corpo)
+        tentar_enviar_email_transacional(
+            admin.email, "CorVIA — cadastro exige revisão manual", corpo,
+            user_id=admin.id, tipo_log="admin_kyc_manual", link="{DOMINIO}/admin",
+        )

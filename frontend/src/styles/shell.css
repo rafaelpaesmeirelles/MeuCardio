@@ -2264,7 +2264,7 @@
 .deslocamento-resumo small { margin-top: .16rem; color: rgb(255 255 255 / .58); font-size: .6rem; }
 .deslocamento-painel { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(310px, .85fr); gap: .75rem; margin-top: .75rem; }
 .deslocamento-mapa { position: relative; min-width: 0; min-height: 310px; overflow: hidden; background: #092f3b; border: 1px solid rgb(255 255 255 / .11); border-radius: 15px; }
-.deslocamento-mapa svg { display: block; width: 100%; height: 100%; min-height: 310px; object-fit: cover; }
+.deslocamento-mapa > svg { display: block; width: 100%; height: 100%; min-height: 310px; object-fit: cover; }
 .deslocamento-mapa__google { width: 100%; min-height: 310px; }
 .deslocamento-mapa__status { position: absolute; z-index: 2; inset: 50% auto auto 50%; max-width: calc(100% - 2rem); padding: .55rem .7rem; color: rgb(255 255 255 / .78); background: rgb(2 24 32 / .86); border: 1px solid rgb(255 255 255 / .1); border-radius: 9px; font-size: .62rem; text-align: center; transform: translate(-50%, -50%); backdrop-filter: blur(8px); }
 .deslocamento-mapa__indisponivel { display: flex; min-height: 310px; align-items: center; justify-content: center; flex-direction: column; gap: .5rem; color: rgb(255 255 255 / .58); font-size: .68rem; }
@@ -2314,7 +2314,7 @@
 @media (max-width: 900px) {
   .deslocamento-painel { grid-template-columns: 1fr; }
   .deslocamento-mapa,
-  .deslocamento-mapa svg,
+  .deslocamento-mapa > svg,
   .deslocamento-mapa__google,
   .deslocamento-mapa__indisponivel { min-height: 270px; }
   .deslocamento-rotas__lista { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -2329,10 +2329,10 @@
   .deslocamento-resumo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .deslocamento-painel { width: 100%; }
   .deslocamento-mapa,
-  .deslocamento-mapa svg,
+  .deslocamento-mapa > svg,
   .deslocamento-mapa__google,
   .deslocamento-mapa__indisponivel { width: 100%; min-height: 215px; }
-  .deslocamento-mapa svg { height: 215px; }
+  .deslocamento-mapa > svg { height: 215px; }
   .deslocamento-mapa__legenda { right: .55rem; left: .55rem; justify-content: center; }
   .deslocamento-mapa__fonte { top: 2.75rem; right: .55rem; bottom: auto; }
   .deslocamento-rotas { padding: .6rem; }

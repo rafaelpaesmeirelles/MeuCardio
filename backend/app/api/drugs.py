@@ -320,10 +320,9 @@ def sugerir_medicamentos(
                 continue
             minimo = opcao["preco_minimo"]
             maximo = opcao["preco_maximo"]
-            rotulo = (
-                f"R$ {minimo:,.2f}" if minimo == maximo
-                else f"R$ {minimo:,.2f} a R$ {maximo:,.2f}"
-            ).replace(",", "X").replace(".", ",").replace("X", ".")
+            # Display the product owner's chosen minimum PMC, while retaining
+            # the original range as source data. Never use PF as consumer price.
+            rotulo = f"R$ {minimo:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
             candidatos.append({
                 "slug": droga.slug, "generic_name": droga.generic_name,
                 "brand_name": opcao.get("produto"), "manufacturer": opcao.get("laboratorio"),

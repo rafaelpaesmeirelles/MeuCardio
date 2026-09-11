@@ -1449,7 +1449,6 @@ def ficha_usuario(user_id: int, db: Session = Depends(get_db), _=Depends(require
             "cpf": alvo.cpf,  # sem máscara — tela administrativa, autorização explícita
             "birth_date": alvo.birth_date,
             "email": alvo.email,
-            "instagram_handle": alvo.instagram_handle,
             "endereco_residencial": {
                 "street": alvo.home_street, "number": alvo.home_number,
                 "complement": alvo.home_complement, "neighborhood": alvo.home_neighborhood,

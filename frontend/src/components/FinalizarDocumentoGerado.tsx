@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import AssinaturaExternaITI from "./AssinaturaExternaITI";
@@ -43,18 +43,29 @@ export default function FinalizarDocumentoGerado({ geradoId, nomeArquivoBase, pr
   const [estadoCarregado, setEstadoCarregado] = useState(false);
   const [baixando, setBaixando] = useState(false);
   const [opcoes, setOpcoes] = useState(provedores);
+  const contexto = useRef(0);
+  const consultaOpcoes = useRef(0);
 
   async function carregarOpcoes() {
+    const atual = contexto.current;
+    const consulta = ++consultaOpcoes.current;
     try {
-      setOpcoes(await api.get<Provedor[]>("/assinatura/provedores"));
+      const disponiveis = await api.get<Provedor[]>("/assinatura/provedores");
+      if (atual === contexto.current && consulta === consultaOpcoes.current) setOpcoes(disponiveis);
     } catch {
+      if (atual !== contexto.current || consulta !== consultaOpcoes.current) return;
       setOpcoes([]);
       setErro("Não foi possível carregar os métodos de assinatura. Tente novamente.");
     }
   }
 
   useEffect(() => {
-    let ativo = true;
+    const atual = ++contexto.current;
+    setMetodo(usuario?.assinatura_metodo_preferido ?? "MANUAL");
+    setErro("");
+    setEmail("");
+    setEnviando(false);
+    setBaixando(false);
     setEstadoCarregado(false);
     setEmitido(false);
     setAssinaturaConcluida(false);
@@ -63,7 +74,7 @@ export default function FinalizarDocumentoGerado({ geradoId, nomeArquivoBase, pr
     setResultadoEnvio(null);
     api.get<{ assinatura: { metodo: string; assinado_em: string | null } | null }>(`/document-templates/gerados/${geradoId}`)
       .then(({ assinatura }) => {
-        if (!ativo) return;
+        if (atual !== contexto.current) return;
         if (assinatura) {
           setMetodo(assinatura.metodo);
           setEmitido(true);
@@ -72,9 +83,9 @@ export default function FinalizarDocumentoGerado({ geradoId, nomeArquivoBase, pr
         }
         setEstadoCarregado(true);
       })
-      .catch(() => { if (ativo) setErro("Não foi possível consultar a emissão. Feche e abra o documento novamente."); });
+      .catch(() => { if (atual === contexto.current) setErro("Não foi possível consultar a emissão. Feche e abra o documento novamente."); });
     carregarOpcoes();
-    return () => { ativo = false; };
+    return () => { contexto.current += 1; };
   }, [geradoId]);
 
   useEffect(() => {
@@ -85,43 +96,52 @@ export default function FinalizarDocumentoGerado({ geradoId, nomeArquivoBase, pr
 
   async function baixar() {
     if (baixando || !estadoCarregado) return;
+    const atual = contexto.current;
     setBaixando(true);
     setErro("");
     try {
       const blob = await api.blob(`/document-templates/gerados/${geradoId}/pdf?metodo=${encodeURIComponent(metodo)}`);
+      if (atual !== contexto.current) return;
       baixarBlob(blob, `${nomeArquivoBase}-${geradoId}.pdf`);
       const externo = METODOS_MANUAL_EXTERNO.has(metodo);
       setAguardandoExterno(externo && !assinaturaConcluida);
       if (metodo !== "MANUAL" && !externo) setAssinaturaConcluida(true);
       setEmitido(true);
     } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível baixar o PDF.");
+      if (atual === contexto.current) setErro(e instanceof ApiError ? e.message : "Não foi possível baixar o PDF.");
     } finally {
-      setBaixando(false);
+      if (atual === contexto.current) setBaixando(false);
     }
   }
 
   async function enviar() {
-    if (!email || !emitido || (metodo !== "MANUAL" && !assinaturaConcluida)) return;
+    if (enviando || baixando || !email || !emitido || (metodo !== "MANUAL" && !assinaturaConcluida)) return;
+    const atual = contexto.current;
     setEnviando(true);
     setErro("");
     try {
       const r = await api.post<{ enviado: boolean; link: string | null }>(
         `/document-templates/gerados/${geradoId}/enviar-email`, { email },
       );
-      setResultadoEnvio(r);
+      if (atual === contexto.current) setResultadoEnvio(r);
     } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível enviar o e-mail.");
+      if (atual === contexto.current) setErro(e instanceof ApiError ? e.message : "Não foi possível enviar o e-mail.");
     } finally {
-      setEnviando(false);
+      if (atual === contexto.current) setEnviando(false);
     }
+  }
+
+  function fechar() {
+    // Impede efeitos tardios nesta interface, sem cancelar emissão/envio no servidor.
+    contexto.current += 1;
+    onFechar();
   }
 
   return (
     <div className="cartao" style={{ marginTop: "0.8rem" }}>
       <p style={{ color: "var(--sucesso)" }}>Documento gerado.</p>
       <div style={{ marginTop: "0.4rem" }}>
-        <label htmlFor={`assinatura-documento-${geradoId}`}>Método de assinatura</label>
+        <label htmlFor={`assinatura-documento-${geradoId}`} style={{ color: "var(--atelier-ink, var(--texto))", WebkitTextFillColor: "currentColor" }}>Método de assinatura</label>
         <select id={`assinatura-documento-${geradoId}`} value={metodo} disabled={emitido || baixando || !estadoCarregado} onChange={(e) => setMetodo(e.target.value)}>
           {!opcoes?.length && <option value={metodo}>{opcoes === null ? "Carregando métodos…" : "Métodos indisponíveis"}</option>}
           {(opcoes ?? []).map((p) => (
@@ -164,8 +184,8 @@ export default function FinalizarDocumentoGerado({ geradoId, nomeArquivoBase, pr
       />
 
       <div style={{ marginTop: "0.8rem" }}>
-        <label>Enviar por e-mail ao paciente (link seguro, válido por 7 dias)</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="paciente@exemplo.com" />
+        <label htmlFor={`email-documento-${geradoId}`} style={{ color: "var(--atelier-ink, var(--texto))", WebkitTextFillColor: "currentColor" }}>Enviar por e-mail ao paciente (link seguro, válido por 7 dias)</label>
+        <input id={`email-documento-${geradoId}`} type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="paciente@exemplo.com" />
         <button className="botao" style={{ marginTop: "0.4rem" }} onClick={enviar} disabled={enviando || !email || !emitido || (metodo !== "MANUAL" && !assinaturaConcluida) || baixando}>
           {enviando ? "Enviando…" : "Enviar por e-mail"}
         </button>
@@ -183,7 +203,7 @@ export default function FinalizarDocumentoGerado({ geradoId, nomeArquivoBase, pr
       )}
 
       {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
-      <button className="botao botao--secundario" style={{ marginTop: "0.8rem" }} onClick={onFechar}>Fechar</button>
+      <button className="botao botao--secundario" style={{ marginTop: "0.8rem" }} onClick={fechar}>Fechar</button>
     </div>
   );
 }

@@ -177,6 +177,10 @@ html[data-corvia-design="atelier"] #root .cv-app .cv-content .eyebrow {
   letter-spacing: .07em;
 }
 
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cv-page-hero .eyebrow {
+  color: #736346 !important;
+}
+
 html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cv-page-hero__actions, .cv-section__action, .cc-page-actions) {
   display: flex;
   align-items: center;
@@ -633,4 +637,334 @@ html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-c
 }
 html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content :is(.favorites-page, .admin-clinical-changes) :is(button, a, input, select, textarea, summary):focus-visible {
   outline-color: #8cd6c2 !important;
+}
+
+/* Document actions must retain their explanations on small screens. The
+   legacy command-board hid them and its off-card circles enlarged scrollWidth. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page > h1 + p {
+  color: var(--atelier-muted) !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page > .grade > button.cartao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  min-width: 0;
+  height: auto;
+  text-align: left !important;
+  white-space: normal;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page > .grade > button.cartao::after {
+  display: none;
+  content: none;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page > .grade > button.cartao::before {
+  color: #8c4d35 !important;
+  background: #f3e4d7 !important;
+  border-color: #c4a08b !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page > .grade > button.cartao > :is(strong, p) {
+  display: block !important;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page > .grade > button.cartao > p {
+  color: var(--atelier-muted) !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao-item__topo > span {
+  color: #8c4d35 !important;
+  -webkit-text-fill-color: currentColor !important;
+  text-shadow: none !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao-item > label,
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao-item > label small {
+  color: #52605a !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+/* Links styled as buttons and the shared password control keep full-size
+   touch targets; the eye control must not cover typed text. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content a.botao {
+  min-height: 44px !important;
+}
+html[data-corvia-design="atelier"] #root .campo-senha__alternar {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  width: 44px !important;
+}
+html[data-corvia-design="atelier"] #root .campo-senha input,
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .campo-senha > input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]) {
+  padding-right: 56px !important;
+}
+
+/* Applied discharge checklists are clinical reading surfaces in either
+   navigation theme; legacy hospital gradients must not sit behind their text. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.checklist__contador, .checklist__grupo, .checklist__acoes, .checklist__abertas li) {
+  color: #263936 !important;
+  background: #fffdfa !important;
+  border-color: #d8c7b9 !important;
+  box-shadow: none !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .checklist__contador {
+  flex-wrap: wrap !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .checklist__grupo h3 {
+  color: #263936 !important;
+  border-color: #d8c7b9 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .checklist__item {
+  color: #263936 !important;
+  background: #f5f1ea !important;
+  border-color: #d8c7b9 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .checklist__item--ok {
+  color: #214f45 !important;
+  background: #eaf3ec !important;
+  border-color: #8bb3a1 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.checklist__contador, .checklist__grupo) :is(span, strong, em, small) {
+  -webkit-text-fill-color: currentColor !important;
+  text-shadow: none !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .checklist__texto {
+  color: inherit !important;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.checklist__origem-item, .checklist__nota, .checklist__progresso) {
+  color: #53615a !important;
+  font-size: 14px !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.checklist__pendente, .checklist__progresso em) {
+  color: #855015 !important;
+  font-size: 14px !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .checklist__contador > strong {
+  color: #8c4d35 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .checklist__obrig {
+  color: #855015 !important;
+  background: #fff4dc !important;
+  border-color: #cfb07e !important;
+}
+
+/* Prescription stays a light document workspace even with dark navigation. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao :is(input, select, textarea):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]) {
+  color: #263936 !important;
+  -webkit-text-fill-color: #263936 !important;
+  caret-color: #263936 !important;
+  background: #fffefa !important;
+  border-color: #b9beb3 !important;
+  color-scheme: light;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao :is(input, textarea):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"])::placeholder {
+  color: #53615a !important;
+  -webkit-text-fill-color: #53615a !important;
+  opacity: 1 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao :is(input, textarea):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fffefa inset !important;
+  box-shadow: 0 0 0 1000px #fffefa inset !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao :is(label, label small) {
+  color: #52605a !important;
+  -webkit-text-fill-color: currentColor !important;
+  font-size: 14px !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao__nota-legal {
+  color: #855015 !important;
+  -webkit-text-fill-color: currentColor !important;
+  background: #fff4dc !important;
+  font-size: 16px !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-continuo strong {
+  color: #263936 !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo {
+  position: static !important;
+  align-self: start;
+  color: #263936 !important;
+  background: #fffdfa !important;
+  border-color: #d8c7b9 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo :is(p, h2, span, strong, small, dt, dd, li) {
+  color: #263936 !important;
+  -webkit-text-fill-color: currentColor !important;
+  text-shadow: none !important;
+  line-height: 1.5 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo :is(small, dt, dd, li, .prescricao-resumo__status) {
+  font-size: 14px !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo :is(.prescricao-resumo__topo, .prescricao-resumo__dados, .prescricao-resumo__total, .prescricao-resumo__itens article, .prescricao-resumo__vazio) {
+  border-color: #d8c7b9 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo :is(.prescricao-resumo__vazio, .prescricao-resumo__itens article) {
+  background: #f5f1ea !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo .prescricao-resumo__topo {
+  flex-wrap: wrap !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo .prescricao-resumo__itens article > div strong {
+  font-size: 16px !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo .prescricao-resumo__status {
+  color: #855015 !important;
+  background: #fff4dc !important;
+  border-color: #cfb07e !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo .prescricao-resumo__status.pronto,
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo .prescricao-resumo__checklist li.ok {
+  color: #214f45 !important;
+  background: #eaf3ec !important;
+  border-color: #8bb3a1 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo .prescricao-resumo__checklist svg {
+  color: #53615a !important;
+  border-color: #8bb3a1 !important;
+}
+
+/* ATELIER_TEXT_FIELD_PALETTE: match the legacy nine-exclusion input selector's
+   specificity. Do not change dimensions, native toggles, or navigation fields. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(input, select, textarea):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) {
+  color: #24343a !important;
+  -webkit-text-fill-color: #24343a !important;
+  background: #fffefa !important;
+  caret-color: #24343a !important;
+  color-scheme: light;
+}
+/* These two explicitly dark work surfaces keep their established preference. */
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content :is(.favorites-page, .admin-clinical-changes) :is(input, select, textarea):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) {
+  color: #f4f1e7 !important;
+  -webkit-text-fill-color: #f4f1e7 !important;
+  background: #233532 !important;
+  caret-color: #f4f1e7 !important;
+  color-scheme: dark;
+}
+/* Keep the field boundary perceptible without replacing focus/error states. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(input, select, textarea):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):where(:not(:focus):not([aria-invalid="true"]):not(:disabled)) {
+  border-color: #7f8a81 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content :is(.favorites-page, .admin-clinical-changes) :is(input, select, textarea):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):where(:not(:focus):not([aria-invalid="true"]):not(:disabled)) {
+  border-color: #8aa399 !important;
+}
+/* END_ATELIER_TEXT_FIELD_PALETTE */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .preop-page .cartao :is(label, label span, label strong, legend) {
+  color: #263936 !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .preop-page .cartao .eyebrow {
+  color: #8c4d35 !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+/* A selected presentation is still part of the light prescription workspace. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao :is(.prescricao-selecao, .prescricao-apresentacoes, .prescricao-apresentacoes__fonte, .prescricao-preco-aviso) {
+  background: #f5f1ea !important;
+  color: #263936 !important;
+  border-color: #d8c7b9 !important;
+  border-radius: 12px;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao :is(.prescricao-selecao, .prescricao-apresentacoes, .prescricao-preco-aviso) :is(p, span, strong, small, label) {
+  color: #263936 !important;
+  -webkit-text-fill-color: currentColor !important;
+  text-shadow: none !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  overflow-wrap: anywhere;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao :is(.prescricao-selecao > p:first-child > span > strong, .prescricao-apresentacoes__lista button > span > strong) {
+  font-size: 16px !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-apresentacoes__lista {
+  background: #fffdfa !important;
+  border-color: #b9b2a8 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-apresentacoes__lista button {
+  background: #fffdfa !important;
+  color: #263936 !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  min-height: 58px !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-apresentacoes__lista button:hover {
+  background: #eee6dc !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao :is(.prescricao-selecao > p:first-child, .prescricao-apresentacoes__fonte > header, .prescricao-resumo__total > span, .prescricao-resumo__dados > div) {
+  flex-wrap: wrap !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao :is(.prescricao-resumo__preco, .prescricao-resumo__total > span > strong, .prescricao-selecao__preco, .prescricao-apresentacoes__preco) {
+  color: #8c4d35 !important;
+  -webkit-text-fill-color: currentColor !important;
+  font-size: 16px !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo__itens article {
+  grid-template-columns: 24px minmax(0, 1fr) !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-resumo__preco { grid-column: 2; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-preco-aviso { padding: 12px 16px; margin-top: 8px; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao .prescricao-selecao > button { margin: 8px 8px 0 0 !important; }
+
+/* Account cards remain light when their surrounding navigation is graphite. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .conta__grid > .cartao :is(label, p > strong) {
+  color: #263936 !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .conta__grid > .cartao p[style*="var(--sucesso)"] {
+  color: #214f45 !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+/* Profile help belongs to the pearl card, not the dark navigation palette.
+   Keep inline error/success colors and the email-signature preview intact. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .minha-conta-page :is(.eyebrow, .conta__logo-vazia) {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .minha-conta-page .cartao :is(.eyebrow, p[style*="var(--texto-secundario)"]) {
+  color: #58666a !important;
+  -webkit-text-fill-color: currentColor !important;
+  text-shadow: none !important;
+}
+
+/* A clinical classification is not a computed MICA probability. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .preop-model-notice {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #bda38a;
+  border-radius: 12px;
+  background: #faf1e6;
+  color: #443c32;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .preop-model-notice :is(p, strong, a) {
+  color: #443c32 !important;
+  -webkit-text-fill-color: currentColor !important;
+  font-size: 16px !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .preop-model-notice a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+}
+
+/* Public recovery keeps a pearl surface even with a stored dark preference. */
+html[data-corvia-design="atelier"] #root .corvia-atelier-public .recovery-request-error {
+  color: #88293b !important;
+  -webkit-text-fill-color: currentColor !important;
+  background: #fff0f2 !important;
+  border-color: #d58c99 !important;
 }

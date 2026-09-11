@@ -42,8 +42,16 @@ export default function Calculadoras() {
   const [lista, setLista] = useState<Calc[] | null>(null);
   const [busca, setBusca] = useState("");
   const [tema, setTema] = useState("");
+  const [erro, setErro] = useState("");
+  const [tentativa, setTentativa] = useState(0);
 
-  useEffect(() => { api.get<Calc[]>("/calculators").then(setLista); }, []);
+  useEffect(() => {
+    let ativo = true;
+    setErro("");
+    api.get<Calc[]>("/calculators").then((items) => { if (ativo) setLista(items); })
+      .catch(() => { if (ativo) setErro("Não foi possível carregar as calculadoras. Tente novamente."); });
+    return () => { ativo = false; };
+  }, [tentativa]);
 
   const temas = useMemo(() => {
     const contagem = new Map<string, number>();
@@ -61,6 +69,7 @@ export default function Calculadoras() {
     });
   }, [lista, busca, tema]);
 
+  if (!lista && erro) return <section className="cv-page"><h1>Calculadoras e escores</h1><div className="cartao" role="alert"><p>{erro}</p><button className="botao" onClick={() => setTentativa((value) => value + 1)}>Tentar novamente</button></div></section>;
   if (!lista) return <Carregando texto="Abrindo ferramentas clínicas…" />;
 
   const doses = filtradas.filter((c) => c.kind === "dose");

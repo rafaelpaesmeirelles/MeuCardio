@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CampoSenha from "../components/CampoSenha";
 import WhatsAppIntegrationCard from "../components/WhatsAppIntegrationCard";
 import { api, ApiError, assetUrl, type Usuario } from "../lib/api";
@@ -374,10 +374,10 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
 
           <h3 style={{ marginTop: "1.4rem", marginBottom: 0 }}>Local de trabalho</h3>
           <div className="grade grade--2" style={{ marginTop: "0.6rem" }}>
-            <div><label>Instituição, clínica ou consultório</label><input value={dados.workplace_name} onChange={(e) => set("workplace_name", e.target.value)} /></div>
-            <div><label>Setor/unidade</label><input value={dados.workplace_department} onChange={(e) => set("workplace_department", e.target.value)} /></div>
-            <div><label>Cargo/função</label><input value={dados.workplace_role} onChange={(e) => set("workplace_role", e.target.value)} /></div>
-            <div><label>Outras informações</label><input value={dados.workplace_notes} onChange={(e) => set("workplace_notes", e.target.value)} /></div>
+            <div><label>Instituição, clínica ou consultório</label><input aria-label="Instituição, clínica ou consultório" value={dados.workplace_name} onChange={(e) => set("workplace_name", e.target.value)} /></div>
+            <div><label>Setor/unidade</label><input aria-label="Setor/unidade" value={dados.workplace_department} onChange={(e) => set("workplace_department", e.target.value)} /></div>
+            <div><label>Cargo/função</label><input aria-label="Cargo/função" value={dados.workplace_role} onChange={(e) => set("workplace_role", e.target.value)} /></div>
+            <div><label>Outras informações</label><input aria-label="Outras informações" value={dados.workplace_notes} onChange={(e) => set("workplace_notes", e.target.value)} /></div>
           </div>
           <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: "0.6rem" }}>
             <input type="checkbox" style={{ width: "auto" }} checked={dados.include_workplace_on_documents}
@@ -448,6 +448,7 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
 }
 
 function Foto({ perfil, aoTrocar }: { perfil: Usuario; aoTrocar: (u: Usuario) => void }) {
+  const arquivoRef = useRef<HTMLInputElement>(null);
   const [enviando, setEnviando] = useState(false);
   const [erro, setErro] = useState("");
   const [imagemQuebrada, setImagemQuebrada] = useState(false);
@@ -498,12 +499,13 @@ function Foto({ perfil, aoTrocar }: { perfil: Usuario; aoTrocar: (u: Usuario) =>
         {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.84rem" }}>{erro}</p>}
 
         <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.6rem", flexWrap: "wrap" }}>
-          <label className="botao botao--secundario" style={{ cursor: "pointer", marginBottom: 0 }}>
+          <button type="button" className="botao botao--secundario" disabled={enviando}
+                  onClick={() => arquivoRef.current?.click()}>
             {enviando ? "Enviando…" : perfil.photo_url ? "Trocar foto" : "Enviar foto"}
-            <input type="file" accept="image/jpeg,image/png,image/webp" disabled={enviando}
-                   style={{ display: "none" }}
-                   onChange={(e) => { enviar(e.target.files?.[0]); e.target.value = ""; }} />
-          </label>
+          </button>
+          <input ref={arquivoRef} type="file" accept="image/jpeg,image/png,image/webp" disabled={enviando}
+                 hidden aria-label="Arquivo da foto de perfil"
+                 onChange={(e) => { enviar(e.target.files?.[0]); e.target.value = ""; }} />
           {perfil.photo_url && (
             <button className="botao botao--secundario" onClick={remover} disabled={enviando}>
               Remover
@@ -557,7 +559,7 @@ function LogoDocumento({ perfil, aoTrocar }: { perfil: Usuario; aoTrocar: (u: Us
                onError={() => setImagemQuebrada(true)} />
         </span>
       ) : (
-        <div style={{ width: 96, height: 64, display: "flex", alignItems: "center", justifyContent: "center",
+        <div className="conta__logo-vazia" style={{ width: 96, height: 64, display: "flex", alignItems: "center", justifyContent: "center",
                       border: "1px dashed var(--linha)", borderRadius: 6, fontSize: "0.75rem", color: "var(--texto-secundario)" }}>
           Sem logo
         </div>
@@ -628,7 +630,7 @@ function PreferenciaAssinaturaDigital({ perfil, aoSalvar }: { perfil: Usuario; a
         Sugestão inicial ao emitir receita ou documento — você ainda escolhe (ou troca) a cada um.
       </p>
 
-      <select style={{ marginTop: "0.6rem" }} value={metodo} onChange={(e) => setMetodo(e.target.value)}>
+      <select aria-label="Método de assinatura padrão" style={{ marginTop: "0.6rem" }} value={metodo} onChange={(e) => setMetodo(e.target.value)}>
         {(provedores ?? []).map((p) => (
           <option key={p.codigo} value={p.codigo} disabled={!p.disponivel}>
             {p.nome}{!p.disponivel ? " — indisponível" : ""}
@@ -1165,7 +1167,7 @@ export default function MinhaConta() {
     api.get<Usuario>("/auth/me").then(setPerfil).catch(() => {});
   }, []);
 
-  if (!perfil) return <div className="pagina"><h1>Minha conta</h1><p>Carregando…</p></div>;
+  if (!perfil) return <div className="pagina minha-conta-page"><h1>Minha conta</h1><p>Carregando…</p></div>;
   const camposPendentes = perfil.profile_completion_missing_fields ?? [];
 
   async function encerrarSessao() {
@@ -1175,7 +1177,7 @@ export default function MinhaConta() {
   }
 
   return (
-    <div className="pagina">
+    <div className="pagina minha-conta-page">
       <div className="conta__cabecalho">
         <div>
           <p className="eyebrow">Perfil e segurança</p>

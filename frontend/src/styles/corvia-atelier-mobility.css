@@ -1,0 +1,458 @@
+/* Atelier mobility: real provider maps, quiet surfaces and readable route choices.
+ * Import after the legacy map/Home styles and the other Atelier styles.
+ * Contract: .atelier-mobility + existing deslocamento-* BEM; the Home summary
+ * is article.atelier-commute, with separate open/action buttons and map region.
+ * Map attribution/terms are owned by the provider: never filter, crop or cover
+ * its controls. Our legend and source are separate grid rows below the canvas.
+ */
+html[data-corvia-design="atelier"] {
+  --mobility-paper: var(--atelier-paper, #fffdf8);
+  --mobility-surface: #f6f3eb;
+  --mobility-ink: var(--atelier-ink, #263936);
+  --mobility-muted: #54625c;
+  --mobility-line: #d6cabb;
+  --mobility-control-line: #8c796b;
+  --mobility-copper: #8c4d35;
+  --mobility-copper-soft: #f1e1d3;
+  --mobility-link: #146f65;
+  --mobility-focus: #146f65;
+  --mobility-map-paper: #f3f0e7;
+  --mobility-free-ink: #195c49;
+  --mobility-free-paper: #e5efe4;
+  --mobility-slow-ink: #785714;
+  --mobility-slow-paper: #f4e5bf;
+  --mobility-jam-ink: #9c3a30;
+  --mobility-jam-paper: #f8e8e3;
+  --mobility-shadow: 0 12px 32px -24px #483d31;
+}
+
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] {
+  --mobility-paper: #18282d;
+  --mobility-surface: #22373b;
+  --mobility-ink: #f4f1e7;
+  --mobility-muted: #b7c5c2;
+  --mobility-line: #526762;
+  --mobility-control-line: #8b9a96;
+  --mobility-copper: #d39770;
+  --mobility-copper-soft: #41362f;
+  --mobility-link: #8bd4c0;
+  --mobility-focus: #f2d1af;
+  --mobility-map-paper: #263a3d;
+  --mobility-free-ink: #8bd4c0;
+  --mobility-free-paper: #213e36;
+  --mobility-slow-ink: #ecd099;
+  --mobility-slow-paper: #453b29;
+  --mobility-jam-ink: #f3b2a4;
+  --mobility-jam-paper: #4a2b2b;
+  --mobility-shadow: 0 16px 40px -24px #071114;
+}
+
+/* Explicit height belongs to the canvas, not to the enclosing figure. This
+ * also releases the old 112–180px assistant-map caps without enlarging icons. */
+html[data-corvia-design="atelier"] .atelier-mobility.deslocamento-painel {
+  --mobility-map-height: clamp(300px, 43vh, 440px);
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+  width: 100%;
+  min-width: 0;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0;
+  color: var(--mobility-ink);
+  background: transparent !important;
+  border: 0;
+  font-family: var(--fonte-texto, system-ui, sans-serif);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility.deslocamento-painel--compact {
+  --mobility-map-height: 248px;
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility > .deslocamento-mapa {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: var(--mobility-map-height) auto auto;
+  align-content: start;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: hidden;
+  margin: 0;
+  color: var(--mobility-ink);
+  background: var(--mobility-paper);
+  border: 1px solid var(--mobility-line);
+  border-radius: 12px;
+  box-shadow: var(--mobility-shadow);
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility > .deslocamento-mapa > :is(.deslocamento-mapa__google, svg, .deslocamento-mapa__indisponivel) {
+  grid-area: 1 / 1;
+  width: 100% !important;
+  height: var(--mobility-map-height) !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  background: var(--mobility-map-paper);
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-mapa__google {
+  display: block;
+  isolation: isolate;
+  /* No descendant SVG, image, filter or .gm-* rules: native map UI is intact. */
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-mapa__status {
+  position: relative;
+  inset: auto;
+  grid-area: 1 / 1;
+  z-index: 2;
+  align-self: center;
+  justify-self: center;
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  max-height: calc(var(--mobility-map-height) - 88px);
+  overflow: auto;
+  padding: 14px 18px;
+  color: var(--mobility-ink);
+  background: var(--mobility-paper);
+  border: 1px solid var(--mobility-control-line);
+  border-radius: 8px;
+  box-shadow: var(--mobility-shadow);
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  transform: none;
+  backdrop-filter: none;
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility :is(.deslocamento-mapa__legenda, .deslocamento-mapa__fonte) {
+  position: static;
+  inset: auto;
+  z-index: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  min-width: 0;
+  margin: 0;
+  padding: 12px 16px;
+  color: var(--mobility-muted);
+  background: var(--mobility-paper);
+  border: 0;
+  border-top: 1px solid var(--mobility-line);
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  backdrop-filter: none;
+  overflow-wrap: anywhere;
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-mapa__legenda { grid-area: 2 / 1; }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-mapa__fonte { grid-area: 3 / 1; }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-mapa__fonte time { margin: 0; color: var(--mobility-muted); }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-mapa__fonte svg {
+  width: 22px !important;
+  height: 22px !important;
+  min-height: 0 !important;
+  max-height: 22px !important;
+  flex: 0 0 22px;
+}
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-mapa__status p { margin: 0 0 12px; color: var(--mobility-ink); font-size: 16px; line-height: 1.5; }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-mapa__legenda span { gap: 7px; color: inherit; }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-mapa__legenda i { width: 18px; height: 5px; background: var(--mobility-free-ink); }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-mapa__legenda i.lento { background: var(--mobility-slow-ink); }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-mapa__legenda i.parado { background: var(--mobility-jam-ink); }
+
+html[data-corvia-design="atelier"] :is(.atelier-mobility .deslocamento-mapa__indisponivel, .atelier-mobility-empty) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  min-height: 180px;
+  padding: 24px 20px;
+  color: var(--mobility-muted);
+  background: var(--mobility-surface);
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+html[data-corvia-design="atelier"] :is(.atelier-mobility .deslocamento-mapa__indisponivel, .atelier-mobility-empty) > svg {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  min-height: 0;
+  color: var(--mobility-copper);
+}
+
+html[data-corvia-design="atelier"] :is(.atelier-mobility .deslocamento-mapa__indisponivel, .atelier-mobility-empty) :is(p, span, small) {
+  max-width: 46ch;
+  padding: 0;
+  margin: 0;
+  color: var(--mobility-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility-empty strong { color: var(--mobility-ink); font-size: 18px; }
+
+/* Route choices keep all details visible; no narrow-screen horizontal carousel. */
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas {
+  display: block;
+  min-width: 0;
+  padding: 18px;
+  color: var(--mobility-ink);
+  background: var(--mobility-surface);
+  border: 1px solid var(--mobility-line);
+  border-radius: 12px;
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas__cabecalho {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas__cabecalho strong { color: var(--mobility-ink); font-family: var(--fonte-display); font-size: 18px; }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas__cabecalho span { margin-top: 5px; color: var(--mobility-muted); font-size: 16px; line-height: 1.5; }
+
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas__lista {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+  overflow: visible;
+  padding: 0;
+  scroll-snap-type: none;
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas__lista button {
+  display: grid;
+  grid-template-columns: 4px minmax(0, 1fr) auto;
+  gap: 8px 12px;
+  align-items: start;
+  width: 100%;
+  min-width: 0;
+  min-height: 96px;
+  padding: 16px;
+  color: var(--mobility-ink);
+  background: var(--mobility-paper);
+  border: 1px solid var(--mobility-control-line);
+  border-radius: 8px;
+  box-shadow: none;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas__lista button:hover { background: var(--mobility-surface); border-color: var(--mobility-copper); }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas__lista button:is(.selecionada, [aria-pressed="true"]) { background: var(--mobility-copper-soft); border-color: var(--mobility-copper); box-shadow: inset 0 0 0 1px var(--mobility-copper); }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas__lista button > i { grid-row: 1 / 4; align-self: stretch; width: 4px; min-height: 44px; border-radius: 3px; }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rota__nome strong { color: var(--mobility-ink); font-size: 16px; line-height: 1.5; }
+html[data-corvia-design="atelier"] .atelier-mobility :is(.deslocamento-rota__nome small, .deslocamento-rota__tempo small) { margin-top: 4px; color: var(--mobility-muted); font-size: 16px; line-height: 1.5; white-space: normal; overflow: visible; overflow-wrap: anywhere; text-overflow: clip; }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rota__tempo { grid-area: 1 / 3; align-items: flex-end; }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rota__tempo strong { color: var(--mobility-ink); font-family: var(--fonte-display); font-size: 22px; font-weight: 600; line-height: 1.25; white-space: nowrap; font-variant-numeric: tabular-nums; }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rota__detalhe { display: block; grid-column: 2 / -1; color: var(--mobility-muted); font-size: 16px; line-height: 1.5; text-align: left; overflow-wrap: anywhere; }
+
+/* Traffic is functional data, not decorative copper. Labels accompany color. */
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas .transito { grid-column: 2 / -1; justify-self: start; padding: 4px 9px; color: var(--mobility-ink); background: var(--mobility-surface); border: 1px solid currentColor; border-radius: 5px; font-size: 16px; font-weight: 600; line-height: 1.4; }
+html[data-corvia-design="atelier"] .atelier-mobility .transito:is(.transito--normal, .transito--leve) { color: var(--mobility-free-ink); background: var(--mobility-free-paper); }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas .transito--moderado { color: var(--mobility-slow-ink); background: var(--mobility-slow-paper); }
+html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas .transito--intenso { color: var(--mobility-jam-ink); background: var(--mobility-jam-paper); }
+
+/* Home: an article with independent actions; the real map is never nested in
+ * a button, so Google attribution and zoom remain individually operable. */
+html[data-corvia-design="atelier"] .atelier-commute.spaces-stellar-route {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: none;
+  gap: 16px;
+  align-content: start;
+  width: 100%;
+  min-width: 0;
+  max-width: 700px;
+  min-height: 0;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 20px;
+  overflow: visible;
+  color: var(--mobility-ink);
+  background: var(--mobility-paper);
+  border: 1px solid var(--mobility-line);
+  border-top: 3px solid var(--mobility-copper);
+  border-radius: 12px;
+  box-shadow: var(--mobility-shadow);
+  font-family: var(--fonte-texto);
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: default;
+  animation: none;
+  transition: none;
+}
+
+html[data-corvia-design="atelier"] .atelier-commute.spaces-stellar-route::before,
+html[data-corvia-design="atelier"] .atelier-commute.spaces-stellar-route::after { content: none; }
+
+html[data-corvia-design="atelier"] .atelier-commute .atelier-commute__open {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0;
+  color: var(--mobility-ink);
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__heading { grid-template-columns: 44px minmax(0, 1fr) 22px; gap: 12px; }
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__heading > span:first-child { width: 44px; height: 44px; color: var(--mobility-copper); background: var(--mobility-copper-soft); border: 1px solid var(--mobility-line); border-radius: 50%; box-shadow: none; }
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__heading svg { width: 22px; height: 22px; color: var(--mobility-copper); }
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__heading strong { color: var(--mobility-ink); font-family: var(--fonte-display); font-size: 20px; font-weight: 600; line-height: 1.35; }
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__heading small { margin-top: 3px; color: var(--mobility-muted); font-size: 16px; line-height: 1.5; white-space: normal; overflow: visible; overflow-wrap: anywhere; }
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__schedule { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 18px; padding: 14px 0; border-block: 1px solid var(--mobility-line); }
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__schedule > span { gap: 4px; color: var(--mobility-muted); font-size: 16px; line-height: 1.5; }
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__schedule :is(time, small) { color: var(--mobility-ink); font-size: 16px; line-height: 1.5; white-space: normal; overflow-wrap: anywhere; }
+html[data-corvia-design="atelier"] .atelier-commute .atelier-commute__map { display: block; min-width: 0; }
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__metrics > * { min-height: 44px; padding: 8px 10px; color: var(--mobility-muted); background: var(--mobility-surface); border: 1px solid var(--mobility-line); border-radius: 6px; font-family: var(--fonte-texto); font-size: 16px; line-height: 1.5; white-space: normal; overflow: visible; overflow-wrap: anywhere; box-shadow: none; }
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__metrics > strong { color: var(--mobility-ink); font-size: 20px; font-variant-numeric: tabular-nums; }
+html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__metrics > :last-child { grid-column: 1 / -1; }
+html[data-corvia-design="atelier"] .atelier-commute[data-traffic="light"] .spaces-stellar-route__metrics > :last-child { color: var(--mobility-free-ink); background: var(--mobility-free-paper); }
+html[data-corvia-design="atelier"] .atelier-commute[data-traffic="moderate"] .spaces-stellar-route__metrics > :last-child { color: var(--mobility-slow-ink); background: var(--mobility-slow-paper); }
+html[data-corvia-design="atelier"] .atelier-commute[data-traffic="heavy"] .spaces-stellar-route__metrics > :last-child { color: var(--mobility-jam-ink); background: var(--mobility-jam-paper); }
+
+/* Full view: restrained dialog chrome; body stays readable at mobile widths. */
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel {
+  width: min(1220px, 100%);
+  max-height: calc(100dvh - 32px);
+  padding: clamp(18px, 3vw, 32px);
+  color: var(--mobility-ink) !important;
+  background: var(--mobility-paper) !important;
+  border: 1px solid var(--mobility-line) !important;
+  border-radius: 16px;
+  box-shadow: 0 28px 90px #081c2966;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: var(--mobility-control-line) var(--mobility-paper);
+}
+
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel > header { gap: 16px; padding-bottom: 20px; border-bottom: 1px solid var(--mobility-line); }
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel > header > div { min-width: 0; }
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel > header p { color: var(--mobility-copper); font-family: var(--fonte-texto); font-size: 16px; line-height: 1.5; letter-spacing: .08em; }
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel h2 { color: var(--mobility-ink); font-size: clamp(24px, 2.5vw, 32px); font-weight: 500; line-height: 1.25; overflow-wrap: anywhere; }
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel > header small { display: block; max-width: 70ch; margin-top: 10px; color: var(--mobility-muted); font-size: 16px; line-height: 1.6; }
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel > header button { width: 44px; height: 44px; min-width: 44px; color: var(--mobility-ink); background: var(--mobility-surface); border: 1px solid var(--mobility-control-line); border-radius: 8px; }
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel__map { margin: 22px 0; }
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel__status { justify-items: start; gap: 7px; padding: 20px; color: var(--mobility-ink); background: var(--mobility-surface); border: 1px solid var(--mobility-line); border-left: 3px solid var(--mobility-copper); border-radius: 8px; text-align: left; }
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel__status strong { color: var(--mobility-ink); font-family: var(--fonte-display); font-size: 24px; font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel__status :is(small, em) { color: var(--mobility-muted); font-size: 16px; line-height: 1.6; }
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel > ul { color: var(--mobility-muted); font-size: 16px; line-height: 1.6; }
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel > footer { flex-wrap: wrap; gap: 12px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--mobility-line); }
+html[data-corvia-design="atelier"] :is(.atelier-commute, .atelier-home .spaces-travel) .atelier-commute__notice { margin: 0; color: var(--mobility-muted); font-size: 16px; line-height: 1.6; overflow-wrap: anywhere; }
+
+html[data-corvia-design="atelier"] :is(.atelier-mobility .deslocamento-rotas__cabecalho a, .atelier-mobility .deslocamento-mapa__indisponivel a, .atelier-mobility .deslocamento-mapa__fonte a, .atelier-mobility .deslocamento-mapa__status button, .atelier-mobility-empty a, .atelier-mobility-empty button, .atelier-commute .atelier-commute__action, .atelier-home .spaces-travel > footer button, .atelier-home .spaces-travel > footer a) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  min-width: 44px;
+  min-height: 48px;
+  max-width: 100%;
+  padding: 11px 16px;
+  color: var(--mobility-link);
+  background: var(--mobility-paper);
+  border: 1px solid var(--mobility-control-line);
+  border-radius: 7px;
+  font-family: var(--fonte-texto);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+html[data-corvia-design="atelier"] .atelier-commute.spaces-stellar-route .atelier-commute__action,
+html[data-corvia-design="atelier"] .atelier-home .spaces-travel > footer .spaces-travel__recalculate {
+  color: #1e2a22;
+  background: var(--atelier-metal, linear-gradient(115deg, #d39770, #f2d1af 24%, #d8a27c 49%, #c98c66 77%, #e2b18d));
+  border-color: #8c4d35;
+  box-shadow: inset 0 1px #faeadb;
+}
+
+html[data-corvia-design="atelier"] :is(.atelier-commute .atelier-commute__open:hover, .atelier-mobility a:hover, .atelier-mobility-empty a:hover, .atelier-home .spaces-travel > header button:hover) { color: var(--mobility-ink); background: var(--mobility-surface); }
+html[data-corvia-design="atelier"] :is(.atelier-commute, .atelier-mobility, .atelier-mobility-empty, .atelier-home .spaces-travel) :is(button, a):focus-visible { outline: 3px solid var(--mobility-focus); outline-offset: 3px; }
+html[data-corvia-design="atelier"] :is(.atelier-commute, .atelier-mobility, .atelier-mobility-empty, .atelier-home .spaces-travel) button:disabled { opacity: 1; color: var(--mobility-muted); background: var(--mobility-surface); border-color: var(--mobility-line); box-shadow: none; cursor: not-allowed; }
+
+/* The legacy board forced the complete figure/canvas to 100% height using
+ * important selectors. Override only the new map instance, not other cards. */
+html[data-corvia-design="atelier"] :is(.ccc-mobile-commute__map, .ccc-reference-commute__map, .ccc-assistant-commute-map, .cos-assistant-map):has(> .atelier-mobility) {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible;
+  background: var(--mobility-paper);
+  border-color: var(--mobility-line);
+}
+html[data-corvia-design="atelier"] .ccc-reference-board .ccc-reference-commute__map > .atelier-mobility.deslocamento-painel--compact,
+html[data-corvia-design="atelier"] .ccc-reference-board .ccc-reference-commute__map > .atelier-mobility.deslocamento-painel--compact > .deslocamento-mapa {
+  height: auto !important;
+  min-height: 0 !important;
+}
+html[data-corvia-design="atelier"] .ccc-reference-board .ccc-reference-commute__map > .atelier-mobility.deslocamento-painel--compact > .deslocamento-mapa > :is(.deslocamento-mapa__google, svg, .deslocamento-mapa__indisponivel) {
+  height: var(--mobility-map-height) !important;
+  min-height: 0 !important;
+}
+
+@media (min-width: 1100px) {
+  html[data-corvia-design="atelier"] .spaces-travel__map .atelier-mobility:not(.deslocamento-painel--sem-rotas):not(.deslocamento-painel--compact) { grid-template-columns: minmax(0, 1.45fr) minmax(340px, 1fr); }
+}
+
+@media (max-width: 700px) {
+  html[data-corvia-design="atelier"] .atelier-home .spaces-travel-overlay { padding: 10px !important; }
+  html[data-corvia-design="atelier"] .atelier-home .spaces-travel { max-height: calc(100dvh - 20px); padding: 18px 14px; border-radius: 12px; }
+  html[data-corvia-design="atelier"] .atelier-mobility.deslocamento-painel { --mobility-map-height: 300px; }
+  html[data-corvia-design="atelier"] .atelier-mobility.deslocamento-painel--compact { --mobility-map-height: 240px; }
+  html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas { padding: 14px; }
+  html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas__lista button { grid-template-columns: 4px minmax(0, 1fr); padding: 14px 12px; }
+  html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rota__tempo { grid-area: auto / 2; flex-direction: row; align-items: baseline; flex-wrap: wrap; gap: 12px; }
+  html[data-corvia-design="atelier"] .atelier-mobility .deslocamento-rotas__lista button > i { grid-row: 1 / 5; }
+  html[data-corvia-design="atelier"] .atelier-home .spaces-travel > footer { display: grid; grid-template-columns: minmax(0, 1fr); }
+  html[data-corvia-design="atelier"] .atelier-commute.spaces-stellar-route { padding: 16px; }
+}
+
+@media (max-width: 380px) {
+  html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__schedule { grid-template-columns: minmax(0, 1fr); }
+  html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__heading { grid-template-columns: 36px minmax(0, 1fr) 20px; gap: 8px; }
+  html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__heading > span:first-child { width: 36px; height: 36px; }
+  html[data-corvia-design="atelier"] .atelier-commute .spaces-stellar-route__heading strong { font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-corvia-design="atelier"] :is(.atelier-mobility, .atelier-commute, .spaces-travel) { scroll-behavior: auto; }
+  html[data-corvia-design="atelier"] :is(.atelier-mobility .deslocamento-rotas__lista button, .atelier-commute__open, .atelier-commute__action, .spaces-travel > footer button) { animation: none; transition: none; }
+}

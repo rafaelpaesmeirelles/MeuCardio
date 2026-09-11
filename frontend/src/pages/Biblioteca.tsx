@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
-import { api } from "../lib/api";
-import { Carregando, SeloRevisao, Vazio } from "../components/Estado";
+import { api, ApiError } from "../lib/api";
+import { Carregando, Erro, SeloRevisao, Vazio } from "../components/Estado";
 import { normalizarBusca } from "../lib/taxonomiaCardiologia";
 
 type Doc = {
@@ -70,6 +70,11 @@ export default function Biblioteca() {
   const [totalDocs, setTotalDocs] = useState(0);
   const [proximoOffset, setProximoOffset] = useState<number | null>(null);
   const [carregandoMais, setCarregandoMais] = useState(false);
+  const [erroCatalogo, setErroCatalogo] = useState("");
+  const [erroDocs, setErroDocs] = useState("");
+  const [tentativaCatalogo, setTentativaCatalogo] = useState(0);
+  const [tentativaDocs, setTentativaDocs] = useState(0);
+  const requisicaoDocs = useRef(0);
   const areasFiltradas = useMemo(() => {
     const termo = normalizarBusca(buscaArea);
     if (!termo) return contagensAreas;
@@ -77,27 +82,42 @@ export default function Biblioteca() {
   }, [buscaArea, contagensAreas]);
 
   useEffect(() => {
+    let ativo = true;
+    setErroCatalogo("");
     Promise.all([
       api.get<Catalog>("/library/catalog"),
       api.get<{ theme: string; count: number }[]>("/library/themes"),
       api.get<AreaCountsResponse>("/library/area-counts"),
     ]).then(([catalogoResposta, temasResposta, areasResposta]) => {
+      if (!ativo) return;
       setCatalogo(catalogoResposta);
       setTemas(temasResposta);
       setContagensAreas(areasResposta.areas);
+    }).catch((error) => {
+      if (ativo) setErroCatalogo(error instanceof ApiError ? error.message : "Não foi possível carregar as coleções da biblioteca.");
     });
-  }, []);
+    return () => { ativo = false; };
+  }, [tentativaCatalogo]);
 
   useEffect(() => {
+    const id = ++requisicaoDocs.current;
     setDocs(null);
+    setErroDocs("");
+    setTotalDocs(0);
+    setProximoOffset(null);
+    setCarregandoMais(false);
     const query = new URLSearchParams({ limit: String(PAGE_SIZE), offset: "0" });
     if (tema) query.set("theme", tema);
     api.get<DocumentPage>(`/library/documents?${query}`).then((r) => {
+      if (requisicaoDocs.current !== id) return;
       setDocs(r.items);
       setTotalDocs(r.total);
       setProximoOffset(r.next_offset);
+    }).catch((error) => {
+      if (requisicaoDocs.current === id) setErroDocs(error instanceof ApiError ? error.message : "Não foi possível carregar os documentos.");
     });
-  }, [tema]);
+    return () => { ++requisicaoDocs.current; };
+  }, [tema, tentativaDocs]);
 
   useEffect(() => {
     if (location.hash !== "#documentos" || docs === null) return;
@@ -110,7 +130,9 @@ export default function Biblioteca() {
 
   async function carregarMais() {
     if (proximoOffset === null || carregandoMais) return;
+    const id = requisicaoDocs.current;
     setCarregandoMais(true);
+    setErroDocs("");
     try {
       const query = new URLSearchParams({
         limit: String(PAGE_SIZE),
@@ -118,11 +140,14 @@ export default function Biblioteca() {
       });
       if (tema) query.set("theme", tema);
       const r = await api.get<DocumentPage>(`/library/documents?${query}`);
+      if (requisicaoDocs.current !== id) return;
       setDocs((atuais) => [...(atuais ?? []), ...r.items]);
       setTotalDocs(r.total);
       setProximoOffset(r.next_offset);
+    } catch (error) {
+      if (requisicaoDocs.current === id) setErroDocs(error instanceof ApiError ? error.message : "Não foi possível carregar mais documentos. Tente novamente.");
     } finally {
-      setCarregandoMais(false);
+      if (requisicaoDocs.current === id) setCarregandoMais(false);
     }
   }
 
@@ -196,7 +221,8 @@ export default function Biblioteca() {
         </section>
       )}
 
-      {catalogo === null ? (
+      {erroCatalogo && <div><Erro mensagem={erroCatalogo} /><button type="button" className="botao botao--secundario" onClick={() => setTentativaCatalogo(value => value + 1)}>Tentar carregar as coleções novamente</button></div>}
+      {catalogo === null ? !erroCatalogo && (
         <Carregando texto="Contando o acervo…" />
       ) : (
         <div className="grade grade--3" style={{ margin: "1rem 0 1.5rem" }}>
@@ -244,8 +270,9 @@ export default function Biblioteca() {
           ))}
         </div>
 
+        {erroDocs && <div><Erro mensagem={erroDocs} /><button type="button" className="botao botao--secundario" disabled={carregandoMais} onClick={() => docs === null ? setTentativaDocs(value => value + 1) : void carregarMais()}>Tentar carregar documentos novamente</button></div>}
         {docs === null ? (
-          <Carregando />
+          !erroDocs && <Carregando />
         ) : docs.length === 0 ? (
           <Vazio titulo="Nenhum documento neste tema" acao="Importe conteúdo pelo painel de administração." />
         ) : (

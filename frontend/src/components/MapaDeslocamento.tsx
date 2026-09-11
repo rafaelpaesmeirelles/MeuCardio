@@ -1,370 +1,202 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import Icone from "./Icone";
+import { coordinateValid, decodeRoutePolyline, geometryAvailable } from "../lib/mobilityGeometry";
+import { loadGoogleMaps, MAPS_AUTH_ERROR } from "../lib/googleMapsLoader";
+import { atelierMapPalette, atelierMapStyles } from "../lib/atelierMapStyle";
+import { useCorviaTheme } from "../lib/corviaTheme";
 
 export type RotaDeslocamento = {
-  rank: number;
-  provider_rank?: number;
-  recommended?: boolean;
-  duration_seconds: number;
-  typical_duration_seconds?: number | null;
-  traffic_delay_seconds: number;
-  extra_time_seconds?: number;
-  distance_meters: number;
-  congestion: "normal" | "leve" | "moderado" | "intenso" | string;
-  summary: string;
-  labels?: string[];
+  rank: number; provider_rank?: number; recommended?: boolean;
+  duration_seconds: number; typical_duration_seconds?: number | null;
+  traffic_delay_seconds: number; extra_time_seconds?: number; distance_meters: number;
+  congestion: string; summary: string; labels?: string[]; geometry_available?: boolean;
   geometry?: { format: "encoded_polyline"; value: string; precision: number };
   traffic_segments?: Array<{ start_index: number; end_index?: number | null; speed: string }>;
   incidents?: Array<{ type?: string; description?: string }>;
 };
+type Coordinate = [number, number];
+type Origin = { latitude: number; longitude: number } | null;
+type Destination = { latitude: number | null; longitude: number | null; name: string };
 
-type Coordenada = [number, number];
-type Origem = { latitude: number; longitude: number } | null;
-type Destino = { latitude: number | null; longitude: number | null; name: string };
-
-const CORES_ROTAS = ["#22d3ee", "#a78bfa", "#f8c35c"];
-let carregamentoGoogleMaps: Promise<any> | null = null;
-
-function carregarGoogleMaps(apiKey: string): Promise<any> {
-  const janela = window as typeof window & { google?: any };
-  if (janela.google?.maps) return Promise.resolve(janela.google);
-  if (carregamentoGoogleMaps) return carregamentoGoogleMaps;
-  carregamentoGoogleMaps = new Promise((resolve, reject) => {
-    const existente = document.querySelector<HTMLScriptElement>('script[data-corvia-google-maps="true"]');
-    const script = existente || document.createElement("script");
-    if (!existente) {
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&v=weekly&language=pt-BR&region=BR`;
-      script.async = true;
-      script.defer = true;
-      script.dataset.corviaGoogleMaps = "true";
-      document.head.appendChild(script);
-    }
-    script.addEventListener("load", () => janela.google?.maps ? resolve(janela.google) : reject(new Error("Google Maps indisponível.")), { once: true });
-    script.addEventListener("error", () => reject(new Error("Falha ao carregar Google Maps.")), { once: true });
-  });
-  return carregamentoGoogleMaps;
+function minutes(seconds: number) { return Number.isFinite(seconds) && seconds >= 0 ? Math.ceil(seconds / 60) : "—"; }
+function kilometres(metres: number) { return Number.isFinite(metres) && metres >= 0 ? (metres / 1000).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : "—"; }
+function trafficName(value: string) {
+  return ({ normal: "Trânsito livre", leve: "Fluxo leve", moderado: "Trânsito moderado", intenso: "Trânsito intenso" } as Record<string, string>)[value] || "Trânsito não informado";
 }
-
-function decodificarPolyline(valor: string, precisao = 5): Coordenada[] {
-  const coordenadas: Coordenada[] = [];
-  const fator = 10 ** precisao;
-  let indice = 0;
-  let latitude = 0;
-  let longitude = 0;
-  while (indice < valor.length) {
-    let resultado = 0;
-    let deslocamento = 0;
-    let byte: number;
-    do {
-      byte = valor.charCodeAt(indice++) - 63;
-      resultado |= (byte & 0x1f) << deslocamento;
-      deslocamento += 5;
-    } while (byte >= 0x20 && indice <= valor.length);
-    latitude += resultado & 1 ? ~(resultado >> 1) : resultado >> 1;
-
-    resultado = 0;
-    deslocamento = 0;
-    do {
-      byte = valor.charCodeAt(indice++) - 63;
-      resultado |= (byte & 0x1f) << deslocamento;
-      deslocamento += 5;
-    } while (byte >= 0x20 && indice <= valor.length);
-    longitude += resultado & 1 ? ~(resultado >> 1) : resultado >> 1;
-    coordenadas.push([latitude / fator, longitude / fator]);
-  }
-  return coordenadas;
+// Only non-Google geometry may use a schematic. Google Routes stays on a
+// Google Map, with native logos/attribution intact and no invented streets.
+function projectRoutes(routes: Coordinate[][]): Coordinate[][] {
+  const all = routes.flat();
+  if (all.length < 2) return routes.map(() => []);
+  const factor = Math.cos(all.reduce((sum, p) => sum + p[0], 0) / all.length * Math.PI / 180);
+  const xy = routes.map((route) => route.map(([lat, lng]) => [lng * factor, lat] as Coordinate));
+  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  for (const route of xy) for (const [x, y] of route) { minX = Math.min(minX, x); maxX = Math.max(maxX, x); minY = Math.min(minY, y); maxY = Math.max(maxY, y); }
+  const scale = Math.min(712 / Math.max(maxX - minX, 0.00001), 252 / Math.max(maxY - minY, 0.00001));
+  const dx = (800 - (maxX - minX) * scale) / 2, dy = (340 - (maxY - minY) * scale) / 2;
+  return xy.map((route) => route.map(([x, y]) => [dx + (x - minX) * scale, 340 - dy - (y - minY) * scale]));
 }
+const svgPath = (points: Coordinate[]) => points.map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`).join(" ");
 
-function minutos(segundos: number) {
-  return Math.max(1, Math.ceil(segundos / 60));
-}
-
-function quilometros(metros: number) {
-  return (metros / 1000).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-}
-
-function nomeTransito(valor: string) {
-  return ({
-    normal: "Trânsito livre",
-    leve: "Fluxo leve",
-    moderado: "Trânsito moderado",
-    intenso: "Trânsito intenso",
-  } as Record<string, string>)[valor] || "Trânsito atualizado";
-}
-
-function corTrecho(velocidade: string) {
-  if (velocidade === "traffic_jam") return "#fb7185";
-  if (velocidade === "slow") return "#fbbf24";
-  return "#34d399";
-}
-
-export default function MapaDeslocamento({
-  rotas,
-  origem,
-  destino,
-  provider,
-  updatedAt,
-  googleMapsApiKey,
-  compact = false,
-}: {
-  rotas: RotaDeslocamento[];
-  origem: Origem;
-  destino: Destino;
-  provider?: string;
-  updatedAt?: string;
-  googleMapsApiKey?: string | null;
-  compact?: boolean;
+export default function MapaDeslocamento({ rotas, origem, destino, provider, updatedAt, googleMapsApiKey, compact = false }: {
+  rotas: RotaDeslocamento[]; origem: Origin; destino: Destination; provider?: string; updatedAt?: string; googleMapsApiKey?: string | null; compact?: boolean;
 }) {
-  const [selecionada, setSelecionada] = useState(0);
-  const [estadoMapa, setEstadoMapa] = useState<"carregando" | "pronto" | "erro">("carregando");
-  const mapaRef = useRef<HTMLDivElement>(null);
-  // A instância do Google Map vive em ref e é criada UMA vez por montagem:
-  // atualizações de rota/origem/seleção só redesenham sobreposições. Recriar o
-  // mapa a cada dado novo apagava os tiles por segundos (flicker) e rebaixava
-  // tiles/API em todo refresh.
+  const { theme } = useCorviaTheme();
+  const dark = theme === "dark";
+  const palette = useMemo(() => atelierMapPalette(dark), [dark]);
+  const titleId = useId();
+  const [selected, setSelected] = useState(0);
+  const [mapState, setMapState] = useState<"loading" | "ready" | "error">("loading");
+  const [mapError, setMapError] = useState("");
+  const [retry, setRetry] = useState(0);
+  const [version, setVersion] = useState(0);
+  const canvasRef = useRef<HTMLDivElement>(null);
   const googleRef = useRef<any>(null);
-  const mapaInstanciaRef = useRef<any>(null);
-  const sobreposicoesRef = useRef<any[]>([]);
-  const enquadramentoRef = useRef<string>("");
-  const [mapaVersao, setMapaVersao] = useState(0);
-  const indiceSelecionado = Math.min(selecionada, Math.max(0, rotas.length - 1));
-  const geometrias = useMemo(() => rotas.map((rota) => {
-    const geometria = rota.geometry;
-    return geometria?.value ? decodificarPolyline(geometria.value, geometria.precision) : [];
-  }), [rotas]);
-  const projetadas = useMemo(() => {
-    const pontos = geometrias.flat();
-    if (pontos.length < 2) return geometrias.map(() => [] as Array<[number, number]>);
-    const mediaLatitude = pontos.reduce((total, ponto) => total + ponto[0], 0) / pontos.length;
-    const fatorLongitude = Math.cos(mediaLatitude * Math.PI / 180);
-    const cartesianas = geometrias.map((rota) => rota.map(([lat, lng]) => [lng * fatorLongitude, lat] as [number, number]));
-    const todos = cartesianas.flat();
-    const minX = Math.min(...todos.map((ponto) => ponto[0]));
-    const maxX = Math.max(...todos.map((ponto) => ponto[0]));
-    const minY = Math.min(...todos.map((ponto) => ponto[1]));
-    const maxY = Math.max(...todos.map((ponto) => ponto[1]));
-    const largura = 800;
-    const altura = 340;
-    const margem = 34;
-    const escala = Math.min((largura - 2 * margem) / Math.max(maxX - minX, 0.00001), (altura - 2 * margem) / Math.max(maxY - minY, 0.00001));
-    const conteudoLargura = (maxX - minX) * escala;
-    const conteudoAltura = (maxY - minY) * escala;
-    const deslocarX = (largura - conteudoLargura) / 2;
-    const deslocarY = (altura - conteudoAltura) / 2;
-    return cartesianas.map((rota) => rota.map(([x, y]) => ([
-      deslocarX + (x - minX) * escala,
-      altura - (deslocarY + (y - minY) * escala),
-    ] as [number, number])));
-  }, [geometrias]);
+  const mapRef = useRef<any>(null);
+  const overlays = useRef<any[]>([]);
+  const fitRef = useRef<(() => void) | null>(null);
+  const signatureRef = useRef("");
+  const index = Math.min(selected, Math.max(0, rotas.length - 1));
+  const geometries = useMemo(() => rotas.map((route) => geometryAvailable(route)
+    ? decodeRoutePolyline(route.geometry!.value, route.geometry!.precision) : []), [rotas]);
+  const projected = useMemo(() => projectRoutes(geometries), [geometries]);
+  const route = rotas[index];
+  const activePoints = geometries[index] || [];
+  const hasGeometry = geometries.some((points) => points.length > 1);
+  const activeGeometry = activePoints.length > 1;
+  const validDestination = coordinateValid(destino.latitude, destino.longitude);
+  const validOrigin = origem && coordinateValid(origem.latitude, origem.longitude) ? origem : null;
+  const isGoogle = ["google maps", "google_maps", "google_routes"].includes((provider || "").toLowerCase());
+  const googleCanvas = isGoogle && Boolean(googleMapsApiKey) && validDestination;
+  const navigationUrl = validDestination ? `https://www.google.com/maps/dir/?api=1${validOrigin ? `&origin=${validOrigin.latitude},${validOrigin.longitude}` : ""}&destination=${destino.latitude},${destino.longitude}&travelmode=driving&dir_action=navigate` : null;
+  const updated = updatedAt ? new Date(updatedAt) : null;
 
-  const caminho = (pontos: Array<[number, number]>) => pontos
-    .map(([x, y], indice) => `${indice ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`)
-    .join(" ");
-  const rotaAtual = rotas[indiceSelecionado] || rotas[0];
-  const pontosAtuais = projetadas[indiceSelecionado] || [];
-  const inicio = pontosAtuais[0];
-  const fim = pontosAtuais[pontosAtuais.length - 1];
-  const destinoValido = destino.latitude != null && destino.longitude != null;
-  const urlNavegacao = destinoValido
-    ? `https://www.google.com/maps/dir/?api=1${origem ? `&origin=${origem.latitude},${origem.longitude}` : ""}&destination=${destino.latitude},${destino.longitude}&travelmode=driving&dir_action=navigate`
-    : null;
-  const deveUsarGoogleMap = provider === "Google Maps" || provider === "google_maps";
-  const temGeometria = geometrias.some((rota) => rota.length > 1);
-
-  // Efeito de CRIAÇÃO: instancia o mapa uma única vez enquanto o widget estiver
-  // montado (ou quando chave/provedor/validade do destino mudarem de verdade).
+  // One instance per mounted canvas. Updates below preserve its identity.
   useEffect(() => {
-    if (!deveUsarGoogleMap || !googleMapsApiKey || !mapaRef.current || !destinoValido) {
-      if (mapaInstanciaRef.current) {
-        sobreposicoesRef.current.forEach((item) => item.setMap?.(null));
-        sobreposicoesRef.current = [];
-        mapaInstanciaRef.current = null;
-        enquadramentoRef.current = "";
-      }
-      return;
-    }
-    if (mapaInstanciaRef.current) return; // preserva a instância entre atualizações de dados
-    let descartado = false;
-    setEstadoMapa("carregando");
-    carregarGoogleMaps(googleMapsApiKey).then((google) => {
-      if (descartado || !mapaRef.current || destino.latitude == null || destino.longitude == null) return;
+    if (!googleCanvas || !canvasRef.current || !googleMapsApiKey) return;
+    let disposed = false;
+    setMapState("loading"); setMapError("");
+    const authFailure = () => { if (!disposed) { setMapState("error"); setMapError("O Google Maps não autorizou a exibição neste endereço. A configuração do serviço precisa ser revisada."); } };
+    window.addEventListener(MAPS_AUTH_ERROR, authFailure);
+    loadGoogleMaps(googleMapsApiKey).then((google) => {
+      if (disposed || !canvasRef.current) return;
       googleRef.current = google;
-      mapaInstanciaRef.current = new google.maps.Map(mapaRef.current, {
-        center: { lat: destino.latitude, lng: destino.longitude },
-        zoom: 14,
-        disableDefaultUI: true,
-        zoomControl: true,
-        gestureHandling: "cooperative",
-        backgroundColor: "#092f3b",
-        styles: [
-          { elementType: "geometry", stylers: [{ color: "#173f49" }] },
-          { elementType: "labels.text.fill", stylers: [{ color: "#c1d5d9" }] },
-          { elementType: "labels.text.stroke", stylers: [{ color: "#173f49" }] },
-          { featureType: "road", elementType: "geometry", stylers: [{ color: "#315963" }] },
-          { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#456d75" }] },
-          { featureType: "poi", stylers: [{ visibility: "off" }] },
-          { featureType: "transit", stylers: [{ visibility: "off" }] },
-          { featureType: "water", elementType: "geometry", stylers: [{ color: "#082b38" }] },
-        ],
+      mapRef.current = new google.maps.Map(canvasRef.current, {
+        center: { lat: destino.latitude, lng: destino.longitude }, zoom: 14,
+        disableDefaultUI: true, zoomControl: true, controlSize: 44,
+        gestureHandling: "cooperative", clickableIcons: false,
+        mapTypeControl: false, streetViewControl: false, fullscreenControl: !compact,
+        backgroundColor: palette.paper, styles: atelierMapStyles(dark),
       });
-      setEstadoMapa("pronto");
-      setMapaVersao((versao) => versao + 1);
-    }).catch(() => { if (!descartado) setEstadoMapa("erro"); });
-    return () => { descartado = true; };
-  }, [deveUsarGoogleMap, destinoValido, googleMapsApiKey, destino.latitude, destino.longitude]);
+      setMapState("ready"); setVersion((v) => v + 1);
+    }).catch((error: unknown) => {
+      if (!disposed) { setMapState("error"); setMapError(error instanceof Error ? error.message : "O mapa não pôde ser carregado agora."); }
+    });
+    return () => {
+      disposed = true;
+      window.removeEventListener(MAPS_AUTH_ERROR, authFailure);
+      overlays.current.forEach((item) => { item.setMap?.(null); googleRef.current?.maps.event.clearInstanceListeners(item); });
+      overlays.current = [];
+      if (mapRef.current) googleRef.current?.maps.event.clearInstanceListeners(mapRef.current);
+      mapRef.current = null; googleRef.current = null; signatureRef.current = ""; fitRef.current = null;
+    };
+    // Initial center/style are updated below without recreation.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [googleCanvas, googleMapsApiKey, retry]);
 
-  // Limpeza única na desmontagem do componente.
-  useEffect(() => () => {
-    sobreposicoesRef.current.forEach((item) => item.setMap?.(null));
-    sobreposicoesRef.current = [];
-    mapaInstanciaRef.current = null;
-    googleRef.current = null;
-  }, []);
-
-  // Efeito de ATUALIZAÇÃO: redesenha rotas/markers sobre a MESMA instância;
-  // reenquadra (fitBounds) apenas quando a geometria de fato muda.
   useEffect(() => {
-    const google = googleRef.current;
-    const map = mapaInstanciaRef.current;
-    if (!google || !map || destino.latitude == null || destino.longitude == null) return;
-    sobreposicoesRef.current.forEach((item) => item.setMap?.(null));
-    const sobreposicoes: any[] = [];
-    sobreposicoesRef.current = sobreposicoes;
-    {
-      const destinoLatLng = { lat: destino.latitude, lng: destino.longitude };
-      const limites = new google.maps.LatLngBounds();
-      geometrias.flat().forEach(([lat, lng]) => limites.extend({ lat, lng }));
-      const ordem = geometrias.map((_, indice) => indice).sort((a, b) => Number(a === indiceSelecionado) - Number(b === indiceSelecionado));
-      ordem.forEach((indice) => {
-        const pontos = geometrias[indice];
-        if (pontos.length < 2) return;
-        const polyline = new google.maps.Polyline({
-          map,
-          path: pontos.map(([lat, lng]) => ({ lat, lng })),
-          strokeColor: CORES_ROTAS[indice] || "#94a3b8",
-          strokeOpacity: indice === indiceSelecionado ? 1 : .55,
-          strokeWeight: indice === indiceSelecionado ? 7 : 5,
-          zIndex: indice === indiceSelecionado ? 20 : 10 + indice,
-          clickable: true,
-        });
-        polyline.addListener("click", () => setSelecionada(indice));
-        sobreposicoes.push(polyline);
-      });
-      (rotaAtual?.traffic_segments || []).forEach((trecho) => {
-        const ate = trecho.end_index == null ? geometrias[indiceSelecionado].length : trecho.end_index + 1;
-        const pontos = geometrias[indiceSelecionado].slice(trecho.start_index, ate);
-        if (pontos.length < 2) return;
-        sobreposicoes.push(new google.maps.Polyline({
-          map,
-          path: pontos.map(([lat, lng]) => ({ lat, lng })),
-          strokeColor: corTrecho(trecho.speed),
-          strokeOpacity: 1,
-          strokeWeight: 8,
-          zIndex: 30,
-        }));
-      });
-      const principal = geometrias[indiceSelecionado] || [];
-      if (principal.length) {
-        const primeiro = principal[0];
-        sobreposicoes.push(new google.maps.Marker({ map, position: { lat: primeiro[0], lng: primeiro[1] }, title: "Sua localização" }));
-      } else if (origem) {
-        limites.extend({ lat: origem.latitude, lng: origem.longitude });
-        sobreposicoes.push(new google.maps.Marker({ map, position: { lat: origem.latitude, lng: origem.longitude }, title: "Sua localização" }));
-      }
-      limites.extend(destinoLatLng);
-      sobreposicoes.push(new google.maps.Marker({ map, position: destinoLatLng, title: destino.name }));
-      const assinaturaEnquadramento = JSON.stringify([
-        destino.latitude, destino.longitude,
-        geometrias.map((rota) => [rota.length, rota[0], rota[rota.length - 1]]),
-      ]);
-      if (assinaturaEnquadramento !== enquadramentoRef.current) {
-        enquadramentoRef.current = assinaturaEnquadramento;
-        if (temGeometria || origem) map.fitBounds(limites, 42);
-        else { map.setCenter(destinoLatLng); map.setZoom(14); }
+    const google = googleRef.current, map = mapRef.current;
+    if (!google || !map || !validDestination) return;
+    map.setOptions({ styles: atelierMapStyles(dark), backgroundColor: palette.paper, fullscreenControl: !compact });
+    overlays.current.forEach((item) => { item.setMap?.(null); google.maps.event.clearInstanceListeners(item); });
+    overlays.current = [];
+    const bounds = new google.maps.LatLngBounds();
+    const target = { lat: destino.latitude, lng: destino.longitude };
+    const addLine = (points: Coordinate[], color: string, weight: number, z: number, opacity = 1, onClick?: () => void) => {
+      const line = new google.maps.Polyline({ map, path: points.map(([lat, lng]) => ({ lat, lng })), strokeColor: color, strokeWeight: weight, strokeOpacity: opacity, zIndex: z, clickable: Boolean(onClick) });
+      if (onClick) line.addListener("click", onClick);
+      overlays.current.push(line);
+    };
+    geometries.forEach((points, i) => {
+      points.forEach(([lat, lng]) => bounds.extend({ lat, lng }));
+      if (points.length > 1 && i !== index) addLine(points, palette.alternative, 5, 10, .9, () => setSelected(i));
+    });
+    if (activeGeometry) {
+      addLine(activePoints, palette.halo, 11, 19);
+      addLine(activePoints, palette.route, 6, 20);
+      for (const segment of route?.traffic_segments || []) {
+        if (!["slow", "traffic_jam"].includes(segment.speed) || !Number.isInteger(segment.start_index) || segment.start_index < 0) continue;
+        const end = segment.end_index == null ? activePoints.length : segment.end_index + 1;
+        const points = activePoints.slice(segment.start_index, end);
+        if (points.length > 1) addLine(points, segment.speed === "slow" ? palette.slow : palette.jam, 7, 21);
       }
     }
-  }, [destino.latitude, destino.longitude, destino.name, geometrias, indiceSelecionado, mapaVersao, origem, rotaAtual, temGeometria]);
+    const first = activePoints[0];
+    const origin = first ? { lat: first[0], lng: first[1] } : validOrigin ? { lat: validOrigin.latitude, lng: validOrigin.longitude } : null;
+    const marker = (position: any, title: string, destination: boolean) => {
+      overlays.current.push(new google.maps.Marker({ map, position, title, zIndex: 40,
+        icon: { path: google.maps.SymbolPath.CIRCLE, fillColor: destination ? palette.route : palette.label, fillOpacity: 1, strokeColor: palette.halo, strokeWeight: 3, scale: destination ? 10 : 8 },
+      }));
+    };
+    if (origin) { bounds.extend(origin); marker(origin, "Ponto de partida", false); }
+    bounds.extend(target); marker(target, destino.name, true);
+    fitRef.current = () => {
+      if (!canvasRef.current?.clientWidth || !canvasRef.current.clientHeight) return;
+      google.maps.event.trigger(map, "resize");
+      if (hasGeometry || origin) map.fitBounds(bounds, compact ? 28 : 44);
+      else { map.setCenter(target); map.setZoom(14); }
+    };
+    const signature = JSON.stringify([destino.latitude, destino.longitude, origin, geometries]);
+    if (signature !== signatureRef.current) { signatureRef.current = signature; fitRef.current(); }
+  }, [geometries, index, version, dark, palette, destino.latitude, destino.longitude, destino.name, validDestination, origem?.latitude, origem?.longitude, activeGeometry, activePoints, route, hasGeometry, compact]);
 
-  return (
-    <div className={`deslocamento-painel${compact ? " deslocamento-painel--compact" : ""}${rotas.length === 0 ? " deslocamento-painel--sem-rotas" : ""}`}>
-      <div className="deslocamento-mapa" aria-label={temGeometria ? `Mapa do percurso até ${destino.name}` : `Mapa do destino ${destino.name}`}>
-        {deveUsarGoogleMap && googleMapsApiKey && destinoValido ? (
-          <>
-            <div ref={mapaRef} className="deslocamento-mapa__google" />
-            {estadoMapa === "carregando" && <div className="deslocamento-mapa__status">Carregando mapa{temGeometria ? " e trânsito" : " do destino"}…</div>}
-            {estadoMapa === "erro" && <div className="deslocamento-mapa__status">O mapa não pôde ser carregado agora.</div>}
-          </>
-        ) : !deveUsarGoogleMap && pontosAtuais.length > 1 ? (
-          <svg viewBox="0 0 800 340" role="img" aria-labelledby="mapa-deslocamento-titulo mapa-deslocamento-desc">
-            <title id="mapa-deslocamento-titulo">Percurso e rotas alternativas</title>
-            <desc id="mapa-deslocamento-desc">A rota selecionada e até duas alternativas, calculadas com trânsito em tempo real.</desc>
-            <defs>
-              <pattern id="mapa-grade" width="48" height="48" patternUnits="userSpaceOnUse">
-                <path d="M48 0H0V48" fill="none" stroke="rgba(255,255,255,.055)" strokeWidth="1" />
-              </pattern>
-              <filter id="mapa-sombra" x="-30%" y="-30%" width="160%" height="160%">
-                <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#001820" floodOpacity=".45" />
-              </filter>
-            </defs>
-            <rect width="800" height="340" fill="#092f3b" />
-            <rect width="800" height="340" fill="url(#mapa-grade)" />
-            <path d="M-20 82C125 24 188 154 330 94S575 58 830 120" fill="none" stroke="rgba(255,255,255,.055)" strokeWidth="18" />
-            <path d="M72 365C118 210 300 255 412 162S585 115 710 -24" fill="none" stroke="rgba(255,255,255,.05)" strokeWidth="12" />
-            {projetadas.map((pontos, indice) => indice === indiceSelecionado ? null : (
-              <path key={`alternativa-${indice}`} d={caminho(pontos)} fill="none" stroke={CORES_ROTAS[indice] || "#94a3b8"} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" opacity=".48" />
-            ))}
-            <path d={caminho(pontosAtuais)} fill="none" stroke="rgba(0,16,23,.68)" strokeWidth="13" strokeLinecap="round" strokeLinejoin="round" />
-            <path d={caminho(pontosAtuais)} fill="none" stroke={CORES_ROTAS[indiceSelecionado] || CORES_ROTAS[0]} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-            {(rotaAtual?.traffic_segments || []).map((trecho, indice) => {
-              const ate = trecho.end_index == null ? pontosAtuais.length : trecho.end_index + 1;
-              const pontos = pontosAtuais.slice(trecho.start_index, ate);
-              return pontos.length > 1 ? <path key={`trafego-${indice}`} d={caminho(pontos)} fill="none" stroke={corTrecho(trecho.speed)} strokeWidth="8" strokeLinecap="round" /> : null;
-            })}
-            {inicio && <g transform={`translate(${inicio[0]} ${inicio[1]})`} filter="url(#mapa-sombra)"><circle r="13" fill="#f8fafc" /><circle r="6" fill="#0891b2" /></g>}
-            {fim && <g transform={`translate(${fim[0]} ${fim[1]})`} filter="url(#mapa-sombra)"><path d="M0 15C-3 10-12 0-12-9A12 12 0 1 1 12-9C12 0 3 10 0 15Z" fill="#fb7185" /><circle cy="-9" r="4" fill="white" /></g>}
-          </svg>
-        ) : (
-          <div className="deslocamento-mapa__indisponivel"><Icone nome="rota" /><span>{deveUsarGoogleMap ? "Configure a chave pública do Google Maps para exibir o mapa neste painel." : destinoValido ? "Mapa interativo indisponível para o provedor atual." : "Destino ainda sem coordenadas para exibir no mapa."}</span>{urlNavegacao && <a href={urlNavegacao} target="_blank" rel="noreferrer">Ver destino no Google Maps</a>}</div>
-        )}
-        {temGeometria && <div className="deslocamento-mapa__legenda">
-          <span><i className="livre" />Livre</span><span><i className="lento" />Lento</span><span><i className="parado" />Congestionado</span>
-        </div>}
-        <div className="deslocamento-mapa__fonte">
-          <span>{provider || "Mapa do destino"}</span>
-          {updatedAt && <time dateTime={updatedAt}>Atualizado às {new Date(updatedAt).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</time>}
-        </div>
+  // A preview can mount inside collapsed <details>; fit after real dimensions.
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas || typeof ResizeObserver === "undefined") return;
+    let frame = 0, size = "";
+    const observer = new ResizeObserver(() => {
+      const next = `${canvas.clientWidth}:${canvas.clientHeight}`;
+      if (next === size || !canvas.clientWidth || !canvas.clientHeight) return;
+      size = next; cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => fitRef.current?.());
+    });
+    observer.observe(canvas);
+    return () => { observer.disconnect(); cancelAnimationFrame(frame); };
+  }, [googleCanvas, version]);
+
+  return <div className={`atelier-mobility deslocamento-painel${compact ? " deslocamento-painel--compact" : ""}${!rotas.length ? " deslocamento-painel--sem-rotas" : ""}`}>
+    <div className="deslocamento-mapa" aria-label={`Mapa ${activeGeometry ? "do percurso até" : "do destino"} ${destino.name}`}>
+      {googleCanvas ? <>
+        <div ref={canvasRef} className="deslocamento-mapa__google" />
+        {mapState === "loading" && <div className="deslocamento-mapa__status" role="status">Carregando cartografia…</div>}
+        {mapState === "error" && <div className="deslocamento-mapa__status" role="status"><p>{mapError}</p><button type="button" onClick={() => setRetry((v) => v + 1)}>Tentar carregar novamente</button></div>}
+      </> : !isGoogle && activeGeometry ? <svg viewBox="0 0 800 340" role="img" aria-labelledby={titleId}>
+        <title id={titleId}>Geometria do percurso — representação esquemática, sem mapa de ruas</title>
+        <rect width="800" height="340" fill={palette.paper} />
+        {projected.map((points, i) => i !== index && points.length > 1 ? <path key={i} d={svgPath(points)} fill="none" stroke={palette.alternative} strokeWidth="5" opacity=".9" /> : null)}
+        <path d={svgPath(projected[index] || [])} fill="none" stroke={palette.halo} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
+        <path d={svgPath(projected[index] || [])} fill="none" stroke={palette.route} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+        {[projected[index]?.[0], projected[index]?.at(-1)].map((point, i) => point ? <circle key={i} cx={point[0]} cy={point[1]} r="9" fill={i ? palette.route : palette.label} stroke={palette.halo} strokeWidth="3" /> : null)}
+      </svg> : <div className="deslocamento-mapa__indisponivel"><Icone nome="rota" /><strong>{validDestination ? "Destino localizado" : "Complete o destino"}</strong><span>{isGoogle ? "A exibição do mapa precisa de uma chave Google Maps autorizada para este site." : validDestination ? "Ainda não há um percurso geográfico disponível." : "Cadastre um local com endereço completo na Agenda."}</span></div>}
+      <div className="deslocamento-mapa__legenda">
+        {activeGeometry ? <><span><i style={{ background: palette.route }} />Percurso selecionado</span>{isGoogle && route?.traffic_segments?.length ? <><span><i className="lento" />Lento</span><span><i className="parado" />Congestionado</span></> : null}</> : <span>{rotas.length ? "Estimativa disponível; desenho desta rota indisponível." : "Destino cadastrado. Calcule a rota para visualizar o caminho."}</span>}
       </div>
-
-      {!compact && rotas.length > 0 && <div className="deslocamento-rotas" aria-label="Comparação das rotas">
-        <div className="deslocamento-rotas__cabecalho">
-          <div><strong>{rotas.length} {rotas.length === 1 ? "rota disponível" : "rotas disponíveis"}</strong><span>{rotas.length ? "Selecione para comparar no mapa" : "Use sua localização para calcular o percurso"}</span></div>
-          {urlNavegacao && <a href={urlNavegacao} target="_blank" rel="noreferrer">Abrir navegação <Icone nome="seta" /></a>}
-        </div>
-        <div className="deslocamento-rotas__lista">
-          {rotas.map((rota, indice) => (
-            <button
-              type="button"
-              key={`${rota.provider_rank || rota.rank}-${rota.summary}`}
-              className={indice === indiceSelecionado ? "selecionada" : ""}
-              onClick={() => setSelecionada(indice)}
-              aria-pressed={indice === indiceSelecionado}
-            >
-              <i style={{ background: CORES_ROTAS[indice] || "#94a3b8" }} />
-              <span className="deslocamento-rota__nome">
-                <strong>{rota.recommended ? "Mais rápida" : `Alternativa ${indice}`}</strong>
-                <small>{rota.summary || `Rota ${indice + 1}`}</small>
-              </span>
-              <span className="deslocamento-rota__tempo"><strong>{minutos(rota.duration_seconds)} min</strong><small>{quilometros(rota.distance_meters)} km</small></span>
-              <span className={`transito transito--${rota.congestion}`}>{nomeTransito(rota.congestion)}</span>
-              <span className="deslocamento-rota__detalhe">
-                {rota.extra_time_seconds ? `+${minutos(rota.extra_time_seconds)} min` : "Recomendada"}
-                {rota.traffic_delay_seconds > 60 && ` · atraso de ${minutos(rota.traffic_delay_seconds)} min`}
-                {rota.incidents?.length ? ` · ${rota.incidents.length} alerta${rota.incidents.length > 1 ? "s" : ""}` : ""}
-              </span>
-            </button>
-          ))}
-        </div>
-      </div>}
+      <div className="deslocamento-mapa__fonte">
+        <span>{isGoogle ? "Google Maps" : `${provider || "Deslocamento"}${hasGeometry ? " · percurso esquemático" : ""}`}</span>
+        {updated && Number.isFinite(updated.getTime()) && <time dateTime={updated.toISOString()}>Consulta às {updated.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</time>}
+        {navigationUrl && <a href={navigationUrl} target="_blank" rel="noreferrer">Abrir no Google Maps <Icone nome="seta" /></a>}
+      </div>
     </div>
-  );
+    {!compact && rotas.length > 0 && <div className="deslocamento-rotas" aria-label="Comparação das rotas">
+      <div className="deslocamento-rotas__cabecalho"><div><strong>{rotas.length} {rotas.length === 1 ? "opção de percurso" : "opções de percurso"}</strong><span>Compare o trajeto, o tempo e o trânsito.</span></div></div>
+      <div className="deslocamento-rotas__lista">{rotas.map((item, i) => <button type="button" key={`${item.provider_rank ?? item.rank}-${i}`} className={i === index ? "selecionada" : ""} aria-pressed={i === index} onClick={() => setSelected(i)}>
+        <i style={{ background: i === index ? palette.route : palette.alternative }} />
+        <span className="deslocamento-rota__nome"><strong>{item.recommended ? "Mais rápida" : `Percurso ${i + 1}`}</strong><small>{item.summary || `Opção ${i + 1}`}</small></span>
+        <span className="deslocamento-rota__tempo"><strong>{minutes(item.duration_seconds)} min</strong><small>{kilometres(item.distance_meters)} km</small></span>
+        <span className={`transito transito--${["normal", "leve", "moderado", "intenso"].includes(item.congestion) ? item.congestion : "indisponivel"}`}>{trafficName(item.congestion)}</span>
+        <span className="deslocamento-rota__detalhe">{item.recommended ? "Recomendada pelo menor tempo" : item.extra_time_seconds ? `+${minutes(item.extra_time_seconds)} min em relação à mais rápida` : "Tempo equivalente à mais rápida"}{item.traffic_delay_seconds > 60 ? ` · ${minutes(item.traffic_delay_seconds)} min de trânsito adicional` : ""}{geometries[i]?.length < 2 ? " · desenho indisponível" : ""}</span>
+      </button>)}</div>
+    </div>}
+  </div>;
 }

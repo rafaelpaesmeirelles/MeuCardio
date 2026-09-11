@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
@@ -62,6 +62,7 @@ const GUPTA_PROCEDIMENTOS: [string, string][] = [
   ["vascular_periferica", "Vascular periférica"], ["pele", "Pele/tecido subcutâneo"],
   ["coluna", "Coluna vertebral"], ["toracica", "Torácica não cardíaca"], ["veias", "Veias (varizes etc.)"],
   ["urologia", "Urológica"],
+  ["outras_baixo_risco", "Outras (Baixo Risco)"],
 ];
 
 type DasiEntrada = {
@@ -236,6 +237,26 @@ export default function AvaliacaoPreOperatoria() {
   const [email, setEmail] = useState("");
   const [enviando, setEnviando] = useState(false);
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
+  const guptaNaoEstimado = usarGupta && gupta.tipo_procedimento === "outras_baixo_risco";
+  const entradasCalculo = JSON.stringify({ idade, usarRcri, rcri, usarGupta, gupta, usarDasi, dasi, usarAub, aub, usarVsg, vsg });
+  const entradasDocumento = JSON.stringify({ entradasCalculo, patientName, procedimento, indicacao, capacidadeFuncional, conduta, endereco });
+  const entradasAtuais = useRef({ calculo: entradasCalculo, documento: entradasDocumento });
+  entradasAtuais.current = { calculo: entradasCalculo, documento: entradasDocumento };
+  const [assinaturaResultado, setAssinaturaResultado] = useState<string | null>(null);
+  const calculoEmCurso = useRef(false);
+  const geracaoEmCurso = useRef(false);
+
+  useEffect(() => { setAssinaturaResultado(null); }, [entradasCalculo]);
+
+  // Editing a clinical input must not leave a previous document available as
+  // though it reflected the new assessment. No persisted document is deleted.
+  useEffect(() => {
+    setGeradoId(null);
+    setAguardandoExterno(false);
+    setAssinadoExternoAgora(false);
+    setEmitido(false);
+    setResultadoEnvio(null);
+  }, [entradasDocumento]);
 
   useEffect(() => {
     api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {});
@@ -261,6 +282,12 @@ export default function AvaliacaoPreOperatoria() {
   }
 
   async function calcularEscores() {
+    if (calculoEmCurso.current || geracaoEmCurso.current) return;
+    calculoEmCurso.current = true;
+    setAssinaturaResultado(null);
+    setGeradoId(null);
+    setResultadoGupta(null);
+    setInterpretacaoGupta("");
     setCalculando(true);
     setErroCalculo("");
     try {
@@ -270,7 +297,7 @@ export default function AvaliacaoPreOperatoria() {
         setInterpretacaoRcri(r.interpretation);
       } else setResultadoRcri(null);
 
-      if (usarGupta) {
+      if (usarGupta && !guptaNaoEstimado) {
         const idadeGupta = gupta.idade || idade;
         if (!idadeGupta) throw new ApiError(422, "Informe a idade para calcular o Gupta MICA.");
         const payload = { ...gupta, idade: Number(idadeGupta), asa: Number(gupta.asa) };
@@ -296,19 +323,22 @@ export default function AvaliacaoPreOperatoria() {
         setResultadoVsg(r.result);
         setInterpretacaoVsg(r.interpretation);
       } else setResultadoVsg(null);
+      if (entradasAtuais.current.calculo === entradasCalculo) setAssinaturaResultado(entradasCalculo);
     } catch (e) {
       setErroCalculo(e instanceof ApiError ? e.message : "Não foi possível calcular os métodos selecionados.");
     } finally {
+      calculoEmCurso.current = false;
       setCalculando(false);
     }
   }
 
-  const temResultado = Boolean(resultadoRcri || resultadoGupta || resultadoDasi || resultadoAub || resultadoVsg);
-  const algumMetodoSelecionado = usarRcri || usarGupta || usarDasi || usarAub || usarVsg;
-  const podeGerar = procedimento.trim().length > 0 && temResultado;
+  const temResultado = assinaturaResultado === entradasCalculo && Boolean(resultadoRcri || resultadoGupta || resultadoDasi || resultadoAub || resultadoVsg);
+  const algumMetodoSelecionado = usarRcri || (usarGupta && !guptaNaoEstimado) || usarDasi || usarAub || usarVsg;
+  const podeGerar = procedimento.trim().length > 0 && temResultado && !calculando;
 
   async function gerarDocumento() {
-    if (!podeGerar) return;
+    if (!podeGerar || geracaoEmCurso.current || calculoEmCurso.current) return;
+    geracaoEmCurso.current = true;
     setGerando(true);
     setErroGeracao("");
     try {
@@ -322,15 +352,17 @@ export default function AvaliacaoPreOperatoria() {
         conduta_recomendada: conduta.trim() || null,
         endereco: endereco || null,
         rcri: usarRcri && resultadoRcri ? rcri : null,
-        gupta: usarGupta && resultadoGupta ? { ...gupta, idade: Number(idadeGupta), asa: Number(gupta.asa) } : null,
+        gupta: usarGupta && !guptaNaoEstimado && resultadoGupta ? { ...gupta, idade: Number(idadeGupta), asa: Number(gupta.asa) } : null,
+        gupta_nao_estimado: guptaNaoEstimado,
         dasi: usarDasi && resultadoDasi ? dasi : null,
         aub_has2: usarAub && resultadoAub ? aubPayload() : null,
         vsg_cri: usarVsg && resultadoVsg ? vsgPayload() : null,
       });
-      setGeradoId(r.id);
+      if (entradasAtuais.current.documento === entradasDocumento) setGeradoId(r.id);
     } catch (e) {
       setErroGeracao(e instanceof ApiError ? e.message : "Não foi possível gerar o documento.");
     } finally {
+      geracaoEmCurso.current = false;
       setGerando(false);
     }
   }
@@ -362,7 +394,7 @@ export default function AvaliacaoPreOperatoria() {
   }
 
   return (
-    <div style={{ maxWidth: 860 }}>
+    <div className="preop-page" style={{ maxWidth: 860 }}>
       <p className="eyebrow">Pacientes e prática</p>
       <h1>Avaliação Cardiológica Pré-Operatória de Risco Cirúrgico</h1>
       <p style={{ color: "var(--texto-secundario)", maxWidth: "76ch" }}>
@@ -418,10 +450,16 @@ export default function AvaliacaoPreOperatoria() {
           <div><label>Classe ASA</label><select value={gupta.asa} onChange={(e) => setGupta({ ...gupta, asa: e.target.value })}>
             <option value="1">ASA I — saudável</option><option value="2">ASA II — doença sistêmica leve</option><option value="3">ASA III — doença sistêmica grave</option><option value="4">ASA IV — ameaça constante à vida</option><option value="5">ASA V — moribundo</option>
           </select></div>
-          <div><label>Tipo de procedimento</label><select value={gupta.tipo_procedimento} onChange={(e) => setGupta({ ...gupta, tipo_procedimento: e.target.value })}>
+          <div><label htmlFor="gupta-procedimento">Tipo de procedimento</label><select id="gupta-procedimento" aria-describedby={guptaNaoEstimado ? "gupta-limite-modelo" : undefined} value={gupta.tipo_procedimento} onChange={(e) => { setGupta({ ...gupta, tipo_procedimento: e.target.value }); setAssinaturaResultado(null); setResultadoGupta(null); setInterpretacaoGupta(""); }}>
             {GUPTA_PROCEDIMENTOS.map(([valor, rotulo]) => <option key={valor} value={valor}>{rotulo}</option>)}
           </select></div>
           <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400 }}><input type="checkbox" checked={gupta.creatinina_maior_1_5} onChange={(e) => setGupta({ ...gupta, creatinina_maior_1_5: e.target.checked })} />Creatinina pré-operatória &gt; 1,5 mg/dL</label>
+        </div>}
+        {guptaNaoEstimado && <div id="gupta-limite-modelo" role="status" className="preop-model-notice">
+          <strong>Gupta MICA não estimado para esta opção.</strong>
+          <p>“Baixo Risco” identifica a classificação do procedimento informada pelo profissional, não o risco cardiovascular global do paciente. Sem correspondência nas categorias originais, o modelo não fornece um percentual validado.</p>
+          <p>Continue com os demais métodos aplicáveis e a avaliação clínica. O documento registrará esse limite, sem atribuir risco zero ou reutilizar um cálculo anterior.</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/21730309/" target="_blank" rel="noopener noreferrer">Fonte: Gupta et al., Circulation 2011</a>
         </div>}
       </div>
 
@@ -491,14 +529,16 @@ export default function AvaliacaoPreOperatoria() {
       </div>
 
       {erroCalculo && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem", marginTop: "0.6rem" }}>{erroCalculo}</p>}
-      <button className="botao" style={{ marginTop: "0.8rem" }} onClick={calcularEscores} disabled={calculando || !algumMetodoSelecionado}>
+      {guptaNaoEstimado && !algumMetodoSelecionado && <p role="status">Selecione ao menos um dos outros métodos aplicáveis para calcular e gerar a avaliação.</p>}
+      <button className="botao" style={{ marginTop: "0.8rem" }} onClick={calcularEscores} disabled={calculando || gerando || !algumMetodoSelecionado}>
         {calculando ? "Calculando…" : "Calcular método(s)"}
       </button>
 
       {temResultado && <div className="cartao" style={{ marginTop: "0.8rem", borderLeft: "3px solid var(--acento)" }}>
         <p className="eyebrow" style={{ marginTop: 0 }}>Resultado integrado</p>
         {resultadoRcri && <p><strong>RCRI:</strong> {resultadoRcri.pontos} ponto(s) — Classe {resultadoRcri.classe}. {interpretacaoRcri}</p>}
-        {resultadoGupta && <p><strong>Gupta MICA:</strong> {resultadoGupta.risco_pct}%. {interpretacaoGupta}</p>}
+        {resultadoGupta && !guptaNaoEstimado && <p><strong>Gupta MICA:</strong> {resultadoGupta.risco_pct}%. {interpretacaoGupta}</p>}
+        {guptaNaoEstimado && <p><strong>Gupta MICA:</strong> não estimado — procedimento sem categoria correspondente no modelo. “Outras (Baixo Risco)” é a classificação informada pelo profissional.</p>}
         {resultadoDasi && <p><strong>DASI:</strong> {resultadoDasi.score}/58,2. {interpretacaoDasi}</p>}
         {resultadoAub && <p><strong>AUB-HAS2:</strong> {resultadoAub.score}/6 — {resultadoAub.categoria}. {interpretacaoAub}</p>}
         {resultadoVsg && <p><strong>VSG-CRI:</strong> {resultadoVsg.score} ponto(s) — {resultadoVsg.categoria}. {interpretacaoVsg}</p>}

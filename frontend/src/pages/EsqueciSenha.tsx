@@ -1,6 +1,6 @@
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import { api } from "../lib/api";
+import { api, ApiError } from "../lib/api";
 import Icone from "../components/Icone";
 import PublicCardiologyFrame from "../components/PublicCardiologyFrame";
 import "../styles/login.css";
@@ -15,16 +15,26 @@ export default function EsqueciSenha() {
   const [email, setEmail] = useState("");
   const [enviado, setEnviado] = useState(false);
   const [enviando, setEnviando] = useState(false);
+  const [erro, setErro] = useState("");
+  const solicitacaoEmCurso = useRef(false);
 
   async function enviar(event?: FormEvent<HTMLFormElement>) {
     event?.preventDefault();
-    if (!email.includes("@") || enviando) return;
+    if (!email.includes("@") || solicitacaoEmCurso.current) return;
+    solicitacaoEmCurso.current = true;
+    setErro("");
     setEnviando(true);
     try {
       await api.post("/auth/esqueci-senha", { email: email.trim().toLowerCase() });
-    } finally {
-      setEnviando(false);
       setEnviado(true);
+    } catch (error) {
+      // Do not expose backend/account details on this public recovery form.
+      setErro(error instanceof ApiError && error.status === 429
+        ? "Muitas tentativas de recuperação. Aguarde um pouco e tente novamente."
+        : "Não foi possível solicitar a recuperação agora. Verifique sua conexão ou tente novamente em instantes.");
+    } finally {
+      solicitacaoEmCurso.current = false;
+      setEnviando(false);
     }
   }
 
@@ -52,9 +62,10 @@ export default function EsqueciSenha() {
               <Link to="/entrar" className="prehome-primary"><span>Voltar ao login</span><Icone nome="seta" /></Link>
             </div>
           ) : (
-            <form className="login-formulario" onSubmit={enviar}>
-              <div className="login-campo"><label htmlFor="email">E-mail</label><input id="email" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="seu@email.com" required autoFocus /></div>
+            <form className="login-formulario" onSubmit={enviar} aria-busy={enviando}>
+              <div className="login-campo"><label htmlFor="email">E-mail</label><input id="email" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="seu@email.com" required autoFocus disabled={enviando} /></div>
               <div className="prehome-info"><Icone nome="check" /><p><strong>Por que pedimos seu e-mail?</strong><br />Para localizar a conta sem expor sua existência e encaminhar a recuperação somente para o canal externo protegido.</p></div>
+              {erro && <p role="alert" className="login-formulario__erro recovery-request-error" style={{ fontSize: "1rem" }}>{erro}</p>}
               <button className="login-formulario__entrar" type="submit" disabled={!email.includes("@") || enviando}>
                 <span>{enviando ? "Solicitando…" : "Enviar link de redefinição"}</span>{!enviando && <Icone nome="seta" aria-hidden="true" />}{enviando && <i className="login-formulario__carregando" aria-hidden="true" />}
               </button>

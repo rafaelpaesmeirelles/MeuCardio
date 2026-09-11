@@ -20,7 +20,7 @@ html[data-corvia-design="atelier"] .atelier-home{position:relative;display:block
 .atelier-home button{color:inherit;background:transparent;border:0;cursor:pointer}
 .atelier-home button:disabled{cursor:default;opacity:.45}
 .atelier-home a{color:var(--atelier-teal);text-decoration:none}
-.atelier-home svg{width:22px;height:22px;flex-shrink:0}
+.atelier-home svg:not(:where(.deslocamento-mapa__google svg)){width:22px;height:22px;flex-shrink:0}
 .atelier-header{position:relative;z-index:20;display:flex;align-items:center;gap:28px;min-height:100px;border-bottom:1px solid var(--atelier-border);max-width:1800px;margin:auto}
 .atelier-brand{display:inline-flex;flex:0 0 auto;align-items:center;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
 .atelier-brand img{display:block;width:184px!important;height:auto!important;max-width:100%;object-fit:contain;filter:none!important}
@@ -172,6 +172,18 @@ html[data-corvia-design="atelier"] .atelier-app--focus .cv-content{min-height:ca
 html[data-corvia-design="atelier"] .atelier-app--focus>.cv-mobile-dock{display:none!important}
 html[data-corvia-design="atelier"] .atelier-app .cv-account-menu{background:var(--atelier-paper)!important;border-color:var(--atelier-border)!important;color:var(--atelier-ink)!important}
 html[data-corvia-design="atelier"] .atelier-app .cv-account-menu :is(strong,small,a,button){color:var(--atelier-ink)!important}
+/* O menu continua completo e rolável em janelas baixas, sem mover o fundo. */
+html[data-corvia-design="atelier"] #root .atelier-app .cv-account-menu {
+  max-height: calc(100dvh - 84px);
+  grid-auto-rows: max-content;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+html[data-corvia-design="atelier"] #root .atelier-app .cv-account-menu :where(a, button) { min-height: 44px; }
+@media (max-width: 900px) {
+  html[data-corvia-design="atelier"] #root .atelier-app .cv-account-menu { max-height: calc(100dvh - 72px); }
+}
 html[data-corvia-design="atelier"] .atelier-app .cv-drawer{background:var(--atelier-paper)!important;border-color:var(--atelier-border)!important;color:var(--atelier-ink)!important;width:min(1000px,calc(100vw - 40px))!important;max-width:100%!important}
 html[data-corvia-design="atelier"] .atelier-app .cv-drawer :is(h2,h3,strong){color:var(--atelier-ink)!important}
 html[data-corvia-design="atelier"] .atelier-app .cv-drawer :is(p,small){color:var(--atelier-muted)!important}
@@ -543,3 +555,180 @@ html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer > fo
   }
   html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer > footer button { flex: 1 1 10rem; }
 }
+
+/* Aparência compartilhada: pérola, grafite e cobre, sem cenografia orbital. */
+html[data-corvia-design="atelier"] #root :is(.atelier-account > div, .cv-account-menu, .corvia-theme-selector, .corvia-appearance-toggle) {
+  --appearance-paper: #fffdf8;
+  --appearance-ink: #263936;
+  --appearance-muted: #53615a;
+  --appearance-line: #d8c7b9;
+  --appearance-soft: #f6eee7;
+  --appearance-selected: #f1dfd0;
+  --appearance-accent: #8b4b32;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root :is(.atelier-account > div, .cv-account-menu, .corvia-theme-selector, .corvia-appearance-toggle) {
+  --appearance-paper: #23302e;
+  --appearance-ink: #f4f1e7;
+  --appearance-muted: #c5cec5;
+  --appearance-line: #876850;
+  --appearance-soft: #2c3a36;
+  --appearance-selected: #3b3b31;
+  --appearance-accent: #e1ae88;
+}
+html[data-corvia-design="atelier"] #root :is(.atelier-account > div, .cv-account-menu) {
+  width: min(320px, calc(100vw - 24px));
+  padding: 12px;
+  color: var(--appearance-ink) !important;
+  background: var(--appearance-paper) !important;
+  border: 1px solid var(--appearance-line) !important;
+  border-radius: 14px;
+  box-shadow: 0 18px 48px #18241f26 !important;
+}
+html[data-corvia-design="atelier"] #root .atelier-account > div {
+  max-height: calc(100dvh - 100px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+html[data-corvia-design="atelier"] #root :is(.atelier-account > div, .cv-account-menu) > :is(a, button) {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: var(--appearance-ink) !important;
+  background: transparent !important;
+  border: 0;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.45;
+  white-space: normal;
+}
+html[data-corvia-design="atelier"] #root :is(.atelier-account > div, .cv-account-menu) > :is(a, button):hover {
+  background: var(--appearance-soft) !important;
+}
+html[data-corvia-design="atelier"] #root .cv-account-menu > header {
+  margin: -12px -12px 10px;
+  padding: 14px 16px;
+  color: var(--appearance-ink) !important;
+  background: var(--appearance-soft) !important;
+  border-bottom: 1px solid var(--appearance-line);
+}
+html[data-corvia-design="atelier"] #root .cv-account-menu > header strong { color: var(--appearance-ink) !important; font-size: 15px; line-height: 1.4; }
+html[data-corvia-design="atelier"] #root .cv-account-menu > header small { color: var(--appearance-muted) !important; font-size: 13px; }
+html[data-corvia-design="atelier"] #root .cv-account-menu > :is(a, button) > svg { color: var(--appearance-accent) !important; }
+html[data-corvia-design="atelier"] #root .corvia-theme-selector {
+  display: grid;
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  margin: 0 0 10px;
+  padding: 4px 0 14px;
+  color: var(--appearance-ink) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--appearance-line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+html[data-corvia-design="atelier"] #root .corvia-theme-selector::before { content: none !important; }
+html[data-corvia-design="atelier"] #root .corvia-theme-selector__intro {
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 10px;
+  padding: 4px;
+}
+html[data-corvia-design="atelier"] #root .corvia-theme-selector__mark {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  color: var(--appearance-accent) !important;
+  background: var(--appearance-soft);
+  border-radius: 9px;
+}
+html[data-corvia-design="atelier"] #root .corvia-theme-selector__mark svg { width: 20px; height: 20px; }
+html[data-corvia-design="atelier"] #root .corvia-theme-selector__intro strong {
+  color: var(--appearance-ink) !important;
+  font-family: var(--fonte-texto);
+  font-size: 15px !important;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-transform: none;
+}
+html[data-corvia-design="atelier"] #root .corvia-theme-selector__intro small {
+  display: block !important;
+  color: var(--appearance-muted) !important;
+  font-size: 13px !important;
+  line-height: 1.45;
+}
+html[data-corvia-design="atelier"] #root .corvia-theme-selector__options { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+html[data-corvia-design="atelier"] #root .corvia-theme-selector button[role="radio"] {
+  display: grid;
+  min-width: 0;
+  min-height: 64px !important;
+  grid-template-columns: 32px minmax(0, 1fr) 12px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px !important;
+  color: var(--appearance-ink) !important;
+  background: var(--appearance-paper) !important;
+  border: 1px solid var(--appearance-line) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+html[data-corvia-design="atelier"] #root .corvia-theme-selector button[role="radio"]:hover { background: var(--appearance-soft) !important; }
+html[data-corvia-design="atelier"] #root .corvia-theme-selector button[role="radio"][aria-checked="true"] {
+  background: var(--appearance-selected) !important;
+  border-color: var(--appearance-accent) !important;
+}
+html[data-corvia-design="atelier"] #root .corvia-theme-selector button[role="radio"] strong,
+html[data-corvia-design="atelier"] #root .corvia-theme-selector button[role="radio"] small {
+  overflow: visible;
+  color: var(--appearance-ink) !important;
+  font-size: 15px !important;
+  line-height: 1.4;
+  text-overflow: clip;
+  white-space: normal;
+}
+html[data-corvia-design="atelier"] #root .corvia-theme-selector button[role="radio"] small { color: var(--appearance-muted) !important; font-size: 13px !important; }
+html[data-corvia-design="atelier"] #root .corvia-theme-selector button[role="radio"] .corvia-theme-selector__icon {
+  width: 32px;
+  height: 32px;
+  color: var(--appearance-accent) !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+html[data-corvia-design="atelier"] #root .corvia-theme-selector__icon svg { width: 21px; height: 21px; color: var(--appearance-accent) !important; }
+html[data-corvia-design="atelier"] #root .corvia-theme-selector button[role="radio"] > i {
+  width: 10px;
+  height: 10px;
+  background: transparent !important;
+  border: 1px solid var(--appearance-muted) !important;
+  box-shadow: none !important;
+}
+html[data-corvia-design="atelier"] #root .corvia-theme-selector button[role="radio"][aria-checked="true"] > i { background: var(--appearance-accent) !important; border-color: var(--appearance-accent) !important; }
+html[data-corvia-design="atelier"] #root :is(.atelier-account > div, .cv-account-menu) :is(a, button):focus-visible {
+  outline: 2px solid var(--appearance-accent) !important;
+  outline-offset: 2px;
+}
+html[data-corvia-design="atelier"] #root .corvia-appearance-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: auto !important;
+  min-width: 100px;
+  height: auto !important;
+  min-height: 44px !important;
+  padding: 9px 12px !important;
+  color: var(--appearance-ink) !important;
+  background: var(--appearance-paper) !important;
+  border: 1px solid var(--appearance-line) !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+  font-size: 14px;
+}
+html[data-corvia-design="atelier"] #root .corvia-appearance-toggle::before,
+html[data-corvia-design="atelier"] #root .corvia-appearance-toggle::after { content: none !important; animation: none !important; }
+html[data-corvia-design="atelier"] #root .corvia-appearance-toggle > svg { width: 20px; height: 20px; color: var(--appearance-accent); }

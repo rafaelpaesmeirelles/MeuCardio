@@ -96,6 +96,7 @@ import "./styles/cardiology-spaces-light-mode.css";
 import "./styles/corvia-atelier.css";
 import "./styles/corvia-atelier-content.css";
 import "./styles/corvia-atelier-surfaces.css";
+import "./styles/corvia-atelier-mobility.css";
 
 async function verificarAtualizacaoCompleta(forcar = false) {
   await verificarVersaoAtual(forcar);

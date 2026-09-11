@@ -27,7 +27,7 @@ type Conta = {
 
 type DadosPessoais = {
   full_name: string; cpf: string | null; birth_date: string | null; email: string;
-  instagram_handle: string | null; endereco_residencial: Endereco;
+  endereco_residencial: Endereco;
 };
 
 type DadosProfissionais = {
@@ -483,7 +483,6 @@ function AbaDadosPessoais({ d }: { d: DadosPessoais }) {
       <Campo rotulo="CPF" valor={formatarCpf(d.cpf)} />
       <Campo rotulo="Nascimento" valor={formatarData(d.birth_date)} />
       <Campo rotulo="E-mail" valor={d.email} />
-      <Campo rotulo="Instagram" valor={d.instagram_handle ? `@${d.instagram_handle}` : null} />
       <Campo rotulo="Endereço residencial" valor={enderecoTexto(d.endereco_residencial)} />
     </dl>
   );

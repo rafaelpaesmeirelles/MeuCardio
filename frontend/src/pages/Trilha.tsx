@@ -119,12 +119,14 @@ export default function Trilha() {
         {d.etapas.map((e) => (
           <li
             key={e.etapa_id}
+            style={{ gridTemplateColumns: "44px minmax(0, 1fr)" }}
             className={`trilha__etapa${e.concluida ? " trilha__etapa--ok" : ""}${
               e.disponivel ? "" : " trilha__etapa--indisponivel"
             }`}
           >
             <button
               className="trilha__marcar"
+              style={{ minWidth: 44, minHeight: 44, width: 44, height: 44 }}
               onClick={() => alternar(e)}
               disabled={salvandoEtapa !== null || (!e.disponivel && !e.concluida)}
               aria-label={

@@ -1254,15 +1254,14 @@ REGISTRY: dict[str, Calculator] = {
         interpret=_gupta_mica_txt,
         reference=(
             "Gupta PK et al. Development and validation of a risk calculator for prediction of "
-            "cardiac risk after surgery. Circulation. 2011;124(4):381-387. Coeficientes conferidos "
-            "contra duas calculadoras de terceiros que reproduzem a tabela original "
-            "(omnicalculator.com/health/mica e mdapp.co), convergentes em status funcional, classe "
-            "ASA, creatinina e nos coeficientes de procedimento verificados em ambas as fontes."
+            "cardiac risk after surgery. Circulation. 2011;124(4):381-387. "
+            "doi:10.1161/CIRCULATIONAHA.110.015701. Fonte primária: Tabela 1 (definição das "
+            "categorias cirúrgicas) e Tabela 2 (coeficientes do modelo)."
         ),
         limitations=[
-            "Coeficiente de cada procedimento vem da categoria mais próxima da lista original "
-            "ACS-NSQIP — procedimento não listado aqui deve ser aproximado pelo tipo mais "
-            "semelhante, com julgamento clínico.",
+            "Enquadrar o procedimento apenas em uma categoria definida na Tabela 1 original. "
+            "Sem categoria correspondente, não estimar o MICA: não aproximar automaticamente "
+            "pelo tipo mais semelhante nem atribuir coeficiente a 'Outras (Baixo Risco)'.",
             "Desenvolvido e validado em cirurgia não cardíaca; não usar para cirurgia cardíaca "
             "eletiva (a categoria 'Cardíaca' aqui refere-se a procedimentos card­íacos dentro do "
             "escopo NSQIP geral, não à cirurgia cardíaca de rotina avaliada por outros escores).",

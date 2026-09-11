@@ -7,6 +7,7 @@ from app.core.security import current_user
 from app.models.clinical_docs import Prescription
 from app.services.clinical_ownership import patient_for_user
 from app.services.professional_profile import document_identity
+from app.services.pdf.identidade_institucional import EMPRESA
 
 router = APIRouter(prefix="/api/prescriptions", tags=["prescricoes"])
 
@@ -76,4 +77,5 @@ def dados_para_impressao(pid: int, db: Session = Depends(get_db), user=Depends(c
         "prescricao": _dump(presc),
         "paciente": {"initials": paciente.initials, "record_number": paciente.record_number},
         "medico": document_identity(user),
+        "operadora": dict(EMPRESA),
     }

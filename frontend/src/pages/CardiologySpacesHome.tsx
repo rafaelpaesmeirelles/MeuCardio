@@ -13,6 +13,7 @@ import GalaxyThemeToggle from "../components/GalaxyThemeToggle";
 import UniverseStars from "../components/UniverseStars";
 import ScientificIntelligenceMonitor from "../components/ScientificIntelligenceMonitor";
 import { mobilitySchedule, scheduleDateTime } from "../lib/mobilitySchedule";
+import { coordinateValid, geometryAvailable, mobilityResultError as mobilityRouteError } from "../lib/mobilityGeometry";
 import { api, assetUrl, type Usuario } from "../lib/api";
 import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
 import { useAuth } from "../lib/auth";
@@ -107,18 +108,6 @@ type MobilityDayContext = {
   last_target: MobilityTarget | null;
   start_location: CalendarLocation | null;
   end_location: CalendarLocation | null;
-};
-type MiniRoutePoint = { x: number; y: number };
-type MiniRouteGeometry = {
-  path: string;
-  start: MiniRoutePoint;
-  end: MiniRoutePoint;
-  ship: MiniRoutePoint & { angle: number };
-  ringedPlanet: MiniRoutePoint;
-  violetPlanet: MiniRoutePoint;
-  asteroidField: MiniRoutePoint;
-  trafficPaths: Array<{ path: string; speed: "normal" | "slow" | "traffic_jam" }>;
-  actual: boolean;
 };
 type ShelfDefinition = {
   id: ShelfId;
@@ -517,211 +506,39 @@ function UserIdentity({ usuario, chevron = false }: { usuario: Usuario | null; c
   );
 }
 
-function decodeMiniRoutePolyline(value: string, precision = 5) {
-  const coordinates: Array<[number, number]> = [];
-  const factor = 10 ** precision;
-  let index = 0;
-  let latitude = 0;
-  let longitude = 0;
-  while (index < value.length) {
-    let result = 0;
-    let shift = 0;
-    let byte = 0;
-    do {
-      byte = value.charCodeAt(index++) - 63;
-      result |= (byte & 0x1f) << shift;
-      shift += 5;
-    } while (byte >= 0x20 && index <= value.length);
-    latitude += result & 1 ? ~(result >> 1) : result >> 1;
-    result = 0;
-    shift = 0;
-    do {
-      byte = value.charCodeAt(index++) - 63;
-      result |= (byte & 0x1f) << shift;
-      shift += 5;
-    } while (byte >= 0x20 && index <= value.length);
-    longitude += result & 1 ? ~(result >> 1) : result >> 1;
-    coordinates.push([latitude / factor, longitude / factor]);
-  }
-  return coordinates;
-}
-
-function miniRoutePath(points: MiniRoutePoint[]) {
-  return points.map((point, index) => `${index ? "L" : "M"}${point.x.toFixed(1)} ${point.y.toFixed(1)}`).join(" ");
-}
-
-function buildMiniRouteGeometry(route?: MobilityRoute): MiniRouteGeometry {
-  const fallback: MiniRouteGeometry = {
-    path: "M16 70 C42 14 112 13 164 57",
-    start: { x: 16, y: 70 },
-    end: { x: 164, y: 57 },
-    ship: { x: 91, y: 25, angle: 13 },
-    ringedPlanet: { x: 59, y: 47 },
-    violetPlanet: { x: 128, y: 25 },
-    asteroidField: { x: 103, y: 66 },
-    trafficPaths: [],
-    actual: false,
-  };
-  if (!route?.geometry?.value) return fallback;
-
-  const coordinates = decodeMiniRoutePolyline(route.geometry.value, route.geometry.precision);
-  if (coordinates.length < 2) return fallback;
-  const averageLatitude = coordinates.reduce((total, point) => total + point[0], 0) / coordinates.length;
-  const longitudeFactor = Math.cos(averageLatitude * Math.PI / 180);
-  const cartesian = coordinates.map(([latitude, longitude]) => ({ x: longitude * longitudeFactor, y: latitude }));
-  const minX = Math.min(...cartesian.map((point) => point.x));
-  const maxX = Math.max(...cartesian.map((point) => point.x));
-  const minY = Math.min(...cartesian.map((point) => point.y));
-  const maxY = Math.max(...cartesian.map((point) => point.y));
-  const width = 180;
-  const height = 92;
-  const padding = 14;
-  const scale = Math.min(
-    (width - padding * 2) / Math.max(maxX - minX, 0.00001),
-    (height - padding * 2) / Math.max(maxY - minY, 0.00001),
-  );
-  const contentWidth = (maxX - minX) * scale;
-  const contentHeight = (maxY - minY) * scale;
-  const offsetX = (width - contentWidth) / 2;
-  const offsetY = (height - contentHeight) / 2;
-  const projected = cartesian.map((point) => ({
-    x: offsetX + (point.x - minX) * scale,
-    y: height - (offsetY + (point.y - minY) * scale),
-  }));
-  const clamp = (value: number, minimum: number, maximum: number) => Math.max(minimum, Math.min(maximum, value));
-  const pointAroundRoute = (ratio: number, offset: number) => {
-    const index = Math.round((projected.length - 1) * ratio);
-    const current = projected[index];
-    const previous = projected[Math.max(0, index - 1)];
-    const next = projected[Math.min(projected.length - 1, index + 1)];
-    const dx = next.x - previous.x;
-    const dy = next.y - previous.y;
-    const length = Math.max(1, Math.hypot(dx, dy));
-    return {
-      x: clamp(current.x - (dy / length) * offset, 12, width - 12),
-      y: clamp(current.y + (dx / length) * offset, 12, height - 12),
-    };
-  };
-  const shipIndex = Math.round((projected.length - 1) * 0.52);
-  const shipPrevious = projected[Math.max(0, shipIndex - 1)];
-  const shipNext = projected[Math.min(projected.length - 1, shipIndex + 1)];
-  const trafficPaths = (route.traffic_segments || []).flatMap((segment) => {
-    const end = segment.end_index == null ? projected.length : segment.end_index + 1;
-    const points = projected.slice(segment.start_index, end);
-    if (points.length < 2) return [];
-    const normalizedSpeed: "normal" | "slow" | "traffic_jam" = segment.speed === "traffic_jam" || segment.speed === "slow" ? segment.speed : "normal";
-    return [{ path: miniRoutePath(points), speed: normalizedSpeed }];
-  });
-
-  return {
-    path: miniRoutePath(projected),
-    start: projected[0],
-    end: projected[projected.length - 1],
-    ship: {
-      ...projected[shipIndex],
-      angle: Math.atan2(shipNext.y - shipPrevious.y, shipNext.x - shipPrevious.x) * 180 / Math.PI + 90,
-    },
-    ringedPlanet: pointAroundRoute(0.31, 11),
-    violetPlanet: pointAroundRoute(0.72, -10),
-    asteroidField: pointAroundRoute(0.54, 12),
-    trafficPaths,
-    actual: true,
-  };
-}
-
-function StellarRouteMiniMap({
-  target,
-  route,
-  minutes,
-  busy,
-  onOpen,
-}: {
-  target: MobilityTarget | null;
-  route?: MobilityRoute;
-  minutes: number | null;
-  busy: boolean;
-  onOpen: () => void;
+function CommutePreview({ target, route, minutes, busy, onOpen, origin, configuration, provider, updatedAt, error }: {
+  target: MobilityTarget | null; route?: MobilityRoute; minutes: number | null; busy: boolean; onOpen: () => void;
+  origin: { latitude: number; longitude: number } | null; configuration: MapConfiguration | null;
+  provider?: string; updatedAt?: string; error: string | null;
 }) {
   const destination = target?.location?.name || target?.service_name || "Próximo destino";
-  const hasRoute = Boolean(route && minutes);
-  const level = trafficLevel(route?.congestion);
-  const miniRoute = useMemo(() => buildMiniRouteGeometry(route), [route]);
+  const hasRoute = geometryAvailable(route);
+  const hasEstimate = Boolean(route && minutes != null);
   const schedule = mobilitySchedule(target, route?.duration_seconds);
-  const accessibleStatus = busy
-    ? `Calculando deslocamento para ${destination}`
-    : hasRoute
-      ? `Abrir deslocamento para ${destination}: ${minutes} minutos, ${distanceLabel(route?.distance_meters)}, ${trafficLabel(route?.congestion)}`
-      : `Calcular deslocamento para ${destination}`;
-
-  return (
-    <button
-      type="button"
-      className="spaces-stellar-route"
-      data-traffic={level}
-      data-state={busy ? "loading" : hasRoute ? "ready" : "pending"}
-      onClick={onOpen}
-      aria-busy={busy}
-      aria-label={`${accessibleStatus}. ${schedule ? `${schedule.returning ? "Retorno" : "Compromisso"}: ${scheduleDateTime(schedule.start)}${schedule.departure ? `. Saída: ${scheduleDateTime(schedule.departure)}` : ""}` : "Sem horário de deslocamento definido"}`}
-      disabled={busy}
-    >
-      <span className="spaces-stellar-route__heading">
-        <span><Icone nome="rota" /></span>
-        <span><strong>Deslocamento</strong><small>{destination}</small></span>
-        <Icone nome="seta" />
-      </span>
-      <span className="spaces-stellar-route__schedule">
-        {schedule ? <>
-          <span>{schedule.returning ? "Retorno previsto" : "Compromisso"}<time dateTime={schedule.start.toISOString()}>{scheduleDateTime(schedule.start)}</time></span>
-          {!schedule.returning && <span>{schedule.departure ? "Saída sugerida" : "Saída"}{schedule.departure ? <time dateTime={schedule.departure.toISOString()}>{scheduleDateTime(schedule.departure)}</time> : <small>Calcule a rota para estimar</small>}</span>}
-        </> : <span>{target ? "Horário não informado na agenda" : "Nenhum deslocamento agendado"}</span>}
-      </span>
-      <span className="spaces-stellar-route__map" aria-hidden="true">
-        <i className="spaces-stellar-route__star spaces-stellar-route__star--one" />
-        <i className="spaces-stellar-route__star spaces-stellar-route__star--two" />
-        <i className="spaces-stellar-route__star spaces-stellar-route__star--three" />
-        <svg viewBox="0 0 180 92" preserveAspectRatio="xMidYMid meet">
-          <ellipse className="spaces-stellar-route__nebula" cx="94" cy="49" rx="71" ry="35" />
-          <g className="spaces-stellar-route__celestial spaces-stellar-route__celestial--ringed" transform={`translate(${miniRoute.ringedPlanet.x} ${miniRoute.ringedPlanet.y}) rotate(-17)`}>
-            <ellipse className="spaces-stellar-route__planet-ring spaces-stellar-route__planet-ring--back" cx="0" cy="0" rx="12" ry="3.6" />
-            <circle className="spaces-stellar-route__planet spaces-stellar-route__planet--amber" cx="0" cy="0" r="6.3" />
-            <ellipse className="spaces-stellar-route__planet-ring spaces-stellar-route__planet-ring--front" cx="0" cy="0" rx="12" ry="3.6" />
-          </g>
-          <g className="spaces-stellar-route__celestial spaces-stellar-route__celestial--violet" transform={`translate(${miniRoute.violetPlanet.x} ${miniRoute.violetPlanet.y})`}>
-            <circle className="spaces-stellar-route__planet-glow" cx="0" cy="0" r="9" />
-            <circle className="spaces-stellar-route__planet spaces-stellar-route__planet--violet" cx="0" cy="0" r="5.5" />
-            <path className="spaces-stellar-route__planet-shade" d="M-4 -3 C-1 -5 4 -4 5 -1 C2 -2 -1 1 -4 -3Z" />
-            <circle className="spaces-stellar-route__moon" cx="10" cy="-6" r="1.8" />
-          </g>
-          <g className="spaces-stellar-route__asteroids" transform={`translate(${miniRoute.asteroidField.x} ${miniRoute.asteroidField.y})`}>
-            <circle cx="-8" cy="1" r="1.25" />
-            <circle cx="-3" cy="-3" r="0.9" />
-            <circle cx="3" cy="2" r="1.1" />
-            <circle cx="9" cy="-2" r="0.7" />
-          </g>
-          <path className="spaces-stellar-route__orbit-glow" d={miniRoute.path} />
-          <path className="spaces-stellar-route__orbit" d={miniRoute.path} data-geometry={miniRoute.actual ? "real" : "preview"} />
-          {miniRoute.trafficPaths.length ? miniRoute.trafficPaths.map((segment, index) => <path key={`${segment.speed}-${index}`} className={`spaces-stellar-route__traffic spaces-stellar-route__traffic--${segment.speed}`} d={segment.path} />) : <path className="spaces-stellar-route__traffic" d={miniRoute.path} />}
-          <circle className="spaces-stellar-route__origin" cx={miniRoute.start.x} cy={miniRoute.start.y} r="5" />
-          <circle className="spaces-stellar-route__destination-glow" cx={miniRoute.end.x} cy={miniRoute.end.y} r="10" />
-          <circle className="spaces-stellar-route__destination" cx={miniRoute.end.x} cy={miniRoute.end.y} r="5" />
-          <g className="spaces-stellar-route__ship" transform={`translate(${miniRoute.ship.x} ${miniRoute.ship.y}) rotate(${miniRoute.ship.angle})`}><path d="M-5 4 0-7 5 4 0 2Z" /></g>
-          <text className="spaces-stellar-route__label" x={miniRoute.start.x} y={Math.min(89, miniRoute.start.y + 13)} textAnchor={miniRoute.start.x < 30 ? "start" : "middle"}>AGORA</text>
-          <text className="spaces-stellar-route__label" x={miniRoute.end.x} y={Math.min(89, miniRoute.end.y + 13)} textAnchor={miniRoute.end.x > 150 ? "end" : "middle"}>DESTINO</text>
-        </svg>
-      </span>
-      <span className="spaces-stellar-route__metrics" role="status" aria-live="polite" aria-atomic="true">
-        {busy ? <strong>Calculando trajetória…</strong> : hasRoute ? <>
-          <strong>{minutes} min</strong>
-          <span>{distanceLabel(route?.distance_meters)}</span>
-          <span>{trafficShortLabel(route?.congestion)}</span>
-        </> : <>
-          <strong>Traçar rota</strong>
-          <span>Sem cálculo</span>
-          <span>{target ? "Destino pronto" : "Aguardando agenda"}</span>
-        </>}
-      </span>
+  const location = target?.location;
+  const previewRef = useRef<HTMLElement>(null);
+  const [mapVisible, setMapVisible] = useState(false);
+  useEffect(() => {
+    if (!hasRoute || mapVisible || !previewRef.current) return;
+    if (typeof IntersectionObserver === "undefined") { setMapVisible(true); return; }
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) { setMapVisible(true); observer.disconnect(); }
+    });
+    observer.observe(previewRef.current);
+    return () => observer.disconnect();
+  }, [hasRoute, mapVisible]);
+  return <article ref={previewRef} className="spaces-stellar-route atelier-commute" data-state={busy ? "loading" : hasRoute ? "ready" : "pending"} aria-busy={busy}>
+    <button type="button" className="atelier-commute__open" onClick={onOpen} disabled={busy} aria-label={`Abrir deslocamento para ${destination}`}>
+      <span className="spaces-stellar-route__heading"><span><Icone nome="rota" /></span><span><strong>Seu próximo percurso</strong><small>{destination}</small></span><Icone nome="seta" /></span>
     </button>
-  );
+    {schedule && <div className="spaces-stellar-route__schedule"><span>{schedule.returning ? "Retorno" : "Compromisso"} · {scheduleDateTime(schedule.start)}</span>{schedule.departure && <span>Saída planejada · {scheduleDateTime(schedule.departure)}</span>}</div>}
+    {hasRoute && location && coordinateValid(location.latitude, location.longitude) ? <div className="atelier-commute__map">
+      {mapVisible && <MapaDeslocamento compact rotas={route ? [route] : []} origem={origin} destino={{ name: destination, latitude: location.latitude!, longitude: location.longitude! }} provider={provider || configuration?.provider} googleMapsApiKey={configuration?.api_key} updatedAt={updatedAt} />}
+    </div> : <div className="atelier-mobility-empty" role="status"><Icone nome="pin" /><strong>{busy ? "Preparando seu percurso…" : hasEstimate ? "Estimativa disponível" : target ? "Seu destino está preparado" : "Seu dia, em movimento"}</strong><span>{error || (hasEstimate ? "O provedor ainda não entregou o desenho do caminho." : target ? "Calcule para visualizar o caminho e comparar o trânsito." : "Vincule um local à agenda para planejar seu deslocamento.")}</span></div>}
+    {hasEstimate && <div className="spaces-stellar-route__metrics"><strong>{minutes} min</strong><span>{distanceLabel(route?.distance_meters)}</span><span>{trafficShortLabel(route?.congestion)}</span></div>}
+    {error && hasRoute && <p className="atelier-commute__notice" role="status">{error}</p>}
+    <button type="button" className="atelier-commute__action" onClick={onOpen} disabled={busy}>{busy ? "Calculando…" : hasRoute ? "Explorar percurso" : hasEstimate ? "Revisar deslocamento" : "Calcular meu percurso"}<Icone nome="seta" /></button>
+  </article>;
 }
 
 function ActionLink({ action, compact = false }: { action: Action; compact?: boolean }) {
@@ -746,7 +563,10 @@ function useDialogFocus(open: boolean) {
       if (!items.length) return;
       const first = items[0];
       const last = items[items.length - 1];
-      if (event.shiftKey && document.activeElement === first) {
+      if (!dialog?.contains(document.activeElement)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+      } else if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
         last.focus();
       } else if (!event.shiftKey && document.activeElement === last) {
@@ -870,15 +690,6 @@ function sanitizeMobilityResult(result: MobilityResult, target: MobilityTarget) 
   return { ...result, destination, routes: Array.isArray(result.routes) ? result.routes : [] };
 }
 
-function mobilityRouteError(result: MobilityResult) {
-  if (result.routes?.length) return null;
-  if (result.status === "not_configured") return "O destino está pronto, mas o provedor de trânsito ainda não está configurado.";
-  if (result.status === "origin_not_geocoded") return "Não foi possível localizar com segurança o ponto de partida salvo.";
-  if (result.status === "destination_not_geocoded") return "Não foi possível localizar o endereço deste compromisso. Revise o local cadastrado na Agenda.";
-  if (result.status === "destination_without_location") return "Este compromisso ainda não possui um local cadastrado para a rota.";
-  if (result.status === "live") return "O provedor respondeu, mas não retornou uma rota utilizável. Tente novamente.";
-  return "A rota não pôde ser calculada agora. O destino continua disponível no mapa.";
-}
 
 export default function CardiologySpacesHome() {
   const { usuario } = useAuth();
@@ -920,6 +731,8 @@ export default function CardiologySpacesHome() {
   const [travelOpen, setTravelOpen] = useState(false);
   const [travelBusy, setTravelBusy] = useState(false);
   const [travelError, setTravelError] = useState<string | null>(null);
+  const travelRequestGeneration = useRef(0);
+  const travelResultIdentity = useRef<string | null>(null);
   const catalogRef = useDialogFocus(catalogOpen);
   const personalizerRef = useDialogFocus(personalizerOpen);
   const travelRef = useDialogFocus(travelOpen);
@@ -962,6 +775,11 @@ export default function CardiologySpacesHome() {
     const focusEverything = (event: KeyboardEvent) => {
       if (!(event.metaKey || event.ctrlKey) || event.key.toLocaleLowerCase("pt-BR") !== "k") return;
       event.preventDefault();
+      const modal = Array.from(document.querySelectorAll<HTMLElement>('[aria-modal="true"]')).reverse().find((element) => element.offsetParent !== null && getComputedStyle(element).visibility !== "hidden");
+      if (modal) {
+        (modal.querySelector<HTMLElement>('input:not([disabled]), button:not([disabled])'))?.focus();
+        return;
+      }
       globalSearchRef.current?.focus();
     };
     document.addEventListener("keydown", focusEverything);
@@ -1046,7 +864,7 @@ export default function CardiologySpacesHome() {
       setShelfDraft({});
       setShelfReserve([]);
       setImportNotice("");
-      setTravelOpen(false);
+      closeTravel();
     };
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
@@ -1124,7 +942,9 @@ export default function CardiologySpacesHome() {
     arrival_buffer_minutes: plannedMobilityTarget.arrival_buffer_minutes ?? mobilityResult?.destination?.arrival_buffer_minutes,
   } : plannedMobilityTarget;
   const bestRoute = resultMatchesTarget ? mobilityResult?.routes?.[0] : undefined;
-  const travelMinutes = bestRoute?.duration_seconds ? Math.max(1, Math.round(bestRoute.duration_seconds / 60)) : null;
+  const travelSeconds = bestRoute?.duration_seconds;
+  const travelMinutes = typeof travelSeconds === "number" && Number.isFinite(travelSeconds) && travelSeconds >= 0
+    ? Math.max(1, Math.ceil(travelSeconds / 60)) : null;
   const travelDestination = travelTarget?.location?.latitude != null && travelTarget.location.longitude != null ? {
     latitude: travelTarget.location.latitude,
     longitude: travelTarget.location.longitude,
@@ -1152,26 +972,54 @@ export default function CardiologySpacesHome() {
       longitude: mobilityDayContext.last_target.location.longitude,
     } : null;
   const travelMapOrigin = resultOrigin || returnHomeOrigin || travelOrigin || savedOriginCoordinates;
+  const travelIdentityFor = (target: MobilityTarget | null) => JSON.stringify([
+    usuario?.id, target?.target_key, target?.location?.latitude, target?.location?.longitude,
+    mobilityPreference?.enabled, mobilityPreference?.day_start_origin_mode,
+    mobilityPreference?.day_start_location_id, mobilityPreference?.day_end_destination_location_id,
+    mobilityDayContext?.stage, mobilityDayContext?.last_target?.target_key,
+    savedOriginCoordinates, returnHomeOrigin,
+  ]);
+  const travelIdentity = travelIdentityFor(plannedMobilityTarget);
+  const currentTravelIdentity = useRef(travelIdentity);
+  currentTravelIdentity.current = travelIdentity;
+
+  function closeTravel() {
+    travelRequestGeneration.current += 1;
+    setTravelBusy(false);
+    setTravelOpen(false);
+  }
+
+  useEffect(() => () => { travelRequestGeneration.current += 1; }, []);
 
   useEffect(() => {
-    setMobilityResult((current) => current?.destination?.target_key === plannedMobilityTarget?.target_key ? current : null);
-    setTravelOrigin(null);
-    setTravelError(null);
-  }, [plannedMobilityTarget?.target_key]);
+    travelRequestGeneration.current += 1;
+    setTravelBusy(false);
+    if (travelResultIdentity.current !== travelIdentity) {
+      setMobilityResult(null);
+      setTravelOrigin(null);
+      setTravelError(null);
+    }
+  }, [travelIdentity]);
 
   useEffect(() => {
     if (!usesSavedOrigin || !plannedMobilityTarget?.target_key || !mobilityPreference?.day_start_location_id || resultMatchesTarget) return;
     let active = true;
+    const generation = ++travelRequestGeneration.current;
+    const isCurrent = () => active && generation === travelRequestGeneration.current && currentTravelIdentity.current === travelIdentity;
     api.post<MobilityResult>("/agenda/mobility/commute-target-from-location", {
       origin_location_id: mobilityPreference.day_start_location_id,
       target_key: plannedMobilityTarget.target_key,
     }).then((result) => {
-      if (!active) return;
+      if (!isCurrent()) return;
       const safeResult = sanitizeMobilityResult(result, plannedMobilityTarget);
-      if (safeResult?.routes?.length) setMobilityResult(safeResult);
-    }).catch(() => undefined);
+      if (safeResult) {
+        travelResultIdentity.current = travelIdentity;
+        setMobilityResult(safeResult);
+        setTravelError(mobilityRouteError(safeResult));
+      } else setTravelError(mobilityRouteError(result) || "O destino retornado não corresponde ao compromisso exibido. A rota foi descartada.");
+    }).catch((error) => { if (isCurrent()) setTravelError(geolocationErrorMessage(error)); });
     return () => { active = false; };
-  }, [mobilityPreference?.day_start_location_id, plannedMobilityTarget, resultMatchesTarget, usesSavedOrigin]);
+  }, [mobilityPreference?.day_start_location_id, plannedMobilityTarget, resultMatchesTarget, usesSavedOrigin, travelIdentity]);
 
   useEffect(() => {
     if (!returnHomeActive
@@ -1181,19 +1029,22 @@ export default function CardiologySpacesHome() {
       || !mobilityPreference.day_end_destination_location_id
       || resultMatchesTarget) return;
     let active = true;
+    const generation = ++travelRequestGeneration.current;
+    const isCurrent = () => active && generation === travelRequestGeneration.current && currentTravelIdentity.current === travelIdentity;
     api.post<MobilityResult>("/agenda/mobility/commute-return", {
       origin_target_key: mobilityDayContext.last_target.target_key,
       destination_location_id: mobilityPreference.day_end_destination_location_id,
     }).then((result) => {
-      if (!active) return;
+      if (!isCurrent()) return;
       const safeResult = sanitizeMobilityResult(result, plannedMobilityTarget);
       if (safeResult) {
+        travelResultIdentity.current = travelIdentity;
         setMobilityResult(safeResult);
         setTravelError(mobilityRouteError(safeResult));
-      }
-    }).catch(() => undefined);
+      } else setTravelError(mobilityRouteError(result) || "O destino retornado não corresponde ao compromisso exibido. A rota foi descartada.");
+    }).catch((error) => { if (isCurrent()) setTravelError(geolocationErrorMessage(error)); });
     return () => { active = false; };
-  }, [mobilityDayContext?.last_target?.target_key, mobilityPreference?.day_end_destination_location_id, mobilityPreference?.enabled, plannedMobilityTarget, resultMatchesTarget, returnHomeActive]);
+  }, [mobilityDayContext?.last_target?.target_key, mobilityPreference?.day_end_destination_location_id, mobilityPreference?.enabled, plannedMobilityTarget, resultMatchesTarget, returnHomeActive, travelIdentity]);
 
   const chooseMode = useCallback((nextMode: Mode) => {
     if (!writeAtelierContext(usuario?.id, { space: selectedSpace as FunctionalSpace, mode: nextMode })) setStorageNotice("Sua organização será mantida apenas nesta sessão.");
@@ -1321,6 +1172,8 @@ export default function CardiologySpacesHome() {
   }
 
   async function startTravel() {
+    const generation = ++travelRequestGeneration.current;
+    const isCurrent = () => generation === travelRequestGeneration.current && currentTravelIdentity.current === travelIdentity;
     setTravelOpen(true);
     setTravelBusy(true);
     setTravelError(null);
@@ -1340,14 +1193,18 @@ export default function CardiologySpacesHome() {
       }
       if (!target) {
         const preparedTarget = await api.post<MobilityTarget | null>("/agenda/mobility/prepare-next-target", {});
+        if (!isCurrent()) return;
         target = withoutReservedSmokeTestRecord(preparedTarget);
-        setMobilityTarget(target);
       }
       if (!target?.target_key) {
         setTravelError("Não há um próximo compromisso presencial com local cadastrado para traçar a rota.");
         return;
       }
-      if (mobilityPreference && !mobilityPreference.enabled) {
+      if (!mobilityPreference) {
+        setTravelError("Não foi possível confirmar sua preferência de mobilidade. Abra a Agenda e revise a autorização antes de usar sua localização.");
+        return;
+      }
+      if (!mobilityPreference.enabled) {
         setTravelError("Ative o deslocamento inteligente na Agenda para calcular rotas e trânsito.");
         return;
       }
@@ -1366,6 +1223,7 @@ export default function CardiologySpacesHome() {
         });
       } else {
         const position = await currentPosition();
+        if (!isCurrent()) return;
         const liveOrigin = { latitude: position.coords.latitude, longitude: position.coords.longitude };
         setTravelOrigin(liveOrigin);
         result = await api.post<MobilityResult>("/agenda/mobility/commute-target", {
@@ -1373,20 +1231,23 @@ export default function CardiologySpacesHome() {
           target_key: target.target_key,
         });
       }
+      if (!isCurrent()) return;
       const safeResult = sanitizeMobilityResult(result, target);
       if (!safeResult) {
-        setTravelError("O destino retornado não corresponde ao compromisso exibido. A rota anterior foi preservada.");
+        setTravelError(mobilityRouteError(result) || "O destino retornado não corresponde ao compromisso exibido. A rota anterior foi preservada.");
         return;
       }
+      travelResultIdentity.current = travelIdentityFor(target);
+      if (!plannedMobilityTarget) setMobilityTarget(target);
       setMobilityResult(safeResult);
       if (safeResult.origin_location?.latitude != null && safeResult.origin_location.longitude != null && !usesSavedOrigin) {
         setTravelOrigin({ latitude: safeResult.origin_location.latitude, longitude: safeResult.origin_location.longitude });
       }
       setTravelError(mobilityRouteError(safeResult));
     } catch (error) {
-      setTravelError(geolocationErrorMessage(error));
+      if (isCurrent()) setTravelError(geolocationErrorMessage(error));
     } finally {
-      setTravelBusy(false);
+      if (isCurrent()) setTravelBusy(false);
     }
   }
 
@@ -1437,10 +1298,15 @@ export default function CardiologySpacesHome() {
             const label = item.title || item.patient_name || item.appointment_type || "Compromisso";
             return <Link to="/agenda" key={`${item.calendar_kind || "item"}-${item.id}`} className={`spaces-day__item spaces-day__item--${SPACE_TONES[itemSpace]}`}><i /><span><strong>{label}</strong><small>{time(item.starts_at)}{item.location?.name ? ` · ${item.location.name}` : ""}</small></span></Link>;
           }) : <div className={`spaces-day__empty is-${dayState}`} role="status"><strong>{dayState === "loading" ? "Sincronizando seu dia…" : dayState === "error" ? "Agenda indisponível agora" : "Nenhum compromisso hoje"}</strong><small>{dayState === "error" ? "Abra a Agenda para consultar as fontes conectadas." : "Atendimentos, compromissos e rotinas aparecerão aqui."}</small><ActionLink action={{ to: "/agenda", label: "Abrir agenda completa", icon: "agenda" }} /></div>}
-          <StellarRouteMiniMap
+          <CommutePreview
             target={travelTarget}
             route={bestRoute}
             minutes={travelMinutes}
+            origin={travelMapOrigin}
+            configuration={mapConfiguration}
+            provider={resultMatchesTarget ? mobilityResult?.provider : undefined}
+            updatedAt={resultMatchesTarget ? mobilityResult?.updated_at : undefined}
+            error={travelError}
             busy={travelBusy}
             onOpen={() => {
               if (bestRoute) setTravelOpen(true);
@@ -1521,7 +1387,7 @@ export default function CardiologySpacesHome() {
         </aside>
       </div>}
 
-      {travelOpen && <div className="spaces-overlay spaces-travel-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setTravelOpen(false); }}>
+      {travelOpen && <div className="spaces-overlay spaces-travel-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) closeTravel(); }}>
         <section ref={travelRef} className="spaces-travel" role="dialog" aria-modal="true" aria-label="Mapa do deslocamento entre espaços">
           <header>
             <div>
@@ -1529,7 +1395,7 @@ export default function CardiologySpacesHome() {
               <h2>Mapa do deslocamento</h2>
               <small>Visualize o destino, a rota geográfica e o trânsito real. Sua localização atual é usada somente após sua ação e exclusivamente nesta consulta.</small>
             </div>
-            <button type="button" onClick={() => setTravelOpen(false)} aria-label="Fechar"><Icone nome="fechar" /></button>
+            <button type="button" onClick={closeTravel} aria-label="Fechar"><Icone nome="fechar" /></button>
           </header>
 
           {travelDestination ? <div className="spaces-travel__map">
@@ -1537,21 +1403,19 @@ export default function CardiologySpacesHome() {
               rotas={resultMatchesTarget ? mobilityResult?.routes || [] : []}
               origem={travelMapOrigin}
               destino={travelDestination}
-              provider={mapConfiguration?.provider || (resultMatchesTarget ? mobilityResult?.provider : undefined)}
+              provider={(resultMatchesTarget ? mobilityResult?.provider : undefined) || mapConfiguration?.provider}
               updatedAt={resultMatchesTarget ? mobilityResult?.updated_at : undefined}
               googleMapsApiKey={mapConfiguration?.api_key}
             />
-          </div> : <div className="spaces-orbit" aria-hidden="true">
-            <span className="spaces-orbit__planet spaces-orbit__planet--origin"><i /><b>AGORA</b></span>
-            <span className="spaces-orbit__path"><i /></span>
-            <span className="spaces-orbit__planet spaces-orbit__planet--destination"><i /><b>DESTINO</b></span>
-          </div>}
+          </div> : <div className="atelier-mobility-empty"><Icone nome="pin" /><strong>Vamos preparar seu próximo percurso</strong><span>Vincule um endereço ao compromisso ou configure o destino de retorno na Agenda.</span><Link to="/agenda" onClick={closeTravel}>Abrir agenda</Link></div>}
 
           <div className="spaces-travel__status" role="status" aria-live="polite">
             {travelBusy ? <><strong>Calculando rota…</strong><small>Consultando sua posição autorizada e o trânsito atual.</small></> : bestRoute ? <><strong>{travelMinutes} min <em>·</em> {distanceLabel(bestRoute.distance_meters)}</strong><small>{bestRoute.summary || "Rota recomendada"}{bestRoute.congestion ? ` · ${trafficLabel(bestRoute.congestion)}` : ""}{mobilityResult?.provider ? ` · ${mobilityResult.provider}` : ""}</small></> : <><strong>{travelTarget?.location?.name || travelTarget?.service_name || "Próximo destino"}</strong><small>{travelError || "Destino preparado. Calcule a rota para incluir sua origem e o trânsito atual."}</small></>}
           </div>
+          {bestRoute && travelError && <p className="atelier-commute__notice" role="status">{travelError}</p>}
           {resultMatchesTarget && mobilityResult?.tips?.length ? <ul>{mobilityResult.tips.slice(0, 3).map((tip) => <li key={tip}>{tip}</li>)}</ul> : null}
           <footer>
+            <Link to="/agenda" onClick={closeTravel}>Revisar locais na Agenda</Link>
             <button type="button" className="spaces-travel__recalculate" onClick={() => void startTravel()} disabled={travelBusy}><Icone nome="rota" /> {travelBusy ? "Calculando…" : bestRoute ? "Recalcular rota" : "Calcular rota real"}</button>
             <button type="button" className="spaces-travel__maps" onClick={openExternalMap}><Icone nome="rota" /> Abrir navegação no mapa</button>
           </footer>

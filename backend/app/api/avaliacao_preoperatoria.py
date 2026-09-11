@@ -48,6 +48,7 @@ class GerarIn(BaseModel):
     capacidade_funcional: str | None = None
     rcri: dict | None = None
     gupta: dict | None = None
+    gupta_nao_estimado: bool = False
     dasi: dict | None = None
     aub_has2: dict | None = None
     vsg_cri: dict | None = None
@@ -108,6 +109,15 @@ def _montar_corpo(
             f"Gupta MICA (risco de IAM ou parada cardíaca perioperatória): {resultado['risco_pct']}%."
         )
         linhas.append(interpretacao)
+        linhas.append("")
+    elif dados.gupta_nao_estimado:
+        linhas.append(
+            "Gupta MICA não estimado: procedimento sem categoria correspondente validada no modelo."
+        )
+        linhas.append(
+            "Classificação do procedimento informada pelo profissional: Outras (Baixo Risco). "
+            "Essa classificação não representa uma estimativa numérica do Gupta MICA."
+        )
         linhas.append("")
 
     if dasi:
@@ -205,6 +215,11 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
         patient_for_user(dados.patient_id, db, user)
     if dados.endereco not in (None, "residencial", "profissional"):
         raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
+    if dados.gupta_nao_estimado and dados.gupta is not None:
+        raise HTTPException(
+            status_code=422,
+            detail="Gupta MICA não estimado não pode ser combinado com dados para calcular o Gupta MICA.",
+        )
     if all(
         x is None
         for x in (
@@ -237,6 +252,9 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
     s_mpm = _resultado_calculadora("s-mpm", dados.s_mpm)
     frail = _resultado_calculadora("frail-scale-perioperatorio", dados.frail)
 
+    if not any((rcri, gupta, dasi, aub_has2, vsg_cri, gscri, sort, s_mpm, frail)):
+        raise HTTPException(status_code=422, detail="Calcule ao menos um método válido antes de gerar o documento.")
+
     corpo = _montar_corpo(dados, rcri, gupta, dasi, aub_has2, vsg_cri, gscri, sort, s_mpm, frail)
 
     variaveis = {
@@ -247,6 +265,7 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
         "conduta_recomendada": dados.conduta_recomendada or "",
         "rcri": dados.rcri or {},
         "gupta": dados.gupta or {},
+        "gupta_nao_estimado": dados.gupta_nao_estimado,
         "dasi": dados.dasi or {},
         "aub_has2": dados.aub_has2 or {},
         "vsg_cri": dados.vsg_cri or {},
@@ -289,6 +308,7 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
             detail={
                 "tem_rcri": rcri is not None,
                 "tem_gupta": gupta is not None,
+                "gupta_nao_estimado": dados.gupta_nao_estimado,
                 "tem_dasi": dasi is not None,
                 "tem_aub_has2": aub_has2 is not None,
                 "tem_vsg_cri": vsg_cri is not None,
@@ -312,6 +332,7 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
         "medico": document_identity(user),
         "rcri": rcri[0] if rcri else None,
         "gupta": gupta[0] if gupta else None,
+        "gupta_nao_estimado": dados.gupta_nao_estimado,
         "dasi": dasi[0] if dasi else None,
         "aub_has2": aub_has2[0] if aub_has2 else None,
         "vsg_cri": vsg_cri[0] if vsg_cri else None,

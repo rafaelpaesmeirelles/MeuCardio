@@ -1,22 +1,58 @@
 .folha-impressao .doc-cabecalho {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 32mm minmax(0, 1fr);
-  gap: 6mm;
-  align-items: start;
-  color: #0b2e45;
+  grid-template-columns: minmax(0, 60mm) 38mm minmax(0, 1fr);
+  gap: 4mm;
+  align-items: center;
+  padding: 3mm;
+  border: 0.25mm solid #a79689;
+  color: #263936;
+  background: #fff;
   break-inside: avoid;
 }
 .doc-cabecalho .doc-cabecalho__profissional {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
   text-align: right;
   overflow-wrap: anywhere;
 }
 .doc-cabecalho .doc-cabecalho__centro { text-align: center; }
-.doc-cabecalho .doc-cabecalho__logo { width: 100%; max-width: 42mm; }
-.doc-cabecalho .doc-cabecalho__logo-pessoal-placa { display: inline-block; max-width: 100%; box-sizing: border-box; }
-.doc-cabecalho .doc-cabecalho__logo-pessoal { width: auto; max-width: 28mm; max-height: 22mm; margin: 0; }
+.doc-cabecalho .doc-cabecalho__logo { width: 100%; max-width: 60mm; }
+.doc-cabecalho .doc-cabecalho__logo-pessoal-placa { display: inline-flex; width: 38mm; height: 34mm; max-width: 100%; align-items: center; justify-content: center; box-sizing: border-box; }
+.doc-cabecalho .doc-cabecalho__logo-pessoal { display: block; width: 100%; height: 100%; object-fit: contain; max-width: 38mm; max-height: 34mm; margin: 0; }
+.doc-cabecalho .doc-cabecalho__operadora {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+  min-width: 0;
+  padding-top: 2mm;
+  border-top: 0.2mm solid #c4b9b0;
+  color: #263936;
+  font-size: 9pt;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.doc-cabecalho .doc-cabecalho__operadora-titulo { font-size: 8pt; color: #624637; }
 @media print {
   @page { size: A4; margin: 20mm; }
+  html:has(body > .folha-impressao), body:has(> .folha-impressao) {
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* The print portal must not inherit hidden application columns/scroll space. */
+  body:has(> .folha-impressao) > :not(.folha-impressao) { display: none !important; }
+  html body > .folha-impressao {
+    display: block !important;
+    position: static !important;
+    margin: 0 !important;
+    font: 11pt/1.4 Arial, sans-serif;
+  }
   html body .folha-impressao {
     width: 100%;
     max-width: 100%;
@@ -27,6 +63,7 @@
     background: #fff;
   }
   .folha-impressao * { box-sizing: border-box; }
+  .folha-impressao .doc-cabecalho :is(strong, span) { color: #263936; -webkit-text-fill-color: currentColor; }
   .folha-impressao p, .folha-impressao li { white-space: pre-wrap; orphans: 3; widows: 3; }
   .folha-impressao img { max-width: 100%; }
 }

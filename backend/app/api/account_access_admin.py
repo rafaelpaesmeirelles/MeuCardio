@@ -211,7 +211,7 @@ def admin_reenviar_acesso(
         raise HTTPException(status_code=409, detail="Investidor usa a credencial global de demonstração.")
     if not user.is_active or user.status != "aprovado":
         raise HTTPException(status_code=409, detail="O acesso ainda não está aprovado/ativo.")
-    ok = account_recovery.enviar_acesso_aprovado(user.id)
+    ok = account_recovery.enviar_acesso_aprovado(user.id, reenvio=True)
     if not ok:
         raise HTTPException(status_code=502, detail="Falha ao enviar a mensagem de acesso.")
     return {"ok": True}

@@ -76,12 +76,51 @@ function mensagemEstruturada(detail: DetalheEstruturado, fallback: string): stri
   return unicas.length ? unicas.join(" ") : fallback;
 }
 
+const CAMPOS_VALIDACAO: Record<string, string> = {
+  full_name: "Nome completo", email: "E-mail", role: "Perfil", birth_date: "Data de nascimento",
+  cpf: "CPF", profession: "Profissão", council_name: "Conselho", council_number: "Número do conselho",
+  council_state: "UF do conselho", council_name_other: "Nome do outro conselho",
+  council_state_other: "Estado/região do outro conselho", specialty: "Especialidade", rqe: "RQE",
+  professional_title: "Título profissional", workplace_name: "Local de trabalho",
+  workplace_department: "Setor / unidade", workplace_role: "Cargo / função",
+  workplace_notes: "Observações profissionais", tipo_acesso: "Tipo de acesso",
+  home_state: "UF residencial", practice_state: "UF profissional", password: "Senha",
+};
+const MENSAGENS_VALIDACAO_SEGURAS = new Set([
+  "Informe nome completo.", "E-mail inválido.", "UF inválida.",
+  "Estado inválido — use a sigla (ex.: SP).", "Forma de tratamento inválida.",
+  "Conselho profissional inválido.", "Tipo de acesso inválido.",
+  "Perfil inválido para conta gerenciada. Administrador não pode ser definido aqui.",
+  'Para conselho "Outro", informe qual é o conselho e o estado/região.',
+]);
+
+function mensagemValidacao(detail: unknown[], fallback: string): string {
+  const mensagens = detail.flatMap((item) => {
+    if (!item || typeof item !== "object") return [];
+    const { loc, msg } = item as { loc?: unknown; msg?: unknown };
+    if (!Array.isArray(loc) || typeof msg !== "string") return [];
+    // Neither arbitrary location keys nor validator messages are safe to echo:
+    // custom Pydantic validators may embed input, secrets or patient details.
+    const chave = [...loc].reverse().find((campo) => typeof campo === "string" && Object.hasOwn(CAMPOS_VALIDACAO, campo));
+    const rotulo = typeof chave === "string" ? CAMPOS_VALIDACAO[chave] : "Campo informado";
+    const texto = msg.replace(/^Value error, /, "").trim();
+    let explicacao = MENSAGENS_VALIDACAO_SEGURAS.has(texto) ? texto : "Valor inválido. Revise este campo.";
+    if (texto === "Field required") explicacao = "Campo obrigatório.";
+    const limite = /^String should have at (least|most) (\d{1,6}) characters$/.exec(texto);
+    if (limite) explicacao = `Informe ${limite[1] === "least" ? "pelo menos" : "no máximo"} ${limite[2]} caracteres.`;
+    return [`${rotulo}: ${explicacao}`];
+  });
+  return [...new Set(mensagens)].join(" ") || fallback;
+}
+
 async function erroDaResposta(res: Response, fallback: string): Promise<ApiError> {
   const payload = await res.json().catch(() => null);
   const detail = payload?.detail;
   let message = fallback;
   if (typeof detail === "string" && detail.trim()) {
     message = detail.trim();
+  } else if (Array.isArray(detail)) {
+    message = mensagemValidacao(detail, fallback);
   } else if (detail && typeof detail === "object") {
     message = mensagemEstruturada(detail as DetalheEstruturado, fallback);
   }
@@ -347,8 +386,6 @@ export type Usuario = {
   practice_phone: string | null;
   document_logo_url: string | null;
   document_logo_dark_background: boolean;
-  instagram_handle: string | null;
-  instagram_photo_url: string | null;
   professional_title: string | null;
   workplace_name: string | null;
   workplace_department: string | null;

@@ -1,0 +1,36 @@
+/* Round editor text audited on Atelier's approved paper cards, empty/populated.
+   Light theme, clinical values and the body-level manual-print portal are unchanged. */
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content #pc-round-editor .cartao > .patient-round-heading {
+  color: var(--atelier-ink, #24343a) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content #pc-round-editor .cartao > .patient-round-empty {
+  color: var(--atelier-muted, #58666a) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+/* Read-only copy and field labels must not inherit the legacy dark-panel ink.
+   Semantic feedback and action buttons retain their own color pairs. */
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content #pc-round-editor .cartao
+  :is(p, li, dd, small):not(button *, a *, [role="alert"], [role="alert"] *,
+  [style*="--alerta"], [style*="--alerta"] *, [style*="--perigo"], [style*="--perigo"] *,
+  [style*="--sucesso"], [style*="--sucesso"] *, .erro, .erro *, .sucesso, .sucesso *, .selo, .selo *) {
+  color: var(--atelier-muted, #58666a) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content #pc-round-editor .cartao
+  :is(label, legend, strong, b, .eyebrow, .dado):not(button *, a *, [role="alert"], [role="alert"] *,
+  [style*="--alerta"], [style*="--alerta"] *, [style*="--perigo"], [style*="--perigo"] *,
+  [style*="--sucesso"], [style*="--sucesso"] *, .erro, .erro *, .sucesso, .sucesso *, .selo, .selo *) {
+  color: var(--atelier-ink, #24343a) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content #pc-round-editor .cartao a:not(.botao):not([role="alert"] *) {
+  color: var(--atelier-teal, #16776d) !important;
+  -webkit-text-fill-color: currentColor !important;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}

@@ -48,7 +48,7 @@ def _mail360_enviar(destinatario: str, assunto: str, html: str) -> tuple[bool, s
     """Envia pela caixa Native institucional ``contato@corvia.med.br``."""
     remetente = _reply_to_da_plataforma()
     try:
-        enviar_mensagem_mail360(
+        resposta = enviar_mensagem_mail360(
             settings.mail360_transactional_account_key,
             remetente,
             destinatario,
@@ -56,6 +56,12 @@ def _mail360_enviar(destinatario: str, assunto: str, html: str) -> tuple[bool, s
             _normalizar_branding(html),
             mail_format="html",
         )
+        message_id = resposta.get("messageId") if isinstance(resposta, dict) else None
+        if not isinstance(message_id, str) or not message_id.strip():
+            # The documented send response identifies the accepted message.
+            # An empty/error payload must not create a successful EmailLog.
+            # This confirms acceptance only, never delivery to the recipient.
+            return False, "Mail360 não confirmou o identificador da mensagem; envio não confirmado."
         return True, None
     except Mail360Error as exc:
         log.warning("Falha Mail360 transacional para %s: %s", destinatario, exc)

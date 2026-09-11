@@ -2,7 +2,7 @@ import { useLayoutEffect } from "react";
 import { useAuth } from "../lib/auth";
 import { chamamentoComArtigo } from "../lib/clinicalIdentity";
 import { useCorviaTheme } from "../lib/corviaTheme";
-import MiniUniverseCanvas from "./MiniUniverseCanvas";
+import Icone from "./Icone";
 import "../styles/galaxy-theme-toggle-refinement.css";
 import "../styles/corvia-approved-fidelity-20260904.css";
 import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";
@@ -35,19 +35,13 @@ export default function GalaxyThemeToggle({ className = "" }: { className?: stri
   return (
     <button
       type="button"
-      className={`galaxy-theme-toggle${className ? ` ${className}` : ""}`}
+      className={`galaxy-theme-toggle corvia-appearance-toggle${className ? ` ${className}` : ""}`}
       onClick={toggleTheme}
       aria-label={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
       title={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
     >
-      <img
-        className="galaxy-theme-toggle__image"
-        src="/spaces/galaxy-approved-canonical.webp"
-        alt=""
-        aria-hidden="true"
-        draggable={false}
-      />
-      <MiniUniverseCanvas />
+      <Icone nome={theme === "light" ? "sol" : "lua"} />
+      <span>{theme === "light" ? "Claro" : "Escuro"}</span>
     </button>
   );
 }

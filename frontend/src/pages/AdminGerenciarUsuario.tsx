@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { ApiError, api } from "../lib/api";
+import { ApiError, api, type Usuario } from "../lib/api";
+import { useAuth } from "../lib/auth";
 import { Carregando, Erro } from "../components/Estado";
 import "../styles/admin-assinantes.css";
 
@@ -100,12 +101,33 @@ function mensagemErro(e: unknown, fallback: string) {
   return e instanceof ApiError || e instanceof Error ? e.message : fallback;
 }
 
+function dadosProfissionaisProprios(perfil: Usuario, dados: UsuarioGerenciavel) {
+  // /auth/me currently replaces these fields. Preserve the latest values that
+  // this admin form does not expose; never send identity/access privileges.
+  const preservados = [
+    "home_street", "home_number", "home_complement", "home_neighborhood",
+    "home_city", "home_state", "home_zip", "practice_street", "practice_number",
+    "practice_complement", "practice_neighborhood", "practice_city", "practice_state",
+    "practice_zip", "practice_phone", "include_workplace_on_documents",
+  ] as const;
+  const outro = dados.council_name?.trim().toUpperCase() === "OUTRO";
+  return {
+    ...Object.fromEntries(preservados.map((campo) => [campo, perfil[campo] ?? (campo === "include_workplace_on_documents" ? false : null)])),
+    ...Object.fromEntries(CAMPOS_TEXTO.map(([campo]) => [campo, dados[campo]?.trim() || null])),
+    full_name: dados.full_name.trim(),
+    council_name_other: outro ? perfil.council_name_other : null,
+    council_state_other: outro ? perfil.council_state_other : null,
+  };
+}
+
 export default function AdminGerenciarUsuario() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { usuario: autenticado } = useAuth();
   const [usuario, setUsuario] = useState<UsuarioGerenciavel | null>(null);
   const [erro, setErro] = useState("");
   const [salvando, setSalvando] = useState(false);
+  const salvamentoEmCurso = useRef(false);
   const [mensagem, setMensagem] = useState("");
   const [novaSenha, setNovaSenha] = useState("");
   const [senha2, setSenha2] = useState("");
@@ -119,6 +141,9 @@ export default function AdminGerenciarUsuario() {
   const [historico, setHistorico] = useState<HistoricoAcessos | null>(null);
   const [carregandoAcessos, setCarregandoAcessos] = useState(false);
   const [revogandoSessao, setRevogandoSessao] = useState(false);
+  const contaAdministrativa = usuario?.role === "admin";
+  const propriaConta = !!usuario && usuario.id === autenticado?.id;
+  const outroAdministrador = contaAdministrativa && !propriaConta;
 
   function carregar() {
     if (!id) return;
@@ -153,9 +178,24 @@ export default function AdminGerenciarUsuario() {
   );
 
   async function salvar() {
-    if (!usuario || !id) return;
+    if (!usuario || !id || salvamentoEmCurso.current) return;
+    if (outroAdministrador) {
+      setErro("Os dados de outro administrador não podem ser alterados por esta tela.");
+      return;
+    }
+    salvamentoEmCurso.current = true;
     setSalvando(true); setErro(""); setMensagem("");
     try {
+      if (contaAdministrativa && propriaConta) {
+        const perfil = await api.get<Usuario>("/auth/me");
+        if (perfil.id !== usuario.id || perfil.role !== "admin") {
+          throw new Error("A sessão mudou. Reabra sua conta antes de salvar.");
+        }
+        const atualizado = await api.patch<Usuario>("/auth/me", dadosProfissionaisProprios(perfil, usuario));
+        setUsuario((atual) => atual?.id === atualizado.id ? { ...atual, ...atualizado } : atual);
+        setMensagem("Seus dados profissionais foram atualizados. As permissões administrativas foram preservadas.");
+        return;
+      }
       const atualizado = await api.patch<UsuarioGerenciavel>(`/admin/user-management/${id}`, {
         full_name: usuario.full_name,
         email: usuario.email,
@@ -180,7 +220,7 @@ export default function AdminGerenciarUsuario() {
       setMensagem("Dados atualizados com sucesso.");
     } catch (e) {
       setErro(mensagemErro(e, "Não foi possível atualizar o usuário."));
-    } finally { setSalvando(false); }
+    } finally { salvamentoEmCurso.current = false; setSalvando(false); }
   }
 
   async function trocarSenha() {
@@ -259,25 +299,31 @@ export default function AdminGerenciarUsuario() {
 
       <section className="cartao cartao--clinico" style={{ maxWidth: 900 }}>
         <p className="eyebrow">Dados da conta</p>
+        {contaAdministrativa && <p role="note">
+          {propriaConta
+            ? "Esta é sua conta administrativa. Aqui você pode salvar seus dados profissionais pelo fluxo da própria conta; e-mail, CPF, nascimento, perfil e permissões permanecem protegidos."
+            : "Esta conta pertence a outro administrador. Seus dados e permissões são somente leitura nesta tela."}
+          {propriaConta && <> Para endereços, documentos pessoais e senha, use <Link to="/minha-conta">Minha conta</Link>.</>}
+        </p>}
         <div className="grade grade--2">
-          <div><label>Nome completo</label><input value={usuario.full_name} onChange={(e) => alterar("full_name", e.target.value)} /></div>
-          <div><label>E-mail de login</label><input type="email" value={usuario.email} onChange={(e) => alterar("email", e.target.value)} /></div>
-          <div><label>CPF</label><input value={usuario.cpf ?? ""} onChange={(e) => alterar("cpf", e.target.value)} /></div>
-          <div><label>Data de nascimento</label><input type="date" value={usuario.birth_date ?? ""} onChange={(e) => alterar("birth_date", e.target.value || null)} /></div>
-          <div><label>Perfil</label><select value={usuario.role} onChange={(e) => alterar("role", e.target.value)}>{PERFIS.map(([v, r]) => <option key={v} value={v}>{r}</option>)}</select></div>
-          <div><label>Tipo de acesso</label><select value={usuario.tipo_acesso} onChange={(e) => alterar("tipo_acesso", e.target.value as UsuarioGerenciavel["tipo_acesso"])}>{TIPOS.map(([v, r]) => <option key={v} value={v}>{r}</option>)}</select></div>
+          <div><label>Nome completo</label><input aria-label="Nome completo" disabled={outroAdministrador} value={usuario.full_name} onChange={(e) => alterar("full_name", e.target.value)} /></div>
+          <div><label>E-mail de login</label><input aria-label="E-mail de login" disabled={contaAdministrativa} type="email" value={usuario.email} onChange={(e) => alterar("email", e.target.value)} /></div>
+          <div><label>CPF</label><input aria-label="CPF" disabled={contaAdministrativa} value={usuario.cpf ?? ""} onChange={(e) => alterar("cpf", e.target.value)} /></div>
+          <div><label>Data de nascimento</label><input aria-label="Data de nascimento" disabled={contaAdministrativa} type="date" value={usuario.birth_date ?? ""} onChange={(e) => alterar("birth_date", e.target.value || null)} /></div>
+          <div><label>Perfil</label><select aria-label="Perfil" disabled={contaAdministrativa} value={usuario.role} onChange={(e) => alterar("role", e.target.value)}>{contaAdministrativa && <option value="admin">Administrador — protegido</option>}{PERFIS.map(([v, r]) => <option key={v} value={v}>{r}</option>)}</select></div>
+          <div><label>Tipo de acesso</label><select aria-label="Tipo de acesso" disabled={contaAdministrativa} value={usuario.tipo_acesso} onChange={(e) => alterar("tipo_acesso", e.target.value as UsuarioGerenciavel["tipo_acesso"])}>{TIPOS.map(([v, r]) => <option key={v} value={v}>{r}</option>)}</select></div>
           {CAMPOS_TEXTO.map(([campo, rotulo, placeholder]) => (
             <div key={campo}>
               <label>{rotulo}</label>
-              <input placeholder={placeholder} value={usuario[campo] ?? ""} onChange={(e) => setUsuario((u) => u ? { ...u, [campo]: e.target.value } : u)} />
+              <input aria-label={rotulo} disabled={outroAdministrador} placeholder={placeholder} value={usuario[campo] ?? ""} onChange={(e) => setUsuario((u) => u ? { ...u, [campo]: e.target.value } : u)} />
             </div>
           ))}
         </div>
         <label style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 12, fontWeight: 500 }}>
-          <input type="checkbox" style={{ width: "auto" }} checked={usuario.is_active} onChange={(e) => alterar("is_active", e.target.checked)} />
+          <input type="checkbox" disabled={contaAdministrativa} style={{ width: "auto" }} checked={usuario.is_active} onChange={(e) => alterar("is_active", e.target.checked)} />
           Conta ativa
         </label>
-        <button className="botao" style={{ marginTop: 14 }} disabled={salvando} onClick={salvar}>{salvando ? "Salvando…" : "Salvar alterações"}</button>
+        <button className="botao" style={{ marginTop: 14 }} disabled={salvando || outroAdministrador} onClick={salvar}>{salvando ? "Salvando…" : "Salvar alterações"}</button>
       </section>
 
       {usuario.pode_ver_historico_acessos && (
@@ -344,8 +390,8 @@ export default function AdminGerenciarUsuario() {
         <p className="eyebrow">Senha do Cardiology Spaces</p>
         <p style={{ color: "var(--texto-secundario)", fontSize: ".88rem" }}>A troca administrativa revoga as sessões anteriores da conta.</p>
         <div className="grade grade--2">
-          <div><label>Nova senha</label><input type="password" value={novaSenha} autoComplete="new-password" onChange={(e) => setNovaSenha(e.target.value)} /></div>
-          <div><label>Confirmar nova senha</label><input type="password" value={senha2} autoComplete="new-password" onChange={(e) => setSenha2(e.target.value)} /></div>
+          <div><label>Nova senha</label><input aria-label="Nova senha" type="password" value={novaSenha} autoComplete="new-password" onChange={(e) => setNovaSenha(e.target.value)} /></div>
+          <div><label>Confirmar nova senha</label><input aria-label="Confirmar nova senha" type="password" value={senha2} autoComplete="new-password" onChange={(e) => setSenha2(e.target.value)} /></div>
         </div>
         <button className="botao botao--secundario" style={{ marginTop: 12 }} disabled={alterandoSenha || novaSenha.length < 8 || novaSenha !== senha2} onClick={trocarSenha}>{alterandoSenha ? "Alterando…" : "Alterar senha"}</button>
       </section>
@@ -358,8 +404,8 @@ export default function AdminGerenciarUsuario() {
             A caixa possui senha própria, independente do Cardiology Spaces. A redefinição também revoga sessões anteriores do e-mail.
           </p>
           <div className="grade grade--2">
-            <div><label>Nova senha do e-mail</label><input type="password" value={novaSenhaMail} autoComplete="new-password" onChange={(e) => setNovaSenhaMail(e.target.value)} /></div>
-            <div><label>Confirmar senha do e-mail</label><input type="password" value={senhaMail2} autoComplete="new-password" onChange={(e) => setSenhaMail2(e.target.value)} /></div>
+            <div><label>Nova senha do e-mail</label><input aria-label="Nova senha do e-mail" type="password" value={novaSenhaMail} autoComplete="new-password" onChange={(e) => setNovaSenhaMail(e.target.value)} /></div>
+            <div><label>Confirmar senha do e-mail</label><input aria-label="Confirmar senha do e-mail" type="password" value={senhaMail2} autoComplete="new-password" onChange={(e) => setSenhaMail2(e.target.value)} /></div>
           </div>
           <button className="botao botao--secundario" style={{ marginTop: 12 }} disabled={alterandoSenhaMail || novaSenhaMail.length < 8 || novaSenhaMail !== senhaMail2} onClick={trocarSenhaMail}>{alterandoSenhaMail ? "Alterando…" : "Alterar senha do CorVIA Mail"}</button>
         </section>
@@ -378,7 +424,7 @@ export default function AdminGerenciarUsuario() {
         </div>
         {!usuario.pode_excluir_definitivamente && <p style={{ color: "var(--alerta)" }}>{usuario.bloqueio_exclusao}</p>}
         <label>Para confirmar, digite exatamente: <strong>{usuario.email}</strong></label>
-        <input value={confirmarEmail} onChange={(e) => setConfirmarEmail(e.target.value)} placeholder={usuario.email} />
+        <input aria-label="E-mail para confirmar exclusão definitiva" value={confirmarEmail} onChange={(e) => setConfirmarEmail(e.target.value)} placeholder={usuario.email} />
         <label style={{ display: "flex", gap: 8, alignItems: "flex-start", marginTop: 10, fontWeight: 500 }}>
           <input type="checkbox" style={{ width: "auto", marginTop: 3 }} checked={confirmarExclusao} onChange={(e) => setConfirmarExclusao(e.target.checked)} />
           <span>Entendo que a exclusão é definitiva e autorizo remover também a caixa do CorVIA Mail, se existir.</span>

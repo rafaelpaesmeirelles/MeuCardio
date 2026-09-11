@@ -8,19 +8,35 @@ const ICONE: Record<string, string> = {
 };
 
 export default function PatientTimeline({ patientId }: { patientId: number }) {
-  const [eventos, setEventos] = useState<Evento[] | null>(null);
+  const [estado, setEstado] = useState<{ patientId: number; eventos: Evento[] | null; erro: string }>({ patientId, eventos: null, erro: "" });
+  const [tentativa, setTentativa] = useState(0);
 
   useEffect(() => {
-    api.get<Evento[]>(`/timeline/patient/${patientId}`).then(setEventos);
-  }, [patientId]);
+    let ativo = true;
+    setEstado({ patientId, eventos: null, erro: "" });
+    api.get<Evento[]>(`/timeline/patient/${patientId}`)
+      .then((eventos) => { if (ativo) setEstado({ patientId, eventos, erro: "" }); })
+      .catch(() => {
+        if (ativo) setEstado({ patientId, eventos: null, erro: "Não foi possível carregar o histórico deste paciente. Tente novamente." });
+      });
+    return () => { ativo = false; };
+  }, [patientId, tentativa]);
+
+  // Do not paint another patient's history, even before effect cleanup runs.
+  const { eventos, erro } = estado.patientId === patientId ? estado : { eventos: null, erro: "" };
 
   return (
     <div className="cartao" style={{ background: "var(--fundo)" }}>
-      <p className="eyebrow" style={{ margin: 0 }}>Timeline</p>
-      {eventos === null ? (
+      <p className="eyebrow patient-round-heading" style={{ margin: 0 }}>Timeline</p>
+      {erro ? (
+        <>
+          <p role="alert" style={{ color: "var(--alerta)" }}>{erro}</p>
+          <button className="botao botao--secundario" onClick={() => setTentativa((valor) => valor + 1)}>Recarregar histórico</button>
+        </>
+      ) : eventos === null ? (
         <p style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>Carregando…</p>
       ) : eventos.length === 0 ? (
-        <p style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>Nenhum evento registrado ainda.</p>
+        <p className="patient-round-empty" style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>Nenhum evento registrado ainda.</p>
       ) : (
         <div style={{ marginTop: "0.5rem" }}>
           {eventos.map((e, i) => (

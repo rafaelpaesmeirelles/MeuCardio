@@ -120,17 +120,46 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
 
   const wsRef = useRef<WebSocket | null>(null);
   const fimRef = useRef<HTMLDivElement | null>(null);
+  const launcherRef = useRef<HTMLButtonElement | null>(null);
+  const panelRef = useRef<HTMLElement | null>(null);
+  const historyRequest = useRef(0);
+  const drafts = useRef<Record<number, string>>({});
+  const pendingSends = useRef(new Set<number>());
+  const sendErrors = useRef<Record<number, string>>({});
+  const mounted = useRef(true);
+  const openRef = useRef(aberto);
+  openRef.current = aberto;
+  const wasOpened = useRef(false);
   // Lido dentro do handler do socket, que é criado uma vez e não deve
   // reconstruir a cada troca de conversa.
   const ativoRef = useRef<number | null>(null);
   ativoRef.current = ativo?.id ?? null;
+
+  useEffect(() => {
+    mounted.current = true;
+    return () => { mounted.current = false; historyRequest.current++; };
+  }, []);
+
+  useEffect(() => {
+    if (!aberto && !wasOpened.current) return;
+    wasOpened.current = true;
+    const frame = requestAnimationFrame(() => {
+      if (aberto) panelRef.current?.querySelector<HTMLButtonElement>('button[aria-label="Fechar o chat"]')?.focus();
+      else launcherRef.current?.focus();
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [aberto]);
 
   const carregarNaoLidas = useCallback(() => {
     api.get<{ total: number }>("/chat/nao-lidas").then((r) => setNaoLidas(r.total)).catch(() => {});
   }, []);
 
   const carregarConversas = useCallback(() => {
-    api.get<Conversa[]>("/chat/conversas").then(setConversas).catch(() => {});
+    api.get<Conversa[]>("/chat/conversas").then((result) => {
+      if (mounted.current) setConversas(result);
+    }).catch(() => {
+      if (mounted.current) setErro("Não foi possível carregar as conversas. Feche e abra o chat para tentar novamente.");
+    });
   }, []);
 
   // Badge de não lidas: aparece sem abrir o widget, então é o único trabalho
@@ -169,7 +198,7 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
       const meu = usuario?.id;
       const outro = dados.sender_id === meu ? dados.recipient_id : dados.sender_id;
 
-      if (ativoRef.current === outro) {
+      if (openRef.current && ativoRef.current === outro) {
         setMensagens((atual) =>
           atual.some((m) => m.id === dados.id) ? atual : [...atual, dados as Mensagem]
         );
@@ -181,6 +210,7 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
       }
       carregarConversas();
     };
+    ws.onclose = () => { if (wsRef.current === ws) wsRef.current = null; };
 
     // Keepalive: o handler do backend fica em `receive_text()`, então um ping
     // periódico é o que faz uma desconexão silenciosa aparecer de imediato.
@@ -212,18 +242,30 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
   }, [mensagens, vista]);
 
   async function abrirConversa(id: number, nome: string, foto: string | null) {
+    const request = ++historyRequest.current;
+    const current = () => mounted.current && request === historyRequest.current && ativoRef.current === id;
+    ativoRef.current = id;
     setAtivo({ id, nome, foto });
     setVista("conversa");
-    setErro("");
+    setErro(sendErrors.current[id] || "");
+    setTexto(drafts.current[id] || "");
+    setEnviando(pendingSends.current.has(id));
     setMensagens([]);
     try {
       const hist = await api.get<Mensagem[]>(`/chat/mensagens/${id}`);
-      setMensagens(hist);
-      await api.post(`/chat/mensagens/${id}/marcar-lidas`);
+      if (!current()) return;
+      setMensagens((atual) => {
+        // A mensagem recebida pelo socket enquanto o histórico estava em voo
+        // ainda pode não fazer parte do snapshot devolvido pelo servidor.
+        const ids = new Set(hist.map((message) => message.id));
+        return [...hist, ...atual.filter((message) => !ids.has(message.id))];
+      });
+      if (openRef.current) await api.post(`/chat/mensagens/${id}/marcar-lidas`);
+      if (!current()) return;
       carregarNaoLidas();
       carregarConversas();
     } catch {
-      setErro("Não foi possível abrir a conversa.");
+      if (current()) setErro("Não foi possível abrir a conversa.");
     }
   }
 
@@ -247,19 +289,33 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
   async function enviar(e: React.FormEvent) {
     e.preventDefault();
     const corpo = texto.trim();
-    if (!corpo || !ativo || enviando) return;
+    if (!corpo || !ativo || pendingSends.current.has(ativo.id)) return;
+    const recipientId = ativo.id;
+    const submittedDraft = texto;
+    pendingSends.current.add(recipientId);
+    delete sendErrors.current[recipientId];
     setEnviando(true);
     setErro("");
     try {
-      const msg = await api.post<Mensagem>(`/chat/mensagens/${ativo.id}`, { body: corpo });
+      const msg = await api.post<Mensagem>(`/chat/mensagens/${recipientId}`, { body: corpo });
+      if (!mounted.current) return;
+      const unchangedDraft = drafts.current[recipientId] === submittedDraft;
+      if (unchangedDraft) delete drafts.current[recipientId];
       // Dedup por id: o eco do socket traz a mesma mensagem.
-      setMensagens((atual) => (atual.some((m) => m.id === msg.id) ? atual : [...atual, msg]));
-      setTexto("");
+      if (ativoRef.current === recipientId) {
+        setMensagens((atual) => (atual.some((m) => m.id === msg.id) ? atual : [...atual, msg]));
+        if (unchangedDraft) setTexto("");
+      }
       carregarConversas();
     } catch (err: any) {
-      setErro(err?.message ?? "Não foi possível enviar.");
+      if (mounted.current) {
+        const message = err?.message ?? "Não foi possível enviar.";
+        sendErrors.current[recipientId] = message;
+        if (ativoRef.current === recipientId) setErro(message);
+      }
     } finally {
-      setEnviando(false);
+      pendingSends.current.delete(recipientId);
+      if (mounted.current && ativoRef.current === recipientId) setEnviando(false);
     }
   }
 
@@ -273,8 +329,14 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
           conversa evitam confundi-lo com o atalho clínico de Emergência. */}
       {(!aberto || placement === "dock") && (
         <button
+          ref={launcherRef}
           className={`corvia-chat-launch${placement === "dock" ? " corvia-chat-launch--dock" : ""}`}
-          onClick={() => setAberto((value) => !value)}
+          onClick={() => {
+            const next = !aberto;
+            openRef.current = next;
+            setAberto(next);
+            if (next && ativo) void abrirConversa(ativo.id, ativo.nome, ativo.foto);
+          }}
           aria-expanded={aberto}
           aria-label={naoLidas > 0 ? `Abrir o CorvIA Chat, ${naoLidas} mensagens não lidas` : "Abrir o CorvIA Chat"}
           title="CorvIA Chat"
@@ -291,8 +353,12 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
 
       {aberto && (
         <section
+          ref={panelRef}
+          role="dialog"
+          aria-modal="false"
           className="corvia-chat-panel"
           aria-label="CorvIA Chat"
+          onKeyDown={(event) => { if (event.key === "Escape") { event.preventDefault(); event.stopPropagation(); setAberto(false); } }}
           style={{
             position: "fixed", right: 18, bottom: 78, zIndex: 1200,
             width: "min(380px, calc(100vw - 36px))",
@@ -310,7 +376,7 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
           >
             {vista !== "lista" && (
               <button
-                onClick={() => { setVista("lista"); setAtivo(null); setResultados(null); setTermo(""); setConselho(""); }}
+                onClick={() => { historyRequest.current++; ativoRef.current = null; setVista("lista"); setAtivo(null); setResultados(null); setTermo(""); setConselho(""); setErro(""); }}
                 aria-label="Voltar"
                 style={{ background: "none", border: "none", color: "#fff", cursor: "pointer", fontSize: "1.1rem", padding: "0 .2rem" }}
               >
@@ -333,7 +399,7 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
           </header>
 
           {erro && (
-            <p style={{ margin: 0, padding: ".5rem .75rem", background: "#fdecea", color: "#8a1c12", fontSize: ".85rem" }}>
+            <p role="alert" style={{ margin: 0, padding: ".5rem .75rem", background: "#fdecea", color: "#8a1c12", fontSize: ".85rem" }}>
               {erro}
             </p>
           )}
@@ -535,7 +601,7 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
               <form onSubmit={enviar} style={{ display: "flex", gap: ".4rem", padding: ".6rem", borderTop: "1px solid var(--linha, #e6e2dc)" }}>
                 <input
                   value={texto}
-                  onChange={(e) => setTexto(e.target.value)}
+                  onChange={(e) => { drafts.current[ativo.id] = e.target.value; setTexto(e.target.value); }}
                   placeholder="Escreva uma mensagem"
                   aria-label="Mensagem"
                   maxLength={4000}

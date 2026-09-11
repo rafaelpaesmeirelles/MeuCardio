@@ -47,10 +47,12 @@ from reportlab.pdfgen import canvas
 
 from app.core.config import settings
 from app.services.pdf.marca import COBRE, LOGO, NAVY, logo_disponivel
+from app.services.pdf.identidade_institucional import EMPRESA as EMPRESA, desenhar_identidade_institucional
 from app.services.pdf.wrapping import wrap_text
 from app.services.professional_profile import (
     logo_path, professional_name, workplace_lines,
 )
+from app.services.receita_controle_especial import _logo_corvia, _logo_profissional
 
 log = logging.getLogger("meucardio.pdf_documento")
 
@@ -64,20 +66,7 @@ MARGEM = 20 * mm
 LARGURA, ALTURA = A4
 LARGURA_LOGO = 40 * mm
 
-# Dados da empresa que opera a Corvia — fixos, aparecem em todo documento
-# emitido pela plataforma, independente de qual médico emite (é o emissor
-# legal do serviço, não o consultório de cada médico). Fornecidos pelo
-# Rafael em 30/07/2026; nunca editar sem instrução dele.
-EMPRESA = {
-    "razao_social": "Meirelles e Maluf Serviços Médicos e Biomédicos Ltda.",
-    "cnpj": "53.382.596/0001-06",
-    "logradouro": "Av. 11",
-    "numero": "423",
-    "bairro": "Centro",
-    "cidade": "Itapagipe",
-    "uf": "MG",
-    "cep": "38240-000",
-}
+# EMPRESA remains re-exported here for existing email/document callers.
 
 
 def _endereco_linhas(end: dict) -> list[str]:
@@ -175,18 +164,7 @@ def _logo(c: canvas.Canvas, x: float, y_topo: float) -> float:
 
 
 def _bloco_empresa(c: canvas.Canvas, x: float, y: float) -> float:
-    c.setFillColorRGB(*CINZA)
-    c.setFont("Helvetica-Bold", 7.5)
-    for linha in _quebrar(c, EMPRESA["razao_social"], "Helvetica-Bold", 7.5, 65 * mm):
-        c.drawString(x, y, linha)
-        y -= 3.6 * mm
-    c.setFont("Helvetica", 7.5)
-    c.drawString(x, y, f"CNPJ {EMPRESA['cnpj']}")
-    y -= 3.6 * mm
-    for linha in _endereco_linhas(EMPRESA):
-        c.drawString(x, y, linha)
-        y -= 3.6 * mm
-    return y
+    return desenhar_identidade_institucional(c, x, y, 65 * mm)
 
 
 LARGURA_LOGO_PESSOAL = 30 * mm
@@ -230,7 +208,7 @@ def _logo_pessoal(
 
 
 def _bloco_profissional(c: canvas.Canvas, x_direita: float, y: float, medico: dict,
-                        endereco: dict | None) -> float:
+                        endereco: dict | None, *, largura_texto: float | None = None) -> float:
     x_texto = x_direita
     # Empresa e profissional ocupam colunas independentes. Antes deste limite,
     # `drawRightString()` recebia linhas inteiras (local de trabalho e endereco)
@@ -238,7 +216,8 @@ def _bloco_profissional(c: canvas.Canvas, x_direita: float, y: float, medico: di
     # mais o espaco sem que o texto fosse quebrado. A fronteira abaixo preserva
     # um respiro central fixo, com ou sem logo pessoal.
     x_esquerda = LARGURA / 2 + 20 * mm
-    largura_texto = max(35 * mm, x_texto - x_esquerda)
+    if largura_texto is None:
+        largura_texto = max(35 * mm, x_texto - x_esquerda)
 
     def desenhar(texto: str, fonte: str, tamanho: float, entrelinha: float) -> None:
         nonlocal y
@@ -278,7 +257,48 @@ def _bloco_profissional(c: canvas.Canvas, x_direita: float, y: float, medico: di
     return y
 
 
-def _cabecalho(c: canvas.Canvas, medico: dict, titulo: str, endereco: dict | None = None) -> float:
+def _cabecalho_receituario(c: canvas.Canvas, medico: dict, titulo: str,
+                          endereco: dict | None) -> float:
+    """Prescription-only issuer box; generic clinical documents keep their layout."""
+    topo = ALTURA - MARGEM
+    c.setStrokeColorRGB(*LINHA)
+    c.setLineWidth(0.7)
+    c.setFillColorRGB(*NAVY)
+    c.setFont("Helvetica-Bold", 9)
+    c.drawCentredString(LARGURA / 2, topo - 5 * mm, "IDENTIFICAÇÃO DO EMITENTE")
+    c.line(MARGEM, topo - 8 * mm, LARGURA - MARGEM, topo - 8 * mm)
+    topo_conteudo = topo - 12 * mm
+    y_profissional = _bloco_profissional(
+        c, LARGURA - MARGEM - 3 * mm, topo_conteudo, medico, endereco,
+        largura_texto=58 * mm,
+    )
+    altura_identidade = max(34 * mm, topo_conteudo - y_profissional)
+    _logo_corvia(c, MARGEM + 3 * mm, topo_conteudo + 1 * mm,
+                 altura_area=altura_identidade)
+    _logo_profissional(c, medico, MARGEM + (3 + 60 + 4 + 19) * mm,
+                       topo_conteudo + 1 * mm, altura_area=altura_identidade)
+    base = topo_conteudo - altura_identidade - 3 * mm
+    c.setStrokeColorRGB(*LINHA)
+    c.line(MARGEM, base, LARGURA - MARGEM, base)
+    # Adjacent sub-block identifies the platform operator, not the prescriber.
+    y = desenhar_identidade_institucional(
+        c, MARGEM + 3 * mm, base - 4 * mm, LARGURA - 2 * MARGEM - 6 * mm,
+    )
+    base = y - 1 * mm
+    c.rect(MARGEM, base, LARGURA - 2 * MARGEM, topo - base, fill=0, stroke=1)
+    y = base - 8 * mm
+    c.setFillColorRGB(*NAVY)
+    c.setFont("Helvetica-Bold", 14)
+    for linha in _quebrar(c, titulo, "Helvetica-Bold", 14, LARGURA - 2 * MARGEM):
+        c.drawCentredString(LARGURA / 2, y, linha)
+        y -= 6 * mm
+    return y - 3 * mm
+
+
+def _cabecalho(c: canvas.Canvas, medico: dict, titulo: str, endereco: dict | None = None,
+               *, prescricao: bool = False) -> float:
+    if prescricao:
+        return _cabecalho_receituario(c, medico, titulo, endereco)
     topo = ALTURA - MARGEM
 
     altura_logo = _logo(c, MARGEM, topo)
@@ -309,9 +329,11 @@ def _quebrar(c: canvas.Canvas, texto: str, fonte: str, tam: float, largura: floa
 class _FluxoClinico:
     """Paginate each line and restore font after Canvas.showPage resets it."""
 
-    def __init__(self, c: canvas.Canvas, medico: dict, titulo: str, endereco: dict | None):
+    def __init__(self, c: canvas.Canvas, medico: dict, titulo: str, endereco: dict | None,
+                 *, prescricao: bool = False):
         self.c, self.medico, self.titulo, self.endereco = c, medico, titulo, endereco
-        self.y = _cabecalho(c, medico, titulo, endereco)
+        self.prescricao = prescricao
+        self.y = _cabecalho(c, medico, titulo, endereco, prescricao=prescricao)
         linhas = _linhas_rodape(c, medico, endereco, "00/00/0000")
         self.base_rodape = max(62 * mm, 45 * mm + sum(linha[3] for linha in linhas[:-1]))
 
@@ -322,7 +344,7 @@ class _FluxoClinico:
         self.c.setFillColorRGB(*CINZA)
         self.c.drawRightString(LARGURA - MARGEM, 12 * mm, f"Página {self.c.getPageNumber()} · continua")
         self.c.showPage()
-        self.y = _cabecalho(self.c, self.medico, self.titulo, self.endereco)
+        self.y = _cabecalho(self.c, self.medico, self.titulo, self.endereco, prescricao=self.prescricao)
 
     def texto(self, texto: str, fonte: str = "Helvetica", tamanho: float = 10.5,
               entrelinha: float = 5 * mm, recuo: float = 0,
@@ -507,7 +529,7 @@ def receituario_comum(destinatario: dict, itens: list[dict], medico: dict, data_
     c = canvas.Canvas(buf, pagesize=A4)
     c.setTitle("Receituário")
 
-    fluxo = _FluxoClinico(c, medico, "Receituário", endereco)
+    fluxo = _FluxoClinico(c, medico, "Receituário", endereco, prescricao=True)
     fluxo.texto("PACIENTE", tamanho=8.5, cor=CINZA)
     fluxo.texto(destinatario.get("nome") or "", tamanho=11)
     if destinatario.get("endereco"):

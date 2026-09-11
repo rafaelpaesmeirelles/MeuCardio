@@ -24,7 +24,6 @@ const CampoSenha = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputEle
           onClick={() => setVisivel((v) => !v)}
           aria-label={visivel ? "Ocultar senha" : "Mostrar senha"}
           aria-pressed={visivel}
-          tabIndex={-1}
         >
           <Icone nome={visivel ? "olho-fechado" : "olho"} width={18} height={18} />
         </button>

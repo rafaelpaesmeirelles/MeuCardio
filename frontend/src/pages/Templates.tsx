@@ -563,12 +563,17 @@ export default function Templates() {
   const [provedores, setProvedores] = useState<Provedor[] | null>(null);
   const [exameSugestoes, setExameSugestoes] = useState<Record<string, string[]> | null>(null);
   const [erroGerados, setErroGerados] = useState("");
+  const [erroModelos, setErroModelos] = useState("");
   const [buscaGerados, setBuscaGerados] = useState("");
   const [tipoGerados, setTipoGerados] = useState("");
   const [pacientePreSelecionado, setPacientePreSelecionado] = useState<Paciente | null>(null);
   const [finalizandoGerado, setFinalizandoGerado] = useState<Gerado | null>(null);
 
-  const recarregar = () => api.get<Template[]>("/document-templates").then(setLista);
+  const recarregar = async () => {
+    setErroModelos("");
+    try { setLista(await api.get<Template[]>("/document-templates")); }
+    catch (e) { setErroModelos(e instanceof ApiError ? e.message : "Não foi possível carregar os modelos."); }
+  };
 
   function caminhoGerados(pagina: number) {
     const p = new URLSearchParams({ page: String(pagina), page_size: "20" });
@@ -578,10 +583,13 @@ export default function Templates() {
   }
 
   async function recarregarGerados() {
-    const resposta = await api.get<GeradosResposta>(caminhoGerados(1));
-    setGerados(resposta.items);
-    setPaginaGerados(resposta.page);
-    setTemMaisGerados(resposta.has_more);
+    setErroGerados("");
+    try {
+      const resposta = await api.get<GeradosResposta>(caminhoGerados(1));
+      setGerados(resposta.items);
+      setPaginaGerados(resposta.page);
+      setTemMaisGerados(resposta.has_more);
+    } catch (e) { setErroGerados(e instanceof ApiError ? e.message : "Não foi possível atualizar o histórico."); }
   }
 
   async function carregarMaisGerados() {
@@ -644,14 +652,16 @@ export default function Templates() {
       }
       setEditando(null);
       recarregar();
+    } catch (e) {
+      setErroModelos(e instanceof ApiError ? e.message : "Não foi possível salvar o modelo. O texto foi preservado.");
     } finally {
       setSalvando(false);
     }
   }
 
   async function apagar(id: number) {
-    await api.delete(`/document-templates/${id}`);
-    recarregar();
+    try { await api.delete(`/document-templates/${id}`); await recarregar(); }
+    catch (e) { setErroModelos(e instanceof ApiError ? e.message : "Não foi possível apagar o modelo."); }
   }
 
   function abrirFluxo(origem: Origem, template?: Template, valores?: Partial<ValoresIniciaisRecriar>) {
@@ -731,7 +741,7 @@ export default function Templates() {
   }
 
   return (
-    <>
+    <div className="documents-page">
       <p className="eyebrow">Documentos</p>
       <h1>Documentos e Solicitações</h1>
       <p style={{ color: "var(--texto-secundario)", maxWidth: "62ch" }}>
@@ -844,7 +854,7 @@ export default function Templates() {
 
       <div id="modelos-salvos" style={{ marginTop: "1.4rem" }}>
           <h2>Modelos salvos</h2>
-          {lista === null ? (
+          {erroModelos ? <div className="cartao" role="alert"><p>{erroModelos}</p><button className="botao" onClick={() => void recarregar()}>Tentar carregar modelos novamente</button></div> : lista === null ? (
             <Carregando />
           ) : lista.length === 0 ? (
             <Vazio titulo="Nenhum modelo ainda" acao='Use "+ Criar Modelo" acima.' />
@@ -973,6 +983,6 @@ export default function Templates() {
           )}
         </>
       )}
-    </>
+    </div>
   );
 }

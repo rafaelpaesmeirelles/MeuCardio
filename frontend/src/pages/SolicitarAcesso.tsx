@@ -36,7 +36,6 @@ export default function SolicitarAcesso() {
     council_name_other: "", council_state_other: "",
     specialty: "", professional_title: "", workplace_name: "", workplace_department: "",
     workplace_role: "", workplace_notes: "", include_workplace_on_documents: false,
-    instagram_handle: "",
     email: "", recovery_email: "", password: "",
   });
   const [erro, setErro] = useState("");
@@ -75,7 +74,6 @@ export default function SolicitarAcesso() {
         council_state: ehOutro ? null : dados.council_state,
         council_name_other: ehOutro ? dados.council_name_other.trim() : null,
         council_state_other: ehOutro ? dados.council_state_other.trim() : null,
-        instagram_handle: dados.instagram_handle.trim().replace(/^@/, "") || null,
       });
       setResposta(r);
     } catch (e) {
@@ -124,11 +122,6 @@ export default function SolicitarAcesso() {
                   <label htmlFor="cpf">CPF</label>
                   <input id="cpf" value={dados.cpf} inputMode="numeric" placeholder="000.000.000-00" onChange={(e) => set("cpf", formatarCpf(e.target.value))} required />
                 </div>
-              </div>
-              <div className="login-campo">
-                <label htmlFor="instagram">Instagram <span className="eyebrow">(opcional)</span></label>
-                <input id="instagram" placeholder="@seu.usuario" value={dados.instagram_handle} onChange={(e) => set("instagram_handle", e.target.value)} />
-                <p className="login-formulario__secao-nota">Usado apenas, se você quiser, para sua foto pública de boas-vindas.</p>
               </div>
             </fieldset>
 

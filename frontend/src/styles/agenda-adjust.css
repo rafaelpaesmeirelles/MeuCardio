@@ -1,0 +1,23 @@
+/* The adjustment dialog keeps its approved paper surface in both themes.
+   Legacy dark-panel label colors must not cross onto that paper. */
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content .agenda-adjust-panel .agenda-form-grid > label {
+  color: var(--atelier-ink, #24343a) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content .agenda-adjust-panel .agenda-form-grid > .agenda-modal__destaque {
+  color: var(--atelier-muted, #58666a) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+/* The header stays graphite: its small caption needs light ink even when the
+   rest of the application uses light-theme paragraph colors. */
+html[data-corvia-design="atelier"][data-corvia-theme="light"] #root .cv-app .cv-content .agenda-adjust-panel > header .eyebrow {
+  color: #d7e7e5 !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .agenda-adjust-panel > header > button {
+  min-width: 44px;
+  min-height: 44px;
+}

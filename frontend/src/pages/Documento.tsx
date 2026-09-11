@@ -71,6 +71,9 @@ export default function Documento() {
         <Markdown
           remarkPlugins={[remarkGfm]}
           components={{
+            table({ children, node: _node, ...props }) {
+              return <div className="cc-table-wrap" role="region" aria-label="Tabela do documento — deslize para consultar todas as colunas" tabIndex={0} style={{ maxWidth: "100%", overflowX: "auto" }}><table {...props}>{children}</table></div>;
+            },
             pre({ children, ...props }) {
               const fonte = fonteMermaid(children);
               if (fonte) return <Fluxograma fonte={fonte} />;
@@ -89,7 +92,7 @@ export default function Documento() {
         <div className="cartao" style={{ marginTop: "1rem", maxWidth: "72ch" }}>
           <p className="eyebrow">Fontes</p>
           <ul style={{ margin: "0.4rem 0 0", paddingLeft: "1.1rem", fontSize: "0.88rem" }}>
-            {doc.source_refs.map((r) => <li key={r}>{r}</li>)}
+            {doc.source_refs.map((r) => <li key={r} style={{ overflowWrap: "anywhere" }}>{r}</li>)}
           </ul>
         </div>
       )}

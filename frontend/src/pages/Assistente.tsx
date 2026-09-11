@@ -89,14 +89,18 @@ function ConsentimentoPessoal({
   onDecidir: (ativar: boolean) => void;
 }) {
   const [enviando, setEnviando] = useState(false);
+  const [erroConsentimento, setErroConsentimento] = useState("");
 
   async function decidir(ativar: boolean) {
     setEnviando(true);
+    setErroConsentimento("");
     try {
       await api.put("/ai/ferramentas/consentimento", { ativar });
+      onDecidir(ativar);
+    } catch {
+      setErroConsentimento("Não foi possível salvar sua escolha. Nenhuma nova autorização foi confirmada. Tente novamente.");
     } finally {
       setEnviando(false);
-      onDecidir(ativar);
     }
   }
 
@@ -117,6 +121,7 @@ function ConsentimentoPessoal({
             fica salva e passa a valer assim que forem habilitadas.
           </p>
         )}
+        {erroConsentimento && <p role="alert">{erroConsentimento}</p>}
         <div style={{ display: "flex", gap: 8, marginTop: "0.8rem", flexWrap: "wrap" }}>
           <button className="botao" onClick={() => decidir(true)} disabled={enviando}>
             Ativar acesso à agenda e ao e-mail
@@ -132,6 +137,8 @@ function ConsentimentoPessoal({
 
 export default function Assistente() {
   const [status, setStatus] = useState<Status | null>(null);
+  const [erroStatus, setErroStatus] = useState("");
+  const [tentativaStatus, setTentativaStatus] = useState(0);
   const [modo, setModo] = useState<Modo | null>(null);
   const [mostrarConsentimento, setMostrarConsentimento] = useState(false);
   const [mensagens, setMensagens] = useState<Mensagem[]>([]);
@@ -152,8 +159,12 @@ export default function Assistente() {
   const requisicaoRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
-    api.get<Status>("/ai/status").then(setStatus).catch(() => setStatus(null));
-  }, []);
+    let ativo = true;
+    setErroStatus("");
+    api.get<Status>("/ai/status").then((value) => { if (ativo) setStatus(value); })
+      .catch(() => { if (ativo) setErroStatus("Não foi possível verificar a disponibilidade do Assistente. Nenhuma consulta foi enviada."); });
+    return () => { ativo = false; };
+  }, [tentativaStatus]);
   useEffect(() => {
     const caixa = conversaRef.current;
     if (!caixa) return;
@@ -186,6 +197,8 @@ export default function Assistente() {
   }
 
   async function abrirConversa(id: number) {
+    setErro("");
+    try {
     const c = await api.get<{
       modo: Modo;
       mensagens: { papel: "user" | "assistant"; conteudo: string; fontes: Fonte[]; fontes_pubmed: FontePubmed[] }[]
@@ -196,6 +209,9 @@ export default function Assistente() {
       fontesPubmed: m.fontes_pubmed?.length ? m.fontes_pubmed : undefined,
     })));
     setMostrarHistorico(false);
+    } catch {
+      setErro("Não foi possível abrir esta conversa. A conversa atual foi preservada; tente novamente.");
+    }
   }
 
   function novaConversa() {
@@ -206,9 +222,14 @@ export default function Assistente() {
 
   async function apagarConversa(id: number, e: React.MouseEvent) {
     e.stopPropagation();
-    await api.delete(`/ai/conversas/${id}`);
-    if (conversa === id) novaConversa();
-    if (modo) recarregarHistorico(modo);
+    setErro("");
+    try {
+      await api.delete(`/ai/conversas/${id}`);
+      if (conversa === id) novaConversa();
+      if (modo) recarregarHistorico(modo);
+    } catch {
+      setErro("Não foi possível apagar esta conversa. Ela foi preservada; tente novamente.");
+    }
   }
 
   async function enviar() {
@@ -284,6 +305,7 @@ export default function Assistente() {
     requisicaoRef.current?.abort();
   }
 
+  if (!status && erroStatus) return <section className="ia"><h1>Apoio CorVIA</h1><div className="cartao" role="alert"><p>{erroStatus}</p><button className="botao" onClick={() => setTentativaStatus((value) => value + 1)}>Tentar novamente</button></div></section>;
   if (!status) return <Carregando />;
 
   if (!status.ativo) {

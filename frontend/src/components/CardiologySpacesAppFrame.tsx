@@ -1,6 +1,6 @@
 import ClinicalChangeApprovalNotice from "./ClinicalChangeApprovalNotice";
 import FavoriteFunctionControl from "./FavoriteFunctionControl";
-import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { type FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 
@@ -179,6 +179,24 @@ export default function CardiologySpacesAppFrame() {
   const drawerRef = useRef<HTMLElement>(null);
   const drawerCloseRef = useRef<HTMLButtonElement>(null);
   const drawerTriggerRef = useRef<HTMLElement | null>(null);
+  const assistantTriggerRef = useRef<HTMLElement | null>(null);
+
+  const openAssistant = useCallback((trigger?: HTMLElement | null) => {
+    const source = trigger ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
+    assistantTriggerRef.current = source && drawerRef.current?.contains(source) ? drawerTriggerRef.current : source;
+    setDrawerOpen(false);
+    setAccountOpen(false);
+    setAssistantOpen(true);
+  }, []);
+  const closeAssistant = useCallback(() => setAssistantOpen(false), []);
+  const returnAssistantFocus = useCallback(() => {
+    const trigger = assistantTriggerRef.current;
+    if (trigger?.isConnected && trigger !== document.body && trigger.getClientRects().length > 0 && getComputedStyle(trigger).visibility !== "hidden") {
+      trigger.focus();
+    } else {
+      document.querySelector<HTMLButtonElement>(".atelier-taskbar__actions button")?.focus();
+    }
+  }, []);
 
   const catalogBySpace = useMemo(() => SPACE_ORDER.map((candidateSpace) => ({
     space: candidateSpace,
@@ -232,15 +250,19 @@ export default function CardiologySpacesAppFrame() {
   }, [location.pathname, location.search, location.hash, route.name, route.shortName, spaceMeta.label, usuario?.id]);
 
   useEffect(() => {
-    function openAssistant() { setDrawerOpen(false); setAccountOpen(false); setAssistantOpen(true); }
-    window.addEventListener("corvia:abrir-assistente-pessoal", openAssistant);
-    return () => window.removeEventListener("corvia:abrir-assistente-pessoal", openAssistant);
-  }, []);
+    function handleOpenAssistant() { openAssistant(); }
+    window.addEventListener("corvia:abrir-assistente-pessoal", handleOpenAssistant);
+    return () => window.removeEventListener("corvia:abrir-assistente-pessoal", handleOpenAssistant);
+  }, [openAssistant]);
 
   useEffect(() => {
     function keyboard(event: KeyboardEvent) {
       if ((event.ctrlKey || event.metaKey) && event.key.toLocaleLowerCase("pt-BR") === "k") {
         event.preventDefault();
+        // A busca de fundo não pode retirar o foco de um diálogo da página.
+        const modalOpen = Array.from(document.querySelectorAll<HTMLElement>('[aria-modal="true"], dialog[open]'))
+          .some((element) => element.getClientRects().length > 0 && getComputedStyle(element).visibility !== "hidden");
+        if (modalOpen) return;
         searchRef.current?.focus();
       }
       if (event.key === "Escape") {
@@ -264,7 +286,22 @@ export default function CardiologySpacesAppFrame() {
   useEffect(() => {
     document.body.classList.toggle("cv-overlay-open", drawerOpen || assistantOpen);
     if (!drawerOpen) return () => document.body.classList.remove("cv-overlay-open");
-    requestAnimationFrame(() => drawerCloseRef.current?.focus());
+    const drawer = drawerRef.current;
+    // A transição pode manter o controle oculto no primeiro frame.
+    // Transfira somente quando ele aceitar foco, sem atraso arbitrário.
+    function focusVisibleDrawer(event?: Event) {
+      if (event && event.target !== drawer) return;
+      const close = drawerCloseRef.current;
+      if (!close || getComputedStyle(close).visibility === "hidden") return;
+      if (!drawer?.contains(document.activeElement)) close.focus();
+      if (drawer?.contains(document.activeElement)) {
+        drawer.removeEventListener("transitionend", focusVisibleDrawer);
+        drawer.removeEventListener("transitioncancel", focusVisibleDrawer);
+      }
+    }
+    drawer?.addEventListener("transitionend", focusVisibleDrawer);
+    drawer?.addEventListener("transitioncancel", focusVisibleDrawer);
+    const openingFocusFrame = requestAnimationFrame(() => focusVisibleDrawer());
     function trap(event: KeyboardEvent) {
       if (event.key === "Escape") {
         event.preventDefault();
@@ -277,11 +314,15 @@ export default function CardiologySpacesAppFrame() {
       if (!controls.length) return;
       const first = controls[0];
       const last = controls[controls.length - 1];
-      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      if (!drawerRef.current?.contains(document.activeElement)) { event.preventDefault(); (event.shiftKey ? last : first).focus(); }
+      else if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     }
     document.addEventListener("keydown", trap);
     return () => {
+      cancelAnimationFrame(openingFocusFrame);
+      drawer?.removeEventListener("transitionend", focusVisibleDrawer);
+      drawer?.removeEventListener("transitioncancel", focusVisibleDrawer);
       document.removeEventListener("keydown", trap);
       document.body.classList.remove("cv-overlay-open");
     };
@@ -356,7 +397,7 @@ export default function CardiologySpacesAppFrame() {
           <button type="button" className="cv-all-functions" onClick={(event) => openDrawer(event.currentTarget)} aria-label="Todas as funções">
             <Icone nome="mais" /><span>Todas as funções</span>
           </button>
-          <button type="button" className="cv-assistant-launch" onClick={() => setAssistantOpen(true)} aria-label="Apoio CorVIA">
+          <button type="button" className="cv-assistant-launch" onClick={(event) => openAssistant(event.currentTarget)} aria-label="Apoio CorVIA">
             <span aria-hidden="true">✦</span><span>Apoio CorVIA</span>
           </button>
         </div>
@@ -442,7 +483,7 @@ export default function CardiologySpacesAppFrame() {
         <NavLink to="/prontuario"><Icone nome="pacientes" /><span>Prontuário</span></NavLink>
         <NavLink to="/documentos"><Icone nome="documento" /><span>Documentos</span></NavLink>
         <NavLink to="/busca?modo=tudo-com-tudo"><Icone nome="sincronizar" /><span>Tudo com Tudo</span></NavLink>
-        <button type="button" onClick={() => setAssistantOpen(true)}><Icone nome="assistente" /><span>Apoio CorVIA</span></button>
+        <button type="button" onClick={(event) => openAssistant(event.currentTarget)}><Icone nome="assistente" /><span>Apoio CorVIA</span></button>
       </nav>
 
       <div className={`cv-drawer-backdrop${drawerOpen ? " is-open" : ""}`} aria-hidden="true" onClick={() => closeDrawer(true)} />
@@ -453,7 +494,7 @@ export default function CardiologySpacesAppFrame() {
         </header>
         <div className="cv-drawer__intro"><span>UNIVERSO CORVIA</span><h2>Todas as funções, um único sistema.</h2><p>O ambiente muda. Suas ferramentas continuam conectadas.</p></div>
         <label className="cv-drawer__search"><Icone nome="busca" /><input type="search" value={catalogQuery} onChange={(event) => setCatalogQuery(event.target.value)} placeholder="Buscar função" /></label>
-        <button type="button" className="cv-drawer__assistant" onClick={() => { setDrawerOpen(false); setAssistantOpen(true); }}><span aria-hidden="true">✦</span><span><strong>Apoio CorVIA</strong><small>Leve seu contexto para o assistente</small></span><Icone nome="seta" /></button>
+        <button type="button" className="cv-drawer__assistant" onClick={(event) => openAssistant(event.currentTarget)}><span aria-hidden="true">✦</span><span><strong>Apoio CorVIA</strong><small>Leve seu contexto para o assistente</small></span><Icone nome="seta" /></button>
         <div className="cv-drawer__catalog">
           {filteredCatalog.map((section) => {
             const meta = CLINICAL_SPACES[section.space];
@@ -473,12 +514,12 @@ export default function CardiologySpacesAppFrame() {
       <nav className="cv-mobile-dock" aria-label="Navegação principal móvel">
         <NavLink to="/" end><Icone nome="hoje" /><span>Início</span></NavLink>
         <NavLink to={atelierHomeHref(context)}><Icone nome={spaceMeta.icon} /><span>{spaceMeta.label}</span></NavLink>
-        <button type="button" className="cv-mobile-dock__assistant" onClick={() => setAssistantOpen(true)}><span aria-hidden="true">✦</span><small>Apoio</small></button>
+        <button type="button" className="cv-mobile-dock__assistant" onClick={(event) => openAssistant(event.currentTarget)}><span aria-hidden="true">✦</span><small>Apoio</small></button>
         <NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink>
         <button type="button" onClick={(event) => openDrawer(event.currentTarget)} aria-expanded={drawerOpen}><Icone nome="mais" /><span>Mais</span></button>
       </nav>
 
-      <PersonalAssistantPanel aberto={assistantOpen} onClose={() => setAssistantOpen(false)} />
+      <PersonalAssistantPanel aberto={assistantOpen} onClose={closeAssistant} onReturnFocus={returnAssistantFocus} />
       <BoasVindas />
       {!emergency && <nav className="cv-utility-dock" aria-label="Chat e emergência">
         <ChatFlutuante placement="dock" />

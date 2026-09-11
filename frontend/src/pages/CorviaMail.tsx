@@ -355,21 +355,26 @@ function AbaEsqueciSenha() {
   const [endereco, setEndereco] = useState("");
   const [enviado, setEnviado] = useState(false);
   const [enviando, setEnviando] = useState(false);
+  const [erro, setErro] = useState("");
 
   async function enviar() {
+    if (enviando || !endereco.includes("@")) return;
     setEnviando(true);
+    setErro("");
     try {
       await apiEmail.post("/email/esqueci-senha", { endereco: endereco.trim().toLowerCase() });
+      setEnviado(true);
+    } catch {
+      setErro("Não foi possível solicitar a redefinição neste momento. Seu endereço foi preservado; tente novamente.");
     } finally {
       setEnviando(false);
-      setEnviado(true);
     }
   }
 
   return (
     <div className="cartao" style={{ marginTop: "1rem" }}>
       {enviado ? (
-        <p>
+        <p role="status">
           Se o endereço existir e estiver ativo, um link de redefinição foi enviado para o
           e-mail principal da sua conta Corvia — não para a própria caixa @corvia.med.br.
         </p>
@@ -377,6 +382,7 @@ function AbaEsqueciSenha() {
         <>
           <label htmlFor="endereco-recuperar">Endereço @corvia.med.br</label>
           <input id="endereco-recuperar" value={endereco} onChange={(e) => setEndereco(e.target.value)} />
+          {erro && <p role="alert">{erro}</p>}
           <button className="botao" style={{ width: "100%", marginTop: "1rem" }}
                   onClick={enviar} disabled={!endereco.includes("@") || enviando}>
             {enviando ? "Enviando…" : "Solicitar redefinição"}

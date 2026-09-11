@@ -30,6 +30,7 @@ from app.services.professional_profile import (
     professional_name,
 )
 from app.services.pdf.marca import LOGO, logo_disponivel
+from app.services.pdf.identidade_institucional import desenhar_identidade_institucional
 from app.services.pdf.wrapping import wrap_text
 
 log = logging.getLogger("meucardio.receita_controle_especial")
@@ -41,6 +42,10 @@ FUSO = ZoneInfo("America/Sao_Paulo")
 MODELO_VERSAO = "ANVISA-RCE-V2-2026-03-16"
 ALTURA_PRESCRICAO_UTIL = 84 * mm
 ALTURA_LINHA_OBSERVACAO = 3.8 * mm
+LARGURA_MARCA_CORVIA = 60 * mm
+ALTURA_MARCA_CORVIA = 24 * mm
+LARGURA_MARCA_PROFISSIONAL = 38 * mm
+ALTURA_MARCA_PROFISSIONAL = 34 * mm
 
 
 def _valor(source: Any, nome: str) -> Any:
@@ -167,16 +172,18 @@ def _campo(c: canvas.Canvas, y: float, rotulo: str, valor: str = "", *, tamanho:
     return y - 5 * mm
 
 
-def _logo_profissional(c: canvas.Canvas, medico: Any, x: float, y_topo: float) -> float:
+def _logo_profissional(c: canvas.Canvas, medico: Any, x: float, y_topo: float,
+                       *, altura_area: float = ALTURA_MARCA_PROFISSIONAL) -> float:
     caminho: Path | None = logo_path(_valor(medico, "document_logo_url"))
     if not caminho:
         return 0.0
     try:
         img = ImageReader(str(caminho))
         largura_px, altura_px = img.getSize()
-        largura = 25 * mm
-        altura = min(14 * mm, largura * altura_px / max(1, largura_px))
-        largura = altura * largura_px / max(1, altura_px)
+        escala = min(LARGURA_MARCA_PROFISSIONAL / max(1, largura_px),
+                     ALTURA_MARCA_PROFISSIONAL / max(1, altura_px))
+        largura, altura = largura_px * escala, altura_px * escala
+        y_topo -= max(0, altura_area - altura) / 2
         x -= largura / 2
         c.setFillColorRGB(1, 1, 1)
         c.rect(x, y_topo - altura, largura, altura, fill=1, stroke=0)
@@ -189,24 +196,28 @@ def _logo_profissional(c: canvas.Canvas, medico: Any, x: float, y_topo: float) -
         return 0.0
 
 
-def _logo_corvia(c: canvas.Canvas, x: float, y_topo: float) -> None:
-    """Mantém a identificação Corvia também no modelo físico controlado."""
+def _logo_corvia(c: canvas.Canvas, x: float, y_topo: float,
+                 *, altura_area: float = ALTURA_MARCA_PROFISSIONAL) -> float:
+    """Desenha a marca e retorna sua altura real, sem mudar a escala dos callers."""
     if not logo_disponivel():
-        return
+        return 0.0
     try:
         img = ImageReader(str(LOGO))
         largura_px, altura_px = img.getSize()
-        largura_maxima = 30 * mm
-        altura_maxima = 11 * mm
+        largura_maxima = LARGURA_MARCA_CORVIA
+        altura_maxima = ALTURA_MARCA_CORVIA
         escala = min(largura_maxima / max(1, largura_px), altura_maxima / max(1, altura_px))
         largura = largura_px * escala
         altura = altura_px * escala
+        y_topo -= max(0, altura_area - altura) / 2
         c.drawImage(
             img, x, y_topo - altura, width=largura, height=altura,
             preserveAspectRatio=True, mask="auto",
         )
+        return altura
     except (OSError, ValueError):
         log.warning("Logo institucional ilegível; RCE gerada sem a marca Corvia.")
+        return 0.0
 
 
 def _texto_item(indice: int, item: dict) -> tuple[str, str]:
@@ -337,7 +348,6 @@ def _cabecalho_receita(c: canvas.Canvas, *, medico: Any, destinatario: dict,
                       endereco_profissional: dict | None, c5: bool,
                       pagina: int, total_paginas: int) -> float:
     y = ALTURA - MARGEM_Y
-    _logo_corvia(c, MARGEM_X, y + 1 * mm)
     c.setFont("Helvetica-Bold", 16)
     c.drawCentredString(LARGURA / 2, y - 3 * mm, "RECEITA DE CONTROLE ESPECIAL")
     c.setFont("Helvetica-Bold", 8.2)
@@ -349,8 +359,7 @@ def _cabecalho_receita(c: canvas.Canvas, *, medico: Any, destinatario: dict,
 
     y = _secao(c, y, "IDENTIFICAÇÃO DO EMITENTE")
     topo_identidade = y
-    altura_logo = _logo_profissional(c, medico, LARGURA / 2, y + 1 * mm)
-    direita = LARGURA - MARGEM_X - 2 * mm
+    direita = LARGURA - MARGEM_X - 3 * mm
     largura_texto = 66 * mm
     campos = [
         (professional_name(medico), "Helvetica-Bold", 8.8),
@@ -367,14 +376,36 @@ def _cabecalho_receita(c: canvas.Canvas, *, medico: Any, destinatario: dict,
         campos.append((f"TELEFONE: {telefone}", "Helvetica", 8.2))
     if c5:
         campos.append((f"CPF DO PRESCRITOR: {_texto(_valor(medico, 'cpf'))}", "Helvetica", 8.2))
+    linhas_identidade = []
     for texto, fonte, tamanho in campos:
         if texto:
-            c.setFont(fonte, tamanho)
             for linha in _linhas(texto, fonte, tamanho, largura_texto):
-                c.drawRightString(direita, y, linha)
-                y -= 4 * mm
-    y = min(y, topo_identidade - altura_logo - 2 * mm)
-    y = min(y, ALTURA - 58 * mm)
+                linhas_identidade.append((linha, fonte, tamanho))
+    # The operator's legal text belongs directly below its own logo, entirely
+    # within the left column. Both marks share the same vertical image center;
+    # the frame grows to the tallest complete column, not to a full-width band.
+    esquerda = MARGEM_X + 3 * mm
+    topo_marcas = topo_identidade + 1 * mm
+    altura_corvia = _logo_corvia(c, esquerda, topo_marcas)
+    base_corvia = topo_marcas - altura_corvia
+    if altura_corvia:
+        base_corvia -= max(0, ALTURA_MARCA_PROFISSIONAL - altura_corvia) / 2
+    base_empresa = desenhar_identidade_institucional(
+        c, esquerda, base_corvia - 4 * mm, LARGURA_MARCA_CORVIA,
+    )
+    altura_identidade = max(
+        ALTURA_MARCA_PROFISSIONAL, len(linhas_identidade) * 4 * mm,
+        topo_identidade - base_empresa,
+    )
+    centro_profissional = MARGEM_X + 3 * mm + LARGURA_MARCA_CORVIA + 6 * mm + LARGURA_MARCA_PROFISSIONAL / 2
+    _logo_profissional(c, medico, centro_profissional, topo_marcas)
+    for linha, fonte, tamanho in linhas_identidade:
+        c.setFont(fonte, tamanho)
+        c.drawRightString(direita, y, linha)
+        y -= 4 * mm
+    y = min(y, topo_identidade - altura_identidade - 2 * mm)
+    c.rect(MARGEM_X, y, LARGURA - 2 * MARGEM_X,
+           topo_identidade + 3 * mm - y, fill=0, stroke=1)
 
     y = _secao(c, y, "IDENTIFICAÇÃO DO PACIENTE")
     y = _campo(c, y, "NOME COMPLETO:", _texto(destinatario.get("nome")), tamanho=9)

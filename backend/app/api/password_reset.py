@@ -29,7 +29,7 @@ def esqueci_senha(dados: SolicitacaoReset, background_tasks: BackgroundTasks, db
     a caixa ``@corvia.med.br`` usada como login.
     """
     user = account_recovery.encontrar_usuario_por_identificador(db, dados.email)
-    if user:
+    if user and not user.investidor:
         background_tasks.add_task(account_recovery.enviar_recuperacao_senha, user.id)
     return {
         "nota": "Se o endereço estiver vinculado a uma conta ativa, enviaremos um link de redefinição ao canal seguro cadastrado."
@@ -40,10 +40,17 @@ def esqueci_senha(dados: SolicitacaoReset, background_tasks: BackgroundTasks, db
 def reenviar_ativacao(dados: SolicitacaoReset, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
     """Item 2 do spec de e-mails transacionais — padrão anti-enumeração."""
     email = dados.email.strip().lower()
-    user = db.query(User).filter(User.email == email, User.is_active.is_(False)).first()
-    if user:
+    user = db.query(User).filter(User.email == email).first()
+    if _ativacao_permitida(user):
         background_tasks.add_task(emails.enviar_reenvio_ativacao, user.id)
-    return {"nota": "Se houver uma conta pendente de ativação com este e-mail, um novo link foi enviado."}
+    return {"nota": "Se houver uma conta elegível com este e-mail, enviaremos um novo link de acesso."}
+
+
+def _ativacao_permitida(user: User | None) -> bool:
+    # Não há estado separado de "aguardando ativação": aprovação administrativa
+    # já ativa a conta. Um token de boas-vindas só define senha; nunca pode
+    # revogar uma desativação administrativa, nem aprovar um cadastro pendente.
+    return bool(user and user.is_active and user.status == "aprovado" and not user.investidor)
 
 
 class EmailRecuperacaoPayload(BaseModel):
@@ -101,6 +108,8 @@ def admin_atualizar_email_recuperacao(
     user = db.get(User, user_id)
     if user is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    if user.investidor:
+        raise HTTPException(status_code=409, detail="Investidor não possui recuperação pessoal.")
     try:
         registro = account_recovery.definir_email_recuperacao(db, user, dados.recovery_email)
         db.commit()
@@ -198,6 +207,8 @@ def admin_criar_usuario_com_recuperacao(
     db: Session = Depends(get_db),
     admin: User = Depends(require_admin),
 ):
+    if dados.tipo_acesso == "investidor":
+        raise HTTPException(status_code=409, detail="Investidor não possui recuperação pessoal.")
     recovery_email = account_recovery.normalizar_email(dados.recovery_email)
     if account_recovery.email_ja_em_uso(db, recovery_email):
         raise HTTPException(status_code=409, detail="Este e-mail de recuperação já está vinculado a uma conta CorVIA.")
@@ -232,6 +243,12 @@ def redefinir_senha(dados: RedefinirSenha, background_tasks: BackgroundTasks, db
     if not registro or not registro.valido:
         raise HTTPException(status_code=400, detail="Link inválido ou expirado. Solicite um novo.")
 
+    user = db.get(User, registro.user_id)
+    if user is None or user.investidor:
+        raise HTTPException(status_code=400, detail="Link inválido ou expirado. Solicite um novo.")
+    if registro.alvo == "ativacao" and not _ativacao_permitida(user):
+        raise HTTPException(status_code=400, detail="Link inválido ou expirado. Solicite um novo.")
+
     if registro.alvo == "email":
         from app.models.email_account import EmailAccount
 
@@ -240,13 +257,8 @@ def redefinir_senha(dados: RedefinirSenha, background_tasks: BackgroundTasks, db
             raise HTTPException(status_code=400, detail="Link inválido.")
         conta.password_hash = hash_password(dados.nova_senha)
     else:
-        user = db.get(User, registro.user_id)
-        if not user:
-            raise HTTPException(status_code=400, detail="Link inválido.")
         user.password_hash = hash_password(dados.nova_senha)
-        if registro.alvo == "ativacao":
-            user.is_active = True
-        else:
+        if registro.alvo != "ativacao":
             background_tasks.add_task(emails.enviar_senha_alterada, user.id)
 
     registro.used = True

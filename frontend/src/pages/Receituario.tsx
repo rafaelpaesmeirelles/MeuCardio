@@ -157,7 +157,9 @@ function montarEnderecoCompleto(campos: {
 }
 
 function rotuloPrecoItem(item: Item) {
-  return item.price_label ?? formatarPreco(item.pmc_snapshot);
+  if (item.price_source === "kairos") return formatarPreco(item.price_min);
+  if (item.price_min != null && item.price_max != null) return formatarFaixaPreco(item.price_min, item.price_max);
+  return item.price_label ?? (item.pmc_snapshot != null ? formatarPreco(item.pmc_snapshot) : "Sem preço vinculado");
 }
 
 function baixarBlob(blob: Blob, nomeArquivo: string) {
@@ -573,6 +575,13 @@ const ITEM_VAZIO: Item = {
   posologia: "", orientacao: "", uso_continuo: false,
 };
 
+// A reference belongs to one presentation, not to the free text left in a field.
+const SEM_REFERENCIA_PRECO = {
+  pmc_snapshot: undefined, uf: undefined, cmed_version: undefined,
+  price_source: undefined, price_label: undefined, price_min: undefined, price_max: undefined,
+  price_reference: undefined, price_source_page: undefined,
+};
+
 export default function Receituario() {
   const [aba, setAba] = useState<"nova" | "historico">("nova");
   const [farmacos, setFarmacos] = useState<Farmaco[] | null>(null);
@@ -599,8 +608,10 @@ export default function Receituario() {
   const [sugestoesFarmaco, setSugestoesFarmaco] = useState<(Farmaco[] | undefined)[]>([[]]);
   const [marcaConsultada, setMarcaConsultada] = useState<(string | null)[]>([null]);
   const [apresentacoes, setApresentacoes] = useState<(RespostaApresentacoes | null | undefined)[]>([null]);
+  const [errosApresentacoes, setErrosApresentacoes] = useState<string[]>([""]);
   const temporizadoresBusca = useRef<(number | undefined)[]>([]);
   const sequenciasBusca = useRef<number[]>([0]);
+  const proximaConsulta = useRef(0);
   const { usuario } = useAuth();
 
   const [previa, setPrevia] = useState<Previa | null>(null);
@@ -649,22 +660,24 @@ export default function Receituario() {
 
   function atualizarItem(i: number, campo: keyof Item, valor: string | boolean | undefined) {
     setPrevia(null);
-    setItens((lista) => lista.map((it, idx) => idx === i ? { ...it, [campo]: valor } : it));
+    setItens((lista) => lista.map((it, idx) => idx === i
+      ? { ...it, ...(campo === "apresentacao" ? { ...SEM_REFERENCIA_PRECO, ggrem: undefined, cmed_apresentacao_id: undefined } : {}), [campo]: valor }
+      : it));
   }
 
   function buscarMedicamentos(i: number, valor: string) {
     setBuscaFarmaco((atuais) => atuais.map((item, indice) => indice === i ? valor : item));
     setMarcaConsultada((atuais) => atuais.map((item, indice) => indice === i ? null : item));
-    atualizarItem(i, "drug_slug", undefined);
-    // Some o cartão de confirmação "só CMED" (`it.cmed_apresentacao_id && !it.drug_slug`)
-    // assim que o médico volta a digitar — sem isto, ele ficava preso na
-    // tela mesmo depois de o texto de busca já não corresponder mais à
-    // apresentação escolhida antes.
-    atualizarItem(i, "cmed_apresentacao_id", undefined);
-    atualizarItem(i, "descricao", valor);
+    setPrevia(null);
+    setItens((atuais) => atuais.map((item, indice) => indice === i ? {
+      ...item, ...SEM_REFERENCIA_PRECO, drug_slug: undefined, cmed_apresentacao_id: undefined,
+      brand_name: undefined, manufacturer: undefined, ggrem: undefined,
+      descricao: valor, apresentacao: "",
+    } : item));
     setApresentacoes((atuais) => atuais.map((item, indice) => indice === i ? null : item));
+    setErrosApresentacoes((atuais) => atuais.map((item, indice) => indice === i ? "" : item));
 
-    const sequencia = (sequenciasBusca.current[i] ?? 0) + 1;
+    const sequencia = ++proximaConsulta.current;
     sequenciasBusca.current[i] = sequencia;
     if (temporizadoresBusca.current[i]) window.clearTimeout(temporizadoresBusca.current[i]);
     if (valor.trim().length < 2) {
@@ -711,8 +724,28 @@ export default function Receituario() {
     }, 180);
   }
 
+  function carregarApresentacoes(i: number, slug: string) {
+    const sequencia = ++proximaConsulta.current;
+    sequenciasBusca.current[i] = sequencia;
+    if (temporizadoresBusca.current[i]) window.clearTimeout(temporizadoresBusca.current[i]);
+    setApresentacoes((a) => a.map((v, idx) => idx === i ? undefined : v));
+    setErrosApresentacoes((a) => a.map((v, idx) => idx === i ? "" : v));
+    api.get<RespostaApresentacoes>(`/drugs/${encodeURIComponent(slug)}/apresentacoes${usuario?.council_state ? `?uf=${encodeURIComponent(usuario.council_state)}` : ""}`)
+      .then((r) => {
+        if (sequenciasBusca.current[i] !== sequencia) return;
+        setApresentacoes((a) => a.map((v, idx) => idx === i ? r : v));
+      })
+      .catch(() => {
+        if (sequenciasBusca.current[i] !== sequencia) return;
+        setApresentacoes((a) => a.map((v, idx) => idx === i ? null : v));
+        setErrosApresentacoes((a) => a.map((v, idx) => idx === i ? "Não foi possível consultar as apresentações e os preços. Tente novamente." : v));
+      });
+  }
+
   function escolherFarmaco(i: number, f: Farmaco) {
     setPrevia(null);
+    sequenciasBusca.current[i] = ++proximaConsulta.current;
+    if (temporizadoresBusca.current[i]) window.clearTimeout(temporizadoresBusca.current[i]);
     if (f.slug) {
       const precoCmed = precoCmedExibivel(f.preco);
       // Catálogo clínico: fluxo em 2 passos, como já era — escolhe o
@@ -735,10 +768,7 @@ export default function Receituario() {
       setBuscaFarmaco((b) => b.map((v, idx) => idx === i ? (f.marca ?? f.nome) : v));
       setMarcaConsultada((atuais) => atuais.map((valor, indice) => indice === i ? (f.marca ?? null) : valor));
       setSugestoesFarmaco((atuais) => atuais.map((valor, indice) => indice === i ? [] : valor));
-      setApresentacoes((a) => a.map((v, idx) => idx === i ? undefined : v));
-      api.get<RespostaApresentacoes>(`/drugs/${f.slug}/apresentacoes${usuario?.council_state ? `?uf=${usuario.council_state}` : ""}`)
-        .then((r) => setApresentacoes((a) => a.map((v, idx) => idx === i ? r : v)))
-        .catch(() => setApresentacoes((a) => a.map((v, idx) => idx === i ? null : v)));
+      carregarApresentacoes(i, f.slug);
       return;
     }
 
@@ -801,7 +831,7 @@ export default function Receituario() {
       uf: undefined,
       cmed_version: undefined,
       price_source: "kairos",
-      price_label: formatarFaixaPreco(ap.preco_minimo, ap.preco_maximo),
+      price_label: formatarPreco(ap.preco_minimo),
       price_min: ap.preco_minimo,
       price_max: ap.preco_maximo,
       price_reference: `edição ${fonte.edicao} · competência ${fonte.competencia}`,
@@ -835,6 +865,8 @@ export default function Receituario() {
     // sugestão já É a apresentação específica), então a única saída é
     // limpar o item por completo e deixar o médico buscar de novo.
     setPrevia(null);
+    sequenciasBusca.current[i] = ++proximaConsulta.current;
+    if (temporizadoresBusca.current[i]) window.clearTimeout(temporizadoresBusca.current[i]);
     setItens((lista) => lista.map((it, idx) => idx === i
       ? {
           drug_slug: undefined, cmed_apresentacao_id: undefined,
@@ -847,6 +879,7 @@ export default function Receituario() {
     setMarcaConsultada((atuais) => atuais.map((valor, indice) => indice === i ? null : valor));
     setSugestoesFarmaco((atuais) => atuais.map((valor, indice) => indice === i ? [] : valor));
     setApresentacoes((a) => a.map((v, idx) => idx === i ? null : v));
+    setErrosApresentacoes((a) => a.map((v, idx) => idx === i ? "" : v));
   }
 
   function adicionarItem() {
@@ -856,14 +889,19 @@ export default function Receituario() {
     setMarcaConsultada((b) => [...b, null]);
     sequenciasBusca.current.push(0);
     setApresentacoes((a) => [...a, null]);
+    setErrosApresentacoes((a) => [...a, ""]);
   }
 
   function removerItem(i: number) {
+    temporizadoresBusca.current.forEach((timer) => timer && window.clearTimeout(timer));
+    temporizadoresBusca.current = [];
+    sequenciasBusca.current = sequenciasBusca.current.filter((_, idx) => idx !== i).map(() => ++proximaConsulta.current);
     setItens((l) => l.filter((_, idx) => idx !== i));
     setBuscaFarmaco((b) => b.filter((_, idx) => idx !== i));
-    setSugestoesFarmaco((b) => b.filter((_, idx) => idx !== i));
+    setSugestoesFarmaco((b) => b.filter((_, idx) => idx !== i).map((value) => value ?? []));
     setMarcaConsultada((b) => b.filter((_, idx) => idx !== i));
-    setApresentacoes((a) => a.filter((_, idx) => idx !== i));
+    setApresentacoes((a) => a.filter((_, idx) => idx !== i).map((value) => value ?? null));
+    setErrosApresentacoes((a) => a.filter((_, idx) => idx !== i));
     setPrevia(null);
   }
 
@@ -898,7 +936,6 @@ export default function Receituario() {
   const itensValidos = itens.filter((it) => it.descricao.trim() || it.drug_slug || it.cmed_apresentacao_id);
   const itensComPreco = itensValidos.filter((it) => it.price_min != null || it.pmc_snapshot != null);
   const somaPrecosMinimos = itensComPreco.reduce((total, it) => total + (it.price_min ?? it.pmc_snapshot ?? 0), 0);
-  const somaPrecosMaximos = itensComPreco.reduce((total, it) => total + (it.price_max ?? it.pmc_snapshot ?? 0), 0);
   const somaPrecosParcial = itensComPreco.length > 0 && itensComPreco.length < itensValidos.length;
   const enderecoCompleto = montarEnderecoCompleto({
     cep, logradouro, numero, complemento, bairro, cidade, uf,
@@ -996,18 +1033,22 @@ export default function Receituario() {
           brand_name: i.brand_name ?? undefined,
           manufacturer: i.manufacturer ?? undefined,
           ggrem: i.ggrem ?? undefined,
-          pmc_snapshot: i.pmc_snapshot ?? undefined,
-          uf: i.uf ?? undefined,
-          cmed_version: i.cmed_version ?? undefined,
+          // A recreated prescription must not present an old commercial value as current.
+          ...SEM_REFERENCIA_PRECO,
         }))
       : [{ ...ITEM_VAZIO }];
     setItens(novosItens);
+    temporizadoresBusca.current.forEach((timer) => timer && window.clearTimeout(timer));
+    temporizadoresBusca.current = [];
+    sequenciasBusca.current = novosItens.map(() => ++proximaConsulta.current);
     setBuscaFarmaco(novosItens.map((item) =>
       farmacos?.find((f) => f.slug === item.drug_slug)?.nome ?? item.descricao,
     ));
     setApresentacoes(novosItens.map(() => null));
+    setErrosApresentacoes(novosItens.map(() => ""));
     setSugestoesFarmaco(novosItens.map(() => []));
     setMarcaConsultada(novosItens.map((item) => item.brand_name ?? null));
+    setAvisoOrigem("Medicamentos e apresentações recuperados. Para consultar preços da edição disponível, selecione novamente a apresentação; valores históricos não são apresentados como atuais.");
     setAba("nova");
   }
 
@@ -1156,7 +1197,7 @@ export default function Receituario() {
                       const generico = f.marca && normalizarBusca(f.marca) !== normalizarBusca(f.nome) ? f.nome : null;
                       return (
                         <button
-                          key={`${f.slug ?? "cmed"}:${f.cmed_apresentacao_id ?? ""}:${f.marca ?? ""}:${f.fabricante ?? ""}`}
+                          key={`${f.slug ?? "cmed"}:${f.cmed_apresentacao_id ?? ""}:${f.marca ?? ""}:${f.fabricante ?? ""}:${f.price_source ?? ""}:${f.apresentacao ?? ""}`}
                           type="button"
                           onClick={() => escolherFarmaco(i, f)}>
                           <span className="prescricao-sugestao__principal">
@@ -1174,10 +1215,10 @@ export default function Receituario() {
                             </small>
                           </span>
                           <span className="prescricao-sugestao__preco">
-                            <small className="prescricao-sugestao__rotulo">Preço de referência</small>
+                            <small className="prescricao-sugestao__rotulo">{f.price_source === "kairos" ? "Menor PMC publicado" : "Preço de referência"}</small>
                             <strong>{f.preco
                               ? f.price_source === "kairos"
-                                ? f.preco.rotulo
+                                ? formatarPreco(f.price_min)
                                 : precoCmedExibivel(f.preco).rotulo
                               : "Consultar apresentação"}</strong>
                             {f.preco && (
@@ -1198,7 +1239,7 @@ export default function Receituario() {
 
               {it.drug_slug && (() => {
                 const resp = apresentacoes[i];
-                if (it.brand_name) {
+                if (it.brand_name && it.apresentacao) {
                   return (
                     <div className="prescricao-selecao">
                       <p>
@@ -1207,7 +1248,7 @@ export default function Receituario() {
                       </p>
                       <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>{it.apresentacao}</p>
                       <small className="prescricao-selecao__fonte">
-                        Fonte {it.price_source === "kairos" ? "K@iros" : "CMED"}
+                        {it.price_source ? `Fonte ${it.price_source === "kairos" ? "K@iros" : "CMED"}` : "Selecione novamente a apresentação para consultar preços"}
                         {it.uf ? ` · ${it.uf}` : ""}
                         {it.price_reference ? ` · ${it.price_reference}` : it.cmed_version ? ` · referência ${it.cmed_version}` : ""}
                         {it.price_source_page ? ` · pág. ${it.price_source_page}` : ""}
@@ -1216,16 +1257,27 @@ export default function Receituario() {
                               onClick={() => voltarParaGenerico(i)}>
                         Usar genérico (sem marca)
                       </button>
+                      <button type="button" className="botao botao--secundario" onClick={() => {
+                        setPrevia(null);
+                        setItens((lista) => lista.map((item, indice) => indice === i ? { ...item, ...SEM_REFERENCIA_PRECO, brand_name: undefined, manufacturer: undefined, ggrem: undefined } : item));
+                        setMarcaConsultada((lista) => lista.map((item, indice) => indice === i ? null : item));
+                        carregarApresentacoes(i, it.drug_slug!);
+                      }}>Consultar apresentações e preços</button>
                     </div>
                   );
                 }
                 if (resp === undefined) {
                   return <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>Buscando marcas e preços…</p>;
                 }
+                if (errosApresentacoes[i]) return <div className="prescricao-preco-aviso" role="alert">
+                  <p>{errosApresentacoes[i]}</p>
+                  <button type="button" className="botao botao--secundario" onClick={() => carregarApresentacoes(i, it.drug_slug!)}>Tentar consultar preços novamente</button>
+                </div>;
                 if (!resp || (resp.apresentacoes.length === 0 && (resp.kairos?.opcoes.length ?? 0) === 0)) {
-                  return resp?.aviso
-                    ? <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>{resp.aviso}</p>
-                    : null;
+                  return <div className="prescricao-preco-aviso">
+                    <p>{resp?.aviso ?? "Sem apresentação com preço vinculada nas bases carregadas. Nenhum valor será estimado."}</p>
+                    {!resp && <button type="button" className="botao botao--secundario" onClick={() => carregarApresentacoes(i, it.drug_slug!)}>Consultar apresentações e preços</button>}
+                  </div>;
                 }
                 const marcaAlvo = normalizarBusca(marcaConsultada[i]);
                 const opcoes = marcaAlvo
@@ -1236,10 +1288,10 @@ export default function Receituario() {
                   : (resp.kairos?.opcoes ?? []);
                 if (marcaAlvo && opcoes.length === 0 && opcoesKairos.length === 0) {
                   return (
-                    <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
-                      A marca foi localizada no catálogo, mas não há apresentação vinculada a este
-                      princípio ativo na versão CMED carregada. Se necessário, selecione o genérico.
-                    </p>
+                    <div className="prescricao-preco-aviso">
+                      <p>A marca foi localizada, mas não há apresentação correspondente nas fontes carregadas. Consulte as opções vinculadas ao princípio ativo e escolha a apresentação explicitamente.</p>
+                      <button type="button" className="botao botao--secundario" onClick={() => setMarcaConsultada((lista) => lista.map((item, indice) => indice === i ? null : item))}>Ver apresentações disponíveis</button>
+                    </div>
                   );
                 }
                 return (
@@ -1249,7 +1301,7 @@ export default function Receituario() {
                       <section className="prescricao-apresentacoes__fonte prescricao-apresentacoes__fonte--kairos">
                         <header>
                           <strong>K@iros · edição {resp.kairos.edicao}</strong>
-                          <small>Competência {resp.kairos.competencia} · fonte mais recente disponível</small>
+                          <small>Competência {resp.kairos.competencia} · edição consultada</small>
                         </header>
                         <div className="prescricao-apresentacoes__lista">
                           {opcoesKairos.map((ap, ai) => (
@@ -1260,12 +1312,12 @@ export default function Receituario() {
                                 <small>{ap.laboratorio} · {ap.apresentacao}</small>
                               </span>
                               <strong className="prescricao-apresentacoes__preco">
-                                {formatarFaixaPreco(ap.preco_minimo, ap.preco_maximo)}
+                                {formatarPreco(ap.preco_minimo)}
                               </strong>
                             </button>
                           ))}
                         </div>
-                        <p>Faixa literal dos PMC publicados por alíquota de ICMS; nenhuma UF é presumida.</p>
+                        <p>Menor PMC publicado para cada apresentação, entre as alíquotas da edição. O valor aplicável pode variar conforme a UF; não é uma oferta de farmácia.</p>
                       </section>
                     )}
                     {opcoes.length > 0 && (
@@ -1457,11 +1509,12 @@ export default function Receituario() {
           <div className="prescricao-resumo__total">
             <span>
               <small>Soma de referência das apresentações{somaPrecosParcial ? " (parcial)" : ""}</small>
-              <strong>{itensComPreco.length > 0 ? formatarFaixaPreco(somaPrecosMinimos, somaPrecosMaximos) : "Indisponível"}</strong>
+              <strong>{itensComPreco.length > 0 ? formatarPreco(somaPrecosMinimos) : "Sem preço vinculado"}</strong>
             </span>
             <small>
-              K@iros é exibida como inteligência de mercado por edição; CMED/ANVISA permanece a referência regulatória oficial. Os valores não representam o preço final praticado pela farmácia.
+              Para a K@iros, usamos o menor PMC publicado de cada apresentação selecionada. Os valores variam conforme a alíquota e não representam o preço final da farmácia. CMED/ANVISA permanece a referência regulatória oficial.
             </small>
+            {itensComPreco.length === 0 && itensValidos.length > 0 && <small>Selecione uma apresentação com preço disponível. A cobertura da K@iros depende da edição carregada; nem todos os produtos estão incluídos.</small>}
           </div>
 
           <ul className="prescricao-resumo__checklist" aria-label="Conferência antes de gerar">

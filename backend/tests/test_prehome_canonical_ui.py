@@ -48,7 +48,7 @@ def test_signup_keeps_existing_functional_contract():
         "recovery_email", "cpf", "birth_date", "profession", "council_name",
         "council_number", "council_state", "specialty", "workplace_name",
         "workplace_department", "workplace_role", "workplace_notes",
-        "include_workplace_on_documents", "instagram_handle", "password",
+        "include_workplace_on_documents", "password",
     ):
         assert field in signup
     assert "/auth/solicitar-acesso-com-recuperacao" in signup

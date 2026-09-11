@@ -285,8 +285,9 @@ def ver_aplicacao(
         "documento_origem": checklist.documento_origem if checklist else None,
         "identificacao": run.identificacao_livre,
         "itens": run.itens_no_momento,
-        "marcados": run.marcados or [],
         "observacoes": run.observacoes,
         "finalizado_em": run.finalizado_em,
         **_pendencias(run.itens_no_momento or [], run.marcados or []),
+        # The detail editor needs snapshot IDs, not the summary's numeric count.
+        "marcados": run.marcados or [],
     }

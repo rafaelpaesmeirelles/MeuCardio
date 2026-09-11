@@ -112,7 +112,7 @@ def enviar_recuperacao_senha(user_id: int) -> bool:
     db = SessionLocal()
     try:
         user = db.get(User, user_id)
-        if user is None or not user.is_active:
+        if user is None or not user.is_active or user.investidor:
             return False
         token = _novo_token(db, user.id, horas=PRAZO_RECUPERACAO_HORAS)
         destino = destinatario_seguro(db, user)
@@ -134,7 +134,7 @@ def enviar_confirmacao_canal_recuperacao(user_id: int) -> bool:
     db = SessionLocal()
     try:
         user = db.get(User, user_id)
-        if user is None:
+        if user is None or user.investidor:
             return False
         destino = obter_email_recuperacao(db, user.id)
         if not destino:
@@ -167,7 +167,7 @@ def enviar_primeiro_acesso(user_id: int) -> bool:
     db = SessionLocal()
     try:
         user = db.get(User, user_id)
-        if user is None:
+        if user is None or user.investidor:
             return False
         destino = destinatario_seguro(db, user)
         token = _novo_token(db, user.id, horas=PRAZO_PRIMEIRO_ACESSO_HORAS)
@@ -188,12 +188,15 @@ def enviar_primeiro_acesso(user_id: int) -> bool:
         db.close()
 
 
-def enviar_acesso_aprovado(user_id: int) -> bool:
+def enviar_acesso_aprovado(user_id: int, *, reenvio: bool = False) -> bool:
     """Avisa quem se autocadastrou que o acesso foi liberado.
 
     A pessoa já escolheu a própria senha no cadastro; portanto não criamos nem
     transmitimos outra credencial. Informamos o login e o botão de acesso no
     segundo canal externo sempre que disponível.
+
+    Aprovações automáticas mantêm a deduplicação. Um reenvio solicitado pelo
+    administrador é uma nova tentativa, inclusive após corrigir o destinatário.
     """
     db = SessionLocal()
     try:
@@ -213,7 +216,7 @@ def enviar_acesso_aprovado(user_id: int) -> bool:
                 "link_login": f"{settings.public_url}/entrar",
             },
             user_id=user.id,
-            chave_idempotencia=f"acesso_aprovado:{user.id}",
+            chave_idempotencia=None if reenvio else f"acesso_aprovado:{user.id}",
         )
     finally:
         db.close()

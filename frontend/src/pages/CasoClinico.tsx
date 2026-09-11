@@ -41,7 +41,8 @@ export default function CasoClinico() {
   }, [slug]);
 
   async function responder() {
-    if (escolhida === null) return;
+    if (escolhida === null || enviando || resultado !== null) return;
+    setErro("");
     setEnviando(true);
     try {
       const r = await api.post<Resultado>(`/casos-clinicos/${slug}/responder`, {
@@ -55,7 +56,7 @@ export default function CasoClinico() {
     }
   }
 
-  if (erro) return <p role="alert" style={{ color: "var(--alerta)" }}>{erro}</p>;
+  if (erro && !caso) return <p role="alert" style={{ color: "var(--alerta)" }}>{erro}</p>;
   if (!caso) return <p>Carregando…</p>;
 
   return (
@@ -68,6 +69,8 @@ export default function CasoClinico() {
         {caso.nivel && ` · ${caso.nivel}`}
       </p>
       <h1>{caso.titulo}</h1>
+
+      {erro && <p role="alert" style={{ color: "var(--alerta)" }}>{erro}</p>}
 
       <div className="cartao" style={{ maxWidth: "72ch" }}>
         <Markdown remarkPlugins={[remarkGfm]}>{caso.enunciado}</Markdown>
@@ -97,7 +100,7 @@ export default function CasoClinico() {
               <button
                 key={i}
                 type="button"
-                disabled={revelada}
+                disabled={revelada || enviando}
                 onClick={() => setEscolhida(i)}
                 style={estilo}
               >

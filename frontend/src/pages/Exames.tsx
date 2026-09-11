@@ -39,11 +39,19 @@ export default function Exames() {
   const [totalEncontrados, setTotalEncontrados] = useState(0);
   const [nextOffset, setNextOffset] = useState<number | null>(null);
   const [carregandoMais, setCarregandoMais] = useState(false);
+  const [erro, setErro] = useState("");
+  const [erroTaxonomia, setErroTaxonomia] = useState("");
+  const [tentativa, setTentativa] = useState(0);
+  const [tentativaTaxonomia, setTentativaTaxonomia] = useState(0);
   const requisicao = useRef(0);
 
   useEffect(() => {
-    api.get<Taxonomia[]>("/lab-tests/taxonomy").then(setTaxonomia);
-  }, []);
+    let ativo = true;
+    setErroTaxonomia("");
+    api.get<Taxonomia[]>("/lab-tests/taxonomy").then((items) => { if (ativo) setTaxonomia(items); })
+      .catch(() => { if (ativo) setErroTaxonomia("Não foi possível carregar os filtros de exames. A busca por nome continua disponível."); });
+    return () => { ativo = false; };
+  }, [tentativaTaxonomia]);
 
   useEffect(() => {
     const id = ++requisicao.current;
@@ -51,6 +59,7 @@ export default function Exames() {
     setTotalEncontrados(0);
     setNextOffset(null);
     setCarregandoMais(false);
+    setErro("");
     const atraso = setTimeout(() => {
       const qs = new URLSearchParams({ limit: "200" });
       if (categoria) qs.set("category", categoria);
@@ -61,7 +70,7 @@ export default function Exames() {
         setItens(r.items);
         setTotalEncontrados(r.total);
         setNextOffset(r.next_offset);
-      });
+      }).catch(() => { if (requisicao.current === id) setErro("Não foi possível consultar os exames. Seus filtros foram preservados; tente novamente."); });
 
       const url = new URLSearchParams();
       if (categoria) url.set("tipo", categoria);
@@ -69,13 +78,14 @@ export default function Exames() {
       if (busca.trim()) url.set("q", busca.trim());
       setParams(url, { replace: true });
     }, 250);
-    return () => clearTimeout(atraso);
-  }, [categoria, subtipo, busca, setParams]);
+    return () => { clearTimeout(atraso); if (requisicao.current === id) requisicao.current += 1; };
+  }, [categoria, subtipo, busca, setParams, tentativa]);
 
   async function carregarMais() {
     if (nextOffset == null || carregandoMais) return;
     const id = requisicao.current;
     setCarregandoMais(true);
+    setErro("");
     const qs = new URLSearchParams({ limit: "200", offset: String(nextOffset) });
     if (categoria) qs.set("category", categoria);
     if (subtipo) qs.set("theme", subtipo);
@@ -86,6 +96,8 @@ export default function Exames() {
       setItens((atuais) => [...(atuais ?? []), ...pagina.items]);
       setTotalEncontrados(pagina.total);
       setNextOffset(pagina.next_offset);
+    } catch {
+      if (requisicao.current === id) setErro("Não foi possível carregar mais exames. Os resultados já carregados foram preservados.");
     } finally {
       if (requisicao.current === id) setCarregandoMais(false);
     }
@@ -150,6 +162,7 @@ export default function Exames() {
       </div>
 
       <ClinicalSection eyebrow="Encontrar exame" title="Do nome ao contexto diagnóstico" description="Filtros compactos preservam a área de leitura e funcionam melhor no celular.">
+        {erroTaxonomia && <div className="cartao" role="alert"><p>{erroTaxonomia}</p><button className="botao" onClick={() => setTentativaTaxonomia((value) => value + 1)}>Tentar carregar filtros novamente</button></div>}
         <div className="cc-filter-grid cc-filter-grid--3">
           <label>
             <span>Nome, tipo ou assunto</span>
@@ -174,7 +187,8 @@ export default function Exames() {
       </ClinicalSection>
 
       <ClinicalSection eyebrow="Catálogo" title={subtipo || (categoria ? rotuloTipo(categoria) : "Marcadores e exames cardiológicos")} description="Abra um item para revisar indicação, interpretação, limitações e fontes.">
-        {itens === null ? (
+        {erro && <div className="cartao" role="alert"><p>{erro}</p><button className="botao" onClick={() => { if (itens === null) setTentativa((value) => value + 1); else void carregarMais(); }}>Tentar consultar exames novamente</button></div>}
+        {itens === null ? erro ? null : (
           <Carregando texto="Consultando exames…" />
         ) : itens.length === 0 ? (
           <ClinicalEmpty title="Nenhum exame encontrado" description="Tente outro termo, tipo ou subtipo." />

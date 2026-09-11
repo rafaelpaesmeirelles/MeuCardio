@@ -1,4 +1,6 @@
 from types import SimpleNamespace
+from pathlib import Path
+from functools import partial
 
 from app.services.pricing.kairos_provider import (
     KairosProvider,
@@ -6,6 +8,15 @@ from app.services.pricing.kairos_provider import (
     prescription_options_for,
     records_for_drug,
 )
+
+
+# Historical audited extract: additional products in the active full issue must
+# not change the exact matching/price assertions below.
+SNAPSHOT_FIXTURE = Path(__file__).parent / "fixtures/kairos-453-2026-08-cardiovascular.json"
+load_snapshot = partial(load_snapshot, path=SNAPSHOT_FIXTURE)
+records_for_drug = partial(records_for_drug, path=SNAPSHOT_FIXTURE)
+prescription_options_for = partial(prescription_options_for, path=SNAPSHOT_FIXTURE)
+KairosProvider = partial(KairosProvider, path=SNAPSHOT_FIXTURE)
 
 
 class FakeDb:

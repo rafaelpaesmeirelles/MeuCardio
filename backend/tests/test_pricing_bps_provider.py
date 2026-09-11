@@ -2,7 +2,7 @@
 arquitetura multi-fonte de preços (issue #52).
 
 Nunca faz chamada de rede real nos testes — o cliente HTTP é sempre
-mockado (mesmo padrão de test_instagram_handle.py), mesmo o endpoint real
+mockado, mesmo o endpoint real
 tendo sido confirmado funcionando ao vivo nesta sessão.
 """
 from datetime import datetime, timezone

@@ -88,7 +88,7 @@
     border-radius: 0;
   }
   .ccc-reference-board .ccc-reference-commute__map .deslocamento-mapa__google,
-  .ccc-reference-board .ccc-reference-commute__map .deslocamento-mapa svg {
+  .ccc-reference-board .ccc-reference-commute__map .deslocamento-mapa > svg {
     width: 100%;
     height: 100% !important;
     min-height: 100% !important;

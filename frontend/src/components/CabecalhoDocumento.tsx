@@ -19,7 +19,19 @@ type Medico = {
   include_workplace_on_documents?: boolean;
 };
 
-export default function CabecalhoDocumento({ medico }: { medico: Medico }) {
+export type OperadoraDocumento = {
+  razao_social: string;
+  cnpj: string;
+  logradouro: string;
+  numero: string;
+  complemento?: string | null;
+  bairro: string;
+  cidade: string;
+  uf: string;
+  cep: string;
+};
+
+export default function CabecalhoDocumento({ medico, operadora }: { medico: Medico; operadora: OperadoraDocumento }) {
   const registro = [medico.council_name, medico.council_number].filter(Boolean).join(" ");
   const uf = medico.council_state ? `/${medico.council_state}` : "";
   const nomeBase = medico.professional_title
@@ -46,6 +58,13 @@ export default function CabecalhoDocumento({ medico }: { medico: Medico }) {
         {registro && <span className="doc-cabecalho__registro">{registro}{uf}{medico.rqe && ` · RQE ${medico.rqe}`}</span>}
         {medico.specialty && <span className="doc-cabecalho__especialidade">{medico.specialty}</span>}
         {local.map((linha) => <span key={linha}>{linha}</span>)}
+      </div>
+      <div className="doc-cabecalho__operadora">
+        <span className="doc-cabecalho__operadora-titulo">Operadora da plataforma CorVIA</span>
+        <strong>{operadora.razao_social}</strong>
+        <span>CNPJ {operadora.cnpj}</span>
+        <span>{operadora.logradouro}, {operadora.numero}{operadora.complemento ? ` — ${operadora.complemento}` : ""} — {operadora.bairro}</span>
+        <span>{operadora.cidade}/{operadora.uf} — CEP {operadora.cep}</span>
       </div>
     </header>
   );

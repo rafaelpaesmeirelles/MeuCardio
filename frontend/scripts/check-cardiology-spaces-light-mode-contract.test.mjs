@@ -339,6 +339,25 @@ test("o seletor oferece exatamente dark e light como um grupo de rádio acessív
   );
 });
 
+test("a aparência usa pérola e grafite com ícones vetoriais, sem cenografia orbital", () => {
+  const selector = readRequired("src/components/CorviaThemeSelector.tsx");
+  const toggle = readRequired("src/components/GalaxyThemeToggle.tsx");
+  const atelier = readRequired("src/styles/corvia-atelier.css");
+
+  assert.match(selector, /Aparência do CorVIA/);
+  assert.match(selector, /label:\s*"Claro",\s*description:\s*"Superfície perolada"/);
+  assert.match(selector, /label:\s*"Escuro",\s*description:\s*"Grafite acolhedor"/);
+  assert.match(selector, /<Icone nome="configuracao"/);
+  assert.match(selector, /aria-label=\{`Modo \$\{option\.label/);
+  assert.doesNotMatch(selector, /APARÊNCIA DO UNIVERSO|Imersão cósmica|Observatório orbital|__orbit/);
+  assert.match(toggle, /onClick=\{toggleTheme\}/);
+  assert.match(toggle, /type="button"/);
+  assert.match(toggle, /aria-label=/);
+  assert.match(toggle, /<Icone nome=\{theme === "light" \? "sol" : "lua"\}/);
+  assert.doesNotMatch(toggle, /MiniUniverseCanvas|<img|<canvas|galaxy-approved-canonical/);
+  assert.match(atelier, /#root \.corvia-theme-selector button\[role="radio"\][^{]*\{[^}]*min-height:\s*64px\s*!important/s);
+});
+
 test("a aparência continua no login e na conta, independente dos três modos de organização", () => {
   const view = readRequired("src/components/AtelierHomeView.tsx");
   const frame = readRequired("src/components/CardiologySpacesAppFrame.tsx");
@@ -433,7 +452,7 @@ test("a cascata preserva contraste legado e aplica Atelier por último com conte
   const surfaces = readRequired("src/styles/corvia-atelier-surfaces.css");
   const imports = [...main.matchAll(/^\s*import\s+["']([^"']+\.css)["'];?/gm)].map((match) => match[1]);
   const expected = ["./styles/corvia-theme-selector.css", "./styles/clinical-form-control-contrast.css",
-    "./styles/cardiology-spaces-light-mode.css", "./styles/corvia-atelier.css", "./styles/corvia-atelier-content.css", "./styles/corvia-atelier-surfaces.css"];
+    "./styles/cardiology-spaces-light-mode.css", "./styles/corvia-atelier.css", "./styles/corvia-atelier-content.css", "./styles/corvia-atelier-surfaces.css", "./styles/corvia-atelier-mobility.css"];
   for (let index = 0; index < expected.length; index += 1) {
     assert.ok(imports.includes(expected[index]), expected[index] + " precisa permanecer importado");
     if (index) assert.ok(imports.indexOf(expected[index - 1]) < imports.indexOf(expected[index]));

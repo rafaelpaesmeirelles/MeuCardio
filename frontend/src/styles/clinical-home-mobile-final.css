@@ -73,7 +73,7 @@
   .ccc-mobile-commute__map .deslocamento-painel { display: block; min-width: 0; }
   .ccc-mobile-commute__map .deslocamento-mapa { min-height: 150px; height: 150px; border-radius: 8px; overflow: hidden; }
   .ccc-mobile-commute__map .deslocamento-mapa__google { min-height: 150px; height: 150px; }
-  .ccc-mobile-commute__map .deslocamento-mapa svg { width: 100%; height: 150px; display: block; }
+  .ccc-mobile-commute__map .deslocamento-mapa > svg { width: 100%; height: 150px; display: block; }
   .ccc-mobile-commute__map .deslocamento-rotas,
   .ccc-mobile-commute__map .deslocamento-mapa__legenda { display: none; }
   .ccc-mobile-commute__map .deslocamento-mapa__fonte { font-size: .42rem; }

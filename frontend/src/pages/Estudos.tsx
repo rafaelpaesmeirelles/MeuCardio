@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import EditorialDocumentList from "../components/EditorialDocumentList";
-import { api } from "../lib/api";
-import { Carregando } from "../components/Estado";
+import { api, ApiError } from "../lib/api";
+import { Carregando, Erro } from "../components/Estado";
 import { areaDaCardiologia } from "../lib/taxonomiaCardiologia";
 import {
   ClinicalContextLink,
@@ -48,20 +48,31 @@ export default function Estudos() {
   const [totalEncontrados, setTotalEncontrados] = useState(0);
   const [nextOffset, setNextOffset] = useState<number | null>(null);
   const [carregandoMais, setCarregandoMais] = useState(false);
+  const [erro, setErro] = useState("");
+  const [erroFiltros, setErroFiltros] = useState("");
+  const [tentativa, setTentativa] = useState(0);
+  const [tentativaFiltros, setTentativaFiltros] = useState(0);
   const requisicao = useRef(0);
 
   useEffect(() => {
+    let ativo = true;
+    setErroFiltros("");
     Promise.all([
       api.get<Tipo[]>("/studies/types"),
       api.get<Tema[]>("/studies/themes"),
     ]).then(([tiposResposta, temasResposta]) => {
+      if (!ativo) return;
       setTipos(tiposResposta);
       setTemas(temasResposta);
+    }).catch((error) => {
+      if (ativo) setErroFiltros(error instanceof ApiError ? error.message : "Não foi possível carregar os filtros de estudos.");
     });
-  }, []);
+    return () => { ativo = false; };
+  }, [tentativaFiltros]);
 
   useEffect(() => {
     const id = ++requisicao.current;
+    setErro("");
     setItens(null);
     setTotalEncontrados(0);
     setNextOffset(null);
@@ -77,15 +88,18 @@ export default function Estudos() {
         setItens(r.items);
         setTotalEncontrados(r.total);
         setNextOffset(r.next_offset);
+      }).catch((error) => {
+        if (requisicao.current === id) setErro(error instanceof ApiError ? error.message : "Não foi possível carregar os estudos.");
       });
     }, 250);
-    return () => clearTimeout(atraso);
-  }, [tipo, tema, busca]);
+    return () => { clearTimeout(atraso); ++requisicao.current; };
+  }, [tipo, tema, busca, tentativa]);
 
   async function carregarMais() {
     if (!itens || carregandoMais || nextOffset == null) return;
     const id = requisicao.current;
     setCarregandoMais(true);
+    setErro("");
     const qs = new URLSearchParams({ limit: "500", offset: String(nextOffset) });
     if (tipo) qs.set("study_type", tipo);
     if (tema) qs.set("theme", tema);
@@ -96,6 +110,8 @@ export default function Estudos() {
       setItens((atuais) => [...(atuais ?? []), ...pagina.items]);
       setTotalEncontrados(pagina.total);
       setNextOffset(pagina.next_offset);
+    } catch (error) {
+      if (requisicao.current === id) setErro(error instanceof ApiError ? error.message : "Não foi possível carregar mais estudos. Tente novamente.");
     } finally {
       if (requisicao.current === id) setCarregandoMais(false);
     }
@@ -106,13 +122,13 @@ export default function Estudos() {
     // backend não recebe esse agrupamento, percorremos as páginas restantes ao
     // selecionar uma área para não produzir um falso “nenhum resultado” com
     // base apenas nos 500 primeiros estudos.
-    if (area && itens && nextOffset != null && !carregandoMais) {
+    if (area && itens && nextOffset != null && !carregandoMais && !erro) {
       void carregarMais();
     }
     // `carregarMais` usa o cursor e o id da requisição corrente; incluí-la na
     // lista recriaria o efeito em todo render sem alterar esse contrato.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [area, itens?.length, nextOffset, carregandoMais]);
+  }, [area, itens?.length, nextOffset, carregandoMais, erro]);
 
   const areas = useMemo(() => {
     const agrupadas = new Map<string, { id: string; label: string; count: number }>();
@@ -154,6 +170,7 @@ export default function Estudos() {
       </div>
 
       <ClinicalSection eyebrow="Encontrar evidência" title="Filtre o que importa" description="Busca e assunto filtram as duas coleções. Área da Cardiologia e desenho filtram os registros estruturados do catálogo de estudos; os documentos da Biblioteca possuem classificação editorial própria.">
+        {erroFiltros && <div><Erro mensagem={erroFiltros} /><button type="button" className="botao botao--secundario" onClick={() => setTentativaFiltros(value => value + 1)}>Tentar carregar filtros novamente</button></div>}
         <div className="cc-filter-grid cc-filter-grid--4">
           <label>
             <span>Buscar estudo ou patologia</span>
@@ -188,8 +205,9 @@ export default function Estudos() {
       </ClinicalSection>
 
       <ClinicalSection eyebrow="Resultados" title={tipo ? humanizarTipo(tipo) : "Trabalhos científicos"} description={tema || (area ? areas.find((item) => item.id === area)?.label : "Navegue do estudo para evidências, diretrizes e contexto clínico.")}>
+        {erro && <div><Erro mensagem={erro} /><button type="button" className="botao botao--secundario" disabled={carregandoMais} onClick={() => itens === null ? setTentativa(value => value + 1) : void carregarMais()}>Tentar carregar estudos novamente</button></div>}
         {visiveis === null ? (
-          <Carregando texto="Consultando literatura…" />
+          !erro && <Carregando texto="Consultando literatura…" />
         ) : visiveis.length === 0 ? (
           <ClinicalEmpty title="Nenhum estudo encontrado" description="Tente outro termo ou remova um dos filtros." />
         ) : (

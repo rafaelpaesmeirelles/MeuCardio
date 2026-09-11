@@ -8,6 +8,7 @@ AuditLog. Chaves de provedor ficam exclusivamente no servidor.
 from __future__ import annotations
 
 from datetime import datetime, timezone
+import math
 from typing import Any
 from urllib.parse import quote
 
@@ -24,16 +25,73 @@ def _coordinates(latitude: float, longitude: float) -> tuple[float, float]:
 
 
 def _seconds(value: str | int | float | None) -> int | None:
-    if value is None:
+    if value is None or isinstance(value, bool):
         return None
-    if isinstance(value, (int, float)):
-        return max(0, round(value))
     if isinstance(value, str) and value.endswith("s"):
         try:
-            return max(0, round(float(value[:-1])))
+            value = float(value[:-1])
         except ValueError:
             return None
+    if isinstance(value, (int, float)) and math.isfinite(value) and value >= 0:
+        return round(value)
     return None
+
+
+def _provider_json(response: httpx.Response) -> dict[str, Any]:
+    try:
+        payload = response.json()
+    except ValueError:
+        raise ConnectorError("traffic_invalid_response", "O provedor de trânsito retornou uma resposta inválida.") from None
+    if not isinstance(payload, dict) or not isinstance(payload.get("routes", []), list):
+        raise ConnectorError("traffic_invalid_response", "O provedor de trânsito retornou uma resposta inválida.")
+    return payload
+
+
+def _route_metrics(route: dict[str, Any], distance_field: str) -> tuple[int, int]:
+    duration = _seconds(route.get("duration"))
+    distance = route.get(distance_field)
+    if (duration is None or isinstance(distance, bool)
+            or not isinstance(distance, (int, float)) or not math.isfinite(distance) or distance < 0):
+        raise ConnectorError("traffic_invalid_response", "O provedor não retornou duração e distância válidas para a rota.")
+    return duration, round(distance)
+
+
+def _geometry_available(geometry: dict[str, Any]) -> bool:
+    """Validate the provider polyline without synthesizing or persisting a path."""
+    if geometry.get("format") != "encoded_polyline" or geometry.get("precision") not in (5, 6):
+        return False
+    value = geometry.get("value")
+    if not isinstance(value, str) or not value:
+        return False
+    scale = 10 ** geometry["precision"]
+    index, latitude, longitude = 0, 0, 0
+    first, distinct = None, False
+    while index < len(value):
+        delta = []
+        for _ in range(2):
+            number, shift = 0, 0
+            while True:
+                if index >= len(value) or shift > 30:
+                    return False
+                byte = ord(value[index]) - 63
+                index += 1
+                if not 0 <= byte <= 63:
+                    return False
+                number |= (byte & 31) << shift
+                if byte < 32:
+                    break
+                shift += 5
+            delta.append(~(number >> 1) if number & 1 else number >> 1)
+        latitude += delta[0]
+        longitude += delta[1]
+        if not (-90 * scale <= latitude <= 90 * scale and -180 * scale <= longitude <= 180 * scale):
+            return False
+        point = (latitude, longitude)
+        if first is None:
+            first = point
+        elif point != first:
+            distinct = True
+    return distinct
 
 
 def _congestion(delay_seconds: int, typical_seconds: int | None) -> str:
@@ -77,6 +135,7 @@ def _finalize_routes(routes: list[dict[str, Any]]) -> list[dict[str, Any]]:
         route["rank"] = index + 1
         route["recommended"] = index == 0
         route["extra_time_seconds"] = max(0, route["duration_seconds"] - fastest)
+        route["geometry_available"] = _geometry_available(route.get("geometry") or {})
     return routes
 
 
@@ -113,26 +172,28 @@ def _google_routes(origin: tuple[float, float], destination: tuple[float, float]
         follow_redirects=False,
     )
     if not response.is_success:
-        raise ConnectorError("traffic_provider_error", f"Google Routes HTTP {response.status_code}.", retryable=response.status_code >= 500)
-    parsed = response.json()
+        raise ConnectorError("traffic_provider_error", f"Google Routes HTTP {response.status_code}.", retryable=response.status_code >= 500 or response.status_code in (408, 429))
+    parsed = _provider_json(response)
     routes: list[dict[str, Any]] = []
     for index, route in enumerate(parsed.get("routes", [])[:3]):
-        duration = _seconds(route.get("duration")) or 0
+        duration, distance = _route_metrics(route, "distanceMeters")
         typical = _seconds(route.get("staticDuration"))
         delay = max(0, duration - (typical or duration))
-        intervals = route.get("travelAdvisory", {}).get("speedReadingIntervals") or []
+        advisory = route.get("travelAdvisory") or {}
+        intervals = advisory.get("speedReadingIntervals") or []
+        polyline = route.get("polyline")
         routes.append({
             "provider_rank": index + 1,
             "duration_seconds": duration,
             "typical_duration_seconds": typical,
             "traffic_delay_seconds": delay,
-            "distance_meters": round(route.get("distanceMeters") or 0),
+            "distance_meters": distance,
             "congestion": _congestion(delay, typical),
             "summary": route.get("description") or ("Rota principal" if index == 0 else f"Alternativa {index}"),
             "labels": route.get("routeLabels") or [],
             "geometry": {
                 "format": "encoded_polyline",
-                "value": route.get("polyline", {}).get("encodedPolyline") or "",
+                "value": (polyline.get("encodedPolyline") or "") if isinstance(polyline, dict) else "",
                 "precision": 5,
             },
             "traffic_segments": [
@@ -167,13 +228,15 @@ def _mapbox_routes(origin: tuple[float, float], destination: tuple[float, float]
         follow_redirects=False,
     )
     if not response.is_success:
-        raise ConnectorError("traffic_provider_error", f"Mapbox HTTP {response.status_code}.", retryable=response.status_code >= 500)
-    parsed = response.json()
+        raise ConnectorError("traffic_provider_error", f"Mapbox HTTP {response.status_code}.", retryable=response.status_code >= 500 or response.status_code in (408, 429))
+    parsed = _provider_json(response)
+    if parsed.get("code") == "NoRoute":
+        return {"provider": "Mapbox", "routes": []}
     if parsed.get("code") != "Ok":
-        raise ConnectorError("traffic_provider_error", str(parsed.get("message") or parsed.get("code"))[:300])
+        raise ConnectorError("traffic_provider_error", "O Mapbox não conseguiu calcular a rota solicitada.")
     routes: list[dict[str, Any]] = []
     for index, route in enumerate(parsed.get("routes", [])[:3]):
-        duration = _seconds(route.get("duration")) or 0
+        duration, distance = _route_metrics(route, "distance")
         legs = route.get("legs") or []
         typical_values = [leg.get("duration_typical") for leg in legs if leg.get("duration_typical") is not None]
         typical = _seconds(sum(typical_values)) if typical_values else None
@@ -187,7 +250,7 @@ def _mapbox_routes(origin: tuple[float, float], destination: tuple[float, float]
             "duration_seconds": duration,
             "typical_duration_seconds": typical,
             "traffic_delay_seconds": delay,
-            "distance_meters": round(route.get("distance") or 0),
+            "distance_meters": distance,
             "congestion": _congestion(delay, typical),
             "summary": ", ".join(filter(None, (leg.get("summary") for leg in legs))) or f"Rota {index + 1}",
             "labels": [],
@@ -220,14 +283,21 @@ def traffic_eta(
             "routes": [],
             "tips": [],
         }
-    if settings.traffic_provider == "google_routes":
-        result = _google_routes(origin, destination)
-    elif settings.traffic_provider == "mapbox":
-        result = _mapbox_routes(origin, destination)
-    else:
-        raise ConnectorError("unsupported_traffic_provider", "Provedor de trânsito inválido.", status_code=409)
+    try:
+        if settings.traffic_provider == "google_routes":
+            result = _google_routes(origin, destination)
+        elif settings.traffic_provider == "mapbox":
+            result = _mapbox_routes(origin, destination)
+        else:
+            raise ConnectorError("unsupported_traffic_provider", "Provedor de trânsito inválido.", status_code=409)
+    except httpx.HTTPError:
+        # HTTP exception text can contain the requested URL and coordinates.
+        raise ConnectorError("traffic_provider_unavailable", "O provedor de trânsito está temporariamente indisponível.", retryable=True, status_code=503) from None
+    except (ValueError, TypeError, AttributeError, OverflowError):
+        raise ConnectorError("traffic_invalid_response", "O provedor de trânsito retornou uma resposta inválida.") from None
     result.update({
-        "status": "live",
+        "status": ("no_route" if not result["routes"] else "live"
+                   if any(route["geometry_available"] for route in result["routes"]) else "geometry_unavailable"),
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "tips": _tips(result["routes"], arrival_buffer_minutes),
     })
