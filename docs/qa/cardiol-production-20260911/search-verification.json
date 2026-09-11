@@ -1,0 +1,30 @@
+{
+  "verification": "production search and bibliographic reader access",
+  "search": [
+    {
+      "doi": "10.36660/abc.20250618",
+      "front": "publicacao_original",
+      "found_original": true,
+      "total": 1
+    },
+    {
+      "doi": "10.36660/abc.20260565",
+      "front": null,
+      "found_original": true,
+      "total": 1
+    }
+  ],
+  "fa_first_page_document": {
+    "slug": "diretriz-brasileira-de-fibrilacao-atrial-2025-sbc-sobrac",
+    "original_readable_via_source": true
+  },
+  "calculators": {
+    "framingham-global": "implementada",
+    "framingham-imc": "implementada",
+    "prevent": "referencia_externa",
+    "score2": "referencia_externa",
+    "score2-op": "referencia_externa",
+    "score2-diabetes": "referencia_externa",
+    "sbc-risco-cardiovascular": "verificacao_humana_necessaria"
+  }
+}
