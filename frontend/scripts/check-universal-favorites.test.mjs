@@ -14,12 +14,12 @@ const temp = await mkdtemp(path.join(tmpdir(), 'corvia-universal-favorites-'));
 await symlink(path.join(root, 'node_modules'), path.join(temp, 'node_modules'));
 after(() => rm(temp, { recursive: true, force: true }));
 const compile = source => ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ES2022, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX } }).outputText;
-await writeFile(path.join(temp, 'favorites.mjs'), compile(await readFile(path.join(root, 'src/lib/favorites.ts'), 'utf8')));
+await writeFile(path.join(temp, 'favorite-utils.mjs'), compile(await readFile(path.join(root, 'src/lib/favorites.ts'), 'utf8')));
 for (const [name, file] of [['Button', 'src/components/BotaoFavorito.tsx'], ['Favorites', 'src/pages/Favoritos.tsx']]) {
   let source = await readFile(path.join(root, file), 'utf8');
-  source = source.replace('import { api } from "../lib/api";', 'const api = { get: (...args) => globalThis.favoriteFixture.get(...args), post: (...args) => globalThis.favoriteFixture.post(...args), delete: (...args) => globalThis.favoriteFixture.delete(...args) };');
+  source = source.replace(/import \{ api(?:, READ_TIMEOUT_MS)? \} from "\.\.\/lib\/api";/, 'const READ_TIMEOUT_MS = 15000; const api = { get: (...args) => globalThis.favoriteFixture.get(...args), post: (...args) => globalThis.favoriteFixture.post(...args), delete: (...args) => globalThis.favoriteFixture.delete(...args) };');
   source = source.replace('import { useAuth } from "../lib/auth";', 'const useAuth = () => ({ usuario: globalThis.favoriteFixture.user });');
-  source = source.replace('"../lib/favorites"', '"./favorites.mjs"');
+  source = source.replace('"../lib/favorites"', '"./favorite-utils.mjs"');
   source = source.replace(/import "\.\.\/styles\/[^\"]+";/g, '');
   source = source.replace('import { Carregando, Vazio } from "../components/Estado";', 'const Carregando = () => <p>Carregando…</p>; const Vazio = props => <p>{props.titulo} {props.acao}</p>;');
   source = source.replace('import("../components/ScientificReadingAccess")', 'Promise.resolve({ default: props => <span data-reading-type={props.entityType} data-reading-slug={props.slug} data-lazy={props.lazy} /> })');
@@ -66,7 +66,7 @@ test('button checks one target, posts slug once under double click and deletes f
 test('failed status remains unknown and disabled until explicit retry succeeds', async t => {
   let count = 0; const calls = setup({ get: async () => { if (++count === 1) throw Error('offline'); return { favorited: true, favorite_id: 5, available: true }; } });
   const renderer = await mount(t);
-  assert.equal(button(renderer, 'Consultando').props.disabled, true);
+  assert.equal(button(renderer, 'Favorito não consultado').props.disabled, true);
   assert.equal(renderer.root.findAllByProps({ role: 'alert' }).length, 1);
   assert.equal(calls.filter(item => item[0] === 'post').length, 0);
   await act(async () => { button(renderer, 'Tentar novamente').props.onClick(); });

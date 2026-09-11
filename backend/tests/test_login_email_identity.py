@@ -54,7 +54,17 @@ def test_signup_rejects_another_accounts_recovery_login(route, client, db, criar
     if route.endswith("/solicitar-acesso"):
         payload.pop("recovery_email")
     response = client.post(route, json=payload)
-    assert response.status_code == 409, response.text
+    if route == "/api/auth/solicitar-acesso":
+        # O middleware canônico encerra a URL legada antes do handler: não
+        # reabrir cadastro sem segundo canal para exercitar o conflito abaixo.
+        assert response.status_code == 410, response.text
+        assert response.json()["detail"] == (
+            "Este fluxo de cadastro foi substituído. Use o cadastro atual, "
+            "que exige um segundo e-mail externo para recuperação de acesso."
+        )
+        assert response.headers["cache-control"] == "no-store"
+    else:
+        assert response.status_code == 409, response.text
     db.expire_all()
     assert db.query(User).filter(User.email == payload["email"]).first() is None
     assert no_email == []

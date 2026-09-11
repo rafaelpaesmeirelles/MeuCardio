@@ -1101,3 +1101,111 @@ Acrescentados **15 casos integrados** para a CI PostgreSQL isolada, incluindo
 quatro corridas login/recuperação com commit ou rollback, espera observada
 em `pg_locks` e confirmação das notificações por outra sessão. Estes 15
 casos ainda aguardam a CI; não foram executados contra produção.
+
+### Novo lote de Pesquisa — evidência enviada pelo usuário em 11/09, 19:39–19:41
+
+As novas fotos revelaram estados não cobertos adequadamente pela auditoria
+anterior. A publicação da PR935 foi retida; a execução já iniciada da CI não
+foi cancelada, repetida ou usada como evidência de código posterior.
+
+**Causa funcional confirmada em produção, por leitura de logs agregados:**
+entre 22:30 e 23:05 UTC ocorreram 17 exceções de esgotamento do pool SQLAlchemy
+(5 conexões regulares + 10 adicionais, espera de 30 s). Os 17 tracebacks
+apontam o lookup síncrono de `InvestidorEphemeralUxMiddleware` na linha 84 da
+versão publicada, chamando `usuario_por_token_app` na linha 226. Os eventos
+HTTP estruturados mostraram máximos de 91.373 ms em `/billing/status`,
+121.347 ms em `/casos-clinicos` e 182.230 ms em `/favorites/status`, com seis
+respostas 500 registradas para favorito. A consulta agregada de atividade
+PostgreSQL posterior não indicou transações longas ativas naquele instante.
+Não foram lidos ou publicados cookies, corpos, dados clínicos, identidades
+de usuários nem valores de consulta; não houve reinício do servidor.
+
+O lookup bloqueante dentro de middleware assíncrono podia impedir o próprio
+event loop de concluir requisições e devolver conexões. A correção move
+criação/consulta/fechamento de sessão para o mesmo worker, devolvendo apenas
+booleano ou resposta já serializada. O middleware efêmero deixa de consultar
+banco em rotas que não intercepta. A barreira ReadOnly continua verificando
+todas as APIs autenticadas; token, revogação, sessão única, bloqueios de
+operações e agenda sintética são preservados. Erro DB não concede acesso.
+
+O teste isolado de concorrência falhou contra a classe anterior e passou
+contra a corrigida. **8/8 testes ASGI/threadpool** passaram, incluindo 24
+requisições concorrentes com apenas duas sessões simuladas, progresso do
+event loop, afinidade de thread e fechamento antes de delegar. São testes
+de concorrência/control flow com Starlette real, não carga no PostgreSQL de
+produção. Revisão independente do delta sem P1/P2 identificado.
+
+**Correções visuais reproduzidas no DOM:**
+
+- O marcador de espaço do `ClinicalPageHeader` preservava `position:absolute`
+  legado: sobreposição de aproximadamente 11 px com o conteúdo do hero em
+  Estudos, Diretrizes e Evidências a 390 px. Passa a ocupar sua própria linha
+  no grid, com quebra natural, mantendo a composição Atelier.
+- `filtros-conteudo` recebia fundo pérola, mas herdava texto violeta quase
+  branco. Corrigido o par fundo/texto, também nos usos compartilhados.
+- `hoje__temas` na Biblioteca ainda usava gradiente noturno rosa e texto
+  pálido. Cartões passam a pérola/grafite com rótulos completos e estados de
+  foco/hover coerentes, sem alterar destinos ou dados.
+- Nos testes de falha foram descobertos também h1/eyebrow do gate comercial
+  e contadores de Casos com contraste insuficiente; incluídos no mesmo lote.
+
+**Recuperação de leituras:** deadline de 15 s e cancelamento são opt-in para
+GETs afetadas; POST, upload, download e streams longos não recebem retry ou
+prazo global novo. Favorito não diz mais “Consultando” após falha e permanece
+bloqueado até consultar estado válido. O gate comercial não monta IA sem
+autorização explícita. Casos são exibidos progressivamente, preservando a
+primeira página se uma seguinte falhar; erro e repetição ficam visíveis.
+Respostas atrasadas de detalhes não podem aparecer sob outro slug.
+
+Validação inicial deste recorte: **10 testes novos React/API**, **5 regressões
+selecionadas** e **4 cenários Playwright** de deadline real, falha e repetição
+aprovados. A matriz visual clara passou em 320/390/768/1440 px para Estudos,
+Diretrizes, Evidências, Casos e Biblioteca: 20 verificações, zero sobreposição
+ou overflow e contraste mínimo medido de 5,37:1 no conjunto avaliado. Capturas
+de elementos podem incluir navegação fixa deslocada pelo recorte; medições
+do viewport completo não reproduziram clipping dos docks, que não foram
+alterados. APIs dos navegadores são fixtures locais, sem escrita clínica,
+envio de e-mail ou execução de IA; isso não certifica serviços externos.
+
+**Resultado da CI193305a1:** execução 34652406676 terminou com 3.871 passed,
+4 skipped, 1 failed. A única falha esperava 409 no endpoint legado
+`/api/auth/solicitar-acesso`, cujo middleware canônico exige 410 Gone.
+Corrigida somente a expectativa desse teste (410, mensagem e no-store),
+mantendo 409 no endereço atual, nenhuma conta criada e nenhum e-mail
+enviado. Prova isolada 3/3 aprovada. O resultado falho não é certificado
+completo; HTTP/backup-restauração ficaram pendentes nessa execução.
+
+O novo ajuste produtivo de middleware exige validação do candidato final;
+não se reutiliza certificado de outro SHA nem exceção histórica da PR934.
+Nenhuma publicação deste novo lote está declarada nesta seção.
+
+**Fechamento local do lote de Pesquisa:** a matriz completa passou em seis
+rotas, quatro larguras (320, 390, 768 e 1440 px) e duas aparências: **48
+verificações**, sem sobreposição, overflow, controles cortados ou erros de
+JavaScript no recorte. Contraste mínimo medido: **5,37:1**. Mais seis vistas
+a 390 px passaram com espaçamento de texto ampliado. No pacote compilado,
+seis páginas a 390 px e os três detalhes científicos a 390/1440 px passaram;
+o corpus usado nas fixtures veio dos arquivos canônicos, sem edição clínica.
+Essas verificações locais não comprovam transporte/autenticação em produção.
+
+O conjunto funcional foi ampliado para **30 casos novos React/API** (10 de
+carregamento e 20 de leituras científicas), além dos oito ASGI/threadpool.
+Passaram também os contratos focais existentes de favorito/gate (5), lista
+editorial (4), favorito privado (4), monitor (6) e orçamento de IA (4).
+Os casos de deadline usam API/React reais e relógio controlado; os quatro
+cenários Playwright anteriores exercitaram o prazo real de 15 segundos.
+
+A revisão independente encontrou e a implementação corrigiu três corridas
+adicionais: resultado de análise concluída escondido após falha só da
+releitura; alerta marcado como lido revertido visualmente por GET atrasado;
+e retry de detalhe concorrendo com uma nova operação de IA. Resultado
+confirmado é preservado, leitura reconciliada e handlers/controles impedem
+as operações concorrentes. Retry não repete POST nem reutiliza autorização
+de cobrança. Após cada ajuste foram repetidos somente os casos afetados.
+
+TypeScript e Vite build aprovados; a guarda final de concorrência em IA
+exigiu recompilar esse último delta, sem repetir a matriz visual. Permanece
+o aviso de bundles grandes do projeto, não um erro de compilação. Sem
+migration, mudança de dependências, workflows, conteúdo ou dados de usuários.
+O candidato integrado seguirá à CI formal uma vez; o certificado exato deve
+ser reaproveitado na promoção a main, sem duplicar a suíte de backend.

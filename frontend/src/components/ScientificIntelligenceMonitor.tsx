@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { api } from "../lib/api";
+import { api, READ_TIMEOUT_MS } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { intelligenceHealthLabel, scientificDate, scientificSourceUrl, type IntelligenceStatus } from "../lib/scientificIntelligence";
 import Icone from "./Icone";
@@ -15,11 +15,12 @@ export default function ScientificIntelligenceMonitor({ compact = false }: { com
   const [attempt, setAttempt] = useState(0);
   useEffect(() => {
     let active = true;
+    const controller = new AbortController();
     setStatus(null); setError(false);
-    api.get<IntelligenceStatus>("/guideline-updates/status").then(value => {
+    api.get<IntelligenceStatus>("/guideline-updates/status", { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal }).then(value => {
       if (active) setStatus(value);
     }).catch(() => { if (active) setError(true); });
-    return () => { active = false; };
+    return () => { active = false; controller.abort(); };
   }, [usuario?.id, attempt]);
   const coverage = status?.coverage;
   const documents = status?.document_processing;

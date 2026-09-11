@@ -4,7 +4,7 @@ import { useAuth } from "../lib/auth";
 import BotaoFavorito from "../components/BotaoFavorito";
 import PrivateScientificOriginal from "../components/PrivateScientificOriginal";
 import { formatBRL } from "../lib/commercialPlans";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 import { ClinicalPageHeader, ClinicalSection } from "../components/ClinicalCommandPrimitives";
 
 type DocumentQuote = {
@@ -79,38 +79,72 @@ function ScientificDocumentWorkspace() {
   const [file, setFile] = useState<File | null>(null);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
+  const [listError, setListError] = useState("");
+  const [listLoading, setListLoading] = useState(true);
+  const [listAttempt, setListAttempt] = useState(0);
+  const [detailError, setDetailError] = useState("");
+  const [detailLoading, setDetailLoading] = useState(false);
+  const [detailAttempt, setDetailAttempt] = useState(0);
+  const listRequest = useRef(0);
+  const detailRequest = useRef(0);
   const [quote, setQuote] = useState<(DocumentQuote & { documentId: number }) | null>(null);
 
   async function refresh(documentId = selected?.id) {
-    const rows = await api.get<ScientificDocument[]>("/documentos-cientificos-ia");
-    setItems(rows);
-    if (documentId) {
-      const detail = await api.get<ScientificDocument>(`/documentos-cientificos-ia/${documentId}`);
-      if (requestedRef.current === documentId) setSelected(detail);
+    const id = ++listRequest.current;
+    const detailId = detailRequest.current;
+    let refreshed = true;
+    setListLoading(true); setListError("");
+    try {
+      const rows = await api.get<ScientificDocument[]>("/documentos-cientificos-ia", { timeoutMs: READ_TIMEOUT_MS });
+      if (listRequest.current === id) setItems(rows);
+    } catch (error) {
+      if (listRequest.current === id) setListError(erroTexto(error));
+      refreshed = false;
+    } finally {
+      if (listRequest.current === id) setListLoading(false);
     }
+    if (documentId && requestedRef.current === documentId && detailRequest.current === detailId) {
+      setDetailError("");
+      try {
+        const detail = await api.get<ScientificDocument>(`/documentos-cientificos-ia/${documentId}`, { timeoutMs: READ_TIMEOUT_MS });
+        if (requestedRef.current === documentId && detailRequest.current === detailId) setSelected(detail);
+      } catch (error) {
+        if (requestedRef.current === documentId && detailRequest.current === detailId) setDetailError(erroTexto(error));
+        refreshed = false;
+      }
+    }
+    return refreshed;
   }
 
   useEffect(() => {
-    let active = true;
-    api.get<ScientificDocument[]>("/documentos-cientificos-ia").then(rows => { if (active) setItems(rows); })
-      .catch(error => { if (active) setMessage(erroTexto(error)); });
-    return () => { active = false; };
-  }, []);
+    const id = ++listRequest.current;
+    const controller = new AbortController();
+    setListLoading(true); setListError("");
+    api.get<ScientificDocument[]>("/documentos-cientificos-ia", { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal })
+      .then(rows => { if (listRequest.current === id) setItems(rows); })
+      .catch(error => { if (listRequest.current === id) setListError(erroTexto(error)); })
+      .finally(() => { if (listRequest.current === id) setListLoading(false); });
+    return () => { ++listRequest.current; controller.abort(); };
+  }, [listAttempt]);
 
   useEffect(() => {
     let active = true;
-    setSelected(null); setQuote(null); setMessage("");
+    const controller = new AbortController();
+    ++detailRequest.current;
+    // Retry de leitura preserva uma resposta já confirmada para o mesmo item.
+    setSelected(current => current?.id === requestedDocument ? current : null);
+    setQuote(null); setMessage(""); setDetailError("");
     if (rawDocument !== null && requestedDocument === null) {
-      setBusy(false); setMessage("O endereço do documento é inválido.");
+      setDetailLoading(false); setDetailError("O endereço do documento é inválido.");
     } else if (requestedDocument !== null) {
-      setBusy(true);
-      api.get<ScientificDocument>(`/documentos-cientificos-ia/${requestedDocument}`).then(detail => {
+      setDetailLoading(true);
+      api.get<ScientificDocument>(`/documentos-cientificos-ia/${requestedDocument}`, { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal }).then(detail => {
         if (active) setSelected(detail);
-      }).catch(error => { if (active) setMessage(erroTexto(error)); })
-        .finally(() => { if (active) setBusy(false); });
-    } else setBusy(false);
-    return () => { active = false; };
-  }, [rawDocument, requestedDocument]);
+      }).catch(error => { if (active) setDetailError(erroTexto(error)); })
+        .finally(() => { if (active) setDetailLoading(false); });
+    } else setDetailLoading(false);
+    return () => { active = false; ++detailRequest.current; controller.abort(); };
+  }, [rawDocument, requestedDocument, detailAttempt]);
 
   useEffect(() => {
     if (!selected || selected.id !== requestedDocument || !["original", "resumo", "traduzido"].includes(reading ?? "")) return;
@@ -120,41 +154,47 @@ function ScientificDocumentWorkspace() {
   }, [selected?.id, requestedDocument, reading]);
 
   async function upload() {
-    if (!file) return;
+    if (!file || busy || detailLoading) return;
+    const context = detailRequest.current;
     setBusy(true); setMessage(""); setQuote(null);
     try {
       const row = await api.upload<ScientificDocument>("/documentos-cientificos-ia", "arquivo", file);
+      if (detailRequest.current !== context) return;
       setFile(null);
-      const detail = await api.get<ScientificDocument>(`/documentos-cientificos-ia/${row.id}`);
+      const detail = await api.get<ScientificDocument>(`/documentos-cientificos-ia/${row.id}`, { timeoutMs: READ_TIMEOUT_MS });
+      if (detailRequest.current !== context) return;
       setSelected(detail);
       setParams({ document: String(row.id) });
       await refresh(row.id);
-      setMessage("Arquivo salvo de forma privada. Agora você pode solicitar a análise da IA.");
-    } catch (error) { setMessage(erroTexto(error)); }
+      if (requestedRef.current === row.id) setMessage("Arquivo salvo de forma privada. Agora você pode solicitar a análise da IA.");
+    } catch (error) { if (detailRequest.current === context) setMessage(erroTexto(error)); }
     finally { setBusy(false); }
   }
 
   async function estimate() {
-    if (!selected || busy) return;
+    if (!selected || busy || detailLoading) return;
+    const context = detailRequest.current;
     setBusy(true); setMessage(""); setQuote(null);
     try {
       const result = await api.post<DocumentQuote>(`/documentos-cientificos-ia/${selected.id}/orcamento`);
+      if (detailRequest.current !== context) return;
       if (result.currency !== "BRL" || !Number.isSafeInteger(result.quote_id) ||
           !Number.isSafeInteger(result.maximum_credit_centavos) || result.maximum_credit_centavos < 0 ||
           !Number.isSafeInteger(result.available_credit_centavos) || !Number.isFinite(Date.parse(result.expires_at))) {
         throw new Error("invalid quote");
       }
       setQuote({ ...result, documentId: selected.id });
-    } catch (error) { setMessage(erroTexto(error)); }
+    } catch (error) { if (detailRequest.current === context) setMessage(erroTexto(error)); }
     finally { setBusy(false); }
   }
 
   async function analyze() {
-    if (!selected || busy || !quote || quote.documentId !== selected.id) return;
+    if (!selected || busy || detailLoading || !quote || quote.documentId !== selected.id) return;
     if (Date.parse(quote.expires_at) <= Date.now()) {
       setQuote(null); setMessage("O orçamento expirou. Calcule um novo orçamento antes de analisar."); return;
     }
     if (quote.maximum_credit_centavos > quote.available_credit_centavos) return;
+    const context = detailRequest.current;
     setBusy(true); setMessage("Analisando o documento e preparando a versão em português…");
     const acceptedQuote = quote;
     setQuote(null);
@@ -162,10 +202,13 @@ function ScientificDocumentWorkspace() {
       const detail = await api.post<ScientificDocument>(`/documentos-cientificos-ia/${selected.id}/analisar`, {
         quote_id: acceptedQuote.quote_id, approved_max_credit_centavos: acceptedQuote.maximum_credit_centavos,
       });
+      if (detailRequest.current !== context) return;
       setSelected(detail);
-      await refresh(selected.id);
       setMessage("Análise concluída. O original permanece privado na sua biblioteca.");
-    } catch (error) { setMessage(erroTexto(error)); }
+      const refreshed = await refresh(selected.id);
+      if (detailRequest.current !== context) return;
+      if (!refreshed) setMessage("Análise concluída. A atualização da biblioteca está indisponível; o resultado confirmado foi preservado. Tente novamente apenas a leitura.");
+    } catch (error) { if (detailRequest.current === context) setMessage(erroTexto(error)); }
     finally { setBusy(false); }
   }
 
@@ -175,16 +218,20 @@ function ScientificDocumentWorkspace() {
   }
 
   async function incorporate() {
-    if (!selected) return;
+    if (!selected || busy || detailLoading) return;
     if (!window.confirm("Incorporar este documento ao acervo compartilhado do CorVIA e ao Tudo com Tudo?")) return;
+    const context = detailRequest.current;
     setBusy(true); setMessage("");
     try {
       const result = await api.uploadFormulario<{ incorporated: boolean; duplicate: boolean; slug?: string }>(
         `/documentos-cientificos-ia/${selected.id}/incorporar`, [], { confirm_incorporation: "true" },
       );
-      await refresh();
-      setMessage(result.duplicate ? "O documento já estava representado no acervo CorVIA." : "Documento incorporado ao acervo e conectado ao Tudo com Tudo.");
-    } catch (error) { setMessage(erroTexto(error)); }
+      if (detailRequest.current !== context) return;
+      const refreshed = await refresh();
+      if (detailRequest.current !== context) return;
+      setMessage((result.duplicate ? "O documento já estava representado no acervo CorVIA." : "Documento incorporado ao acervo e conectado ao Tudo com Tudo.")
+        + (refreshed ? "" : " A atualização da biblioteca está indisponível. Tente novamente apenas a leitura."));
+    } catch (error) { if (detailRequest.current === context) setMessage(erroTexto(error)); }
     finally { setBusy(false); }
   }
 
@@ -205,13 +252,15 @@ function ScientificDocumentWorkspace() {
       <ClinicalSection eyebrow="Novo documento" title="Carregar arquivo científico" description="PDF, DOCX, PPTX, TXT ou CSV · até 25 MB.">
         <div className="cc-filter-grid cc-filter-grid--3">
           <label style={{ gridColumn: "span 2" }}><span>Arquivo</span><input type="file" accept=".pdf,.docx,.pptx,.txt,.csv" onChange={(e) => setFile(e.target.files?.[0] ?? null)} /></label>
-          <button className="btn primario" type="button" disabled={!file || busy} onClick={() => void upload()}>{busy ? "Processando…" : "Salvar na biblioteca"}</button>
+          <button className="btn primario" type="button" disabled={!file || busy || detailLoading} onClick={() => void upload()}>{busy ? "Processando…" : "Salvar na biblioteca"}</button>
         </div>
         {message && <p className="texto-secundario" role="status">{message}</p>}
       </ClinicalSection>
 
       <div className="cc-context-grid" style={{ alignItems: "start" }}>
         <ClinicalSection eyebrow="Sua biblioteca" title={`${items.length} documento(s)`}>
+          {listLoading && <p role="status">Consultando biblioteca privada…</p>}
+          {listError && <div role="alert"><p>{listError}</p><button type="button" className="btn" onClick={() => setListAttempt(value => value + 1)}>Tentar carregar biblioteca novamente</button></div>}
           <div className="lista-simples">
             {items.map((item) => (
               <button key={item.id} type="button" className="item-lista" disabled={busy} onClick={() => void selectDocument(item.id)}>
@@ -219,20 +268,22 @@ function ScientificDocumentWorkspace() {
                 <small>{item.document_type} · {item.analysis_status}{item.incorporation_status === "incorporado" ? " · incorporado" : ""}</small>
               </button>
             ))}
-            {items.length === 0 && <p className="texto-secundario">Nenhum documento enviado ainda.</p>}
+            {items.length === 0 && !listLoading && !listError && <p className="texto-secundario">Nenhum documento enviado ainda.</p>}
           </div>
         </ClinicalSection>
 
         <ClinicalSection eyebrow="Análise" title={selected?.id === requestedDocument ? selected.title : "Selecione um documento"}>
-          {!selected || selected.id !== requestedDocument ? <p className="texto-secundario">Abra um item da sua biblioteca para analisar ou revisar depois.</p> : (
+          {detailLoading && <p role="status">Carregando documento…</p>}
+          {detailError && <div role="alert"><p>{detailError}</p>{requestedDocument !== null && <button type="button" className="btn" disabled={busy} onClick={() => { if (!busy) setDetailAttempt(value => value + 1); }}>Tentar carregar documento novamente</button>}</div>}
+          {!selected || selected.id !== requestedDocument ? (!detailLoading && !detailError && <p className="texto-secundario">Abra um item da sua biblioteca para analisar ou revisar depois.</p>) : (
             <div className="stack">
               <div className="acoes-linha">
                 <BotaoFavorito itemType="documento_cientifico_privado" itemId={selected.id} />
                 <button className="btn" type="button" onClick={() => selectReading("original")}>Abrir original</button>
                 <button className="btn" type="button" onClick={() => selectReading("resumo")}>Resumo em português</button>
                 <button className="btn" type="button" onClick={() => selectReading("traduzido")}>Tradução em português</button>
-                <button className="btn primario" type="button" disabled={busy || selected.analysis_status === "processando"} onClick={() => void estimate()}>{quote ? "Atualizar orçamento" : "Calcular orçamento de IA"}</button>
-                {selected.incorporation_recommended && selected.incorporation_status === "aguardando_consentimento" && <button className="btn" type="button" disabled={busy} onClick={() => void incorporate()}>Autorizar incorporação ao CorVIA</button>}
+                <button className="btn primario" type="button" disabled={busy || detailLoading || selected.analysis_status === "processando"} onClick={() => void estimate()}>{quote ? "Atualizar orçamento" : "Calcular orçamento de IA"}</button>
+                {selected.incorporation_recommended && selected.incorporation_status === "aguardando_consentimento" && <button className="btn" type="button" disabled={busy || detailLoading} onClick={() => void incorporate()}>Autorizar incorporação ao CorVIA</button>}
               </div>
 
               {reading === "original" && <div id="leitura-privada-original" tabIndex={-1}><PrivateScientificOriginal key={selected.id} documentId={selected.id} title={selected.title} /></div>}
@@ -243,7 +294,7 @@ function ScientificDocumentWorkspace() {
                 <p>Saldo disponível: {formatBRL(quote.available_credit_centavos)}. O teto inclui a análise e eventual tradução integral. Uso efetivo debitado; restante liberado.</p>
                 <p className="texto-secundario">O cálculo do orçamento não consome créditos. Ao confirmar, você autoriza o uso de IA até esse valor.</p>
                 {quote.maximum_credit_centavos > quote.available_credit_centavos && <p role="status">Saldo ou limite disponível insuficiente. <Link to="/assinatura">Consultar créditos e limite de uso</Link>.</p>}
-                <button className="btn primario" type="button" disabled={busy || quote.maximum_credit_centavos > quote.available_credit_centavos} onClick={() => void analyze()}>
+                <button className="btn primario" type="button" disabled={busy || detailLoading || quote.maximum_credit_centavos > quote.available_credit_centavos} onClick={() => void analyze()}>
                   Confirmar análise por até {formatBRL(quote.maximum_credit_centavos)}
                 </button>
               </article>}

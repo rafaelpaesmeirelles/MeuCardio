@@ -204,8 +204,33 @@ export async function todasAsPaginas<T>(caminho: string): Promise<T[]> {
   return itens;
 }
 
+export const READ_TIMEOUT_MS = 15_000;
+export type GetOptions = { silencioso401?: boolean; signal?: AbortSignal; timeoutMs?: number };
+
+async function get<T>(path: string, options: GetOptions = {}): Promise<T> {
+  // Opt-in only: long-running AI, writes, uploads and streams keep their
+  // existing semantics. Aborting a read never grants access or fabricates data.
+  if (options.timeoutMs === undefined) return request<T>(path, { signal: options.signal }, options);
+  if (!Number.isFinite(options.timeoutMs) || options.timeoutMs <= 0) throw new Error("Prazo de consulta inválido.");
+  const controller = new AbortController();
+  let timedOut = false;
+  const abort = () => controller.abort();
+  if (options.signal?.aborted) abort();
+  else options.signal?.addEventListener("abort", abort, { once: true });
+  const timer = setTimeout(() => { timedOut = true; controller.abort(); }, options.timeoutMs);
+  try {
+    return await request<T>(path, { signal: controller.signal }, options);
+  } catch (error) {
+    if (timedOut) throw new ApiError(504, "A consulta demorou mais que o esperado. Tente novamente.");
+    throw error;
+  } finally {
+    clearTimeout(timer);
+    options.signal?.removeEventListener("abort", abort);
+  }
+}
+
 export const api = {
-  get: <T>(p: string, opcoes?: { silencioso401?: boolean }) => request<T>(p, {}, opcoes),
+  get,
   post: <T>(p: string, body?: unknown) =>
     request<T>(p, { method: "POST", body: body === undefined ? undefined : JSON.stringify(body) }),
   patch: <T>(p: string, body: unknown) =>

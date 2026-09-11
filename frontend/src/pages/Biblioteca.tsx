@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 import { Carregando, Erro, SeloRevisao, Vazio } from "../components/Estado";
 import { normalizarBusca } from "../lib/taxonomiaCardiologia";
 
@@ -75,6 +75,8 @@ export default function Biblioteca() {
   const [tentativaCatalogo, setTentativaCatalogo] = useState(0);
   const [tentativaDocs, setTentativaDocs] = useState(0);
   const requisicaoDocs = useRef(0);
+  const controllerDocs = useRef<AbortController | null>(null);
+  const maisPendente = useRef(false);
   const areasFiltradas = useMemo(() => {
     const termo = normalizarBusca(buscaArea);
     if (!termo) return contagensAreas;
@@ -83,11 +85,12 @@ export default function Biblioteca() {
 
   useEffect(() => {
     let ativo = true;
+    const controller = new AbortController();
     setErroCatalogo("");
     Promise.all([
-      api.get<Catalog>("/library/catalog"),
-      api.get<{ theme: string; count: number }[]>("/library/themes"),
-      api.get<AreaCountsResponse>("/library/area-counts"),
+      api.get<Catalog>("/library/catalog", { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal }),
+      api.get<{ theme: string; count: number }[]>("/library/themes", { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal }),
+      api.get<AreaCountsResponse>("/library/area-counts", { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal }),
     ]).then(([catalogoResposta, temasResposta, areasResposta]) => {
       if (!ativo) return;
       setCatalogo(catalogoResposta);
@@ -96,11 +99,14 @@ export default function Biblioteca() {
     }).catch((error) => {
       if (ativo) setErroCatalogo(error instanceof ApiError ? error.message : "Não foi possível carregar as coleções da biblioteca.");
     });
-    return () => { ativo = false; };
+    return () => { ativo = false; controller.abort(); };
   }, [tentativaCatalogo]);
 
   useEffect(() => {
     const id = ++requisicaoDocs.current;
+    const controller = new AbortController();
+    controllerDocs.current = controller;
+    maisPendente.current = false;
     setDocs(null);
     setErroDocs("");
     setTotalDocs(0);
@@ -108,7 +114,7 @@ export default function Biblioteca() {
     setCarregandoMais(false);
     const query = new URLSearchParams({ limit: String(PAGE_SIZE), offset: "0" });
     if (tema) query.set("theme", tema);
-    api.get<DocumentPage>(`/library/documents?${query}`).then((r) => {
+    api.get<DocumentPage>(`/library/documents?${query}`, { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal }).then((r) => {
       if (requisicaoDocs.current !== id) return;
       setDocs(r.items);
       setTotalDocs(r.total);
@@ -116,7 +122,7 @@ export default function Biblioteca() {
     }).catch((error) => {
       if (requisicaoDocs.current === id) setErroDocs(error instanceof ApiError ? error.message : "Não foi possível carregar os documentos.");
     });
-    return () => { ++requisicaoDocs.current; };
+    return () => { ++requisicaoDocs.current; controller.abort(); };
   }, [tema, tentativaDocs]);
 
   useEffect(() => {
@@ -129,8 +135,9 @@ export default function Biblioteca() {
   }, [location.hash, docs]);
 
   async function carregarMais() {
-    if (proximoOffset === null || carregandoMais) return;
+    if (proximoOffset === null || maisPendente.current) return;
     const id = requisicaoDocs.current;
+    maisPendente.current = true;
     setCarregandoMais(true);
     setErroDocs("");
     try {
@@ -139,7 +146,7 @@ export default function Biblioteca() {
         offset: String(proximoOffset),
       });
       if (tema) query.set("theme", tema);
-      const r = await api.get<DocumentPage>(`/library/documents?${query}`);
+      const r = await api.get<DocumentPage>(`/library/documents?${query}`, { timeoutMs: READ_TIMEOUT_MS, signal: controllerDocs.current?.signal });
       if (requisicaoDocs.current !== id) return;
       setDocs((atuais) => [...(atuais ?? []), ...r.items]);
       setTotalDocs(r.total);
@@ -147,7 +154,7 @@ export default function Biblioteca() {
     } catch (error) {
       if (requisicaoDocs.current === id) setErroDocs(error instanceof ApiError ? error.message : "Não foi possível carregar mais documentos. Tente novamente.");
     } finally {
-      if (requisicaoDocs.current === id) setCarregandoMais(false);
+      if (requisicaoDocs.current === id) { maisPendente.current = false; setCarregandoMais(false); }
     }
   }
 

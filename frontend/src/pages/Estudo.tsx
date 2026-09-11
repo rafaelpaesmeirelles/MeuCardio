@@ -1,7 +1,7 @@
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import BotaoFavorito from "../components/BotaoFavorito";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
@@ -16,16 +16,26 @@ type Detalhe = {
 
 export default function Estudo() {
   const { slug } = useParams();
+  return <EstudoDetalhe key={slug} slug={slug} />;
+}
+
+function EstudoDetalhe({ slug }: { slug?: string }) {
   const [s, setS] = useState<Detalhe | null>(null);
   const [erro, setErro] = useState("");
+  const [tentativa, setTentativa] = useState(0);
 
   useEffect(() => {
-    if (!slug) return;
-    api.get<Detalhe>(`/studies/${slug}`).then(setS)
-      .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar."));
-  }, [slug]);
+    if (!slug) { setErro("Estudo não identificado."); return; }
+    let ativo = true;
+    const controller = new AbortController();
+    setErro("");
+    api.get<Detalhe>(`/studies/${slug}`, { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal })
+      .then(value => { if (ativo) setS(value); })
+      .catch(error => { if (ativo) setErro(error instanceof ApiError ? error.message : "Não foi possível carregar o estudo."); });
+    return () => { ativo = false; controller.abort(); };
+  }, [slug, tentativa]);
 
-  if (erro) return <Erro mensagem={erro} />;
+  if (erro) return <div><Erro mensagem={erro} /><button type="button" className="botao botao--secundario" onClick={() => setTentativa(value => value + 1)}>Tentar novamente</button></div>;
   if (!s) return <Carregando />;
 
   return (

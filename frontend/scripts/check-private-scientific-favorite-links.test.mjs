@@ -15,7 +15,7 @@ await symlink(path.join(root, 'node_modules'), path.join(temp, 'node_modules'));
 after(() => rm(temp, { recursive: true, force: true }));
 const compile = source => ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ES2022, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX } }).outputText;
 let source = await readFile(path.join(root, 'src/pages/ScientificDocumentAI.tsx'), 'utf8');
-source = source.replace('import { api, ApiError } from "../lib/api";', 'const api = globalThis.privateFixture.api; class ApiError extends Error {}');
+source = source.replace('import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";', 'const READ_TIMEOUT_MS = 15000; const api = globalThis.privateFixture.api; class ApiError extends Error {}');
 source = source.replace('import { useAuth } from "../lib/auth";', 'const useAuth = () => ({ usuario: globalThis.privateFixture.user });');
 source = source.replace('import { formatBRL } from "../lib/commercialPlans";', 'const formatBRL = value => String(value);');
 source = source.replace('import BotaoFavorito from "../components/BotaoFavorito";', 'const BotaoFavorito = props => <span data-favorite={props.itemId} />;');

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { api } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 import { Carregando, Erro, SeloRevisao } from "../components/Estado";
 import Fluxograma from "../components/Fluxograma";
 import ExportarApresentacao from "../components/ExportarApresentacao";
@@ -30,14 +30,26 @@ type Doc = {
 
 export default function Documento() {
   const { slug } = useParams();
+  return <DocumentoDetalhe key={slug} slug={slug} />;
+}
+
+function DocumentoDetalhe({ slug }: { slug?: string }) {
   const [doc, setDoc] = useState<Doc | null>(null);
   const [erro, setErro] = useState("");
+  const [tentativa, setTentativa] = useState(0);
 
   useEffect(() => {
-    api.get<Doc>(`/library/documents/${slug}`).then(setDoc).catch((e) => setErro(e.message));
-  }, [slug]);
+    if (!slug) { setErro("Documento não identificado."); return; }
+    let ativo = true;
+    const controller = new AbortController();
+    setErro("");
+    api.get<Doc>(`/library/documents/${slug}`, { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal })
+      .then(value => { if (ativo) setDoc(value); })
+      .catch(error => { if (ativo) setErro(error instanceof ApiError ? error.message : "Não foi possível carregar o documento."); });
+    return () => { ativo = false; controller.abort(); };
+  }, [slug, tentativa]);
 
-  if (erro) return <Erro mensagem={erro} />;
+  if (erro) return <div><Erro mensagem={erro} /><button type="button" className="botao botao--secundario" onClick={() => setTentativa(value => value + 1)}>Tentar novamente</button></div>;
   if (!doc) return <Carregando />;
 
   const contemFluxograma = /```mermaid\s/i.test(doc.body_md);

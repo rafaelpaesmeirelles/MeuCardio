@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 
 type EditorialDocument = { slug: string; title: string; theme: string; kind?: string; study_type?: string; summary?: string | null };
 type Page = { items: EditorialDocument[]; total: number; next_offset: number | null };
@@ -16,6 +16,7 @@ export default function EditorialDocumentList({ section, title, query: controlle
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const seq = useRef(0), busy = useRef(false);
+  const controller = useRef<AbortController | null>(null);
 
   async function load(offset: number, id: number, replace: boolean) {
     if (id !== seq.current || busy.current) return;
@@ -24,7 +25,7 @@ export default function EditorialDocumentList({ section, title, query: controlle
       const params = new URLSearchParams({ secao: section, limit: "50", offset: String(offset) });
       if (query.trim()) params.set("q", query.trim());
       if (theme) params.set("theme", theme);
-      const page = await api.get<Page>(`${source === "library" ? "/library/documents" : "/studies"}?${params}`);
+      const page = await api.get<Page>(`${source === "library" ? "/library/documents" : "/studies"}?${params}`, { timeoutMs: READ_TIMEOUT_MS, signal: controller.current?.signal });
       if (id !== seq.current) return;
       setItems(current => [...new Map([...(replace ? [] : current), ...page.items].map(item => [item.slug, item])).values()]);
       setTotal(page.total); setNext(page.next_offset);
@@ -37,9 +38,11 @@ export default function EditorialDocumentList({ section, title, query: controlle
 
   useEffect(() => {
     const id = ++seq.current;
+    const currentController = new AbortController();
+    controller.current = currentController;
     busy.current = false; setItems([]); setTotal(0); setNext(null); setLoading(true); setError("");
     const timer = setTimeout(() => { void load(0, id, true); }, 200);
-    return () => { clearTimeout(timer); ++seq.current; };
+    return () => { clearTimeout(timer); ++seq.current; currentController.abort(); };
     // Each request captures the current filter; stale responses cannot replace it.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [section, query, theme, source]);

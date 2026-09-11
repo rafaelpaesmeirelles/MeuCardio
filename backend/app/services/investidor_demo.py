@@ -17,6 +17,7 @@ from zoneinfo import ZoneInfo
 
 from starlette.requests import Request
 from starlette.responses import JSONResponse
+from starlette.concurrency import run_in_threadpool
 from sqlalchemy import event, inspect, select, update
 
 from app.core.db import SessionLocal
@@ -252,6 +253,17 @@ class InvestidorReadOnlyMiddleware:
     def __init__(self, app):
         self.app = app
 
+    @staticmethod
+    def _eh_investidor(token: str) -> bool:
+        # A pooled synchronous connection must never block the ASGI loop or
+        # remain checked out while a response is sent to a slow client.
+        db = SessionLocal()
+        try:
+            user = usuario_por_token_app(db, token)
+            return user is not None and bool(getattr(user, "investidor", False))
+        finally:
+            db.close()
+
     async def __call__(self, scope, receive, send):
         if scope.get("type") != "http":
             await self.app(scope, receive, send)
@@ -263,44 +275,27 @@ class InvestidorReadOnlyMiddleware:
 
         if path.startswith("/api/"):
             token = _token_da_requisicao(request)
-            user = None
-            db = None
             if token:
-                db = SessionLocal()
-                try:
-                    user = usuario_por_token_app(db, token)
-                    investidor = user is not None and bool(getattr(user, "investidor", False))
-
-                    if investidor:
-                        # Agenda: interceptação ANTES do router. Uma conta que
-                        # já foi normal nunca consegue vazar agenda histórica.
-                        if method == "GET" and path.startswith("/api/agenda/"):
-                            demo = _agenda_demo(path)
-                            response = JSONResponse(
-                                status_code=200 if demo is not None else 403,
-                                content=demo if demo is not None else {"detail": MENSAGEM_AGENDA_DEMO},
-                            )
-                            await response(scope, receive, send)
-                            return
-
-                        # Flags de UX retornam sucesso sem tocar no modelo/DB.
-                        if method not in {"GET", "HEAD", "OPTIONS"} and path in _ESCRITAS_UX_SIMULADAS:
-                            response = JSONResponse(status_code=200, content=_ESCRITAS_UX_SIMULADAS[path])
-                            await response(scope, receive, send)
-                            return
-
-                        mutacao = method not in {"GET", "HEAD", "OPTIONS"}
-                        get_operacional = method == "GET" and _get_com_efeito_colateral(path)
-                        if (mutacao and path not in _ESCRITAS_AUTH_PERMITIDAS) or get_operacional:
-                            response = JSONResponse(
-                                status_code=403,
-                                content={"detail": MENSAGEM_MODO_INVESTIDOR},
-                            )
-                            await response(scope, receive, send)
-                            return
-                finally:
-                    if db is not None:
-                        db.close()
+                investidor = await run_in_threadpool(self._eh_investidor, token)
+                if investidor:
+                    # Preserve the fail-closed boundary for every API, including
+                    # unknown future mutations and historical operational data.
+                    if method == "GET" and path.startswith("/api/agenda/"):
+                        demo = _agenda_demo(path)
+                        response = JSONResponse(status_code=200 if demo is not None else 403,
+                            content=demo if demo is not None else {"detail": MENSAGEM_AGENDA_DEMO})
+                        await response(scope, receive, send)
+                        return
+                    if method not in {"GET", "HEAD", "OPTIONS"} and path in _ESCRITAS_UX_SIMULADAS:
+                        response = JSONResponse(status_code=200, content=_ESCRITAS_UX_SIMULADAS[path])
+                        await response(scope, receive, send)
+                        return
+                    mutacao = method not in {"GET", "HEAD", "OPTIONS"}
+                    get_operacional = method == "GET" and _get_com_efeito_colateral(path)
+                    if (mutacao and path not in _ESCRITAS_AUTH_PERMITIDAS) or get_operacional:
+                        response = JSONResponse(status_code=403, content={"detail": MENSAGEM_MODO_INVESTIDOR})
+                        await response(scope, receive, send)
+                        return
 
         await self.app(scope, receive, send)
 

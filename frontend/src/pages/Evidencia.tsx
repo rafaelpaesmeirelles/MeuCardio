@@ -1,7 +1,7 @@
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import BotaoFavorito from "../components/BotaoFavorito";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
@@ -30,17 +30,26 @@ type Detalhe = {
 
 export default function Evidencia() {
   const { slug } = useParams();
+  return <EvidenciaDetalhe key={slug} slug={slug} />;
+}
+
+function EvidenciaDetalhe({ slug }: { slug?: string }) {
   const [evidencia, setEvidencia] = useState<Detalhe | null>(null);
   const [erro, setErro] = useState("");
+  const [tentativa, setTentativa] = useState(0);
 
   useEffect(() => {
-    if (!slug) return;
-    api.get<Detalhe>(`/evidence/${slug}`)
-      .then(setEvidencia)
-      .catch((err) => setErro(err instanceof ApiError ? err.message : "Não foi possível carregar."));
-  }, [slug]);
+    if (!slug) { setErro("Evidência não identificada."); return; }
+    let ativo = true;
+    const controller = new AbortController();
+    setErro("");
+    api.get<Detalhe>(`/evidence/${slug}`, { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal })
+      .then(value => { if (ativo) setEvidencia(value); })
+      .catch(error => { if (ativo) setErro(error instanceof ApiError ? error.message : "Não foi possível carregar a evidência."); });
+    return () => { ativo = false; controller.abort(); };
+  }, [slug, tentativa]);
 
-  if (erro) return <Erro mensagem={erro} />;
+  if (erro) return <div><Erro mensagem={erro} /><button type="button" className="botao botao--secundario" onClick={() => setTentativa(value => value + 1)}>Tentar novamente</button></div>;
   if (!evidencia) return <Carregando />;
 
   return (

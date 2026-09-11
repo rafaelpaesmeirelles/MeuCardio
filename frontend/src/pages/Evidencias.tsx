@@ -7,7 +7,7 @@ import {
 } from "../components/ClinicalCommandPrimitives";
 import ClinicalText from "../components/ClinicalText";
 import Icone from "../components/Icone";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 import { rotuloClasse, rotuloClasseCurto, rotuloNivel } from "../lib/evidencia";
 
 type Item = {
@@ -134,32 +134,41 @@ export default function Evidencias() {
   const [recarregar, setRecarregar] = useState(0);
   const [recarregarTemas, setRecarregarTemas] = useState(0);
   const requisicaoAtual = useRef(0);
+  const controllerLista = useRef<AbortController | null>(null);
+  const maisPendente = useRef(false);
 
   useEffect(() => {
     let ativa = true;
+    const controller = new AbortController();
     setErroTemas("");
-    api.get<Tema[]>("/evidence/themes")
+    api.get<Tema[]>("/evidence/themes", { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal })
       .then((resposta) => { if (ativa) setTemas(resposta); })
       .catch((causa) => {
         if (!ativa) return;
         setTemas([]);
         setErroTemas(mensagemErro(causa, "Não foi possível carregar os temas."));
       });
-    return () => { ativa = false; };
+    return () => { ativa = false; controller.abort(); };
   }, [recarregarTemas]);
 
   useEffect(() => {
     const id = ++requisicaoAtual.current;
+    const controller = new AbortController();
+    controllerLista.current = controller;
+    maisPendente.current = false;
     setCarregandoMais(false);
+    setCarregando(true);
+    setErro("");
+    setItens([]);
+    setTotalResultados(0);
+    setProximoOffset(null);
     const atraso = window.setTimeout(() => {
-      setCarregando(true);
-      setErro("");
       const qs = new URLSearchParams({ limit: String(TAMANHO_LOTE), offset: "0" });
       if (tema) qs.set("theme", tema);
       if (classe) qs.set("recommendation_class", classe);
       if (busca.trim()) qs.set("q", busca.trim());
 
-      api.get<Listagem>(`/evidence?${qs}`)
+      api.get<Listagem>(`/evidence?${qs}`, { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal })
         .then((resposta) => {
           if (id !== requisicaoAtual.current) return;
           setItens(resposta.items);
@@ -176,12 +185,13 @@ export default function Evidencias() {
         .finally(() => { if (id === requisicaoAtual.current) setCarregando(false); });
     }, busca.trim() ? 280 : 0);
 
-    return () => window.clearTimeout(atraso);
+    return () => { window.clearTimeout(atraso); ++requisicaoAtual.current; controller.abort(); };
   }, [tema, classe, busca, recarregar]);
 
   const carregarMais = useCallback(() => {
-    if (proximoOffset === null || carregandoMais) return;
+    if (proximoOffset === null || maisPendente.current) return;
     const id = requisicaoAtual.current;
+    maisPendente.current = true;
     setCarregandoMais(true);
     setErro("");
     const qs = new URLSearchParams({ limit: String(TAMANHO_LOTE), offset: String(proximoOffset) });
@@ -189,7 +199,7 @@ export default function Evidencias() {
     if (classe) qs.set("recommendation_class", classe);
     if (busca.trim()) qs.set("q", busca.trim());
 
-    api.get<Listagem>(`/evidence?${qs}`)
+    api.get<Listagem>(`/evidence?${qs}`, { timeoutMs: READ_TIMEOUT_MS, signal: controllerLista.current?.signal })
       .then((resposta) => {
         if (id !== requisicaoAtual.current) return;
         setItens((atuais) => {
@@ -203,7 +213,7 @@ export default function Evidencias() {
       .catch((causa) => {
         if (id === requisicaoAtual.current) setErro(mensagemErro(causa, "Não foi possível carregar o próximo lote."));
       })
-      .finally(() => { if (id === requisicaoAtual.current) setCarregandoMais(false); });
+      .finally(() => { if (id === requisicaoAtual.current) { maisPendente.current = false; setCarregandoMais(false); } });
   }, [busca, carregandoMais, classe, proximoOffset, tema]);
 
   const totalCatalogo = useMemo(() => temas.reduce((soma, item) => soma + item.count, 0), [temas]);

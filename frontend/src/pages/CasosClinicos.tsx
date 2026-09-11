@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Carregando, Erro, Vazio } from "../components/Estado";
-import { api, todasAsPaginas } from "../lib/api";
+import { api, READ_TIMEOUT_MS, type PaginaDe } from "../lib/api";
 import { areaDaCardiologia } from "../lib/taxonomiaCardiologia";
 
 type Caso = {
@@ -22,26 +22,59 @@ export default function CasosClinicos() {
   const [tema, setTema] = useState("");
   const [area, setArea] = useState("");
   const [erro, setErro] = useState("");
-
-  useEffect(() => {
-    api.get<Tema[]>("/casos-clinicos/themes").then(setTemas).catch(() => setTemas([]));
-  }, []);
+  const [tentativa, setTentativa] = useState(0);
+  const [erroTemas, setErroTemas] = useState("");
+  const [tentativaTemas, setTentativaTemas] = useState(0);
+  const [carregandoMais, setCarregandoMais] = useState(false);
 
   useEffect(() => {
     let ativo = true;
+    const controller = new AbortController();
+    setErroTemas("");
+    api.get<Tema[]>("/casos-clinicos/themes", { signal: controller.signal, timeoutMs: READ_TIMEOUT_MS })
+      .then(resposta => { if (ativo) setTemas(resposta); })
+      .catch(() => { if (ativo) setErroTemas("Não foi possível carregar os filtros de casos clínicos."); });
+    return () => { ativo = false; controller.abort(); };
+  }, [tentativaTemas]);
+
+  useEffect(() => {
+    let ativo = true;
+    const controller = new AbortController();
     setCasos(null);
     setErro("");
+    setCarregandoMais(true);
     const atraso = window.setTimeout(() => {
       const params = new URLSearchParams();
       if (busca.trim()) params.set("q", busca.trim());
       if (tema) params.set("theme", tema);
       params.set("limit", "500");
-      todasAsPaginas<Caso>(`/casos-clinicos?${params}`)
-        .then((resposta) => { if (ativo) setCasos(resposta); })
-        .catch((causa) => { if (ativo) setErro(causa instanceof Error ? causa.message : "Não foi possível carregar os casos clínicos."); });
+      void (async () => {
+        let itens: Caso[] = [];
+        let offset = 0;
+        try {
+          for (;;) {
+            params.set("offset", String(offset));
+            const pagina = await api.get<PaginaDe<Caso>>(`/casos-clinicos?${params}`, { signal: controller.signal, timeoutMs: READ_TIMEOUT_MS });
+            if (!ativo) return;
+            if (!Array.isArray(pagina.items)) throw new Error("A resposta de casos clínicos está incompleta. Tente novamente.");
+            itens = [...itens, ...pagina.items];
+            // A delayed later page must not hide cases already received.
+            setCasos(itens);
+            if (!pagina.has_more) break;
+            if (!pagina.items.length || !Number.isSafeInteger(pagina.next_offset) || pagina.next_offset! <= offset) {
+              throw new Error("Não foi possível continuar a lista de casos clínicos. Tente novamente.");
+            }
+            offset = pagina.next_offset!;
+          }
+        } catch (causa) {
+          if (ativo) setErro(causa instanceof Error ? causa.message : "Não foi possível carregar os casos clínicos.");
+        } finally {
+          if (ativo) setCarregandoMais(false);
+        }
+      })();
     }, 220);
-    return () => { ativo = false; window.clearTimeout(atraso); };
-  }, [busca, tema]);
+    return () => { ativo = false; window.clearTimeout(atraso); controller.abort(); };
+  }, [busca, tema, tentativa]);
 
   const areas = useMemo(() => {
     const mapa = new Map<string, { id: string; label: string; count: number }>();
@@ -81,8 +114,11 @@ export default function CasosClinicos() {
         <label><strong>Doença ou assunto</strong><select value={tema} onChange={(event) => setTema(event.target.value)}><option value="">Todas as doenças</option>{temas.map((item) => <option key={item.theme} value={item.theme}>{item.theme} ({item.count})</option>)}</select></label>
       </section>
 
-      {erro ? <Erro mensagem={erro} /> : grupos === null ? <Carregando texto="Organizando casos por área e doença…" /> : grupos.length === 0 ? (
-        <Vazio titulo="Nenhum caso encontrado" acao="Tente outro termo, área ou doença." />
+      {erroTemas && <div><Erro mensagem={erroTemas} /><button className="botao botao--secundario" type="button" onClick={() => setTentativaTemas(v => v + 1)}>Recarregar filtros</button></div>}
+      {erro && <div><Erro mensagem={erro} /><button className="botao botao--secundario" type="button" onClick={() => setTentativa(v => v + 1)}>Tentar novamente</button></div>}
+      {carregandoMais && casos !== null && <p role="status">Carregando os demais casos; os resultados recebidos já estão disponíveis.</p>}
+      {grupos === null ? !erro && <Carregando texto="Organizando casos por área e doença…" /> : grupos.length === 0 ? (
+        !carregandoMais && !erro && <Vazio titulo="Nenhum caso encontrado" acao="Tente outro termo, área ou doença." />
       ) : (
         <div className="colecoes-conteudo">
           {grupos.map((grupo) => <section className="colecao-conteudo" key={grupo.id}>

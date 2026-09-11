@@ -20,6 +20,7 @@ from __future__ import annotations
 from hashlib import sha256
 
 from fastapi.encoders import jsonable_encoder
+from starlette.concurrency import run_in_threadpool
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
@@ -68,6 +69,50 @@ class InvestidorEphemeralUxMiddleware:
     def __init__(self, app):
         self.app = app
 
+    @staticmethod
+    def _intercepta(path: str, method: str) -> bool:
+        return (
+            (method == "GET" and path == "/api/auth/me")
+            or (method == "GET" and path.startswith("/api/agenda/oauth/") and path.endswith("/start"))
+            or (method == "POST" and path in {
+                "/api/auth/me/onboarding-concluido", "/api/auth/me/boas-vindas-vista",
+            })
+        )
+
+    @staticmethod
+    def _resposta(request: Request, token: str, path: str, method: str):
+        # The synchronous pool checkout, queries and close belong to the same
+        # worker. Never wait for a database connection on the ASGI event loop:
+        # doing so prevents in-flight requests from returning their connections.
+        db = SessionLocal()
+        try:
+            user = usuario_por_token_app(db, token)
+            if user is None or not bool(getattr(user, "investidor", False)):
+                return None
+            marcador = _marcador(token)
+            if method == "GET" and path.startswith("/api/agenda/oauth/"):
+                return JSONResponse(status_code=403, content={"detail": MENSAGEM_MODO_INVESTIDOR}, headers={"Cache-Control": "no-store"})
+            if method == "POST":
+                onboarding = path == "/api/auth/me/onboarding-concluido"
+                response = JSONResponse(
+                    status_code=200,
+                    content={"onboarding_pendente" if onboarding else "boas_vindas_pendente": False},
+                    headers={"Cache-Control": "no-store"},
+                )
+                _set_cookie_sessao(response, _COOKIE_ONBOARDING if onboarding else _COOKIE_BOAS_VINDAS, marcador)
+                return response
+
+            from app.api.auth import _perfil
+
+            perfil = _perfil(db, user)
+            perfil["onboarding_pendente"] = request.cookies.get(_COOKIE_ONBOARDING) != marcador
+            if request.cookies.get(_COOKIE_BOAS_VINDAS) == marcador:
+                perfil["boas_vindas_pendente"] = False
+            return JSONResponse(status_code=200, content=jsonable_encoder(perfil), headers={"Cache-Control": "no-store"})
+        finally:
+            # No ORM object or live transaction crosses back into async code.
+            db.close()
+
     async def __call__(self, scope, receive, send):
         if scope.get("type") != "http":
             await self.app(scope, receive, send)
@@ -78,69 +123,10 @@ class InvestidorEphemeralUxMiddleware:
         method = request.method.upper()
         token = _token_da_requisicao(request)
 
-        if token and path.startswith("/api/"):
-            db = SessionLocal()
-            try:
-                user = usuario_por_token_app(db, token)
-                investidor = user is not None and bool(getattr(user, "investidor", False))
-                if investidor:
-                    marcador = _marcador(token)
-
-                    if (
-                        method == "GET"
-                        and path.startswith("/api/agenda/oauth/")
-                        and path.endswith("/start")
-                    ):
-                        response = JSONResponse(
-                            status_code=403,
-                            content={"detail": MENSAGEM_MODO_INVESTIDOR},
-                            headers={"Cache-Control": "no-store"},
-                        )
-                        await response(scope, receive, send)
-                        return
-
-                    if method == "POST" and path == "/api/auth/me/onboarding-concluido":
-                        response = JSONResponse(
-                            status_code=200,
-                            content={"onboarding_pendente": False},
-                            headers={"Cache-Control": "no-store"},
-                        )
-                        _set_cookie_sessao(response, _COOKIE_ONBOARDING, marcador)
-                        await response(scope, receive, send)
-                        return
-
-                    if method == "POST" and path == "/api/auth/me/boas-vindas-vista":
-                        response = JSONResponse(
-                            status_code=200,
-                            content={"boas_vindas_pendente": False},
-                            headers={"Cache-Control": "no-store"},
-                        )
-                        _set_cookie_sessao(response, _COOKIE_BOAS_VINDAS, marcador)
-                        await response(scope, receive, send)
-                        return
-
-                    if method == "GET" and path == "/api/auth/me":
-                        tour_concluido_nesta_sessao = request.cookies.get(_COOKIE_ONBOARDING) == marcador
-                        boas_vindas_vistas = request.cookies.get(_COOKIE_BOAS_VINDAS) == marcador
-
-                        # Import local evita acoplamento/ciclo no carregamento do app.
-                        from app.api.auth import _perfil
-
-                        perfil = _perfil(db, user)
-                        # Fonte de verdade para Investidor: o tour é obrigatório
-                        # uma vez por token/sessão, independentemente de qualquer
-                        # valor persistido legado em onboarding_visto.
-                        perfil["onboarding_pendente"] = not tour_concluido_nesta_sessao
-                        if boas_vindas_vistas:
-                            perfil["boas_vindas_pendente"] = False
-                        response = JSONResponse(
-                            status_code=200,
-                            content=jsonable_encoder(perfil),
-                            headers={"Cache-Control": "no-store"},
-                        )
-                        await response(scope, receive, send)
-                        return
-            finally:
-                db.close()
+        if token and self._intercepta(path, method):
+            response = await run_in_threadpool(self._resposta, request, token, path, method)
+            if response is not None:
+                await response(scope, receive, send)
+                return
 
         await self.app(scope, receive, send)

@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 import { canUseCommercialFeature, type CommercialFeature, type CommercialStatus } from "../lib/commercialPlans";
 
 export default function CommercialFeatureGate({ feature, children }: { feature: CommercialFeature; children: ReactNode }) {
@@ -11,20 +11,22 @@ export default function CommercialFeatureGate({ feature, children }: { feature: 
 
   useEffect(() => {
     let active = true;
+    const controller = new AbortController();
     setLoading(true);
+    setStatus(null);
     setError("");
-    api.get<CommercialStatus>("/billing/status")
+    api.get<CommercialStatus>("/billing/status", { signal: controller.signal, timeoutMs: READ_TIMEOUT_MS })
       .then((result) => { if (active) setStatus(result); })
       .catch((e) => { if (active) setError(e instanceof ApiError ? e.message : "Não foi possível verificar seu acesso."); })
       .finally(() => { if (active) setLoading(false); });
-    return () => { active = false; };
+    return () => { active = false; controller.abort(); };
   }, [attempt]);
 
-  if (loading) return <div className="pagina"><p role="status">Verificando seu acesso…</p></div>;
+  if (loading) return <div className="pagina commercial-feature-gate"><p role="status">Verificando seu acesso…</p></div>;
   if (canUseCommercialFeature(status, feature)) return <>{children}</>;
 
   return (
-    <div className="pagina">
+    <div className="pagina commercial-feature-gate">
       <div className="cartao" style={{ maxWidth: "640px" }}>
         <p className="eyebrow">{feature === "ai" ? "Recursos de IA" : "CorVIA Mail"}</p>
         <h1>{error ? "Não foi possível verificar o acesso" : "Conheça os planos que incluem este recurso"}</h1>

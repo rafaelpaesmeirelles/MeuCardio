@@ -15,9 +15,19 @@ const result = await build({
   entryPoints: [path.join(root, "src/pages/ScientificDocumentAI.tsx")], bundle: true, write: false, format: "esm", platform: "node",
   loader: { ".css": "empty" }, jsx: "automatic", external: ["react", "react/jsx-runtime", "react-router-dom"],
   plugins: [{ name: "fixture-api", setup(builder) {
+    // Favoritos têm suíte própria; este teste isola consentimento e orçamento.
+    builder.onResolve({ filter: /\/components\/BotaoFavorito$/ }, () => ({ path: "favorite-stub", namespace: "favorite-fixture" }));
+    builder.onLoad({ filter: /.*/, namespace: "favorite-fixture" }, () => ({
+      contents: 'export default function Favorite() { return null; }', loader: "js",
+    }));
+    builder.onResolve({ filter: /\/lib\/auth$/ }, () => ({ path: "auth-stub", namespace: "auth-fixture" }));
+    builder.onLoad({ filter: /.*/, namespace: "auth-fixture" }, () => ({
+      contents: 'export const useAuth = () => ({ usuario: { id: 990001 } });', loader: "js",
+    }));
     builder.onResolve({ filter: /\/lib\/api$/ }, () => ({ path: "api-stub", namespace: "fixture" }));
     builder.onLoad({ filter: /.*/, namespace: "fixture" }, () => ({ contents: `
       export class ApiError extends Error {}
+      export const READ_TIMEOUT_MS = 15000;
       export const api = {
         get: (...args) => globalThis.documentBudgetFixture.get(...args),
         post: (...args) => globalThis.documentBudgetFixture.post(...args),

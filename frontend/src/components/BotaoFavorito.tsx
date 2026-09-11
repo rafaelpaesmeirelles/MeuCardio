@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/favorite-control.css";
-import { api } from "../lib/api";
+import { api, READ_TIMEOUT_MS } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { announceFavoriteChange, FAVORITES_CHANGED } from "../lib/favorites";
 
@@ -29,15 +29,16 @@ export default function BotaoFavorito({ itemType, itemId, itemSlug, label, class
     let active = true;
     setResolved(null); setError(""); setBusy(false); mutationIdentity.current = null;
     if (!userId || !validTarget) return;
+    const controller = new AbortController();
     const query = new URLSearchParams({ item_type: itemType });
     if (itemSlug) query.set("item_slug", itemSlug);
     else query.set("item_id", String(itemId));
-    api.get<FavoriteStatus>(`/favorites/status?${query}`).then(value => {
+    api.get<FavoriteStatus>(`/favorites/status?${query}`, { signal: controller.signal, timeoutMs: READ_TIMEOUT_MS }).then(value => {
       if (active && sequence === requestSequence.current && identityRef.current === identity) setResolved({ identity, value });
     }).catch(() => {
       if (active && sequence === requestSequence.current && identityRef.current === identity) setError("Não foi possível consultar este favorito.");
     });
-    return () => { active = false; };
+    return () => { active = false; controller.abort(); };
   }, [identity, userId, itemType, itemId, itemSlug, validTarget, attempt]);
 
   useEffect(() => {
@@ -81,7 +82,7 @@ export default function BotaoFavorito({ itemType, itemId, itemSlug, label, class
       aria-pressed={status?.favorited ?? false} aria-busy={busy || (!status && !error)}
       aria-label={label ? `${status?.favorited ? "Remover dos favoritos" : "Favoritar"}: ${label}` : undefined}
       style={{ padding: "0.35rem 0.75rem", fontSize: "0.86rem", minHeight: 44 }}>
-      {busy ? "Salvando…" : !status ? "Consultando favorito…" : status.favorited ? "★ Favoritado" : "☆ Favoritar"}
+      {busy ? "Salvando…" : !status ? error ? "Favorito não consultado" : "Consultando favorito…" : status.favorited ? "★ Favoritado" : "☆ Favoritar"}
     </button>
     {status && !status.available && !status.favorited && <small>Conteúdo indisponível para salvar.</small>}
     {error && <span role="alert">{error}{!status && <button type="button" className="botao botao--secundario" onClick={() => setAttempt(value => value + 1)}>Tentar novamente</button>}</span>}

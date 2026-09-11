@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import EditorialDocumentList from "../components/EditorialDocumentList";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import { areaDaCardiologia } from "../lib/taxonomiaCardiologia";
 import {
@@ -53,13 +53,16 @@ export default function Estudos() {
   const [tentativa, setTentativa] = useState(0);
   const [tentativaFiltros, setTentativaFiltros] = useState(0);
   const requisicao = useRef(0);
+  const controllerLista = useRef<AbortController | null>(null);
+  const maisPendente = useRef(false);
 
   useEffect(() => {
     let ativo = true;
+    const controller = new AbortController();
     setErroFiltros("");
     Promise.all([
-      api.get<Tipo[]>("/studies/types"),
-      api.get<Tema[]>("/studies/themes"),
+      api.get<Tipo[]>("/studies/types", { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal }),
+      api.get<Tema[]>("/studies/themes", { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal }),
     ]).then(([tiposResposta, temasResposta]) => {
       if (!ativo) return;
       setTipos(tiposResposta);
@@ -67,11 +70,14 @@ export default function Estudos() {
     }).catch((error) => {
       if (ativo) setErroFiltros(error instanceof ApiError ? error.message : "Não foi possível carregar os filtros de estudos.");
     });
-    return () => { ativo = false; };
+    return () => { ativo = false; controller.abort(); };
   }, [tentativaFiltros]);
 
   useEffect(() => {
     const id = ++requisicao.current;
+    const controller = new AbortController();
+    controllerLista.current = controller;
+    maisPendente.current = false;
     setErro("");
     setItens(null);
     setTotalEncontrados(0);
@@ -83,7 +89,7 @@ export default function Estudos() {
       if (tema) qs.set("theme", tema);
       if (busca.trim()) qs.set("q", busca.trim());
       qs.set("limit", "500");
-      api.get<{ total: number; next_offset: number | null; items: Item[] }>(`/studies?${qs}`).then((r) => {
+      api.get<{ total: number; next_offset: number | null; items: Item[] }>(`/studies?${qs}`, { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal }).then((r) => {
         if (requisicao.current !== id) return;
         setItens(r.items);
         setTotalEncontrados(r.total);
@@ -92,12 +98,13 @@ export default function Estudos() {
         if (requisicao.current === id) setErro(error instanceof ApiError ? error.message : "Não foi possível carregar os estudos.");
       });
     }, 250);
-    return () => { clearTimeout(atraso); ++requisicao.current; };
+    return () => { clearTimeout(atraso); ++requisicao.current; controller.abort(); };
   }, [tipo, tema, busca, tentativa]);
 
   async function carregarMais() {
-    if (!itens || carregandoMais || nextOffset == null) return;
+    if (!itens || maisPendente.current || nextOffset == null) return;
     const id = requisicao.current;
+    maisPendente.current = true;
     setCarregandoMais(true);
     setErro("");
     const qs = new URLSearchParams({ limit: "500", offset: String(nextOffset) });
@@ -105,7 +112,7 @@ export default function Estudos() {
     if (tema) qs.set("theme", tema);
     if (busca.trim()) qs.set("q", busca.trim());
     try {
-      const pagina = await api.get<{ total: number; next_offset: number | null; items: Item[] }>(`/studies?${qs}`);
+      const pagina = await api.get<{ total: number; next_offset: number | null; items: Item[] }>(`/studies?${qs}`, { timeoutMs: READ_TIMEOUT_MS, signal: controllerLista.current?.signal });
       if (requisicao.current !== id) return;
       setItens((atuais) => [...(atuais ?? []), ...pagina.items]);
       setTotalEncontrados(pagina.total);
@@ -113,7 +120,7 @@ export default function Estudos() {
     } catch (error) {
       if (requisicao.current === id) setErro(error instanceof ApiError ? error.message : "Não foi possível carregar mais estudos. Tente novamente.");
     } finally {
-      if (requisicao.current === id) setCarregandoMais(false);
+      if (requisicao.current === id) { maisPendente.current = false; setCarregandoMais(false); }
     }
   }
 

@@ -19,11 +19,12 @@ const transpile = source => ts.transpileModule(source, { compilerOptions: {
 } }).outputText;
 await writeFile(path.join(temp, 'scientificIntelligence.mjs'), transpile(await readFile(path.join(root, 'src/lib/scientificIntelligence.ts'), 'utf8')));
 let source = await readFile(path.join(root, 'src/components/ScientificIntelligenceMonitor.tsx'), 'utf8');
-source = source.replace('import { api } from "../lib/api";', 'const api = { get: (...args) => globalThis.corviaIntelligenceFixture.get(...args) };');
+source = source.replace('import { api, READ_TIMEOUT_MS } from "../lib/api";', 'const READ_TIMEOUT_MS = 15000; const api = { get: (...args) => globalThis.corviaIntelligenceFixture.get(...args) };');
 source = source.replace('import { useAuth } from "../lib/auth";', 'const useAuth = () => ({ usuario: globalThis.corviaIntelligenceFixture.user });');
 source = source.replace('"../lib/scientificIntelligence"', '"./scientificIntelligence.mjs"');
 source = source.replace('import Icone from "./Icone";', 'const Icone = () => null;');
 source = source.replace('import("./ScientificReadingAccess")', 'globalThis.corviaReadingModuleFixture()');
+source = source.replace('import("./BotaoFavorito")', 'Promise.resolve({ default: () => null })');
 let readingModuleLoads = 0;
 globalThis.corviaReadingModuleFixture = async () => { readingModuleLoads++; return { default: props => React.createElement('span', { 'data-reading-type': props.entityType, 'data-reading-slug': props.slug, 'data-lazy': props.lazy }) }; };
 source = source.replace('import "../styles/scientific-intelligence-monitor.css";', '');
@@ -65,7 +66,8 @@ test('compact monitor uses internal discovery routes and only reads status on re
   assert.match(text(renderer), /Monitoramento ativo/);
   await click(renderer, 'Atualizar estado');
   assert.equal(calls.length, 2);
-  assert.ok(calls.every(args => args.length === 1 && args[0] === '/guideline-updates/status'));
+  assert.ok(calls.every(args => args.length === 2 && args[0] === '/guideline-updates/status'
+    && args[1].timeoutMs === 15000 && args[1].signal instanceof AbortSignal));
 });
 
 test('failed refresh removes old status and discoveries, and retry recovers', async t => {

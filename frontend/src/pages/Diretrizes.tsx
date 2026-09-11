@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import BotaoFavorito from "../components/BotaoFavorito";
 import EditorialDocumentList from "../components/EditorialDocumentList";
 import ScientificIntelligenceMonitor from "../components/ScientificIntelligenceMonitor";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import {
   ClinicalContextLink,
@@ -181,19 +181,29 @@ export default function Diretrizes({ intelligenceOnly = false }: { intelligenceO
   const [atualizacoes, setAtualizacoes] = useState<RespostaAtualizacoes | null>(null);
   const [notificacoes, setNotificacoes] = useState<RespostaNotificacoes | null>(null);
   const [erro, setErro] = useState("");
+  const [erroLeitura, setErroLeitura] = useState("");
+  const [tentativa, setTentativa] = useState(0);
+  const leiturasConfirmadas = useRef(new Map<number, string>());
   const [buscaBiblioteca, setBuscaBiblioteca] = useState("");
 
   useEffect(() => {
-    Promise.all([
-      api.get<RespostaAtualizacoes>("/guideline-updates"),
-      api.get<RespostaNotificacoes>("/guideline-updates/me?include_read=true"),
-    ])
-      .then(([lista, alertas]) => {
-        setAtualizacoes(lista);
-        setNotificacoes(alertas);
-      })
-      .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar as atualizações."));
-  }, []);
+    let ativo = true;
+    const controller = new AbortController();
+    setErroLeitura("");
+    const falha = (error: unknown) => {
+      if (ativo) setErroLeitura(error instanceof ApiError ? error.message : "Não foi possível carregar as atualizações.");
+    };
+    // Uma falha nos alertas pessoais não deve esconder as publicações já lidas.
+    api.get<RespostaAtualizacoes>("/guideline-updates", { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal })
+      .then(lista => { if (ativo) setAtualizacoes(lista); }).catch(falha);
+    api.get<RespostaNotificacoes>("/guideline-updates/me?include_read=true", { timeoutMs: READ_TIMEOUT_MS, signal: controller.signal })
+      .then(alertas => {
+        if (ativo) setNotificacoes({ ...alertas, items: alertas.items.map(item => ({
+          ...item, read_at: leiturasConfirmadas.current.get(item.notification_id) ?? item.read_at,
+        })) });
+      }).catch(falha);
+    return () => { ativo = false; controller.abort(); };
+  }, [tentativa]);
 
   const naoLidas = useMemo(() => (notificacoes?.items ?? []).filter((item) => !item.read_at), [notificacoes?.items]);
   const analisadas = useMemo(() => (atualizacoes?.items ?? []).filter((item) => Boolean(item.summary_pt)).length, [atualizacoes?.items]);
@@ -203,6 +213,8 @@ export default function Diretrizes({ intelligenceOnly = false }: { intelligenceO
   async function marcarLida(id: number) {
     try {
       const resposta = await api.post<{ notification_id: number; read_at: string }>(`/guideline-updates/${id}/read`, {});
+      // Um GET iniciado antes deste POST não pode desfazer a leitura confirmada.
+      leiturasConfirmadas.current.set(id, resposta.read_at);
       setNotificacoes((atual) => atual ? {
         ...atual,
         items: atual.items.map((item) => item.notification_id === id ? { ...item, read_at: resposta.read_at } : item),
@@ -229,6 +241,7 @@ export default function Diretrizes({ intelligenceOnly = false }: { intelligenceO
 
       {intelligenceOnly && <ScientificIntelligenceMonitor />}
       {erro && <Erro mensagem={erro} />}
+      {erroLeitura && <div><Erro mensagem={erroLeitura} /><button type="button" className="botao botao--secundario" onClick={() => setTentativa(value => value + 1)}>Tentar novamente</button></div>}
 
       <div className="cc-metrics">
         <ClinicalMetric label="Publicações com síntese" value={atualizacoes?.items.length ?? "…"} detail={atualizacoes ? `desde ${dataBr(atualizacoes.cutoff)}` : "Radar de publicações"} icon="documento" />
@@ -265,7 +278,7 @@ export default function Diretrizes({ intelligenceOnly = false }: { intelligenceO
       )}
 
       <ClinicalSection eyebrow="Monitoramento" title="Sínteses clínicas disponíveis" description="Cada trabalho oferece Resumo CorVIA, leitura clínica em português dentro do CorVIA e fonte original quando disponíveis.">
-        {!atualizacoes ? (erro ? <p>Radar temporariamente indisponível. As coleções do acervo continuam disponíveis abaixo.</p> : <Carregando texto="Verificando publicações oficiais…" />) : atualizacoes.items.length === 0 ? (
+        {!atualizacoes ? (erroLeitura ? <p>Radar temporariamente indisponível. As coleções do acervo continuam disponíveis abaixo.</p> : <Carregando texto="Verificando publicações oficiais…" />) : atualizacoes.items.length === 0 ? (
           <ClinicalEmpty title="Nenhuma síntese disponível nesta coleção" description="Consulte o monitor para acompanhar as publicações identificadas e o estado das fontes." />
         ) : (
           <div className="cc-guideline-list">

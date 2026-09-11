@@ -32,7 +32,8 @@ function transpile(source, name) {
   }).outputText;
 }
 let source = await readFile(path.join(root, 'src/components/EditorialDocumentList.tsx'), 'utf8');
-source = source.replace('import { api, ApiError } from "../lib/api";', `
+source = source.replace('import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";', `
+const READ_TIMEOUT_MS = 15000;
 const api = { get: (...args) => globalThis.corviaSearchFixture.get(...args) };
 class ApiError extends Error {}
 `);

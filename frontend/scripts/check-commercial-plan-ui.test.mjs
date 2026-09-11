@@ -19,6 +19,7 @@ async function component(relativePath) {
       builder.onResolve({ filter: /\/lib\/api$/ }, () => ({ path: "api-stub", namespace: "fixture" }));
       builder.onLoad({ filter: /.*/, namespace: "fixture" }, () => ({ contents: `
         export class ApiError extends Error {}
+        export const READ_TIMEOUT_MS = 15000;
         export const api = {
           get: (...args) => globalThis.commercialFixture.get(...args),
           post: (...args) => globalThis.commercialFixture.post(...args),

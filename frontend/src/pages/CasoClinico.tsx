@@ -1,10 +1,10 @@
 import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
-import { CSSProperties, useEffect, useState } from "react";
+import { CSSProperties, useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import GrafoRelacionados from "../components/GrafoRelacionados";
 
@@ -28,36 +28,56 @@ export default function CasoClinico() {
   const [escolhida, setEscolhida] = useState<number | null>(null);
   const [resultado, setResultado] = useState<Resultado | null>(null);
   const [enviando, setEnviando] = useState(false);
+  const [tentativa, setTentativa] = useState(0);
+  const context = useRef(slug);
+  context.current = slug;
+  const generation = useRef(0);
+  const submission = useRef<number | null>(null);
 
   useEffect(() => {
+    const sequence = ++generation.current;
+    const controller = new AbortController();
+    let active = true;
+    const current = () => active && sequence === generation.current && context.current === slug;
     setCaso(null);
     setEscolhida(null);
     setResultado(null);
     setErro("");
+    setEnviando(false);
+    submission.current = null;
     api
-      .get<Caso>(`/casos-clinicos/${slug}`)
-      .then(setCaso)
-      .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar o caso."));
-  }, [slug]);
+      .get<Caso>(`/casos-clinicos/${slug}`, { signal: controller.signal, timeoutMs: READ_TIMEOUT_MS })
+      .then(value => {
+        if (!current()) return;
+        if (value.slug !== slug || !value.titulo?.trim() || !value.enunciado?.trim() || !value.pergunta?.trim() || !Array.isArray(value.opcoes) || !value.opcoes.length || value.opcoes.some(option => typeof option !== "string" || !option.trim()) || !Array.isArray(value.source_refs)) {
+          throw new Error("Incomplete case content");
+        }
+        setCaso(value);
+      })
+      .catch((e) => { if (current()) setErro(e instanceof ApiError ? e.message : "Não foi possível carregar o conteúdo completo do caso. Tente novamente."); });
+    return () => { active = false; generation.current++; controller.abort(); };
+  }, [slug, tentativa]);
 
   async function responder() {
-    if (escolhida === null || enviando || resultado !== null) return;
+    if (escolhida === null || enviando || resultado !== null || caso?.slug !== slug || submission.current !== null) return;
+    const sequence = generation.current;
+    submission.current = sequence;
     setErro("");
     setEnviando(true);
     try {
       const r = await api.post<Resultado>(`/casos-clinicos/${slug}/responder`, {
         opcao_escolhida: escolhida,
       });
-      setResultado(r);
+      if (sequence === generation.current && context.current === slug) setResultado(r);
     } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível registrar a resposta.");
+      if (sequence === generation.current && context.current === slug) setErro(e instanceof ApiError ? e.message : "Não foi possível registrar a resposta.");
     } finally {
-      setEnviando(false);
+      if (sequence === generation.current && context.current === slug) { submission.current = null; setEnviando(false); }
     }
   }
 
-  if (erro && !caso) return <p role="alert" style={{ color: "var(--alerta)" }}>{erro}</p>;
-  if (!caso) return <p>Carregando…</p>;
+  if (erro && !caso) return <div><p role="alert" style={{ color: "var(--alerta)" }}>{erro}</p><button className="botao" type="button" onClick={() => setTentativa(v => v + 1)}>Tentar novamente</button></div>;
+  if (!caso || caso.slug !== slug) return <p role="status">Carregando…</p>;
 
   return (
     <div>

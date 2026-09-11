@@ -110,7 +110,12 @@ html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.learning-card_
 }
 
 html[data-corvia-design="atelier"] #root .cv-app .cv-content .cv-page-hero__space {
+  /* The brand occupies its own grid row; legacy absolute positioning overlaps the eyebrow. */
+  position: static;
+  inset: auto;
   grid-column: 1 / -1;
+  min-width: 0;
+  flex-wrap: wrap;
   gap: 9px;
   padding: 0 !important;
   color: #6e654e !important;
@@ -120,7 +125,12 @@ html[data-corvia-design="atelier"] #root .cv-app .cv-content .cv-page-hero__spac
   border: 0 !important;
 }
 
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cv-page-hero__space :is(i, strong) {
+  color: inherit !important;
+}
+
 html[data-corvia-design="atelier"] #root .cv-app .cv-content .cv-page-hero__beacon {
+  flex: 0 0 auto;
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -136,6 +146,56 @@ html[data-corvia-design="atelier"] #root .cv-app .cv-content .cv-page-hero__iden
 }
 
 html[data-corvia-design="atelier"] #root .cv-app .cv-content .cv-page-hero__copy { min-width: 0; }
+
+/* These shared filters sit on Atelier paper in both themes, not the legacy violet panel. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .filtros-conteudo label > strong {
+  color: var(--atelier-ink);
+  -webkit-text-fill-color: currentColor;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+/* Collection counts keep their light pill even within a dark teaching panel. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .colecao-conteudo > header > span {
+  color: #28534d;
+  background: #edf4ef;
+  border-color: #b9cec3;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Clinical-area links retain their real destinations and full labels on narrow screens. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .hoje__temas > a {
+  min-height: 44px;
+  color: var(--atelier-ink);
+  background: var(--atelier-soft);
+  border-color: var(--atelier-line);
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .hoje__temas > a > span {
+  color: inherit;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  text-overflow: clip;
+}
+
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .hoje__temas > a > small {
+  color: var(--atelier-muted);
+}
+
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .hoje__temas > a:is(:hover, :focus-visible) {
+  color: var(--atelier-ink);
+  background: var(--atelier-paper);
+  border-color: var(--atelier-copper);
+  box-shadow: var(--atelier-shadow);
+  transform: none;
+}
 
 html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cv-page-hero__icon, .cv-tool-card__icon, .cv-empty__icon) {
   display: grid;
@@ -179,6 +239,17 @@ html[data-corvia-design="atelier"] #root .cv-app .cv-content .eyebrow {
 
 html[data-corvia-design="atelier"] #root .cv-app .cv-content .cv-page-hero .eyebrow {
   color: #736346 !important;
+}
+
+/* Denied/failed entitlement states share the same paper card in either theme. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .commercial-feature-gate > .cartao > h1 {
+  color: var(--atelier-ink) !important;
+  -webkit-text-fill-color: currentColor;
+}
+
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .commercial-feature-gate > .cartao > .eyebrow {
+  color: #736346 !important;
+  -webkit-text-fill-color: currentColor;
 }
 
 html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cv-page-hero__actions, .cv-section__action, .cc-page-actions) {
