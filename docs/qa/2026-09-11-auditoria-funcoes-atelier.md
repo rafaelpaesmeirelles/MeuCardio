@@ -1209,3 +1209,22 @@ o aviso de bundles grandes do projeto, não um erro de compilação. Sem
 migration, mudança de dependências, workflows, conteúdo ou dados de usuários.
 O candidato integrado seguirá à CI formal uma vez; o certificado exato deve
 ser reaproveitado na promoção a main, sem duplicar a suíte de backend.
+
+**Resultado formal do candidato `5cc9ddb2`, CI 34657383923:** 3.879 passed,
+4 skipped, 1 failed. A única falha foi
+`test_panel_acervo_comunicacao_contract.py::test_home_nao_duplica_contagem_especializada_que_ja_e_canonica_na_biblioteca`:
+o contrato exigia literalmente a chamada GET sem opções, incompatível com
+os novos parâmetros de timeout e cancelamento. Corrigido somente o contrato,
+preservando a fonte canônica, a ausência de duplicação no painel e as demais
+assertions; acrescentada a exigência explícita de deadline/signal/cleanup.
+A função real falhou contra o código anterior do teste e passou após a
+correção, isolada por runpy, sem pytest/conftest/app/DB. Não houve novo build
+ou repetição das suítes já aprovadas.
+
+HTTP e backup/restauração ficaram skipped nessa execução, portanto não existe
+certificado completo desse candidato. A política atual possui continuações
+restritas às PR918/932/934, não uma continuação aplicável à PR935. Não foi
+aplicada exceção antiga, alterada política, repetida a suíte completa nem
+promovido main. A correção fica local enquanto se decide autorizar uma nova
+continuação auditável restrita ao teste corrigido, retendo a evidência dos
+3.879 aprovados e executando os controles operacionais ainda pendentes.

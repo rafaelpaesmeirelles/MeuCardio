@@ -37,8 +37,13 @@ def test_home_nao_duplica_contagem_especializada_que_ja_e_canonica_na_biblioteca
 
     # No Clinical Command Center, áreas são pontos de entrada. A contagem
     # transversal continua tendo fonte canônica única nas páginas que a exibem.
-    assert 'api.get<AreaCountsResponse>("/library/area-counts")' not in painel
-    assert 'api.get<AreaCountsResponse>("/library/area-counts")' in biblioteca
+    # A ausência no painel independe dos argumentos opcionais do GET.
+    assert '"/library/area-counts"' not in painel
+    assert (
+        'api.get<AreaCountsResponse>("/library/area-counts", '
+        '{ timeoutMs: READ_TIMEOUT_MS, signal: controller.signal })'
+    ) in biblioteca
+    assert "return () => { ativo = false; controller.abort(); };" in biblioteca
     assert "Conteúdos por área clínica" in biblioteca
     assert 'geral: "/doencas?tab=catalogo&area=geral"' in biblioteca
     assert 'neonatal: "/doencas?tab=catalogo&area=cardiopediatria&q=neonatal"' in biblioteca
