@@ -6,7 +6,7 @@ import path from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, useLocation, useNavigate } from 'react-router-dom';
 import ts from 'typescript';
 
 const require = createRequire(import.meta.url);
@@ -71,21 +71,29 @@ function deferred() {
   const promise = new Promise(done => { resolve = done; });
   return { promise, resolve };
 }
-async function mount(t, query, get) {
+async function mount(t, query, get, initialEntries = [`/busca?q=${encodeURIComponent(query)}`]) {
   const calls = [];
+  const navigation = {};
+  function NavigationProbe() {
+    navigation.navigate = useNavigate();
+    navigation.location = useLocation();
+    return null;
+  }
   globalThis.corviaSearchFixture = {
     get: url => { calls.push(url); return get(url); },
   };
   let renderer;
   await act(async () => {
     renderer = TestRenderer.create(React.createElement(MemoryRouter, {
-      initialEntries: [`/busca?q=${encodeURIComponent(query)}`],
+      initialEntries,
       future: { v7_startTransition: true, v7_relativeSplatPath: true },
-    }, React.createElement(Busca)));
+    }, React.createElement(React.Fragment, null,
+      React.createElement(NavigationProbe), React.createElement(Busca))));
     await tick();
   });
   t.after(async () => { await act(async () => renderer.unmount()); });
-  return { renderer, calls };
+  return { renderer, calls, location: () => navigation.location,
+    go: async target => act(async () => { navigation.navigate(target); await tick(); }) };
 }
 async function submit(renderer, query) {
   await act(async () => renderer.root.findByType('input').props.onChange({ target: { value: query } }));
@@ -94,6 +102,140 @@ async function submit(renderer, query) {
     await tick();
   });
 }
+
+const searchCalls = (calls, query) => calls.filter(url => url.startsWith('/search?')
+  && new URL(url, 'https://test.invalid').searchParams.get('q') === query
+  && !new URL(url, 'https://test.invalid').searchParams.has('offset')
+  && !new URL(url, 'https://test.invalid').searchParams.has('secao'));
+const subjectPage = url => {
+  const query = new URL(url, 'https://test.invalid').searchParams.get('q');
+  return page([item(`resultado-${query}`, `Resultado ${query}`)]);
+};
+
+test('same-route URL navigation updates the subject once and preserves drafts for unrelated parameters', async t => {
+  const { renderer, calls, go, location } = await mount(t, 'alfa', async url =>
+    url.startsWith('/drugs?') ? { items: [] } : subjectPage(url));
+  await go('/busca?q=beta&modo=tudo-com-tudo');
+  assert.equal(renderer.root.findByType('input').props.value, 'beta');
+  assert.match(nodeText(renderer.toJSON()), /Tudo sobre beta/);
+  assert.match(nodeText(renderer.toJSON()), /Resultado beta/);
+  assert.doesNotMatch(nodeText(renderer.toJSON()), /Resultado alfa/);
+  assert.equal(searchCalls(calls, 'beta').length, 1);
+  await act(async () => renderer.root.findByType('input').props.onChange({ target: { value: 'rascunho' } }));
+  await go('/busca?q=beta&modo=outro');
+  assert.equal(renderer.root.findByType('input').props.value, 'rascunho');
+  assert.match(nodeText(renderer.toJSON()), /Resultado beta/);
+  assert.equal(searchCalls(calls, 'beta').length, 1);
+  await submit(renderer, 'gama');
+  assert.equal(new URLSearchParams(location().search).get('modo'), 'outro');
+  assert.equal(new URLSearchParams(location().search).get('q'), 'gama');
+  assert.equal(searchCalls(calls, 'gama').length, 1, 'form and URL effect must not both fetch');
+});
+
+test('Back and Forward restore their URL subject; clearing or shortening it clears all previous results', async t => {
+  const { renderer, calls, go } = await mount(t, 'alfa', async url =>
+    url.startsWith('/drugs?') ? { items: [] } : subjectPage(url));
+  await go('/busca?q=beta');
+  await go(-1);
+  assert.equal(renderer.root.findByType('input').props.value, 'alfa');
+  assert.match(nodeText(renderer.toJSON()), /Resultado alfa/);
+  assert.doesNotMatch(nodeText(renderer.toJSON()), /Resultado beta/);
+  await go(1);
+  assert.equal(renderer.root.findByType('input').props.value, 'beta');
+  assert.match(nodeText(renderer.toJSON()), /Resultado beta/);
+  assert.equal(searchCalls(calls, 'alfa').length, 2);
+  assert.equal(searchCalls(calls, 'beta').length, 2);
+  const count = calls.length;
+  await go('/busca?modo=tudo-com-tudo');
+  assert.equal(renderer.root.findByType('input').props.value, '');
+  assert.match(nodeText(renderer.toJSON()), /Um assunto, todas as conexões/);
+  assert.doesNotMatch(nodeText(renderer.toJSON()), /Resultado|Nada encontrado/);
+  await go('/busca?q=x');
+  assert.equal(renderer.root.findByType('input').props.value, 'x');
+  assert.doesNotMatch(nodeText(renderer.toJSON()), /Resultado/);
+  assert.equal(calls.length, count, 'invalid/empty queries do not reach the API');
+});
+
+test('legacy tema URLs resolve on navigation and an explicit empty q does not revive their old subject', async t => {
+  const { renderer, calls, go } = await mount(t, '', async url =>
+    url.startsWith('/drugs?') ? { items: [] } : subjectPage(url), ['/busca?tema=fibrilacao-atrial']);
+  assert.equal(renderer.root.findByType('input').props.value, 'fibrilacao atrial');
+  assert.equal(searchCalls(calls, 'fibrilacao atrial').length, 1);
+  await go('/busca?tema=hipertensao-arterial');
+  assert.equal(renderer.root.findByType('input').props.value, 'hipertensao arterial');
+  assert.equal(searchCalls(calls, 'hipertensao arterial').length, 1);
+  const count = calls.length;
+  await go('/busca?q=&tema=hipertensao-arterial');
+  assert.equal(renderer.root.findByType('input').props.value, '');
+  assert.doesNotMatch(nodeText(renderer.toJSON()), /Resultado/);
+  assert.equal(calls.length, count);
+});
+
+test('URL changes and clearing invalidate late base results before drug or graph requests can start', async t => {
+  const old = deferred();
+  const { renderer, calls, go } = await mount(t, 'alfa', async url => {
+    if (url.startsWith('/drugs?')) return { items: [] };
+    return url.includes('q=alfa') ? old.promise : subjectPage(url);
+  });
+  await go('/busca?q=beta');
+  await act(async () => { old.resolve(page([item('antigo', 'Resultado obsoleto')], 1, null,
+    { primary_drug: { slug: 'farmaco-antigo', generic_name: 'Fármaco antigo' } })); await tick(); });
+  assert.match(nodeText(renderer.toJSON()), /Resultado beta/);
+  assert.doesNotMatch(nodeText(renderer.toJSON()), /obsoleto/);
+  assert.equal(calls.filter(url => url.startsWith('/drug-insights/')).length, 0);
+  const pending = deferred();
+  globalThis.corviaSearchFixture.get = url => { calls.push(url); return url.startsWith('/drugs?') ? Promise.resolve({ items: [] }) : pending.promise; };
+  await go('/busca?q=gama');
+  await go('/busca');
+  await act(async () => { pending.resolve(page([item('tardio', 'Resultado tardio')])); await tick(); });
+  assert.match(nodeText(renderer.toJSON()), /Um assunto, todas as conexões/);
+  assert.doesNotMatch(nodeText(renderer.toJSON()), /Resultado|Carregando/);
+});
+
+test('a late drug insight or graph response cannot repopulate a different URL subject', async t => {
+  const insight = deferred(), graph = deferred();
+  const drug = { slug: 'farmaco', generic_name: 'Fármaco', drug_class: 'Teste',
+    presentations: [], dosing: {}, indications: [], contraindications: [],
+    interactions: [], monitoring: [], adverse_effects: [] };
+  const { renderer, go } = await mount(t, 'farmaco', async url => {
+    if (url.startsWith('/drugs?')) return { items: [] };
+    if (url === '/drug-insights/farmaco') return insight.promise;
+    if (url.startsWith('/relacionados/ecossistema?')) return graph.promise;
+    if (url.includes('q=farmaco')) return page([], 0, null, { primary_drug: drug });
+    if (url.includes('q=holter')) return page([item('holter', 'Holter', 'exame')]);
+    return subjectPage(url);
+  });
+  await go('/busca?q=holter');
+  await go('/busca?q=beta');
+  await act(async () => {
+    insight.resolve(drug);
+    graph.resolve({ total: 1, grupos: [{ tipo: 'documento', itens: [{ slug: 'antigo', titulo: 'Conexão obsoleta', rota: '/biblioteca/antigo' }] }] });
+    await tick();
+  });
+  assert.match(nodeText(renderer.toJSON()), /Resultado beta/);
+  assert.doesNotMatch(nodeText(renderer.toJSON()), /Medicamento identificado|Conexão obsoleta|Fármaco/);
+});
+
+test('repeated submit of the same pending subject dispatches once and a failed search can retry', async t => {
+  let failures = 1;
+  const pending = deferred();
+  const { renderer, calls } = await mount(t, 'alfa', async url => {
+    if (url.startsWith('/drugs?')) return { items: [] };
+    if (failures-- > 0) throw Error('temporary');
+    return pending.promise;
+  });
+  assert.equal(renderer.root.findAllByProps({ role: 'alert' }).length, 1);
+  await act(async () => {
+    const form = renderer.root.findByType('form');
+    form.props.onSubmit({ preventDefault() {} });
+    form.props.onSubmit({ preventDefault() {} });
+    await tick();
+  });
+  assert.equal(searchCalls(calls, 'alfa').length, 2, 'one initial failure and one retry, no duplicate');
+  await act(async () => { pending.resolve(page([item('recuperado', 'Resultado recuperado')])); await tick(); });
+  assert.match(nodeText(renderer.toJSON()), /Resultado recuperado/);
+  assert.equal(renderer.root.findAllByProps({ role: 'alert' }).length, 0);
+});
 
 test('changing subject during pagination unlocks the new page and rejects stale results', async t => {
   const pending = deferred();

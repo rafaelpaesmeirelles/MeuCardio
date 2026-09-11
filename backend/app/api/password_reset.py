@@ -2,6 +2,7 @@ from datetime import datetime, timezone
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
 from pydantic import BaseModel, field_validator, model_validator
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
@@ -179,7 +180,7 @@ def solicitar_acesso_com_recuperacao(
 # Rota segura para a criação pelo Admin. O endpoint legado /api/admin/users
 # continua existindo por compatibilidade, mas o fluxo endurecido exige o
 # segundo canal e dispara o primeiro acesso sem transmitir senha em texto.
-from app.api.admin import NovoUsuario, criar_usuario  # noqa: E402
+from app.api.admin import NovoUsuario, _preparar_usuario_administrativo  # noqa: E402
 
 
 class NovoUsuarioComRecuperacao(NovoUsuario):
@@ -214,16 +215,22 @@ def admin_criar_usuario_com_recuperacao(
         raise HTTPException(status_code=409, detail="Este e-mail de recuperação já está vinculado a uma conta CorVIA.")
 
     base = NovoUsuario(**dados.model_dump(exclude={"recovery_email"}))
-    resultado = criar_usuario(base, db, admin)
-    user = db.get(User, resultado["id"])
-    if user is None:
-        raise HTTPException(status_code=500, detail="Usuário criado sem vínculo de recuperação. Operação abortada.")
     try:
+        resultado = _preparar_usuario_administrativo(base, db, admin)
+        user = db.get(User, resultado["id"])
+        if user is None:
+            raise HTTPException(status_code=500, detail="Usuário criado sem vínculo de recuperação. Operação abortada.")
         account_recovery.definir_email_recuperacao(db, user, recovery_email)
         db.commit()
     except ValueError as exc:
         db.rollback()
         raise HTTPException(status_code=409, detail=str(exc)) from exc
+    except IntegrityError as exc:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Não foi possível concluir o cadastro: um dos dados já está em uso.") from exc
+    except Exception:
+        db.rollback()
+        raise
 
     background_tasks.add_task(account_recovery.enviar_primeiro_acesso, user.id)
     return {**resultado, "recovery_email": recovery_email}

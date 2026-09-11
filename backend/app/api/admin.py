@@ -17,7 +17,7 @@ from app.models.content import Document
 from app.models.kyc import KycVerification
 from app.models.subscription import Subscription
 from app.models.user import User
-from app.services import emails
+from app.services import account_recovery, emails
 from app.services.entitlement import acesso_administrativo_sem_pagamento, tem_acesso_ao_produto
 from app.services.knowledge_graph import BackfillEmAndamento, backfill_mesmo_tema
 from app.services.kyc import verificacao as kyc_verificacao
@@ -445,8 +445,13 @@ def decidir_solicitacao(
     return _dump_usuario(alvo)
 
 
-@router.post("/users", status_code=201)
-def criar_usuario(dados: NovoUsuario, db: Session = Depends(get_db), admin=Depends(require_admin)):
+def _preparar_usuario_administrativo(dados: NovoUsuario, db: Session, admin):
+    """Prepara conta e auditoria sem confirmar a transação do chamador.
+
+    O cadastro com recuperação precisa gravar o segundo canal na mesma
+    transação. Um commit aqui deixaria uma conta sem convite após um conflito
+    de endereço de recuperação, impedindo inclusive repetir o cadastro.
+    """
     from app.api.auth import _perfil_completo
     from app.core.security import hash_password
     from app.models.user import User
@@ -458,7 +463,11 @@ def criar_usuario(dados: NovoUsuario, db: Session = Depends(get_db), admin=Depen
         raise HTTPException(status_code=422, detail="A senha precisa ter ao menos 8 caracteres.")
     if dados.role not in ("admin", "medico", "residente", "leitor"):
         raise HTTPException(status_code=422, detail="Perfil inválido.")
-    if db.query(User).filter(User.email == email).first():
+    if dados.tipo_acesso == "investidor" and dados.role == "admin":
+        raise HTTPException(status_code=422, detail="Conta de demonstração não pode ter perfil administrativo.")
+    # O login também não pode ocupar o segundo canal de outra conta. A busca
+    # de recuperação aceita ambos; permitir essa colisão criaria ambiguidade.
+    if account_recovery.email_ja_em_uso(db, email):
         raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail.")
 
     convidado = dados.tipo_acesso == "convidado"
@@ -508,11 +517,17 @@ def criar_usuario(dados: NovoUsuario, db: Session = Depends(get_db), admin=Depen
             "kyc_waivers": dados.kyc_waivers.as_dict() if dados.kyc_waivers is not None else None,
         },
     ))
-    db.commit()
     return {
         "id": novo.id, "email": novo.email, "full_name": novo.full_name, "role": novo.role,
         "tipo_acesso": dados.tipo_acesso, "convidado": novo.convidado, "investidor": novo.investidor,
     }
+
+
+@router.post("/users", status_code=201)
+def criar_usuario(dados: NovoUsuario, db: Session = Depends(get_db), admin=Depends(require_admin)):
+    resultado = _preparar_usuario_administrativo(dados, db, admin)
+    db.commit()
+    return resultado
 
 
 @router.patch("/users/{user_id}/ativo")
@@ -642,6 +657,8 @@ def alternar_investidor(
     alvo = db.get(User, user_id)
     if not alvo:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    if investidor and alvo.role == "admin":
+        raise HTTPException(status_code=409, detail="Uma conta administrativa não pode ser convertida em demonstração.")
     alvo.investidor = investidor
     db.add(AuditLog(
         user_id=admin.id,

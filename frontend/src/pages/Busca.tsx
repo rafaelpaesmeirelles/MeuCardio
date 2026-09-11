@@ -206,6 +206,21 @@ function PainelDrug({ d }: { d: Insight }) {
 export default function Busca() {
   const [params, setParams] = useSearchParams();
   const inicial = params.get("q") ?? params.get("tema")?.replaceAll("-", " ") ?? "";
+  // The URL owns the submitted subject, including browser Back/Forward. A new
+  // subject gets fresh state immediately; unrelated query parameters do not
+  // discard a draft, loaded sections or pagination of the same subject.
+  return <BuscaAssunto key={inicial.trim()} inicial={inicial} alterarConsulta={(valor) => {
+    const next = new URLSearchParams(params);
+    next.delete("tema");
+    if (valor) next.set("q", valor); else next.delete("q");
+    setParams(next, { replace: true });
+  }} />;
+}
+
+function BuscaAssunto({ inicial, alterarConsulta }: {
+  inicial: string;
+  alterarConsulta: (valor: string) => void;
+}) {
   const [q, setQ] = useState(inicial), [assunto, setAssunto] = useState(inicial.trim());
   const [res, setRes] = useState<Res[] | null>(null), [drug, setDrug] = useState<Insight | null>(null), [primaryDisease, setPrimaryDisease] = useState<PrimaryDisease | null>(null), [rel, setRel] = useState<Rel[]>([]);
   const [total, setTotal] = useState(0), [nextOffset, setNextOffset] = useState<number | null>(null);
@@ -215,17 +230,19 @@ export default function Busca() {
   const pendingGlobal = useRef(false);
   const [loading, setLoading] = useState(false), [loadingMore, setLoadingMore] = useState(false), [erro, setErro] = useState(""), [aviso, setAviso] = useState("");
   const seq = useRef(0);
+  const pendingSearch = useRef(false);
 
   async function buscar(valor: string) {
-    const termo = valor.trim(); if (termo.length < 2) return;
+    const termo = valor.trim(); if (termo.length < 2 || pendingSearch.current) return;
+    pendingSearch.current = true;
     const id = ++seq.current;
-    setLoading(true); setLoadingMore(false); setErro(""); setAviso(""); setDrug(null); setPrimaryDisease(null); setRel([]); setTotal(0); setNextOffset(null); setPorSecao({}); setSectionPages({}); pendingSections.current.clear(); pendingGlobal.current = false; setAssunto(termo); setParams({ q: termo }, { replace: true });
+    setLoading(true); setLoadingMore(false); setErro(""); setAviso(""); setDrug(null); setPrimaryDisease(null); setRel([]); setTotal(0); setNextOffset(null); setPorSecao({}); setSectionPages({}); pendingSections.current.clear(); pendingGlobal.current = false; setAssunto(termo);
     const [s, ds] = await Promise.allSettled([
       api.get<SearchResponse>(`/search?q=${encodeURIComponent(termo)}&limit=100`),
       api.get<PaginaDe<Drug>>(`/drugs?q=${encodeURIComponent(termo)}`),
     ]);
     if (id !== seq.current) return;
-    if (s.status === "rejected") { setRes(null); setErro(s.reason instanceof ApiError ? s.reason.message : "Não foi possível consultar o conteúdo."); setLoading(false); return; }
+    if (s.status === "rejected") { setRes(null); setErro(s.reason instanceof ApiError ? s.reason.message : "Não foi possível consultar o conteúdo."); pendingSearch.current = false; setLoading(false); return; }
     const itens = s.value.results; const disease = s.value.primary_disease ?? null; setRes(itens); setPrimaryDisease(disease); setTotal(s.value.total ?? itens.length); setNextOffset(s.value.next_offset ?? null); setPorSecao(s.value.por_secao ?? Object.fromEntries(Object.entries(s.value.por_frente ?? {}).filter(([key]) => key in SECOES)));
     let medicamentoSlug: string | null = s.value.primary_drug?.slug ?? null;
     if (ds.status === "rejected") setAviso("Conteúdo carregado; catálogo de medicamentos indisponível.");
@@ -290,7 +307,7 @@ export default function Busca() {
     if (ecossistemaMedicamento?.total) fontesRelacionadas.push(ecossistemaMedicamento);
     if (ecossistemaEntidade?.total) fontesRelacionadas.push(ecossistemaEntidade);
     setRel(mergeGraphGroups(fontesRelacionadas, itens));
-    if (id === seq.current) setLoading(false);
+    if (id === seq.current) { pendingSearch.current = false; setLoading(false); }
   }
 
   async function carregarMais() {
@@ -340,7 +357,23 @@ export default function Busca() {
       if (id === seq.current) pendingSections.current.delete(section);
     }
   }
-  useEffect(() => { if (inicial.trim().length > 1) void buscar(inicial); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, []);
+  useEffect(() => {
+    let active = true;
+    // Defer the first request so StrictMode's setup/cleanup replay does not
+    // dispatch a duplicate. Cleanup also invalidates every later stage of an
+    // old search, including its drug insight, graph and pagination responses.
+    queueMicrotask(() => { if (active && inicial.trim().length > 1) void buscar(inicial); });
+    return () => { active = false; seq.current += 1; };
+    // The keyed subtree owns exactly one submitted URL subject.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function enviarConsulta() {
+    const termo = q.trim();
+    if (termo.length < 2) return;
+    if (termo === inicial.trim()) void buscar(termo);
+    else alterarConsulta(termo);
+  }
 
   const grupos = new Map<Secao, Res[]>();
   (Object.keys(SECOES) as Secao[]).forEach((section) => { if ((porSecao[section] ?? 0) > 0) grupos.set(section, []); });
@@ -350,7 +383,7 @@ export default function Busca() {
 
   return <main className="tct-page">
     <header className="cartao tct-hero"><p className="eyebrow">Tudo com Tudo</p><h1>{assunto ? `Tudo sobre ${assunto}` : "Um assunto, todas as conexões"}</h1><p>Conteúdo relacionado ao assunto, organizado por frente de conhecimento.</p>
-      <form className="tct-search" role="search" onSubmit={(e) => { e.preventDefault(); void buscar(q); }}><input type="search" aria-label="Assunto" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ex.: olmesartana, fibrilação atrial…" /><button className="botao" disabled={q.trim().length < 2 || loading}>{loading ? "Buscando…" : "Conectar"}</button></form>
+      <form className="tct-search" role="search" onSubmit={(e) => { e.preventDefault(); enviarConsulta(); }}><input type="search" aria-label="Assunto" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ex.: olmesartana, fibrilação atrial…" /><button className="botao" disabled={q.trim().length < 2 || loading}>{loading ? "Buscando…" : "Conectar"}</button></form>
     </header>
     {erro && <Erro mensagem={erro} />}{aviso && <p className="cartao" role="status">{aviso}</p>}{loading && <Carregando texto="Conectando o conhecimento…" />}
     {!loading && primaryDisease && <TctDiseaseOverview disease={primaryDisease} />}

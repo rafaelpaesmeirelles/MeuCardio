@@ -56,6 +56,58 @@ def _normalize(value: str | None) -> str:
     return " ".join(re.sub(r"[^a-z0-9]+", " ", raw).split())
 
 
+# Closed lexical aliases, transcribed from generic_name in the reviewed
+# medicamentos/metadados.json. These are not brand aliases, equivalent doses,
+# or a general permission to strip salts/parentheses. In particular, route,
+# release and insulin-type qualifiers absent from this list remain significant.
+SUBSTANCE_NAME_ALIASES = (
+    ("Ácido Acetilsalicílico (AAS)", "Ácido Acetilsalicílico"),
+    ("Atorvastatina (cálcica)", "Atorvastatina"),
+    ("Bisoprolol (hemifumarato)", "Bisoprolol"),
+    ("Clopidogrel (bissulfato)", "Clopidogrel"),
+    ("Enalapril (maleato)", "Enalapril"),
+    ("Losartana potássica", "Losartana"),
+    ("Rosuvastatina (cálcica)", "Rosuvastatina"),
+    ("Paracetamol (acetaminofeno)", "Paracetamol"),
+    ("Azitromicina (di-hidratada)", "Azitromicina"),
+    ("Sildenafila (citrato)", "Sildenafila"),
+    ("Epinefrina (adrenalina)", "Epinefrina"),
+    ("Milrinona (lactato de milrinona)", "Milrinona"),
+    ("Nitroglicerina (trinitrato de glicerila)", "Nitroglicerina"),
+    ("Noradrenalina (Norepinefrina)", "Norepinefrina"),
+    ('Salbutamol (sulfato de salbutamol — "albuterol" na bula FDA)', "Salbutamol"),
+)
+_SUBSTANCE_NAME_ALIASES = {
+    _normalize(editorial): _normalize(source)
+    for editorial, source in SUBSTANCE_NAME_ALIASES
+}
+
+
+def _substance_identity(value: str | None) -> frozenset[str]:
+    # Split only top-level components before normalizing punctuation. Thus an
+    # alias cannot erase a '+' separating ingredients, while the existing
+    # Perindopril (arginina/erbumina) spelling keeps its salt alternatives.
+    components: list[str] = []
+    start = depth = 0
+    raw = value or ""
+    for index, char in enumerate(raw):
+        if char == "(":
+            depth += 1
+        elif char == ")":
+            depth = max(0, depth - 1)
+        elif char in "+/;" and depth == 0:
+            components.append(raw[start:index])
+            start = index + 1
+    components.append(raw[start:])
+    tokens: set[str] = set()
+    for component in components:
+        normalized = _normalize(component)
+        # Exact whole component only: extra strength, route, release or an
+        # unreviewed qualifier prevents aliasing instead of being discarded.
+        tokens.update(_SUBSTANCE_NAME_ALIASES.get(normalized, normalized).split())
+    return frozenset(tokens) - SUBSTANCE_DESCRIPTORS
+
+
 def _decimal_br(value: str) -> Decimal:
     # Never stringify a JSON number: 1234.56 would otherwise become 123456.
     # Missing cells are handled by callers, not fabricated as zero here.
@@ -162,7 +214,7 @@ class _IndexedSnapshot(dict):
             product = _normalize(record.get("product"))
             if product:
                 self._by_brand.setdefault(product, []).append(index)
-            tokens = frozenset(_normalize(record.get("substance")).split()) - SUBSTANCE_DESCRIPTORS
+            tokens = _substance_identity(record.get("substance"))
             if tokens and product != "acertanlo":
                 self._by_substance.setdefault(tokens, []).append(index)
 
@@ -171,7 +223,7 @@ class _IndexedSnapshot(dict):
         for brand in drug.brand_names or []:
             if brand:
                 indices.update(self._by_brand.get(_normalize(brand), ()))
-        tokens = frozenset(_normalize(drug.generic_name).split()) - SUBSTANCE_DESCRIPTORS
+        tokens = _substance_identity(drug.generic_name)
         if tokens:
             indices.update(self._by_substance.get(tokens, ()))
         return [self["records"][index] for index in sorted(indices)]
@@ -207,8 +259,8 @@ def _record_matches(drug: Drug, record: dict) -> bool:
     if product == "acertanlo":
         return False
 
-    generic_tokens = set(generic.split()) - SUBSTANCE_DESCRIPTORS
-    substance_tokens = set(substance.split()) - SUBSTANCE_DESCRIPTORS
+    generic_tokens = _substance_identity(drug.generic_name)
+    substance_tokens = _substance_identity(record.get("substance"))
     if not generic_tokens:
         return False
 

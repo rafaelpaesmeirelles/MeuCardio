@@ -994,3 +994,72 @@ pytest/conftest/banco. A continuação deve fixar a prova original e todo delta
 revisado, executar os seis nós falhos mais os focais Káiros afetados e concluir
 HTTP e backup/restauração. Isso não é uma nova suíte full aprovada nem dispensa
 os gates próprios de frontend/corpus. Nenhuma publicação está certificada aqui.
+
+## Continuação de integrações — convite, busca e cobertura Káiros
+
+Candidato separado em `codex/integration-followup-20260911`, baseado no main
+`0a1e0e468956c71fdeaf48d00e276a6d6020aa80` (PR934). O SHA-base foi confirmado
+em produção antes desta continuação. Os resultados abaixo são locais ou
+consultas agregadas somente leitura; não certificam a publicação deste delta.
+
+### Convite administrativo e identidade
+
+- Reproduzido: o endpoint com recuperação confirmava a conta antes de gravar
+  seu segundo canal. Um conflito posterior deixava usuário/auditoria sem
+  convite, impedindo repetir o cadastro. A preparação agora apenas faz flush;
+  conta, canal e auditoria são confirmados juntos, com rollback integral em
+  falha e agendamento de um único convite depois do commit. O endpoint legado
+  preserva resposta e commit próprios.
+- O novo login não pode ocupar o e-mail de recuperação de outra conta.
+  Criação/conversão de demonstração com perfil administrativo são rejeitadas;
+  revogação continua permitida. Nenhum usuário existente foi alterado.
+- Doze casos puros dos corpos reais passaram em execuções focais, incluindo
+  regressão vermelha inicial de atomicidade e reteste dos dois casos afetados.
+  Casos integrados HTTP/PostgreSQL foram acrescentados para execução no CI
+  descartável; não foram executados contra o banco de produção.
+- O fluxo normal/convidado já agenda primeiro acesso. Não é correto dizer
+  que toda criação estava sem envio: o caminho legado de investidores é
+  distinto. As duas contas de investidor observadas apenas por contagem são
+  médicas, não administrativas. O modelo atual mantém credencial compartilhada;
+  convites individuais dependem de decisão do responsável e não foram ativados.
+- Nenhum e-mail real enviado nesta continuação. Recebimento em caixa de entrada
+  depende de destinatário autorizado e confirmação; aceite do provedor não é
+  prova de entrega. SPF/MX foram observados, DMARC não retornou registro TXT;
+  isso, isoladamente, não estabelece a causa de falha de entrega.
+
+### Tudo com Tudo
+
+- Reproduzido em React real: navegar entre assuntos na mesma rota pelo
+  cabeçalho deixava input/título/resultados anteriores. O assunto submetido
+  agora pertence à URL; a troca remonta somente seu estado, invalida respostas
+  antigas e preserva parâmetros alheios. Busca atual pode ser repetida após
+  falha, sem duplicar a requisição inicial ou submissões pendentes.
+- 17 testes React aprovados: seis novos e onze existentes. Incluem histórico,
+  parâmetro legado `tema`, assuntos vazios/curtos, paginação e respostas tardias.
+  TypeScript e build Vite aprovados; nenhuma alteração de CSS/layout.
+- Consultas agregadas somente leitura encontraram 326 doenças publicadas,
+  nenhuma sem resumo/fontes, e 206 medicamentos. Sentinelas SQL de identidade
+  para FA/HAS e Entresto/Eliquis/Benicar/Crestor retornaram os respectivos slugs.
+  Isso não substitui uma auditoria de relevância de todas as consultas ou uma
+  sessão autenticada ponta a ponta. Não houve publicação/reindexação do corpus.
+
+### Káiros: aliases explícitos, sem alterar preços ou prova editorial
+
+- Quinze aliases lexicais fechados do catálogo melhoraram o vínculo entre
+  componentes completos, preservando ingredientes associados, via, liberação
+  e apresentação. O mesmo identificador é usado no índice e no filtro final.
+- Nos 206 medicamentos locais, cobertura PMC passou de 84 para 90; somente PF,
+  de 8 para 11; sem vínculo seguro, de 114 para 105. Pares medicamento/opção
+  passaram de 541 para 614; não são 614 apresentações comerciais distintas.
+- AAS, epinefrina, sildenafila, paracetamol, azitromicina e salbutamol passaram a
+  apresentar opções PMC da edição existente. Itens somente PF permanecem sem
+  preço ao consumidor. Não foi inventado preço nem alegada atualização de varejo.
+- 21 testes focais aprovados, além de concordância índice/busca linear nos
+  206 registros. Snapshot operacional, auditoria e sidecar histórico ficaram
+  byte a byte inalterados, preservando os valores/páginas e 52 referências.
+- Contratar outro fornecedor de preços reais permanece pendência comercial.
+
+Revisão independente não identificou novo P1/P2 no delta de aliases e guardas
+administrativas. Não é certificação clínica independente da publicação Káiros.
+Sem migrations, dependências, workflow ou configurações externas alterados.
+O certificado excepcional de PR934 não se aplica a este novo candidato.
