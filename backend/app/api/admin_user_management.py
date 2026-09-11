@@ -16,7 +16,7 @@ from app.models.email_account import EmailAccount
 from app.models.subscription import Subscription
 from app.models.user import User
 from app.models.user_access import UserAccess
-from app.services import mail360
+from app.services import account_recovery, mail360
 from app.services.mail360 import Mail360Error
 from app.services.professional_profile import normalize_council, normalize_professional_title
 
@@ -309,12 +309,15 @@ def atualizar_usuario(
     alvo = db.get(User, user_id)
     if not alvo:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    account_recovery.bloquear_identidades_email(db)
+    db.refresh(alvo)
     if alvo.id == admin.id or alvo.role == "admin":
         raise HTTPException(status_code=409, detail="Use o fluxo administrativo próprio para contas de administrador.")
 
-    existente = db.query(User).filter(User.email == dados.email, User.id != alvo.id).first()
-    if existente:
+    if account_recovery.email_ja_em_uso(db, dados.email, ignorar_user_id=alvo.id):
         raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail.")
+    if dados.email != alvo.email and dados.email == account_recovery.obter_email_recuperacao(db, alvo.id):
+        raise HTTPException(status_code=422, detail="O e-mail de login precisa ser diferente do e-mail de recuperação.")
 
     antes = {
         "email": alvo.email,

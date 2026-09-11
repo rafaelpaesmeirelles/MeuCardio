@@ -467,6 +467,7 @@ def _preparar_usuario_administrativo(dados: NovoUsuario, db: Session, admin):
         raise HTTPException(status_code=422, detail="Conta de demonstração não pode ter perfil administrativo.")
     # O login também não pode ocupar o segundo canal de outra conta. A busca
     # de recuperação aceita ambos; permitir essa colisão criaria ambiguidade.
+    account_recovery.bloquear_identidades_email(db)
     if account_recovery.email_ja_em_uso(db, email):
         raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail.")
 

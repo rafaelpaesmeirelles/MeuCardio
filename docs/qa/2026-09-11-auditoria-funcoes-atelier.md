@@ -1063,3 +1063,41 @@ Revisão independente não identificou novo P1/P2 no delta de aliases e guardas
 administrativas. Não é certificação clínica independente da publicação Káiros.
 Sem migrations, dependências, workflow ou configurações externas alterados.
 O certificado excepcional de PR934 não se aplica a este novo candidato.
+
+### Retenção na revisão de identidade — PR935
+
+O candidato `235c8f80e93fa2dbbcd539017e8e9a9a17599f41` concluiu a CI
+`34646993937`: **3847 passed, 4 skipped, 1 warning**, além do smoke HTTP,
+backup/restauração PostgreSQL e certificado `backend-risk-v1-full`. Esses
+resultados pertencem exclusivamente a esse SHA.
+
+Antes da promoção, a revisão `3993383026` identificou que a proteção do novo
+login não cobria outros escritores preexistentes: cadastro público, troca de
+e-mail pelo titular, gerenciamento administrativo, provisionamento de equipe
+e bootstrap administrativo. O cadastro público com recuperação também
+confirmava a conta antes de persistir seu canal. A promoção foi retida;
+main/produção permaneceram em `0a1e0e46`, sem envio de e-mails ou alteração
+de usuários pela auditoria.
+
+A consulta agregada em transação explicitamente somente leitura encontrou
+**zero colisões entre login e recuperação de contas distintas e zero contas
+com login igual ao próprio canal**. Não há reparo de dados indicado por essa
+consulta; trata-se de proteger as próximas escritas, inclusive concorrentes.
+
+O ajuste usa um único lock transacional PostgreSQL, com identificador fixo
+sem dados pessoais, antes da consulta de disponibilidade em todos os
+escritores de login/recuperação. Cadastro público, consumo de pré-autorização,
+canal e auditoria passam a ter um só commit; notificações ficam depois dele.
+Não há migração nem mudança de layout, preços, conteúdo ou política de CI.
+O novo delta de autenticação requer certificado do seu próprio SHA: o
+resultado anterior não será apresentado como teste de código posterior.
+
+Validação focal do novo delta: **10/10** casos puros de identidade, **5/5**
+casos de atualização de perfil, **12/12** guards de recuperação/ativação e
+**12/12** casos de convite administrativo aprovados. Nenhuma suíte Káiros ou
+React foi repetida nesta correção. Revisão independente dos escritores,
+consumidores, imports e transações sem novo P1/P2; leitura, não execução DB.
+Acrescentados **15 casos integrados** para a CI PostgreSQL isolada, incluindo
+quatro corridas login/recuperação com commit ou rollback, espera observada
+em `pg_locks` e confirmação das notificações por outra sessão. Estes 15
+casos ainda aguardam a CI; não foram executados contra produção.

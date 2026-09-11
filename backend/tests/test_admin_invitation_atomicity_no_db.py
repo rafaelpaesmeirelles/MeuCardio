@@ -95,6 +95,7 @@ class AdminInvitationAtomicityTests(unittest.TestCase):
         self.background = SimpleNamespace(add_task=self.schedule)
         self.recovery = SimpleNamespace(
             normalizar_email=lambda value: value.strip().lower(),
+            bloquear_identidades_email=lambda db: db.events.append("identity_lock"),
             email_ja_em_uso=lambda *_: False,
             definir_email_recuperacao=self.define_channel,
             enviar_primeiro_acesso=lambda _id: True,
@@ -150,6 +151,7 @@ class AdminInvitationAtomicityTests(unittest.TestCase):
         self.assertEqual(response["id"], 99031)
         self.assertEqual(self.db.commits, 1)
         self.assertEqual(len(self.db.persisted), 3)
+        self.assertLess(self.db.events.index("identity_lock"), self.db.events.index("flush"))
         self.assertLess(self.db.events.index("channel"), self.db.events.index("commit"))
         self.assertLess(self.db.events.index("commit"), self.db.events.index("schedule"))
         self.assertEqual(self.tasks, [(self.recovery.enviar_primeiro_acesso, 99031)])
@@ -167,6 +169,7 @@ class AdminInvitationAtomicityTests(unittest.TestCase):
         self.assertEqual(response, dict(id=99031, email="novo@example.invalid", full_name="Conta fictícia", role="medico", tipo_acesso="normal", convidado=False, investidor=False))
         self.assertEqual(self.db.commits, 1)
         self.assertEqual(len(self.db.persisted), 2)
+        self.assertLess(self.db.events.index("identity_lock"), self.db.events.index("flush"))
 
     def test_unique_violation_rolls_back_all_rows_and_never_schedules_email(self):
         def conflict():

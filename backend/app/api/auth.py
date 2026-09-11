@@ -6,7 +6,7 @@ from pathlib import Path
 from fastapi import APIRouter, BackgroundTasks, Depends, File, HTTPException, Request, UploadFile
 from fastapi.security import OAuth2PasswordRequestForm
 from pydantic import BaseModel, field_validator, model_validator
-from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -19,7 +19,7 @@ from app.core.uploads import UploadRejected, atomic_write_bytes, validate_file
 from app.core.validators import UFS, cpf_mascarado, cpf_valido, limpar_cpf
 from app.models.audit import AuditLog
 from app.models.user import User
-from app.services import emails
+from app.services import account_recovery, emails
 from app.services.assinatura import catalogo
 from app.services.professional_profile import (
     council_display, normalize_council, normalize_professional_title, profile_payload,
@@ -683,14 +683,22 @@ def trocar_email(dados: TrocaDeEmail, background_tasks: BackgroundTasks,
                  db: Session = Depends(get_db), user: User = Depends(current_user)):
     if not verify_password(dados.senha_atual, user.password_hash):
         raise HTTPException(status_code=400, detail="Senha atual incorreta.")
+    account_recovery.bloquear_identidades_email(db)
+    db.refresh(user, attribute_names=["email"])
     if dados.novo_email == user.email:
         raise HTTPException(status_code=422, detail="Este já é o seu e-mail atual.")
-    if db.query(User).filter(User.email == dados.novo_email).first():
+    if account_recovery.email_ja_em_uso(db, dados.novo_email, ignorar_user_id=user.id):
         raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail.")
+    if dados.novo_email == account_recovery.obter_email_recuperacao(db, user.id):
+        raise HTTPException(status_code=422, detail="O e-mail de login precisa ser diferente do e-mail de recuperação.")
 
     email_antigo = user.email
     user.email = dados.novo_email
-    db.commit()
+    try:
+        db.commit()
+    except IntegrityError as exc:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail.") from exc
     background_tasks.add_task(emails.enviar_troca_email, user.id, email_antigo, dados.novo_email)
     return {"nota": "E-mail alterado. Use o novo endereço para entrar a partir de agora."}
 
@@ -778,8 +786,8 @@ class SolicitacaoAcesso(BaseModel):
         return self
 
 
-@router.post("/solicitar-acesso", status_code=201)
-def solicitar_acesso(dados: SolicitacaoAcesso, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
+def _preparar_solicitacao_acesso(dados: SolicitacaoAcesso, db: Session) -> tuple[User, bool]:
+    """Prepara cadastro e consumo de convite na transação do chamador, sem envio."""
     if dados.birth_date >= date.today():
         raise HTTPException(status_code=422, detail="Data de nascimento inválida.")
     if not cpf_valido(dados.cpf):
@@ -788,7 +796,8 @@ def solicitar_acesso(dados: SolicitacaoAcesso, background_tasks: BackgroundTasks
         raise HTTPException(status_code=422, detail="A senha precisa ter ao menos 8 caracteres.")
 
     cpf_limpo = limpar_cpf(dados.cpf)
-    if db.query(User).filter(User.email == dados.email).first():
+    account_recovery.bloquear_identidades_email(db)
+    if account_recovery.email_ja_em_uso(db, dados.email):
         raise HTTPException(status_code=409, detail="Já existe uma solicitação ou conta com este e-mail.")
     if db.query(User).filter(User.cpf == cpf_limpo).first():
         raise HTTPException(status_code=409, detail="Já existe uma solicitação ou conta com este CPF.")
@@ -803,6 +812,7 @@ def solicitar_acesso(dados: SolicitacaoAcesso, background_tasks: BackgroundTasks
     pre_autorizacao = (
         db.query(ConvidadoPreAutorizado)
         .filter(ConvidadoPreAutorizado.email == dados.email, ConvidadoPreAutorizado.usado_em.is_(None))
+        .with_for_update()
         .first()
     )
     convidado_via_pre_autorizacao = pre_autorizacao is not None
@@ -829,8 +839,7 @@ def solicitar_acesso(dados: SolicitacaoAcesso, background_tasks: BackgroundTasks
     if convidado_via_pre_autorizacao:
         novo.reviewed_at = datetime.now(timezone.utc)
     db.add(novo)
-    db.commit()
-    db.refresh(novo)
+    db.flush()
 
     if convidado_via_pre_autorizacao:
         pre_autorizacao.usado_em = datetime.now(timezone.utc)
@@ -846,7 +855,15 @@ def solicitar_acesso(dados: SolicitacaoAcesso, background_tasks: BackgroundTasks
                         "pré-autorizado por um admin antes do cadastro acontecer.",
             },
         ))
-        db.commit()
+    return novo, convidado_via_pre_autorizacao
+
+
+def _concluir_solicitacao_acesso(
+    novo: User, convidado_via_pre_autorizacao: bool,
+    background_tasks: BackgroundTasks, db: Session,
+):
+    """Notifica apenas depois de o chamador confirmar todo o cadastro."""
+    if convidado_via_pre_autorizacao:
         return {
             "nota": "Cadastro concluído! Seu acesso já está liberado — você pode entrar agora.",
             "acesso_imediato": True,
@@ -860,3 +877,17 @@ def solicitar_acesso(dados: SolicitacaoAcesso, background_tasks: BackgroundTasks
         "nota": "Solicitação registrada. Você recebe acesso assim que um administrador "
                 "conferir seus dados profissionais."
     }
+
+
+@router.post("/solicitar-acesso", status_code=201)
+def solicitar_acesso(dados: SolicitacaoAcesso, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
+    try:
+        novo, convidado = _preparar_solicitacao_acesso(dados, db)
+        db.commit()
+    except IntegrityError as exc:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Não foi possível concluir o cadastro: um dos dados já está em uso.") from exc
+    except Exception:
+        db.rollback()
+        raise
+    return _concluir_solicitacao_acesso(novo, convidado, background_tasks, db)

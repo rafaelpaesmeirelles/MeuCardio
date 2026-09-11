@@ -40,6 +40,11 @@ def real_handlers():
           "model_validator": model_validator, "date": date, "HTTPException": HttpFailure,
           "Depends": lambda dependency: None, "get_db": object(), "require_admin": object(),
           "current_user": object(), "User": object, "re": __import__("re")}
+    ns["account_recovery"] = SimpleNamespace(
+        bloquear_identidades_email=lambda db: None,
+        email_ja_em_uso=lambda db, email, *, ignorar_user_id=None: False,
+        obter_email_recuperacao=lambda db, user_id: None,
+    )
     load_nodes(APP / "services/professional_profile.py", {
         "PROFESSIONAL_TITLES", "COUNCILS", "normalize_council", "normalize_professional_title",
     }, ns)

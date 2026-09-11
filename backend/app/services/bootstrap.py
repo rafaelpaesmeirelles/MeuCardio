@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 
 from app.core.security import hash_password
 from app.models.user import User
+from app.services import account_recovery
 
 
 def create_admin_if_absent(
@@ -32,6 +33,7 @@ def create_admin_if_absent(
     if not password:
         raise ValueError("Senha do administrador não pode ser vazia.")
 
+    account_recovery.bloquear_identidades_email(db)
     existing = (
         db.query(User)
         .filter(func.lower(User.email) == normalized_email)
@@ -39,6 +41,8 @@ def create_admin_if_absent(
     )
     if existing is not None:
         return existing, False
+    if account_recovery.email_ja_em_uso(db, normalized_email):
+        raise ValueError("E-mail do administrador já está vinculado a outra conta CorVIA.")
 
     user = User(
         email=normalized_email,

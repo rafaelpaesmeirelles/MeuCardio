@@ -126,7 +126,9 @@ def admin_atualizar_email_recuperacao(
 # versão; o canal externo é persistido separadamente do login.
 # -------------------------------------------------------------------------
 
-from app.api.auth import SolicitacaoAcesso, solicitar_acesso  # noqa: E402
+from app.api.auth import (  # noqa: E402
+    SolicitacaoAcesso, _concluir_solicitacao_acesso, _preparar_solicitacao_acesso,
+)
 
 
 class SolicitacaoAcessoComRecuperacao(SolicitacaoAcesso):
@@ -154,21 +156,25 @@ def solicitar_acesso_com_recuperacao(
     db: Session = Depends(get_db),
 ):
     recovery_email = account_recovery.normalizar_email(dados.recovery_email)
-    if account_recovery.email_ja_em_uso(db, recovery_email):
-        raise HTTPException(status_code=409, detail="Este e-mail de recuperação já está vinculado a uma conta CorVIA.")
-
     base = SolicitacaoAcesso(**dados.model_dump(exclude={"recovery_email"}))
-    resultado = solicitar_acesso(base, background_tasks, db)
-    user = db.query(User).filter(User.email == base.email).first()
-    if user is None:
-        raise HTTPException(status_code=500, detail="Cadastro criado sem vínculo de recuperação. Operação abortada.")
     try:
+        account_recovery.bloquear_identidades_email(db)
+        if account_recovery.email_ja_em_uso(db, recovery_email):
+            raise HTTPException(status_code=409, detail="Este e-mail de recuperação já está vinculado a uma conta CorVIA.")
+        user, convidado = _preparar_solicitacao_acesso(base, db)
         account_recovery.definir_email_recuperacao(db, user, recovery_email)
         db.commit()
     except ValueError as exc:
         db.rollback()
         raise HTTPException(status_code=409, detail=str(exc)) from exc
+    except IntegrityError as exc:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Não foi possível concluir o cadastro: um dos dados já está em uso.") from exc
+    except Exception:
+        db.rollback()
+        raise
 
+    resultado = _concluir_solicitacao_acesso(user, convidado, background_tasks, db)
     background_tasks.add_task(account_recovery.enviar_confirmacao_canal_recuperacao, user.id)
     # Convidado pré-autorizado pode sair do cadastro já aprovado. Nesse caso
     # não existe decisão administrativa futura para disparar a boas-vindas.
@@ -211,11 +217,11 @@ def admin_criar_usuario_com_recuperacao(
     if dados.tipo_acesso == "investidor":
         raise HTTPException(status_code=409, detail="Investidor não possui recuperação pessoal.")
     recovery_email = account_recovery.normalizar_email(dados.recovery_email)
-    if account_recovery.email_ja_em_uso(db, recovery_email):
-        raise HTTPException(status_code=409, detail="Este e-mail de recuperação já está vinculado a uma conta CorVIA.")
-
     base = NovoUsuario(**dados.model_dump(exclude={"recovery_email"}))
     try:
+        account_recovery.bloquear_identidades_email(db)
+        if account_recovery.email_ja_em_uso(db, recovery_email):
+            raise HTTPException(status_code=409, detail="Este e-mail de recuperação já está vinculado a uma conta CorVIA.")
         resultado = _preparar_usuario_administrativo(base, db, admin)
         user = db.get(User, resultado["id"])
         if user is None:

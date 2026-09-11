@@ -10,6 +10,7 @@ from sqlalchemy import func
 from app.core.db import SessionLocal
 from app.core.security import hash_password
 from app.models.user import User
+from app.services import account_recovery
 
 
 def parser() -> argparse.ArgumentParser:
@@ -30,9 +31,12 @@ def main() -> None:
 
     db = SessionLocal()
     try:
+        account_recovery.bloquear_identidades_email(db)
         existing = db.query(User).filter(func.lower(User.email) == email).first()
         if existing:
             raise SystemExit(f"Conta já existente: {email}. Nenhuma alteração foi feita.")
+        if account_recovery.email_ja_em_uso(db, email):
+            raise SystemExit("E-mail já vinculado a uma conta CorVIA. Nenhuma alteração foi feita.")
         user = User(
             email=email,
             full_name=args.name.strip() or "Usuário a completar cadastro",

@@ -10,6 +10,8 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 
+from sqlalchemy import func, text
+
 from app.core.config import settings
 from app.core.db import SessionLocal
 from app.models.account_recovery import AccountRecoveryEmail
@@ -19,6 +21,20 @@ from app.services import emails
 
 PRAZO_RECUPERACAO_HORAS = 1
 PRAZO_PRIMEIRO_ACESSO_HORAS = 48
+
+
+def bloquear_identidades_email(db) -> None:
+    """Serializa escritas de login/recuperação até commit ou rollback.
+
+    As duas tabelas compartilham uma identidade, mas seus índices únicos são
+    independentes. Todos os escritores devem adquirir este mesmo lock ANTES
+    de consultar disponibilidade. Um único par fixo (sem dados pessoais) evita
+    deadlocks de ordenação entre os endereços de login e recuperação.
+    """
+    db.execute(
+        text("SELECT pg_advisory_xact_lock(:namespace, :resource)"),
+        {"namespace": 0x434F5256, "resource": 1},
+    )
 
 
 def normalizar_email(value: str) -> str:
@@ -40,13 +56,13 @@ def email_ja_em_uso(db, email: str, *, ignorar_user_id: int | None = None) -> bo
     sem revelar ou redefinir a conta errada.
     """
     email = normalizar_email(email)
-    q_user = db.query(User).filter(User.email == email)
+    q_user = db.query(User).filter(func.lower(User.email) == email)
     if ignorar_user_id is not None:
         q_user = q_user.filter(User.id != ignorar_user_id)
     if q_user.first() is not None:
         return True
 
-    q_recovery = db.query(AccountRecoveryEmail).filter(AccountRecoveryEmail.email == email)
+    q_recovery = db.query(AccountRecoveryEmail).filter(func.lower(AccountRecoveryEmail.email) == email)
     if ignorar_user_id is not None:
         q_recovery = q_recovery.filter(AccountRecoveryEmail.user_id != ignorar_user_id)
     return q_recovery.first() is not None
@@ -54,7 +70,11 @@ def email_ja_em_uso(db, email: str, *, ignorar_user_id: int | None = None) -> bo
 
 def definir_email_recuperacao(db, user: User, recovery_email: str) -> AccountRecoveryEmail:
     recovery_email = validar_email_basico(recovery_email)
-    if recovery_email == normalizar_email(user.email):
+    bloquear_identidades_email(db)
+    # O objeto pode ter sido carregado antes de esperar o lock. Ler a coluna
+    # novamente evita comparar com um login antigo do identity map da sessão.
+    login_atual = db.query(User.email).filter(User.id == user.id).scalar()
+    if recovery_email == normalizar_email(login_atual):
         raise ValueError("O e-mail de recuperação precisa ser diferente do e-mail de login.")
     if email_ja_em_uso(db, recovery_email, ignorar_user_id=user.id):
         raise ValueError("Este e-mail já está vinculado a outra conta CorVIA.")
