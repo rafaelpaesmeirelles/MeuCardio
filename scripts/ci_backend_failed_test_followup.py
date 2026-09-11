@@ -7,12 +7,14 @@ backup gates. Any scope/provenance mismatch stops CI rather than running full.
 from __future__ import annotations
 
 import hashlib
+import io
 import json
 import os
 from pathlib import Path
 import re
 import subprocess
 import xml.etree.ElementTree as ET
+import zipfile
 
 from ci_backend_policy import PolicyDecision
 
@@ -22,6 +24,8 @@ PR_NUMBER = 932
 BASELINE_SHA = "efb10e02e0237daacfe2054e5afca200dee62804"
 RUN_ID = 34593060917
 JOB_ID = 103242658960
+ARTIFACT_ID = 10261753294
+ARTIFACT_SHA256 = "09c7664412d15bcccfcb1bbeaa4de7750142cc68a4246072b9b934adba3f6225"
 TEST_NODE = "backend/tests/test_reconcile_rag_pipeline.py::test_reconcile_nunca_chama_rag"
 FIXTURE_PATH = TEST_NODE.split("::")[0]
 FIXTURE_SHA256 = "d6bfe40112c759cfe60e4795a1ab42af4404d8b5c27143b7c00aad9a52f212d1"
@@ -47,10 +51,46 @@ def _git(root: Path, *args: str) -> str:
 
 def _github(path: str, *, raw: bool = False):
     # Logs remain in memory; never print CI output, which may contain secrets.
-    result = subprocess.run(["gh", "api", path], capture_output=True, text=True)
+    result = subprocess.run(["gh", "api", path], capture_output=True, text=True, timeout=45)
     if result.returncode or len(result.stdout) > 16 * 1024 * 1024:
         raise ValueError("Cannot verify bounded baseline evidence; refusing follow-up")
     return result.stdout if raw else json.loads(result.stdout)
+
+
+def _github_binary(path: str) -> bytes:
+    # The pinned artifact is 1110 bytes. This is a post-download size check,
+    # not a subprocess memory sandbox; the ZIP member has a bounded read below.
+    result = subprocess.run(["gh", "api", "-H", "Cache-Control: no-cache", path], capture_output=True, timeout=45)
+    if result.returncode or len(result.stdout) > 2 * 1024 * 1024:
+        # Only a numeric HTTP status can escape; never expose a signed URL/body.
+        match = re.search(rb"HTTP (\d{3})", result.stderr)
+        status = match.group(1).decode() if match else "unavailable"
+        raise ValueError(f"Cannot read the bounded baseline artifact (HTTP {status})")
+    return result.stdout
+
+
+def validate_artifact(artifact: dict, archive: bytes) -> str:
+    expected = {"id": ARTIFACT_ID, "name": "backend-pytest-failure", "expired": False,
+                "digest": "sha256:" + ARTIFACT_SHA256}
+    if any(artifact.get(key) != value for key, value in expected.items()):
+        raise ValueError("Unexpected baseline artifact identity or digest")
+    provenance = artifact.get("workflow_run", {})
+    if any(provenance.get(key) != value for key, value in
+           {"id": RUN_ID, "head_sha": BASELINE_SHA, "head_branch": BRANCH,
+            "repository_id": 1312508910, "head_repository_id": 1312508910}.items()):
+        raise ValueError("Unexpected baseline artifact provenance")
+    if len(archive) > 2 * 1024 * 1024 or hashlib.sha256(archive).hexdigest() != ARTIFACT_SHA256:
+        raise ValueError("Baseline artifact archive checksum mismatch")
+    with zipfile.ZipFile(io.BytesIO(archive)) as bundle:
+        entries = bundle.infolist()
+        if len(entries) != 1 or entries[0].filename != "pytest-output.txt" or entries[0].file_size > 2 * 1024 * 1024:
+            raise ValueError("Unexpected baseline artifact members")
+        # Read the single member into memory; never extract paths to disk.
+        with bundle.open(entries[0]) as report:
+            content = report.read(2 * 1024 * 1024 + 1)
+        if len(content) > 2 * 1024 * 1024:
+            raise ValueError("Baseline report exceeds its bounded size")
+        return content.decode("utf-8")
 
 
 def validate_baseline(run: dict, job: dict, log: str) -> str:
@@ -61,8 +101,10 @@ def validate_baseline(run: dict, job: dict, log: str) -> str:
         raise ValueError("Unexpected baseline run identity")
     if run.get("repository", {}).get("full_name") != REPOSITORY:
         raise ValueError("Unexpected baseline repository")
+    # pull_requests[].head.sha is live PR metadata, not the run's snapshot.
+    # Immutable run.head_sha and job.head_sha above/below bind the actual code.
     if not any(pr.get("number") == PR_NUMBER and pr.get("head", {}).get("ref") == BRANCH
-               and pr.get("head", {}).get("sha") == BASELINE_SHA and pr.get("base", {}).get("ref") == "main"
+               and pr.get("base", {}).get("ref") == "main"
                for pr in run.get("pull_requests", [])):
         raise ValueError("Baseline run is not associated with the exact PR932 head")
     expected_job = {"id": JOB_ID, "run_id": RUN_ID, "head_sha": BASELINE_SHA,
@@ -170,13 +212,19 @@ def resolve_decision(root: Path, *, event: str, number: str, head_ref: str, repo
     matching = [job for job in jobs.get("jobs", []) if job.get("id") == JOB_ID]
     if len(matching) != 1:
         raise ValueError("Unique baseline job evidence is missing")
-    log = _github(f"repos/{REPOSITORY}/actions/jobs/{JOB_ID}/logs", raw=True)
+    artifacts = _github(f"repos/{REPOSITORY}/actions/runs/{RUN_ID}/artifacts")
+    matching_artifacts = [item for item in artifacts.get("artifacts", []) if item.get("id") == ARTIFACT_ID]
+    if len(matching_artifacts) != 1:
+        raise ValueError("Unique original pytest report artifact is missing")
+    archive = _github_binary(f"repos/{REPOSITORY}/actions/artifacts/{ARTIFACT_ID}/zip")
+    log = validate_artifact(matching_artifacts[0], archive)
     log_hash = validate_baseline(run, matching[0], log)
     summary = {
         "scope": "single failed-test continuation, not a full-suite pass or waiver",
         "instruction": "Se houver falha, corrija e refaca somente o teste que falhou",
         "candidate_sha": candidate, "candidate_tree": _git(root, "rev-parse", "HEAD^{tree}"), "baseline_sha": BASELINE_SHA,
-        "baseline_run_id": RUN_ID, "baseline_job_id": JOB_ID, "baseline_log_sha256": log_hash,
+        "baseline_run_id": RUN_ID, "baseline_job_id": JOB_ID, "baseline_report_sha256": log_hash,
+        "baseline_artifact_id": ARTIFACT_ID, "baseline_artifact_sha256": ARTIFACT_SHA256,
         "baseline_result": {"failed": 1, "passed": 3673, "skipped": 4},
         "test_to_run": TEST_NODE, "changed_paths": paths,
         "pending_operational_gates": ["HTTP release flow", "PostgreSQL backup and restore"],

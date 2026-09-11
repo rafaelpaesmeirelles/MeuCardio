@@ -4,6 +4,7 @@ from __future__ import annotations
 from copy import deepcopy
 import hashlib
 import importlib.util
+import io
 import json
 from pathlib import Path
 import subprocess
@@ -12,6 +13,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 import xml.etree.ElementTree as ET
+import zipfile
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -66,6 +68,79 @@ def baseline_evidence():
     return run, job, log
 
 
+def zip_report(*members):
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED) as bundle:
+        for name, data in members:
+            bundle.writestr(name, data)
+    return buffer.getvalue()
+
+
+def artifact_evidence(archive):
+    return {
+        "id": FOLLOWUP.ARTIFACT_ID, "name": "backend-pytest-failure", "expired": False,
+        "digest": "sha256:" + hashlib.sha256(archive).hexdigest(),
+        "size_in_bytes": len(archive),
+        "workflow_run": {"id": FOLLOWUP.RUN_ID, "head_sha": FOLLOWUP.BASELINE_SHA,
+                         "head_branch": FOLLOWUP.BRANCH, "repository_id": 1312508910,
+                         "head_repository_id": 1312508910},
+    }
+
+
+class ArtifactProvenanceTests(unittest.TestCase):
+    def validate(self, archive, artifact=None):
+        with patch.object(FOLLOWUP, "ARTIFACT_SHA256", hashlib.sha256(archive).hexdigest()):
+            return FOLLOWUP.validate_artifact(artifact or artifact_evidence(archive), archive)
+
+    def test_exact_single_report_is_read_only_in_memory(self):
+        _, _, log = baseline_evidence()
+        archive = zip_report(("pytest-output.txt", log))
+        with patch.object(zipfile.ZipFile, "extract") as extract, patch.object(zipfile.ZipFile, "extractall") as extractall:
+            self.assertEqual(self.validate(archive), log)
+        extract.assert_not_called()
+        extractall.assert_not_called()
+
+    def test_artifact_identity_digest_expiry_and_origin_are_required(self):
+        archive = zip_report(("pytest-output.txt", "synthetic"))
+        original = artifact_evidence(archive)
+        changes = ({"id": FOLLOWUP.ARTIFACT_ID + 1}, {"name": "other"}, {"expired": True},
+                   {"digest": "sha256:" + "0" * 64})
+        for change in changes:
+            artifact = deepcopy(original)
+            artifact.update(change)
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                self.validate(archive, artifact)
+        for key, value in {"id": FOLLOWUP.RUN_ID + 1, "head_sha": "0" * 40,
+                           "head_branch": "other", "repository_id": 1, "head_repository_id": 2}.items():
+            artifact = deepcopy(original)
+            artifact["workflow_run"][key] = value
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                self.validate(archive, artifact)
+
+    def test_archive_bytes_must_match_pinned_digest(self):
+        archive = zip_report(("pytest-output.txt", "synthetic"))
+        with patch.object(FOLLOWUP, "ARTIFACT_SHA256", hashlib.sha256(archive).hexdigest()):
+            with self.assertRaises(ValueError):
+                FOLLOWUP.validate_artifact(artifact_evidence(archive), archive + b"changed")
+
+    def test_empty_extra_or_wrong_members_are_rejected(self):
+        for members in ((), (("other.txt", "text"),), (("../pytest-output.txt", "text"),),
+                        (("pytest-output.txt", "text"), ("extra.txt", "text"))):
+            with self.subTest(members=members), self.assertRaises(ValueError):
+                self.validate(zip_report(*members))
+
+    def test_oversized_corrupt_or_non_utf8_archives_fail_closed(self):
+        oversized = b"x" * (2 * 1024 * 1024 + 1)
+        for archive in (oversized, zip_report(("pytest-output.txt", oversized))):
+            with self.subTest(archive_bytes=len(archive)), self.assertRaises(ValueError):
+                self.validate(archive)
+
+        with self.assertRaises(zipfile.BadZipFile):
+            self.validate(b"not a zip archive")
+        with self.assertRaises(UnicodeDecodeError):
+            self.validate(zip_report(("pytest-output.txt", b"\xff\xfe")))
+
+
 class BaselineProvenanceTests(unittest.TestCase):
     def test_exact_failed_baseline_returns_its_log_digest(self):
         run, job, log = baseline_evidence()
@@ -95,13 +170,23 @@ class BaselineProvenanceTests(unittest.TestCase):
     def test_baseline_pr_identity_cannot_be_missing_or_borrowed(self):
         for requests in ([], [{"number": 918}], [{
             "number": FOLLOWUP.PR_NUMBER,
-            "head": {"sha": "b" * 40, "ref": FOLLOWUP.BRANCH}, "base": {"ref": "main"},
+            "head": {"sha": FOLLOWUP.BASELINE_SHA, "ref": "another-branch"}, "base": {"ref": "main"},
+        }], [{
+            "number": FOLLOWUP.PR_NUMBER,
+            "head": {"sha": FOLLOWUP.BASELINE_SHA, "ref": FOLLOWUP.BRANCH}, "base": {"ref": "develop"},
         }]):
             with self.subTest(requests=requests):
                 run, job, log = baseline_evidence()
                 run["pull_requests"] = requests
                 with self.assertRaises(ValueError):
                     FOLLOWUP.validate_baseline(run, job, log)
+
+    def test_pr_association_head_can_advance_without_changing_baseline_identity(self):
+        run, job, log = baseline_evidence()
+        # GitHub mutates this nested association to the PR's current head.
+        # The recorded run.head_sha and job.head_sha remain the exact baseline.
+        run["pull_requests"][0]["head"]["sha"] = "b" * 40
+        self.assertEqual(FOLLOWUP.validate_baseline(run, job, log), hashlib.sha256(log.encode()).hexdigest())
 
     def test_job_identity_must_match(self):
         for key, value in {
@@ -284,13 +369,18 @@ class DecisionContextTests(unittest.TestCase):
             "merge_commit_sha": None,
         }
         self.run, self.job, self.log = baseline_evidence()
+        self.archive = zip_report(("pytest-output.txt", self.log))
+        self.artifact = artifact_evidence(self.archive)
+        self.artifacts = {"artifacts": [self.artifact]}
         self.jobs = {"jobs": [self.job]}
         self.associated = [{"number": FOLLOWUP.PR_NUMBER}]
         self.main_sha = self.candidate
         self.addCleanup(patch.stopall)
         patch.dict(FOLLOWUP.os.environ, {"RUNNER_TEMP": str(self.root)}).start()
+        patch.object(FOLLOWUP, "ARTIFACT_SHA256", hashlib.sha256(self.archive).hexdigest()).start()
         self.git = patch.object(FOLLOWUP, "_git", side_effect=self.git_value).start()
         self.api = patch.object(FOLLOWUP, "_github", side_effect=self.github).start()
+        self.binary_api = patch.object(FOLLOWUP, "_github_binary", return_value=self.archive).start()
         self.diff = patch.object(FOLLOWUP, "validate_diff", return_value=sorted(FOLLOWUP.ALLOWED_PATHS)).start()
 
     def git_value(self, root, *args):
@@ -310,10 +400,10 @@ class DecisionContextTests(unittest.TestCase):
             f"{base}/git/commits/{self.pr['head']['sha']}": {"tree": {"sha": self.head_tree}},
             f"{base}/actions/runs/{FOLLOWUP.RUN_ID}": self.run,
             f"{base}/actions/runs/{FOLLOWUP.RUN_ID}/jobs?filter=all&per_page=100": self.jobs,
-            f"{base}/actions/jobs/{FOLLOWUP.JOB_ID}/logs": self.log,
+            f"{base}/actions/runs/{FOLLOWUP.RUN_ID}/artifacts": self.artifacts,
         }
         self.assertIn(path, payloads)
-        self.assertEqual(raw, path.endswith("/logs"))
+        self.assertFalse(raw)
         return deepcopy(payloads[path])
 
     def resolve(self, **overrides):
@@ -335,7 +425,12 @@ class DecisionContextTests(unittest.TestCase):
         self.assertEqual(proof["baseline_job_id"], FOLLOWUP.JOB_ID)
         self.assertEqual(proof["baseline_result"], {"failed": 1, "passed": 3673, "skipped": 4})
         self.assertEqual(proof["test_to_run"], FOLLOWUP.TEST_NODE)
-        self.assertEqual(proof["baseline_log_sha256"], hashlib.sha256(self.log.encode()).hexdigest())
+        self.assertEqual(proof["baseline_report_sha256"], hashlib.sha256(self.log.encode()).hexdigest())
+        self.assertEqual(proof["baseline_artifact_id"], FOLLOWUP.ARTIFACT_ID)
+        self.assertEqual(proof["baseline_artifact_sha256"], hashlib.sha256(self.archive).hexdigest())
+        self.binary_api.assert_called_once_with(
+            f"repos/{FOLLOWUP.REPOSITORY}/actions/artifacts/{FOLLOWUP.ARTIFACT_ID}/zip"
+        )
         self.assertEqual(proof["pending_operational_gates"], ["HTTP release flow", "PostgreSQL backup and restore"])
         self.assertIn("not-a-full-suite-certificate", decision.reasons)
 
@@ -400,6 +495,13 @@ class DecisionContextTests(unittest.TestCase):
             with self.subTest(count=len(jobs)), self.assertRaises(ValueError):
                 self.resolve()
 
+    def test_missing_or_duplicated_baseline_artifact_is_rejected(self):
+        for artifacts in ([], [deepcopy(self.artifact), deepcopy(self.artifact)]):
+            self.artifacts = {"artifacts": artifacts}
+            with self.subTest(count=len(artifacts)), self.assertRaises(ValueError):
+                self.resolve()
+        self.binary_api.assert_not_called()
+
     def test_api_scope_or_baseline_failure_does_not_fall_back_to_full(self):
         self.api.side_effect = ValueError("synthetic API unavailable")
         with self.assertRaises(ValueError):
@@ -409,7 +511,7 @@ class DecisionContextTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.resolve()
         self.diff.side_effect = None
-        self.log = "truncated evidence"
+        self.job["head_sha"] = "0" * 40
         with self.assertRaises(ValueError):
             self.resolve()
         self.assertFalse((self.root / "backend-failed-test-followup.json").exists())
