@@ -80,7 +80,13 @@ export default function Produto() {
           <div className="public-showcase__portals" aria-label="Cinco ambientes do CorVIA">
             {ESPACOS.map((space) => (
               <Link to="/entrar" className={`public-showcase__portal public-showcase__portal--${space.id}`} data-space={space.id} key={space.id} aria-label={`${space.name}: ${space.role}. Entrar no CorVIA`}>
-                <img src={space.image} alt="" width="1536" height="1024" loading={space.id === "consultorio" ? "eager" : "lazy"} />
+                <img
+                  src={space.image.replace(".webp", "-small.webp")}
+                  srcSet={`${space.image.replace(".webp", "-small.webp")} 640w, ${space.image} 1536w`}
+                  sizes="(max-width: 760px) max(245px, 70vw), (max-width: 1050px) 195px, (max-width: 1280px) calc((100vw - 80px) / 5), 240px"
+                  alt="" width="1536" height="1024" decoding="async"
+                  loading={space.id === "consultorio" ? "eager" : "lazy"}
+                />
                 <span className="public-showcase__portal-glass" />
                 <div><span><Icone nome={space.icon} /></span><strong>{space.name}</strong><small>{space.role}</small></div>
                 <i>Entrar <Icone nome="seta" /></i>

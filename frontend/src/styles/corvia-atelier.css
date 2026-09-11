@@ -190,6 +190,44 @@ html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-shelves{ba
 html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-topbar,html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-taskbar{background:#1d2a2a!important}
 html[data-corvia-design="atelier"][data-corvia-theme="dark"] :is(.atelier-brand,.atelier-app .cv-topbar__brand){background:#f9f2df!important;border-radius:5px;padding:5px 10px!important}
 html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-command{background:#1b302f!important}
+/* Match the shared textual-control specificity without changing the field or CTA. */
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .atelier-app .cv-content .tct-search input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"])::placeholder {
+  color: #b8c3b8 !important;
+  -webkit-text-fill-color: #b8c3b8 !important;
+  opacity: 1;
+}
+/* The task dock needs its own opaque dark surface; light-mode pearl stays unchanged. */
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-mobile-dock {
+  color: #f4f1e7 !important;
+  background: #172328 !important;
+  border-color: #8aa399 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-mobile-dock :is(a, button) {
+  color: #8cd6c2 !important;
+  background: transparent;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-mobile-dock :is(a, button) :is(svg, small) {
+  color: inherit !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-mobile-dock :is(a, button):hover {
+  color: #f4f1e7 !important;
+  background: #233532;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-mobile-dock :is(a.active, button[aria-expanded="true"]) {
+  color: #f4f1e7 !important;
+  background: #233532;
+  box-shadow: inset 0 -3px 0 #d39770;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-mobile-dock .cv-mobile-dock__assistant > span {
+  color: #f2d1af;
+  background: #233532;
+  border-color: #d39770;
+  box-shadow: none;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-mobile-dock :is(a, button):focus-visible {
+  outline: 3px solid #f2d1af;
+  outline-offset: -3px;
+}
 @media(max-width:1200px){.atelier-header{gap:16px}.atelier-catalog-trigger span{display:none}.atelier-account summary>span>span:not(.spaces-user__avatar){display:none}.atelier-entry{align-items:flex-start}.atelier-entry__actions{gap:16px}.atelier-portal__label{left:13px;gap:6px}.atelier-portal__number{left:12px}.atelier-portal__selected{font-size:0;right:8px}.atelier-shelf-toolbar>div{gap:12px}html[data-corvia-design="atelier"] .atelier-shelf .spaces-action{gap:12px;padding:22px 15px}.atelier-app .cv-topbar__updates,.atelier-app .cv-topbar__mail,.atelier-app .cv-account__copy{display:none!important}}
 @media(max-width:900px){.atelier-entry{flex-direction:column}.atelier-entry__actions{width:100%;justify-content:space-between}.atelier-shelf{grid-template-columns:repeat(2,minmax(0,1fr))}html[data-corvia-design="atelier"] .atelier-shelf .spaces-action:nth-child(n+3){border-top:1px solid var(--atelier-border)}html[data-corvia-design="atelier"] .atelier-shelf .spaces-action:nth-child(odd){border-left:0}.atelier-shelf-toolbar{align-items:flex-start}.atelier-shelf-toolbar>div{flex-wrap:wrap;justify-content:flex-end}.atelier-shelf-toolbar .atelier-organization{min-width:140px}.atelier-day .spaces-day{grid-template-columns:1fr!important}html[data-corvia-design="atelier"] .atelier-app .cv-content{padding-bottom:110px!important}html[data-corvia-design="atelier"] .atelier-app[data-has-intelligence="true"] .cv-workspace{grid-template-columns:minmax(0,1fr)!important}html[data-corvia-design="atelier"] .atelier-app .cv-intelligence{position:static!important;max-height:none!important;margin:15px!important}.atelier-taskbar{gap:12px}.atelier-taskbar__actions{gap:1px}.atelier-taskbar__actions button{font-size:13px;gap:4px}.atelier-app .cv-topbar__actions>.cv-icon-button{display:none!important}}
 @media(max-width:700px){html[data-corvia-design="atelier"] .atelier-home{padding:0 16px 24px}.atelier-header{min-height:84px;gap:12px;flex-wrap:wrap;padding:14px 0}.atelier-brand img{width:142px!important}.atelier-search{order:4;flex-basis:100%;max-width:none}.atelier-catalog-trigger{margin-left:auto}.atelier-account{max-width:50px}.atelier-arrival__heading{padding:32px 0 25px}.atelier-arrival__heading h1{font-size:30px}.atelier-arrival__heading>span{font-size:15px}.atelier-mobile-spaces{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;margin-bottom:13px}.atelier-mobile-spaces button{font-size:12px;padding:7px 2px;border-bottom:2px solid transparent;min-height:44px}.atelier-mobile-spaces button[aria-pressed="true"]{border-color:#b66d48;color:var(--atelier-teal);font-weight:600}.atelier-portals{grid-template-columns:1fr;padding:5px}.atelier-portal{display:none!important}.atelier-portal.is-selected{display:block!important;aspect-ratio:1.22;max-height:420px}.atelier-portal__label{left:22px;gap:10px}.atelier-portal__label strong{font-size:27px}.atelier-portal__number{left:22px}.atelier-portal__selected{font-size:12px;right:15px}.atelier-entry{gap:20px;padding:22px 0}.atelier-entry__identity>span{flex-basis:48px;height:48px}.atelier-entry h2{font-size:23px}.atelier-entry p{font-size:15px}.atelier-entry__actions{gap:12px;align-items:flex-end}.atelier-entry__actions .atelier-organization{min-width:0;flex:1}.atelier-home button.atelier-primary{font-size:14px;padding:12px 15px;gap:12px;max-width:62%}.atelier-arrival__footer{flex-direction:column;align-items:flex-start;gap:4px;font-size:13px}.atelier-space__hero{height:225px}.atelier-space__hero>div{padding:24px}.atelier-space__hero::after{background:linear-gradient(90deg,#16221ddb,#1e2d258a 65%,#29392a20)}.atelier-space__hero h1{font-size:35px}.atelier-space__hero span{font-size:15px}.atelier-shelf-toolbar{flex-direction:column;gap:10px;padding-top:26px}.atelier-shelf-toolbar>div{width:100%;justify-content:space-between;gap:8px}.atelier-shelf-toolbar h2{font-size:21px}.atelier-shelf-toolbar .atelier-organization{min-width:110px;flex:1}.atelier-shelf-toolbar button{font-size:13px;gap:5px}.atelier-shelf-toolbar button:last-child{padding-left:10px}.atelier-shelf-toolbar button svg{width:17px}html[data-corvia-design="atelier"] .atelier-shelf .spaces-action{flex-direction:column;align-items:flex-start;gap:12px;min-height:125px;padding:20px 15px}html[data-corvia-design="atelier"] .atelier-shelf .spaces-action>span{font-size:15px}.atelier-space__note{font-size:13px;gap:12px}.atelier-home .spaces-overlay{padding:12px!important}.atelier-home .spaces-personalizer__selected article>div{width:100%;margin:0}.atelier-home .spaces-personalizer__grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.atelier-home .spaces-personalizer__grid>button{font-size:14px;padding:12px}.atelier-home .spaces-personalizer__tabs{overflow:visible;flex-wrap:wrap}.atelier-home .spaces-personalizer__count{flex-wrap:wrap;gap:10px}html[data-corvia-design="atelier"] .atelier-app .cv-topbar{min-height:66px!important;padding:9px 12px!important;gap:10px!important}html[data-corvia-design="atelier"] .atelier-app .cv-topbar__brand img{width:116px!important}html[data-corvia-design="atelier"] .atelier-app .cv-command{order:5;flex:1 0 100%!important;max-width:100%;margin-top:5px!important}html[data-corvia-design="atelier"] .atelier-app .cv-topbar{flex-wrap:wrap!important}html[data-corvia-design="atelier"] .atelier-app .cv-topbar__actions{margin-left:auto}.atelier-taskbar{flex-wrap:wrap;padding:8px 12px;gap:4px 10px}.atelier-taskbar__title{flex:1;font-size:15px}.atelier-taskbar__actions{width:100%;justify-content:flex-end}.atelier-taskbar__return{max-width:135px;font-size:13px!important}.atelier-taskbar__actions button{font-size:14px}.atelier-app--focus .atelier-taskbar__actions{width:auto;margin-left:auto}.atelier-app--focus .atelier-taskbar__return{display:none}html[data-corvia-design="atelier"] .atelier-app .cv-drawer{width:calc(100vw - 20px)!important}.atelier-app .cv-drawer__header img{max-width:150px!important}.atelier-home .spaces-catalog>div>section>div{grid-template-columns:1fr!important}}

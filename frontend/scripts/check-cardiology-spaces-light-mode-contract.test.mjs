@@ -165,6 +165,54 @@ function declarationValue(rule, property) {
   return value;
 }
 
+test("placeholder da Busca escura contrasta com o campo existente sem alterar botão ou tema claro", () => {
+  const rules = cssRules(readRequired("src/styles/corvia-atelier.css"));
+  const matches = rules.filter(({ header }) => header.includes(".tct-search") && header.endsWith("::placeholder"));
+  assert.equal(matches.length, 1);
+  const rule = matches[0];
+  assert.match(rule.header, /^html\[data-corvia-design="atelier"\]\[data-corvia-theme="dark"\] #root \.atelier-app \.cv-content \.tct-search input/);
+  const color = declarationValue(rule, "color");
+  assert.equal(declarationValue(rule, "-webkit-text-fill-color"), color);
+  assert.equal(declarationValue(rule, "opacity"), "1");
+  assert.doesNotMatch(rule.body, /(?:background|border|padding|font|height|width)\s*:/, "a correção é limitada ao placeholder");
+  const controls = cssRules(readRequired("src/styles/clinical-form-control-contrast.css"));
+  const backgrounds = controls.filter(({ header, body }) => header.includes("input:not") && /background-color\s*:/.test(body));
+  assert.ok(backgrounds.length >= 2);
+  for (const control of backgrounds) assert.ok(contrastRatio(color, declarationValue(control, "background-color")) >= 4.5, control.header);
+});
+
+test("dock móvel escuro preserva contraste de texto, ícones, estado ativo e foco sem alterar o claro", () => {
+  const rules = cssRules(readRequired("src/styles/corvia-atelier.css"));
+  const prefix = 'html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-mobile-dock';
+  const dockRules = rules.filter(({ header }) => header.startsWith(prefix));
+  assert.equal(dockRules.length, 7);
+  const find = suffix => dockRules.find(({ header }) => header === `${prefix}${suffix}`);
+  const panel = declarationValue(find(""), "background");
+  assert.equal(panel, "#172328", "fundo opaco impede vazamento perolado sob texto claro");
+  const text = declarationValue(find(" :is(a, button)"), "color");
+  assert.ok(contrastRatio(text, panel) >= 4.5);
+  assert.ok(contrastRatio(declarationValue(find(""), "border-color"), panel) >= 3);
+  assert.equal(declarationValue(find(" :is(a, button) :is(svg, small)"), "color"), "inherit");
+  const hover = find(" :is(a, button):hover");
+  const active = find(' :is(a.active, button[aria-expanded="true"])');
+  const assistant = find(" .cv-mobile-dock__assistant > span");
+  for (const rule of [hover, active, assistant]) {
+    assert.ok(contrastRatio(declarationValue(rule, "color"), declarationValue(rule, "background")) >= 4.5, rule.header);
+  }
+  const indicator = declarationValue(active, "box-shadow").match(/#[a-f\d]{6}/i)?.[0];
+  assert.ok(indicator, "estado ativo precisa de indicador além da cor do texto");
+  assert.ok(contrastRatio(indicator, declarationValue(active, "background")) >= 3);
+  assert.ok(contrastRatio(declarationValue(assistant, "border-color"), declarationValue(assistant, "background")) >= 3);
+  const focus = find(" :is(a, button):focus-visible");
+  const outline = declarationValue(focus, "outline");
+  assert.match(outline, /^3px solid #[a-f\d]{6}$/i);
+  const focusColor = outline.match(/#[a-f\d]{6}/i)[0];
+  for (const background of [panel, declarationValue(active, "background")]) assert.ok(contrastRatio(focusColor, background) >= 3);
+  assert.equal(declarationValue(focus, "outline-offset"), "-3px", "foco deve caber no dock fixo estreito");
+  const pearl = rules.find(({ header }) => header === 'html[data-corvia-design="atelier"] .atelier-app .cv-mobile-dock');
+  assert.equal(declarationValue(pearl, "background"), "#fffcf3f5", "a apresentação clara aprovada permanece intacta");
+});
+
 test("monitor científico mantém texto, estado e controles contrastantes apenas no tema escuro", () => {
   const rules = cssRules(readRequired("src/styles/corvia-atelier.css"))
     .filter(({ header }) => header.includes(".scientific-intelligence-monitor"));

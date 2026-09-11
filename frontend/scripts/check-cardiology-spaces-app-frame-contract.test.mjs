@@ -25,6 +25,21 @@ const rc2 = read("../.github/workflows/rc2-acceptance.yml");
 const visualQa = read("../.github/workflows/visual-qa.yml");
 const film = read("src/components/CorviaPresentationFilm.tsx");
 
+test("the checklist catalog wraps complete canonical labels without masking overflow", () => {
+  const content = read("src/styles/corvia-atelier-content.css");
+  const page = read("src/pages/Checklists.tsx");
+  const rule = content.match(/html\[data-corvia-design="atelier"\] #root \.cv-app \.cv-content \.cos-content > div:has\(#buscar-checklist\) \.painel__funcao\s*\{([^}]+)\}/)?.[1];
+  assert.ok(rule, "wrap protection must be restricted to the checklist catalog");
+  assert.match(rule, /min-width:\s*0;/);
+  assert.match(rule, /overflow-wrap:\s*anywhere;/);
+  assert.doesNotMatch(rule, /overflow(?:-x)?:\s*(?:hidden|clip)|text-overflow|line-clamp|white-space:\s*nowrap/);
+  assert.match(page, /<strong>\{modelo\.condicao\}<\/strong>/);
+  assert.match(page, /<span>\{modelo\.resumo \|\|/);
+  assert.match(page, /onClick=\{\(\) => iniciar\(modelo\.slug\)\}/);
+  assert.match(page, /to=\{`\/checklists\/\$\{modelo\.slug\}`\}/);
+  assert.match(page, /to=\{`\/biblioteca\/\$\{modelo\.documento_origem\}`\}/);
+});
+
 test("the launch film is optional, accessible and excluded from the initial PWA cache", () => {
   assert.match(film, /open && <dialog/);
   assert.match(film, /controls playsInline preload="none"/);

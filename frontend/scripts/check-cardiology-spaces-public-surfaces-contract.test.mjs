@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, statSync } from "node:fs";
 import test from "node:test";
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
@@ -106,7 +106,13 @@ test("the product presentation exposes five distinct optimized spaces", () => {
   for (const space of ["consultorio", "hospital", "ensino", "pesquisa", "gestao"]) {
     assert.match(publicPages.produto, new RegExp(`/atelier/atelier-${space}\\.webp`));
     assert.match(publicPages.produto, new RegExp(`id: \"${space}\"`));
+    const asset = (suffix) => new URL(`../public/atelier/atelier-${space}${suffix}.webp`, import.meta.url);
+    assert.ok(statSync(asset("-small")).size < statSync(asset("")).size, `${space}: a variante móvel deve ser menor`);
   }
+  assert.ok(publicPages.produto.includes('src={space.image.replace(".webp", "-small.webp")}'));
+  assert.ok(publicPages.produto.includes('srcSet={`${space.image.replace(".webp", "-small.webp")} 640w, ${space.image} 1536w`}'));
+  assert.match(publicPages.produto, /sizes="\(max-width: 760px\) max\(245px, 70vw\), \(max-width: 1050px\) 195px,/);
+  assert.match(publicPages.produto, /loading=\{space.id === "consultorio" \? "eager" : "lazy"\}/);
   assert.match(publicPages.produto, /Completo/);
   assert.match(publicPages.produto, /Essencial/);
   assert.match(publicPages.produto, /Ciência & Ensino/);

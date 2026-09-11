@@ -242,6 +242,14 @@ html[data-corvia-design="atelier"] #root .cv-app .cv-content .cartao > :is(p, st
 
 html[data-corvia-design="atelier"] #root .cv-app .cv-content .cartao > strong { font-size: 16px !important; }
 
+/* Canonical checklist names and summaries can contain long slash-separated
+   terms. Let the complete text wrap inside its card instead of extending
+   the last catalog column beyond the viewport. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cos-content > div:has(#buscar-checklist) .painel__funcao {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cartao h3, .cv-section h3, .cc-section h3, .ceai h3, .cv-tool-card__copy strong, .learning-card__copy strong) {
   color: var(--atelier-ink) !important;
   font-size: 18px !important;
