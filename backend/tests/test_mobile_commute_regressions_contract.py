@@ -17,15 +17,33 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_mapa_preserva_instancia_entre_atualizacoes():
+    import re
+
     mapa = (ROOT / "frontend/src/components/MapaDeslocamento.tsx").read_text(encoding="utf-8")
     # Uma única criação de mapa em todo o componente; atualizações redesenham
     # sobre a MESMA instância (refs), nunca reinstanciam.
     assert mapa.count("new google.maps.Map(") == 1
-    assert "mapaInstanciaRef" in mapa
-    assert "preserva a instância entre atualizações de dados" in mapa
-    assert "sobreposicoesRef" in mapa
+    assert 'const mapRef = useRef<any>(null);' in mapa
+    assert 'const overlays = useRef<any[]>([]);' in mapa
+    effects = re.findall(r'  useEffect\(\(\) => \{(.*?)\n  \}, \[([^\]]*)\]\);', mapa, re.S)
+    creation = [(body, deps) for body, deps in effects if 'new google.maps.Map(' in body]
+    assert len(creation) == 1
+    initialization, dependencies = creation[0]
+    assert 'mapRef.current = new google.maps.Map(canvasRef.current,' in initialization
+    # Rota, origem, destino e tema atualizam os overlays/options, mas não
+    # desmontam o mapa. Recriação só por canvas/chave ou retry explícito.
+    assert {item.strip() for item in dependencies.split(',')} == {'googleCanvas', 'googleMapsApiKey', 'retry'}
+    updates = [body for body, _ in effects if 'map.setOptions(' in body]
+    assert len(updates) == 1
+    update = updates[0]
+    assert 'const google = googleRef.current, map = mapRef.current;' in update
+    assert 'overlays.current.forEach((item) => { item.setMap?.(null); google.maps.event.clearInstanceListeners(item); });' in update
+    assert 'overlays.current.push(line);' in update
+    assert 'new google.maps.Map(' not in update
     # fitBounds só quando a geometria realmente muda — sem "pulos" de viewport.
-    assert "assinaturaEnquadramento" in mapa
+    assert 'const signatureRef = useRef("");' in mapa
+    assert 'const signature = JSON.stringify([destino.latitude, destino.longitude, origin, geometries]);' in update
+    assert 'if (signature !== signatureRef.current) { signatureRef.current = signature; fitRef.current(); }' in update
 
 
 def test_chegada_usa_referencial_do_compromisso():

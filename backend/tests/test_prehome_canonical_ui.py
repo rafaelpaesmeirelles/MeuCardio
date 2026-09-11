@@ -103,14 +103,15 @@ def test_no_browser_scale_or_zoom_workaround():
 def test_scoped_light_theme_remains_after_global_contrast_guard():
     main = _read("main.tsx")
     imports = [line.strip() for line in main.splitlines() if line.strip().startswith('import "./styles/')]
-    assert imports[-5:] == [
+    assert imports[-6:] == [
         'import "./styles/clinical-form-control-contrast.css";',
         'import "./styles/cardiology-spaces-light-mode.css";',
         'import "./styles/corvia-atelier.css";',
         'import "./styles/corvia-atelier-content.css";',
         'import "./styles/corvia-atelier-surfaces.css";',
+        'import "./styles/corvia-atelier-mobility.css";',
     ]
-    for sheet in ("corvia-atelier.css", "corvia-atelier-content.css", "corvia-atelier-surfaces.css"):
+    for sheet in ("corvia-atelier.css", "corvia-atelier-content.css", "corvia-atelier-surfaces.css", "corvia-atelier-mobility.css"):
         assert 'data-corvia-design="atelier"' in _read(f"styles/{sheet}")
     assert 'html[data-corvia-theme="light"]' in _read("styles/cardiology-spaces-light-mode.css")
     assert not any("prehome-register-bridge" in line or "prehome-fidelity-polish" in line for line in imports)

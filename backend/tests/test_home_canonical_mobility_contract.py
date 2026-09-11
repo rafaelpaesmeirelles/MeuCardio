@@ -53,9 +53,21 @@ def test_mapa_do_destino_existe_no_mobile_e_no_rail_desktop_antes_da_rota():
     assert 'ccc-reference-commute__map' in home
     assert 'ccc-assistant-commute-map' in home
     assert '.ccc-assistant-commute-map' in board_css
-    assert 'provider === "google_maps"' in mapa
-    assert 'Mapa do destino' in mapa
-    assert 'deveUsarGoogleMap && googleMapsApiKey && destinoValido' in mapa
+    # Os aliases oficiais usam a mesma cartografia; um destino válido pode
+    # abrir o canvas antes de haver rota, geometria ou posição de origem.
+    assert '["google maps", "google_maps", "google_routes"].includes((provider || "").toLowerCase())' in mapa
+    assert 'const validDestination = coordinateValid(destino.latitude, destino.longitude);' in mapa
+    assert 'const googleCanvas = isGoogle && Boolean(googleMapsApiKey) && validDestination;' in mapa
+    assert 'aria-label={`Mapa ${activeGeometry ? "do percurso até" : "do destino"} ${destino.name}`}' in mapa
+    assert '{googleCanvas ? <>' in mapa
+    assert '<div ref={canvasRef} className="deslocamento-mapa__google" />' in mapa
+
+    # A Home Atelier usa o mesmo mapa no diálogo, inclusive com rotas vazias;
+    # a prévia compacta não precisa carregar cartografia antes da interação.
+    atelier = (ROOT / "frontend/src/pages/CardiologySpacesHome.tsx").read_text(encoding="utf-8")
+    assert '{travelDestination ? <div className="spaces-travel__map">' in atelier
+    assert 'rotas={resultMatchesTarget ? mobilityResult?.routes || [] : []}' in atelier
+    assert 'destino={travelDestination}' in atelier
 
 
 def test_prancha_e_navegacao_mobile_permanecem_canonicas_com_p1():

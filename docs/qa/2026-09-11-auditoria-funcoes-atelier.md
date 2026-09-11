@@ -947,3 +947,50 @@ alterados. O perfil de continuidade deve falhar fechado sem baseline completo
 ou com mudança não revisada. Certificado focal não será descrito como nova
 execução integral. Corpus/RC2 e frontend conservam seus gates próprios. Isso
 não comprova entrega de e-mail nem outras integrações externas ponta a ponta.
+
+### Conclusão do backend original e continuação restrita
+
+O run `34635195463`, job `103381373201`, tentativa 1, concluiu no SHA
+`7201d7377e393b53afb0e27bf0ca1dca81173095`: **6 failed, 3810 passed,
+4 skipped, 1 warning in 2240.10s**. Não houve nós ERROR no resumo.
+HTTP, backup/restauração PostgreSQL e certificado full ficaram skipped.
+Logo, o perfil anterior que exigia baseline integral aprovado não pode ser
+usado; sua descrição acima registra a estratégia anterior à conclusão.
+
+O ZIP original `backend-pytest-failure`, ID `10279800250`, foi baixado e
+verificado em memória, sem expor credenciais/logs integrais: 2.217 bytes,
+SHA-256 `a83329b9d70bbff8a030c7791945c439b73faa1bcfc484c4031b6e787f0df3ab`,
+um único membro `pytest-output.txt`, um resumo completo e seis falhas exatas:
+
+- `test_feature_inventory.py::test_published_feature_inventory_is_intact`:
+  faltava registrar o alias real `/ativar-conta`. Acrescentado apenas esse
+  caminho; comparação exata, pisos e outros destinos preservados. Inventário
+  real aprovado: 86 rotas, 55 destinos, 71 routers, 80 páginas e 130 suportes.
+  Corpo original do teste executado isoladamente, sem aplicação/banco: PASS.
+- `test_home_canonical_mobility_contract.py::test_mapa_do_destino_existe_no_mobile_e_no_rail_desktop_antes_da_rota`:
+  contrato antigo exigia uma expressão textual de provider. Atualizado para
+  os aliases Google atuais e para canvas com destino válido antes de obter
+  rota; acrescentada verificação da Home Atelier com rotas vazias.
+- `test_mobile_commute_regressions_contract.py::test_mapa_preserva_instancia_entre_atualizacoes`:
+  contrato antigo dependia de nomes de refs e comentário removidos. Mantida
+  exigência de criação única, dependências restritas, mesma instância nas
+  atualizações, remoção dos overlays e enquadramento somente por geometria.
+- `test_prehome_canonical_ui.py::test_scoped_light_theme_remains_after_global_contrast_guard`:
+  incluída a quarta folha Atelier de mobilidade na sequência exata protegida;
+  escopos e guarda global de contraste continuam obrigatórios.
+- `test_receituario_workspace_price_contract.py::test_receituario_workspace_uses_audited_kairos_price_without_changing_shell`:
+  removida expectativa obsoleta de soma máxima. Contrato passa a exigir menor
+  PMC da apresentação selecionada, proveniência e aviso de que não é varejo.
+  Dados CMED sem alíquota verificada continuam indisponíveis.
+- `test_reconcile_content_full_run.py::test_reconcile_publish_reviewed_termina_sem_excecao_contra_conteudo_real`:
+  divergência do sidecar histórico Káiros já corrigida na separação descrita
+  acima. Teste, manifesto e autorização permanecem inalterados. O ponto exato
+  `_evidence_file` e a autorização real dos 12.549 registros passaram sem DB;
+  as etapas posteriores continuam dependendo do nó integrado no CI isolado.
+
+Os quatro contratos de fonte reproduziram quatro falhas e passaram após os
+ajustes (0,013s), por execução real das funções com runpy/unittest, sem
+pytest/conftest/banco. A continuação deve fixar a prova original e todo delta
+revisado, executar os seis nós falhos mais os focais Káiros afetados e concluir
+HTTP e backup/restauração. Isso não é uma nova suíte full aprovada nem dispensa
+os gates próprios de frontend/corpus. Nenhuma publicação está certificada aqui.

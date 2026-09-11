@@ -22,7 +22,7 @@ MAIN = ROOT / "backend/app/main.py"
 EXPECTED_APP_ROUTES = {
     "/admin/mudancas-clinicas",
     "/intelligence",
-    "/", "/produto", "/entrar", "/solicitar-acesso", "/esqueci-senha", "/redefinir-senha",
+    "/", "/produto", "/entrar", "/solicitar-acesso", "/esqueci-senha", "/redefinir-senha", "/ativar-conta",
     "/privacidade", "/termos", "/validar", "/validar/:codigo",
     "/corvia-mail", "/apresentacao", "/biblioteca", "/biblioteca/:slug",
     "/documentos-cientificos-ia",

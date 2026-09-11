@@ -15,8 +15,25 @@ def test_receituario_workspace_uses_audited_kairos_price_without_changing_shell(
     assert "CMED/ANVISA permanece a referência regulatória oficial" in page
     assert "formatarFaixaPreco" in page
     assert "somaPrecosMinimos" in page
-    assert "somaPrecosMaximos" in page
+    # A decisão aprovada é exibir o menor PMC publicado por apresentação,
+    # não uma faixa entre alíquotas nem um suposto preço de varejo.
+    assert "somaPrecosMaximos" not in page
+    assert 'total + (it.price_min ?? it.pmc_snapshot ?? 0)' in page
+    assert 'formatarPreco(somaPrecosMinimos) : "Sem preço vinculado"' in page
+    assert 'if (item.price_source === "kairos") return formatarPreco(item.price_min);' in page
+    assert 'Menor PMC publicado para cada apresentação, entre as alíquotas da edição.' in page
+    assert 'não é uma oferta de farmácia' in page
+    kairos_selection = page.split('function escolherApresentacaoKairos(', 1)[1].split('function voltarParaGenerico(', 1)[0]
+    for contract in (
+        'manufacturer: ap.laboratorio', 'apresentacao: ap.apresentacao',
+        'price_source: "kairos"', 'price_min: ap.preco_minimo',
+        'price_reference: `edição ${fonte.edicao} · competência ${fonte.competencia}`',
+        'price_source_page: ap.pagina_fonte ?? undefined',
+        'pmc_snapshot: undefined', 'cmed_version: undefined',
+    ):
+        assert contract in kairos_selection
     assert "precoCmedExibivel" in page
+    assert 'preco.fonte_icms === "media_nacional_nao_verificada"' in page
     assert "Preço não disponível para esta UF" in page
     assert "verificação humana" not in page.lower()
     assert "/receituario/enderecos/cep/" in page
