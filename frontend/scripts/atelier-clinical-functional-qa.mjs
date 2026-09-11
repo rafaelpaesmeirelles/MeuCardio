@@ -29,7 +29,7 @@ const diseases = reviewed('doencas/metadados.json', 12);
 const fa = JSON.parse(source('doencas/metadados.json')).find(item => item.slug === 'fibrilacao-atrial' && item.review_status === 'revisado');
 assert(fa); if (!diseases.some(item => item.slug === fa.slug)) diseases.unshift(fa);
 const drugs = reviewed('medicamentos/metadados.json', 28);
-const kairosSnapshot = JSON.parse(source('medicamentos/kairos-453-2026-08.json'));
+const kairosSnapshot = JSON.parse(source('backend/app/data/pricing/kairos-453-2026-08.json'));
 const kairosRecord = kairosSnapshot.records.find(record => record.product === 'ALDACTONE');
 assert(kairosRecord);
 const kairosOptions = kairosRecord.presentations.map(item => {

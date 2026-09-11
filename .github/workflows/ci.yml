@@ -93,7 +93,16 @@ jobs:
 
       - name: Test risk classification and exact-suite reuse before trusting them
         if: steps.classify.outputs.backend_mode != 'authorized-no-backend-ci'
-        run: python -m unittest scripts.tests.test_ci_backend_policy scripts.tests.test_ci_section_owner_decision scripts.tests.test_ci_editorial_owner_decision scripts.tests.test_ci_feature_owner_decision scripts.tests.test_ci_favorites_owner_decision scripts.tests.test_ci_http_retry_owner_decision scripts.tests.test_ci_failed_test_followup -v
+        run: python -m unittest scripts.tests.test_ci_backend_policy scripts.tests.test_ci_section_owner_decision scripts.tests.test_ci_editorial_owner_decision scripts.tests.test_ci_feature_owner_decision scripts.tests.test_ci_favorites_owner_decision scripts.tests.test_ci_http_retry_owner_decision scripts.tests.test_ci_failed_test_followup scripts.tests.test_ci_pr934_continuation -v
+
+      - name: Record verified PR934 baseline and pending focused continuation
+        if: startsWith(steps.classify.outputs.suite_key, 'backend-risk-v1-focused-pr934-7201d737-')
+        uses: actions/upload-artifact@v6
+        with:
+          name: backend-pr934-continuation
+          path: ${{ runner.temp }}/backend-pr934-continuation.json
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Record verified baseline and single failed-test continuation
         if: steps.classify.outputs.backend_mode == 'failed-test-followup' || steps.classify.outputs.backend_mode == 'ci-only-continuation'

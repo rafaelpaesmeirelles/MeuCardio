@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { withoutReservedSmokeTestRecord, withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 import Icone from "./Icone";
-import MapaDeslocamento, { type RotaDeslocamento } from "./MapaDeslocamento";
+import type { RotaDeslocamento } from "./MapaDeslocamento";
+import DeferredAssistantMap from "./DeferredAssistantMap";
 import { mobilityResultError } from "../lib/mobilityGeometry";
 
 type Agendamento = { id: number; patient_name: string | null; scheduled_at: string; appointment_type: string; status: string };
@@ -265,7 +266,7 @@ export default function PersonalAssistantPanel({ aberto, onClose, onReturnFocus 
           <div className="cos-assistant-card__head"><span><Icone nome="rota" /></span><div><p className="eyebrow">{retornoAtivo ? "Retorno do último compromisso" : "Próximo Deslocamento"}</p><h3>{retornoAtivo ? `Volte para ${proximoLocal?.location?.name || "o local escolhido"}` : "Chegue no tempo certo"}</h3></div></div>
           {proximoLocal?.location && proximo ? <>
             <div className="cos-assistant-destination"><Icone nome="pin" /><div><small>{retornoAtivo ? "Destino após o último compromisso" : "Destino do compromisso"}</small><strong>{proximoLocal.location.name}</strong><span>{retornoAtivo ? `Saída prevista às ${new Date(proximo.scheduled_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}` : `${tipoCompromisso(proximo.appointment_type)} às ${new Date(proximo.scheduled_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}`}</span></div></div>
-            {destinoMapeavel && <div className="cos-assistant-map"><MapaDeslocamento rotas={resultMatchesTarget ? deslocamento?.routes || [] : []} origem={origemMapa} destino={{ name: proximoLocal.location.name, latitude: proximoLocal.location.latitude, longitude: proximoLocal.location.longitude }} provider={provedorMapa} updatedAt={resultMatchesTarget ? deslocamento?.updated_at : undefined} googleMapsApiKey={configMapa?.api_key} /></div>}
+            {destinoMapeavel && <DeferredAssistantMap rotas={resultMatchesTarget ? deslocamento?.routes || [] : []} origem={origemMapa} destino={{ name: proximoLocal.location.name, latitude: proximoLocal.location.latitude, longitude: proximoLocal.location.longitude }} provider={provedorMapa} updatedAt={resultMatchesTarget ? deslocamento?.updated_at : undefined} googleMapsApiKey={configMapa?.api_key} />}
             {rota ? <div className="cos-assistant-route cos-assistant-route--board"><div><small>Sair às</small><strong>{saidaRecomendada?.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }) || "—"}</strong></div><div><small>Chegada prevista</small><strong>{chegadaPrevista?.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }) || "—"}</strong></div><div><small>Trânsito</small><strong>{rota.congestion || "atualizado"}</strong></div></div> : <button type="button" className="cos-assistant-route-button" onClick={atualizarDeslocamento} disabled={carregandoRota}><Icone nome="rota" /> {carregandoRota ? "Calculando rota…" : destinoMapeavel ? usaOrigemSalva ? `Calcular rota a partir de ${origemPlanejada?.name || "local salvo"}` : "Calcular rota a partir de onde estou" : "Localizar destino e calcular rota"}</button>}
             {rota && <button type="button" className="cos-assistant-route-button" onClick={atualizarDeslocamento} disabled={carregandoRota}><Icone nome="rota" />{carregandoRota ? "Recalculando…" : "Recalcular percurso"}</button>}
             {erroRota && <p className="cos-assistant-warning" role="status">{erroRota}</p>}

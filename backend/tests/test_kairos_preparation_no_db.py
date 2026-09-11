@@ -220,6 +220,30 @@ class KairosPreparationTest(unittest.TestCase):
                 with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
                     PREPARER.main(args + ["--output", str(raw_file), "--audit-output", str(audit), "--replace"])
 
+    def test_cli_cannot_overwrite_historical_or_operational_assets_even_with_replace(self):
+        protected = [
+            ROOT / "medicamentos/kairos-453-2026-08.json",
+            Path("/medicamentos/kairos-453-2026-08.json"),
+            Path("/opt/meucardio/medicamentos/kairos-453-2026-08.json"),
+        ]
+        for folder in (ROOT / "backend/app/data/pricing", Path("/app/app/data/pricing"),
+                       Path("/opt/meucardio/backend/app/data/pricing")):
+            protected.extend(folder / name for name in (
+                "kairos-453-2026-08.json", "kairos-453-2026-08-curation-audit.json"))
+        with tempfile.TemporaryDirectory(prefix="corvia-kairos-protected-") as folder:
+            directory = Path(folder)
+            args = [str(directory / "input.json"), "--source-pdf", str(directory / "source.pdf"), "--replace"]
+            for target in protected:
+                for option, other in (("--output", "--audit-output"), ("--audit-output", "--output")):
+                    with self.subTest(target=str(target), option=option), \
+                         patch.object(PREPARER, "prepare_snapshot") as prepare, \
+                         patch.object(PREPARER, "write_result") as write, \
+                         redirect_stderr(io.StringIO()) as error, self.assertRaises(SystemExit):
+                        PREPARER.main(args + [option, str(target), other, str(directory / "other.json")])
+                    self.assertIn("historical evidence or operational assets", error.getvalue())
+                    prepare.assert_not_called()
+                    write.assert_not_called()
+
     def test_cli_rejects_changed_new_price_with_valid_pdf_before_preparation_or_writing(self):
         with tempfile.TemporaryDirectory(prefix="corvia-kairos-tamper-test-") as folder:
             directory = Path(folder)

@@ -8,7 +8,7 @@ a contratação de outro fornecedor como pendência.
 Esta decisão substitui qualquer sugestão anterior de contratação imediata.
 
 - **Em uso no candidato local, ainda não publicado:**
-  `medicamentos/kairos-453-2026-08.json`, edição 453, agosto/2026, ampliado para
+  `backend/app/data/pricing/kairos-453-2026-08.json`, edição 453, agosto/2026, ampliado para
   **6.320 apresentações**, 3.025 pares marca/laboratório e 46.180 células de preço.
   Há **5.360 apresentações com PMC** e 960 apenas com PF; estas últimas não
   recebem preço ao consumidor inventado. SHA-256:
@@ -16,6 +16,16 @@ Esta decisão substitui qualquer sugestão anterior de contratação imediata.
   As 52 apresentações anteriores permanecem com descrições, valores, ordem e
   identificadores preservados. O recorte histórico está na fixture
   `backend/tests/fixtures/kairos-453-2026-08-cardiovascular.json`.
+- **Prova histórica preservada:** `medicamentos/kairos-453-2026-08.json`
+  permanece byte a byte no baseline autorizado de 10/09, SHA-256
+  `7a7ac549bead518f3566dce41e64702090448545c35d7b56e3316d79ef896e9e`.
+  Esse sidecar e suas referências clínicas não são o snapshot operacional.
+  A fixture histórica contém os mesmos dados, com uma quebra de linha final;
+  não foi regravada. Manifesto, hashes e provas de revisão do corpus não mudam.
+  O provider lê exclusivamente o asset operacional embarcado no backend
+  (`/app/app/data/pricing/` na imagem Docker), mesmo se `/medicamentos` estiver
+  montado. O contexto `backend` e `COPY . .` incluem o asset sem novos mounts;
+  sua ausência causa erro explícito, sem retornar silenciosamente ao recorte antigo.
 - **Fonte original localizada após indicação do responsável:**
   `/opt/meucardio/medicamentos/kairos-453-2026-08-fontes/`, contendo revista
   editorial, suplemento de preços e planilha da edição. O suplemento
@@ -104,7 +114,7 @@ REPATHA/AMGEN (2). Outras 37 ocorrências duplicadas, em 33 grupos, deixam de
 se repetir. Nove grupos têm valores divergentes; a escolha preserva uma linha
 original inteira conforme a política do menor PMC, ou PF quando só há PF.
 Todas as variantes e motivos ficam em
-`medicamentos/kairos-453-2026-08-curation-audit.json`, com hashes do candidato
+`backend/app/data/pricing/kairos-453-2026-08-curation-audit.json`, com hashes do candidato
 e da auditoria integral. Campos ausentes permanecem ausentes.
 
 **Cobertura de preços não é cobertura do catálogo clínico.** Pelas regras

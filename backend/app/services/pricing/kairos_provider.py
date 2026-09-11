@@ -25,8 +25,10 @@ from sqlalchemy.orm import Session
 from app.models.drug import Drug
 from app.services.pricing.base import PriceObservation
 
-SNAPSHOT_PATH = Path("/medicamentos/kairos-453-2026-08.json")
-REPOSITORY_FALLBACK = Path(__file__).resolve().parents[4] / "medicamentos" / "kairos-453-2026-08.json"
+# Operational price data travels with the backend image. The older file under
+# /medicamentos is immutable evidence for the authorized clinical corpus, not
+# a fallback: preferring that mounted directory would silently undo expansion.
+SNAPSHOT_PATH = Path(__file__).resolve().parents[2] / "data" / "pricing" / "kairos-453-2026-08.json"
 OBSERVED_AT = datetime(2026, 8, 1, tzinfo=timezone.utc)
 PRICE_FIELDS = {
     "pf20": ("pf", "ICMS 20%"),
@@ -178,9 +180,7 @@ class _IndexedSnapshot(dict):
 def _source_path(path: Path | None = None) -> Path:
     if path is not None:
         return path
-    if SNAPSHOT_PATH.exists():
-        return SNAPSHOT_PATH
-    return REPOSITORY_FALLBACK
+    return SNAPSHOT_PATH
 
 
 def load_snapshot(path: Path | None = None) -> dict:

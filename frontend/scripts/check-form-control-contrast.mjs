@@ -35,10 +35,11 @@ const atelierImports = [
   'import "./styles/corvia-atelier.css";',
   'import "./styles/corvia-atelier-content.css";',
   'import "./styles/corvia-atelier-surfaces.css";',
+  'import "./styles/corvia-atelier-mobility.css";',
 ];
 const afterLegacy = importsCss.slice(importsCss.indexOf(importTemaClaro) + 1);
-exigir(afterLegacy.length >= 2 && afterLegacy.every((value, index) => value === atelierImports[index]),
-  "somente as camadas Atelier escopadas podem suceder os contratos legados, na ordem navegação, conteúdo e superfícies.");
+exigir(afterLegacy.length === atelierImports.length && afterLegacy.every((value, index) => value === atelierImports[index]),
+  "somente as camadas Atelier escopadas podem suceder os contratos legados, na ordem navegação, conteúdo, superfícies e deslocamento.");
 const atelierContent = fs.readFileSync(path.join(raiz, "src/styles/corvia-atelier-content.css"), "utf8");
 for (const trecho of [
   'html[data-corvia-design="atelier"] #root .cv-app .cv-content',

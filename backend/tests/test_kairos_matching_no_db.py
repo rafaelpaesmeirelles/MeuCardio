@@ -6,7 +6,11 @@ explicit fixture so expanding the current issue cannot weaken these assertions.
 These tests never open a database.
 """
 import ast
+import hashlib
+import json
 from pathlib import Path
+import shutil
+import tempfile
 from types import SimpleNamespace
 import unittest
 
@@ -16,8 +20,8 @@ PROVIDER = ROOT / "backend/app/services/pricing/kairos_provider.py"
 SNAPSHOT_FIXTURE = Path(__file__).parent / "fixtures/kairos-453-2026-08-cardiovascular.json"
 
 
-def load_provider():
-    tree = ast.parse(PROVIDER.read_text(encoding="utf-8"))
+def load_provider(provider_path=PROVIDER):
+    tree = ast.parse(provider_path.read_text(encoding="utf-8"))
     blocked_imports = {
         "sqlalchemy.orm", "app.models.drug", "app.services.pricing.base",
     }
@@ -25,10 +29,10 @@ def load_provider():
         isinstance(node, ast.ImportFrom) and node.module in blocked_imports
     )]
     namespace = {
-        "__file__": str(PROVIDER), "Drug": object, "Session": object,
+        "__file__": str(provider_path), "Drug": object, "Session": object,
         "PriceObservation": SimpleNamespace,
     }
-    exec(compile(tree, str(PROVIDER), "exec"), namespace)
+    exec(compile(tree, str(provider_path), "exec"), namespace)
     return namespace
 
 
@@ -43,12 +47,40 @@ class KairosMatchingTest(unittest.TestCase):
         _, records = self.provider["records_for_drug"](drug, snapshot=self.snapshot)
         return [record["product"] for record in records]
 
-    def test_repository_fallback_points_to_existing_reviewed_snapshot(self):
-        fallback = ROOT / "medicamentos/kairos-453-2026-08.json"
-        self.assertEqual(self.provider["REPOSITORY_FALLBACK"], fallback)
-        self.assertTrue(fallback.is_file())
-        self.assertEqual(self.snapshot["source_type"], "market_intelligence")
-        self.assertTrue(self.snapshot["licensed_use"])
+    def test_default_loads_the_exact_operational_snapshot_not_historical_evidence(self):
+        operational = ROOT / "backend/app/data/pricing/kairos-453-2026-08.json"
+        self.assertEqual(self.provider["SNAPSHOT_PATH"], operational)
+        self.assertEqual(self.provider["_source_path"](), operational)
+        snapshot = self.provider["load_snapshot"]()
+        self.assertEqual(snapshot["source_type"], "market_intelligence")
+        self.assertTrue(snapshot["licensed_use"])
+        self.assertEqual(sum(len(r["presentations"]) for r in snapshot["records"]), 6320)
+        audit = json.loads(operational.with_name("kairos-453-2026-08-curation-audit.json").read_text())
+        self.assertEqual(hashlib.sha256(operational.read_bytes()).hexdigest(), audit["candidate_sha256"])
+
+    def test_backend_image_layout_loads_distributed_data_without_repository_or_mount(self):
+        # backend/Dockerfile uses COPY . . with backend as its build context;
+        # reproduce its /app/app/... layout without Docker, DB or any network.
+        with tempfile.TemporaryDirectory(prefix="corvia-kairos-image-") as folder:
+            image_app = Path(folder) / "app/app"
+            provider_path = image_app / "services/pricing/kairos_provider.py"
+            asset = image_app / "data/pricing/kairos-453-2026-08.json"
+            provider_path.parent.mkdir(parents=True)
+            asset.parent.mkdir(parents=True)
+            shutil.copyfile(PROVIDER, provider_path)
+            shutil.copyfile(self.provider["SNAPSHOT_PATH"], asset)
+            distributed = load_provider(provider_path)
+            self.assertEqual(distributed["_source_path"](), asset.resolve())
+            self.assertEqual(sum(len(r["presentations"]) for r in distributed["load_snapshot"]()["records"]), 6320)
+
+    def test_missing_operational_asset_fails_instead_of_using_historical_prices(self):
+        with tempfile.TemporaryDirectory(prefix="corvia-kairos-missing-") as folder:
+            provider_path = Path(folder) / "app/services/pricing/kairos_provider.py"
+            provider_path.parent.mkdir(parents=True)
+            shutil.copyfile(PROVIDER, provider_path)
+            distributed = load_provider(provider_path)
+            with self.assertRaises(FileNotFoundError):
+                distributed["load_snapshot"]()
 
     def test_real_catalogue_salt_does_not_hide_trimetazidine(self):
         self.assertEqual(

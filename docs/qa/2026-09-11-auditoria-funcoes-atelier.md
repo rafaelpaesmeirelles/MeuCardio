@@ -903,3 +903,47 @@ backup automático conhecido é operacional no host; seu marker não comprova
 criptografia/cópia externa nem cobertura de todos os volumes. Essas condições
 não serão descritas como certificadas sem evidência adicional. A publicação
 ainda depende do novo commit e dos gates remotos; esta seção não atesta deploy.
+
+### Correções identificadas pelos gates do PR934
+
+O candidato inicial `7201d737` foi enviado ao PR934 e recebeu aprovação nos
+gates Visual QA, Approved Reference, Pre-home, Route Coverage e Pixel lock.
+O backend completo foi iniciado uma única vez no run `34635195463`; seu
+resultado ainda estava pendente ao registrar este adendo.
+
+- O contrato de contraste só enumerava três folhas Atelier; passou a exigir
+  exatamente quatro, incluindo deslocamento, na ordem efetivamente aprovada.
+  As asserções de contraste, autofill e escopo permanecem intactas. O checker
+  falho passou após o ajuste.
+- O inventário Deep deixou de capturar um generic TypeScript inline com
+  ponto e vírgula. Um tipo nomeado preservou a chamada real de impressão e
+  restaurou a contagem de 292 referências, sem baixar limiares do inventário.
+- O snapshot Káiros ampliado foi separado do sidecar histórico: preços e
+  auditoria operacionais foram movidos intactos para `backend/app/data/pricing/`;
+  a prova científica antiga foi restaurada byte a byte. O provider não usa o
+  sidecar histórico como fallback. Composição real de 440 sidecars, inventário
+  e autorização de 12.549 registros passaram sem banco. Foram aprovados 32
+  focais de carregamento, empacotamento, fronteira do corpus e preparação.
+  Não houve alteração de manifesto, validação de publicação ou preço para
+  acomodar a falha.
+- Os contratos frontend ainda não alcançados no CI passaram localmente:
+  47 casos de identidade/temas/ficha/marcadores, 30 de frame/navegação,
+  ficha real e divisão por rota. Não foram repetidos os casos anteriores
+  já aprovados nesse job.
+- O orçamento revelou entrada inicial de 314.925 B (limite 307.200 B).
+  A primeira hipótese, separar o shell legado, foi refutada pelo build e
+  integralmente revertida. A correção final carrega apenas o mapa opcional do
+  Apoio sob demanda; estado, notificações, APIs e foco do painel permanecem.
+  Build de 13,30 s aprovado: entrada 303.298 B; chunk do mapa 12.366 B incluído
+  no precache. Nenhum orçamento ou política de cache foi ampliado.
+  Três casos React do carregador passaram (props atuais/reabertura,
+  falha/repetição/foco e desmontagem antes da resposta). Oito estados de
+  loading/erro com CSS real, nas duas aparências e larguras 1.366/320, passaram:
+  texto 16px, botão de repetição inteiro e sem transbordamento horizontal.
+
+Estratégia da continuação: reter somente evidência remota realmente concluída;
+validar o delta exato e executar testes focais dos insumos/empacotamento
+alterados. O perfil de continuidade deve falhar fechado sem baseline completo
+ou com mudança não revisada. Certificado focal não será descrito como nova
+execução integral. Corpus/RC2 e frontend conservam seus gates próprios. Isso
+não comprova entrega de e-mail nem outras integrações externas ponta a ponta.

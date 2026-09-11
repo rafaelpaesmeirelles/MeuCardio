@@ -15,6 +15,12 @@ except ModuleNotFoundError as exc:
     if exc.name != "ci_backend_failed_test_followup":
         raise
     from scripts.ci_backend_failed_test_followup import resolve_decision as failed_test_followup
+try:
+    from ci_backend_pr934_continuation import resolve_decision as pr934_continuation
+except ModuleNotFoundError as exc:
+    if exc.name != "ci_backend_pr934_continuation":
+        raise
+    from scripts.ci_backend_pr934_continuation import resolve_decision as pr934_continuation
 
 
 def github(path: str, *, raw: bool = False):
@@ -362,6 +368,8 @@ def main() -> int:
             Path(os.environ.get("RUNNER_TEMP", "/tmp"), "backend-no-ci-owner-decision.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2)+"\n")
     if decision is None:
         decision = failed_test_followup(root, **context)
+    if decision is None:
+        decision = pr934_continuation(root, **context)
     if decision is None:
         decision = classify_paths(original_paths, repo_root=root)
     if args.github_output:

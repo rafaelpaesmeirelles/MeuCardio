@@ -293,13 +293,20 @@ def main(argv=None) -> int:
         parser.error("--output and --audit-output must be supplied together")
     inputs = {p.resolve() for p in (args.candidate, args.source_pdf, args.baseline)}
     protected = inputs | {
+        # Preserve both the immutable corpus sidecar and operational assets.
         (ROOT / "medicamentos/kairos-453-2026-08.json").resolve(),
         Path("/medicamentos/kairos-453-2026-08.json").resolve(),
         Path("/opt/meucardio/medicamentos/kairos-453-2026-08.json").resolve(),
     }
+    for filename in ("kairos-453-2026-08.json", "kairos-453-2026-08-curation-audit.json"):
+        protected.update({
+            (ROOT / "backend/app/data/pricing" / filename).resolve(),
+            (Path("/app/app/data/pricing") / filename).resolve(),
+            (Path("/opt/meucardio/backend/app/data/pricing") / filename).resolve(),
+        })
     targets = [p.resolve() for p in (args.output, args.audit_output) if p is not None]
     if len(targets) != len(set(targets)) or any(p in protected for p in targets):
-        parser.error("Outputs must be distinct and must not overwrite inputs or the active snapshot")
+        parser.error("Outputs must be distinct and must not overwrite inputs, historical evidence or operational assets")
     if not args.replace and any(p.exists() for p in targets):
         parser.error("Output already exists; inspect it and explicitly pass --replace if intended")
     try:

@@ -15,6 +15,9 @@ type ItemDrug = {
   pmc_snapshot?: number; uf?: string; cmed_version?: string;
 };
 type Prescricao = { id: number; items: ItemDrug[]; notes: string | null; created_at: string };
+type DadosImpressaoPrescricao = {
+  medico: any; paciente: any; prescricao: Prescricao; operadora?: OperadoraDocumento;
+};
 // GET /drugs/{slug}/apresentacoes?uf=XX (Tarefa A/B) — marca, laboratório,
 // apresentação e PMC (teto CMED) pra escolha explícita durante a digitação.
 // Mesma forma usada em Receituario.tsx — não é o `commercial_presentations`
@@ -121,7 +124,7 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
     setErroImpressao("");
     setImpressao(null);
     try {
-      const dados = await api.get<{ medico: any; paciente: any; prescricao: Prescricao; operadora?: OperadoraDocumento }>(`/prescriptions/${id}/imprimir`);
+      const dados = await api.get<DadosImpressaoPrescricao>(`/prescriptions/${id}/imprimir`);
       if (consulta !== consultaImpressao.current) return;
       const campos = ["razao_social", "cnpj", "logradouro", "numero", "bairro", "cidade", "uf", "cep"] as const;
       if (!dados.operadora || campos.some((campo) => !dados.operadora?.[campo]?.trim())) {
