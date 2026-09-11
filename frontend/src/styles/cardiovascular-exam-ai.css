@@ -116,3 +116,44 @@
 .ceai__file-list li>button{width:36px;height:36px}
 .ceai__file-total{text-align:left}
 }
+
+/* Route-owned light palette: this stylesheet is lazy-loaded, so each paired
+   surface/text rule carries the theme scope instead of depending on load order. */
+html[data-corvia-theme="light"] .ceai { color: var(--corvia-daylight-text); }
+html[data-corvia-theme="light"] .ceai :is(.ceai__hero, .ceai__workspace, .ceai__result, .ceai__longitudinal) {
+  background: var(--corvia-daylight-panel); border-color: var(--corvia-daylight-line);
+}
+html[data-corvia-theme="light"] .ceai :is(.ceai__drop, .ceai__summary, .ceai__block, .ceai__consent, .ceai__file-list li, .ceai__cards article, .ceai__guidelines article) {
+  background: #f5f6f7; border-color: var(--corvia-daylight-line);
+}
+html[data-corvia-theme="light"] .ceai :is(h1, h2, h3, .ceai__form label, .ceai__drop > strong, .ceai__file-details strong, .ceai__summary p, .ceai__block p, .ceai__block ul, .ceai__cards strong, .ceai__guidelines strong, .ceai__longitudinal strong, td) {
+  color: var(--corvia-daylight-text);
+}
+html[data-corvia-theme="light"] .ceai :is(.ceai__hero p:last-child, .ceai__form label > span, .ceai__drop, .ceai__file-details small, .ceai__file-total, .ceai__format-note, .ceai__format-note strong, .ceai__consent, .ceai__notice, .ceai__cards p, .ceai__guidelines p, .ceai__cards small, .ceai__guidelines small, .ceai__disclaimer, .ceai__longitudinal span) {
+  color: var(--corvia-daylight-muted);
+}
+html[data-corvia-theme="light"] .ceai :is(.eyebrow, th, .ceai__evidence-links a, .ceai__guidelines a span, .ceai__sources a) { color: #12666a; }
+html[data-corvia-theme="light"] .ceai :is(.ceai__hero-icon, .ceai__drop-icon, .ceai__badge, .ceai__privacy, .ceai__privacy strong, .ceai__file-number, .ceai__cards article > span, .ceai__quality.is-adequada) { color: #176440; }
+html[data-corvia-theme="light"] .ceai :is(.ceai__form select, .ceai__form textarea, .ceai__file-note) {
+  color: var(--corvia-daylight-text); background: #fff; border-color: var(--corvia-daylight-line);
+}
+html[data-corvia-theme="light"] .ceai :is(.ceai__form textarea, .ceai__file-note)::placeholder { color: var(--corvia-daylight-muted); opacity: 1; }
+html[data-corvia-theme="light"] .ceai :is(.ceai__error, .ceai__urgent:not(.is-neutral), .ceai__quality.is-inadequada, .ceai__block.is-alert h3, .ceai__block.is-alert li, .ceai__file-list li > button) { color: #9c213e !important; }
+html[data-corvia-theme="light"] .ceai :is(.ceai__warning, .ceai__quality.is-limitada) { color: #79500f !important; }
+html[data-corvia-theme="light"] .ceai .ceai__urgent.is-neutral { color: var(--corvia-daylight-text); }
+html[data-corvia-theme="light"] .ceai .ceai__file-list li > button:hover,
+html[data-corvia-theme="light"] .ceai .ceai__file-list li > button:focus-visible { color: #79162e; }
+
+/* Clinical severity must remain visible despite legacy generic paragraph ink. */
+html[data-corvia-theme="dark"] .ceai :is(.ceai__error, .ceai__urgent:not(.is-neutral)) { color: #ffd8df !important; }
+html[data-corvia-theme="dark"] .ceai .ceai__warning { color: #f1daa3 !important; }
+/* Hospital route tones apply important navy gradients after the generic theme.
+   Override only those named surfaces, including nested form/upload panels. */
+html[data-corvia-theme="light"] #root .ceai :is(.ceai__hero, .ceai__form, .ceai__files, .ceai__analysis, .ceai__result) {
+  background: var(--corvia-daylight-panel) !important;
+  border-color: var(--corvia-daylight-line) !important;
+}
+html[data-corvia-theme="light"] #root .ceai :is(.ceai__privacy, .ceai__drop, .ceai__consent, .ceai__block, .ceai__sources) {
+  background: #f5f6f7 !important;
+  border-color: var(--corvia-daylight-line) !important;
+}

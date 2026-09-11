@@ -16,6 +16,7 @@ import { chamamentoComArtigo, nomeComTratamento } from "../lib/clinicalIdentity"
 import { withoutReservedSmokeTestRecord, withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 import "../styles/cardiology-spaces-home.css";
 import "../styles/corvia-internal-final-approved-20260904.css";
+import "../styles/cardiology-spaces-catalog-theme.css";
 
 type Mode = "complete" | "essential" | "scientific";
 type ClinicalSpaceId = "consultorio" | "hospital" | "ensino" | "pesquisa" | "gestao";

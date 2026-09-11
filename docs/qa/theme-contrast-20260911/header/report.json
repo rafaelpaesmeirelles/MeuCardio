@@ -1,0 +1,508 @@
+{
+  "cases": [
+    {
+      "theme": "dark",
+      "width": 1440,
+      "fail": [],
+      "m": {
+        "theme": "dark",
+        "scroll": 1440,
+        "brand": {
+          "x": 22,
+          "y": 15,
+          "w": 163.8125,
+          "h": 42,
+          "right": 185.8125,
+          "bottom": 57
+        },
+        "galaxy": {
+          "x": 193.8125,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 237.8125,
+          "bottom": 58
+        },
+        "search": {
+          "x": 257.8125,
+          "y": 13,
+          "w": 669.890625,
+          "h": 46,
+          "right": 927.703125,
+          "bottom": 59
+        },
+        "avatar": {
+          "x": 1269.703125,
+          "y": 14,
+          "w": 148.296875,
+          "h": 44,
+          "right": 1418,
+          "bottom": 58
+        },
+        "header": {
+          "x": 22,
+          "y": 0,
+          "w": 1396,
+          "h": 72,
+          "right": 1418,
+          "bottom": 72
+        },
+        "position": "relative"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 1280,
+      "fail": [],
+      "m": {
+        "theme": "dark",
+        "scroll": 1280,
+        "brand": {
+          "x": 16,
+          "y": 15,
+          "w": 163.8125,
+          "h": 42,
+          "right": 179.8125,
+          "bottom": 57
+        },
+        "galaxy": {
+          "x": 187.8125,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 231.8125,
+          "bottom": 58
+        },
+        "search": {
+          "x": 243.8125,
+          "y": 13,
+          "w": 552.1875,
+          "h": 46,
+          "right": 796,
+          "bottom": 59
+        },
+        "avatar": {
+          "x": 1115.703125,
+          "y": 14,
+          "w": 148.296875,
+          "h": 44,
+          "right": 1264,
+          "bottom": 58
+        },
+        "header": {
+          "x": 16,
+          "y": 0,
+          "w": 1248,
+          "h": 72,
+          "right": 1264,
+          "bottom": 72
+        },
+        "position": "relative"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 1024,
+      "fail": [],
+      "m": {
+        "theme": "dark",
+        "scroll": 1024,
+        "brand": {
+          "x": 16,
+          "y": 19,
+          "w": 101.984375,
+          "h": 34,
+          "right": 117.984375,
+          "bottom": 53
+        },
+        "galaxy": {
+          "x": 125.984375,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 169.984375,
+          "bottom": 58
+        },
+        "search": {
+          "x": 181.984375,
+          "y": 14,
+          "w": 509.8125,
+          "h": 44,
+          "right": 691.796875,
+          "bottom": 58
+        },
+        "avatar": {
+          "x": 964,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 1008,
+          "bottom": 58
+        },
+        "header": {
+          "x": 16,
+          "y": 0,
+          "w": 992,
+          "h": 72,
+          "right": 1008,
+          "bottom": 72
+        },
+        "position": "relative"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 901,
+      "fail": [],
+      "m": {
+        "theme": "dark",
+        "scroll": 901,
+        "brand": {
+          "x": 12,
+          "y": 19,
+          "w": 101.984375,
+          "h": 34,
+          "right": 113.984375,
+          "bottom": 53
+        },
+        "galaxy": {
+          "x": 121.984375,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 165.984375,
+          "bottom": 58
+        },
+        "search": {
+          "x": 177.984375,
+          "y": 14,
+          "w": 394.8125,
+          "h": 44,
+          "right": 572.796875,
+          "bottom": 58
+        },
+        "avatar": {
+          "x": 845,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 889,
+          "bottom": 58
+        },
+        "header": {
+          "x": 12,
+          "y": 0,
+          "w": 877,
+          "h": 72,
+          "right": 889,
+          "bottom": 72
+        },
+        "position": "relative"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "fail": [],
+      "m": {
+        "theme": "light",
+        "scroll": 1440,
+        "brand": {
+          "x": 22,
+          "y": 12,
+          "w": 167.8125,
+          "h": 48,
+          "right": 189.8125,
+          "bottom": 60
+        },
+        "galaxy": {
+          "x": 197.8125,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 241.8125,
+          "bottom": 58
+        },
+        "search": {
+          "x": 261.8125,
+          "y": 13,
+          "w": 665.890625,
+          "h": 46,
+          "right": 927.703125,
+          "bottom": 59
+        },
+        "avatar": {
+          "x": 1269.703125,
+          "y": 14,
+          "w": 148.296875,
+          "h": 44,
+          "right": 1418,
+          "bottom": 58
+        },
+        "header": {
+          "x": 22,
+          "y": 0,
+          "w": 1396,
+          "h": 72,
+          "right": 1418,
+          "bottom": 72
+        },
+        "position": "relative"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 1280,
+      "fail": [],
+      "m": {
+        "theme": "light",
+        "scroll": 1280,
+        "brand": {
+          "x": 16,
+          "y": 12,
+          "w": 167.8125,
+          "h": 48,
+          "right": 183.8125,
+          "bottom": 60
+        },
+        "galaxy": {
+          "x": 191.8125,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 235.8125,
+          "bottom": 58
+        },
+        "search": {
+          "x": 247.8125,
+          "y": 13,
+          "w": 548.1875,
+          "h": 46,
+          "right": 796,
+          "bottom": 59
+        },
+        "avatar": {
+          "x": 1115.703125,
+          "y": 14,
+          "w": 148.296875,
+          "h": 44,
+          "right": 1264,
+          "bottom": 58
+        },
+        "header": {
+          "x": 16,
+          "y": 0,
+          "w": 1248,
+          "h": 72,
+          "right": 1264,
+          "bottom": 72
+        },
+        "position": "relative"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 1024,
+      "fail": [],
+      "m": {
+        "theme": "light",
+        "scroll": 1024,
+        "brand": {
+          "x": 16,
+          "y": 19,
+          "w": 101.984375,
+          "h": 34,
+          "right": 117.984375,
+          "bottom": 53
+        },
+        "galaxy": {
+          "x": 125.984375,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 169.984375,
+          "bottom": 58
+        },
+        "search": {
+          "x": 181.984375,
+          "y": 14,
+          "w": 509.8125,
+          "h": 44,
+          "right": 691.796875,
+          "bottom": 58
+        },
+        "avatar": {
+          "x": 964,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 1008,
+          "bottom": 58
+        },
+        "header": {
+          "x": 16,
+          "y": 0,
+          "w": 992,
+          "h": 72,
+          "right": 1008,
+          "bottom": 72
+        },
+        "position": "relative"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 901,
+      "fail": [],
+      "m": {
+        "theme": "light",
+        "scroll": 901,
+        "brand": {
+          "x": 12,
+          "y": 19,
+          "w": 101.984375,
+          "h": 34,
+          "right": 113.984375,
+          "bottom": 53
+        },
+        "galaxy": {
+          "x": 121.984375,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 165.984375,
+          "bottom": 58
+        },
+        "search": {
+          "x": 177.984375,
+          "y": 14,
+          "w": 394.8125,
+          "h": 44,
+          "right": 572.796875,
+          "bottom": 58
+        },
+        "avatar": {
+          "x": 845,
+          "y": 14,
+          "w": 44,
+          "h": 44,
+          "right": 889,
+          "bottom": 58
+        },
+        "header": {
+          "x": 12,
+          "y": 0,
+          "w": 877,
+          "h": 72,
+          "right": 889,
+          "bottom": 72
+        },
+        "position": "relative"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "fail": [],
+      "m": {
+        "theme": "dark",
+        "scroll": 390,
+        "brand": {
+          "x": 12,
+          "y": 22,
+          "w": 107.984375,
+          "h": 40,
+          "right": 119.984375,
+          "bottom": 62
+        },
+        "galaxy": {
+          "x": 127.984375,
+          "y": 20,
+          "w": 44,
+          "h": 44,
+          "right": 171.984375,
+          "bottom": 64
+        },
+        "search": {
+          "x": 12,
+          "y": 84,
+          "w": 366,
+          "h": 50,
+          "right": 378,
+          "bottom": 134
+        },
+        "avatar": {
+          "x": 274,
+          "y": 4,
+          "w": 104,
+          "h": 76,
+          "right": 378,
+          "bottom": 80
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 181,
+          "right": 390,
+          "bottom": 181
+        },
+        "position": "relative"
+      },
+      "verification_note": "Initial mobile validation; final follow-up CSS is scoped to min-width 901px and cannot affect these cases."
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "fail": [],
+      "m": {
+        "theme": "light",
+        "scroll": 390,
+        "brand": {
+          "x": 12,
+          "y": 22,
+          "w": 107.984375,
+          "h": 40,
+          "right": 119.984375,
+          "bottom": 62
+        },
+        "galaxy": {
+          "x": 127.984375,
+          "y": 20,
+          "w": 44,
+          "h": 44,
+          "right": 171.984375,
+          "bottom": 64
+        },
+        "search": {
+          "x": 12,
+          "y": 84,
+          "w": 366,
+          "h": 50,
+          "right": 378,
+          "bottom": 134
+        },
+        "avatar": {
+          "x": 274,
+          "y": 4,
+          "w": 104,
+          "h": 76,
+          "right": 378,
+          "bottom": 80
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 181,
+          "right": 390,
+          "bottom": 181
+        },
+        "position": "relative"
+      },
+      "verification_note": "Initial mobile validation; final follow-up CSS is scoped to min-width 901px and cannot affect these cases."
+    }
+  ],
+  "errors": [],
+  "scope": "Header geometry only; authenticated APIs mocked; no production or paid AI calls."
+}

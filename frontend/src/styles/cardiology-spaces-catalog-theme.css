@@ -1,0 +1,23 @@
+/* Catalog groups were given dark backgrounds at both responsive breakpoints.
+   Keep their light surface/text pair together, independent of route CSS order. */
+html[data-corvia-theme="light"] .spaces-catalog > div > section {
+  color: var(--corvia-daylight-text);
+  background: #f5f6f7;
+  border-color: var(--corvia-daylight-line);
+}
+html[data-corvia-theme="light"] .spaces-catalog > div > section h3 { color: var(--corvia-daylight-muted); }
+html[data-corvia-theme="light"] .spaces-catalog .spaces-action {
+  color: var(--corvia-daylight-text);
+  background: #fff;
+  border-color: var(--corvia-daylight-line);
+}
+html[data-corvia-theme="light"] .spaces-catalog .spaces-action[data-feature="exam-ai"],
+html[data-corvia-theme="light"] .spaces-catalog .spaces-action.spaces-action--featured {
+  color: var(--corvia-daylight-text);
+  background: #edf3f0;
+  border-color: #a9c8ba;
+}
+html[data-corvia-theme="light"] .spaces-catalog .spaces-action[data-feature="exam-ai"] svg { color: #176440; filter: none; }
+html[data-corvia-theme="light"] .spaces-catalog .spaces-action--featured small { color: #176440; }
+html[data-corvia-theme="light"] .spaces-catalog .spaces-action:hover,
+html[data-corvia-theme="light"] .spaces-catalog .spaces-action:focus-visible { color: #12666a; background: #eef4f1; }

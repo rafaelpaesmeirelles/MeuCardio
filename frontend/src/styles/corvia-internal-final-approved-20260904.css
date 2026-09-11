@@ -632,13 +632,31 @@ html[data-corvia-theme="dark"] #root .spaces-brand strong b { color: #5f8fe8 !im
   #root .spaces-home__topbar { grid-template-rows: minmax(84px, auto) 44px 46px !important; }
 }
 
-/* 10/09 — no desktop escuro, o miniuniverso fica sob a marca.
-   A coluna de 184px não comporta marca + botão; a busca mantém sua posição. */
+/* 11/09 — marca e miniuniverso pertencem à mesma linha no desktop dos dois temas.
+   A primeira coluna acompanha a largura real do cluster, incluindo o botão
+   de 44px; as demais colunas preservam os limites dos respectivos breakpoints.
+   O botão mantém a posição relativa comum aos dois temas, sem deslocamento
+   absoluto abaixo da marca. Mobile e paleta não são alterados. */
+@media (min-width: 1400px) {
+  #root .spaces-home__topbar {
+    grid-template-columns: max-content minmax(320px, 1fr) auto auto;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  #root .spaces-home__topbar {
+    grid-template-columns: max-content minmax(260px, 1fr) auto minmax(116px, 166px);
+  }
+}
+@media (min-width: 901px) and (max-width: 1199px) {
+  #root .spaces-home__topbar {
+    grid-template-columns: max-content minmax(220px, 1fr) auto 44px;
+  }
+}
+
+/* Elimina o espaço de baseline do conteúdo inline da marca no botão. */
 @media (min-width: 901px) {
-  html[data-corvia-theme="dark"] #root .spaces-home__topbar .spaces-home__brand-cluster .galaxy-theme-toggle {
-    position: absolute !important;
-    top: calc(100% + 2px) !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+  #root .spaces-home__topbar .spaces-brand-button {
+    display: flex;
+    align-items: center;
   }
 }

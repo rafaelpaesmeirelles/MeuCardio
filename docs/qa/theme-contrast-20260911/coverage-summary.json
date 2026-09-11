@@ -1,0 +1,151 @@
+{
+  "cases": [
+    {
+      "page": "search",
+      "theme": "light",
+      "width": 1366,
+      "text_samples": 82,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "evidence",
+      "theme": "light",
+      "width": 1366,
+      "text_samples": 140,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "admin",
+      "theme": "light",
+      "width": 1366,
+      "text_samples": 88,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "users",
+      "theme": "light",
+      "width": 1366,
+      "text_samples": 74,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "exams",
+      "theme": "light",
+      "width": 1366,
+      "text_samples": 68,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "assistant",
+      "theme": "light",
+      "width": 1366,
+      "text_samples": 98,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "home",
+      "theme": "light",
+      "width": 1366,
+      "text_samples": 58,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "catalog",
+      "theme": "light",
+      "width": 1366,
+      "text_samples": 125,
+      "overflow": false,
+      "flags": 1
+    },
+    {
+      "page": "search",
+      "theme": "light",
+      "width": 390,
+      "text_samples": 63,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "evidence",
+      "theme": "light",
+      "width": 390,
+      "text_samples": 104,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "admin",
+      "theme": "light",
+      "width": 390,
+      "text_samples": 69,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "users",
+      "theme": "light",
+      "width": 390,
+      "text_samples": 55,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "exams",
+      "theme": "light",
+      "width": 390,
+      "text_samples": 48,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "assistant",
+      "theme": "light",
+      "width": 390,
+      "text_samples": 78,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "home",
+      "theme": "light",
+      "width": 390,
+      "text_samples": 58,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "catalog",
+      "theme": "light",
+      "width": 390,
+      "text_samples": 122,
+      "overflow": false,
+      "flags": 0
+    },
+    {
+      "page": "home",
+      "theme": "dark",
+      "width": 1440,
+      "text_samples": 59,
+      "overflow": false,
+      "flags": 6
+    },
+    {
+      "page": "catalog",
+      "theme": "dark",
+      "width": 1440,
+      "text_samples": 126,
+      "overflow": false,
+      "flags": 6
+    }
+  ],
+  "errors": [],
+  "scope": "Local synthetic fixtures; no backend calls or production data",
+  "contrast_method": "Computed text/background colors with alpha compositing; background images/gradients require visual inspection, are not a WCAG certificate."
+}

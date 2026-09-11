@@ -1,13 +1,31 @@
-/* One daylight palette for the approved login and every authenticated space. */
+/* Neutral daylight surfaces; space accents remain on actions and indicators. */
 :root {
-  --corvia-daylight-text: #18354b;
-  --corvia-daylight-muted: #49677b;
-  --corvia-daylight-panel: #e1eff6;
-  --corvia-daylight-line: rgba(51, 120, 153, .28);
-  --corvia-daylight-background:
-    radial-gradient(ellipse at 52% 49%, rgba(75, 188, 215, .2), transparent 48%),
-    radial-gradient(ellipse at 12% 32%, rgba(90, 160, 205, .12), transparent 48%),
-    linear-gradient(135deg, #e5f3f8, #d6edf4 52%, #e2eff7);
-  --corvia-daylight-surface: linear-gradient(110deg, #daeaf3, #e4f1f6);
-  --corvia-daylight-card: linear-gradient(125deg, rgba(208, 233, 244, .9), rgba(235, 247, 251, .85));
+  --corvia-daylight-text: #202b36;
+  --corvia-daylight-muted: #4d5b68;
+  --corvia-daylight-panel: #ffffff;
+  --corvia-daylight-line: #cbd1d7;
+  --corvia-daylight-background: linear-gradient(135deg, #fafaf9, #f3f4f3 52%, #f7f7f6);
+  --corvia-daylight-surface: linear-gradient(110deg, #ffffff, #f5f6f5);
+  --corvia-daylight-card: linear-gradient(125deg, #ffffff, #f7f8f7);
+}
+
+/* Legacy typography and panels must consume the same theme as the new frame.
+   These aliases were previously left on their night values in light mode. */
+html[data-corvia-theme="light"] {
+  --corvia-bg: #f5f6f5;
+  --corvia-bg-2: #f0f2f1;
+  --corvia-panel: #ffffff;
+  --corvia-panel-2: #f5f6f5;
+  --corvia-panel-3: #eef1ef;
+  --corvia-line: #d5dadd;
+  --corvia-line-strong: #a1adb5;
+  --corvia-text: var(--corvia-daylight-text);
+  --corvia-text-2: var(--corvia-daylight-muted);
+  --corvia-muted: #53616d;
+  --corvia-cyan: #096770;
+  --corvia-cyan-2: #096770;
+  --corvia-violet: #64429b;
+  --corvia-red: #af2341;
+  --corvia-amber: #805300;
+  --corvia-green: #19613d;
 }
