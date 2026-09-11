@@ -26,6 +26,7 @@ from PIL import Image
 from reportlab.pdfbase.pdfmetrics import stringWidth
 
 from app.services.pdf.marca import LOGO, logo_disponivel
+from app.services.pdf import marca
 from app.services.professional_profile import (
     document_identity,
     professional_name,
@@ -43,10 +44,12 @@ from .exportacao_conteudo import (
 )
 
 
-NAVY = RGBColor(0x0B, 0x2E, 0x45)
-TINTA = RGBColor(0x26, 0x33, 0x3B)
-NEUTRO = RGBColor(0x55, 0x66, 0x6F)
-BRANCO = RGBColor(0xFF, 0xFF, 0xFF)
+NAVY = RGBColor(*marca.rgb8(marca.NAVY))
+TINTA = RGBColor(*marca.rgb8(marca.TINTA))
+NEUTRO = RGBColor(*marca.rgb8(marca.NEUTRO))
+BRANCO = RGBColor(*marca.rgb8(marca.BRANCO))
+PAPEL = RGBColor(*marca.rgb8(marca.OFF_WHITE))
+COBRE_CLARO = RGBColor(*marca.rgb8(marca.COBRE_CLARO))
 LARGURA = Inches(13.333)
 ALTURA = Inches(7.5)
 MARGEM = Inches(0.65)
@@ -72,7 +75,10 @@ def _identificacao(user: Any, incluir: bool) -> tuple[str, list[str]]:
 
 
 def _slide_vazio(prs: Presentation):
-    return prs.slides.add_slide(prs.slide_layouts[6])
+    slide = prs.slides.add_slide(prs.slide_layouts[6])
+    slide.background.fill.solid()
+    slide.background.fill.fore_color.rgb = PAPEL
+    return slide
 
 
 def _caixa(slide, esquerda, topo, largura, altura):
@@ -115,12 +121,12 @@ def _capa_pptx(prs: Presentation, titulo: str, subtitulo: str, nome: str, detalh
     p2 = tf2.paragraphs[0]
     p2.text = subtitulo
     p2.font.size = Pt(18)
-    p2.font.color.rgb = RGBColor(0xCF, 0xDD, 0xE4)
+    p2.font.color.rgb = PAPEL
     tf3 = _caixa(slide, Inches(0.85), ALTURA - Inches(1.05), LARGURA - Inches(1.7), Inches(0.7))
     p3 = tf3.paragraphs[0]
     p3.text = " · ".join([nome, *detalhes, "CorVIA — Cardiology Spaces"])
     p3.font.size = Pt(11)
-    p3.font.color.rgb = RGBColor(0xA9, 0xBD, 0xC8)
+    p3.font.color.rgb = COBRE_CLARO
 
 
 def _slide_conteudo(prs: Presentation, titulo: str, blocos: list[tuple[str, str]], rodape: str) -> None:
@@ -227,7 +233,7 @@ def gerar_pptx(
     return buffer.getvalue()
 
 
-def _definir_borda_inferior(paragrafo, cor: str = "1C7293", tamanho: str = "12") -> None:
+def _definir_borda_inferior(paragrafo, cor: str = marca.cor_hex(marca.COBRE), tamanho: str = "12") -> None:
     p_pr = paragrafo._p.get_or_add_pPr()
     p_bdr = p_pr.find(qn("w:pBdr"))
     if p_bdr is None:
@@ -274,7 +280,7 @@ def _cabecalho_docx(secao, user: Any, incluir: bool, nome: str, detalhes: list[s
         for indice, linha in enumerate(linhas):
             run = direita.add_run(("\n" if indice else "") + linha)
             run.font.size = DocxPt(8.5)
-            run.font.color.rgb = DocxRGBColor.from_string("0B2E45")
+            run.font.color.rgb = DocxRGBColor.from_string(marca.cor_hex(marca.NAVY))
             run.bold = indice == 0
         altura_identidade = max(altura_identidade, len(linhas) * 11)
     secao.header_distance = DocxInches(.3)
@@ -293,6 +299,9 @@ def gerar_docx(
     titulo_final = _titulo_exportacao(itens, titulo)
     nome, detalhes = _identificacao(user, incluir_dados_assinante)
     documento = WordDocument()
+    fundo = OxmlElement("w:background")
+    fundo.set(qn("w:color"), marca.cor_hex(marca.OFF_WHITE))
+    documento._element.insert(0, fundo)
     secao = documento.sections[0]
     secao.page_width = DocxInches(8.27)
     secao.page_height = DocxInches(11.69)
@@ -304,8 +313,9 @@ def gerar_docx(
     normal = documento.styles["Normal"]
     normal.font.name = "Aptos"
     normal.font.size = DocxPt(10.5)
+    normal.font.color.rgb = DocxRGBColor.from_string(marca.cor_hex(marca.TINTA))
     normal.paragraph_format.space_after = DocxPt(6)
-    for estilo, tamanho, cor in (("Title", 28, "0B2E45"), ("Heading 1", 19, "0B2E45"), ("Heading 2", 14, "1C7293")):
+    for estilo, tamanho, cor in (("Title", 28, marca.cor_hex(marca.NAVY)), ("Heading 1", 19, marca.cor_hex(marca.NAVY)), ("Heading 2", 14, marca.cor_hex(marca.TEAL))):
         style = documento.styles[estilo]
         style.font.name = "Aptos Display" if estilo != "Normal" else "Aptos"
         style.font.size = DocxPt(tamanho)
@@ -320,7 +330,7 @@ def gerar_docx(
     run_sub = p_sub.add_run(subtitulo)
     run_sub.bold = True
     run_sub.font.size = DocxPt(12)
-    run_sub.font.color.rgb = DocxRGBColor.from_string("55666F")
+    run_sub.font.color.rgb = DocxRGBColor.from_string(marca.cor_hex(marca.NEUTRO))
 
     documento.add_heading("Proveniência", level=1)
     documento.add_paragraph(
@@ -339,14 +349,14 @@ def gerar_docx(
             p_meta = documento.add_paragraph()
             run_meta = p_meta.add_run(metadados)
             run_meta.bold = True
-            run_meta.font.color.rgb = DocxRGBColor.from_string("55666F")
+            run_meta.font.color.rgb = DocxRGBColor.from_string(marca.cor_hex(marca.NEUTRO))
         for secao_item in item.secoes:
             documento.add_heading(secao_item.titulo, level=2)
             if secao_item.destaque:
                 p = documento.add_paragraph()
                 r = p.add_run(_sem_markdown(secao_item.destaque))
                 r.bold = True
-                r.font.color.rgb = DocxRGBColor.from_string("0B2E45")
+                r.font.color.rgb = DocxRGBColor.from_string(marca.cor_hex(marca.NAVY))
             for paragrafo in secao_item.paragrafos:
                 texto = _sem_markdown(paragrafo)
                 if texto:
@@ -363,7 +373,7 @@ def gerar_docx(
             f"CorVIA — Cardiology Spaces · exportado em {datetime.now(timezone.utc).strftime('%d/%m/%Y')}"
         )
         run.font.size = DocxPt(8)
-        run.font.color.rgb = DocxRGBColor.from_string("55666F")
+        run.font.color.rgb = DocxRGBColor.from_string(marca.cor_hex(marca.NEUTRO))
 
     documento.core_properties.title = titulo_final
     documento.core_properties.author = nome

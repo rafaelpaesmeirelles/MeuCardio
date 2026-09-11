@@ -45,7 +45,7 @@
 /* Sidebar desktop: usa diretamente o ativo Cardiology Spaces, agora também
    com VIA azul-escuro canônico. */
 .ccc-nav__brand {
-  background-image:url('/corvia-logo-spaces-dark.svg');
+  background-image:url('/atelier/corvia-logo-atelier.svg');
   background-repeat:no-repeat;
   background-position:left .9rem center;
   background-size:174px auto;

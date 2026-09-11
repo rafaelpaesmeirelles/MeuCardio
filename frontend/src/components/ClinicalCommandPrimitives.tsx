@@ -21,14 +21,14 @@ export function ClinicalPageHeader({ eyebrow, title, description, icon = "clinic
   const space: FunctionalSpace = definition && definition.space !== "home" ? definition.space : "consultorio";
   const spaceLabel = CLINICAL_SPACES[space].label;
   return (
-    <header className={`cv-page-hero cv-page-hero--${space}`} data-cardiology-space={space}>
+    <header className={`cv-page-hero cv-page-hero--${space}`} data-cardiology-space={space} data-content-layout={definition?.layout ?? "standard"}>
       <div className="cv-page-hero__space" aria-label={`CorVIA Cardiology Spaces — ${spaceLabel}`}>
         <span className="cv-page-hero__beacon" aria-hidden="true" />
         <span>CARDIOLOGY SPACES</span><i>·</i><strong>{spaceLabel}</strong>
       </div>
       <div className="cv-page-hero__identity">
-        <span className="cv-page-hero__icon"><Icone nome={icon} /></span>
-        <div>
+        <span className="cv-page-hero__icon" aria-hidden="true"><Icone nome={icon} /></span>
+        <div className="cv-page-hero__copy">
           <p className="eyebrow">{eyebrow}</p>
           <h1>{title}</h1>
           {description && <p className="cv-page-hero__description">{description}</p>}
@@ -62,7 +62,7 @@ export function ClinicalSection({ eyebrow, title, description, action, children,
     <section className={`cv-section${className ? ` ${className}` : ""}`}>
       {(eyebrow || title || description || action) && (
         <div className="cv-section__heading">
-          <div>
+          <div className="cv-section__copy">
             {eyebrow && <p className="eyebrow">{eyebrow}</p>}
             {title && <h2>{title}</h2>}
             {description && <p>{description}</p>}
@@ -79,8 +79,8 @@ export function ClinicalMetric({ label, value, detail, icon }: { label: string; 
   return (
     <div className="cv-metric">
       <div className="cv-metric__top">{icon && <Icone nome={icon} />}<span>{label}</span></div>
-      <strong>{value}</strong>
-      {detail && <small>{detail}</small>}
+      <strong className="cv-metric__value">{value}</strong>
+      {detail && <small className="cv-metric__detail">{detail}</small>}
     </div>
   );
 }
@@ -88,7 +88,7 @@ export function ClinicalMetric({ label, value, detail, icon }: { label: string; 
 export function ClinicalEmpty({ title, description }: { title: string; description?: string }) {
   return (
     <div className="cv-empty">
-      <span>◎</span>
+      <span className="cv-empty__icon" aria-hidden="true"><Icone nome="busca" /></span>
       <strong>{title}</strong>
       {description && <p>{description}</p>}
     </div>

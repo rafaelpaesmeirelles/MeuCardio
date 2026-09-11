@@ -48,7 +48,7 @@ def test_assinatura_ligada_contem_nome_e_logo_corvia(db, criar_usuario):
     html = montar_assinatura_html(user)
     assert html is not None
     assert "Dra. Ana Souza" in html
-    assert "corvia-logo-canonical.png" in html
+    assert "corvia-logo-atelier.png" in html
     assert "corvia-logo-compacta.png" not in html
 
 
@@ -151,7 +151,7 @@ def test_put_assinatura_liga_e_reflete_na_pre_visualizacao(client, criar_usuario
     # isso em JSX, nunca dangerouslySetInnerHTML (política de
     # scripts/check-rendering-security.mjs).
     assert corpo["pre_visualizacao"]["nome"] == "Bruno Lima"
-    assert corpo["pre_visualizacao"]["logo_corvia_url"].endswith("corvia-logo-canonical.png")
+    assert corpo["pre_visualizacao"]["logo_corvia_url"].endswith("corvia-logo-atelier.png")
     assert corpo["assinatura_digital_ativa"] is False
 
     status = client.get("/api/email/assinatura", headers=_headers(token))
@@ -242,7 +242,7 @@ def test_enviar_com_assinatura_ativa_anexa_html(client, db, criar_usuario, monke
     assert enviada["mail_format"] == "html"
     assert "Texto simples" in enviada["corpo"]
     assert "Carla Dias" in enviada["corpo"]
-    assert "corvia-logo-canonical.png" in enviada["corpo"]
+    assert "corvia-logo-atelier.png" in enviada["corpo"]
 
 
 def test_caixa_nativa_bloqueia_envio_quando_smime_esta_ativo(

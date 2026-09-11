@@ -17,11 +17,40 @@ const disease = read("src/pages/GuiaDoenca.tsx");
 const triage = read("src/pages/TriagemSintomas.tsx");
 const emergency = read("src/pages/Emergencia.tsx");
 const styles = read("src/styles/cardiology-spaces-app-frame.css");
+const atelierStyles = read("src/styles/corvia-atelier.css");
 const homeStyles = read("src/styles/cardiology-spaces-home.css");
 const agendaStyles = read("src/styles/clinical-agenda-final-polish.css");
 const examStyles = read("src/styles/clinical-exams-v2.css");
 const rc2 = read("../.github/workflows/rc2-acceptance.yml");
 const visualQa = read("../.github/workflows/visual-qa.yml");
+const film = read("src/components/CorviaPresentationFilm.tsx");
+
+test("the launch film is optional, accessible and excluded from the initial PWA cache", () => {
+  assert.match(film, /open && <dialog/);
+  assert.match(film, /controls playsInline preload="none"/);
+  assert.match(film, /<track kind="captions"/);
+  assert.match(film, /onCancel=\{\(\) => setOpen\(false\)\}/);
+  assert.match(film, /trigger\.current\?\.focus/);
+  assert.match(film, /download="CorVIA-Cardiology-Spaces\.mp4"/);
+  assert.doesNotMatch(film, /autoPlay|\.play\(|onboarding-concluido|api\.post/);
+  assert.match(read("vite.config.ts"), /"media\/\*\*"/);
+});
+
+test("the tour cannot ship a film button without its MP4, poster and Portuguese captions", () => {
+  const filmRoot = film.match(/const FILM_ROOT = "([^"]+)"/)?.[1];
+  assert.match(filmRoot, /^\/media\/corvia-apresentacao-\d{8}$/);
+  const binary = (extension) => readFileSync(new URL(`../public${filmRoot}.${extension}`, import.meta.url));
+  const mp4 = binary("mp4");
+  assert.ok(mp4.length > 1024 * 1024, "MP4 must contain the rendered presentation, not a placeholder");
+  assert.ok(mp4.length < 95 * 1024 * 1024, "MP4 must remain portable and distributable without Git LFS");
+  assert.equal(mp4.toString("ascii", 4, 8), "ftyp");
+  const poster = binary("jpg");
+  assert.equal(poster.subarray(0, 3).toString("hex"), "ffd8ff");
+  const captions = binary("vtt").toString("utf8");
+  assert.match(captions, /^WEBVTT/);
+  assert.match(captions, /Texto na tela/);
+  assert.match(captions, /01:12\.000/);
+});
 
 test("the operational flag restores the complete legacy shell", () => {
   assert.match(shell, /const spacesEnabled = cardiologySpacesEnabled\(\)/);
@@ -42,14 +71,19 @@ test("the frame remains reachable in short and landscape viewports", () => {
   assert.match(styles, /@media \(min-width: 901px\) and \(max-height: 699px\)/);
   assert.match(styles, /@media \(max-width: 900px\) and \(max-height: 619px\)/);
   assert.match(styles, /\.cv-content\s*\{[^}]*overflow-y:\s*auto;/);
+  assert.match(atelierStyles, /\.atelier-app\s*\{[^}]*min-height:100dvh!important;[^}]*height:auto!important/);
+  assert.match(atelierStyles, /\.atelier-app \.cv-content\s*\{[^}]*max-height:none!important;[^}]*overflow:visible!important/);
+  assert.match(atelierStyles, /\.atelier-app>\.cv-shell\s*\{[^}]*position:relative!important;[^}]*inset:auto!important/);
+  assert.match(atelierStyles, /\.atelier-app \.cv-workspace\s*\{[^}]*position:relative!important;[^}]*inset:auto!important;[^}]*width:100%!important/,
+    "the retired sidebar must not leave absolute left/top offsets in the task workspace");
 });
 
 test("the mandatory RC2 gate recognizes native Cardiology Spaces pages", () => {
-  assert.match(frame, /className={`cv-app cv-app--\$\{space\}/);
+  assert.match(frame, /className={`cv-app atelier-app cv-app--\$\{space\}/);
   assert.match(
     rc2,
-    /document\.querySelector\('\.cv-app, \.clinical-os, \.spaces-home'\)/,
-    "RC2 must accept the native .cv-app root used by the five approved pages",
+    /document\.querySelector\('[^']*\.cv-app[^']*\.atelier-home[^']*'\)/,
+    "RC2 must recognize both the native task frame and the Atelier overview",
   );
 });
 
@@ -105,10 +139,20 @@ test("clinical updates remain separate from canonical text across clinical detai
   }
 });
 
-test("IA para Exames is prominent without changing deck or dock geometry", () => {
+test("tasks use a compact header with focus and catalog, not a repeated architectural scene", () => {
+  assert.match(frame, /<header className="atelier-taskbar">/);
+  assert.match(frame, /className="atelier-taskbar__return"/);
+  assert.match(frame, /aria-pressed=\{focusMode\} onClick=\{\(\) => setFocusMode\(\(active\) => !active\)\}/);
+  assert.match(frame, /onClick=\{\(event\) => openDrawer\(event\.currentTarget\)\}[^\n]*Trocar função/);
+  assert.match(frame, /route\.intelligence && contextOpen && !focusMode/);
+  assert.doesNotMatch(frame, /className="cv-function-deck"|className="cv-space-horizon"|<ClinicalFunctionFigure/);
+  assert.match(atelierStyles, /\.atelier-app--focus \.cv-topbar\{display:none!important/);
+  assert.match(atelierStyles, /\.atelier-app--focus \.atelier-taskbar\{position:sticky;top:0/);
+});
+
+test("IA para Exames remains prominent in the catalog and native route", () => {
   assert.match(frame, /data-feature=\{route\.path === "\/exames-ia" \? "exam-ai" : undefined\}/);
   assert.match(registry, /hospital: \["\/round", "\/exames-ia", "\/cardiologia-intensiva"/);
-  assert.match(styles, /\.cv-function-deck \.cv-nav-link\[data-feature="exam-ai"\]:not\(\.is-current\)/);
   assert.match(styles, /\.cv-drawer \.cv-nav-link\[data-feature="exam-ai"\]:not\(\.is-current\)/);
   assert.match(home, /data-feature=\{action\.to === "\/exames-ia" \? "exam-ai" : undefined\}/);
   assert.match(homeStyles, /\.spaces-catalog \.spaces-action\[data-feature="exam-ai"\]/);

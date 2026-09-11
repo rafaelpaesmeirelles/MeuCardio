@@ -82,7 +82,7 @@ def test_apresentacao_formato_pptx_gera_arquivo_powerpoint_valido(client, db, cr
         assert "ppt/presentation.xml" in z.namelist()
         imagens = [nome for nome in z.namelist() if nome.startswith("ppt/media/")]
         hash_canonico = hashlib.sha256(
-            (ROOT / "backend/app/assets/corvia-logo-canonical.png").read_bytes()
+            (ROOT / "backend/app/assets/corvia-logo-atelier.png").read_bytes()
         ).digest()
         assert any(hashlib.sha256(z.read(nome)).digest() == hash_canonico for nome in imagens)
 

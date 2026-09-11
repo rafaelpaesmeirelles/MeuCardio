@@ -1,7 +1,10 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { readFileSync } from "node:fs";
 
-import { validateLoginInputContrast } from "./check-login-input-contrast.mjs";
+import { validateLoginInputContrast, validateAtelierLoginInputContrast } from "./check-login-input-contrast.mjs";
+
+const ATELIER_CSS = readFileSync(new URL("../src/styles/corvia-atelier-login.css", import.meta.url), "utf8");
 
 const TOKENS_CSS = `:root { --navy-900: #082637; --teal-600: #167d92; --white: #ffffff; }`;
 
@@ -77,4 +80,14 @@ test("falha se faltar a regra de ::placeholder", () => {
   const semPlaceholder = CSS_BOA.replace(/\.login \.login-formulario input::placeholder \{[\s\S]*?\}\n/, "");
   const falhas = validateLoginInputContrast(semPlaceholder, TOKENS_CSS);
   assert.match(falhas.join("\n"), /falta a regra ::placeholder/);
+});
+
+test("login Atelier ativo mantém contraste de texto, placeholder, cursor e autofill nos dois temas", () => {
+  assert.deepEqual(validateAtelierLoginInputContrast(ATELIER_CSS), []);
+});
+
+test("Atelier rejeita texto branco no claro, falta de tratamento escuro e autofill sem inset", () => {
+  assert.match(validateAtelierLoginInputContrast(ATELIER_CSS.replace("--atelier-ink: #24312f", "--atelier-ink: #fffef9")).join("\n"), /light texto digitado: contraste abaixo/);
+  assert.match(validateAtelierLoginInputContrast(ATELIER_CSS.replace(/#root #corvia-login\[data-login-theme="dark"\] \.login-gateway__field input:-webkit-autofill\s*\{[^}]+\}/, "")).join("\n"), /dark: falta tratamento/);
+  assert.match(validateAtelierLoginInputContrast(ATELIER_CSS.replace(/1000px #fffef9 inset/, "1000px #fffef9")).join("\n"), /light: autofill perdeu inset/);
 });

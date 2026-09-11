@@ -17,8 +17,8 @@ Duas classes porque são dois problemas diferentes:
 from __future__ import annotations
 
 from .marca import (
-    BRANCO, FIO, LOGO, NAVY, NEUTRO, OFF_WHITE, TEAL, TEAL_CLARO, TINTA,
-    TINTA_TEAL, VERMELHO, logo_disponivel,
+    BRANCO, COBRE, COBRE_CLARO, FIO, LOGO, NAVY, NEUTRO, OFF_WHITE, TEAL, TINTA,
+    TINTA_TEAL, logo_disponivel,
 )
 from .nucleo import A4, PDF, largura_texto
 from .wrapping import wrap_text
@@ -91,6 +91,7 @@ class Documento(_Base):
         self.pdf.nova_pagina()
         self.pagina += 1
         self.y = self.topo
+        self.pdf.retangulo(0, 0, self.largura, self.altura, OFF_WHITE)
         if com_cabecalho and self.pagina > 1:
             self._cabecalho()
         self._rodape()
@@ -114,7 +115,7 @@ class Documento(_Base):
         """Abertura na primeira página, sem folha de rosto própria — material de
         paciente com capa isolada desperdiça uma folha impressa."""
         self.abrir_pagina(com_cabecalho=False)
-        self.pdf.retangulo(0, self.altura - 7, self.largura, 7, VERMELHO)
+        self.pdf.retangulo(0, self.altura - 7, self.largura, 7, COBRE)
         alt = self._logo(self.margem, self.altura - 40, 132)
         self.y = self.altura - 40 - alt - 26
 
@@ -122,7 +123,7 @@ class Documento(_Base):
             self._garantir(40)
             self.pdf.texto(self.margem, self.y - 21, linha, 21, NAVY, negrito=True)
             self.y -= 27
-        self.pdf.linha(self.margem, self.y - 2, self.margem + 46, self.y - 2, VERMELHO, 2.2)
+        self.pdf.linha(self.margem, self.y - 2, self.margem + 46, self.y - 2, COBRE, 2.2)
         self.y -= 20
 
         if subtitulo:
@@ -219,7 +220,7 @@ class Apresentacao(_Base):
         self.y = self.topo
         self.pdf.retangulo(0, 0, self.largura, self.altura, OFF_WHITE)
         if com_cabecalho:
-            self.pdf.retangulo(0, self.altura - 5, self.largura, 5, VERMELHO)
+            self.pdf.retangulo(0, self.altura - 5, self.largura, 5, COBRE)
             self._rodape()
 
     def _rodape(self) -> None:
@@ -237,7 +238,7 @@ class Apresentacao(_Base):
         self.pdf.nova_pagina()
         self.pagina = 1
         self.pdf.retangulo(0, 0, self.largura, self.altura, OFF_WHITE)
-        self.pdf.retangulo(0, self.altura - 7, self.largura, 7, VERMELHO)
+        self.pdf.retangulo(0, self.altura - 7, self.largura, 7, COBRE)
         self._logo(self.margem, self.altura - 58, 160)
         if logo_profissional:
             try:
@@ -263,7 +264,7 @@ class Apresentacao(_Base):
         for linha in quebrar(titulo, self.util - 40, 30, True):
             self.pdf.texto(self.margem, y, linha, 30, NAVY, negrito=True)
             y -= 38
-        self.pdf.linha(self.margem, y + 12, self.margem + 60, y + 12, VERMELHO, 2.6)
+        self.pdf.linha(self.margem, y + 12, self.margem + 60, y + 12, COBRE, 2.6)
         y -= 16
         if subtitulo:
             for linha in quebrar(subtitulo, self.util - 60, 13):
@@ -273,14 +274,14 @@ class Apresentacao(_Base):
         self.pdf.retangulo(0, 0, self.largura, 78, NAVY)
         self.pdf.texto(self.margem, 46, autor, 12, BRANCO, negrito=True)
         if registro:
-            self.pdf.texto(self.margem, 28, registro, 8.6, TEAL_CLARO)
+            self.pdf.texto(self.margem, 28, registro, 8.6, COBRE_CLARO)
 
     def slide(self, titulo: str) -> None:
         self.abrir_pagina()
         for linha in quebrar(titulo, self.util, 20, True):
             self.pdf.texto(self.margem, self.y, linha, 20, NAVY, negrito=True)
             self.y -= 26
-        self.pdf.linha(self.margem, self.y + 8, self.margem + 46, self.y + 8, VERMELHO, 2.2)
+        self.pdf.linha(self.margem, self.y + 8, self.margem + 46, self.y + 8, COBRE, 2.2)
         self.y -= 18
 
     def marcador(self, texto: str, tamanho: float = 13.5) -> None:

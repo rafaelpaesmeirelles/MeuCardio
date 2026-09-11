@@ -46,7 +46,7 @@ from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen import canvas
 
 from app.core.config import settings
-from app.services.pdf.marca import LOGO, logo_disponivel
+from app.services.pdf.marca import COBRE, LOGO, NAVY, logo_disponivel
 from app.services.pdf.wrapping import wrap_text
 from app.services.professional_profile import (
     logo_path, professional_name, workplace_lines,
@@ -56,10 +56,7 @@ log = logging.getLogger("meucardio.pdf_documento")
 
 FUSO = ZoneInfo("America/Sao_Paulo")
 
-# Paleta oficial da Corvia. O `tokens.css` é a fonte da verdade; estes valores
-# são a cópia para o PDF, que não consome CSS. Trocar a paleta exige mexer aqui
-# também — está registrado no CLAUDE.md junto dos outros três lugares.
-NAVY = (0x0B / 255, 0x2E / 255, 0x45 / 255)
+# A marca vem da paleta comum; linhas do formulário e avisos ficam neutros/semânticos.
 CINZA = (0.42, 0.42, 0.42)
 LINHA = (0.80, 0.80, 0.80)
 
@@ -290,7 +287,7 @@ def _cabecalho(c: canvas.Canvas, medico: dict, titulo: str, endereco: dict | Non
     y_profissional = _bloco_profissional(c, LARGURA - MARGEM, topo, medico, endereco)
 
     y = min(y_empresa, y_profissional, y_logo) - 4 * mm
-    c.setStrokeColorRGB(*LINHA)
+    c.setStrokeColorRGB(*COBRE)
     c.setLineWidth(0.7)
     c.line(MARGEM, y, LARGURA - MARGEM, y)
     y -= 8 * mm

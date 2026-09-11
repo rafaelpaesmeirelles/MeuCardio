@@ -3,7 +3,7 @@ import "../styles/estado-loading.css";
 export function Carregando({ texto = "Carregando…" }: { texto?: string }) {
   return (
     <div className="corvia-loading-state" role="status" aria-live="polite">
-      <img src="/corvia-mark-canonical.svg" alt="" aria-hidden="true" />
+      <img src="/atelier/corvia-mark-atelier.svg" alt="" aria-hidden="true" />
       <span className="corvia-loading-state__orbit" aria-hidden="true" />
       <p>{texto}</p>
     </div>

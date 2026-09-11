@@ -4,147 +4,86 @@ import test from "node:test";
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const entrar = read("src/pages/Entrar.tsx");
-const galaxy = read("src/components/LoginGalaxy.tsx");
-const galaxyPosters = read("src/assets/loginGalaxyPosters.ts");
-const galaxyStyles = read("src/styles/login-universe-refinement-20260909.css");
-const styles = read("src/styles/cardiology-spaces-login.css");
-const finalStyles = read("src/styles/cardiology-spaces-login-approved-final.css");
-const approvedStyles = read("src/styles/corvia-approved-fidelity-20260904.css");
-const assetFixStyles = read("src/styles/corvia-approved-fidelity-asset-fix-20260904.css");
-const heartAsset = read("src/assets/approvedHeartData.ts");
-const publicStart = styles.indexOf("Gateway público — primeira impressão");
-const publicStyles = styles.slice(publicStart);
+const styles = read("src/styles/corvia-atelier-login.css");
 
-test("gateway pré-login oferece somente claro e escuro", () => {
-  assert.ok(publicStart >= 0, "a composição pública compartilhada precisa estar isolada");
-  assert.deepEqual(
-    [...entrar.matchAll(/id: "(light|dark)"/g)].map((match) => match[1]),
-    ["light", "dark"],
-  );
+test("gateway oferece exatamente claro e escuro, com claro padrão e preferência explícita preservada", () => {
+  assert.deepEqual([...entrar.matchAll(/id: "(light|dark)"/g)].map((match) => match[1]), ["light", "dark"]);
+  assert.match(entrar, /sessionStorage\.getItem\(CORVIA_LOGIN_THEME_KEY\) === "dark" \? "dark" : "light"/);
+  assert.match(entrar, /catch\s*\{\s*return "light"/);
   assert.doesNotMatch(entrar, /id: "(?:complete|essential|scientific)"/);
 });
 
-test("tema é preferência visual e a escolha de experiência ocorre após autenticar", () => {
+test("tema é preferência visual e não modifica permissões ou modo autenticado", () => {
   assert.match(entrar, /sessionStorage\.setItem\(CORVIA_LOGIN_THEME_KEY, temaPublico\)/);
   assert.match(entrar, /sessionStorage\.removeItem\("corvia:cardiology-spaces:mode"\)/);
-  assert.doesNotMatch(entrar, /plano\s*=|permiss(?:ao|ão)\s*=|autoriz(?:acao|ação)\s*=/i);
   assert.match(entrar, /Preferência visual desta sessão/);
+  assert.doesNotMatch(entrar, /plano\s*=|permiss(?:ao|ão)\s*=|autoriz(?:acao|ação)\s*=/i);
+  assert.doesNotMatch(entrar, /(?:localStorage|sessionStorage)\.setItem\([^\n]*(?:senha|password)/i);
 });
 
-test("seletor compacto do topo mantém semântica nativa e estado anunciado", () => {
-  assert.match(entrar, /login-gateway__theme-choice login-gateway__theme-choice--top/);
+test("seletor nativo anuncia o estado e conserva alvos de toque de 44px em todos os breakpoints", () => {
+  assert.match(entrar, /<fieldset className="login-gateway__theme-choice login-gateway__theme-choice--top" aria-describedby="login-theme-note">/);
   assert.match(entrar, /<legend>Escolha a aparência<\/legend>/);
   assert.match(entrar, /type="radio"\s*name="tema-publico"/s);
   assert.match(entrar, /checked=\{temaPublico === opcao\.id\}/);
   assert.match(entrar, /onChange=\{\(\) => selecionarTemaPublico\(opcao\.id\)\}/);
-  assert.match(approvedStyles, /\.login-gateway--public \.login-gateway__theme-choice--top label\.is-selected/);
-  assert.match(approvedStyles, /@media \(max-width: 900px\)/);
+  const labels = [...styles.matchAll(/#corvia-login \.login-gateway__theme-choice label\s*\{([^}]+)\}/g)];
+  assert.ok(labels.length >= 1);
+  for (const [, body] of labels) {
+    for (const dimension of ["width", "height"]) {
+      const value = body.match(new RegExp(`(?:^|;)\\s*${dimension}:\\s*(\\d+)px`));
+      if (value) assert.ok(Number(value[1]) >= 44, `${dimension} do tema não pode ficar abaixo de 44px`);
+    }
+  }
+  assert.match(styles, /label:has\(input:focus-visible\)[^{]*\{[^}]*outline:/);
 });
 
-test("as duas aparências preservam o mesmo login, links e garantias", () => {
+test("as duas aparências usam o mesmo formulário real, autocomplete e links de recuperação", () => {
   assert.match(entrar, /login-gateway--\$\{temaPublico\}/);
-  assert.equal((entrar.match(/<form className="login-gateway__form"/g) || []).length, 1);
-  assert.match(entrar, /id="email"[\s\S]*?autoComplete="username"/);
-  assert.match(entrar, /id="senha"[\s\S]*?autoComplete="current-password"/);
-  assert.match(entrar, /to="\/esqueci-senha"/);
-  assert.match(entrar, /to="\/solicitar-acesso"/);
-  assert.match(entrar, /Ambiente Protegido/);
-  assert.match(entrar, /Sistema seguro/);
+  assert.equal((entrar.match(/<form\b/g) || []).length, 1);
+  assert.match(entrar, /<form className="login-gateway__form" onSubmit=\{enviar\} aria-busy=\{enviando\}>/);
+  assert.match(entrar, /htmlFor="email"/);
+  assert.match(entrar, /id="email" type="email" inputMode="email" autoCapitalize="none" autoComplete="username"[^\n]+required/);
+  assert.match(entrar, /htmlFor="senha"/);
+  assert.match(entrar, /id="senha" type=\{mostrarSenha \? "text" : "password"\} autoComplete="current-password"[^\n]+required/);
+  assert.match(entrar, /aria-label=\{mostrarSenha \? "Ocultar senha" : "Mostrar senha"\} aria-pressed=\{mostrarSenha\}/);
+  for (const route of ["esqueci-senha", "solicitar-acesso", "privacidade", "termos"]) assert.ok(entrar.includes(`to="/${route}"`));
 });
 
-test("claro e escuro compartilham a geometria e mudam somente a cromia", () => {
-  assert.match(approvedStyles, /\.login-gateway--public\s*\{/);
-  assert.match(approvedStyles, /\.login-gateway--light\s*\{/);
-  assert.match(assetFixStyles, /@media \(max-width: 900px\)/);
-  assert.match(assetFixStyles, /@media \(prefers-reduced-motion: reduce\)/);
-  assert.doesNotMatch(`${entrar}\n${approvedStyles}\n${assetFixStyles}`, /telesc[oó]pio|observat[oó]rio|montanha|planeta|lua cheia/i);
+test("envio mantém autenticação canônica, remember-me, proteção contra duplo envio e erro anunciado", () => {
+  assert.match(entrar, /const \{ entrar \} = useAuth\(\)/);
+  assert.match(entrar, /if \(enviando \|\| !email\.trim\(\) \|\| !senha\) return/);
+  assert.match(entrar, /await entrar\(email\.trim\(\)\.toLowerCase\(\), senha, permanecerConectado\)/);
+  assert.match(entrar, /checked=\{permanecerConectado\} onChange=\{\(event\) => setPermanecerConectado\(event\.target\.checked\)\}/);
+  assert.match(entrar, /finally\s*\{\s*setEnviando\(false\)/);
+  assert.match(entrar, /type="submit" disabled=\{enviando\}/);
+  assert.match(entrar, /aria-invalid=\{Boolean\(erro\)\} aria-describedby=\{erro \? "login-erro" : undefined\}/);
+  assert.match(entrar, /id="login-erro"[^>]+role="alert"/);
+  assert.doesNotMatch(entrar, /fetch\(|api\.(?:post|get)|token\/SSO|Entrar com token|\bSSO\b/);
 });
 
-test("campos claros continuam vencendo o contrato global de formulário", () => {
-  assert.match(publicStyles, /#root \.login\.login-gateway--public \.login-gateway__field[\s\S]*?background-color:\s*transparent !important;[\s\S]*?color-scheme:\s*light;/);
-  assert.match(publicStyles, /input:-webkit-autofill[\s\S]*?-webkit-text-fill-color:\s*#1b2440 !important;[\s\S]*?-webkit-box-shadow:\s*0 0 0 1000px #fff inset !important;/);
-  assert.match(publicStyles, /#root \.login\.login-gateway--dark[\s\S]*?color-scheme:\s*dark;/);
+test("arquitetura é separada do formulário e não reintroduz cenografia cósmica ou instaladores", () => {
+  assert.match(entrar, /corvia-atelier-login\.css/);
+  assert.match(entrar, /id="corvia-login"/);
+  assert.match(entrar, /className="atelier-login__story"/);
+  assert.match(entrar, /className="atelier-login__access" aria-labelledby="login-acesso-titulo"/);
+  for (const space of ["consultorio", "hospital", "ensino", "pesquisa", "gestao"]) assert.ok(entrar.includes(`id: "${space}"`));
+  assert.match(entrar, /src="\/atelier\/atelier-entrance\.webp" width="1536" height="1024" alt="[^"]+" fetchPriority="high"/);
+  const bytes = readFileSync(new URL("../public/atelier/atelier-entrance.webp", import.meta.url));
+  assert.equal(bytes.toString("ascii", 0, 4), "RIFF");
+  assert.equal(bytes.toString("ascii", 8, 12), "WEBP");
+  assert.doesNotMatch(entrar, /LoginGalaxy|UniverseStars|CoracaoHolografico|<canvas|MarcaAndroid|MarcaWindows|Baixar app|\/downloads\//);
+  assert.doesNotMatch(styles, /\.atelier-login__access\s*\{[^}]*url\(/);
 });
 
-test("layout final aprovado: copy, galáxia por tema, ECG, coração, login fino e associação", () => {
-  assert.match(entrar, /Um universo de espaços\. <strong>Uma só cardiologia\.<\/strong>/);
-  assert.match(entrar, /Consultório, Hospital, Ensino, Pesquisa e Gestão orbitando juntos no seu Universo Profissional\./);
-  assert.match(entrar, /corvia-approved-fidelity-asset-fix-20260904\.css/);
-
-  assert.doesNotMatch(entrar, /login-gateway__routes|login-gateway__ring/,
-    "círculos e traços curvos antigos não podem voltar ao coração central");
-  assert.doesNotMatch(entrar, /MarcaAndroid|MarcaWindows|Baixar app|Aplicativo para Windows|\/downloads\/corvia-cardiology-spaces-/,
-    "o login público não deve divulgar instaladores nativos");
-  assert.doesNotMatch(entrar, /token\/SSO|Entrar com token|\bSSO\b/i,
-    "o login final aprovado não possui acesso por token/SSO");
-
-  assert.match(entrar, /className="login-gateway__join" to="\/solicitar-acesso"/);
-  assert.match(entrar, /<strong>Novo no CorVIA\?<\/strong><small>Solicite seu Acesso<\/small>/);
-
-  assert.match(entrar, /import LoginGalaxy from "\.\.\/components\/LoginGalaxy"/);
-  assert.match(entrar, /<LoginGalaxy theme=\{temaPublico\} \/>/,
-    "o login precisa usar o componente real com o tema selecionado");
-  assert.match(galaxy, /import lightSource from "\.\.\/assets\/login\/galaxy-light\.webp"/);
-  assert.match(galaxy, /import darkSource from "\.\.\/assets\/login\/galaxy-dark\.webp"/);
-  for (const theme of ["light", "dark"]) {
-    assert.ok(readFileSync(new URL(`../src/assets/login/galaxy-${theme}.webp`, import.meta.url)).length > 0,
-      `a textura aprovada ${theme} precisa existir`);
-    assert.match(galaxyPosters, new RegExp(`export const ${theme}GalaxyPoster = "data:image/webp;base64,`),
-      `o primeiro quadro completo ${theme} precisa estar incorporado`);
-  }
-  assert.match(galaxy, /className="login-gateway__galaxy-poster"/);
-  assert.match(galaxy, /src=\{theme === "dark" \? darkGalaxyPoster : lightGalaxyPoster\}/);
-  assert.match(galaxy, /loadGalaxy\(theme === "light" \? lightSource : darkSource\)/,
-    "a animação e seu poster precisam corresponder ao mesmo tema aprovado");
-  assert.match(galaxy, /return image\.decode\(\)\.then\(\(\) => image\)/,
-    "a animação deve esperar a decodificação integral da imagem");
-  assert.match(galaxy, /className="login-gateway__galaxy-canvas"/);
-  assert.match(galaxy, /const durationMs = 120_000/);
-  assert.match(galaxy, /const direction = dark \? 1 : -1/,
-    "a rotação aprovada mantém a direção própria de cada tema");
-  assert.match(galaxy, /const diskProjectionY = 0\.34/);
-  assert.match(galaxy, /context\.scale\(0\.72, diskProjectionY \* 0\.72\)/);
-  assert.match(galaxy, /context\.rotate\(angle\)/);
-  assert.match(galaxy, /const angle = reducedMotion\.matches \? 0 :/,
-    "a preferência por movimento reduzido deve manter a galáxia parada");
-  assert.match(galaxy, /if \(!reducedMotion\.matches && !document\.hidden\) animationFrame = requestAnimationFrame\(draw\)/);
-  assert.match(galaxy, /reducedMotion\.removeEventListener\("change", motionChanged\)/);
-  assert.match(galaxy, /document\.removeEventListener\("visibilitychange", visibilityChanged\)/);
-  assert.match(galaxy, /draw\(startedAt\);[\s\S]*?canvas\.dataset\.ready = "true";[\s\S]*?poster\.dataset\.replaced = "true"/,
-    "o poster completo só sai depois do primeiro frame completo da animação");
-  const finalLoginStyles = read("src/styles/corvia-login-final-approved-20260904.css");
-  assert.match(finalLoginStyles, /login-gateway__milky-way \{[\s\S]*?animation:\s*none !important[\s\S]*?rotate:\s*0deg !important/,
-    "o contêiner posicionado da galáxia deve permanecer imóvel");
-  assert.match(galaxyStyles, /login-gateway__galaxy-poster \{[^}]*transform:\s*none !important[^}]*animation:\s*none !important/,
-    "o poster aprovado precisa permanecer horizontal e imóvel");
-  assert.match(galaxyStyles, /login-gateway__galaxy-poster\[data-replaced="true"\]\s*\{[^}]*visibility:\s*hidden !important/,
-    "somente o poster já substituído por um frame completo pode ser ocultado");
-  assert.match(finalLoginStyles, /login-gateway__galaxy-canvas\[data-ready="true"\]/,
-    "o canvas animado só pode substituir a imagem depois do primeiro frame pronto");
-  assert.match(assetFixStyles, /mask:\s*none !important/,
-    "a galáxia real não pode voltar a ser recortada em oval");
-
-  assert.match(entrar, /approvedHeartDataUri/);
-  assert.match(entrar, /login-gateway__approved-heart/);
-  assert.match(heartAsset, /data:image\/webp;base64,/,
-    "o coração aprovado precisa estar incorporado como asset transparente real");
-
-  assert.match(approvedStyles, /\.login-gateway--public \.login-gateway__pulse\s*\{[\s\S]*?z-index:\s*7 !important[\s\S]*?bottom:\s*16px !important/,
-    "o ECG deve cruzar visualmente a ponta inferior do coração");
-  assert.match(finalStyles, /animation:\s*login-gateway-ecg-flow 4\.8s linear infinite !important/,
-    "o traçado do ECG precisa permanecer em movimento");
-  assert.match(read("src/styles/corvia-login-final-approved-20260904.css"), /login-gateway__pulse \{ display:block !important/,
-    "o traçado do ECG precisa permanecer em movimento");
-
-  assert.match(read("src/styles/corvia-login-final-approved-20260904.css"), /grid-template-areas:\s*"head join" "form join" !important/,
-    "o desktop precisa usar a barra inferior horizontal fina aprovada");
-  assert.match(assetFixStyles, /min-height:\s*104px !important/,
-    "a caixa de acesso desktop deve permanecer fina");
-
-  for (const space of ["ensino", "hospital", "pesquisa", "consultorio", "gestao"]) {
-    assert.match(approvedStyles, new RegExp(`login-gateway__space--${space}`), `o espaço ${space} precisa manter posição explícita`);
-  }
-
-  assert.match(approvedStyles, /@media \(max-width: 900px\)[\s\S]*?\.login-gateway--public \.login-gateway__console\s*\{[\s\S]*?grid-template-areas:\s*"head" "form" "join"/,
-    "o mobile deve preservar login compacto abaixo da composição cósmica");
+test("geometria é compartilhada pelos temas, responsiva e oferece foco e movimento reduzido", () => {
+  assert.match(styles, /#corvia-login\.corvia-atelier-login\s*\{/);
+  assert.match(styles, /\[data-login-theme="dark"\]\s*\{[^}]*color-scheme:\s*dark/s);
+  assert.match(styles, /color-scheme:\s*light/);
+  assert.match(styles, /@media \(max-width: 760px\)/);
+  assert.match(styles, /\.atelier-login__layout\s*\{[^}]*flex-direction:\s*column/);
+  assert.match(styles, /prefers-reduced-motion:\s*reduce/);
+  assert.match(entrar, /href="#login-acesso-titulo"/);
+  assert.match(entrar, /id="login-acesso-titulo" tabIndex=\{-1\}/);
+  assert.match(styles, /\.atelier-login__skip:focus\s*\{\s*transform:\s*none/);
 });

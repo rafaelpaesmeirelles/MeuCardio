@@ -1,32 +1,17 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import Icone from "../components/Icone";
-import UniverseStars from "../components/UniverseStars";
-import LoginGalaxy from "../components/LoginGalaxy";
-import { approvedHeartDataUri } from "../assets/approvedHeartData";
 import { useAuth } from "../lib/auth";
 import { CORVIA_LOGIN_THEME_KEY, type CorviaTheme } from "../lib/corviaTheme";
-import "../styles/login.css";
-import "../styles/login-fullscreen-social.css";
-import "../styles/prehome-reference-final.css";
-import "../styles/login-viewport-refinement.css";
-import "../styles/cardiology-spaces-login.css";
-import "../styles/cardiology-spaces-login-approved-final.css";
-import "../styles/cardiology-spaces-login-galaxy-kinematics.css";
-import "../styles/cardiology-spaces-login-production-approved.css";
-import "../styles/corvia-approved-fidelity-20260904.css";
-import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";
-import "../styles/corvia-login-final-approved-20260904.css";
-import "../styles/corvia-login-fidelity-20260905.css";
-import "../styles/login-universe-refinement-20260909.css";
+import "../styles/corvia-atelier-login.css";
 
 type TemaPublico = CorviaTheme;
 
 function temaPublicoInicial(): TemaPublico {
   try {
-    return sessionStorage.getItem(CORVIA_LOGIN_THEME_KEY) === "light" ? "light" : "dark";
+    return sessionStorage.getItem(CORVIA_LOGIN_THEME_KEY) === "dark" ? "dark" : "light";
   } catch {
-    return "dark";
+    return "light";
   }
 }
 
@@ -45,8 +30,8 @@ const TEMAS_PUBLICOS: Array<{
   detalhe: string;
   icone: "sol" | "lua";
 }> = [
-  { id: "light", nome: "Modo claro", detalhe: "Clareza clínica", icone: "sol" },
-  { id: "dark", nome: "Modo escuro", detalhe: "Imersão cósmica", icone: "lua" },
+  { id: "light", nome: "Modo claro", detalhe: "Pérola e champagne", icone: "sol" },
+  { id: "dark", nome: "Modo escuro", detalhe: "Grafite e luz suave", icone: "lua" },
 ];
 
 const ESPACOS = [
@@ -90,22 +75,19 @@ export default function Entrar() {
   return (
     <main
       id="corvia-login"
-      className={`login login-gateway login-gateway--public login-gateway--${temaPublico}`}
+      className={`login login-gateway login-gateway--public login-gateway--${temaPublico} corvia-atelier-login`}
       data-login-theme={temaPublico}
     >
-      <div className="login-gateway__aurora" aria-hidden="true" />
-      <UniverseStars />
-
-      <header className="login-gateway__topbar">
-        <Link to="/" className="login-gateway__brand" aria-label="CorVIA — página inicial">
-          <img src="/corvia-mark-canonical.svg" alt="" aria-hidden="true" />
-          <span><strong><span>Cor</span><span className="corvia-via">VIA</span></strong><small>CARDIOLOGY SPACES</small></span>
+      <a className="atelier-login__skip" href="#login-acesso-titulo">Ir para o acesso</a>
+      <header className="atelier-login__topbar">
+        <Link to="/" className="atelier-login__brand" aria-label="CorVIA — página inicial">
+          <img src="/atelier/corvia-logo-atelier.svg" width="900" height="240" alt="CorVIA Cardiology Spaces" />
         </Link>
 
-        <div className="login-gateway__motto" aria-hidden="true">CIÊNCIA · PRÁTICA · PESSOAS · SEMPRE JUNTOS</div>
+        <span className="atelier-login__perspective"><i aria-hidden="true" /> Uma nova perspectiva</span>
 
-        <div className="login-gateway__top-actions">
-          <p className="login-gateway__slogan">UM UNIVERSO<br />MAIS SAUDÁVEL<br />COMEÇA AQUI</p>
+        <div className="atelier-login__top-actions">
+          <Link to="/produto" className="atelier-login__explore">Conhecer o CorVIA <Icone nome="seta" /></Link>
           <fieldset className="login-gateway__theme-choice login-gateway__theme-choice--top" aria-describedby="login-theme-note">
             <legend>Escolha a aparência</legend>
             <div className="login-gateway__theme-choice-options">
@@ -126,50 +108,35 @@ export default function Entrar() {
             </div>
             <p id="login-theme-note"><Icone nome="check" /> Preferência visual desta sessão.</p>
           </fieldset>
-          <div className="login-gateway__security" aria-label={temaPublico === "light" ? "Sistema seguro" : "Ambiente Protegido"}>
-            <Icone nome="seguranca" />
-            <span>{temaPublico === "light" ? "Sistema seguro" : "Ambiente Protegido"}</span>
-          </div>
-
         </div>
       </header>
 
-      <section className="login-gateway__scene" aria-labelledby="login-title">
-        <header className="login-gateway__hero">
-          <h1 id="login-title">Um universo de espaços. <strong>Uma só cardiologia.</strong></h1>
-          <span>Consultório, Hospital, Ensino, Pesquisa e Gestão orbitando juntos no seu Universo Profissional.</span>
-        </header>
-
-        <div className="login-gateway__universe" aria-hidden="true">
-          <div className="login-gateway__milky-way">
-            <LoginGalaxy theme={temaPublico} />
-          </div>
-          <div className="login-gateway__core">
-            <span className="login-gateway__core-glow" />
-            <img className="login-gateway__approved-heart" src={approvedHeartDataUri} alt="" aria-hidden="true" draggable={false} />
-            <svg className="login-gateway__pulse" viewBox="0 0 360 48">
-              <path className="login-gateway__pulse-baseline" d="M2 29H358" />
-              <path className="login-gateway__pulse-trace" d="M2 29H29C35 29 37 23 43 23S52 29 59 29H81L88 32L96 8L105 42L113 29H137C148 29 151 16 164 16S181 29 195 29H224C230 29 232 23 238 23S247 29 254 29H275L282 32L290 8L299 42L307 29H329C340 29 343 17 358 17" />
-            </svg>
-          </div>
-          <div className="login-gateway__spaces">
+      <div className="atelier-login__layout">
+        <section className="atelier-login__story" aria-labelledby="login-title">
+          <header className="atelier-login__copy">
+            <p className="atelier-login__eyebrow">CorVIA · Cardiology Spaces</p>
+            <h1 id="login-title">Cinco espaços de trabalho.<br /><em>Uma só cardiologia.</em></h1>
+            <p>Os espaços de trabalho mudam.<br />O CorVIA permanece ao seu lado.</p>
+          </header>
+          <figure className="atelier-login__entrance">
+            <img src="/atelier/atelier-entrance.webp" width="1536" height="1024" alt="Recepção com pedra natural, madeira e jardim, na identidade arquitetônica do CorVIA." fetchPriority="high" />
+            <figcaption><i aria-hidden="true" /> O cuidado também começa no espaço.</figcaption>
+          </figure>
+          <div className="atelier-login__spaces" aria-label="Cinco espaços de trabalho">
             {ESPACOS.map((espaco) => (
-              <article className={`login-gateway__space login-gateway__space--${espaco.id}`} key={espaco.id}>
-                <span><Icone nome={espaco.icone} /></span>
-                <div><strong>{espaco.nome}</strong></div>
-              </article>
+              <span key={espaco.id}><Icone nome={espaco.icone} />{espaco.nome}</span>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="login-gateway__console" aria-labelledby="login-acesso-titulo">
-        <header className="login-gateway__console-head">
-          <span><Icone nome="conta" /></span>
-          <div><p>IDENTIDADE PROFISSIONAL</p><h2 id="login-acesso-titulo">Entre no CorVIA</h2><small>Seu universo profissional em um só lugar.</small></div>
+      <section className="atelier-login__access" aria-labelledby="login-acesso-titulo">
+        <header className="atelier-login__access-heading">
+          <p className="atelier-login__eyebrow">Seu ponto de partida</p>
+          <h2 id="login-acesso-titulo" tabIndex={-1}>Bem-vindo<br /> ao seu espaço.</h2>
+          <p>Conhecimento, cuidado e rotina.<br />Conectados por você.</p>
         </header>
 
-        <form className="login-gateway__form" onSubmit={enviar}>
+        <form className="login-gateway__form" onSubmit={enviar} aria-busy={enviando}>
           <label className="login-gateway__field" htmlFor="email">
             <span>E-mail profissional</span>
             <div><Icone nome="mail" /><input id="email" type="email" inputMode="email" autoCapitalize="none" autoComplete="username" placeholder="seu@email.com" value={email} onChange={(event) => setEmail(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required /></div>
@@ -178,24 +145,27 @@ export default function Entrar() {
             <span>Senha</span>
             <div className="login-gateway__password"><Icone nome="cadeado" /><input id="senha" type={mostrarSenha ? "text" : "password"} autoComplete="current-password" placeholder="Digite sua senha" value={senha} onChange={(event) => setSenha(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required /><button type="button" onClick={() => setMostrarSenha((visivel) => !visivel)} aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"} aria-pressed={mostrarSenha}><Icone nome={mostrarSenha ? "olho-fechado" : "olho"} /></button></div>
           </label>
-          <Link className="login-gateway__forgot" to="/esqueci-senha">Esqueceu sua senha?</Link>
+          <div className="atelier-login__form-options">
+            <label className="atelier-login__remember"><input type="checkbox" checked={permanecerConectado} onChange={(event) => setPermanecerConectado(event.target.checked)} />Permanecer conectado</label>
+            <Link className="login-gateway__forgot" to="/esqueci-senha">Esqueceu sua senha?</Link>
+          </div>
           <button className="login-gateway__enter" type="submit" disabled={enviando}>
             <span>{enviando ? "Abrindo seus espaços…" : "Entrar"}</span>
             {!enviando ? <Icone nome="seta" /> : <i className="login-formulario__carregando" aria-hidden="true" />}
           </button>
           {erro && <p id="login-erro" className="login-gateway__error" role="alert">{erro}</p>}
+          <p className="atelier-login__security"><Icone nome="seguranca" /><span>{temaPublico === "light" ? "Sistema seguro" : "Ambiente Protegido"} · Acesso profissional</span></p>
         </form>
 
-        <Link className="login-gateway__join" to="/solicitar-acesso">
-          <span><Icone nome="conta" /></span>
-          <span><strong>Novo no CorVIA?</strong><small>Solicite seu Acesso</small><em>Faça parte de um universo de conhecimento, prática e pessoas.</em></span>
-          <Icone nome="seta" />
-        </Link>
+        <div className="atelier-login__divider"><span>Novo no CorVIA?</span></div>
+        <Link className="atelier-login__join" to="/solicitar-acesso">Solicitar acesso profissional <Icone nome="seta" /></Link>
+        <p className="atelier-login__continuity">Cinco maneiras de trabalhar.<br />A mesma continuidade.</p>
       </section>
+      </div>
 
-      <footer className="login-gateway__footer">
-        <div>CONTEÚDO · FERRAMENTAS · INTELIGÊNCIA ARTIFICIAL · CONECTIVIDADE · TUDO COM TUDO</div>
-        <div><strong>CorVIA</strong><span>|</span>CARDIOLOGY SPACES<span>|</span>VERSÃO 2.0</div>
+      <footer className="atelier-login__footer">
+        <span>Arquitetura para acolher. Inteligência para trabalhar.</span>
+        <nav aria-label="Links institucionais"><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><a href="mailto:contato@corvia.med.br">Suporte</a></nav>
       </footer>
     </main>
   );

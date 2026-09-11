@@ -26,7 +26,7 @@ export default function BoasVindas() {
   return (
     <div className="boasvindas__fundo" role="dialog" aria-modal="true" aria-label="Mensagem de boas-vindas">
       <div className="boasvindas__cartao">
-        <img src="/corvia-logo-spaces.svg" alt="CorVIA Cardiology Spaces" className="boasvindas__logo" />
+        <img src="/atelier/corvia-logo-atelier.svg" alt="CorVIA Cardiology Spaces" className="boasvindas__logo" />
         <p className="boasvindas__texto">
           Sr. Wladmir, é com muito orgulho e satisfação que seu filho Rafael Paes Meirelles lhe
           apresenta o CorVIA Cardiology Spaces, plataforma inédita no Brasil que

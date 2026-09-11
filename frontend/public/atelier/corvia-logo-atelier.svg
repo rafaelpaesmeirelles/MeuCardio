@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-labelledby="title desc">
+  <title id="title">CorVIA Cardiology Spaces</title>
+  <desc id="desc">Símbolo cardíaco CorVIA preservado, em turquesa, cobre polido e petróleo sobre a base perolada.</desc>
+  <defs>
+    <linearGradient id="jade" x1="36" y1="52" x2="126" y2="210" gradientUnits="userSpaceOnUse"><stop stop-color="#10A99F"/><stop offset="1" stop-color="#087B77"/></linearGradient>
+    <linearGradient id="copper" x1="96" y1="30" x2="126" y2="205" gradientUnits="userSpaceOnUse"><stop stop-color="#8C4D35"/><stop offset=".25" stop-color="#B66D48"/><stop offset=".43" stop-color="#F2D1AF"/><stop offset=".62" stop-color="#B66D48"/><stop offset=".84" stop-color="#D39770"/><stop offset="1" stop-color="#8C4D35"/></linearGradient>
+    <linearGradient id="wordmark-copper" x1="250" y1="53" x2="600" y2="136" gradientUnits="userSpaceOnUse"><stop stop-color="#5F3427"/><stop offset=".2" stop-color="#B66D48"/><stop offset=".4" stop-color="#D39770"/><stop offset=".47" stop-color="#F2D1AF"/><stop offset=".6" stop-color="#96573C"/><stop offset=".8" stop-color="#D39770"/><stop offset="1" stop-color="#8C4D35"/></linearGradient>
+    <linearGradient id="ivory" x1="118" y1="88" x2="210" y2="201" gradientUnits="userSpaceOnUse"><stop stop-color="#337E86"/><stop offset="1" stop-color="#244955"/></linearGradient>
+  </defs>
+  <g><path d="M120 205C101 184 49 136 39 98c-8-31 12-52 42-52 23 0 38 13 45 32" fill="none" stroke="url(#jade)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M120 205C110 171 96 124 95 83c-1-32 13-54 35-54 22 0 35 16 34 38-1 21-17 42-44 69" fill="none" stroke="url(#copper)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M120 205c15-39 38-85 66-105 20-14 39-9 44 9 6 22-12 47-37 66-22 17-48 27-73 30" fill="none" stroke="url(#ivory)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="250" y="126" font-family="Arial,Helvetica,sans-serif" font-size="92" font-weight="700" letter-spacing="-4" fill="url(#wordmark-copper)" stroke="#5f342759" stroke-width=".8" paint-order="stroke fill"><tspan>Cor</tspan><tspan>VIA</tspan></text>
+  <text x="252" y="188" font-family="Arial,Helvetica,sans-serif" font-size="33" font-weight="500" letter-spacing="8" fill="#506D61">CARDIOLOGY SPACES</text>
+</svg>

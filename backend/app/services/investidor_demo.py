@@ -215,6 +215,10 @@ def _agenda_demo(path: str):
                 "service": service,
             }
         ],
+        # O calendário consulta ocorrências além das configurações de rotina.
+        # A demo não expande esses períodos nem lê rotinas históricas do dono;
+        # o contrato Agendamento[] vazio mantém a leitura sintética sem 403.
+        "/api/agenda/work-routines/occurrences": [],
         "/api/agenda/commitment-series": [
             {
                 "id": -401,

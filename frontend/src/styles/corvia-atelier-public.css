@@ -1,0 +1,235 @@
+/* Public Atelier surfaces reuse existing form and validation components. */
+body:has(.corvia-atelier-public) { color-scheme: light; background: #f7f0df; }
+.corvia-atelier-public.public-space,
+.corvia-atelier-public.public-showcase {
+  --public-accent: #08786f;
+  --public-accent-rgb: 8, 120, 111;
+  --public-cyan: #08786f;
+  --public-text: #24312f;
+  --public-copy: #55695e;
+  --public-muted: #627264;
+  --public-line: #a6b3a84a;
+  --public-line-strong: #b66d4866;
+  --public-panel: #fffdf5e6;
+  --atelier-public-copper: linear-gradient(115deg, #d39770 0, #f2d1af 24%, #d8a27c 49%, #c98c66 77%, #e2b18d 100%);
+  color-scheme: light;
+  background: radial-gradient(ellipse at 10% 2%, #fff 0, transparent 46%), radial-gradient(ellipse at 96% 22%, #d397702b, transparent 62%), radial-gradient(ellipse at 0 88%, #a7d6c82b, transparent 62%), linear-gradient(115deg, #fbf6e8, #fffdf5 48%, #f3e6c6);
+  color: var(--public-text);
+  font-family: var(--fonte-texto), Arial, sans-serif;
+  font-size: 1rem;
+}
+.corvia-atelier-public.public-space::before,
+.corvia-atelier-public.public-showcase::before,
+.corvia-atelier-public .public-showcase__hero::before { content: none; }
+.corvia-atelier-public :is(a, button, input, select, textarea):focus-visible { outline: 2px solid #08786f; outline-offset: 4px; }
+.corvia-atelier-public .public-space__skip { color: #fff; font-size: .875rem; }
+.corvia-atelier-public .public-corvia-brand--atelier { width: 225px; max-width: 100%; min-height: 54px; }
+.corvia-atelier-public .public-corvia-brand--atelier img { display: block; width: 100%; height: auto; filter: none; }
+.corvia-atelier-public .public-space__topbar,
+.corvia-atelier-public .public-showcase__topbar { min-height: 100px; border-bottom-color: var(--public-line); background: transparent; backdrop-filter: none; }
+.corvia-atelier-public .public-showcase__topbar { position: relative; }
+.corvia-atelier-public .public-showcase__topbar::before { content: none; }
+.corvia-atelier-public :is(.public-space__topbar, .public-showcase__topbar) > nav a,
+.corvia-atelier-public .public-showcase__actions a { color: var(--public-copy); font-size: .875rem; }
+.corvia-atelier-public :is(.public-space__topbar, .public-showcase__topbar) > nav a:hover { color: #08786f; background: #08786f08; border-color: var(--public-line); }
+.corvia-atelier-public .public-space__security span { color: #55695e; font-size: .875rem; }
+.corvia-atelier-public .public-space__security small { color: #627264; font-size: .875rem; }
+.corvia-atelier-public .public-space__security span i { background: #0cab92; box-shadow: 0 0 10px #0cab9220; }
+.corvia-atelier-public .public-space__workspace { gap: clamp(28px, 4vw, 60px); padding-block: 42px; }
+.corvia-atelier-public .public-space__context { top: 28px; gap: 15px; }
+.corvia-atelier-public .public-space__signal { width: 52px; height: 52px; margin-bottom: 5px; }
+.corvia-atelier-public .public-space__signal::before,
+.corvia-atelier-public .public-space__signal::after { content: none; }
+.corvia-atelier-public .public-space__signal > span { width: 48px; height: 48px; color: #08786f; background: linear-gradient(135deg, #fffef9, #eee4c680); border-color: #b66d4866; border-radius: 50%; box-shadow: inset 0 1px #fff, 0 4px 13px #8c4d350d; }
+.corvia-atelier-public .public-space__context > p { color: #5f3427; font-size: .875rem; letter-spacing: .18em; }
+.corvia-atelier-public .public-space__context h1 { max-width: 17ch; color: #24312f; font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: 1.1; letter-spacing: -.04em; }
+.corvia-atelier-public .public-space__context h1 strong { color: #8c4d35; font-weight: 400; }
+.corvia-atelier-public .public-space__description { color: #55695e; font-size: 1rem; line-height: 1.65; }
+.corvia-atelier-public .atelier-public__scene { width: 100%; height: 180px; margin: 12px 0; overflow: hidden; outline: 1px solid #b66d4859; outline-offset: 5px; border-radius: 2px; box-shadow: 0 16px 35px #45381916; }
+.corvia-atelier-public .atelier-public__scene img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+.corvia-atelier-public .public-space__features article { --feature-color: #08786f; padding: 12px 0; background: transparent; border: 0; border-bottom: 1px solid var(--public-line); border-radius: 0; }
+.corvia-atelier-public .public-space__features article > span { border-color: #b66d4859; background: #ffffff60; border-radius: 50%; }
+.corvia-atelier-public .public-space__features strong { color: #2d4137; font-size: .875rem; }
+.corvia-atelier-public .public-space__features small { color: #627264; font-size: .875rem; line-height: 1.55; }
+.corvia-atelier-public .public-space__context-status { color: #627264; font-size: .875rem; }
+.corvia-atelier-public .public-space__surface { padding: clamp(22px, 3vw, 38px); background: linear-gradient(125deg, #fffefbcc, #faf7efb3); border-color: #b66d484d; border-radius: 5px; box-shadow: inset 0 1px #fff, 0 20px 50px #5b482013; }
+.corvia-atelier-public .public-space__surface::before { background: linear-gradient(90deg, transparent, #d39770, transparent); }
+.corvia-atelier-public :is(.public-space__footer, .public-showcase__footer) { color: #627264; border-top-color: var(--public-line); font-size: .875rem; }
+.corvia-atelier-public :is(.public-space__footer, .public-showcase__footer) a { color: #55695e; font-size: .875rem; }
+.corvia-atelier-public :is(.public-space__footer, .public-showcase__footer) a:hover { color: #08786f; }
+.corvia-atelier-public .public-showcase__footer p { font-size: .875rem; line-height: 1.65; }
+.corvia-atelier-public .public-space__footer svg { color: #08786f; }
+
+/* Explicit overrides include the historical !important form contrast rules. */
+#root .corvia-atelier-public.public-space .prehome-card__header h2,
+.corvia-atelier-public.public-space .prehome-confirmation h2,
+.corvia-atelier-public .public-mail-card__copy h2 { color: #24312f !important; font-weight: 500; }
+.corvia-atelier-public.public-space .prehome-card__header > p,
+.corvia-atelier-public.public-space .prehome-confirmation > p,
+.corvia-atelier-public .public-mail-card__copy > p { color: #55695e; font-size: 1rem; line-height: 1.65; }
+.corvia-atelier-public.public-space .login-formulario__secao { background: #ffffff52; border-color: #b66d483b; border-radius: 5px; padding: 18px; }
+.corvia-atelier-public.public-space .login-formulario__secao-titulo { color: #476252; font-size: .875rem; }
+.corvia-atelier-public.public-space :is(.login-campo label, .login-formulario label, .corvia-validator__form label) { color: #384e43; font-size: .875rem; }
+#root .corvia-atelier-public.public-space :is(.login-campo input, .login-campo select, .login-formulario input:not([type="checkbox"]), .login-formulario select, .login-formulario textarea, .corvia-validator__form input) { min-height: 48px; color: #263a36 !important; -webkit-text-fill-color: #263a36 !important; background: #fffef9 !important; border-color: #a1b3a682 !important; border-radius: 5px; box-shadow: inset 0 1px #fff; caret-color: #08786f; color-scheme: light; font-size: 1rem; }
+#root .corvia-atelier-public.public-space :is(.login-formulario input, .login-formulario textarea, .corvia-validator__form input)::placeholder { color: #68776d !important; -webkit-text-fill-color: #68776d !important; opacity: 1; }
+#root .corvia-atelier-public.public-space :is(input, select, textarea):focus { border-color: #08786f !important; box-shadow: 0 0 0 3px #08786f1c !important; }
+#root .corvia-atelier-public.public-space :is(a, button, input, select, textarea):focus-visible { outline: 2px solid #08786f !important; outline-offset: 4px; }
+#root .corvia-atelier-public.public-space input:-webkit-autofill { -webkit-box-shadow: 0 0 0 1000px #fffef9 inset !important; -webkit-text-fill-color: #263a36 !important; }
+.corvia-atelier-public.public-space input[type="checkbox"] { accent-color: #08786f; }
+.corvia-atelier-public.public-space .campo-senha__alternar { color: #466a5d; }
+.corvia-atelier-public.public-space .campo-senha__alternar:hover { color: #08786f; background: #08786f0d; }
+.corvia-atelier-public.public-space :is(.login-formulario__secao-nota, .login-formulario__checavel, .prehome-card__footer, .prehome-link, .prehome-divider) { color: #627264; font-size: .875rem; line-height: 1.6; }
+.corvia-atelier-public.public-space :is(.login-formulario__aviso, .prehome-info) { color: #476252; background: #ecf4eb99; border-color: #a1b3a666; border-radius: 5px; font-size: 1rem; line-height: 1.6; }
+.corvia-atelier-public.public-space :is(.login-formulario__aviso, .prehome-info) svg { color: #08786f; }
+#root .corvia-atelier-public.public-space :is(.login-formulario__entrar, .prehome-primary, .corvia-validator__form button, .corvia-validator__actions a.is-primary, .public-legal-content .botao),
+.corvia-atelier-public .public-showcase__actions .is-primary,
+.corvia-atelier-public .public-showcase__hero-actions a:not(.is-secondary),
+.corvia-atelier-public .public-showcase__cta > div:last-child a:not(.is-secondary) { color: #1e2a22 !important; background: var(--atelier-public-copper) !important; border: 1px solid #8c4d3570 !important; border-radius: 5px !important; box-shadow: inset 0 1px #fae7d6, 0 8px 26px #b66d482b !important; font-size: .875rem; font-weight: 600; }
+.corvia-atelier-public.public-space .login-formulario__carregando { border-color: #1e2a2240; border-top-color: #1e2a22; }
+.corvia-atelier-public.public-space .prehome-secondary,
+.corvia-atelier-public .public-space__topbar > nav .public-space__access,
+.corvia-atelier-public .public-showcase__hero-actions .is-secondary,
+.corvia-atelier-public .public-showcase__cta > div:last-child .is-secondary { color: #08786f; background: #ffffff66; border-color: #9faf9c77; border-radius: 5px; box-shadow: none; }
+.corvia-atelier-public.public-space .prehome-secondary:hover { color: #08665e; background: #ecf4ec; }
+.corvia-atelier-public.public-space :is(.login-formulario__erro, .corvia-validator__status.is-error) { color: #8b2f2b; background: #fff0ed; border-color: #bf655d66; font-size: .875rem; }
+.corvia-atelier-public.public-space .login-formulario__erro--inline { background: transparent; }
+.corvia-atelier-public.public-space .prehome-step { color: #627264; font-size: .875rem; }
+.corvia-atelier-public.public-space .prehome-step i { color: #476252; background: #f7f3e8; border-color: #b66d484d; }
+.corvia-atelier-public.public-space .prehome-step--active { color: #08786f; }
+.corvia-atelier-public.public-space .prehome-step--active i { color: #fff; background: #08786f; border-color: #08786f; box-shadow: none; }
+.corvia-atelier-public.public-space :is(.prehome-confirmation__icon, .prehome-status-chip) { color: #08786f; background: #e4efe4; border-color: #8aaa8a66; box-shadow: none; }
+.corvia-atelier-public.public-space .prehome-confirmation__icon--pending { color: #5f3427; background: #f3e8cf; border-color: #b66d4866; }
+.corvia-atelier-public.public-space .prehome-confirmation__checks span { color: #476252; background: #ffffff80; border-color: var(--public-line); font-size: .875rem; }
+.corvia-atelier-public.public-space .prehome-confirmation__checks svg { color: #08786f; }
+.corvia-atelier-public.public-space .prehome-password-rules li { color: #627264; font-size: .875rem; }
+.corvia-atelier-public.public-space .prehome-password-rules li[data-ok=true],
+.corvia-atelier-public.public-space .prehome-password-rules li[data-ok=true] svg,
+.corvia-atelier-public.public-space .prehome-password-meter span { color: #08786f; }
+.corvia-atelier-public.public-space .prehome-password-meter i { background: #dce4d9; }
+.corvia-atelier-public.public-space .prehome-password-meter[data-level="2"] i:nth-child(-n+2),
+.corvia-atelier-public.public-space .prehome-password-meter[data-level="3"] i:nth-child(-n+3),
+.corvia-atelier-public.public-space .prehome-password-meter[data-level="4"] i:nth-child(-n+4) { background: #08786f; }
+.corvia-atelier-public .public-mail-card__brand { background: #fffdf580; border-color: #b66d483b; box-shadow: inset 0 1px #fff; }
+.corvia-atelier-public .public-mail-card__brand .corvia-mail-logo__wordmark { color: #24312f; }
+.corvia-atelier-public .public-mail-card__brand .corvia-mail-logo__wordmark > b { color: #08786f; }
+.corvia-atelier-public .public-mail-card__brand .corvia-mail-logo__wordmark > em { color: #8c4d35; }
+.corvia-atelier-public .public-mail-card > .credito { color: #627264 !important; }
+
+/* Historical prehome sheets use unscoped !important declarations. Keep this
+   final, explicit boundary readable without changing clinical surfaces. */
+#root .corvia-atelier-public.public-space .prehome-card__header > p { color: #55695e !important; font-size: 1rem !important; line-height: 1.65 !important; }
+#root .corvia-atelier-public.public-space :is(.prehome-card__eyebrow, .prehome-status-chip, .prehome-password-meter, .prehome-password-meter span, .prehome-secondary, .public-mail-card > .credito, .login-campo .eyebrow) { font-size: .875rem; }
+#root .corvia-atelier-public.public-space .login-campo .eyebrow { color: #627264; }
+#root .corvia-atelier-public.public-space .prehome-card__eyebrow { color: #5f3427 !important; }
+#root .corvia-atelier-public.public-space :is(.login-campo label, .login-formulario label) { color: #384e43 !important; }
+#root .corvia-atelier-public.public-space :is(.prehome-card__footer, .prehome-divider) { color: #627264 !important; border-color: var(--public-line) !important; }
+#root .corvia-atelier-public.public-space :is(.prehome-link, .prehome-card__footer svg) { color: #08786f !important; }
+#root .corvia-atelier-public.public-space .prehome-secondary { min-height: 44px !important; color: #08786f !important; background: #ffffff66 !important; border-color: #9faf9c77 !important; border-radius: 5px !important; }
+#root .corvia-atelier-public.public-space .prehome-secondary:hover { color: #08665e !important; background: #ecf4ec !important; }
+#root .corvia-atelier-public.public-space .prehome-info { color: #476252 !important; background: #ecf4eb99 !important; border-color: #a1b3a666 !important; border-radius: 5px !important; }
+#root .corvia-atelier-public.public-space .prehome-confirmation__icon { color: #08786f !important; background: #e4efe4 !important; border-color: #8aaa8a66 !important; }
+#root .corvia-atelier-public.public-space .prehome-confirmation__icon--pending { color: #5f3427 !important; background: #f3e8cf !important; border-color: #b66d4866 !important; }
+#root .corvia-atelier-public.public-space .prehome-step i { color: #476252 !important; background: #f7f3e8 !important; border-color: #b66d484d !important; font-size: .875rem; }
+#root .corvia-atelier-public.public-space .prehome-step--active i { color: #fff !important; background: #08786f !important; border-color: #08786f !important; }
+
+/* Legal and document-validation states retain their semantic information. */
+.corvia-atelier-public.public-space :is(.corvia-validator__status, .corvia-validator__result, .corvia-validator__trust-row span, .corvia-validator__result dl > div, .corvia-validator__flow, .corvia-validator__hash, .corvia-validator__download-note, .corvia-validator__notice, .public-legal-content > section) { color: #55695e; background: #fffdf5; border-color: #b66d483b; border-radius: 5px; }
+.corvia-atelier-public.public-space :is(.corvia-validator__status strong, .corvia-validator__result dd, .public-legal-content h2) { color: #24312f; }
+.corvia-atelier-public.public-space :is(.corvia-validator__status span, .corvia-validator__result dt, .corvia-validator__panel > footer) { color: #627264; font-size: .875rem; }
+.corvia-atelier-public.public-space :is(.corvia-validator__result dd, .corvia-validator__trust-row span, .corvia-validator__flow, .corvia-validator__hash, .corvia-validator__download-note, .corvia-validator__notice) { font-size: .875rem; }
+.corvia-atelier-public.public-space .corvia-validator__trust-row .is-ok { color: #08786f; border-color: #08786f66; }
+.corvia-atelier-public.public-space .corvia-validator__trust-row .is-warn { color: #8b2f2b; border-color: #bf655d66; background: #fff0ed; }
+.corvia-atelier-public.public-space .corvia-validator__hash code { color: #08786f; }
+.corvia-atelier-public.public-space :is(.corvia-validator__actions a, .public-legal-content > footer a) { color: #08786f; background: #ffffff66; border-color: #a1b3a666; border-radius: 5px; font-size: .875rem; }
+.corvia-atelier-public.public-space .public-legal-content h2 { font-size: 1.05rem; }
+.corvia-atelier-public.public-space :is(.public-legal-content p, .public-legal-content li) { color: #55695e; font-size: 1rem; line-height: 1.75; }
+.corvia-atelier-public.public-space .public-legal-content a { color: #08786f; }
+
+/* The public product presentation shares the approved architectural collection. */
+.corvia-atelier-public .public-showcase__hero { gap: 28px; min-height: auto; padding: 52px 0 35px; }
+.corvia-atelier-public .public-showcase__hero-copy { gap: 14px; }
+.corvia-atelier-public :is(.public-showcase__hero-copy > p, .public-showcase__section > header p, .public-showcase__quality > div:last-child > p, .public-showcase__cta p) { color: #5f3427; font-size: .875rem; letter-spacing: .18em; }
+.corvia-atelier-public .public-showcase__hero-copy > p span { background: #0cab92; box-shadow: 0 0 10px #0cab9220; }
+.corvia-atelier-public .public-showcase__hero-copy h1 { max-width: 22ch; color: #24312f; font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: 1.12; letter-spacing: -.045em; }
+.corvia-atelier-public .public-showcase__hero-copy h1 strong { color: #8c4d35; font-weight: 400; text-shadow: none; }
+.corvia-atelier-public .public-showcase__hero-copy > div:not(.public-showcase__hero-actions) { color: #55695e; font-size: 1rem; line-height: 1.65; }
+.corvia-atelier-public .public-showcase__hero-actions { gap: 12px; }
+.corvia-atelier-public .public-showcase__hero-actions a { min-height: 50px; }
+.corvia-atelier-public .public-showcase__portals { gap: 6px; padding: 7px; background: linear-gradient(125deg, #fffef8cc, #ddd0ad47); border: 1px solid #b66d4873; border-radius: 3px; box-shadow: 0 25px 55px #463a231f, inset 0 1px #fff; }
+.corvia-atelier-public .public-showcase__portal { --portal-color: #d39770; height: clamp(270px, 32vw, 390px); border-color: #b66d4859; border-radius: 1px; background: #30443a; box-shadow: none; }
+.corvia-atelier-public .public-showcase__portal::before { background: linear-gradient(180deg, transparent 42%, #16211d55 65%, #15201aed); }
+.corvia-atelier-public .public-showcase__portal::after { right: 0; left: 0; height: 2px; background: linear-gradient(90deg, #8c4d35, #f2d1af 45%, #b66d48 80%, #d39770); box-shadow: none; }
+.corvia-atelier-public .public-showcase__portal img { filter: brightness(.94) saturate(.95); transform: none; }
+.corvia-atelier-public .public-showcase__portal[data-space="consultorio"] img { object-position: 65% center; }
+.corvia-atelier-public .public-showcase__portal-glass { inset: 6px; border-color: #fff4d526; border-radius: 0; box-shadow: none; }
+.corvia-atelier-public .public-showcase__portal > div { left: 16px; right: 12px; bottom: 24px; grid-template-columns: minmax(0, 1fr); gap: 7px; }
+.corvia-atelier-public .public-showcase__portal > div > span { grid-row: auto; width: 34px; height: 34px; color: #f2d1af; background: #163d3280; border-color: #d3977080; border-radius: 50%; }
+.corvia-atelier-public .public-showcase__portal strong { color: #fffced; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.15rem, 1.7vw, 1.6rem); font-weight: 400; }
+.corvia-atelier-public .public-showcase__portal small { color: #e3ecd9; font-size: .875rem; }
+.corvia-atelier-public .public-showcase__portal > i { color: #fffced; background: #163d32cc; border: 1px solid #d3977066; border-radius: 3px; padding: 6px 8px; font-size: .875rem; }
+.corvia-atelier-public .public-showcase__portal:hover,
+.corvia-atelier-public .public-showcase__portal:focus-visible { border-color: #b66d48; box-shadow: 0 0 0 1px #8c4d35a6, 0 10px 24px #46391729; transform: none; }
+.corvia-atelier-public .public-showcase__portal:hover img,
+.corvia-atelier-public .public-showcase__portal:focus-visible img { filter: brightness(1.045) saturate(1.02); transform: scale(1.025); }
+.corvia-atelier-public .public-showcase__continuity { margin: 0; color: #627264; font-size: .875rem; }
+.corvia-atelier-public .public-showcase__continuity strong { color: #3b5548; }
+.corvia-atelier-public :is(.public-showcase__section > header h2, .public-showcase__quality h2, .public-showcase__cta h2) { color: #24312f; font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: 1.12; }
+.corvia-atelier-public :is(.public-showcase__section > header span, .public-showcase__cta > div:first-child > span) { color: #55695e; font-size: 1rem; line-height: 1.65; }
+.corvia-atelier-public :is(.public-showcase__modes article, .public-showcase__planes article) { --mode-color: #08786f; --plane-color: #08786f; background: linear-gradient(125deg, #fffefbb8, #faf7efa6); border-color: #b66d484d; border-radius: 5px; box-shadow: inset 0 1px #fff, 0 18px 40px #5b482013; }
+.corvia-atelier-public .public-showcase__modes article::after { background: linear-gradient(90deg, transparent, #d39770, transparent); }
+.corvia-atelier-public :is(.public-showcase__modes article > span, .public-showcase__planes article > span) { color: #08786f; background: #fffef580; border-color: #b66d4866; border-radius: 50%; }
+.corvia-atelier-public .public-showcase__modes article p,
+.corvia-atelier-public .public-showcase__planes article > p { color: #5f3427; font-size: .875rem; }
+.corvia-atelier-public .public-showcase__modes article h3,
+.corvia-atelier-public .public-showcase__planes h3 { color: #2d4137; }
+.corvia-atelier-public :is(.public-showcase__modes article > div, .public-showcase__planes article > div) { color: #55695e; font-size: 1rem; line-height: 1.65; }
+.corvia-atelier-public :is(.public-showcase__system, .public-showcase__quality) { border-top-color: var(--public-line); }
+.corvia-atelier-public .public-showcase__quality-map { background: radial-gradient(circle, #d3977020, transparent 64%); }
+.corvia-atelier-public .public-showcase__quality-map > span { color: #08786f; background: linear-gradient(140deg, #fffef9, #f2d1af); border-color: #b66d4866; border-radius: 50%; box-shadow: 0 15px 45px #b66d481f, inset 0 1px #fff; }
+.corvia-atelier-public .public-showcase__quality-map i { color: #b66d48; background: #d39770; border-color: #fffdf5; box-shadow: none; }
+.corvia-atelier-public .public-showcase__quality-map b { color: #627264; font-size: .875rem; }
+.corvia-atelier-public .public-showcase__quality > div:last-child > div { color: #55695e; font-size: 1rem; line-height: 1.7; }
+.corvia-atelier-public .public-showcase__quality li { color: #55695e; background: #fffdf580; border-color: var(--public-line); border-radius: 5px; font-size: 1rem; line-height: 1.6; }
+.corvia-atelier-public .public-showcase__quality li strong { color: #2d4137; }
+.corvia-atelier-public .public-showcase__quality li > svg { color: #08786f; background: #08786f08; border-color: #08786f33; border-radius: 50%; }
+.corvia-atelier-public .public-showcase__cta { background: linear-gradient(125deg, #fffefbcc, #f3e8cfb3); border-color: #b66d4859; border-radius: 5px; box-shadow: inset 0 1px #fff, 0 20px 50px #5b482013; }
+
+@media (max-width: 1050px) {
+  .corvia-atelier-public .public-showcase__portals { grid-template-columns: repeat(5, minmax(195px, 1fr)); scroll-padding: 7px; }
+  .corvia-atelier-public .public-showcase__portal { height: 300px; }
+}
+@media (max-width: 900px) {
+  .corvia-atelier-public .public-space__topbar { min-height: 88px; }
+  .corvia-atelier-public .public-space__context { top: auto; grid-template-columns: 52px minmax(0, 1fr); gap: 9px 15px; }
+  .corvia-atelier-public .public-space__description,
+  .corvia-atelier-public .atelier-public__scene { grid-column: 1 / -1; }
+  .corvia-atelier-public .atelier-public__scene { height: 190px; }
+  .corvia-atelier-public .public-space__context h1 { font-size: clamp(1.8rem, 5.8vw, 2.5rem); }
+  .corvia-atelier-public .public-space__features { grid-template-columns: 1fr; }
+  .corvia-atelier-public .public-space__features article:nth-child(n + 3),
+  .corvia-atelier-public .public-space__features small { display: block; }
+  .corvia-atelier-public .public-space__features article { display: grid; grid-template-columns: 38px minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  .corvia-atelier-public .public-corvia-brand--atelier { width: 175px; }
+  .corvia-atelier-public .public-showcase__topbar { min-height: 88px; gap: 12px; }
+  .corvia-atelier-public .public-showcase__actions .is-primary { font-size: .875rem; }
+  .corvia-atelier-public .public-showcase__hero { padding-top: 34px; gap: 25px; }
+  .corvia-atelier-public .public-showcase__hero-copy h1 { max-width: 17ch; font-size: clamp(2.2rem, 8.5vw, 3.4rem); }
+  .corvia-atelier-public .public-showcase__portals { grid-template-columns: repeat(5, minmax(245px, 70vw)); margin-right: 0; }
+  .corvia-atelier-public .public-showcase__portal { height: 340px; }
+  .corvia-atelier-public .public-showcase__portal strong { font-size: 1.5rem; }
+  .corvia-atelier-public .public-showcase__portal > i { opacity: 1; transform: none; }
+  .corvia-atelier-public .public-showcase__section { padding-block: 65px; }
+  .corvia-atelier-public .public-showcase__quality { padding-block: 60px; }
+  .corvia-atelier-public .public-showcase__footer { padding-block: 25px; }
+}
+@media (max-width: 560px) {
+  .corvia-atelier-public .public-space__security span { font-size: .875rem; }
+  .corvia-atelier-public .public-space__surface { padding: 22px 16px; border-color: #b66d484d; }
+  .corvia-atelier-public.public-space .login-formulario__secao { padding: 15px 12px; }
+  .corvia-atelier-public .public-space__description { font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .corvia-atelier-public *, .corvia-atelier-public *::before, .corvia-atelier-public *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

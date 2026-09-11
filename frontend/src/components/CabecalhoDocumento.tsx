@@ -32,7 +32,7 @@ export default function CabecalhoDocumento({ medico }: { medico: Medico }) {
 
   return (
     <header className="doc-cabecalho">
-      <img className="doc-cabecalho__logo" src="/corvia-logo-spaces.svg" alt="CorVIA Cardiology Spaces" />
+      <img className="doc-cabecalho__logo" src="/atelier/corvia-logo-atelier.svg" alt="CorVIA Cardiology Spaces" />
       <div className="doc-cabecalho__centro">
         {medico.document_logo_url && (
           <span className={`doc-cabecalho__logo-pessoal-placa ${medico.document_logo_dark_background ? "doc-cabecalho__logo-pessoal-placa--escura" : ""}`}>

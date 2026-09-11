@@ -1,6 +1,10 @@
 import ClinicalChangeApprovalNotice from "../components/ClinicalChangeApprovalNotice";
 import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import AtelierHomeView from "../components/AtelierHomeView";
+import { CLINICAL_SPACES, type FunctionalSpace } from "../lib/clinicalRouteRegistry";
+import { atelierCatalogRoutesFor as catalogRoutesFor, atelierContextFromSearch, readAtelierContext, writeAtelierContext } from "../lib/atelierNavigation";
+import { emptyShelfPreferences, migrateShelfPreferences, previewShelfImport, saveShelfProfile, shelfOrganizationLabel, shelfPreferenceStore, shelfProfileItems, shelfReserveFor, SHELF_PREFERENCES_PREFIX, type ShelfPreferences } from "../lib/atelierShelfPreferences";
 import CardiologySpaceScene from "../components/CardiologySpaceScene";
 import Icone, { type NomeIcone } from "../components/Icone";
 import MapaDeslocamento, { type RotaDeslocamento } from "../components/MapaDeslocamento";
@@ -122,16 +126,9 @@ type ShelfDefinition = {
   defaultActionIds: string[];
 };
 type ShelfProfile = Partial<Record<ShelfId, string[]>>;
-type ShelfPreferences = {
-  schemaVersion: 1;
-  updatedAt: string;
-  profiles: Record<string, ShelfProfile>;
-};
 
-const MODE_KEY = "corvia:cardiology-spaces:mode";
 const TOUR_KEY = "corvia:cardiology-spaces:tour:v3";
 const INVESTOR_TOUR_SESSION_KEY = "corvia:cardiology-spaces:investor-tour-session:v1";
-const SHELF_PREFERENCES_PREFIX = "corvia:cardiology-spaces:shelves:v1";
 
 const SPACES: Space[] = [
   {
@@ -400,11 +397,20 @@ const ESSENTIAL_DEFAULTS: Record<ClinicalSpaceId, string[]> = {
   gestao: ["/indicadores", "/agenda", "/usuarios-online", "/sincronizacao", "/corvia-mail", "/minha-conta"],
 };
 
-const SHELF_CAPACITIES: Record<ShelfId, number> = {
-  now: 3,
-  next: 3,
-  references: 4,
-  essential: 6,
+const SHELF_CAPACITIES: Record<ShelfId, number> = { now: 4, next: 4, references: 4, essential: 4 };
+const ATELIER_DEFAULTS: Record<ClinicalSpaceId, string[]> = {
+  consultorio: ["/agenda", "/prontuario", "/receituario", "/exames-ia", "/documentos", "/exames", "/medicamentos", "/calculadoras", "/doencas", "/interacoes", "/avaliacao-preoperatoria", "/diretrizes"],
+  hospital: ["/round", "/receituario", "/exames-ia", "/emergencia", "/cardiologia-intensiva", "/checklists", "/documentos", "/calculadoras", "/exames", "/medicamentos", "/interacoes", "/diretrizes"],
+  ensino: ["/trilhas", "/casos-clinicos", "/apresentacao", "/galeria", "/material-paciente", "/biblioteca", "/doencas", "/trilhas/timeline", "/evidencias", "/diretrizes", "/favoritos", "/exportar"],
+  pesquisa: ["/busca?modo=tudo-com-tudo", "/biblioteca", "/evidencias", "/estudos", "/diretrizes", "/documentos-cientificos-ia", "/favoritos", "/exportar", "/casos-clinicos", "/galeria", "/trilhas/timeline", "/intelligence"],
+  gestao: ["/indicadores", "/agenda", "/corvia-mail", "/usuarios-online", "/sincronizacao", "/minha-conta", "/telediagnostico", "/documentos", "/favoritos", "/privacidade", "/termos", "/assistente"],
+};
+const ATELIER_SCIENCE: Record<ClinicalSpaceId, string[]> = {
+  consultorio: ["/doencas", "/diretrizes", "/evidencias", "/biblioteca", "/busca?modo=tudo-com-tudo", "/estudos", "/casos-clinicos", "/favoritos"],
+  hospital: ["/cardiologia-intensiva", "/diretrizes", "/evidencias", "/estudos", "/biblioteca", "/casos-clinicos", "/checklists", "/busca?modo=tudo-com-tudo"],
+  ensino: ["/trilhas", "/casos-clinicos", "/galeria", "/apresentacao", "/material-paciente", "/biblioteca", "/trilhas/timeline", "/favoritos"],
+  pesquisa: ["/busca?modo=tudo-com-tudo", "/biblioteca", "/evidencias", "/estudos", "/diretrizes", "/documentos-cientificos-ia", "/favoritos", "/exportar"],
+  gestao: ["/indicadores", "/estudos", "/evidencias", "/diretrizes", "/biblioteca", "/documentos-cientificos-ia", "/exportar", "/favoritos"],
 };
 
 function normalizeActionSegment(value: string) {
@@ -420,7 +426,8 @@ function homeActionId(action: Action) {
   return `${encodeURIComponent(action.to)}::${normalizeActionSegment(action.label)}`;
 }
 
-const HOME_ACTIONS = [...CATALOG.flatMap((section) => section.actions), ...SPACES.flatMap((space) => [
+const REGISTRY_ACTIONS: Action[] = (Object.keys(CLINICAL_SPACES) as FunctionalSpace[]).flatMap((space) => catalogRoutesFor(space, true).map((route) => ({ to: route.path, label: route.shortName || route.name, icon: route.icon, adminOnly: route.gate === "admin" || route.gate === "admin-ai", featured: route.featured })));
+const HOME_ACTIONS = [...CATALOG.flatMap((section) => section.actions), ...REGISTRY_ACTIONS, ...SPACES.flatMap((space) => [
   ...space.now,
   ...space.next,
   ...space.references,
@@ -444,31 +451,16 @@ function shelfProfileKey(mode: Mode, spaceId: SpaceId) {
   return `${mode}:${spaceId}`;
 }
 
-function shelfLabel(mode: Mode, shelfId: ShelfId) {
-  if (shelfId === "now") return "Agora";
-  if (shelfId === "essential") return "Meus essenciais";
-  if (shelfId === "next") return mode === "scientific" ? "Aprofundar" : "Em seguida";
-  return mode === "scientific" ? "Conexões" : "Referências";
+function shelfLabel(_mode: Mode, shelfId: ShelfId) {
+  return `Prateleira ${shelfId === "now" ? 1 : shelfId === "references" ? 3 : 2}`;
 }
 
 function shelfDefinitions(mode: Mode, space: Space): ShelfDefinition[] {
-  const definition = (id: ShelfId, actions: Action[]): ShelfDefinition => ({
-    id,
-    capacity: SHELF_CAPACITIES[id],
-    defaultActionIds: actions.map(homeActionId),
-  });
-  if (mode === "essential") {
-    const spaceId = space.id as ClinicalSpaceId;
-    const essentialActions = ESSENTIAL_DEFAULTS[spaceId]
-      .map(actionForLegacyPath)
-      .filter((action): action is Action => Boolean(action));
-    return [definition("now", space.now), definition("essential", essentialActions)];
-  }
-  return [
-    definition("now", space.now),
-    definition("next", space.next),
-    definition("references", space.references),
-  ];
+  const id = space.id as ClinicalSpaceId;
+  const paths = mode === "scientific" ? ATELIER_SCIENCE[id] : ATELIER_DEFAULTS[id];
+  const actions = (paths || ATELIER_DEFAULTS.consultorio).map(actionForLegacyPath).filter((action): action is Action => Boolean(action));
+  const ids: ShelfId[] = mode === "complete" ? ["now", "next", "references"] : ["now", mode === "essential" ? "essential" : "next"];
+  return ids.map((shelf, index) => ({ id: shelf, capacity: 4, defaultActionIds: actions.slice(index * 4, index * 4 + 4).map(homeActionId) }));
 }
 
 function resolveShelfActionIds(
@@ -491,47 +483,12 @@ function resolveShelfActionIds(
   return result;
 }
 
-function emptyShelfPreferences(): ShelfPreferences {
-  return { schemaVersion: 1, updatedAt: new Date(0).toISOString(), profiles: {} };
-}
-
-function parseShelfPreferences(raw: string | null): ShelfPreferences {
-  if (!raw) return emptyShelfPreferences();
-  try {
-    const parsed = JSON.parse(raw) as Partial<ShelfPreferences>;
-    if (parsed.schemaVersion !== 1 || !parsed.profiles || typeof parsed.profiles !== "object") return emptyShelfPreferences();
-    const profiles: Record<string, ShelfProfile> = {};
-    for (const [profileKey, profile] of Object.entries(parsed.profiles)) {
-      if (!profile || typeof profile !== "object") continue;
-      const safeProfile: ShelfProfile = {};
-      for (const shelfId of ["now", "next", "references", "essential"] as ShelfId[]) {
-        const actionIds = profile[shelfId];
-        if (!Array.isArray(actionIds)) continue;
-        safeProfile[shelfId] = [...new Set(actionIds.filter((actionId): actionId is string => typeof actionId === "string"))];
-      }
-      profiles[profileKey] = safeProfile;
-    }
-    return {
-      schemaVersion: 1,
-      updatedAt: typeof parsed.updatedAt === "string" ? parsed.updatedAt : new Date(0).toISOString(),
-      profiles,
-    };
-  } catch {
-    return emptyShelfPreferences();
-  }
-}
-
 const SPACE_TONES: Record<ClinicalSpaceId, Tone> = {
   consultorio: "cyan", hospital: "blue", ensino: "violet", pesquisa: "rose", gestao: "teal",
 };
 
 function Brand() {
-  return (
-    <span className="spaces-brand" aria-label="CorVIA Cardiology Spaces">
-      <img src="/corvia-mark-canonical.svg" alt="" />
-      <span><strong><i>Cor</i><b>VIA</b></strong><small>CARDIOLOGY SPACES</small></span>
-    </span>
-  );
+  return <span className="spaces-brand atelier-brand"><img src="/atelier/corvia-logo-atelier.svg" alt="CorVIA Cardiology Spaces" /></span>;
 }
 
 function UserIdentity({ usuario, chevron = false }: { usuario: Usuario | null; chevron?: boolean }) {
@@ -926,17 +883,30 @@ function mobilityRouteError(result: MobilityResult) {
 export default function CardiologySpacesHome() {
   const { usuario } = useAuth();
   const navigate = useNavigate();
-  const [mode, setMode] = useState<Mode | null>(() => {
-    const saved = sessionStorage.getItem(MODE_KEY);
-    return saved === "complete" || saved === "essential" || saved === "scientific" ? saved : null;
-  });
-  const [selectedSpace, setSelectedSpace] = useState<SpaceId>(() => sessionStorage.getItem(MODE_KEY) === "scientific" ? "descobrir" : "consultorio");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [mode, setMode] = useState<Mode>(() => atelierContextFromSearch(searchParams, readAtelierContext(usuario?.id)).mode);
+  const [selectedSpace, setSelectedSpace] = useState<SpaceId>(() => atelierContextFromSearch(searchParams, readAtelierContext(usuario?.id)).space);
+  const interior = SPACES.some((space) => space.id === searchParams.get("espaco"));
+  const [storageNotice, setStorageNotice] = useState("");
+  const [personalizerQuery, setPersonalizerQuery] = useState("");
+  useEffect(() => {
+    const selected = SPACES.find((space) => space.id === searchParams.get("espaco"));
+    const context = atelierContextFromSearch(searchParams, readAtelierContext(usuario?.id));
+    if (selected) setSelectedSpace(context.space);
+    const requestedMode = searchParams.get("modo");
+    const validMode = requestedMode === "complete" || requestedMode === "essential" || requestedMode === "scientific";
+    if (validMode) setMode(context.mode);
+    if (selected || validMode) writeAtelierContext(usuario?.id, context);
+  }, [searchParams, usuario?.id]);
   const [previewSpace, setPreviewSpace] = useState<SpaceId | null>(null);
   const [catalogOpen, setCatalogOpen] = useState(false);
   const [personalizerOpen, setPersonalizerOpen] = useState(false);
   const [personalizerShelf, setPersonalizerShelf] = useState<ShelfId>("now");
   const [shelfPreferences, setShelfPreferences] = useState<ShelfPreferences>(emptyShelfPreferences);
   const [shelfDraft, setShelfDraft] = useState<ShelfProfile>({});
+  const [shelfReserve, setShelfReserve] = useState<string[]>([]);
+  const [previousOrganization, setPreviousOrganization] = useState("");
+  const [importNotice, setImportNotice] = useState("");
   const [query, setQuery] = useState("");
   const [globalQuery, setGlobalQuery] = useState("");
   const [dayItems, setDayItems] = useState<AgendaItem[]>([]);
@@ -966,48 +936,23 @@ export default function CardiologySpacesHome() {
       return;
     }
     const preferenceKey = `${SHELF_PREFERENCES_PREFIX}:${usuario.id}`;
-    let preferences = emptyShelfPreferences();
-    try {
-      preferences = parseShelfPreferences(localStorage.getItem(preferenceKey));
-      let migrated = false;
-      for (const space of SPACES) {
-        const profileKey = shelfProfileKey("essential", space.id);
-        // A propriedade presente, inclusive [], é uma preferência nova e
-        // explícita. Testar length reinjetava o legado após o usuário esvaziar
-        // a prateleira.
-        if (Object.prototype.hasOwnProperty.call(preferences.profiles[profileKey] || {}, "essential")) continue;
-        const legacyKey = `corvia:cardiology-spaces:essentials:${usuario.id}:${space.id}`;
-        let legacyPaths: unknown = [];
-        try {
-          legacyPaths = JSON.parse(localStorage.getItem(legacyKey) || "[]") as unknown;
-        } catch {
-          continue;
-        }
-        if (!Array.isArray(legacyPaths) || !legacyPaths.length) continue;
-        const migratedActionIds = legacyPaths
-          .filter((path): path is string => typeof path === "string")
-          .map(actionForLegacyPath)
-          .filter((action): action is Action => Boolean(action))
-          .map(homeActionId)
-          .slice(0, SHELF_CAPACITIES.essential);
-        if (!migratedActionIds.length) continue;
-        preferences.profiles[profileKey] = {
-          ...preferences.profiles[profileKey],
-          essential: migratedActionIds,
-        };
-        localStorage.removeItem(legacyKey);
-        migrated = true;
-      }
-      if (migrated) {
-        preferences.updatedAt = new Date().toISOString();
-        localStorage.setItem(preferenceKey, JSON.stringify(preferences));
-      }
-    } catch {
-      preferences = emptyShelfPreferences();
+    const loaded = shelfPreferenceStore.read(usuario.id);
+    const legacyEssentials: Record<string, string[]> = {};
+    for (const space of SPACES) {
+      try {
+        const raw = localStorage.getItem(`corvia:cardiology-spaces:essentials:${usuario.id}:${space.id}`);
+        const paths: unknown = raw === null ? null : JSON.parse(raw);
+        if (Array.isArray(paths)) legacyEssentials[space.id] = paths.filter((path): path is string => typeof path === "string");
+      } catch { /* A fonte antiga permanece intacta; nunca apagar nem truncar. */ }
     }
+    const preferences = migrateShelfPreferences(loaded, legacyEssentials, (path) => {
+      const action = actionForLegacyPath(path);
+      return action ? homeActionId(action) : `${encodeURIComponent(path)}::funcao-anterior`;
+    });
+    if (JSON.stringify(preferences) !== JSON.stringify(loaded) && !shelfPreferenceStore.write(usuario.id, preferences)) setStorageNotice("Sua organização e o histórico serão mantidos nesta sessão; o navegador não permitiu gravá-los.");
     setShelfPreferences(preferences);
     const syncPreferences = (event: StorageEvent) => {
-      if (event.key === preferenceKey) setShelfPreferences(parseShelfPreferences(event.newValue));
+      if (event.key === preferenceKey) setShelfPreferences(shelfPreferenceStore.sync(usuario.id, event.newValue));
     };
     window.addEventListener("storage", syncPreferences);
     return () => window.removeEventListener("storage", syncPreferences);
@@ -1099,6 +1044,8 @@ export default function CardiologySpacesHome() {
       setCatalogOpen(false);
       setPersonalizerOpen(false);
       setShelfDraft({});
+      setShelfReserve([]);
+      setImportNotice("");
       setTravelOpen(false);
     };
     window.addEventListener("keydown", close);
@@ -1106,16 +1053,14 @@ export default function CardiologySpacesHome() {
   }, [catalogOpen, personalizerOpen, travelOpen]);
 
   const activeMode: Mode = mode || "complete";
-  const availableSpaces = activeMode === "scientific" ? SCIENTIFIC_SPACES : SPACES;
+  const availableSpaces = SPACES;
   const activeSpace = availableSpaces.find((space) => space.id === selectedSpace) || availableSpaces[0];
-  const visibleCatalog = useMemo(() => CATALOG.map((section) => ({
-    ...section,
-    actions: section.actions.filter((action) => (!action.adminOnly || usuario?.role === "admin") && (!query || action.label.toLocaleLowerCase("pt-BR").includes(query.toLocaleLowerCase("pt-BR")))),
+  const permittedPaths = useMemo(() => new Set((Object.keys(CLINICAL_SPACES) as FunctionalSpace[]).flatMap((space) => catalogRoutesFor(space, usuario?.role === "admin").map((route) => route.path))), [usuario?.role]);
+  const candidateActions = useMemo(() => HOME_ACTIONS.filter((action) => (!action.adminOnly || usuario?.role === "admin") && permittedPaths.has(action.to.split("?")[0])), [usuario?.role, permittedPaths]);
+  const visibleCatalog = useMemo(() => (Object.keys(CLINICAL_SPACES) as FunctionalSpace[]).map((space) => ({
+    title: CLINICAL_SPACES[space].label,
+    actions: catalogRoutesFor(space, usuario?.role === "admin").map((route) => ({ to: route.path, label: route.name, icon: route.icon, featured: route.featured })).filter((action) => normalizeActionSegment(action.label).includes(normalizeActionSegment(query))),
   })).filter((section) => section.actions.length), [query, usuario?.role]);
-  const candidateActions = useMemo(
-    () => HOME_ACTIONS.filter((action) => !action.adminOnly || usuario?.role === "admin"),
-    [usuario?.role],
-  );
   const activeProfileKey = shelfProfileKey(activeMode, activeSpace.id);
   const activeShelfDefinitions = useMemo(
     () => shelfDefinitions(activeMode, activeSpace),
@@ -1134,6 +1079,9 @@ export default function CardiologySpacesHome() {
   const activePersonalizerDefinition = activeShelfDefinitions.find((definition) => definition.id === personalizerShelf)
     || activeShelfDefinitions[0];
   const activeDraftIds = shelfDraft[activePersonalizerDefinition.id] || [];
+  const draftSelectedIds = new Set(shelfProfileItems(shelfDraft));
+  const recoverableIds = [...new Set(shelfReserve)].filter((id) => !draftSelectedIds.has(id));
+  const allowedPreferenceIds = useMemo(() => new Set(candidateActions.map(homeActionId)), [candidateActions]);
   const chamamentoNaFrase = chamamentoComArtigo(usuario, { curto: true });
   const chamamentoNoInicio = chamamentoComArtigo(usuario, { curto: true, inicioDeFrase: true });
   const question = mode === "scientific" ? `Como ${chamamentoNaFrase} quer explorar o conhecimento agora?` : `Onde ${chamamentoNaFrase} vai trabalhar agora?`;
@@ -1248,22 +1196,13 @@ export default function CardiologySpacesHome() {
   }, [mobilityDayContext?.last_target?.target_key, mobilityPreference?.day_end_destination_location_id, mobilityPreference?.enabled, plannedMobilityTarget, resultMatchesTarget, returnHomeActive]);
 
   const chooseMode = useCallback((nextMode: Mode) => {
-    sessionStorage.setItem(MODE_KEY, nextMode);
+    if (!writeAtelierContext(usuario?.id, { space: selectedSpace as FunctionalSpace, mode: nextMode })) setStorageNotice("Sua organização será mantida apenas nesta sessão.");
     setMode(nextMode);
-    setSelectedSpace(nextMode === "scientific" ? "descobrir" : "consultorio");
+    if (interior) setSearchParams({ espaco: selectedSpace, modo: nextMode }, { replace: true });
     setPreviewSpace(null);
-    const investorNeedsTour = usuario?.investidor && !sessionStorage.getItem(INVESTOR_TOUR_SESSION_KEY);
-    if (usuario?.onboarding_pendente || investorNeedsTour) {
-      navigate("/tour?retorno=/");
-    }
-  }, [navigate, usuario?.investidor, usuario?.onboarding_pendente]);
+  }, [interior, selectedSpace, setSearchParams, usuario?.id]);
 
-  function resetMode() {
-    sessionStorage.removeItem(MODE_KEY);
-    setMode(null);
-    setSelectedSpace("consultorio");
-    setPreviewSpace(null);
-  }
+  function resetMode() { setSearchParams({}); setPreviewSpace(null); }
 
   function searchEverything(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -1280,6 +1219,10 @@ export default function CardiologySpacesHome() {
       return draft;
     }, {});
     setShelfDraft(nextDraft);
+    setShelfReserve(shelfReserveFor(shelfPreferences, activeProfileKey, nextDraft));
+    setPreviousOrganization("");
+    setImportNotice("");
+    setPersonalizerQuery("");
     setPersonalizerShelf(requestedShelf);
     setPreviewSpace(null);
     setPersonalizerOpen(true);
@@ -1288,6 +1231,8 @@ export default function CardiologySpacesHome() {
   function cancelShelfPersonalizer() {
     setPersonalizerOpen(false);
     setShelfDraft({});
+    setShelfReserve([]);
+    setImportNotice("");
   }
 
   function toggleShelfAction(actionId: string) {
@@ -1299,7 +1244,13 @@ export default function CardiologySpacesHome() {
         : current.length < definition.capacity
           ? [...current, actionId]
           : current;
-      return { ...currentDraft, [definition.id]: next };
+      const cleaned = { ...currentDraft };
+      if (next.includes(actionId)) {
+        for (const shelf of activeShelfDefinitions) {
+          if (shelf.id !== definition.id) cleaned[shelf.id] = (cleaned[shelf.id] || []).filter((id) => id !== actionId);
+        }
+      }
+      return { ...cleaned, [definition.id]: next };
     });
   }
 
@@ -1315,37 +1266,58 @@ export default function CardiologySpacesHome() {
     });
   }
 
+  function transferShelfAction(actionId: string, target: ShelfId) {
+    const destination = activeShelfDefinitions.find((definition) => definition.id === target);
+    if (!destination) return;
+    setShelfDraft((draft) => {
+      if ((draft[target] || []).length >= destination.capacity) return draft;
+      const next = { ...draft };
+      for (const definition of activeShelfDefinitions) next[definition.id] = (next[definition.id] || []).filter((id) => id !== actionId);
+      next[target] = [...(next[target] || []), actionId];
+      return next;
+    });
+  }
+
+  function reorderShelfDrop(actionId: string, before: string) {
+    setShelfDraft((draft) => {
+      const current = [...(draft[personalizerShelf] || [])];
+      if (!current.includes(actionId) || !current.includes(before) || actionId === before) return draft;
+      const next = current.filter((id) => id !== actionId);
+      next.splice(next.indexOf(before), 0, actionId);
+      return { ...draft, [personalizerShelf]: next };
+    });
+  }
+
   function restoreShelfDefaults() {
     const definition = activePersonalizerDefinition;
+    setShelfReserve((reserve) => [...new Set([...reserve, ...(shelfDraft[definition.id] || [])])]);
+    setImportNotice("Padrão aplicado apenas ao rascunho. As funções substituídas continuam na reserva; salve para confirmar ou cancele.");
     setShelfDraft((currentDraft) => ({
       ...currentDraft,
       [definition.id]: resolveShelfActionIds(undefined, definition, candidateActions),
     }));
   }
 
+  function importPreviousOrganization() {
+    const source = shelfPreferences.archives.find((archive) => archive.id === previousOrganization);
+    if (!source) return;
+    const preview = previewShelfImport(source.profile, activeShelfDefinitions, allowedPreferenceIds, shelfDraft, shelfReserve);
+    setShelfDraft(preview.profile);
+    setShelfReserve(preview.reserve);
+    setImportNotice(`Prévia de ${shelfOrganizationLabel(source.profileKey)}. A origem foi preservada; ${preview.reserve.length} função(ões) ficam na reserva. Salve para aplicar ou cancele.`);
+  }
+
   function saveShelfPreferences() {
-    const allowedIds = new Set(candidateActions.map(homeActionId));
-    const savedProfile = activeShelfDefinitions.reduce<ShelfProfile>((profile, definition) => {
-      profile[definition.id] = [...new Set((shelfDraft[definition.id] || [])
-        .filter((actionId) => allowedIds.has(actionId)))]
-        .slice(0, definition.capacity);
-      return profile;
-    }, {});
-    const nextPreferences: ShelfPreferences = {
-      schemaVersion: 1,
-      updatedAt: new Date().toISOString(),
-      profiles: { ...shelfPreferences.profiles, [activeProfileKey]: savedProfile },
-    };
+    const nextPreferences = saveShelfProfile(shelfPreferences, activeProfileKey, shelfDraft, activeShelfDefinitions, allowedPreferenceIds, shelfReserve);
     setShelfPreferences(nextPreferences);
     if (usuario?.id) {
-      try {
-        localStorage.setItem(`${SHELF_PREFERENCES_PREFIX}:${usuario.id}`, JSON.stringify(nextPreferences));
-      } catch {
-        // A personalização continua válida na sessão mesmo se o armazenamento local estiver indisponível.
-      }
+      const persisted = shelfPreferenceStore.write(usuario.id, nextPreferences);
+      setStorageNotice(persisted ? "Personalização salva. As organizações anteriores e a reserva foram preservadas." : "Preferência e histórico mantidos nesta sessão. O armazenamento do navegador está indisponível.");
     }
     setPersonalizerOpen(false);
     setShelfDraft({});
+    setShelfReserve([]);
+    setImportNotice("");
   }
 
   async function startTravel() {
@@ -1432,125 +1404,25 @@ export default function CardiologySpacesHome() {
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
-  if (!mode) {
-    return (
-      <main className="spaces-choice">
-        <UniverseStars />
-        <div className="spaces-choice__heart" aria-hidden="true"><CoracaoHolografico /></div>
-        <header>
-          <span className="spaces-choice__brand-cluster">
-            <Brand />
-            <GalaxyThemeToggle className="spaces-choice__theme-toggle" />
-          </span>
-          <span className="spaces-user"><UserIdentity usuario={usuario} /></span>
-        </header>
-        <section className="spaces-choice__content">
-          <p className="spaces-eyebrow">ESCOLHA SEU ESPAÇO</p>
-          <h1>Onde {chamamentoNaFrase} vai trabalhar agora?</h1>
-          <p>Escolha o ambiente que acompanha o seu momento. O CorVIA organiza cada universo ao redor do que realmente importa.</p>
-          <div className="spaces-choice__cards">
-            <button type="button" onClick={() => chooseMode("complete")}>
-              <span className="spaces-choice__icon"><Icone nome="favorito" /></span>
-              <strong>Completo</strong><small>Todas as evidências e as três camadas funcionais para um planejamento estruturado.</small>
-              <em>Entrar no ambiente completo <Icone nome="seta" /></em>
-            </button>
-            <button type="button" onClick={() => chooseMode("essential")}>
-              <span className="spaces-choice__icon spaces-choice__icon--essential"><span className="spaces-choice__target" /></span>
-              <strong>Essencial</strong><small>A ciência precisa, com o ativo que foca o essencial para decisões com precisão.</small>
-              <em>Entrar no ambiente essencial <Icone nome="seta" /></em>
-            </button>
-            <button type="button" className="spaces-choice__science" onClick={() => chooseMode("scientific")}>
-              <span className="spaces-choice__icon"><Icone nome="conhecimento" /></span>
-              <strong>Ciência & Ensino</strong><small>Conteúdos, estudos e ensino, conectando ciência e prática para formar e transformar.</small>
-              <em>Entrar no ambiente científico <Icone nome="seta" /></em>
-            </button>
-          </div>
-        </section>
-        <footer>O ambiente muda. <strong>{chamamentoNoInicio} continua no centro.</strong></footer>
-      </main>
-    );
-  }
-
   return (
-    <main className={`spaces-home spaces-home--${activeSpace.tone} spaces-home--mode-${mode}${mode === "scientific" ? " spaces-home--scientific" : ""}`}>
-      <UniverseStars />
-      <div className="spaces-home__heart" aria-hidden="true"><CoracaoHolografico /></div>
-      <header className="spaces-home__topbar">
-        <div className="spaces-home__brand-cluster">
-          <button type="button" className="spaces-brand-button" onClick={resetMode} aria-label="Voltar à escolha de experiência"><Brand /></button>
-          <GalaxyThemeToggle />
+    <main className={`atelier-home spaces-home--mode-${mode}`} data-space={activeSpace.id}>
+      <AtelierHomeView spaces={availableSpaces} active={activeSpace} mode={mode} interior={interior}
+        onSelect={(id) => { setSelectedSpace(id as SpaceId); setPreviewSpace(null); }}
+        onEnter={() => {
+          if (!writeAtelierContext(usuario?.id, { space: activeSpace.id as FunctionalSpace, mode })) setStorageNotice("Seu espaço será mantido apenas nesta sessão.");
+          setSearchParams({ espaco: activeSpace.id, modo: mode });
+        }} onBack={resetMode}
+        onMode={chooseMode} onCatalog={() => setCatalogOpen(true)} onPersonalize={() => openShelfPersonalizer()}
+        query={globalQuery} onQuery={setGlobalQuery} onSearch={searchEverything} searchRef={globalSearchRef}
+        identity={<UserIdentity usuario={usuario} />}>
+        <div className="atelier-shelves">
+          {activeShelfDefinitions.filter((definition) => (resolvedShelfActions[definition.id] || []).length > 0).map((definition) => <section key={definition.id} className="atelier-shelf" aria-label={shelfLabel(mode, definition.id)}>
+            {(resolvedShelfActions[definition.id] || []).map((action) => <ActionLink key={homeActionId(action)} action={{ ...action, featured: action.to === "/exames-ia" || action.featured }} />)}
+          </section>)}
+          {!activeShelfDefinitions.some((definition) => (resolvedShelfActions[definition.id] || []).length > 0) && <div className="atelier-empty"><p>Organize este espaço do seu jeito.</p><button type="button" onClick={() => openShelfPersonalizer()}>Adicionar funções</button></div>}
         </div>
-        <form className="spaces-everything-search" role="search" onSubmit={searchEverything}>
-          <Icone nome="busca" />
-          <input ref={globalSearchRef} value={globalQuery} onChange={(event) => setGlobalQuery(event.target.value)} placeholder="Tudo com Tudo — relações, evidências e funções" aria-label="Buscar no Tudo com Tudo" />
-          <kbd>⌘ K</kbd>
-          <button type="submit" aria-label="Buscar no Tudo com Tudo"><Icone nome="seta" /></button>
-        </form>
-        <nav aria-label="Modo de trabalho">
-          <button className={mode === "complete" ? "is-active" : ""} onClick={() => chooseMode("complete")}>Completo</button>
-          <button className={mode === "essential" ? "is-active" : ""} onClick={() => chooseMode("essential")}>Essencial</button>
-          <button className={mode === "scientific" ? "is-active" : ""} onClick={() => chooseMode("scientific")}>Ciência & Ensino</button>
-        </nav>
-        <Link to="/minha-conta" className="spaces-user"><UserIdentity usuario={usuario} chevron /></Link>
-      </header>
-
-      <aside className="spaces-context-rail" aria-label="Navegação entre espaços">
-        <span><small>{mode === "scientific" ? "MINHAS" : "MEUS"}</small><strong>{mode === "scientific" ? "JORNADAS" : "ESPAÇOS"}</strong></span>
-        <div className="spaces-context-rail__spaces">
-          {availableSpaces.map((space) => (
-            <button
-              key={`rail-${space.id}`}
-              type="button"
-              className={`spaces-context-rail__space spaces-context-rail__space--${space.tone}${selectedSpace === space.id ? " is-active" : ""}`}
-              onClick={() => { setSelectedSpace(space.id); setPreviewSpace(null); }}
-              aria-label={`Abrir ${space.label}`}
-              aria-pressed={selectedSpace === space.id}
-            >
-              <Icone nome={space.icon} /><span>{space.label}</span><i aria-hidden="true" />
-            </button>
-          ))}
-        </div>
-        <button type="button" className="spaces-context-rail__all" onClick={() => setCatalogOpen(true)}><Icone nome="mais" /><span>Todas as funções</span></button>
-        <button type="button" className="spaces-context-rail__personalize" onClick={() => openShelfPersonalizer()}><Icone nome="configuracao" /><span>Personalizar prateleiras</span></button>
-      </aside>
-
-      <section className="spaces-workspace">
-        <header className="spaces-workspace__greeting">
-          <h1>{question}</h1>
-          <span>{mode === "scientific" ? "Escolha uma jornada científica. O conhecimento continua conectado." : "Escolha o ambiente. A interface reorganiza as prioridades sem esconder o CorVIA."}</span>
-        </header>
-
-        <div className="spaces-doors" onMouseLeave={() => setPreviewSpace(null)}>
-          {availableSpaces.map((space) => {
-            const active = activeSpace.id === space.id;
-            const preview = previewSpace === space.id && !active;
-            return (
-              <button key={space.id} type="button" className={`spaces-door spaces-door--${space.tone}${active ? " is-active" : ""}${preview ? " is-preview" : ""}`} data-state={active ? "active" : preview ? "preview" : "inactive"} onMouseEnter={() => setPreviewSpace(space.id)} onFocus={() => setPreviewSpace(space.id)} onBlur={() => setPreviewSpace(null)} onClick={() => { setSelectedSpace(space.id); setPreviewSpace(null); }} aria-label={`${space.label}. ${space.description}`} aria-pressed={selectedSpace === space.id}>
-                <span><Icone nome={space.icon} />{space.label}</span>
-                <i aria-hidden="true"><CardiologySpaceScene space={space.id} /></i>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="spaces-title"><span>{mode === "scientific" ? "Minha jornada" : "Meu espaço"}</span> <strong>{activeSpace.label}</strong><small>{activeSpace.description}</small></div>
-
-        <div className="spaces-layers" aria-live="polite">
-          <section className="spaces-layer spaces-layer--now">
-            <header><span>AGORA</span><strong>{activeSpace.label === "Hospital" ? "Round hospitalar · prioridades" : mode === "scientific" ? `Jornada para ${activeSpace.label.toLocaleLowerCase("pt-BR")}` : `Rotina de ${activeSpace.label.toLocaleLowerCase("pt-BR")}`}</strong><button type="button" className="spaces-layer__edit" onClick={() => openShelfPersonalizer("now")} aria-label="Personalizar prateleira Agora"><Icone nome="configuracao" /></button></header>
-            <div>{(resolvedShelfActions.now || []).map((action) => <ActionLink key={`${activeSpace.id}-now-${homeActionId(action)}`} action={action} />)}</div>
-          </section>
-          {mode !== "essential" ? <>
-            <section className="spaces-layer spaces-layer--next"><header><span>{mode === "scientific" ? "APROFUNDAR" : "EM SEGUIDA"}</span><button type="button" className="spaces-layer__edit" onClick={() => openShelfPersonalizer("next")} aria-label={`Personalizar prateleira ${mode === "scientific" ? "Aprofundar" : "Em seguida"}`}><Icone nome="configuracao" /></button></header><div>{(resolvedShelfActions.next || []).map((action) => <ActionLink key={`${activeSpace.id}-next-${homeActionId(action)}`} action={action} />)}</div></section>
-            <section className="spaces-layer spaces-layer--refs"><header><span>{mode === "scientific" ? "CONEXÕES DO CONHECIMENTO" : "REFERÊNCIAS DO ESPAÇO"}</span><button type="button" className="spaces-layer__edit" onClick={() => openShelfPersonalizer("references")} aria-label={`Personalizar ${mode === "scientific" ? "conexões do conhecimento" : "referências do espaço"}`}><Icone nome="configuracao" /></button></header><div>{(resolvedShelfActions.references || []).map((action) => <ActionLink key={`${activeSpace.id}-ref-${homeActionId(action)}`} action={action} />)}</div></section>
-          </> : <>
-            <section className="spaces-layer spaces-layer--essential"><header><span>MEUS ESSENCIAIS</span><button type="button" className="spaces-layer__edit" onClick={() => openShelfPersonalizer("essential")} aria-label="Personalizar Meus essenciais"><Icone nome="configuracao" /></button></header><div>{(resolvedShelfActions.essential || []).map((action) => <ActionLink key={`essential-${activeSpace.id}-${homeActionId(action)}`} action={action} />)}</div></section>
-            <button type="button" className="spaces-personalize" onClick={() => openShelfPersonalizer("essential")}><Icone nome="configuracao" /> Personalizar prateleiras</button>
-          </>}
-        </div>
-        <div className="spaces-doctor"><Icone nome="conta" /><span>{nomeComTratamento(usuario, true)}</span><small>{mode === "scientific" ? "Minha jornada ativa" : "Meu espaço ativo"}</small></div>
-      </section>
-
+        <div className="atelier-space__note"><span>Seu espaço. Seu jeito de trabalhar.</span><Link to="/assistente"><Icone nome="assistente" />Apoio CorVIA</Link></div>
+        <details className="atelier-day"><summary><Icone nome="agenda" />{mode === "scientific" ? "Sua jornada científica" : "Seu dia e deslocamento"}<Icone nome="chevron" /></summary>
       <aside className="spaces-day">
         <ClinicalChangeApprovalNotice />
         <h2>{mode === "scientific" ? "Minha jornada científica" : "Meu dia entre espaços"}</h2>
@@ -1578,24 +1450,10 @@ export default function CardiologySpacesHome() {
         </>}
       </aside>
 
-      <nav className="spaces-dock" aria-label="Ações globais">
-        {mode === "scientific" ? <>
-          <Link to="/busca?modo=tudo-com-tudo"><Icone nome="sincronizar" /><span>Tudo com Tudo</span></Link>
-          <Link to="/biblioteca"><Icone nome="conhecimento" /><span>Biblioteca</span></Link>
-          <Link to="/evidencias"><Icone nome="evidencia" /><span>Evidências</span></Link>
-          <Link to="/trilhas"><Icone nome="seta" /><span>Trilhas</span></Link>
-          <Link to="/documentos-cientificos-ia"><Icone nome="assistente" /><span>Documento IA</span></Link>
-          <Link to="/apresentacao"><Icone nome="documento" /><span>Apresentar</span></Link>
-        </> : <>
-          <Link to="/receituario"><Icone nome="prescricao" /><span>Prescrever</span></Link>
-          <Link to="/documentos"><Icone nome="clinica" /><span>Solicitar exames</span></Link>
-          <Link to="/prontuario"><Icone nome="pacientes" /><span>Prontuário</span></Link>
-          <Link to="/documentos"><Icone nome="documento" /><span>Documentos</span></Link>
-          <Link to="/busca?modo=tudo-com-tudo"><Icone nome="sincronizar" /><span>Tudo com Tudo</span></Link>
-          <Link to="/assistente"><Icone nome="assistente" /><span>Apoio CorVIA</span></Link>
-        </>}
-      </nav>
-      <p className="spaces-motto">{mode === "scientific" ? <>O conhecimento <strong>se conecta.</strong> {chamamentoNoInicio} <strong>conduz a jornada.</strong></> : <>O ambiente <strong>muda.</strong> {chamamentoNoInicio} <strong>continua no centro.</strong></>}</p>
+
+        </details>
+      </AtelierHomeView>
+      {storageNotice && <p className="atelier-storage-notice" role="status">{storageNotice}</p>}
 
       {catalogOpen && <div className="spaces-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setCatalogOpen(false); }}><aside ref={catalogRef} className="spaces-catalog" role="dialog" aria-modal="true" aria-label="Todas as funções"><header><div><Brand /><h2>Todas as funções, um único sistema.</h2></div><button type="button" onClick={() => setCatalogOpen(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header><label><Icone nome="busca" /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Buscar função" /></label><div>{visibleCatalog.map((section) => <section key={section.title}><h3>{section.title}</h3><div>{section.actions.map((action) => <ActionLink key={`${section.title}-${action.to}-${action.label}`} action={action} />)}</div></section>)}</div></aside></div>}
 
@@ -1612,6 +1470,27 @@ export default function CardiologySpacesHome() {
           <nav className="spaces-personalizer__tabs" aria-label="Prateleiras disponíveis">
             {activeShelfDefinitions.map((definition) => <button type="button" key={`shelf-tab-${definition.id}`} className={personalizerShelf === definition.id ? "is-active" : ""} onClick={() => setPersonalizerShelf(definition.id)} aria-pressed={personalizerShelf === definition.id}>{shelfLabel(activeMode, definition.id)}</button>)}
           </nav>
+          {(shelfPreferences.archives.length > 0 || recoverableIds.length > 0) && <details className="atelier-previous-organizations" style={{ margin: "12px 0", minWidth: 0 }}>
+            <summary style={{ minHeight: 44, display: "flex", alignItems: "center", gap: 8, cursor: "pointer", fontSize: 16 }}><Icone nome="relogio" />Organizações anteriores e reserva</summary>
+            <p style={{ lineHeight: 1.5 }}>Seu histórico foi guardado integralmente. Importar altera somente o rascunho; nada será aplicado antes de salvar.</p>
+            {shelfPreferences.archives.length > 0 && <div style={{ display: "grid", gap: 8 }}>
+              <label htmlFor="atelier-previous-organization">Organização anterior</label>
+              <select id="atelier-previous-organization" value={previousOrganization} onChange={(event) => setPreviousOrganization(event.target.value)} style={{ minHeight: 44, width: "100%", minWidth: 0, fontSize: 16 }}>
+                <option value="">Escolha uma organização para visualizar</option>
+                {shelfPreferences.archives.map((archive, index) => <option key={archive.id} value={archive.id}>{shelfOrganizationLabel(archive.profileKey)} · versão {shelfPreferences.archives.length - index} · {shelfProfileItems(archive.profile).length} funções</option>)}
+              </select>
+              <button type="button" disabled={!previousOrganization} onClick={importPreviousOrganization} style={{ minHeight: 44, padding: "10px 12px", fontSize: 16 }}>Pré-visualizar nesta organização</button>
+            </div>}
+            {recoverableIds.length > 0 && <section aria-label="Funções preservadas na reserva" style={{ marginTop: 16 }}>
+              <h3>Reserva · {recoverableIds.length}</h3><p>Adicione à prateleira atual quando houver espaço. Funções sem acesso continuam guardadas, sem liberar permissões.</p>
+              <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: 8 }}>{recoverableIds.map((id) => {
+                const action = HOME_ACTIONS_BY_ID.get(id);
+                const allowed = allowedPreferenceIds.has(id);
+                return <li key={id} style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 8, minWidth: 0 }}><span style={{ flex: "1 1 160px", overflowWrap: "anywhere" }}>{action?.label || "Função anterior indisponível"}{!allowed && <small style={{ display: "block" }}>Indisponível para o acesso atual; preservada no histórico.</small>}</span><button type="button" disabled={!allowed || activeDraftIds.length >= activePersonalizerDefinition.capacity} onClick={() => toggleShelfAction(id)} style={{ minHeight: 44, padding: "10px 12px", fontSize: 16 }}>Adicionar à {shelfLabel(mode, activePersonalizerDefinition.id).toLocaleLowerCase("pt-BR")}</button></li>;
+              })}</ul>
+            </section>}
+          </details>}
+          {importNotice && <p role="status" style={{ lineHeight: 1.5 }}>{importNotice}</p>}
           <div className="spaces-personalizer__count">
             <span>{activeDraftIds.length}/{activePersonalizerDefinition.capacity} selecionadas · ordem de exibição</span>
             <button type="button" onClick={restoreShelfDefaults}>Restaurar esta prateleira</button>
@@ -1620,17 +1499,20 @@ export default function CardiologySpacesHome() {
             {activeDraftIds.map((actionId, index) => {
               const action = HOME_ACTIONS_BY_ID.get(actionId);
               if (!action) return null;
-              return <article key={`ordered-${actionId}`}>
+              return <article key={`ordered-${actionId}`} draggable onDragStart={(event) => { event.dataTransfer.setData("text/plain", actionId); event.dataTransfer.effectAllowed = "move"; }} onDragOver={(event) => event.preventDefault()} onDrop={(event) => { event.preventDefault(); reorderShelfDrop(event.dataTransfer.getData("text/plain"), actionId); }}>
                 <Icone nome={action.icon} />
                 <span><b>{index + 1}</b>{action.label}</span>
                 <div>
+                  <select aria-label={`Mover ${action.label} para outra prateleira`} value={personalizerShelf} onChange={(event) => transferShelfAction(actionId, event.target.value as ShelfId)}>{activeShelfDefinitions.map((definition) => <option key={definition.id} value={definition.id} disabled={definition.id !== personalizerShelf && (shelfDraft[definition.id] || []).length >= definition.capacity}>{shelfLabel(mode, definition.id)}</option>)}</select>
+                  <button type="button" aria-label={`Remover ${action.label}`} onClick={() => toggleShelfAction(actionId)}><Icone nome="fechar" /></button>
                   <button type="button" onClick={() => moveShelfAction(actionId, -1)} disabled={index === 0} aria-label={`Mover ${action.label} para antes`}>↑</button>
                   <button type="button" onClick={() => moveShelfAction(actionId, 1)} disabled={index === activeDraftIds.length - 1} aria-label={`Mover ${action.label} para depois`}>↓</button>
                 </div>
               </article>;
             })}
           </div>
-          <div className="spaces-personalizer__grid">{candidateActions.map((action) => {
+          <label className="atelier-personalizer-search"><Icone nome="busca" /><input aria-label="Buscar função para adicionar" placeholder="Buscar em todas as funções" value={personalizerQuery} onChange={(event) => setPersonalizerQuery(event.target.value)} /></label>
+          <div className="spaces-personalizer__grid">{candidateActions.filter((action, index, list) => list.findIndex((item) => item.to === action.to) === index && normalizeActionSegment(action.label).includes(normalizeActionSegment(personalizerQuery))).map((action) => {
             const actionId = homeActionId(action);
             const checked = activeDraftIds.includes(actionId);
             return <button type="button" key={`pick-${actionId}`} className={checked ? "is-selected" : ""} onClick={() => toggleShelfAction(actionId)} disabled={!checked && activeDraftIds.length >= activePersonalizerDefinition.capacity} aria-pressed={checked}><Icone nome={action.icon} /><span>{action.label}</span><i><Icone nome={checked ? "check" : "adicionar"} /></i></button>;

@@ -111,7 +111,7 @@ export default function PreHomeBrand({
       <div className="prehome-brand__network" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /></div>
 
       <Link to="/" className="prehome-brand__logo" aria-label="CorVIA — página inicial">
-        <img src="/corvia-mark-canonical.svg" alt="" aria-hidden="true" />
+        <img src="/atelier/corvia-mark-atelier.svg" alt="" aria-hidden="true" />
         <span><strong><span className="corvia-word-cor">Cor</span><span className="corvia-via">VIA</span></strong><small>CARDIOLOGY SPACES</small></span>
       </Link>
 

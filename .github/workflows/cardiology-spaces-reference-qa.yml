@@ -160,289 +160,23 @@ jobs:
             await page.goto(`${base}/`, { waitUntil: 'networkidle' });
           }
 
-          async function choose(label, targetLabel) {
-            if (await page.locator('.spaces-choice').isVisible().catch(() => false)) {
-              await page.locator('.spaces-choice__cards button', { hasText: label }).click();
-            } else {
-              await page.locator('.spaces-home__topbar nav button', { hasText: label }).click();
-            }
-            await page.locator('.spaces-home').waitFor({ state: 'visible', timeout: 10000 });
-            if (targetLabel) await page.locator('.spaces-door', { hasText: targetLabel }).click();
-            await page.waitForTimeout(350);
-          }
-
-          async function certifyDefaultPortal(modeLabel, expectedLabel) {
-            const activeLabel = (await page.locator('.spaces-door.is-active').first().textContent())?.trim() || '';
-            if (!activeLabel.includes(expectedLabel)) failures.push(`${modeLabel}: portal padrão deveria ser ${expectedLabel}, encontrado ${activeLabel || 'nenhum'}`);
-          }
-
-          async function certifyClinicalPortalSet() {
-            const labels = await page.locator('.spaces-door').evaluateAll((els) => els.map((el) => el.textContent?.trim() || ''));
-            const expected = ['Consultório','Hospital','Ensino','Pesquisa','Gestão'];
-            if (labels.length !== 5) failures.push(`clinical-portals: esperado 5 portais, encontrado ${labels.length}`);
-            for (const label of expected) if (!labels.some((value) => value.includes(label))) failures.push(`clinical-portals: portal ausente ${label}`);
-          }
-
-          async function activeContext() {
-            return page.evaluate(() => ({
-              active: document.querySelector('.spaces-door.is-active')?.textContent?.trim() || '',
-              selected: document.querySelector('.spaces-door[aria-pressed="true"]')?.textContent?.trim() || '',
-              preview: document.querySelector('.spaces-door.is-preview')?.textContent?.trim() || '',
-              previewState: document.querySelector('.spaces-door.is-preview')?.getAttribute('data-state') || '',
-              title: document.querySelector('.spaces-title strong')?.textContent?.trim() || '',
-              description: document.querySelector('.spaces-title small')?.textContent?.trim() || '',
-            }));
-          }
-
-          async function certifyPreviewInteractions() {
-            const pesquisa = page.locator('.spaces-door', { hasText: 'Pesquisa' });
-            await pesquisa.hover();
-            await page.waitForTimeout(120);
-            const hover = await activeContext();
-            if (!hover.preview.includes('Pesquisa') || hover.previewState !== 'preview' || !hover.active.includes('Consultório') || !hover.selected.includes('Consultório') || hover.title !== 'Consultório') {
-              failures.push(`preview-hover: Pesquisa não recebeu preview local sem trocar a seleção ${JSON.stringify(hover)}`);
-            }
-            await page.locator('.spaces-workspace__greeting').hover();
-            await page.waitForTimeout(120);
-            const afterHover = await activeContext();
-            if (afterHover.preview || !afterHover.active.includes('Consultório') || afterHover.title !== 'Consultório') failures.push(`preview-hover: saída não removeu o preview e preservou Consultório ${JSON.stringify(afterHover)}`);
-
-            const ensino = page.locator('.spaces-door', { hasText: 'Ensino' });
-            await ensino.focus();
-            await page.waitForTimeout(120);
-            const focused = await activeContext();
-            if (!focused.preview.includes('Ensino') || focused.previewState !== 'preview' || !focused.active.includes('Consultório') || !focused.selected.includes('Consultório') || focused.title !== 'Consultório') {
-              failures.push(`preview-focus: Ensino não recebeu preview local sem trocar a seleção ${JSON.stringify(focused)}`);
-            }
-            await page.evaluate(() => document.activeElement instanceof HTMLElement && document.activeElement.blur());
-            await page.waitForTimeout(120);
-            const afterFocus = await activeContext();
-            if (afterFocus.preview || !afterFocus.active.includes('Consultório') || afterFocus.title !== 'Consultório') failures.push(`preview-focus: blur não removeu o preview e preservou Consultório ${JSON.stringify(afterFocus)}`);
-          }
-
-          async function certifySelectedContext(expectedLabel, descriptionPattern) {
-            const ctx = await activeContext();
-            if (!ctx.active.includes(expectedLabel) || ctx.title !== expectedLabel || !descriptionPattern.test(ctx.description)) {
-              failures.push(`selected-context: ${expectedLabel} inconsistente ${JSON.stringify(ctx)}`);
-            }
-          }
-
-          async function measure(mode) {
-            // A troca de modo ativa primeiro o portal padrao e pode ser seguida
-            // imediatamente pela escolha de outro portal. Aguarde a geometria
-            // animada final em vez de capturar um frame intermediario.
-            await page.waitForFunction(() => {
-              const doors = [...document.querySelectorAll('.spaces-door')];
-              const active = doors.find((door) => door.classList.contains('is-active'));
-              const inactive = doors.filter((door) => !door.classList.contains('is-active'));
-              if (!active || inactive.length !== doors.length - 1 || inactive.length === 0) return false;
-              const averageInactiveWidth = inactive.reduce((sum, door) => sum + door.getBoundingClientRect().width, 0) / inactive.length;
-              return active.getBoundingClientRect().width >= averageInactiveWidth * 1.28;
-            }, undefined, { timeout: 2000 });
-            const metrics = await page.evaluate((modeName) => {
-              const q = (selector) => document.querySelector(selector);
-              const qa = (selector) => [...document.querySelectorAll(selector)];
-              const r = (el) => {
-                if (!el) return null;
-                const b = el.getBoundingClientRect();
-                return { x:b.x, y:b.y, width:b.width, height:b.height, right:b.right, bottom:b.bottom };
-              };
-              const doors = qa('.spaces-door').map((el) => ({ label:el.textContent?.trim() || '', active:el.classList.contains('is-active'), rect:r(el), scene:r(el.querySelector('i')) }));
-              return {
-                mode: modeName,
-                viewport: { width:innerWidth, height:innerHeight, scrollWidth:document.documentElement.scrollWidth, scrollHeight:document.documentElement.scrollHeight },
-                root:r(q('.spaces-home')),
-                scientific:q('.spaces-home')?.classList.contains('spaces-home--scientific') || false,
-                brand:r(q('.spaces-brand')),
-                topbar:r(q('.spaces-home__topbar')),
-                greeting:r(q('.spaces-workspace__greeting')),
-                rail:r(q('.spaces-context-rail')),
-                workspace:r(q('.spaces-workspace')),
-                doors,
-                title:r(q('.spaces-title')),
-                titleText:q('.spaces-title')?.textContent?.trim() || '',
-                now:r(q('.spaces-layer--now')),
-                next:r(q('.spaces-layer--next')),
-                refs:r(q('.spaces-layer--refs')),
-                essential:r(q('.spaces-layer--essential')),
-                personalize:r(q('.spaces-personalize')),
-                doctor:r(q('.spaces-doctor')),
-                day:r(q('.spaces-day')),
-                dayTitle:q('.spaces-day h2')?.textContent?.trim() || '',
-                dock:r(q('.spaces-dock')),
-                dockLabels:qa('.spaces-dock span').map((el) => el.textContent?.trim() || ''),
-                layerLabels:qa('.spaces-layer header span').map((el) => el.textContent?.trim() || ''),
-                motto:r(q('.spaces-motto')),
-                heart:r(q('.spaces-home__heart')),
-                tabs:qa('.spaces-home__topbar nav button').map((el) => ({ text:el.textContent?.trim() || '', active:el.classList.contains('is-active') })),
-              };
-            }, mode);
-            modes[mode] = metrics;
-            await page.screenshot({ path:path.join(out, 'screenshots', `${mode}.png`), fullPage:false });
-            return metrics;
-          }
-
-          function certify(m, mode) {
-            const active = m.doors.find((d) => d.active);
-            const inactive = m.doors.filter((d) => !d.active);
-            const avgW = inactive.reduce((s,d) => s + (d.rect?.width || 0), 0) / Math.max(1,inactive.length);
-            const avgH = inactive.reduce((s,d) => s + (d.scene?.height || 0), 0) / Math.max(1,inactive.length);
-            if (m.viewport.scrollWidth > m.viewport.width + 8) failures.push(`${mode}: overflow horizontal ${m.viewport.scrollWidth}>${m.viewport.width}`);
-            if (m.doors.length !== 5) failures.push(`${mode}: esperado 5 portais, encontrado ${m.doors.length}`);
-            if (!active?.rect || active.rect.width < avgW * 1.28) failures.push(`${mode}: portal ativo não domina em largura (${active?.rect?.width || 0} vs média ${avgW.toFixed(1)})`);
-            if (!active?.scene || active.scene.height < avgH * 1.18) failures.push(`${mode}: portal ativo não domina em altura (${active?.scene?.height || 0} vs média ${avgH.toFixed(1)})`);
-            if (!m.rail || m.rail.width < 82 || m.rail.width > 125 || m.rail.x > 150) failures.push(`${mode}: rail fora da geometria aprovada ${JSON.stringify(m.rail)}`);
-            if (!m.day || m.day.width < 160 || m.day.width > 225 || m.day.right < 1534) failures.push(`${mode}: painel do dia fora da coluna direita ${JSON.stringify(m.day)}`);
-            if (m.rail && m.day && (Math.abs(m.rail.y - m.day.y) > 2 || Math.abs(m.rail.bottom - m.day.bottom) > 2)) failures.push(`${mode}: painéis laterais perderam a simetria aprovada ${JSON.stringify({ rail:m.rail, day:m.day })}`);
-            // Referência atualizada em 03/09/2026 (PR #810, aprovado: remoção do
-            // cartão "Dr. ... Meu espaço/Minha jornada ativa" e da última linha do
-            // grid de `.spaces-workspace`, que ele reservava — vira 0 !important em
-            // cardiology-spaces-pending-fixes.css). Medido ao vivo, antes/depois do
-            // PR (docker compose + build real + Playwright): `day`/`rail` NÃO mudam
-            // de posição — mas não por terem altura fixa (achado de revisão
-            // adversarial: em >=901px elas são `height:auto` + `margin-bottom:
-            // var(--spaces-side-end)`, definido só pelo grid EXTERNO `.spaces-home`,
-            // que não depende de nada dentro de `.spaces-workspace`). `refs` (a
-            // terceira prancha, dentro de `.spaces-layers`, numa linha `fr` do
-            // grid interno) é quem CRESCE para absorver o espaço que a linha zerada
-            // liberou, terminando exatamente onde `.spaces-dock` começa — `dock.y`
-            // também vem só do grid externo, logo já estava na mesma posição antes
-            // e depois do PR. É arquitetural (vale nos 7 viewports da matriz
-            // responsiva, confirmado por revisão adversarial), não coincidência de
-            // um viewport específico. A invariante real que importa é não sobrepor
-            // o dock, não mais casar com `day`.
-            if (m.refs && m.dock && Math.abs(m.refs.bottom - m.dock.y) > 2) failures.push(`${mode}: terceira prancha não termina exatamente onde o dock começa ${JSON.stringify({ refs:m.refs, dock:m.dock })}`);
-            if (!m.now || m.now.width < 760) failures.push(`${mode}: camada AGORA estreita ${JSON.stringify(m.now)}`);
-            const expectedDockBottom = m.viewport.height - 77;
-            if (!m.dock || m.dock.width < 1450 || Math.abs(m.dock.bottom - expectedDockBottom) > 4) failures.push(`${mode}: dock fora da base proporcional aprovada (esperado ${expectedDockBottom}) ${JSON.stringify(m.dock)}`);
-            if (!m.motto || (m.dock && m.motto.y < m.dock.bottom) || m.motto.bottom > m.viewport.height) failures.push(`${mode}: frase inferior fora da faixa reservada ${JSON.stringify(m.motto)}`);
-            if (!m.heart || m.heart.width < 500) failures.push(`${mode}: coração holográfico ausente/pequeno ${JSON.stringify(m.heart)}`);
-            if (!m.title || Math.abs((m.title.x + m.title.width / 2) - 800) > 165) failures.push(`${mode}: título do espaço fora do eixo central ${JSON.stringify(m.title)}`);
-            const expectedTab = mode === 'complete' ? 'Completo' : mode === 'essential' ? 'Essencial' : 'Ciência & Ensino';
-            if (!m.tabs.some((t) => t.text === expectedTab && t.active)) failures.push(`${mode}: aba correta não está ativa`);
-            if (mode === 'complete' && (!m.next || !m.refs)) failures.push('complete: Em seguida/Referências ausentes');
-            if (mode === 'essential' && (!m.essential || !m.personalize || m.next || m.refs)) failures.push('essential: composição de essenciais incorreta');
-            if (mode === 'scientific') {
-              const expectedDoors = ['Descobrir','Evidências','Aprender','Ensinar','Produzir'];
-              for (const label of expectedDoors) if (!m.doors.some((d) => d.label.includes(label))) failures.push(`scientific: jornada ausente ${label}`);
-              if (!m.scientific || !m.next || !m.refs || m.essential) failures.push('scientific: composição científica incorreta');
-              if (!m.titleText.includes('Minha jornada')) failures.push(`scientific: título incorreto ${m.titleText}`);
-              if (!m.layerLabels.includes('APROFUNDAR') || !m.layerLabels.includes('CONEXÕES DO CONHECIMENTO')) failures.push(`scientific: camadas científicas incompletas ${JSON.stringify(m.layerLabels)}`);
-              if (m.dayTitle !== 'Minha jornada científica') failures.push(`scientific: painel lateral incorreto ${m.dayTitle}`);
-              const expectedDock = ['Tudo com Tudo','Biblioteca','Evidências','Trilhas','Documento IA','Apresentar'];
-              for (const label of expectedDock) if (!m.dockLabels.includes(label)) failures.push(`scientific: ação global ausente ${label}`);
-            }
-          }
-
-          async function certifyResponsiveMatrix() {
-            const viewports = [
-              { name:'wide-2560x1440', width:2560, height:1440 },
-              { name:'wide-1920x1080', width:1920, height:1080 },
-              { name:'zoom-1536x700', width:1536, height:700 },
-              { name:'windows-1366x768', width:1366, height:768 },
-              { name:'compact-1280x720', width:1280, height:720 },
-              { name:'low-1280x600', width:1280, height:600 },
-              { name:'narrow-1024x768', width:1024, height:768 },
-            ];
-
-            for (const viewport of viewports) {
-              await page.setViewportSize({ width:viewport.width, height:viewport.height });
-              await page.waitForTimeout(180);
-              const compact = await page.evaluate(() => {
-              const q = (selector) => document.querySelector(selector);
-              const qa = (selector) => [...document.querySelectorAll(selector)];
-              const r = (el) => {
-                if (!el) return null;
-                const b = el.getBoundingClientRect();
-                return { x:b.x, y:b.y, width:b.width, height:b.height, right:b.right, bottom:b.bottom };
-              };
-              const workspace = q('.spaces-workspace');
-              return {
-                viewport: { width:innerWidth, height:innerHeight, scrollWidth:document.documentElement.scrollWidth, scrollHeight:document.documentElement.scrollHeight },
-                root:r(q('.spaces-home')),
-                search:r(q('.spaces-everything-search')),
-                rail:r(q('.spaces-context-rail')),
-                workspace:r(workspace),
-                workspaceScroll:workspace ? { width:workspace.scrollWidth, clientWidth:workspace.clientWidth, height:workspace.scrollHeight, clientHeight:workspace.clientHeight } : null,
-                greeting:r(q('.spaces-workspace__greeting')),
-                heading:r(q('.spaces-workspace__greeting h1')),
-                headingText:q('.spaces-workspace__greeting h1')?.textContent?.trim() || '',
-                refs:r(q('.spaces-layer--refs')),
-                doctor:r(q('.spaces-doctor')),
-                day:r(q('.spaces-day')),
-                dock:r(q('.spaces-dock')),
-                motto:r(q('.spaces-motto')),
-                doors:qa('.spaces-door').map((el) => ({ rect:r(el), active:el.classList.contains('is-active') })),
-              };
-            });
-              modes[`complete-${viewport.name}`] = compact;
-              await page.screenshot({ path:path.join(out, 'screenshots', `complete-${viewport.name}.png`), fullPage:false });
-              const label = `complete-${viewport.name}`;
-              if (compact.viewport.scrollWidth > compact.viewport.width + 2) failures.push(`${label}: overflow horizontal ${compact.viewport.scrollWidth}>${compact.viewport.width}`);
-              if (compact.viewport.scrollHeight > compact.viewport.height + 2) failures.push(`${label}: conteúdo vertical fora da viewport ${compact.viewport.scrollHeight}>${compact.viewport.height}`);
-              if (!compact.root || compact.root.y < -1 || compact.root.bottom > compact.viewport.height + 1) failures.push(`${label}: raiz fora da área útil ${JSON.stringify(compact.root)}`);
-            if (!compact.rail || !compact.day || !compact.workspace || !compact.refs) {
-                failures.push(`${label}: composição incompleta ${JSON.stringify(compact)}`);
-            } else {
-                if (compact.day.x < compact.workspace.right - 1) failures.push(`${label}: Meu dia não ocupa a lateral direita ${JSON.stringify(compact.day)}`);
-                if (Math.abs(compact.rail.y - compact.day.y) > 1.5) failures.push(`${label}: laterais começam em alturas diferentes ${JSON.stringify({ rail:compact.rail, day:compact.day })}`);
-                if (Math.abs(compact.rail.bottom - compact.day.bottom) > 1.5) failures.push(`${label}: laterais perderam a simetria aprovada ${JSON.stringify({ rail:compact.rail, day:compact.day })}`);
-                // Mesma referência atualizada da checagem desktop (ver certify(), e
-                // o comentário lá com o mecanismo exato confirmado por revisão
-                // adversarial) — desde o PR #810 (aprovado), a terceira prancha
-                // cresce para preencher o espaço que o cartão do médico ocupava e
-                // termina exatamente onde o dock começa; `day`/`rail` não
-                // acompanham esse crescimento porque sua posição vem do grid
-                // EXTERNO (`.spaces-home`), não do grid interno que mudou.
-                if (compact.dock && Math.abs(compact.refs.bottom - compact.dock.y) > 1.5) failures.push(`${label}: terceira prancha não termina exatamente onde o dock começa ${JSON.stringify({ refs:compact.refs, dock:compact.dock })}`);
-            }
-              if (!compact.search || !compact.heading || compact.search.bottom > compact.heading.y + 1) failures.push(`${label}: busca colide com a pergunta ${JSON.stringify({ search:compact.search, heading:compact.heading })}`);
-              if (!/^Onde .+ vai trabalhar agora\?$/.test(compact.headingText)) failures.push(`${label}: pergunta profissional inválida ${compact.headingText}`);
-              // Checagem antiga (`compact.doctor`) ficou obsoleta com a remoção
-              // aprovada do cartão "Dr. ... Meu espaço/Minha jornada ativa" (PR
-              // #810) — `.spaces-doctor` está sempre oculto agora, então
-              // `compact.doctor` é sempre um retângulo zerado; a checagem real que
-              // importa (a prancha de referências não invade o dock) já está
-              // coberta acima, comparando refs.bottom com dock.y diretamente.
-              if (!compact.dock || !compact.motto || compact.motto.y < compact.dock.bottom - 1 || compact.motto.bottom > compact.viewport.height + 1) failures.push(`${label}: dock e frase inferior colidem ${JSON.stringify({ dock:compact.dock, motto:compact.motto })}`);
-              if (compact.workspaceScroll && (compact.workspaceScroll.width > compact.workspaceScroll.clientWidth + 2 || compact.workspaceScroll.height > compact.workspaceScroll.clientHeight + 2)) failures.push(`${label}: workspace transborda ${JSON.stringify(compact.workspaceScroll)}`);
-              for (let index=1; index<compact.doors.length; index+=1) {
-                const previous=compact.doors[index-1].rect;
-                const current=compact.doors[index].rect;
-                if (!previous || !current || Math.abs(current.x - previous.right) > 1.5) failures.push(`${label}: portais não estão contíguos ${JSON.stringify({ previous, current })}`);
-              }
-            }
-            await page.setViewportSize({ width: 1600, height: 900 });
-            await page.waitForTimeout(250);
-          }
-
+          const { certifyAtelierReference } = await import(
+            new URL('file://' + path.join(process.env.GITHUB_WORKSPACE, 'frontend/scripts/atelier-reference.mjs')).href
+          );
           try {
             await login();
-            await choose('Completo');
-            await certifyDefaultPortal('complete-default', 'Consultório');
-            await certifyClinicalPortalSet();
-            await certifyPreviewInteractions();
-            await page.locator('.spaces-door', { hasText: 'Hospital' }).click();
-            await page.waitForTimeout(350);
-            await certifySelectedContext('Hospital', /rotina hospitalar/i);
-            certify(await measure('complete'), 'complete');
-            await certifyResponsiveMatrix();
-
-            await choose('Essencial');
-            await certifyDefaultPortal('essential-default', 'Consultório');
-            await certifyClinicalPortalSet();
-            await page.locator('.spaces-door', { hasText: 'Hospital' }).click();
-            await page.waitForTimeout(350);
-            await certifySelectedContext('Hospital', /rotina hospitalar/i);
-            certify(await measure('essential'), 'essential');
-
-            await choose('Ciência & Ensino', 'Evidências');
-            certify(await measure('scientific'), 'scientific');
-            fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify({ failures, modes }, null, 2));
-            if (failures.length) throw new Error(failures.join('\n'));
+            await certifyAtelierReference({ page, base, out, failures });
+          } catch(error) {
+            failures.push(String(error?.stack || error));
           } finally {
+            fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify({ design: 'atelier', failures }, null, 2));
             await browser.close();
           }
+          if(failures.length) {
+            console.error(JSON.stringify(failures, null, 2));
+            process.exitCode = 1;
+          }
+
           JS
           node /tmp/corvia-spaces-reference-qa/capture.mjs
 
@@ -453,6 +187,8 @@ jobs:
           name: cardiology-spaces-approved-reference
           path: |
             reference-qa/screenshots/*.png
+            reference-qa/*.png
+            reference-qa/atelier-reference.json
             reference-qa/report.json
           if-no-files-found: warn
 

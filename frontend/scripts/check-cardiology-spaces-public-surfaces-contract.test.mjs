@@ -7,6 +7,7 @@ const app = read("src/App.tsx");
 const frame = read("src/components/PublicCardiologyFrame.tsx");
 const legalFrame = read("src/components/LegalDocumentFrame.tsx");
 const styles = read("src/styles/cardiology-spaces-public.css");
+const atelierStyles = read("src/styles/corvia-atelier-public.css");
 const entrar = read("src/pages/Entrar.tsx");
 const auth = read("src/lib/auth.tsx");
 const vite = read("vite.config.ts");
@@ -50,8 +51,9 @@ test("public pages share one semantic Cardiology Spaces frame", () => {
     assert.match(publicPages[page], /<LegalDocumentFrame/);
   }
   assert.match(publicPages.produto, /import \{ PublicCorviaBrand \}/);
-  assert.match(frame, /className="public-space__stars"/);
-  assert.match(frame, /className="corvia-via"/);
+  assert.match(frame, /corvia-atelier-public/);
+  assert.match(frame, /src="\/atelier\/corvia-logo-atelier\.svg"/);
+  assert.doesNotMatch(frame, /public-space__stars|UniverseStars|<canvas/);
   assert.match(frame, /className="public-space__skip" href="#conteudo-principal"/);
   assert.match(frame, /<main className="public-space__workspace" id="conteudo-principal" tabIndex=\{-1\}>/);
   assert.match(frame, /<section className="public-space__context" aria-labelledby="public-space-title">/);
@@ -60,8 +62,8 @@ test("public pages share one semantic Cardiology Spaces frame", () => {
   assert.match(publicPages.produto, /<main id="conteudo-principal" tabIndex=\{-1\}>/);
 });
 
-test("login approved artwork stays isolated from the new public frame", () => {
-  assert.match(entrar, /cardiology-spaces-login\.css/);
+test("login Atelier styling stays isolated from the shared public forms", () => {
+  assert.match(entrar, /corvia-atelier-login\.css/);
   assert.doesNotMatch(entrar, /PublicCardiologyFrame|PublicCorviaBrand|public-space__/);
 });
 
@@ -102,7 +104,7 @@ test("form and validation transport contracts were not rewritten", () => {
 
 test("the product presentation exposes five distinct optimized spaces", () => {
   for (const space of ["consultorio", "hospital", "ensino", "pesquisa", "gestao"]) {
-    assert.match(publicPages.produto, new RegExp(`/spaces/corvia-room-${space}-640\\.webp`));
+    assert.match(publicPages.produto, new RegExp(`/atelier/atelier-${space}\\.webp`));
     assert.match(publicPages.produto, new RegExp(`id: \"${space}\"`));
   }
   assert.match(publicPages.produto, /Completo/);
@@ -110,11 +112,21 @@ test("the product presentation exposes five distinct optimized spaces", () => {
   assert.match(publicPages.produto, /Ciência & Ensino/);
 });
 
-test("optimized Cardiology Spaces scenes receive an offline runtime cache", () => {
-  assert.match(vite, /\/spaces\\\/\[\^\/\]\+\\\.\(\?:webp\|jpg\)\$/);
+test("architectural scenes receive a same-origin bounded offline runtime cache", () => {
+  assert.match(vite, /url\.origin === self\.location\.origin/);
+  const literal = vite.match(/&&\s*(\/\^[^\n]+?\/)\.test\(url\.pathname\)/)?.[1];
+  assert.ok(literal, "a regra de cache de cenas precisa ser identificável");
+  const scenePattern = new RegExp(literal.slice(1, -1));
+  for (const path of ["/atelier/atelier-entrance.webp", "/atelier/atelier-hospital-small.webp", "/spaces/corvia-room-hospital.jpg"]) {
+    assert.ok(scenePattern.test(path), path + " precisa funcionar no cache de cenas");
+  }
+  for (const path of ["/api/agenda/appointments", "/api/documentos", "/atelier/unsafe.html"]) {
+    assert.ok(!scenePattern.test(path), path + " não pode entrar no cache público de cenas");
+  }
   assert.match(vite, /handler: "StaleWhileRevalidate"/);
   assert.match(vite, /cacheName: "corvia-space-scenes-v1"/);
-  assert.match(vite, /maxEntries: 15/);
+  assert.match(vite, /maxEntries: 30/);
+  assert.match(vite, /cacheableResponse: \{ statuses: \[200\] \}/);
 });
 
 test("public CSS keeps geometry, accessibility and responsive constraints", () => {
@@ -127,6 +139,10 @@ test("public CSS keeps geometry, accessibility and responsive constraints", () =
   assert.match(styles, /@media \(max-height: 700px\) and \(min-width: 901px\)/);
   assert.match(styles, /@media \(prefers-reduced-motion: reduce\)/);
   assert.doesNotMatch(styles, /clip-path/);
+  assert.match(frame, /import "\.\.\/styles\/corvia-atelier-public\.css"/);
+  assert.match(atelierStyles, /\.corvia-atelier-public/);
+  assert.match(atelierStyles, /focus-visible/);
+  assert.match(atelierStyles, /prefers-reduced-motion/);
 });
 
 test("legal documents preserve the authenticated layout", () => {

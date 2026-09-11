@@ -29,10 +29,27 @@ exigir(fs.existsSync(lightCssPath), "cardiology-spaces-light-mode.css precisa ex
 exigir(fs.existsSync(assistantCssPath), "clinical-assistant-command.css precisa existir.");
 exigir(fs.existsSync(assistantPagePath), "Assistente.tsx precisa existir.");
 exigir(main.includes(importContrato), "main.tsx precisa importar o contrato global de contraste.");
-exigir(importsCss.at(-2) === importContrato,
+exigir(importsCss.indexOf(importTemaClaro) === importsCss.indexOf(importContrato) + 1,
   "o contrato escuro de contraste precisa permanecer imediatamente antes do tema claro.");
-exigir(importsCss.at(-1) === importTemaClaro,
-  "o tema claro isolado precisa ser a última folha CSS para sobrepor controles escuros com segurança.");
+const atelierImports = [
+  'import "./styles/corvia-atelier.css";',
+  'import "./styles/corvia-atelier-content.css";',
+  'import "./styles/corvia-atelier-surfaces.css";',
+];
+const afterLegacy = importsCss.slice(importsCss.indexOf(importTemaClaro) + 1);
+exigir(afterLegacy.length >= 2 && afterLegacy.every((value, index) => value === atelierImports[index]),
+  "somente as camadas Atelier escopadas podem suceder os contratos legados, na ordem navegação, conteúdo e superfícies.");
+const atelierContent = fs.readFileSync(path.join(raiz, "src/styles/corvia-atelier-content.css"), "utf8");
+for (const trecho of [
+  'html[data-corvia-design="atelier"] #root .cv-app .cv-content',
+  '--atelier-ink: #24343a',
+  'background: #fffefa !important',
+  '-webkit-text-fill-color: #24343a !important',
+  'caret-color: #24343a !important',
+  ':-webkit-autofill',
+  '-webkit-box-shadow: 0 0 0 1000px #fffefa inset !important',
+  '::placeholder { color: #6b746d !important; -webkit-text-fill-color: #6b746d !important',
+]) exigir(atelierContent.includes(trecho), `contrato Atelier incompleto: falta ${trecho}`);
 
 for (const trecho of [
   ".clinical-os input:not([type=\"checkbox\"])",

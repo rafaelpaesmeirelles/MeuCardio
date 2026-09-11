@@ -27,14 +27,17 @@ from app.services.professional_profile import professional_name, workplace_lines
 
 from .apresentacao import MARCADORES_POR_PAGINA, _fragmentar, _limpar, _secoes
 from .pdf import arvore as arv
+from .pdf import marca
 from .pdf.marca import LOGO, logo_disponivel
 
-NAVY = RGBColor(0x0B, 0x2E, 0x45)
-TEAL = RGBColor(0x1C, 0x72, 0x93)
-VERMELHO = RGBColor(0xD5, 0x00, 0x1D)
-TINTA = RGBColor(0x26, 0x33, 0x3B)
-NEUTRO = RGBColor(0x55, 0x66, 0x6F)
-BRANCO = RGBColor(0xFF, 0xFF, 0xFF)
+NAVY = RGBColor(*marca.rgb8(marca.NAVY))
+TEAL = RGBColor(*marca.rgb8(marca.TEAL))
+VERMELHO = RGBColor(*marca.rgb8(marca.VERMELHO))
+TINTA = RGBColor(*marca.rgb8(marca.TINTA))
+NEUTRO = RGBColor(*marca.rgb8(marca.NEUTRO))
+BRANCO = RGBColor(*marca.rgb8(marca.BRANCO))
+PAPEL = RGBColor(*marca.rgb8(marca.OFF_WHITE))
+COBRE_CLARO = RGBColor(*marca.rgb8(marca.COBRE_CLARO))
 
 LARGURA = Inches(13.333)
 ALTURA = Inches(7.5)
@@ -43,7 +46,10 @@ MARGEM = Inches(0.6)
 
 def _slide_em_branco(prs: Presentation):
     layout_em_branco = prs.slide_layouts[6]  # layout "Blank" do template padrão
-    return prs.slides.add_slide(layout_em_branco)
+    slide = prs.slides.add_slide(layout_em_branco)
+    slide.background.fill.solid()
+    slide.background.fill.fore_color.rgb = PAPEL
+    return slide
 
 
 def _caixa_texto(slide, esquerda, topo, largura, altura):
@@ -130,14 +136,14 @@ def _capa(prs: Presentation, titulo: str, resumo: str, nome: str, registro: str)
         p2 = tf2.paragraphs[0]
         p2.text = _limpar(resumo)
         p2.font.size = Pt(16)
-        p2.font.color.rgb = RGBColor(0xCF, 0xDD, 0xE4)
+        p2.font.color.rgb = PAPEL
 
     rodape = " · ".join(x for x in (nome, registro) if x) or "CorVIA"
     tf3 = _caixa_texto(slide, Inches(0.9), ALTURA - Inches(0.9), LARGURA - Inches(1.8), Inches(0.5))
     p3 = tf3.paragraphs[0]
     p3.text = f"{rodape}  ·  CorVIA — Cardiology Spaces · corvia.med.br"
     p3.font.size = Pt(12)
-    p3.font.color.rgb = RGBColor(0x9D, 0xB4, 0xC2)
+    p3.font.color.rgb = COBRE_CLARO
 
 
 def gerar(doc: Document, medico: dict, anotacao: str = "") -> bytes:

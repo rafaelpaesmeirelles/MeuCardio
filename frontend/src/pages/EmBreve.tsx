@@ -11,6 +11,7 @@ export default function EmBreve() {
 
   return (
     <main
+      className="atelier-coming-soon"
       style={{
         minHeight: "100vh",
         display: "grid",
@@ -22,9 +23,9 @@ export default function EmBreve() {
         background: "radial-gradient(circle at 75% 20%, rgba(0,174,239,.16), transparent 34%), radial-gradient(circle at 20% 80%, rgba(235,44,139,.13), transparent 32%), #020b14",
       }}
     >
-      <div aria-hidden="true" style={{ position: "absolute", inset: "auto 0 14%", height: 1, background: "linear-gradient(90deg, transparent, #00aeef, #7439f1, #eb2c8b, transparent)" }} />
+      <div className="atelier-coming-soon__light" aria-hidden="true" style={{ position: "absolute", inset: "auto 0 14%", height: 1, background: "linear-gradient(90deg, transparent, #00aeef, #7439f1, #eb2c8b, transparent)" }} />
       <section style={{ width: "min(760px, 100%)", textAlign: "center", position: "relative" }}>
-        <img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" style={{ width: "min(310px, 70vw)", marginBottom: "clamp(2rem, 6vw, 4rem)" }} />
+        <img src="/atelier/corvia-logo-atelier.svg" alt="CorVIA Cardiology Spaces" style={{ width: "min(310px, 70vw)", marginBottom: "clamp(2rem, 6vw, 4rem)" }} />
         <p style={{ margin: "0 0 1rem", color: "#52dded", fontWeight: 800, letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".78rem" }}>
           Estamos preparando a experiência completa
         </p>

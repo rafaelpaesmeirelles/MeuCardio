@@ -56,9 +56,9 @@
   .clinical-os .cos-account-menu { top: calc(100% + 6px); right: 0; width: min(242px, calc(100vw - 24px)); }
   .clinical-os .cos-topbar__mobile-brand { display: inline-flex !important; min-height: 34px; align-items: center; gap: 7px; color: #f2fbfc !important; text-decoration: none !important; }
   .clinical-os .cos-topbar__mobile-brand img { display: none !important; }
-  .clinical-os .cos-topbar__mobile-brand::before { content: ""; display: block; width: 27px; height: 27px; flex: 0 0 27px; background: url('/corvia-mark-canonical.svg') center / contain no-repeat; filter: drop-shadow(0 0 7px rgba(56,202,213,.12)); }
+  .clinical-os .cos-topbar__mobile-brand::before { content: ""; display: block; width: 27px; height: 27px; flex: 0 0 27px; background: url('/atelier/corvia-mark-atelier.svg') center / contain no-repeat; filter: drop-shadow(0 0 7px rgba(182,109,72,.12)); }
   .clinical-os .cos-topbar__mobile-brand span { color: #f4fbfc; font-size: .78rem; font-weight: 650; letter-spacing: -.035em; }
   .cc-mobile-more__head img { width: 28px !important; height: 28px !important; object-fit: contain; }
   .clinical-os .cos-drawer__head a img { display:none!important; }
-  .clinical-os .cos-drawer__head a::before { content:""; display:block; width:30px; height:30px; background:url('/corvia-mark-canonical.svg') center/contain no-repeat; }
+  .clinical-os .cos-drawer__head a::before { content:""; display:block; width:30px; height:30px; background:url('/atelier/corvia-mark-atelier.svg') center/contain no-repeat; }
 }

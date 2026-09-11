@@ -157,7 +157,7 @@ function contrastRatio(foreground, background) {
   return (values[0] + 0.05) / (values[1] + 0.05);
 }
 
-test("o tema global é independente dos três modos de trabalho e começa no dark", () => {
+test("o tema global é independente dos modos e começa claro sem apagar a preferência escura", () => {
   const theme = readRequired("src/lib/corviaTheme.tsx");
   const main = readRequired("src/main.tsx");
 
@@ -168,14 +168,9 @@ test("o tema global é independente dos três modos de trabalho e começa no dar
   );
   assert.doesNotMatch(theme, /\b(?:complete|essential|scientific)\b/, "aparência não pode reutilizar o estado dos modos de trabalho");
 
-  const hasDarkDefault =
-    /\bDEFAULT[_A-Z]*THEME\b[^=\n]*=\s*["']dark["']/i.test(theme)
-    || /useState\s*<\s*CorviaTheme\s*>\s*\(\s*(?:\(\)\s*=>\s*)?["']dark["']\s*\)/.test(theme)
-    || /(?:fallback|default|padr[aã]o)[\s\S]{0,160}\b(?:return\s+)?["']dark["']/i.test(theme)
-    || /return\s+["']dark["']\s*;/.test(theme);
-  assert.ok(hasDarkDefault, "o modo escuro tradicional precisa continuar sendo o padrão explícito");
-  assert.doesNotMatch(theme, /\bDEFAULT[_A-Z]*THEME\b[^=\n]*=\s*["']light["']/i);
-  assert.doesNotMatch(theme, /useState\s*<\s*CorviaTheme\s*>\s*\(\s*(?:\(\)\s*=>\s*)?["']light["']\s*\)/);
+  assert.match(theme, /\bDEFAULT_THEME\b[^=\n]*=\s*"light"/);
+  assert.match(theme, /isCorviaTheme\(stored\) \? stored : DEFAULT_THEME/);
+  assert.match(theme, /loginTheme \?\? readStoredTheme\(userId\)/);
 
   const authOpen = main.indexOf("<AuthProvider>");
   const providerOpen = main.indexOf("<CorviaThemeProvider>");
@@ -232,213 +227,125 @@ test("o seletor oferece exatamente dark e light como um grupo de rádio acessív
   );
 });
 
-test("a aparência é escolhida no login e continua disponível na conta, sem virar modo de trabalho", () => {
-  const home = readRequired("src/pages/CardiologySpacesHome.tsx");
+test("a aparência continua no login e na conta, independente dos três modos de organização", () => {
+  const view = readRequired("src/components/AtelierHomeView.tsx");
   const frame = readRequired("src/components/CardiologySpacesAppFrame.tsx");
   const login = readRequired("src/pages/Entrar.tsx");
-
-  const choiceStart = home.indexOf("if (!mode)");
-  const choiceCards = home.indexOf('className="spaces-choice__cards"', choiceStart);
-  assert.ok(choiceStart >= 0 && choiceCards > choiceStart, "a escolha de experiência precisa continuar após o login");
-  assert.doesNotMatch(home.slice(choiceStart, choiceCards), /CorviaThemeSelector/, "o tema não deve competir com os três modos na tela seguinte");
   assert.match(login, /className="login-gateway__theme-choice login-gateway__theme-choice--top"/);
   assert.deepEqual([...login.matchAll(/id: "(light|dark)"/g)].map((match) => match[1]), ["light", "dark"]);
 
-  const workNavStart = home.indexOf('<nav aria-label="Modo de trabalho">');
-  const workNavEnd = home.indexOf("</nav>", workNavStart);
-  assert.ok(workNavStart >= 0 && workNavEnd > workNavStart, "a navegação dos modos precisa permanecer identificável");
-  const workNav = home.slice(workNavStart, workNavEnd);
-  assert.doesNotMatch(workNav, /CorviaThemeSelector|setTheme|toggleTheme/, "aparência não pode entrar na navegação dos modos");
-  assert.deepEqual(
-    [...workNav.matchAll(/chooseMode\(\s*["'](complete|essential|scientific)["']\s*\)/g)].map((match) => match[1]),
-    ["complete", "essential", "scientific"],
-    "a navegação deve continuar com exatamente os três modos aprovados",
-  );
-
+  const start = view.indexOf('<select aria-label="Modo de trabalho"');
+  const end = view.indexOf("</select>", start);
+  assert.ok(start >= 0 && end > start, "a organização precisa permanecer identificada por um select nativo");
+  const modes = view.slice(start, end);
+  assert.deepEqual([...modes.matchAll(/<option value="([^"]+)"/g)].map((match) => match[1]), ["complete", "essential", "scientific"]);
+  assert.match(modes, /onChange=.*props\.onMode/);
+  assert.doesNotMatch(modes, /CorviaThemeSelector|setTheme|toggleTheme/);
+  assert.match(view, /<CorviaThemeSelector/);
   const accountStart = frame.indexOf('className="cv-account-menu"');
   const accountEnd = frame.indexOf("</div>", accountStart);
   const accountSelector = frame.indexOf("<CorviaThemeSelector", accountStart);
-  assert.ok(accountStart >= 0 && accountSelector > accountStart && accountSelector < accountEnd, "o menu da conta precisa expor o seletor de aparência");
+  assert.ok(accountStart >= 0 && accountSelector > accountStart && accountSelector < accountEnd);
 });
 
-test("o AppFrame troca os dois logos para o asset claro segundo o tema", () => {
+test("a mesma marca arquitetônica identifica o topo e o catálogo de tarefas", () => {
   const frame = readRequired("src/components/CardiologySpacesAppFrame.tsx");
-
-  assert.match(frame, /\buseCorviaTheme\s*\(\s*\)/);
-  assert.match(frame, /["']\/corvia-logo-spaces\.svg["']/);
-  assert.match(frame, /["']\/corvia-logo-spaces-dark\.svg["']/);
-  assert.match(frame, /theme\s*===\s*["'](?:light|dark)["']/);
-
-  const dynamicLogoSources = [...frame.matchAll(/<img\s+src=\{[^}]*logo[^}]*\}/gi)].length;
-  assert.ok(dynamicLogoSources >= 2, "topbar e drawer devem consumir a mesma escolha dinâmica de logo");
+  assert.match(frame, /const logoSrc = "\/atelier\/corvia-logo-atelier\.svg"/);
+  assert.equal([...frame.matchAll(/<img src=\{logoSrc\} alt="CorVIA Cardiology Spaces"/g)].length, 2);
+  const logo = readRequired("public/atelier/corvia-logo-atelier.svg");
+  assert.match(logo, /<svg/);
+  assert.doesNotMatch(logo, /<script|<foreignObject|(?:href|src)=["']https?:\/\//i);
 });
 
-test("os portais claros usam ambientes com luz natural sem alterar as cenas escuras", () => {
-  const scene = readRequired("src/components/CardiologySpaceScene.tsx");
-  const lightStyles = readRequired("src/styles/cardiology-spaces-light-mode.css");
-  const spaces = ["consultorio", "hospital", "ensino", "pesquisa", "gestao"];
-
-  assert.match(scene, /\buseCorviaTheme\s*\(\s*\)/);
-  assert.match(scene, /theme\s*===\s*["']light["']\s*\?\s*LIGHT_SCENE_BY_SPACE\[space\]\s*:\s*SCENE_BY_SPACE\[space\]/,
-    "a escolha da cena precisa depender apenas do tema atual");
-  assert.match(scene, /data-scene-theme=\{theme\}/,
-    "a cena renderizada precisa expor o tema para a validação visual");
-
-  for (const space of spaces) {
-    const darkAsset = `/spaces/corvia-room-${space}.jpg`;
-    const lightAsset = `/spaces/corvia-room-${space}-light-640.webp`;
-    const lightAssetBytes = readFileSync(sourceUrl(`public${lightAsset}`));
-    assert.ok(scene.includes(darkAsset), `${space} precisa preservar a fotografia escura original`);
-    assert.ok(scene.includes(lightAsset), `${space} precisa possuir uma variante de luz natural`);
-    assert.ok(
-      existsSync(fileURLToPath(sourceUrl(`public${lightAsset}`))),
-      `o asset de luz natural de ${space} precisa existir em public/spaces`,
-    );
-    assert.equal(lightAssetBytes.toString("ascii", 0, 4), "RIFF", `${space} precisa usar WebP válido`);
-    assert.ok(lightAssetBytes.byteLength <= 120_000, `${space} precisa manter o portal abaixo de 120 kB`);
-  }
-
-  assert.doesNotMatch(lightStyles, /\b(?:invert|hue-rotate)\s*\(/i,
-    "o tema claro não pode produzir aparência de negativo fotográfico");
-  assert.match(lightStyles, /\.spaces-door\s+\.spaces-door__scene\s*\{[^}]*filter:\s*none/s,
-    "a luz natural deve vir do asset, não de um clareamento CSS global");
-});
-
-test("o GalaxyThemeToggle mantém a imagem canônica transparente e o canvas da minigaláxia", () => {
-  const toggle = readRequired("src/components/GalaxyThemeToggle.tsx");
+test("cinco ambientes reais possuem WebP responsivo e não mudam conforme o modo de organização", () => {
+  const view = readRequired("src/components/AtelierHomeView.tsx");
   const home = readRequired("src/pages/CardiologySpacesHome.tsx");
-  const internalStyles = readRequired("src/styles/corvia-internal-final-approved-20260904.css");
-  const assetFixStyles = readRequired("src/styles/corvia-approved-fidelity-asset-fix-20260904.css");
-  const imagePath = "public/spaces/galaxy-approved-canonical.webp";
-  const image = readFileSync(sourceUrl(imagePath));
-
-  assert.ok(existsSync(fileURLToPath(sourceUrl(imagePath))), "a minigaláxia transparente aprovada precisa existir");
-  assert.equal(image.toString("ascii", 0, 4), "RIFF", "o asset aprovado precisa ser WebP válido");
-  assert.equal(image.toString("ascii", 8, 12), "WEBP");
-  assert.equal(image.toString("ascii", 12, 16), "VP8L", "a imagem canônica usa WebP sem perdas");
-  assert.equal(image[20], 0x2f, "o fluxo VP8L precisa manter a assinatura válida");
-  assert.ok(image.readUInt32LE(21) & (1 << 28), "o WebP canônico precisa preservar o canal alfa");
-  assert.match(toggle, /<img[\s\S]*?className="galaxy-theme-toggle__image"/);
-  assert.match(toggle, /src="\/spaces\/galaxy-approved-canonical\.webp"/);
-  assert.match(toggle, /<MiniUniverseCanvas\s*\/>/);
-  assert.match(toggle, /alt=""\s*aria-hidden="true"\s*draggable=\{false\}/);
-  assert.doesNotMatch(toggle, /<video|galaxy-loop-v2\.mp4|galaxy-loop-poster\.webp/);
-  assert.match(toggle, /useCorviaTheme\s*\(\s*\)/);
-  assert.match(toggle, /onClick=\{toggleTheme\}/);
-  assert.match(toggle, /aria-label=\{`Ativar modo \$\{theme === "light" \? "escuro" : "claro"\}`\}/);
-  assert.match(home, /<GalaxyThemeToggle className="spaces-choice__theme-toggle" \/>/);
-  assert.match(internalStyles, /background:\s*transparent !important/);
-  assert.match(internalStyles, /animation:\s*corvia-internal-galaxy-ccw 120s linear infinite !important/);
-  assert.match(internalStyles, /@keyframes corvia-internal-galaxy-ccw[\s\S]*?rotate\(-360deg\)/);
-  assert.match(internalStyles, /html\[data-corvia-theme="light"\] \.galaxy-theme-toggle__image[\s\S]*?mix-blend-mode:\s*normal !important/);
-  assert.match(assetFixStyles, /prefers-reduced-motion:\s*reduce/);
-});
-
-
-test("a paleta textual e os indicadores essenciais mantêm contraste WCAG no canvas claro", () => {
-  const lightStyles = readRequired("src/styles/cardiology-spaces-light-mode.css");
-  const textColors = ["#202b36", "#4d5b68", "#5e687f", "#246ac1", "#7956c8", "#c42068", "#0f727a", "#14764c"];
-  const lightCanvases = ["#f5f6f5", "#f0f2f1"];
-  for (const color of textColors) {
-    assert.ok(lightStyles.includes(color), `${color} precisa continuar declarado na paleta clara`);
-    for (const canvas of lightCanvases) {
-      assert.ok(contrastRatio(color, canvas) >= 4.5, `${color} precisa atingir 4,5:1 sobre o canvas ${canvas}`);
+  const styles = readRequired("src/styles/corvia-atelier.css");
+  assert.match(home, /const availableSpaces = SPACES;/);
+  assert.match(view, /srcSet=/);
+  assert.match(view, /loading=\{/);
+  assert.doesNotMatch(view, /LIGHT_SCENE_BY_SPACE|SCIENTIFIC_SPACES|<canvas|GalaxyThemeToggle|UniverseStars/);
+  for (const space of ["consultorio", "hospital", "ensino", "pesquisa", "gestao"]) {
+    for (const suffix of ["", "-small"]) {
+      const path = "public/atelier/atelier-" + space + suffix + ".webp";
+      assert.ok(existsSync(fileURLToPath(sourceUrl(path))), path + " precisa existir");
+      const bytes = readFileSync(sourceUrl(path));
+      assert.equal(bytes.toString("ascii", 0, 4), "RIFF");
+      assert.equal(bytes.toString("ascii", 8, 12), "WEBP");
+      assert.ok(bytes.byteLength <= (suffix ? 180_000 : 650_000), path + " precisa continuar otimizado");
     }
   }
-
-  // Placeholders usam o fundo branco imposto pelo contrato final dos formulários.
-  assert.match(lightStyles, /textarea\s*\{[^}]*background-color:\s*#ffffff\s*!important/s);
-  assert.match(lightStyles, /textarea::placeholder\s*\{[^}]*color:\s*#626c82\s*!important/s);
-  assert.ok(contrastRatio("#626c82", "#ffffff") >= 4.5, "placeholders precisam atingir 4,5:1 sobre o fundo branco efetivo");
-  assert.ok(lightStyles.includes("#f0f2f1"), "o canvas neutro precisa permanecer na paleta clara");
-  for (const decorativeColor of ["#d12870", "#137a80", "#b78a52"]) {
-    assert.ok(lightStyles.includes(decorativeColor), `${decorativeColor} precisa permanecer restrito a detalhes decorativos do tema claro`);
-  }
-  assert.ok(contrastRatio("#246ac1", "#ffffff") >= 3, "o anel de foco precisa atingir 3:1 sobre branco");
-  for (const canvas of lightCanvases) {
-    assert.ok(contrastRatio("#81889e", canvas) >= 3, `a borda dos radios precisa atingir 3:1 sobre ${canvas}`);
-  }
-  assert.ok(contrastRatio("#ffffff", "#b31f3a") >= 4.5, "ações de emergência precisam manter texto branco legível");
+  assert.doesNotMatch(styles, /\b(?:invert|hue-rotate)\s*\(/i);
 });
 
-test("o modo claro usa figura clínica funcional por rota e preserva a cenografia escura", () => {
+test("paleta Atelier separa texto legível de cobre polido e preserva foco contrastante", () => {
+  const content = readRequired("src/styles/corvia-atelier-content.css");
+  const styles = readRequired("src/styles/corvia-atelier.css");
+  const textColors = ["#24343a", "#58666a", "#16776d"];
+  for (const foreground of textColors) {
+    assert.ok(content.includes(foreground), foreground + " precisa estar na camada real de conteúdo");
+    for (const background of ["#fffdfa", "#f6f3eb"]) {
+      assert.ok(content.includes(background));
+      assert.ok(contrastRatio(foreground, background) >= 4.5, foreground + " precisa atingir 4,5:1 sobre " + background);
+    }
+  }
+  assert.ok(content.includes("#b66d48"), "cobre continua como acento, não como tinta de leitura");
+  for (const background of ["#d39770", "#f2d1af", "#d8a27c", "#c98c66", "#e2b18d"]) {
+    assert.ok(styles.includes(background), "reflexo do cobre precisa existir no controle real");
+    assert.ok(contrastRatio("#1e2a22", background) >= 4.5, "CTA precisa manter contraste em cada reflexo do cobre");
+  }
+  assert.match(styles, /:focus-visible\{outline:3px solid #167d71/);
+  assert.ok(contrastRatio("#167d71", "#fffdfa") >= 3);
+  assert.ok(contrastRatio("#ffffff", "#b31f3a") >= 4.5, "emergência conserva contraste de texto");
+});
+
+test("a tarefa tem cabeçalho funcional com foco reversível e conteúdo sem fotografia", () => {
   const frame = readRequired("src/components/CardiologySpacesAppFrame.tsx");
-  const figure = readRequired("src/components/ClinicalFunctionFigure.tsx");
-  const figureStyles = readRequired("src/styles/cardiology-function-figure.css");
-  const registry = readRequired("src/lib/clinicalRouteRegistry.ts");
-  const routeGroups = [...new Set(quotedUnionValues(registry, "RouteGroup"))];
-
-  assert.match(frame, /theme\s*===\s*["']light["'][\s\S]{0,500}<ClinicalFunctionFigure/,
-    "o tema claro precisa renderizar a figura da função atual");
-  assert.match(frame, /<ClinicalFunctionFigure[^>]+icon=\{route\.icon\}[^>]+group=\{route\.group\}[^>]+space=\{space\}/,
-    "a figura precisa receber função, família e espaço da rota atual");
-  assert.match(frame, /theme\s*===\s*["']dark["']\s*\?\s*\{\s*["']--cv-room["']:\s*`url\(\$\{spaceMeta\.roomImage\}\)`/,
-    "o modo escuro precisa continuar carregando a fotografia original do ambiente");
-  assert.match(frame, /cv-space-horizon__orb/,
-    "o elemento cenográfico tradicional precisa permanecer no ramo escuro");
-
-  assert.match(figure, /satisfies\s+Record<RouteGroup,\s*GroupFigureDefinition>/,
-    "a cobertura das famílias funcionais precisa ser verificada pelo TypeScript");
-  assert.ok(routeGroups.length >= 10, "o registro precisa expor as famílias funcionais esperadas");
-  for (const group of routeGroups) {
-    assert.match(figure, new RegExp(`\\b${group}\\s*:`), `a família ${group} precisa ter composição visual`);
-  }
-  assert.match(figure, /aria-hidden=["']true["']/);
-  assert.match(figure, /focusable=["']false["']/);
-  assert.doesNotMatch(`${figure}\n${figureStyles}`, /\burl\s*\(|telesc[oó]pio|montanha|planeta/i,
-    "a figura funcional não pode depender de bitmap ou cenografia espacial literal");
-
-  const unscopedFigureRules = cssRules(figureStyles)
-    .flatMap(({ header }) => splitSelectorList(header))
-    .filter((selector) => !/^html\[data-corvia-theme=(?:"light"|'light')\](?:$|[\s>+~.#:[*])/.test(selector));
-  assert.deepEqual(unscopedFigureRules, [], `estilos da figura fora do tema claro: ${unscopedFigureRules.join(", ")}`);
+  const styles = readRequired("src/styles/corvia-atelier.css");
+  assert.match(frame, /<header className="atelier-taskbar">/);
+  assert.match(frame, /className="atelier-taskbar__title"><Icone nome=\{route\.icon\}/);
+  assert.match(frame, /aria-pressed=\{focusMode\}/);
+  assert.match(frame, /Sair do foco/);
+  assert.match(frame, /Trocar função/);
+  assert.doesNotMatch(frame, /<ClinicalFunctionFigure|className="cv-space-horizon"|className="cv-function-deck"/);
+  assert.match(styles, /\.atelier-app--focus \.atelier-taskbar\{position:sticky;top:0/);
+  assert.match(styles, /\.atelier-app \.cv-content\{[^}]*background:var\(--atelier-paper\)!important/);
 });
 
-test("a camada clara é a última folha, escopada no html e cobre todas as superfícies autenticadas", () => {
+test("a cascata preserva contraste legado e aplica Atelier por último com conteúdo clínico escopado", () => {
   const main = readRequired("src/main.tsx");
+  const theme = readRequired("src/lib/corviaTheme.tsx");
   const selectorStyles = readRequired("src/styles/corvia-theme-selector.css");
   const lightStyles = readRequired("src/styles/cardiology-spaces-light-mode.css");
+  const content = readRequired("src/styles/corvia-atelier-content.css");
+  const surfaces = readRequired("src/styles/corvia-atelier-surfaces.css");
   const imports = [...main.matchAll(/^\s*import\s+["']([^"']+\.css)["'];?/gm)].map((match) => match[1]);
-  const selectorImport = imports.indexOf("./styles/corvia-theme-selector.css");
-  const darkContrastImport = imports.indexOf("./styles/clinical-form-control-contrast.css");
-  assert.ok(selectorImport >= 0 && selectorImport < darkContrastImport,
-    "a geometria escura do seletor precisa existir antes do contrato final de contraste");
-  assert.equal(imports.at(-1), "./styles/cardiology-spaces-light-mode.css", "a camada clara precisa ser o último CSS da cascata");
-
-  assert.match(selectorStyles, /\.corvia-theme-selector__options\s*>\s*button/,
-    "o seletor precisa manter geometria própria também no modo escuro padrão");
-  assert.ok(pxMinimums(selectorStyles).some((value) => value >= 44),
-    "as opções no modo escuro também precisam de alvo de toque de pelo menos 44px");
-
-  const rules = cssRules(lightStyles);
-  assert.ok(rules.length >= 8, "a camada clara precisa ser substancial, não apenas trocar uma cor de fundo");
-  const unscoped = rules
-    .flatMap(({ header }) => splitSelectorList(header))
-    .filter((selector) => !/^html\[data-corvia-theme=(?:"light"|'light')\](?:$|[\s>+~.#:[*])/.test(selector));
-  assert.deepEqual(unscoped, [], `seletores fora do tema claro: ${unscoped.join(", ")}`);
-
-  for (const surface of [".spaces-choice", ".spaces-home", ".cv-app", ".clinical-os"]) {
-    assert.ok(rules.some(({ header }) => header.includes(surface)), `${surface} precisa receber a paleta clara`);
+  const expected = ["./styles/corvia-theme-selector.css", "./styles/clinical-form-control-contrast.css",
+    "./styles/cardiology-spaces-light-mode.css", "./styles/corvia-atelier.css", "./styles/corvia-atelier-content.css", "./styles/corvia-atelier-surfaces.css"];
+  for (let index = 0; index < expected.length; index += 1) {
+    assert.ok(imports.includes(expected[index]), expected[index] + " precisa permanecer importado");
+    if (index) assert.ok(imports.indexOf(expected[index - 1]) < imports.indexOf(expected[index]));
   }
-  assert.ok(rules.some(({ body }) => /\bcolor-scheme\s*:\s*light\b/.test(body)), "controles nativos precisam adotar color-scheme light");
+  assert.equal(imports.at(-1), expected.at(-1));
+  assert.match(theme, /root\.dataset\.corviaDesign = "atelier"/);
+  assert.ok(pxMinimums(selectorStyles).some((value) => value >= 44));
 
-  assert.match(
-    lightStyles,
-    /html\[data-corvia-theme="light"\]\s+#root\s+\.clinical-os\s+input:not\(\[type="checkbox"\]\):not\(\[type="radio"\]\)[^{]+\{[^}]*background-color:\s*#ffffff\s*!important/s,
-    "o alias claro de alta especificidade precisa vencer os aliases escuros legados dos inputs",
-  );
-  assert.match(lightStyles, /\.clinical-os\s+\.cos-command-mini\s+button\s*\{[^}]*color:\s*#0f727a\s*!important/s,
-    "o botão da busca legada precisa manter contraste no claro");
-  assert.match(lightStyles, /\.cv-function-deck\s+\.cv-nav-link\[data-feature="exam-ai"\][^{]+\{[^}]*color:\s*#14764c/s,
-    "o destaque Exame com IA precisa usar verde legível no claro");
-  assert.match(lightStyles, /button\[role="radio"\]:focus-visible\s*\{[^}]*outline:\s*3px\s+solid\s+#246ac1/s,
-    "o foco do seletor precisa alcançar contraste não textual de 3:1");
-
-  const themeControlCss = rules
-    .filter(({ header }) => /(?:theme|tema|appearance|aparencia)/i.test(header))
-    .map(({ body, header }) => `${header}{${body}}`)
-    .join("\n");
-  assert.ok(themeControlCss, "a folha clara precisa estilizar o seletor de aparência");
-  const dimensionTokens = [...lightStyles.matchAll(/--[\w-]+\s*:\s*\d+(?:\.\d+)?px\b/g)].map((match) => match[0]).join(";");
-  assert.ok(pxMinimums(`${dimensionTokens};${themeControlCss}`).some((value) => value >= 44), "cada opção de tema precisa ter alvo de toque de pelo menos 44px");
+  for (const [source, scope] of [[lightStyles, /^html\[data-corvia-theme=(?:"light"|'light')\]/],
+    [content, /^html\[data-corvia-design=(?:"atelier"|'atelier')\]/],
+    // Recovery/loading can render before the theme provider mounts; those
+    // three explicitly named component boundaries are the only exceptions.
+    [surfaces, /^(?:html\[data-corvia-design=(?:"atelier"|'atelier')\]|#root (?:\.app-recovery--atelier\b|\.corvia-loading-state\b|\.atelier-coming-soon(?:__light)?\b|:is\(\.app-recovery--atelier, \.atelier-coming-soon\)))/]]) {
+    const rules = cssRules(source);
+    assert.ok(rules.length >= 8);
+    const unscoped = rules.flatMap(({ header }) => splitSelectorList(header)).filter((selector) => !scope.test(selector));
+    assert.deepEqual(unscoped, [], "a mudança visual não pode escapar do escopo explícito");
+  }
+  for (const surface of [".cv-content", ".agenda-modal", ".legal-page", ".cc-", ".cv-page-hero"]) {
+    assert.ok(content.includes(surface), surface + " precisa receber adaptação do conteúdo");
+  }
+  assert.match(content, /color-scheme:\s*light/);
+  assert.match(content, /font-size:\s*16px/);
+  assert.ok(pxMinimums(content).some((value) => value >= 44));
+  assert.match(content, /prefers-reduced-motion/);
+  assert.match(lightStyles, /\.clinical-os\s+input:not\(\[type="checkbox"\]\):not\(\[type="radio"\]\)[^{]+\{[^}]*background-color:\s*#ffffff\s*!important/s);
 });

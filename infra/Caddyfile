@@ -58,6 +58,14 @@
 		respond "Aplicativos Android e Windows descontinuados" 410
 	}
 
+	# Mídia pública do tour: servir o arquivo com suporte nativo a Range.
+	# Um MP4/VTT inexistente deve responder 404, nunca index.html da SPA.
+	handle /media/* {
+		root * /site
+		file_server
+		header Cache-Control "public, max-age=3600, must-revalidate"
+	}
+
 	# Hash de conteúdo: é seguro manter imutável. Cada build gera URLs novas.
 	handle_path /assets/* {
 		root * /site/assets

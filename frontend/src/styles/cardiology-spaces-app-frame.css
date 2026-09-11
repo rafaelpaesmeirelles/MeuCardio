@@ -69,7 +69,7 @@ body:has(.cv-app) {
 .cv-app::after {
   inset: 18% 23% 12% 20%;
   opacity: 0.045;
-  background: url("/corvia-mark-canonical.svg") center / min(46vw, 590px) no-repeat;
+  background: url("/atelier/corvia-mark-atelier.svg") center / min(46vw, 590px) no-repeat;
   filter: drop-shadow(0 0 55px rgba(var(--cv-rgb), 0.26));
 }
 

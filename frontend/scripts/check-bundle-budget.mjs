@@ -53,6 +53,14 @@ const forbiddenLegacyBrandAssets = new Set([
   "corvia-logo-compacta.png",
   "logo-marca.png",
   "logo.png",
+  "atelier/corvia-logo-atelier.png",
+  "atelier/corvia-mark-atelier-192.png",
+  "atelier/corvia-mark-atelier-512.png",
+  "corvia-logo-canonical.svg",
+  "corvia-logo-canonical-dark.svg",
+  "corvia-logo-spaces.svg",
+  "corvia-logo-spaces-dark.svg",
+  "corvia-mark-canonical.svg",
 ]);
 const isPrecached = (relativePath) => (
   sw.includes(`url:"${relativePath}"`) || sw.includes(`url:'${relativePath}'`)
@@ -68,7 +76,7 @@ for (const path of await listarArquivos(distPath)) {
   precacheEntries += 1;
 
   if (forbiddenLegacyBrandAssets.has(rel)) {
-    failures.push(`PNG legado de marca indevidamente pré-carregado: ${rel}`);
+    failures.push(`asset de marca redundante indevidamente pré-carregado: ${rel}`);
   }
 
   if (
@@ -78,6 +86,29 @@ for (const path of await listarArquivos(distPath)) {
   ) {
     failures.push(`chunk opcional grande pré-carregado: ${rel} (${bytes} B)`);
   }
+}
+
+// A economia em bibliotecas sob demanda nunca pode quebrar o shell offline.
+// Inclua toda a closure estática da entrada (que contém AppFrame) e da Home,
+// não apenas seus arquivos de topo; imports dinâmicos continuam sob demanda.
+const requiredStaticChunks = new Set();
+const requireOfflineShell = key => {
+  if (requiredStaticChunks.has(key)) return;
+  requiredStaticChunks.add(key);
+  const chunk = manifest[key];
+  if (!chunk) {
+    failures.push(`dependência estática do shell ausente do manifesto: ${key}`);
+    return;
+  }
+  for (const file of [chunk.file, ...(chunk.css ?? [])]) {
+    if (!isPrecached(file)) failures.push(`dependência estática do shell fora do precache: ${file}`);
+  }
+  for (const dependency of chunk.imports ?? []) requireOfflineShell(dependency);
+};
+requireOfflineShell("index.html");
+requireOfflineShell("src/pages/CardiologySpacesHome.tsx");
+for (const file of ["index.html", "atelier/corvia-logo-atelier.svg", "atelier/corvia-mark-atelier.svg"]) {
+  if (!isPrecached(file)) failures.push(`recurso visual do shell fora do precache: ${file}`);
 }
 
 // O monitor compacto integra a Home precached. O leitor de artefatos é online

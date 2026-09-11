@@ -2,6 +2,8 @@
 
 from datetime import datetime, timedelta, timezone
 
+from app.api import agenda_integrada
+from app.models.agenda import AvailabilityRule
 from app.models.clinical_docs import Appointment
 from app.services.investidor_demo import SENHA_FIXA_INVESTIDOR
 
@@ -64,6 +66,53 @@ def test_investidor_agenda_get_novo_nao_catalogado_falha_fechado(
 
     resposta = client.get("/api/agenda/rota-futura-nao-catalogada", headers=_headers(token))
     assert resposta.status_code == 403
+
+
+def test_investidor_ocorrencias_sao_sinteticas_e_rotinas_continuam_readonly(
+    client, criar_usuario, db, monkeypatch
+):
+    user, _ = criar_usuario(email="investidor.ocorrencias@teste.local")
+    user.investidor = True
+    db.commit()
+    token = _login_investidor(client, user.email)
+    headers = _headers(token)
+    quantidade_antes = db.query(AvailabilityRule).filter_by(owner_id=user.id).count()
+
+    def nao_consultar_rotinas_do_proprietario(*_args, **_kwargs):
+        raise AssertionError("A demo não pode expandir rotinas do proprietário.")
+
+    monkeypatch.setattr(
+        agenda_integrada, "_routine_calendar_occurrences",
+        nao_consultar_rotinas_do_proprietario,
+    )
+    for params in (
+        {"start": "2026-09-01", "end": "2026-09-30"},
+        {"start": "2026-10-01", "end": "2026-10-31", "professional_id": "999999"},
+    ):
+        leitura = client.get(
+            "/api/agenda/work-routines/occurrences", headers=headers, params=params,
+        )
+        assert leitura.status_code == 200, leitura.text
+        assert leitura.json() == []  # Contrato vazio, nunca dados do tenant.
+
+    escrita = client.post(
+        "/api/agenda/work-routines", headers=headers,
+        json={
+            "location_id": -101, "weekdays": [0],
+            "start_time": "08:00:00", "end_time": "12:00:00",
+            "label": "Rotina demonstrativa bloqueada",
+        },
+    )
+    assert escrita.status_code == 403, escrita.text
+    assert "somente para visualização" in escrita.json()["detail"]
+    assert client.post(
+        "/api/agenda/work-routines/occurrences", headers=headers, json={},
+    ).status_code == 403
+    assert client.delete(
+        "/api/agenda/work-routines/-501", headers=headers,
+    ).status_code == 403
+    db.expire_all()
+    assert db.query(AvailabilityRule).filter_by(owner_id=user.id).count() == quantidade_antes
 
 
 def test_flags_de_ux_do_investidor_simulam_sucesso_sem_persistir(

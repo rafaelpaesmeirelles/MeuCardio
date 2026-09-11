@@ -5,6 +5,9 @@ import { validateMobileSpaces } from "./mobile-spaces-geometry.mjs";
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const home = read("src/pages/CardiologySpacesHome.tsx");
+const shelfPreferences = read("src/lib/atelierShelfPreferences.ts");
+const view = read("src/components/AtelierHomeView.tsx");
+const atelierStyles = read("src/styles/corvia-atelier.css");
 const app = read("src/App.tsx");
 const styles = read("src/styles/cardiology-spaces-home.css");
 const tour = read("src/pages/CardiologySpacesTour.tsx");
@@ -16,7 +19,8 @@ const agenda = read("src/pages/Agenda.tsx");
 const myAccount = read("src/pages/MinhaConta.tsx");
 const clinicalIdentity = read("src/lib/clinicalIdentity.ts");
 const catalog = home.slice(home.indexOf("const CATALOG"), home.indexOf("const ESSENTIAL_DEFAULTS"));
-const catalogPaths = [...catalog.matchAll(/(?:\["|to:\s*")((?:\/)[^"\s]+)"/g)].map((match) => match[1]);
+// Only route tuples or explicit actions, not arrays used by featured.includes(to).
+const catalogPaths = [...catalog.matchAll(/\["(\/[^"\s]+)",\s*"[^"/][^"]*",\s*"[^"]+"\]|\bto:\s*"(\/[^"\s]+)"/g)].map((match) => match[1] || match[2]);
 const catalogPrimaryPaths = new Set(catalogPaths.map((path) => path.split("?")[0]));
 const shellStart = app.indexOf('<Route element={<Shell />}>');
 const shellEnd = app.indexOf("</Route>", shellStart);
@@ -43,33 +47,27 @@ const nonCatalogShellRoutes = new Set([
   "admin/atividade", // subpágina acessível pela central administrativa
 ]);
 
-test("approved image composition is encoded as a product contract", () => {
-  assert.match(home, /spaces-choice__heart/);
-  assert.match(home, /spaces-home__heart/);
-  assert.match(home, /<CoracaoHolografico \/>/);
-  assert.match(home, /Consultório/);
-  assert.match(home, /Hospital/);
-  assert.match(home, /Ensino/);
-  assert.match(home, /Pesquisa/);
-  assert.match(home, /Gestão/);
-  assert.match(home, /spaces-context-rail/);
-  assert.doesNotMatch(home, /aria-label="Meus espaços"/);
-  assert.match(styles, /\.spaces-door\.is-active/);
-  assert.match(styles, /\.spaces-layer--now/);
-  assert.match(styles, /\.spaces-dock\{[^}]*repeat\(6,minmax\(0,1fr\)\)/);
-  assert.match(styles, /\.spaces-home__heart/);
+test("Atelier exposes all five architectural spaces independently of work mode", () => {
+  for (const label of ["Consultório", "Hospital", "Ensino", "Pesquisa", "Gestão"]) assert.ok(home.includes(label));
+  assert.match(home, /const availableSpaces = SPACES;/);
+  assert.match(home, /<AtelierHomeView spaces=\{availableSpaces\}/);
+  assert.match(view, /props\.spaces\.map/);
+  assert.match(view, /\/atelier\/atelier-\$\{space\.id\}-small\.webp/);
+  assert.match(view, /srcSet=\{/);
+  assert.match(view, /<section className="atelier-arrival"/);
+  assert.match(view, /className="atelier-space"/);
+  assert.doesNotMatch(view, /CoracaoHolografico|UniverseStars|GalaxyThemeToggle|<canvas|spaces-choice__cards/);
 });
 
-test("portal preview is local on mouse and keyboard and only click persists selection", () => {
-  assert.match(home, /const \[previewSpace, setPreviewSpace\] = useState<SpaceId \| null>\(null\)/);
-  assert.match(home, /availableSpaces\.find\(\(space\) => space\.id === selectedSpace\)/);
-  assert.match(home, /const preview = previewSpace === space\.id && !active/);
-  assert.match(home, /data-state=\{active \? "active" : preview \? "preview" : "inactive"\}/);
-  assert.match(home, /onMouseEnter=\{\(\) => setPreviewSpace\(space\.id\)\}/);
-  assert.match(home, /onFocus=\{\(\) => setPreviewSpace\(space\.id\)\}/);
-  assert.match(home, /onBlur=\{\(\) => setPreviewSpace\(null\)\}/);
-  assert.match(home, /className="spaces-doors" onMouseLeave=\{\(\) => setPreviewSpace\(null\)\}/);
-  assert.match(home, /onClick=\{\(\) => \{ setSelectedSpace\(space\.id\); setPreviewSpace\(null\); \}\}/);
+test("space selection is keyboard-native and entering keeps the canonical query context", () => {
+  assert.match(view, /<button[^>]*type="button"[^>]*onClick=\{\(\) => props\.onSelect\(space\.id\)\}/);
+  assert.match(view, /aria-pressed=\{space\.id === props\.active\.id\}/);
+  assert.match(view, /onClick=\{props\.onEnter\}/);
+  assert.match(home, /onSelect=\{\(id\) => \{ setSelectedSpace\(id as SpaceId\)/);
+  assert.match(home, /onEnter=\{\(\) => \{[\s\S]{0,300}setSearchParams\(\{ espaco: activeSpace\.id, modo: mode \}\)/);
+  assert.match(home, /onBack=\{resetMode\}/);
+  assert.match(home, /function resetMode\(\) \{ setSearchParams\(\{\}\)/);
+  assert.match(view, /role="search" onSubmit=\{props\.onSearch\}/);
 });
 
 test("user-preferred treatment and name replace generic professional labels", () => {
@@ -78,8 +76,9 @@ test("user-preferred treatment and name replace generic professional labels", ()
   assert.match(home, /const chamamentoNoInicio = chamamentoComArtigo\(usuario, \{ curto: true, inicioDeFrase: true \}\)/);
   assert.match(home, /`Onde \$\{chamamentoNaFrase\} vai trabalhar agora\?`/);
   assert.match(home, /`Como \$\{chamamentoNaFrase\} quer explorar o conhecimento agora\?`/);
-  assert.match(home, /\{chamamentoNoInicio\} continua no centro/);
-  assert.doesNotMatch(home, /Onde você vai trabalhar agora\?/);
+  assert.match(home, /identity=\{<UserIdentity usuario=\{usuario\} \/>\}/);
+  assert.match(home, /nomeComTratamento\(usuario, true\)/);
+  assert.match(view, /<summary[^\n]+>\{props\.identity\}<\/summary>/);
   assert.doesNotMatch(home, /O Médico <strong>continua no centro/);
 
   assert.match(clinicalIdentity, /\["sra", "dra", "profa", "profa dra", "ma"\]/);
@@ -89,10 +88,12 @@ test("user-preferred treatment and name replace generic professional labels", ()
   assert.match(clinicalIdentity, /fallback = "você"/);
 });
 
-test("compact desktop keeps Meu dia entre espacos in the approved right rail", () => {
-  assert.match(styles, /@media \(min-width: 901px\) and \(max-width: 1199px\)[\s\S]*grid-template-columns: 88px minmax\(0, 1fr\) 176px/);
-  assert.match(styles, /@media \(min-width: 901px\) and \(max-width: 1199px\)[\s\S]*--spaces-side-height: 519px/);
-  assert.doesNotMatch(styles, /@media \(min-width: 901px\) and \(max-width: 1199px\)[\s\S]*?\.spaces-day \{[\s\S]*?flex-direction: row/);
+test("responsive Atelier preserves five touch targets and the real day disclosure", () => {
+  assert.match(atelierStyles, /\.atelier-mobile-spaces\{[^}]*grid-template-columns:repeat\(5,minmax\(0,1fr\)\)/);
+  assert.match(atelierStyles, /\.atelier-mobile-spaces button\{[^}]*min-height:44px/);
+  assert.match(atelierStyles, /\.atelier-portal\.is-selected\{[^}]*display:block/);
+  assert.match(home, /<details className="atelier-day">/);
+  assert.match(atelierStyles, /@media\s*\(prefers-reduced-motion:reduce\)/);
 });
 
 test("Meu dia entre espaços merges all canonical agenda sources without invented appointments", () => {
@@ -122,19 +123,16 @@ test("Deslocamento uses the canonical mobility target, live geolocation and a re
   assert.match(home, /data-geometry=\{miniRoute\.actual \? "real" : "preview"\}/);
   assert.match(home, /moderate\|moderad\|medium/);
   assert.match(home, /leve\|normal/);
-  assert.match(home, /spaces-orbit/);
-  assert.match(styles, /\.spaces-orbit/);
   assert.match(styles, /spaces-stellar-route__traffic--traffic_jam/);
-  assert.match(styles, /@keyframes spaces-flight/);
 });
 
-test("all shelf profiles are personalized without changing the approved geometry", () => {
+test("shelf profiles retain persistence, ordering and cancellation in the Atelier layout", () => {
   assert.match(home, /const ESSENTIAL_DEFAULTS: Record<ClinicalSpaceId, string\[\]>/);
-  assert.match(home, /SHELF_PREFERENCES_PREFIX = "corvia:cardiology-spaces:shelves:v1"/);
+  assert.match(shelfPreferences, /SHELF_PREFERENCES_PREFIX = "corvia:cardiology-spaces:shelves:v1"/);
   assert.match(home, /type ShelfId = "now" \| "next" \| "references" \| "essential"/);
-  assert.match(home, /now: 3,[\s\S]*next: 3,[\s\S]*references: 4,[\s\S]*essential: 6/);
+  assert.match(home, /SHELF_CAPACITIES: Record<ShelfId, number> = \{ now: 4, next: 4, references: 4, essential: 4 \}/);
   assert.match(home, /shelfProfileKey\(activeMode, activeSpace\.id\)/);
-  assert.match(home, /schemaVersion: 1/);
+  assert.match(shelfPreferences, /schemaVersion: 1/);
   assert.match(home, /window\.addEventListener\("storage", syncPreferences\)/);
   assert.match(home, /Salvar personalização/);
   assert.match(home, /Cancelar/);
@@ -143,12 +141,13 @@ test("all shelf profiles are personalized without changing the approved geometry
   assert.match(home, /moveShelfAction\(actionId, 1\)/);
   assert.match(home, /selectedIds === undefined \? definition\.defaultActionIds : selectedIds/);
   assert.doesNotMatch(home, /\.\.\.definition\.defaultActionIds, \.\.\.allowedIds/);
-  assert.match(home, /hasOwnProperty\.call\(preferences\.profiles\[profileKey\] \|\| \{\}, "essential"\)/);
-  assert.match(home, /localStorage\.removeItem\(legacyKey\)/);
-  assert.match(styles, /\.spaces-layer__edit/);
-  assert.match(styles, /\.spaces-layer__edit \{[\s\S]*right: 7%/);
-  assert.match(styles, /\.spaces-layer__edit \{ top: 5px; right: 4\.5%/);
-  assert.match(styles, /\.spaces-personalizer__tabs/);
+  assert.match(shelfPreferences, /hasOwnProperty\.call\(next\.profiles\[key\] \|\| \{\}, "essential"\)/);
+  assert.doesNotMatch(home, /localStorage\.removeItem\(legacyKey\)/);
+  assert.doesNotMatch(shelfPreferences, /removeItem\(/);
+  assert.match(home, /className="atelier-previous-organizations"/);
+  assert.match(home, /className="atelier-shelves"/);
+  assert.match(atelierStyles, /\.atelier-shelf\{/);
+  assert.match(atelierStyles, /\.spaces-personalizer__tabs/);
 });
 
 test("catalog stays complete, unique and courses are retired safely", () => {
@@ -234,29 +233,51 @@ test("new Google account connection stays hidden behind an opt-in flag", () => {
 });
 
 
-test("mobile geometry rejects hidden wordmarks and clipped cards even when body overflow is masked", () => {
-  const box = (left, right, top=0, bottom=44) => ({left,right,top,bottom,width:right-left,height:bottom-top,visible:true});
-  const sample = {width:320, choice:true, header:box(0,320,0,84), brand:box(16,122), wordmark:box(62,122),
-    galaxy:box(130,174), identity:box(200,304,0,84), avatar:box(230,274),
-    identityName:{...box(200,304,48,80),text:"Profa. Dra. Alexandriana",scrollWidth:104,clientWidth:104,textRects:[{left:204,right:300,top:50,bottom:78}]}, cards:[0,1,2].map(() => ({box:box(16,304),text:[{left:90,right:286}]}))};
+const geometryBox = (left, right, top=0, bottom=44) => ({left,right,top,bottom,width:right-left,height:bottom-top,visible:true});
+function mobileGeometrySample() {
+  const box=geometryBox;
+  return {
+    width:320,height:900,documentWidth:320,arrival:true,modeValue:"complete",
+    header:box(0,320,0,160),brand:box(16,134,0,44),wordmark:box(16,134,4,40),
+    brandAlt:"CorVIA Cardiology Spaces",brandLoaded:true,
+    identity:box(144,304,0,88),avatar:box(144,188,0,44),
+    identityName:{...box(196,304,0,84),text:"Profa. Dra. Alexandriana",scrollWidth:108,clientWidth:108,textRects:[{left:198,right:300,top:3,bottom:80}]},
+    search:box(16,250,104,150),input:box(50,190,104,150),catalog:box(260,304,104,150),organization:box(16,180,760,804),
+    spaceButtons:[0,1,2,3,4].map(index => ({box:box(16+index*58,70+index*58,290,334),text:[],selected:index===0})),
+    cards:[0,1,2,3,4].map(index => ({box:{...box(16,304,360,660),visible:index===0},text:index===0 ? [{left:40,right:240,top:620,bottom:648}] : [],selected:index===0,image:{loaded:true,alt:"Interior do espaço"}})),
+    actions:[],
+  };
+}
+
+test("mobile geometry rejects hidden wordmarks and clipped architecture even when body overflow is masked", () => {
+  const sample=mobileGeometrySample();
   assert.deepEqual(validateMobileSpaces(sample), []);
   assert.ok(validateMobileSpaces({...sample,wordmark:{...sample.wordmark,visible:false}}).includes("wordmark: not visible"));
-  assert.ok(validateMobileSpaces({...sample,header:{...sample.header,top:-58,bottom:26}}).includes("header: outside vertical viewport"));
-  assert.ok(validateMobileSpaces({...sample,cards:[{box:box(16,380),text:[]},...sample.cards.slice(1)]}).includes("card 0: outside viewport"));
-  assert.ok(validateMobileSpaces({...sample,cards:[{box:box(16,304),text:[{left:90,right:330}]},...sample.cards.slice(1)]}).includes("card 0: clipped text"));
-  assert.ok(validateMobileSpaces({...sample,galaxy:box(110,154)}).includes("brand/galaxy: overlap"));
-  assert.ok(validateMobileSpaces({...sample,galaxyImage:box(94,212)}).includes("galaxy image: overflow or overlap"));
+  assert.ok(validateMobileSpaces({...sample,brandLoaded:false}).includes("wordmark: missing accessible or loaded branding"));
+  assert.ok(validateMobileSpaces({...sample,header:{...sample.header,top:-58,bottom:102}}).includes("header: outside vertical viewport"));
+  assert.ok(validateMobileSpaces({...sample,cards:[{...sample.cards[0],box:geometryBox(16,380,360,660)},...sample.cards.slice(1)]}).includes("card 0: outside viewport"));
+  assert.ok(validateMobileSpaces({...sample,cards:[{...sample.cards[0],text:[{left:90,right:330,top:620,bottom:648}]},...sample.cards.slice(1)]}).includes("card 0: clipped text"));
+  assert.ok(validateMobileSpaces({...sample,catalog:geometryBox(110,154)}).includes("brand/catalog: overlap"));
+  assert.ok(validateMobileSpaces({...sample,organization:geometryBox(16,180,760,800)}).includes("organization: touch target below 44px"));
+  assert.ok(validateMobileSpaces({...sample,spaceButtons:sample.spaceButtons.slice(1)}).includes("arrival: expected five mobile spaces"));
+  assert.ok(validateMobileSpaces({...sample,spaceButtons:sample.spaceButtons.map(item=>({...item,selected:false}))}).includes("arrival: expected one selected mobile space"));
+  assert.ok(validateMobileSpaces({...sample,spaceButtons:[{...sample.spaceButtons[0],text:[{left:16,right:90,top:300,bottom:322}]},...sample.spaceButtons.slice(1)]}).includes("space button 0: clipped text"));
+  assert.ok(validateMobileSpaces({...sample,cards:[{...sample.cards[0],image:{loaded:false,alt:"Interior"}},...sample.cards.slice(1)]}).includes("card 0: missing loaded accessible interior"));
+  const interior={...sample,arrival:false,cards:[],spaceButtons:[],actions:Array.from({length:12},(_,index)=>({box:geometryBox(16,304,350+index*110,450+index*110),text:[],href:"/agenda"}))};
+  assert.deepEqual(validateMobileSpaces(interior),[]);
+  assert.ok(validateMobileSpaces({...interior,actions:interior.actions.slice(1)}).includes("interior: expected 12 actions"));
+  assert.deepEqual(validateMobileSpaces({...interior,modeValue:"essential",actions:interior.actions.slice(0,8)}),[]);
+  assert.deepEqual(validateMobileSpaces({...interior,modeValue:"scientific",actions:interior.actions.slice(0,8)}),[]);
+  assert.ok(validateMobileSpaces({...interior,actions:[{...interior.actions[0],href:"//example.org"},...interior.actions.slice(1)]}).includes("action 0: missing same-origin route"));
 });
 
-
 test("mobile identity gate rejects missing, truncated and overlapping professional names", () => {
-  const box=(left,right,top,bottom) => ({left,right,top,bottom,width:right-left,height:bottom-top,visible:true});
-  const name={...box(200,304,48,80),text:"Profa. Dra. Alexandriana",scrollWidth:104,clientWidth:104,textRects:[{left:204,right:300,top:50,bottom:78}]};
-  const sample={width:320,choice:true,header:box(0,320,0,84),brand:box(16,122,0,44),wordmark:box(62,122,0,44),galaxy:box(130,174,0,44),identity:box(200,304,0,84),avatar:box(230,274,0,44),identityName:name,cards:[0,1,2].map(() => ({box:box(16,304,120,200),text:[]}))};
+  const sample=mobileGeometrySample();
+  const name=sample.identityName;
   assert.deepEqual(validateMobileSpaces(sample,name.text),[]);
   assert.ok(validateMobileSpaces({...sample,identityName:{...name,visible:false}},name.text).includes("identityName: not visible"));
   assert.ok(validateMobileSpaces({...sample,identityName:{...name,text:"D."}},name.text).includes("identity name: unexpected text"));
   assert.ok(validateMobileSpaces({...sample,identityName:{...name,scrollWidth:180}},name.text).includes("identity name: clipped text"));
-  assert.ok(validateMobileSpaces({...sample,identityName:{...name,textRects:[{left:204,right:340,top:50,bottom:78}]}},name.text).includes("identity name: clipped text"));
-  assert.ok(validateMobileSpaces({...sample,identityName:{...name,...box(200,304,20,52)}},name.text).includes("identity name/avatar: overlap"));
+  assert.ok(validateMobileSpaces({...sample,identityName:{...name,textRects:[{left:204,right:340,top:3,bottom:80}]}},name.text).includes("identity name: clipped text"));
+  assert.ok(validateMobileSpaces({...sample,identityName:{...name,...geometryBox(160,304,20,52)}},name.text).includes("identity name/avatar: overlap"));
 });

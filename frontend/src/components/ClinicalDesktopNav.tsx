@@ -203,7 +203,7 @@ export default function ClinicalDesktopNav() {
   return (
     <aside className={`ccc-nav ccc-nav--reference ccc-nav--space-${currentSpace}`} aria-label={`Ferramentas do espaço ${meta.label}`}>
       <NavLink to="/" className="ccc-nav__brand" aria-label="CorVIA — Início">
-        <span className="ccc-nav__brand-mark"><img src="/corvia-mark-canonical.svg" alt="" /></span>
+        <span className="ccc-nav__brand-mark"><img src="/atelier/corvia-mark-atelier.svg" alt="" /></span>
         <span className="ccc-nav__brand-copy"><strong>Cor<span className="corvia-via">VIA</span></strong><small>Cardiology Spaces</small></span>
       </NavLink>
 

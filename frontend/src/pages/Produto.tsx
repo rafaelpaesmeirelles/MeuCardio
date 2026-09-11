@@ -10,11 +10,11 @@ const ESPACOS: Array<{
   image: string;
   icon: NomeIcone;
 }> = [
-  { id: "consultorio", name: "Consultório", role: "Assistir e acompanhar", image: "/spaces/corvia-room-consultorio-640.webp", icon: "clinica" },
-  { id: "hospital", name: "Hospital", role: "Decidir sob pressão", image: "/spaces/corvia-room-hospital-640.webp", icon: "emergencia" },
-  { id: "ensino", name: "Ensino", role: "Aprender e ensinar", image: "/spaces/corvia-room-ensino-640.webp", icon: "curso" },
-  { id: "pesquisa", name: "Pesquisa", role: "Validar evidências", image: "/spaces/corvia-room-pesquisa-640.webp", icon: "evidencia" },
-  { id: "gestao", name: "Gestão", role: "Conduzir a operação", image: "/spaces/corvia-room-gestao-640.webp", icon: "indicadores" },
+  { id: "consultorio", name: "Consultório", role: "Assistir e acompanhar", image: "/atelier/atelier-consultorio.webp", icon: "clinica" },
+  { id: "hospital", name: "Hospital", role: "Decidir sob pressão", image: "/atelier/atelier-hospital.webp", icon: "emergencia" },
+  { id: "ensino", name: "Ensino", role: "Aprender e ensinar", image: "/atelier/atelier-ensino.webp", icon: "curso" },
+  { id: "pesquisa", name: "Pesquisa", role: "Validar evidências", image: "/atelier/atelier-pesquisa.webp", icon: "evidencia" },
+  { id: "gestao", name: "Gestão", role: "Conduzir a operação", image: "/atelier/atelier-gestao.webp", icon: "indicadores" },
 ];
 
 const MODOS = [
@@ -47,15 +47,10 @@ const CAMADAS = [
   { label: "Referências", title: "O que fundamenta a decisão", text: "Evidências, protocolos e relações clínicas continuam rastreáveis no mesmo fluxo.", icon: "evidencia" as const },
 ];
 
-function StarField() {
-  return <div className="public-showcase__stars" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>;
-}
-
 export default function Produto() {
   return (
-    <div className="public-showcase">
+    <div className="public-showcase corvia-atelier-public">
       <a className="public-space__skip" href="#conteudo-principal">Ir para o conteúdo</a>
-      <StarField />
       <header className="public-showcase__topbar">
         <PublicCorviaBrand to="/produto" />
         <nav aria-label="Navegação da apresentação">
@@ -85,7 +80,7 @@ export default function Produto() {
           <div className="public-showcase__portals" aria-label="Cinco ambientes do CorVIA">
             {ESPACOS.map((space) => (
               <Link to="/entrar" className={`public-showcase__portal public-showcase__portal--${space.id}`} data-space={space.id} key={space.id} aria-label={`${space.name}: ${space.role}. Entrar no CorVIA`}>
-                <img src={space.image} alt="" width="640" height="427" loading={space.id === "consultorio" ? "eager" : "lazy"} />
+                <img src={space.image} alt="" width="1536" height="1024" loading={space.id === "consultorio" ? "eager" : "lazy"} />
                 <span className="public-showcase__portal-glass" />
                 <div><span><Icone nome={space.icon} /></span><strong>{space.name}</strong><small>{space.role}</small></div>
                 <i>Entrar <Icone nome="seta" /></i>

@@ -1,0 +1,475 @@
+/* Architectural presentation is isolated from clinical content and its status colors. */
+@font-face{font-family:AtelierSans;src:url('/atelier/dm-sans-regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:AtelierSans;src:url('/atelier/dm-sans-semibold.ttf') format('truetype');font-weight:600 800;font-display:swap}
+@font-face{font-family:AtelierDisplay;src:url('/atelier/manrope-medium.ttf') format('truetype');font-weight:400 600;font-display:swap}
+@font-face{font-family:AtelierDisplay;src:url('/atelier/manrope-bold.ttf') format('truetype');font-weight:700 900;font-display:swap}
+html[data-corvia-design="atelier"]{--atelier-ink:#263936;--atelier-muted:#5c6d63;--atelier-paper:#fffdf8;--atelier-border:#b4a88966;--atelier-teal:#146f65;--atelier-copper:#b66d48;--atelier-metal:linear-gradient(115deg,#d39770 0%,#f2d1af 24%,#d8a27c 49%,#c98c66 77%,#e2b18d 100%);--fonte-texto:AtelierSans,system-ui,sans-serif;--fonte-display:AtelierDisplay,system-ui,sans-serif;scroll-padding-top:120px}
+html[data-corvia-design="atelier"][data-corvia-theme="light"]{--fundo:#f8f4e9;--superficie:#fffdf8;--texto:#263936;--texto-secundario:#5c6d63;--primaria:#263936;--acao:#146f65;--acento:#146f65;--borda:#d3caba;--line:#d3caba}
+html[data-corvia-design="atelier"] body{font-family:var(--fonte-texto);font-size:16px}
+html[data-corvia-design="atelier"][data-corvia-theme="light"] body{background:radial-gradient(ellipse at 8% 0%,#fff 0,transparent 48%),radial-gradient(ellipse at 95% 25%,#d99b7538,transparent 65%),linear-gradient(115deg,#fbf7ed,#fffdf6 50%,#f2e4d6);background-attachment:fixed;color:var(--atelier-ink)}
+html[data-corvia-design="atelier"] :is(button,a,input,textarea,select,summary):focus-visible{outline:3px solid #167d71;outline-offset:3px}
+html[data-corvia-design="atelier"] :is(.atelier-home,.atelier-app)::before,html[data-corvia-design="atelier"] :is(.atelier-home,.atelier-app)::after{content:none!important}
+html[data-corvia-design="atelier"] body.cardiology-spaces-active{height:auto!important;min-height:100dvh!important;overflow:auto!important}
+html[data-corvia-design="atelier"] body:has(.atelier-app):not(.cv-overlay-open){height:auto!important;min-height:100dvh!important;overflow:auto!important}
+html[data-corvia-design="atelier"] body.cv-overlay-open,html[data-corvia-design="atelier"] body:has(.atelier-home .spaces-overlay){overflow:hidden!important}
+html[data-corvia-design="atelier"] .atelier-home{position:relative;display:block;width:100%;height:auto;min-height:100dvh;overflow:visible;padding:0 clamp(20px,4.5vw,84px) 36px;color:var(--atelier-ink);background:transparent;isolation:isolate}
+.atelier-home :is(h1,h2,h3){font-family:var(--fonte-display);color:var(--atelier-ink);letter-spacing:-.035em}
+.atelier-home :is(button,input,select,summary){font:inherit}
+.atelier-home :is(button,a,summary){touch-action:manipulation}
+.atelier-home :is(button,select,summary){min-height:44px}
+.atelier-home button{color:inherit;background:transparent;border:0;cursor:pointer}
+.atelier-home button:disabled{cursor:default;opacity:.45}
+.atelier-home a{color:var(--atelier-teal);text-decoration:none}
+.atelier-home svg{width:22px;height:22px;flex-shrink:0}
+.atelier-header{position:relative;z-index:20;display:flex;align-items:center;gap:28px;min-height:100px;border-bottom:1px solid var(--atelier-border);max-width:1800px;margin:auto}
+.atelier-brand{display:inline-flex;flex:0 0 auto;align-items:center;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.atelier-brand img{display:block;width:184px!important;height:auto!important;max-width:100%;object-fit:contain;filter:none!important}
+.atelier-search{display:flex;align-items:center;flex:1;gap:12px;max-width:650px;margin:0 auto;border-bottom:1px solid #9caf9d80;min-width:100px;background:#ffffff30;padding:3px 10px;color:var(--atelier-teal)}
+.atelier-search input{width:100%;min-width:0;min-height:46px;background:transparent!important;border:0!important;box-shadow:none!important;padding:8px 0!important;color:var(--atelier-ink)!important;font-size:16px}
+.atelier-search input::placeholder{color:var(--atelier-muted)}
+.atelier-search button{display:grid;place-items:center;min-width:44px}
+.atelier-catalog-trigger{display:flex;align-items:center;gap:8px;font-size:14px!important;color:var(--atelier-teal)!important;white-space:nowrap}
+.atelier-account{position:relative;flex:0 0 auto;max-width:220px}
+.atelier-account summary{display:flex;align-items:center;gap:8px;cursor:pointer;list-style:none;font-size:14px}
+.atelier-account summary::-webkit-details-marker{display:none}
+.atelier-account summary>span{display:flex;align-items:center;gap:10px;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.atelier-account .spaces-user__avatar{width:44px;height:44px;flex:0 0 44px;border-radius:50%;overflow:hidden;border:1px solid #b66d4880;background:#e9efdf;color:var(--atelier-teal)}
+.atelier-account img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.atelier-account>div{position:absolute;right:0;top:calc(100% + 15px);display:flex;flex-direction:column;gap:2px;width:280px;padding:16px;background:var(--atelier-paper);border:1px solid var(--atelier-border);box-shadow:0 20px 70px #26393633;border-radius:12px}
+.atelier-account>div :is(a,button){padding:10px 12px;min-height:44px;text-align:left}
+.atelier-arrival,.atelier-space{max-width:1660px;margin:0 auto}
+.atelier-arrival__heading{text-align:center;padding:clamp(35px,5vh,64px) 0 34px}
+.atelier-arrival__heading p{font-size:12px;font-weight:600;letter-spacing:.26em;color:#774735;margin:0 0 16px}
+.atelier-arrival__heading h1{font-size:clamp(28px,3.1vw,48px);font-weight:500;line-height:1.17;margin:0 0 14px}
+.atelier-arrival__heading>span{display:block;font-size:16px;color:var(--atelier-muted);line-height:1.6}
+.atelier-portals{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;padding:7px;border:1px solid #b66d4873;background:linear-gradient(130deg,#fffef8cc,#ddd0ad47);box-shadow:0 25px 55px #463a231f,inset 0 1px #fff;border-radius:8px;isolation:isolate}
+.atelier-portal{position:relative;display:block!important;min-width:0;aspect-ratio:0.64;max-height:420px;overflow:hidden;border-radius:3px;padding:0!important;text-align:left;isolation:isolate;border:1px solid #d5c9a94d!important}
+.atelier-portal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.83) saturate(.86);transition:filter .3s ease,transform .3s ease}
+.atelier-portal::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(transparent 47%,#1e2a201c 62%,#17221bef);pointer-events:none}
+.atelier-portal:hover img{filter:brightness(.99) saturate(1)}
+.atelier-portal.is-selected{border-color:#b66d48!important;box-shadow:0 0 0 1px #8c4d35a6,0 10px 24px #46391729}
+.atelier-portal.is-selected img{filter:brightness(1.075) saturate(1.06)}
+.atelier-portal.is-selected::after{border-bottom:4px solid #d39770}
+.atelier-portal__number{position:absolute;top:20px;left:20px;color:#fffcf2;font-size:12px;letter-spacing:.12em;z-index:2;text-shadow:0 1px 5px #112521}
+.atelier-portal__label{position:absolute;bottom:27px;left:22px;right:10px;display:flex;align-items:center;gap:10px;z-index:2;color:#fffbed}
+.atelier-portal__label strong{font-size:clamp(16px,1.6vw,25px);font-weight:500}
+.atelier-portal__selected{position:absolute;top:15px;right:12px;background:linear-gradient(120deg,#086a60f2,#17473eef);border:1px solid #d39770ad;color:#fffbed;padding:4px 9px;display:flex;align-items:center;gap:5px;z-index:3;font-size:12px;border-radius:20px}
+.atelier-portal__selected svg{width:14px;height:14px}
+.atelier-entry{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:132px;padding:25px 2px;border-bottom:1px solid var(--atelier-border)}
+.atelier-entry__identity{display:flex;align-items:center;gap:18px;min-width:0}
+.atelier-entry__identity>span{display:grid;place-items:center;flex:0 0 54px;height:54px;border:1px solid #b66d4866;border-radius:50%;background:linear-gradient(130deg,#fffdf5,#f0dac980,#fffef6);box-shadow:inset 0 1px #fff;color:var(--atelier-teal)}
+.atelier-entry h2{font-size:25px;font-weight:500;margin:0 0 6px}
+.atelier-entry p{color:var(--atelier-muted);font-size:15px;margin:0;max-width:560px}
+.atelier-entry__actions{display:flex;align-items:center;gap:28px;flex:0 0 auto}
+.atelier-organization{display:flex;flex-direction:column;gap:1px;min-width:150px}
+.atelier-organization>span{font-size:12px;color:var(--atelier-muted);letter-spacing:.05em}
+.atelier-organization select{font-size:14px;line-height:1.4;background:transparent;color:var(--atelier-ink);border:0;border-bottom:1px solid var(--atelier-border);border-radius:0;padding:5px 24px 5px 0;min-height:40px;max-width:100%}
+.atelier-organization option{color:#263936;background:#fffdf8}
+.atelier-home button.atelier-primary{display:flex;align-items:center;justify-content:center;gap:22px;min-height:54px;padding:12px 24px;border:1px solid #8c4d3570;border-radius:5px;background:var(--atelier-metal);color:#1e2a22;box-shadow:inset 0 1px #faeadb,inset 0 -1px #75412f33,0 8px 26px #b66d482b;font-weight:600;font-size:15px}
+.atelier-home button.atelier-primary:hover{filter:brightness(1.04);box-shadow:inset 0 1px #faf4e5,0 10px 28px #b66d483d}
+.atelier-arrival__footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;color:var(--atelier-muted);font-size:14px}
+.atelier-arrival__footer a{display:flex;align-items:center;gap:10px;min-height:44px}
+.atelier-mobile-spaces{display:none}
+.atelier-space__breadcrumb{display:flex;align-items:center;gap:20px;padding:16px 0;font-size:14px;color:var(--atelier-muted)}
+.atelier-space__breadcrumb button{display:flex;align-items:center;gap:5px;color:var(--atelier-teal)}
+.atelier-space__breadcrumb svg{transform:rotate(180deg);width:16px}
+.atelier-space__hero{height:clamp(225px,27vh,330px);position:relative;overflow:hidden;border-radius:6px;outline:1px solid #b66d4882;box-shadow:0 25px 55px #483a201f,0 0 0 1px #faeadb}
+.atelier-space__hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#16221deb,#1e2d258a 35%,#29392a08 75%)}
+.atelier-space__hero>img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:50% 56%;filter:brightness(1.04) saturate(1.04)}
+.atelier-space__hero>div{position:absolute;z-index:1;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:34px 42px;max-width:620px}
+.atelier-space__hero p{font-size:12px;color:#edc7aa;letter-spacing:.2em;margin:0 0 12px}
+.atelier-space__hero h1{color:#fff9ed;font-size:clamp(32px,3.3vw,50px);font-weight:500;margin:0 0 12px}
+.atelier-space__hero span{color:#e8efdc;font-size:16px;line-height:1.6;max-width:420px}
+.atelier-shelf-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:32px 0 18px}
+.atelier-shelf-toolbar h2{font-size:22px;font-weight:500;margin:0}
+.atelier-shelf-toolbar>div{display:flex;align-items:center;gap:23px}
+.atelier-shelf-toolbar button{display:flex;gap:8px;align-items:center;color:var(--atelier-teal);font-size:14px}
+.atelier-shelf-toolbar button:last-child{border-left:1px solid var(--atelier-border);padding-left:20px}
+.atelier-shelves{border:1px solid #b5a47a70;border-radius:6px;overflow:hidden;background:linear-gradient(125deg,#fffefbb8,#faf7efa6);box-shadow:inset 0 1px #fff,inset 0 -2px #b69b5821,0 18px 40px #5b482013}
+.atelier-shelf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid #bcaa7852}
+.atelier-shelf:last-child{border:0}
+html[data-corvia-design="atelier"] .atelier-shelf .spaces-action{position:relative;display:flex;align-items:center;justify-content:flex-start;gap:17px;min-height:110px;padding:24px 22px;margin:0;border:0;border-left:1px solid #bbaf8e40;border-radius:0;background:transparent;box-shadow:none;color:var(--atelier-ink);font-family:var(--fonte-texto);font-size:16px;line-height:1.4;text-align:left;transform:none;clip-path:none;white-space:normal;overflow-wrap:anywhere}
+html[data-corvia-design="atelier"] .atelier-shelf .spaces-action:first-child{border-left:0}
+html[data-corvia-design="atelier"] .atelier-shelf .spaces-action::before{content:none}
+html[data-corvia-design="atelier"] .atelier-shelf .spaces-action>svg{width:44px;height:44px;flex:0 0 44px;padding:10px;border:1px solid #b66d4866;border-radius:50%;background:linear-gradient(140deg,#ffffffe6,#efddce73 50%,#fffdf4d9);color:#127b69;filter:none;box-shadow:inset 0 1px #fff,0 3px 10px #b66d4812}
+html[data-corvia-design="atelier"] .atelier-shelf .spaces-action>span{font-size:16px;font-weight:500;line-height:1.4;color:inherit;white-space:normal;overflow:visible;text-overflow:clip}
+html[data-corvia-design="atelier"] .atelier-shelf .spaces-action:hover{background:linear-gradient(120deg,#f3e2d2c4,#fbf8eb66)}
+html[data-corvia-design="atelier"] .atelier-shelf .spaces-action--featured{background:linear-gradient(120deg,#f5e4d4d9,#fbf7e942)}
+.atelier-shelf .spaces-action__highlight{display:block;font-size:11px!important;line-height:1.4;letter-spacing:.1em;text-transform:uppercase;color:#774735!important;margin-top:5px;background:none!important;border:0!important;padding:0!important}
+.atelier-space__note{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;font-size:14px;color:var(--atelier-muted)}
+.atelier-space__note a{display:flex;align-items:center;gap:8px;min-height:44px}
+.atelier-day{border-top:1px solid var(--atelier-border);margin-top:8px}
+.atelier-day>summary{display:flex;align-items:center;gap:10px;color:var(--atelier-teal);padding:14px 0;cursor:pointer;list-style:none}
+.atelier-day>summary>svg:last-child{margin-left:auto;transform:rotate(90deg)}
+.atelier-day[open]>summary>svg:last-child{transform:rotate(-90deg)}
+html[data-corvia-design="atelier"] .atelier-day .spaces-day{position:static!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;width:auto!important;height:auto!important;max-height:none!important;min-height:0!important;padding:18px!important;background:var(--atelier-paper)!important;border:1px solid var(--atelier-border)!important;border-radius:8px!important;overflow:visible!important}
+.atelier-day .spaces-day>h2{grid-column:1/-1;font-size:18px}
+.atelier-day .spaces-day .spaces-day__item{min-height:72px;margin:0;background:transparent;border-color:var(--atelier-border);color:var(--atelier-ink)}
+.atelier-day .spaces-day :is(.spaces-day__item strong,.spaces-day__empty strong){color:var(--atelier-ink);font-size:15px}
+.atelier-day .spaces-day :is(.spaces-day__item small,.spaces-day__empty small){color:var(--atelier-muted);font-size:14px}
+.atelier-day .spaces-day .spaces-day__empty{grid-column:1/-1}
+.atelier-day .spaces-day>button,.atelier-day .spaces-day .spaces-mini-route{grid-column:1/-1;max-width:700px}
+.atelier-empty{padding:32px;color:var(--atelier-muted)}
+.atelier-storage-notice{padding:16px;background:#fff4cf;border:1px solid #ba9846;border-radius:8px;color:#6d5019;max-width:1000px;margin:15px auto}
+.atelier-home .spaces-overlay{background:#203c3c66;backdrop-filter:blur(7px);z-index:1300}
+html[data-corvia-design="atelier"] .atelier-home :is(.spaces-catalog,.spaces-personalizer,.spaces-travel){background:var(--atelier-paper)!important;color:var(--atelier-ink)!important;border:1px solid var(--atelier-border)!important;box-shadow:0 35px 100px #102f3157;border-radius:14px;max-height:calc(100dvh - 40px);overflow:auto;scrollbar-color:#a89565 #f5f1e8}
+html[data-corvia-design="atelier"] .atelier-home :is(.spaces-catalog,.spaces-personalizer,.spaces-travel) :is(input,select){color:var(--atelier-ink)!important;background:var(--atelier-paper)!important;border:1px solid var(--atelier-border)!important;font-size:16px;min-height:44px}
+html[data-corvia-design="atelier"] .atelier-home :is(.spaces-catalog,.spaces-personalizer,.spaces-travel) :is(h2,h3,strong,button,label,span){color:inherit}
+.atelier-home .spaces-catalog{width:min(1100px,calc(100vw - 32px))}
+.atelier-home .spaces-catalog>div{display:block!important;overflow:visible!important}
+.atelier-home .spaces-catalog>div>section{height:auto!important;min-height:0!important;max-height:none!important;flex-shrink:0;overflow:visible!important}
+.atelier-home .spaces-catalog .spaces-action{min-height:58px;background:#f6f3eb!important;border-color:var(--atelier-border)!important;font-size:15px;line-height:1.45;white-space:normal}
+.atelier-home .spaces-catalog h3{font-size:16px;letter-spacing:.04em}
+.atelier-home .spaces-personalizer{width:min(1050px,calc(100vw - 32px))}
+.atelier-home .spaces-personalizer__selected article{background:#fffdf6!important;border-color:var(--atelier-border)!important;display:flex;flex-wrap:wrap;gap:12px;min-height:62px}
+.atelier-home .spaces-personalizer__selected article>div{display:flex;flex-wrap:wrap;margin-left:auto;align-items:center;gap:4px}
+.atelier-home .spaces-personalizer__selected button{border:1px solid var(--atelier-border);border-radius:6px;min-width:44px}
+.atelier-home .spaces-personalizer__selected article>span{flex:1;min-width:160px}
+.atelier-home .spaces-personalizer__grid>button{background:#f7f5ed;border:1px solid var(--atelier-border);font-size:15px;color:var(--atelier-ink);min-height:60px}
+.atelier-home .spaces-personalizer__grid>button.is-selected{border-color:#167b6a;background:#e8f2e8}
+.atelier-home .spaces-personalizer :is(p,small){color:var(--atelier-muted)!important;font-size:14px}
+.atelier-home .spaces-personalizer__tabs button{font-size:14px;border:1px solid var(--atelier-border);padding:10px 14px}
+.atelier-home .spaces-personalizer__tabs button.is-active{color:#fff!important;background:var(--atelier-teal)}
+.atelier-home .spaces-personalizer footer{position:sticky;bottom:0;background:var(--atelier-paper)!important;border-top:1px solid var(--atelier-border);padding:16px}
+.atelier-home .spaces-personalizer footer button{background:var(--atelier-teal);color:#fff!important;border:1px solid #126155;padding:12px 20px}
+.atelier-home .spaces-personalizer footer button.is-secondary{background:#fff;color:var(--atelier-teal)!important}
+.atelier-personalizer-search{display:flex;align-items:center;gap:10px;padding:12px 0}
+.atelier-personalizer-search input{width:100%;padding:10px}
+/* Every real task has a compact frame. Photography and shelves stay on the overview. */
+html[data-corvia-design="atelier"] .atelier-app{display:block!important;min-height:100dvh!important;height:auto!important;padding:0!important;overflow:visible!important;background:var(--atelier-paper)!important;--cv-accent:#146f65;--cv-accent-rgb:20,111,101}
+html[data-corvia-design="atelier"] .atelier-app>.cv-sidebar,html[data-corvia-design="atelier"] .atelier-app>.cv-global-dock{display:none!important}
+html[data-corvia-design="atelier"] .atelier-app>.cv-shell{position:relative!important;inset:auto!important;display:block!important;min-width:0!important;width:100%!important;padding:0!important;margin:0!important;height:auto!important;max-height:none!important;overflow:visible!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-topbar{position:sticky!important;top:0!important;z-index:80!important;display:flex!important;align-items:center;gap:20px!important;height:auto!important;min-height:76px!important;padding:10px clamp(16px,3vw,48px)!important;border:0!important;border-bottom:1px solid var(--atelier-border)!important;border-radius:0!important;background:#fbf8f0f5!important;color:var(--atelier-ink)!important;box-shadow:0 1px 12px #26393605!important;backdrop-filter:blur(14px)}
+html[data-corvia-design="atelier"] .atelier-app .cv-topbar__brand{display:flex!important;flex:0 0 auto!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-topbar__brand img{width:154px!important;height:auto!important;filter:none!important;max-height:52px!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-topbar__menu{display:grid!important;place-items:center;width:44px;min-width:44px;height:44px}
+html[data-corvia-design="atelier"] .atelier-app .cv-topbar__context{display:none!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-command{flex:1!important;max-width:720px;min-width:100px;background:#fffaf4!important;border:1px solid #b5aa9166!important;border-radius:6px!important;box-shadow:none!important;height:46px!important;min-height:46px!important;margin:0 auto!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-command input{font-size:16px!important;color:var(--atelier-ink)!important;background:transparent!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-command input::placeholder{color:var(--atelier-muted)!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-command :is(svg,button,kbd){color:var(--atelier-teal)!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-topbar__actions{position:static!important;display:flex;align-items:center;gap:7px}
+html[data-corvia-design="atelier"] .atelier-app :is(.cv-icon-button,.cv-account__trigger){color:var(--atelier-ink)!important;background:transparent!important;border-color:var(--atelier-border)!important;min-width:44px;min-height:44px}
+html[data-corvia-design="atelier"] .atelier-app .cv-account__copy :is(strong,small){color:var(--atelier-ink)!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-workspace{position:relative!important;inset:auto!important;width:100%!important;display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important;padding:0!important;margin:0!important;overflow:visible!important;min-height:0!important;height:auto!important}
+html[data-corvia-design="atelier"] .atelier-app[data-has-intelligence="true"] .cv-workspace{grid-template-columns:minmax(0,1fr) 300px!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-stage{display:block!important;min-width:0!important;height:auto!important;overflow:visible!important;padding:0!important}
+.atelier-taskbar{display:flex;align-items:center;gap:22px;min-height:64px;padding:8px clamp(16px,3vw,48px);border-bottom:1px solid var(--atelier-border);background:#f6f2e8;color:var(--atelier-ink)}
+.atelier-taskbar a,.atelier-taskbar button{display:flex;align-items:center;gap:7px;color:var(--atelier-teal);background:transparent;border:0;min-height:44px;font-size:14px;text-decoration:none;padding:6px 9px;cursor:pointer}
+.atelier-taskbar svg{width:20px;height:20px;flex-shrink:0}
+.atelier-taskbar__return>svg{transform:rotate(180deg);width:16px}
+.atelier-taskbar__title{display:flex;align-items:center;gap:10px;min-width:0;font-size:16px;line-height:1.4}
+.atelier-taskbar__title strong{overflow-wrap:anywhere;font-weight:600}
+.atelier-taskbar__actions{margin-left:auto;display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.atelier-taskbar__actions button[aria-pressed="true"]{background:#e1ebdf;border-radius:5px;color:#14584f}
+html[data-corvia-design="atelier"] .atelier-app .cv-content{position:relative!important;width:100%!important;min-width:0!important;max-width:none!important;min-height:calc(100dvh - 140px)!important;height:auto!important;max-height:none!important;padding:clamp(16px,2.5vw,38px)!important;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:var(--atelier-paper)!important;overflow:visible!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-content>.conteudo.cos-content{width:100%!important;max-width:none!important;min-height:0!important;height:auto!important;max-height:none!important;padding:0!important;margin:0!important;border:0!important;box-shadow:none!important;background:transparent!important;overflow:visible!important}
+html[data-corvia-design="atelier"] .atelier-app[data-layout="reading"] .cv-content>.conteudo.cos-content{max-width:1140px!important;margin:0 auto!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-content::before,html[data-corvia-design="atelier"] .atelier-app .cv-content::after{content:none!important}
+html[data-corvia-design="atelier"] .atelier-app--focus .cv-topbar{display:none!important}
+html[data-corvia-design="atelier"] .atelier-app--focus .atelier-taskbar{position:sticky;top:0;z-index:80}
+html[data-corvia-design="atelier"] .atelier-app--focus .cv-content{min-height:calc(100dvh - 64px)!important}
+html[data-corvia-design="atelier"] .atelier-app--focus>.cv-mobile-dock{display:none!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-account-menu{background:var(--atelier-paper)!important;border-color:var(--atelier-border)!important;color:var(--atelier-ink)!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-account-menu :is(strong,small,a,button){color:var(--atelier-ink)!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-drawer{background:var(--atelier-paper)!important;border-color:var(--atelier-border)!important;color:var(--atelier-ink)!important;width:min(1000px,calc(100vw - 40px))!important;max-width:100%!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-drawer :is(h2,h3,strong){color:var(--atelier-ink)!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-drawer :is(p,small){color:var(--atelier-muted)!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-drawer :is(input,select){background:#fffdf8!important;color:#263936!important;border-color:var(--atelier-border)!important;font-size:16px!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-drawer :is(.cv-nav-link,.cv-drawer__assistant){background:#f6f3eb!important;border-color:var(--atelier-border)!important;color:var(--atelier-ink)!important;min-height:58px}
+html[data-corvia-design="atelier"] .atelier-app .cv-drawer .cv-drawer__group{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;flex-shrink:0!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-drawer .cv-drawer__groups{overflow-y:auto!important;min-height:0!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-mobile-dock{background:#fffcf3f5!important;border-color:var(--atelier-border)!important;color:var(--atelier-ink)!important;backdrop-filter:blur(12px)}
+html[data-corvia-design="atelier"] .atelier-app .cv-mobile-dock :is(a,button){color:var(--atelier-teal)!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-intelligence{position:sticky!important;top:86px!important;max-height:calc(100dvh - 100px)!important;margin:15px 15px 15px 0!important;background:#f1f3e9!important;border-color:var(--atelier-border)!important;color:var(--atelier-ink)!important;overflow-y:auto!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-intelligence :is(strong,h2){color:var(--atelier-ink)!important}
+html[data-corvia-design="atelier"] .atelier-app .cv-intelligence :is(p,small){color:var(--atelier-muted)!important}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"]{--atelier-ink:#f4f1e7;--atelier-muted:#b8c3b8;--atelier-paper:#172328;--atelier-border:#c7b98240;--atelier-teal:#8cd6c2}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-home{background:linear-gradient(120deg,#172328,#223330)}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-shelves{background:linear-gradient(135deg,#243330,#172728)}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-topbar,html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-taskbar{background:#1d2a2a!important}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] :is(.atelier-brand,.atelier-app .cv-topbar__brand){background:#f9f2df!important;border-radius:5px;padding:5px 10px!important}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-command{background:#1b302f!important}
+@media(max-width:1200px){.atelier-header{gap:16px}.atelier-catalog-trigger span{display:none}.atelier-account summary>span>span:not(.spaces-user__avatar){display:none}.atelier-entry{align-items:flex-start}.atelier-entry__actions{gap:16px}.atelier-portal__label{left:13px;gap:6px}.atelier-portal__number{left:12px}.atelier-portal__selected{font-size:0;right:8px}.atelier-shelf-toolbar>div{gap:12px}html[data-corvia-design="atelier"] .atelier-shelf .spaces-action{gap:12px;padding:22px 15px}.atelier-app .cv-topbar__updates,.atelier-app .cv-topbar__mail,.atelier-app .cv-account__copy{display:none!important}}
+@media(max-width:900px){.atelier-entry{flex-direction:column}.atelier-entry__actions{width:100%;justify-content:space-between}.atelier-shelf{grid-template-columns:repeat(2,minmax(0,1fr))}html[data-corvia-design="atelier"] .atelier-shelf .spaces-action:nth-child(n+3){border-top:1px solid var(--atelier-border)}html[data-corvia-design="atelier"] .atelier-shelf .spaces-action:nth-child(odd){border-left:0}.atelier-shelf-toolbar{align-items:flex-start}.atelier-shelf-toolbar>div{flex-wrap:wrap;justify-content:flex-end}.atelier-shelf-toolbar .atelier-organization{min-width:140px}.atelier-day .spaces-day{grid-template-columns:1fr!important}html[data-corvia-design="atelier"] .atelier-app .cv-content{padding-bottom:110px!important}html[data-corvia-design="atelier"] .atelier-app[data-has-intelligence="true"] .cv-workspace{grid-template-columns:minmax(0,1fr)!important}html[data-corvia-design="atelier"] .atelier-app .cv-intelligence{position:static!important;max-height:none!important;margin:15px!important}.atelier-taskbar{gap:12px}.atelier-taskbar__actions{gap:1px}.atelier-taskbar__actions button{font-size:13px;gap:4px}.atelier-app .cv-topbar__actions>.cv-icon-button{display:none!important}}
+@media(max-width:700px){html[data-corvia-design="atelier"] .atelier-home{padding:0 16px 24px}.atelier-header{min-height:84px;gap:12px;flex-wrap:wrap;padding:14px 0}.atelier-brand img{width:142px!important}.atelier-search{order:4;flex-basis:100%;max-width:none}.atelier-catalog-trigger{margin-left:auto}.atelier-account{max-width:50px}.atelier-arrival__heading{padding:32px 0 25px}.atelier-arrival__heading h1{font-size:30px}.atelier-arrival__heading>span{font-size:15px}.atelier-mobile-spaces{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;margin-bottom:13px}.atelier-mobile-spaces button{font-size:12px;padding:7px 2px;border-bottom:2px solid transparent;min-height:44px}.atelier-mobile-spaces button[aria-pressed="true"]{border-color:#b66d48;color:var(--atelier-teal);font-weight:600}.atelier-portals{grid-template-columns:1fr;padding:5px}.atelier-portal{display:none!important}.atelier-portal.is-selected{display:block!important;aspect-ratio:1.22;max-height:420px}.atelier-portal__label{left:22px;gap:10px}.atelier-portal__label strong{font-size:27px}.atelier-portal__number{left:22px}.atelier-portal__selected{font-size:12px;right:15px}.atelier-entry{gap:20px;padding:22px 0}.atelier-entry__identity>span{flex-basis:48px;height:48px}.atelier-entry h2{font-size:23px}.atelier-entry p{font-size:15px}.atelier-entry__actions{gap:12px;align-items:flex-end}.atelier-entry__actions .atelier-organization{min-width:0;flex:1}.atelier-home button.atelier-primary{font-size:14px;padding:12px 15px;gap:12px;max-width:62%}.atelier-arrival__footer{flex-direction:column;align-items:flex-start;gap:4px;font-size:13px}.atelier-space__hero{height:225px}.atelier-space__hero>div{padding:24px}.atelier-space__hero::after{background:linear-gradient(90deg,#16221ddb,#1e2d258a 65%,#29392a20)}.atelier-space__hero h1{font-size:35px}.atelier-space__hero span{font-size:15px}.atelier-shelf-toolbar{flex-direction:column;gap:10px;padding-top:26px}.atelier-shelf-toolbar>div{width:100%;justify-content:space-between;gap:8px}.atelier-shelf-toolbar h2{font-size:21px}.atelier-shelf-toolbar .atelier-organization{min-width:110px;flex:1}.atelier-shelf-toolbar button{font-size:13px;gap:5px}.atelier-shelf-toolbar button:last-child{padding-left:10px}.atelier-shelf-toolbar button svg{width:17px}html[data-corvia-design="atelier"] .atelier-shelf .spaces-action{flex-direction:column;align-items:flex-start;gap:12px;min-height:125px;padding:20px 15px}html[data-corvia-design="atelier"] .atelier-shelf .spaces-action>span{font-size:15px}.atelier-space__note{font-size:13px;gap:12px}.atelier-home .spaces-overlay{padding:12px!important}.atelier-home .spaces-personalizer__selected article>div{width:100%;margin:0}.atelier-home .spaces-personalizer__grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.atelier-home .spaces-personalizer__grid>button{font-size:14px;padding:12px}.atelier-home .spaces-personalizer__tabs{overflow:visible;flex-wrap:wrap}.atelier-home .spaces-personalizer__count{flex-wrap:wrap;gap:10px}html[data-corvia-design="atelier"] .atelier-app .cv-topbar{min-height:66px!important;padding:9px 12px!important;gap:10px!important}html[data-corvia-design="atelier"] .atelier-app .cv-topbar__brand img{width:116px!important}html[data-corvia-design="atelier"] .atelier-app .cv-command{order:5;flex:1 0 100%!important;max-width:100%;margin-top:5px!important}html[data-corvia-design="atelier"] .atelier-app .cv-topbar{flex-wrap:wrap!important}html[data-corvia-design="atelier"] .atelier-app .cv-topbar__actions{margin-left:auto}.atelier-taskbar{flex-wrap:wrap;padding:8px 12px;gap:4px 10px}.atelier-taskbar__title{flex:1;font-size:15px}.atelier-taskbar__actions{width:100%;justify-content:flex-end}.atelier-taskbar__return{max-width:135px;font-size:13px!important}.atelier-taskbar__actions button{font-size:14px}.atelier-app--focus .atelier-taskbar__actions{width:auto;margin-left:auto}.atelier-app--focus .atelier-taskbar__return{display:none}html[data-corvia-design="atelier"] .atelier-app .cv-drawer{width:calc(100vw - 20px)!important}.atelier-app .cv-drawer__header img{max-width:150px!important}.atelier-home .spaces-catalog>div>section>div{grid-template-columns:1fr!important}}
+@media(max-width:360px){.atelier-entry__actions{flex-direction:column;align-items:stretch}.atelier-home button.atelier-primary{max-width:100%}.atelier-mobile-spaces button{font-size:11px}.atelier-shelf-toolbar>div{flex-wrap:wrap}.atelier-shelf-toolbar .atelier-organization{flex-basis:100%}.atelier-space__note{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:no-preference){.atelier-space,.atelier-arrival,.atelier-app .cv-content{animation:atelier-enter .3s ease both}@keyframes atelier-enter{from{opacity:.5;transform:translateY(7px)}to{opacity:1;transform:none}}}
+@media(prefers-reduced-motion:reduce){.atelier-home *,.atelier-app *{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+@media print{html[data-corvia-design="atelier"] .atelier-app :is(.cv-topbar,.atelier-taskbar,.cv-mobile-dock,.cv-utility-dock,.cv-intelligence){display:none!important}html[data-corvia-design="atelier"] .atelier-app .cv-content{min-height:0!important;padding:0!important;background:#fff!important}}
+/* Keep professional identity and navigation measurable at narrow widths. */
+html[data-corvia-design="atelier"] .atelier-header > .atelier-brand,
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-header > .atelier-brand{padding:5px 0!important}
+.atelier-organization select{min-height:44px}
+.atelier-catalog-trigger{min-width:44px}
+/* Readable controls and copy stay at their intended size on narrow screens. */
+.atelier-home :is(.atelier-entry p,.atelier-arrival__heading>span,.atelier-space__hero span){font-size:16px}
+.atelier-home :is(.atelier-shelf-toolbar button,.atelier-space__note,.atelier-arrival__footer,.atelier-organization>span){font-size:14px}
+html[data-corvia-design="atelier"] .atelier-shelf .spaces-action>span{font-size:16px}
+.atelier-taskbar .atelier-taskbar__return{font-size:14px!important}
+@media(max-width:700px){.atelier-mobile-spaces{display:flex;flex-wrap:wrap;gap:4px}.atelier-mobile-spaces button{flex:1 1 85px;min-width:0;padding:8px;font-size:14px;white-space:normal}.atelier-taskbar__actions button{font-size:14px}}
+@media(max-width:1200px){
+  .atelier-catalog-trigger>span{display:block;position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .atelier-account summary .spaces-user__name{display:block!important;min-width:0;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.4}
+}
+@media(max-width:700px){
+  .atelier-header{display:grid;grid-template-columns:142px minmax(0,1fr) 44px;gap:10px;align-items:center}
+  .atelier-header>.atelier-brand{grid-column:1;grid-row:1;min-width:0;width:100%}
+  .atelier-header>.atelier-brand img{width:142px!important;max-width:100%}
+  .atelier-account{grid-column:2/-1;grid-row:1;justify-self:end;width:100%;max-width:none;min-width:0}
+  .atelier-account summary{justify-content:flex-end;gap:8px;min-width:0;min-height:44px}
+  .atelier-account summary>.spaces-user__avatar{flex:0 0 44px;overflow:hidden}
+  .atelier-account summary>.spaces-user__name{flex:0 1 auto;max-width:none;font-size:14px}
+  .atelier-search{grid-column:1/3;grid-row:2;min-width:0;width:100%;gap:8px;padding:3px 4px;margin:0}
+  .atelier-search input{min-width:0}
+  .atelier-catalog-trigger{grid-column:3;grid-row:2;justify-self:end;justify-content:center;width:44px;min-width:44px;margin:0;padding:0}
+}
+@media(max-width:360px){
+  .atelier-header{grid-template-columns:118px minmax(0,1fr) 44px}
+  .atelier-header>.atelier-brand img{width:118px!important}
+}
+
+/* Saved dark preference: pair these utility surfaces with their light ink.
+   This is component contrast only; shared brand and metal tokens are unchanged. */
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-home .spaces-catalog .spaces-action,
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-home .spaces-personalizer__selected article,
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-home .spaces-personalizer__grid > button,
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-drawer :is(.cv-nav-link,.cv-drawer__assistant) {
+  color: #f4f1e7 !important;
+  background: #233532 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-home .spaces-catalog .spaces-action:hover,
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-home .spaces-personalizer__grid > button.is-selected,
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-drawer .cv-nav-link:is(:hover,.is-current) {
+  background: #334941 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-home .spaces-personalizer__selected article button {
+  color: #f4f1e7 !important;
+  background: #233532 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-home .spaces-personalizer__tabs button.is-active,
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-home .spaces-personalizer footer button:not(.is-secondary) {
+  color: #203630 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-home .spaces-personalizer footer button.is-secondary {
+  color: #f4f1e7 !important;
+  background: #233532 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] .atelier-app .cv-intelligence {
+  background: #1d302f !important;
+}
+
+/* The personalizer now has optional history and a search row. The legacy
+   six-track grid placed search inside minmax(0,1fr), collapsing its row under
+   the control. Use one scroll surface and intrinsic, non-shrinking children. */
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer {
+  --personalizer-surface: #f7f5ed;
+  --personalizer-selected: #e8f2eb;
+  --personalizer-on-action: #fff;
+  display: flex !important;
+  flex-direction: column;
+  grid-template-rows: none !important;
+  min-width: 0;
+  min-height: 0;
+  max-height: calc(100dvh - 40px);
+  overflow: auto !important;
+  color: var(--atelier-ink) !important;
+  background: var(--atelier-paper) !important;
+  scroll-padding-block: 16px 100px;
+  scrollbar-gutter: stable;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .atelier-home .spaces-personalizer {
+  --personalizer-surface: #233532;
+  --personalizer-selected: #334941;
+  --personalizer-on-action: #17332c;
+  color-scheme: dark;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer > * {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer :is(button, select, summary) {
+  min-height: 44px !important;
+  min-width: 44px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  color: var(--atelier-ink) !important;
+  -webkit-text-fill-color: currentColor !important;
+  font-size: 16px !important;
+  line-height: 1.4;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer :is(button, select) {
+  background: var(--personalizer-surface) !important;
+  border: 1px solid var(--atelier-border) !important;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer :is(button:disabled, select:disabled) {
+  opacity: 1 !important;
+  color: var(--atelier-muted) !important;
+  cursor: not-allowed;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer :is(button, select, input, summary):focus-visible {
+  outline: 3px solid var(--atelier-teal) !important;
+  outline-offset: 2px;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: 8px;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__tabs button.is-active,
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer > footer button:not(.is-secondary) {
+  color: var(--personalizer-on-action) !important;
+  background: var(--atelier-teal) !important;
+  border-color: var(--atelier-teal) !important;
+  box-shadow: none !important;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__count {
+  color: var(--atelier-muted) !important;
+  background: var(--personalizer-surface) !important;
+  border-color: var(--atelier-border) !important;
+  font-size: 14px;
+  line-height: 1.5;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__selected {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  max-height: none;
+  overflow: visible;
+  gap: 10px;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__selected article {
+  color: var(--atelier-ink) !important;
+  background: var(--personalizer-surface) !important;
+  border: 1px solid var(--atelier-border) !important;
+  padding: 12px;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__selected article > span {
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__selected article > span b {
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  color: var(--atelier-ink) !important;
+  background: var(--personalizer-selected) !important;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__selected article > div {
+  width: 100%;
+  margin: 0;
+  gap: 6px;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__selected select {
+  flex: 1 0 100%;
+  width: 100%;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .atelier-personalizer-search {
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+  align-items: center;
+  min-height: 68px;
+  margin: 0 0 8px;
+  padding: 12px 0;
+  gap: 10px;
+  color: var(--atelier-muted) !important;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer :is(input, select):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) {
+  min-width: 0;
+  min-height: 44px !important;
+  max-width: 100%;
+  box-sizing: border-box;
+  color: var(--atelier-ink) !important;
+  -webkit-text-fill-color: var(--atelier-ink) !important;
+  caret-color: var(--atelier-ink) !important;
+  background: var(--atelier-paper) !important;
+  border: 1px solid var(--atelier-border) !important;
+  font-size: 16px !important;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer input::placeholder {
+  color: var(--atelier-muted) !important;
+  -webkit-text-fill-color: var(--atelier-muted) !important;
+  opacity: 1;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):-webkit-autofill {
+  -webkit-text-fill-color: var(--atelier-ink) !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--atelier-paper) inset !important;
+  box-shadow: 0 0 0 1000px var(--atelier-paper) inset !important;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer select :is(option, optgroup) {
+  color: var(--atelier-ink) !important;
+  -webkit-text-fill-color: var(--atelier-ink) !important;
+  background: var(--atelier-paper) !important;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__grid {
+  flex: 0 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)) !important;
+  overflow: visible;
+  padding: 0;
+  gap: 8px;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__grid > button {
+  min-height: 60px !important;
+  padding: 12px;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__grid > button > span {
+  font-size: 16px;
+  line-height: 1.45;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__grid > button.is-selected {
+  color: var(--atelier-ink) !important;
+  background: var(--personalizer-selected) !important;
+  border-color: var(--atelier-teal) !important;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .spaces-personalizer__grid > button.is-selected > i {
+  color: var(--personalizer-on-action) !important;
+  background: var(--atelier-teal) !important;
+  border-color: var(--atelier-teal) !important;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .atelier-previous-organizations {
+  color: var(--atelier-ink) !important;
+  background: var(--personalizer-surface) !important;
+  border: 1px solid var(--atelier-border);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .atelier-previous-organizations :is(p, small, label, span, h3) {
+  color: var(--atelier-ink) !important;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .atelier-previous-organizations summary {
+  display: list-item !important;
+  padding-block: 10px;
+  list-style: disclosure-closed inside;
+  font-size: 16px !important;
+  cursor: pointer;
+}
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .atelier-previous-organizations[open] summary { list-style-type: disclosure-open; }
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer .atelier-previous-organizations summary > svg { display: none; }
+html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer > footer {
+  position: sticky;
+  bottom: -1px;
+  z-index: 2;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 16px 0 0;
+  background: var(--atelier-paper) !important;
+}
+@media (max-width: 700px) {
+  html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer {
+    width: calc(100vw - 24px);
+    max-height: calc(100dvh - 24px);
+    padding: 16px 12px;
+  }
+  html[data-corvia-design="atelier"] #root .atelier-home .spaces-personalizer > footer button { flex: 1 1 10rem; }
+}

@@ -3,12 +3,12 @@ import FavoriteFunctionControl from "./FavoriteFunctionControl";
 import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
-import UniverseStars from "./UniverseStars";
+
 import { api, assetUrl } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { useCorviaTheme } from "../lib/corviaTheme";
+import { atelierCatalogRoutesFor as catalogRoutesFor, atelierHomeHref, readAtelierContext } from "../lib/atelierNavigation";
 import {
-  catalogRoutesFor,
   CLINICAL_SPACES,
   quickRoutesFor,
   resolveClinicalRoute,
@@ -18,7 +18,7 @@ import {
 import { nomeComTratamento } from "../lib/clinicalIdentity";
 import BoasVindas from "./BoasVindas";
 import ChatFlutuante from "./ChatFlutuante";
-import ClinicalFunctionFigure from "./ClinicalFunctionFigure";
+
 import CorviaThemeSelector from "./CorviaThemeSelector";
 import Credito from "./Credito";
 import Icone from "./Icone";
@@ -47,14 +47,6 @@ const NATIVE_PAGE_PATHS = new Set([
   "/evidencias",
   "/indicadores",
 ]);
-
-const SPACE_ENTRY: Record<FunctionalSpace, string> = {
-  consultorio: "/agenda",
-  hospital: "/round",
-  ensino: "/trilhas",
-  pesquisa: "/evidencias",
-  gestao: "/indicadores",
-};
 
 function initials(name?: string) {
   return (name || "Médico")
@@ -168,11 +160,14 @@ export default function CardiologySpacesAppFrame() {
   const location = useLocation();
   const navigate = useNavigate();
   const route = resolveClinicalRoute(location.pathname);
-  const space: FunctionalSpace = route.space === "home" ? "consultorio" : route.space;
+  const context = readAtelierContext(usuario?.id, route.space === "home" ? "consultorio" : route.space);
+  const { space } = context;
   const spaceMeta = CLINICAL_SPACES[space];
   const isAdmin = usuario?.role === "admin";
   const signaturePending = usePrescriptionQueueBadge(isAdmin);
   const [adminPending, setAdminPending] = useState(0);
+  const [focusMode, setFocusMode] = useState(false);
+  const [contextOpen, setContextOpen] = useState(false);
   const [command, setCommand] = useState("");
   const [catalogQuery, setCatalogQuery] = useState("");
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -210,7 +205,7 @@ export default function CardiologySpacesAppFrame() {
 
   const emergency = route.group === "emergencia";
   const nativePage = NATIVE_PAGE_PATHS.has(location.pathname);
-  const logoSrc = theme === "light" ? "/corvia-logo-spaces.svg" : "/corvia-logo-spaces-dark.svg";
+  const logoSrc = "/atelier/corvia-logo-atelier.svg";
 
   useEffect(() => {
     if (!isAdmin) return;
@@ -225,7 +220,7 @@ export default function CardiologySpacesAppFrame() {
     const key = recentKey(usuario?.id);
     if (!key) return;
     const recent: RecentContext = {
-      path: location.pathname,
+      path: `${location.pathname}${location.search}${location.hash}`,
       title: route.shortName || route.name,
       detail: spaceMeta.label,
       visitedAt: Date.now(),
@@ -234,7 +229,7 @@ export default function CardiologySpacesAppFrame() {
       const previous = JSON.parse(sessionStorage.getItem(key) || "[]") as RecentContext[];
       sessionStorage.setItem(key, JSON.stringify([recent, ...previous.filter((item) => item.path !== recent.path)].slice(0, 6)));
     } catch { /* A navegação não depende do armazenamento de conveniência. */ }
-  }, [location.pathname, route.name, route.shortName, spaceMeta.label, usuario?.id]);
+  }, [location.pathname, location.search, location.hash, route.name, route.shortName, spaceMeta.label, usuario?.id]);
 
   useEffect(() => {
     function openAssistant() { setDrawerOpen(false); setAccountOpen(false); setAssistantOpen(true); }
@@ -331,12 +326,11 @@ export default function CardiologySpacesAppFrame() {
 
   return (
     <div
-      className={`cv-app cv-app--${space}${emergency ? " cv-app--emergency" : " cv-app--utilities"}`}
+      className={`cv-app atelier-app cv-app--${space}${emergency ? " cv-app--emergency" : " cv-app--utilities"}${focusMode ? " atelier-app--focus" : ""}`}
       data-space={space}
       data-layout={route.layout}
-      data-has-intelligence={route.intelligence ? "true" : "false"}
+      data-has-intelligence={route.intelligence && contextOpen && !focusMode ? "true" : "false"}
     >
-      <UniverseStars />
       <a className="cv-skip" href="#conteudo-principal">Pular para o conteúdo</a>
 
       <aside className="cv-sidebar" aria-label={`Navegação do espaço ${spaceMeta.label}`}>
@@ -347,7 +341,7 @@ export default function CardiologySpacesAppFrame() {
             return (
               <NavLink
                 key={candidateSpace}
-                to={SPACE_ENTRY[candidateSpace]}
+                to={atelierHomeHref({ ...context, space: candidateSpace })}
                 className={candidateSpace === space ? "is-active" : undefined}
                 aria-current={candidateSpace === space ? "location" : undefined}
                 aria-label={candidate.label}
@@ -416,32 +410,15 @@ export default function CardiologySpacesAppFrame() {
 
         <div className="cv-workspace">
           <section className="cv-stage" aria-label={`Espaço ${spaceMeta.label}`}>
-            <header
-              className={`cv-space-horizon${theme === "light" ? " cv-space-horizon--function" : ""}`}
-              style={theme === "dark" ? { "--cv-room": `url(${spaceMeta.roomImage})` } as React.CSSProperties : undefined}
-            >
-              <div className="cv-space-horizon__signal" aria-hidden="true"><span /><i /><b /></div>
-              <div className="cv-space-horizon__copy">
-                <p><Icone nome={spaceMeta.icon} /> {spaceMeta.label} <i>·</i> {spaceMeta.eyebrow}</p>
-                <strong>{route.shortName || route.name}</strong>
-                <span>{spaceMeta.description}</span>
+            <header className="atelier-taskbar">
+              <Link to={atelierHomeHref(context)} className="atelier-taskbar__return"><Icone nome="chevron" /><span>{spaceMeta.label}</span></Link>
+              <div className="atelier-taskbar__title"><Icone nome={route.icon} /><strong>{route.shortName || route.name}</strong></div>
+              <div className="atelier-taskbar__actions">
+                {route.intelligence && <button type="button" aria-pressed={contextOpen} onClick={() => setContextOpen((open) => !open)}><Icone nome="sincronizar" /><span>Contexto</span></button>}
+                <button type="button" onClick={(event) => openDrawer(event.currentTarget)}><Icone nome="mais" /><span>Trocar função</span></button>
+                <button type="button" aria-pressed={focusMode} onClick={() => setFocusMode((active) => !active)}><Icone nome={focusMode ? "fechar" : "check"} /><span>{focusMode ? "Sair do foco" : "Foco"}</span></button>
               </div>
-              {theme === "light" ? (
-                <ClinicalFunctionFigure key={location.pathname} icon={route.icon} group={route.group} space={space} />
-              ) : (
-                <div className="cv-space-horizon__orb" aria-hidden="true"><span>∑</span><i /><b /></div>
-              )}
             </header>
-
-            <nav className="cv-function-deck" aria-label={`Funções rápidas de ${spaceMeta.label}`}>
-              <div className="cv-function-deck__label"><span>AGORA</span><strong>{route.shortName || route.name}</strong></div>
-              <div className="cv-function-deck__routes">
-                {currentRoutes.slice(0, 7).map((candidate) => (
-                  <RouteLink key={`deck-${space}-${candidate.path}`} route={candidate} current={route} badge={routeBadge(candidate)} />
-                ))}
-              </div>
-              <button type="button" onClick={(event) => openDrawer(event.currentTarget)} aria-label="Abrir todas as funções"><Icone nome="mais" /></button>
-            </nav>
 
             <main className={`cv-content${nativePage ? "" : " clinical-os"}`} id="conteudo-principal" tabIndex={-1}>
               <ClinicalChangeApprovalNotice /><FavoriteFunctionControl />
@@ -455,7 +432,7 @@ export default function CardiologySpacesAppFrame() {
               <Credito compacto />
             </main>
           </section>
-          {route.intelligence && <ContextIntelligence route={route} space={space} routes={currentRoutes} />}
+          {route.intelligence && contextOpen && !focusMode && <ContextIntelligence route={route} space={space} routes={currentRoutes} />}
         </div>
       </div>
 
@@ -495,7 +472,7 @@ export default function CardiologySpacesAppFrame() {
 
       <nav className="cv-mobile-dock" aria-label="Navegação principal móvel">
         <NavLink to="/" end><Icone nome="hoje" /><span>Início</span></NavLink>
-        <NavLink to={SPACE_ENTRY[space]}><Icone nome={spaceMeta.icon} /><span>{spaceMeta.label}</span></NavLink>
+        <NavLink to={atelierHomeHref(context)}><Icone nome={spaceMeta.icon} /><span>{spaceMeta.label}</span></NavLink>
         <button type="button" className="cv-mobile-dock__assistant" onClick={() => setAssistantOpen(true)}><span aria-hidden="true">✦</span><small>Apoio</small></button>
         <NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink>
         <button type="button" onClick={(event) => openDrawer(event.currentTarget)} aria-expanded={drawerOpen}><Icone nome="mais" /><span>Mais</span></button>

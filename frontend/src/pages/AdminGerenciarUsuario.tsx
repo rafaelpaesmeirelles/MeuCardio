@@ -384,7 +384,7 @@ export default function AdminGerenciarUsuario() {
           <span>Entendo que a exclusão é definitiva e autorizo remover também a caixa do CorVIA Mail, se existir.</span>
         </label>
         <button
-          className="botao botao--secundario"
+          className="botao botao--secundario botao--perigo"
           style={{ marginTop: 12, borderColor: "#fb7185" }}
           disabled={!usuario.pode_excluir_definitivamente || !emailConfere || !confirmarExclusao || excluindo}
           onClick={excluirDefinitivamente}

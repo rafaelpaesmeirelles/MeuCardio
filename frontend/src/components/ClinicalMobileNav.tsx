@@ -142,7 +142,7 @@ export default function ClinicalMobileNav() {
     {maisAberto && <>
       <div className="cc-mobile-more-backdrop is-open" aria-hidden="true" onClick={() => fecharMais(true)} />
       <aside ref={sheetRef} className="cc-mobile-more is-open" role="dialog" aria-modal="true" aria-label="Todas as áreas do CorVIA">
-        <header className="cc-mobile-more__head"><div><img src="/corvia-mark-canonical.svg" alt="" /><span><strong>Cor<span className="corvia-via">VIA</span></strong><small>Cardiology Spaces</small></span></div><button ref={closeRef} type="button" onClick={() => fecharMais(true)} aria-label="Fechar menu"><Icone nome="fechar" /></button></header>
+        <header className="cc-mobile-more__head"><div><img src="/atelier/corvia-mark-atelier.svg" alt="" /><span><strong>Cor<span className="corvia-via">VIA</span></strong><small>Cardiology Spaces</small></span></div><button ref={closeRef} type="button" onClick={() => fecharMais(true)} aria-label="Fechar menu"><Icone nome="fechar" /></button></header>
         <button type="button" className="cc-mobile-more__assistant" onClick={abrirAssistentePessoal}><span className="cc-mobile-more__assistant-icon">✦</span><span><strong>Assistente Pessoal</strong><small>Agenda, deslocamentos e pendências</small></span><Icone nome="seta" /></button>
         {secoes.map((secao) => {
           const itens = secao.items.filter((item) => !item.adminOnly || usuario?.role === "admin");

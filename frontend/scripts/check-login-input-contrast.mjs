@@ -30,6 +30,7 @@ import { fileURLToPath } from "node:url";
 
 const cssPath = new URL("../src/styles/public-clinical-command-v2.css", import.meta.url);
 const tokensPath = new URL("../src/styles/tokens.css", import.meta.url);
+const atelierPath = new URL("../src/styles/corvia-atelier-login.css", import.meta.url);
 
 function resolverTokens(source) {
   const tokens = new Map();
@@ -40,6 +41,7 @@ function resolverTokens(source) {
 }
 
 function resolverCor(valor, tokens) {
+  valor = valor.replace(/\s*!important\s*$/, "").trim();
   const m = /var\(\s*(--[\w-]+)\s*\)/.exec(valor);
   if (!m) return valor.trim();
   const resolvido = tokens.get(m[1]);
@@ -167,14 +169,81 @@ export function validateLoginInputContrast(css, tokensCss) {
   return failures;
 }
 
+/** The active Atelier gateway has transparent input elements over a colored
+ * field wrapper. Check that real composition, including both saved themes,
+ * instead of treating the unused legacy input selector as sufficient. */
+export function validateAtelierLoginInputContrast(css) {
+  const failures = [];
+  const root = corpoDoSeletor(css, "#corvia-login.corvia-atelier-login");
+  const dark = corpoDoSeletor(css, '#corvia-login.corvia-atelier-login[data-login-theme="dark"]');
+  const selector = "#root #corvia-login .login-gateway__field input";
+  const input = corpoDoSeletor(css, selector);
+  const wrapper = corpoDoSeletor(css, "#corvia-login .login-gateway__field > div");
+  const placeholder = corpoDoSeletor(css, `${selector}::placeholder`);
+  if (!root || !dark || !input || !wrapper || !placeholder) {
+    return ["Atelier: faltam regras ativas de tema, campo, wrapper ou placeholder"];
+  }
+  const opaqueHex = (value) => /^#[\da-f]{6}$/i.test(value);
+  const normalizeHex = (value) => /^#[\da-f]{3}$/i.test(value)
+    ? `#${value.slice(1).split("").map((digit) => digit + digit).join("")}` : value;
+  const composite = (foreground, background) => {
+    if (foreground.length !== 9) return foreground;
+    const alpha = parseInt(foreground.slice(7), 16) / 255;
+    const fg = hexParaRgb(foreground.slice(0, 7));
+    const bg = hexParaRgb(background);
+    return `#${["r", "g", "b"].map((channel) => Math.round(fg[channel] * alpha + bg[channel] * (1 - alpha)).toString(16).padStart(2, "0")).join("")}`;
+  };
+  for (const [theme, overrides] of [["light", ""], ["dark", dark]]) {
+    const tokens = resolverTokens(`${root};${overrides}`);
+    const resolveColor = (body, property) => normalizeHex(resolverCor(declaracao(body, property) || "", tokens));
+    const check = (foreground, background, minimum, state) => {
+      if (!opaqueHex(foreground) || !opaqueHex(background)) {
+        failures.push(`Atelier ${theme} ${state}: cor não resolvida para verificar contraste`);
+      } else if (contraste(foreground, background) < minimum) {
+        failures.push(`Atelier ${theme} ${state}: contraste abaixo de ${minimum}:1`);
+      }
+    };
+    const foreground = resolveColor(input, "color");
+    const fill = resolveColor(input, "-webkit-text-fill-color");
+    if (fill !== foreground || !fill) failures.push(`Atelier ${theme}: falta -webkit-text-fill-color igual ao texto`);
+    if (resolveColor(input, "background") !== "transparent") failures.push(`Atelier ${theme}: revisar composição do fundo do input`);
+    const field = resolveColor(wrapper, "background");
+    const pageBackground = declaracao(overrides || root, "background") || "";
+    const stops = [...pageBackground.matchAll(/#([\da-f]{3,8})\b/gi)]
+      .map(([hex]) => normalizeHex(hex)).filter(opaqueHex);
+    if (!stops.length) failures.push(`Atelier ${theme}: fundo da página sem referência de contraste`);
+    for (const stop of stops) {
+      const background = composite(field, stop);
+      check(foreground, background, 4.5, "texto digitado");
+      check(resolveColor(input, "caret-color"), background, 3, "cursor");
+      check(resolveColor(placeholder, "color"), background, 4.5, "placeholder");
+      if (resolveColor(placeholder, "color") !== resolveColor(placeholder, "-webkit-text-fill-color")) {
+        failures.push(`Atelier ${theme}: placeholder precisa de text-fill consistente`);
+      }
+    }
+    const autofillSelector = theme === "dark"
+      ? '#root #corvia-login[data-login-theme="dark"] .login-gateway__field input:-webkit-autofill'
+      : `${selector}:-webkit-autofill`;
+    const autofill = corpoDoSeletor(css, autofillSelector);
+    if (!autofill) { failures.push(`Atelier ${theme}: falta tratamento de :-webkit-autofill`); continue; }
+    const shadow = declaracao(autofill, "-webkit-box-shadow") || "";
+    const background = normalizeHex(shadow.match(/#[\da-f]{3,8}\b/i)?.[0] || "");
+    if (!/\binset\b/.test(shadow)) failures.push(`Atelier ${theme}: autofill perdeu inset`);
+    check(resolveColor(autofill, "-webkit-text-fill-color"), background, 4.5, "autofill");
+    check(resolveColor(autofill, "caret-color"), background, 3, "cursor autofill");
+  }
+  return [...new Set(failures)];
+}
+
 const isMain = process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1]);
 
 if (isMain) {
-  const [css, tokensCss] = await Promise.all([
+  const [css, tokensCss, atelierCss] = await Promise.all([
     readFile(fileURLToPath(cssPath), "utf8"),
     readFile(fileURLToPath(tokensPath), "utf8"),
+    readFile(fileURLToPath(atelierPath), "utf8"),
   ]);
-  const failures = validateLoginInputContrast(css, tokensCss);
+  const failures = [...validateLoginInputContrast(css, tokensCss), ...validateAtelierLoginInputContrast(atelierCss)];
   if (failures.length) {
     console.error("Falha no contrato de contraste do login (/entrar):\n");
     for (const failure of failures) console.error(`- ${failure}`);

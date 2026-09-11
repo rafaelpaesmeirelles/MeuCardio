@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import Icone, { type NomeIcone } from "./Icone";
-import UniverseStars from "./UniverseStars";
+import "../styles/corvia-atelier-public.css";
 
 export type PublicFrameFeature = {
   icon: NomeIcone;
@@ -23,12 +23,8 @@ type PublicCardiologyFrameProps = {
 
 export function PublicCorviaBrand({ to = "/entrar" }: { to?: string }) {
   return (
-    <Link to={to} className="public-corvia-brand" aria-label="CorVIA Cardiology Spaces">
-      <img src="/corvia-mark-canonical.svg" alt="" aria-hidden="true" />
-      <span>
-        <strong><span>Cor</span><span className="corvia-via">VIA</span></strong>
-        <small>CARDIOLOGY SPACES</small>
-      </span>
+    <Link to={to} className="public-corvia-brand public-corvia-brand--atelier" aria-label="CorVIA Cardiology Spaces">
+      <img src="/atelier/corvia-logo-atelier.svg" width="900" height="240" alt="CorVIA Cardiology Spaces" />
     </Link>
   );
 }
@@ -44,10 +40,8 @@ export default function PublicCardiologyFrame({
   status,
 }: PublicCardiologyFrameProps) {
   return (
-    <div className={`public-space public-space--${variant} public-space--${tone}`}>
+    <div className={`public-space public-space--${variant} public-space--${tone} corvia-atelier-public`}>
       <a className="public-space__skip" href="#conteudo-principal">Ir para o conteúdo</a>
-      <div className="public-space__aurora" aria-hidden="true" />
-      <UniverseStars />
 
       <header className="public-space__topbar">
         <PublicCorviaBrand />
@@ -65,11 +59,13 @@ export default function PublicCardiologyFrame({
         <section className="public-space__context" aria-labelledby="public-space-title">
           <div className="public-space__signal" aria-hidden="true">
             <span><Icone nome="ecg" /></span>
-            <i /><i /><i />
           </div>
           <p>{eyebrow}</p>
           <h1 id="public-space-title">{title}</h1>
           <div className="public-space__description">{description}</div>
+          <figure className="atelier-public__scene" aria-hidden="true">
+            <img src="/atelier/atelier-entrance.webp" width="1536" height="1024" alt="" />
+          </figure>
           {features.length > 0 && (
             <div className="public-space__features" aria-label="Informações importantes">
               {features.map((feature) => (

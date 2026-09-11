@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from app.models.patient_material import PatientMaterial
 
 from .pdf import Documento, largura_texto, quebrar
-from .pdf.marca import BRANCO, FIO, NAVY, NEUTRO, TEAL, TINTA_TEAL, TINTA_VERMELHA, VERMELHO
+from .pdf.marca import BRANCO, COBRE, FIO, NAVY, NEUTRO, TEAL, TINTA_TEAL, TINTA_VERMELHA, VERMELHO
 from .professional_profile import (
     logo_needs_dark_plate_path,
     logo_path,
@@ -104,7 +104,7 @@ class DocumentoProfissional(Documento):
     def capa_profissional(self, titulo: str, subtitulo: str, etiqueta: str = "") -> None:
         """Capa cuja faixa superior reserva as duas identidades lado a lado."""
         self.abrir_pagina(com_cabecalho=False)
-        self.pdf.retangulo(0, self.altura - 7, self.largura, 7, VERMELHO)
+        self.pdf.retangulo(0, self.altura - 7, self.largura, 7, COBRE)
 
         altura_corvia = self._logo(self.margem, self.altura - 40, 140)
         base_corvia = self.altura - 40 - altura_corvia
@@ -115,7 +115,7 @@ class DocumentoProfissional(Documento):
             self._garantir(40)
             self.pdf.texto(self.margem, self.y - 21, linha, 21, NAVY, negrito=True)
             self.y -= 27
-        self.pdf.linha(self.margem, self.y - 2, self.margem + 46, self.y - 2, VERMELHO, 2.2)
+        self.pdf.linha(self.margem, self.y - 2, self.margem + 46, self.y - 2, COBRE, 2.2)
         self.y -= 20
 
         if subtitulo:

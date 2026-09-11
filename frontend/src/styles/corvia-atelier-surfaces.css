@@ -1,0 +1,302 @@
+/* Atelier launch surfaces — complements the page primitives without changing
+   domain layout, clinical states, document contents, user media or graph data.
+   The ID specificity is intentional: legacy contrast rules also use #root.
+   :is(#root, body) additionally reaches the personalizer portal in document.body. */
+
+html[data-corvia-design="atelier"] :is(#root, body) :is(
+  .cos-assistant-panel, .corvia-chat-panel, .boasvindas__cartao, .qa-dialog
+) {
+  --atelier-paper: #fffdfa;
+  --atelier-soft: #f6f3eb;
+  --atelier-ink: #24343a;
+  --atelier-muted: #58666a;
+  --atelier-line: #dedacf;
+  --atelier-copper: #b66d48;
+  --atelier-teal: #16776d;
+  --fundo: var(--atelier-paper);
+  --superficie: var(--atelier-paper);
+  --texto: var(--atelier-ink);
+  --texto-secundario: var(--atelier-muted);
+  --texto-suave: var(--atelier-muted);
+  --primaria: #28534d;
+  --acento: var(--atelier-teal);
+  --acento-suave: #edf4ef;
+  --acao: #28534d;
+  --linha: var(--atelier-line);
+  --borda: var(--atelier-line);
+  --cos-text: var(--atelier-ink);
+  --cos-muted: var(--atelier-muted);
+  --cos-line: var(--atelier-line);
+  --cos-line-strong: #bdb9ae;
+  --cos-cyan: var(--atelier-teal);
+  --cos-cyan-2: #d39770;
+  color: var(--atelier-ink) !important;
+  background: var(--atelier-paper) !important;
+  border-color: var(--atelier-line) !important;
+  box-shadow: 0 20px 64px #26393626 !important;
+  text-shadow: none !important;
+  color-scheme: light;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+html[data-corvia-design="atelier"] :is(#root, body) :is(.cos-assistant-backdrop, .boasvindas__fundo, .qa-modal) {
+  background: #23352f66 !important;
+  backdrop-filter: blur(6px);
+}
+
+html[data-corvia-design="atelier"] :is(#root, body) :is(.cos-assistant-panel, .corvia-chat-panel, .boasvindas__cartao, .qa-dialog) :is(button, input:not([type="checkbox"]):not([type="radio"]), select, textarea) {
+  min-height: 44px !important;
+  min-width: 0;
+  font-size: 16px !important;
+  line-height: 1.4;
+}
+
+html[data-corvia-design="atelier"] :is(#root, body) :is(.cos-assistant-panel, .corvia-chat-panel, .qa-dialog) :is(input:not([type="checkbox"]):not([type="radio"]), select, textarea) {
+  color: var(--atelier-ink) !important;
+  -webkit-text-fill-color: var(--atelier-ink) !important;
+  caret-color: var(--atelier-teal) !important;
+  background: var(--atelier-paper) !important;
+  border: 1px solid #aaa99f !important;
+  border-radius: 10px !important;
+}
+html[data-corvia-design="atelier"] :is(#root, body) :is(.cos-assistant-panel, .corvia-chat-panel, .qa-dialog) :is(select option, select optgroup) { color: #24343a !important; -webkit-text-fill-color: #24343a !important; background: #fffdfa !important; }
+html[data-corvia-design="atelier"] :is(#root, body) :is(.cos-assistant-panel, .corvia-chat-panel, .qa-dialog) :is(input, textarea)::placeholder { color: #686f68 !important; -webkit-text-fill-color: #686f68 !important; opacity: 1; }
+/* Match the legacy exclusion-chain specificity, including focused autofill. */
+html[data-corvia-design="atelier"] :is(#root, body) :is(.cos-assistant-panel, .corvia-chat-panel, .qa-dialog) :is(input, textarea, select):not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):-webkit-autofill {
+  -webkit-text-fill-color: #24343a !important;
+  caret-color: #16776d !important;
+  -webkit-box-shadow: 0 0 0 1000px #fffdfa inset !important;
+  box-shadow: 0 0 0 1000px #fffdfa inset !important;
+}
+
+html[data-corvia-design="atelier"] :is(#root, body) :is(.cos-assistant-panel, .corvia-chat-panel, .boasvindas__cartao, .qa-dialog) :is(button, a, input, select, textarea):focus-visible {
+  outline: 2px solid #16776d !important;
+  outline-offset: 3px;
+}
+
+/* Global utility: real agenda, mobility and Mail summaries. Do not target the
+   map subtree: its route colors and provider imagery carry information. */
+html[data-corvia-design="atelier"] #root .cos-assistant-panel { width: min(480px, 100vw); }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel :is(.cos-assistant-panel__head, .cos-assistant-panel__footer) { background: var(--atelier-soft) !important; border-color: var(--atelier-line) !important; flex-shrink: 0; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel__head { gap: 12px; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel__brand { min-width: 0; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel__brand small { letter-spacing: .06em; line-height: 1.4; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel__brand strong { color: var(--atelier-ink) !important; font-size: 20px !important; line-height: 1.3; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel__head > button { min-width: 44px; height: 44px; flex: 0 0 44px; color: var(--atelier-ink); background: var(--atelier-paper); }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel__spark { color: #28392f; background: #f2d1af; box-shadow: none; flex-shrink: 0; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel :is(.cos-assistant-briefing, .cos-assistant-card, .cos-assistant-next, .cos-assistant-destination, .cos-assistant-empty, .cos-assistant-briefing__summary > div, .cos-assistant-route > div, .cos-assistant-actions a, .cos-assistant-panel__footer a) {
+  color: var(--atelier-ink) !important;
+  background: var(--atelier-paper) !important;
+  border-color: var(--atelier-line) !important;
+  box-shadow: none !important;
+}
+html[data-corvia-design="atelier"] #root .cos-assistant-panel :is(.cos-assistant-card, .cos-assistant-briefing) { padding: 18px; border-radius: 16px; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel :is(.cos-assistant-briefing__summary, .cos-assistant-route) { grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel :is(.cos-assistant-briefing__summary strong, .cos-assistant-route strong) { color: var(--atelier-ink) !important; font-size: 20px !important; line-height: 1.3; white-space: normal; overflow-wrap: anywhere; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel :is(.cos-assistant-next strong, .cos-assistant-destination strong, .cos-assistant-empty strong, .cos-assistant-actions strong, .cos-assistant-panel__footer strong) { color: var(--atelier-ink) !important; font-size: 16px !important; line-height: 1.4; overflow-wrap: anywhere; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel :is(.cos-assistant-card__head h3) { color: var(--atelier-ink) !important; font-size: 19px !important; line-height: 1.3; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel :is(.cos-assistant-state, .cos-assistant-hint, .cos-assistant-next p, .cos-assistant-panel__brand small, .cos-assistant-briefing__summary span, .cos-assistant-next small, .cos-assistant-destination small, .cos-assistant-destination span, .cos-assistant-route small, .cos-assistant-empty small, .cos-assistant-actions small, .cos-assistant-panel__footer small) { color: var(--atelier-muted) !important; font-size: 14px !important; line-height: 1.5; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel :is(.eyebrow, .cos-assistant-link, .cos-assistant-empty a) { color: var(--atelier-teal) !important; font-size: 14px !important; line-height: 1.5; }
+html[data-corvia-design="atelier"] #root .cos-assistant-panel :is(.cos-assistant-link, .cos-assistant-empty a) { min-height: 44px; align-items: center; }
+html[data-corvia-design="atelier"] #root .cos-assistant-route-button { color: #28534d !important; background: #edf4ef !important; border-color: #b9cec3 !important; padding: 10px 12px; }
+html[data-corvia-design="atelier"] #root .cos-assistant-warning { color: #9b2938 !important; font-size: 14px !important; line-height: 1.5; }
+
+/* Chat keeps real avatars, unread badges and sender/recipient distinction. */
+html[data-corvia-design="atelier"] #root .corvia-chat-panel { max-height: calc(100dvh - 108px); border-radius: 18px !important; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel > header { color: #24343a !important; background: #f6f3eb !important; border-bottom: 1px solid #dedacf; flex-shrink: 0; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel > header button { color: #24343a !important; width: 44px; flex-shrink: 0; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel > header strong { color: #24343a !important; font-size: 16px !important; white-space: normal !important; overflow-wrap: anywhere; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel > div { min-height: 0; flex: 1 1 auto; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel > form { flex-shrink: 0; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel form input { width: 0; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel :is(button, strong) { color: #24343a; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel .botao { color: #24343a !important; background: #f2d1af !important; border: 1px solid #b66d48 !important; box-shadow: none !important; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel__message { color: #24343a !important; background: #f0f2eb !important; border: 1px solid #d9e0d5; font-size: 16px !important; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel__message.is-mine { color: #fffdfa !important; background: #28534d !important; border-color: #28534d; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel__message > span { font-size: 12px !important; line-height: 1.4; }
+html[data-corvia-design="atelier"] #root .corvia-chat-panel__message:not(.is-mine) > span { color: #58666a !important; }
+
+html[data-corvia-design="atelier"] #root .boasvindas__cartao { border: 1px solid #dedacf; border-radius: 22px; padding: clamp(20px, 4vw, 36px); max-height: calc(100dvh - 32px); }
+html[data-corvia-design="atelier"] #root .boasvindas__texto { color: #24343a !important; font-size: 16px; line-height: 1.7; }
+html[data-corvia-design="atelier"] #root .boasvindas__assinatura { color: #28534d !important; font-size: 16px; }
+html[data-corvia-design="atelier"] #root .boasvindas__cartao .botao { color: #24343a !important; background: #f2d1af !important; border: 1px solid #b66d48 !important; border-radius: 12px; max-width: 100%; }
+
+html[data-corvia-design="atelier"] :is(#root, body) .qa-dialog { border: 1px solid #dedacf; border-radius: 20px; max-height: calc(100dvh - 32px); }
+html[data-corvia-design="atelier"] :is(#root, body) .qa-dialog :is(.qa-head, .qa-foot, .qa-item) { color: #24343a !important; background: #fffdfa !important; border-color: #dedacf !important; }
+html[data-corvia-design="atelier"] :is(#root, body) .qa-dialog :is(h2, strong, button) { color: #24343a !important; text-shadow: none !important; }
+html[data-corvia-design="atelier"] :is(#root, body) .qa-dialog :is(small, .qa-foot > span) { color: #58666a !important; font-size: 14px !important; }
+html[data-corvia-design="atelier"] :is(#root, body) .qa-dialog :is(.qa-head > button, .qa-order button) { min-width: 44px; }
+html[data-corvia-design="atelier"] :is(#root, body) .qa-dialog .qa-save { color: #24343a !important; background: #f2d1af !important; border-color: #b66d48 !important; }
+html[data-corvia-design="atelier"] :is(#root, body) .qa-foot { flex-wrap: wrap; }
+
+/* Page families with independent legacy command styling. Never select img,
+   svg, canvas, iframe, .prescricao-folha or the clinical graph nodes. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep, .cai-page, .ia, .ia-escolha, .pc-command, .ccc-patient-command, .prescricao) {
+  color: var(--atelier-ink) !important;
+  background: transparent !important;
+  font-size: 16px;
+  border-color: var(--atelier-line) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cai-page {
+  --cai-cyan: #16776d;
+  --cai-blue: #315f95;
+  --cai-violet: #715388;
+  --cai-pink: #a52e49;
+  --cai-green: #146349;
+  --cai-amber: #855b17;
+  --cai-line: #dedacf;
+  --cai-surface: #fffdfa;
+  --cai-muted: #58666a;
+}
+
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(
+  .pep-head, .pep-list, .pep-card,
+  .pc-command__header, .pc-command__tabs, .pc-command__summary, .pc-command__clinical-summary,
+  .pc-command__meds, .pc-command__actions, .ccc-patient-command__header,
+  .ccc-patient-command__manager, .ccc-patient-command__active-row,
+  .ia-escolha__cartao, .ia__topo, .ia__conversa, .ia__envio, .ia__sugestao, .ia__fonte,
+  .cai-hero, .cai-hero__trust, .cai-panel, .cai-form-card, .cai-tabs, .cai-history,
+  .cai-result-section, .cai-result__side > section, .cai-suggestion, .cai-opinion,
+  .cai-metric, .cai-admin-summary > article, .cai-result-progress,
+  .prescricao__cabecalho, .prescricao__abas, .prescricao__formulario, .prescricao-bloco,
+  .prescricao__resumo, .prescricao-historico, .prescricao-preview, .prescricao-documentos,
+  .prescricao-item, .prescricao-farmaco, .prescricao-sugestoes, .prescricao-apresentacoes,
+  .prescricao-marca, .prescricao-preco,
+  .painel__grupo, .guia-areas, .guia-outros, .biblioteca__card, .exame-card,
+  .evidencia-card, .estudo-card, .trilha-card, .caso-card, .checklist-card,
+  .galeria-card, .material-card, .fluxograma-card, .condicoes-card,
+  .busca__campo, .biblioteca__filtros, .galeria__filtros, .filtros-conteudo,
+  .busca__resultado, .resultado-busca, .timeline-doenca__cartao
+) {
+  color: var(--atelier-ink) !important;
+  background: var(--atelier-paper) !important;
+  border-color: var(--atelier-line) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--atelier-shadow) !important;
+  text-shadow: none !important;
+}
+
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .ia-escolha__cartao::after,
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao__cabecalho::before,
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao-bloco::before { display: none !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep-head, .pep-patient, .pep-history, .pep-editor, .pc-command__header, .pc-command__summary, .pc-command__actions, .ia__topo, .ia__conversa, .ia__envio, .cai-panel, .cai-form-card) { padding: clamp(16px, 2vw, 24px) !important; }
+
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep, .ia, .ia-escolha, .pc-command, .ccc-patient-command, .cai-page, .prescricao, .guia-areas, .guia-outros, .painel__grupo) :is(h1, h2, h3) {
+  color: var(--atelier-ink) !important;
+  text-shadow: none !important;
+  line-height: 1.35 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep, .ia, .ia-escolha, .pc-command, .ccc-patient-command, .cai-page) h1 { font-size: clamp(26px, 3vw, 36px) !important; letter-spacing: -.035em; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep, .ia, .pc-command, .ccc-patient-command, .cai-page) h2 { font-size: 22px !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep, .ia, .pc-command, .ccc-patient-command, .cai-page) h3 { font-size: 18px !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep label, .pep-list button, .pep-history article strong, .pep-title > button, .pep-history article button, .ia__topo label, .ia__link-trocar, .ia__sugestao, .ia__fonte, .ia__msg, .cai-page label, .cai-agent-grid button, .cai-history > button, .cai-source, .cai-form-card > header > span, .prescricao-campo label, .prescricao-sugestoes button, .prescricao-apresentacoes button, .painel__tema) { color: var(--atelier-ink) !important; font-size: 16px !important; line-height: 1.5 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep-list button strong, .pc-command strong, .ccc-patient-command strong, .cai-page strong) { font-size: 16px !important; line-height: 1.4 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pc-command__identity, .pc-command__clinical-summary, .pc-command__meds, .pc-command__actions, .ccc-patient-command__manager-head, .ccc-patient-command__patient) strong { color: var(--atelier-ink) !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pc-command__identity p, .pc-command small, .pc-command__meds > span, .pc-command__columns section > span, .ccc-patient-command small, .ccc-patient-command__empty) { color: var(--atelier-muted) !important; font-size: 14px !important; line-height: 1.5 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pc-command__actions button, .ccc-patient-command__archive) { color: var(--atelier-ink) !important; background: var(--atelier-soft) !important; border-color: var(--atelier-line) !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pc-command__avatar, .ccc-patient-command__bed, .ccc-patient-command__icon, .pep-list button > span, .prescricao-bloco__titulo > span) { color: #28534d !important; background: #eaf0e8 !important; border-color: #bfd0c5 !important; box-shadow: none !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .pc-command__tabs .is-active::after { background: #b66d48 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep-muted, .pep small, .pep-history time, .ia__privacidade, .ia__rodape, .ia-escolha__cartao p, .ia__abertura > p, .cai-page small, .cai-hero > div:first-child > p:last-child, .cai-result-section p, .cai-suggestion p, .cai-opinion > p, .cai-source span, .cai-final-review-record dt, .cai-final-review-record dd, .cai-result-blocked p, .cai-connected p, .cai-privacy ul, .cai-format-list span, .cai-authorization-strip span, .cai-command-history article p, .cai-pending-reviews article p, .prescricao-campo label small, .guia-area p, .guia-area small, .painel__grupo-sub) { color: var(--atelier-muted) !important; line-height: 1.6 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep small, .pep-history time, .cai-page small, .cai-source span, .cai-final-review-record dt, .cai-final-review-record dd, .cai-format-list span, .cai-authorization-strip span) { font-size: 14px !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep .eyebrow, .cai-kicker, .ia .eyebrow, .ia-escolha > .eyebrow, .prescricao .eyebrow, .prescricao-campo__estado, .ia__fonte__marca, .guia-area__marca) { color: var(--atelier-teal) !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cai-kicker, .pep .eyebrow) { font-size: 13px !important; line-height: 1.5; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.ia__msg code, .prescricao code, .prescricao kbd, .cai-final-review-record code) { color: #28534d !important; background: #edf4ef !important; font-size: 14px !important; }
+
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep button, .ia button, .ia-escolha button, .pc-command button, .pc-command a, .ccc-patient-command button, .cai-button, .cai-tabs button, .cai-icon-button, .cai-history > header button, .cai-agent-grid button, .cai-history > button, .painel__tema) { min-height: 44px !important; font-size: 16px !important; line-height: 1.4 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cai-icon-button, .cai-history > header button, .pc-command__quick-icons a, .pc-command__quick-icons button) { min-width: 44px !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cai-button:where(:not(.cai-button--danger):not(.cai-button--success)), .cai-tabs button, .pc-command__tabs > *, .prescricao__abas button, .painel__tema) { color: var(--atelier-ink) !important; background: var(--atelier-soft) !important; border-color: var(--atelier-line) !important; box-shadow: none !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cai-button--primary, .cai-tabs button.is-active, .pc-command__tabs .is-active, .prescricao__abas button.ativo, .prescricao__abas button[aria-selected="true"], .painel__tema[aria-selected="true"], .painel__tema.is-active) { color: var(--atelier-ink) !important; background: #f2d1af !important; border-color: #b66d48 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep-list button.is-active, .ccc-patient-command__active-row.is-selected, .cai-agent-grid button.is-selected, .cai-history > button.is-active) { color: #28534d !important; background: #edf4ef !important; border-color: #a2bcb0 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cai-agent-grid button, .cai-check, .cai-permission-list label, .cai-authorization-strip, .cai-format-list span, .cai-pairing-code) { color: var(--atelier-ink) !important; background: var(--atelier-soft) !important; border-color: var(--atelier-line) !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.ia__msg--assistant) { color: var(--atelier-ink) !important; background: #f1f3ec !important; border-color: var(--atelier-line) !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.ia__msg--user) { color: var(--atelier-ink) !important; background: #eaf3ef !important; border-color: #bfd0c5 !important; }
+
+/* Preserve the meaning of consent, review, rejection and clinical failure.
+   These are explicit light-surface equivalents, not brand-color aliases. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cai-status--blocked, .cai-status--failed, .cai-status--unusable, .cai-status--rejected, .cai-alert--error, .cai-button--danger, .cai-result-blocked, .cai-critical, .pep-error, .ia__erro, .ccc-patient-command__error) { color: #9b2938 !important; background: #fff0f0 !important; border-color: #dca6aa !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cai-error, .prescricao-campo__erro, .cai-authorization-strip .is-blocked strong) { color: #9b2938 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cai-status--accepted, .cai-status--completed, .cai-alert--success, .cai-button--success, .cai-connected, .cai-safety-banner, .cai-final-review-record.is-accept, .prescricao__seguranca) { color: #146349 !important; background: #edf6ed !important; border-color: #a7c8af !important; box-shadow: none !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cai-status--pending, .cai-status--awaiting_review, .cai-pending-reviews, .cai-final-review, .cai-final-review-record, .ia__aviso-ferramentas) { color: #805418 !important; background: #fff7e8 !important; border-color: #d7bd83 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cai-final-review-record.is-reject { color: #9b2938 !important; background: #fff0f0 !important; border-color: #dca6aa !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cai-final-review-record.is-accept { color: #146349 !important; background: #edf6ed !important; border-color: #a7c8af !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cai-status--draft { color: #694a83 !important; background: #f3eef7 !important; border-color: #c9b6d4 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cai-status--analyzing { color: #285d81 !important; background: #edf5fa !important; border-color: #b1cddd !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cai-status { font-size: 13px !important; line-height: 1.4; white-space: normal; }
+
+/* Long-form frames and saved-document tools stay neutral; no exported document
+   markup or scientific original is selected here. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.legal-page__header, #modelos-salvos, #modelos-salvos > details, #modelos-salvos > article) { color: var(--atelier-ink) !important; background: var(--atelier-paper) !important; border-color: var(--atelier-line) !important; box-shadow: var(--atelier-shadow) !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .legal-page :is(h1, h2, h3) { color: var(--atelier-ink) !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .legal-page :is(p, li, footer) { color: var(--atelier-muted) !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .dica-ctx { color: #28534d !important; background: #edf4ef !important; border-color: #b9cec3 !important; box-shadow: none !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .dica-ctx :is(.dica-ctx__titulo, .dica-ctx__corpo) { color: #28534d !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .dica-ctx :is(strong, .dica-ctx__icone) { color: #28534d !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .dica-ctx__fechar { color: #28534d !important; min-width: 44px; min-height: 44px; }
+
+/* Monitor is mounted both inside Intelligence and in the Home day summary.
+   Only presentation changes; source links, health semantics and reading APIs
+   remain owned by the scientific components. */
+html[data-corvia-design="atelier"] #root .scientific-intelligence-monitor { color: #24343a !important; background: #fffdfa !important; border-color: #dedacf !important; border-radius: 16px; box-shadow: 0 5px 22px #2d30270b; }
+html[data-corvia-design="atelier"] #root .scientific-intelligence-monitor :is(h3, h4, strong, dd) { color: #24343a !important; }
+html[data-corvia-design="atelier"] #root .scientific-intelligence-monitor :is(h3, h4) { font-size: 20px !important; line-height: 1.35; }
+html[data-corvia-design="atelier"] #root .scientific-intelligence-monitor :is(p, dd, li, a, button) { font-size: 16px !important; line-height: 1.6; }
+html[data-corvia-design="atelier"] #root .scientific-intelligence-monitor :is(dt, small) { color: #58666a !important; font-size: 14px !important; opacity: 1; }
+html[data-corvia-design="atelier"] #root .scientific-intelligence-monitor a { color: #16776d !important; }
+html[data-corvia-design="atelier"] #root .scientific-intelligence-monitor button { min-height: 44px; color: #24343a !important; background: #f6f3eb !important; border-color: #b8b5aa !important; }
+html[data-corvia-design="atelier"] #root .scientific-intelligence-monitor__health.is-active { color: #146349 !important; }
+html[data-corvia-design="atelier"] #root .scientific-intelligence-monitor__health:is(.is-degraded, .is-inactive) { color: #855b17 !important; }
+
+/* Standalone routes and root fallback cannot rely on .cv-content. The recovery
+   class works even if the theme provider itself was unmounted by the boundary. */
+#root .app-recovery--atelier,
+#root .corvia-loading-state,
+#root .atelier-coming-soon {
+  color: #24343a !important;
+  background: #f6f3eb !important;
+  font-family: var(--fonte-corpo, Inter, system-ui, sans-serif);
+  color-scheme: light;
+}
+#root .app-recovery--atelier { display: grid; place-items: center; padding: 24px; min-height: 100dvh !important; }
+#root .app-recovery--atelier .app-recovery__card { width: min(100%, 620px); padding: clamp(24px, 5vw, 44px); background: #fffdfa !important; border: 1px solid #dedacf; border-radius: 22px; box-shadow: 0 14px 48px #26393612; }
+#root .app-recovery--atelier .app-recovery__brand { display: block; width: min(230px, 100%); height: auto; margin-bottom: 32px; }
+#root .app-recovery--atelier :is(h1, p) { color: #24343a !important; line-height: 1.6; }
+#root .app-recovery--atelier h1 { font-size: clamp(26px, 5vw, 36px); line-height: 1.25; }
+#root .app-recovery--atelier p { font-size: 16px; }
+#root .app-recovery--atelier .eyebrow { color: #16776d !important; font-size: 13px; }
+#root .app-recovery--atelier .botao { min-height: 48px; padding: 12px 18px; color: #24343a !important; background: #f2d1af !important; border: 1px solid #b66d48 !important; border-radius: 12px; font-size: 16px; line-height: 1.4; }
+html[data-corvia-design="atelier"] #root .corvia-loading-state p { font-family: var(--fonte-corpo, Inter, system-ui, sans-serif); font-size: 14px; letter-spacing: .04em; }
+html[data-corvia-design="atelier"] #root .corvia-loading-state__orbit { border-color: #dedacf; border-top-color: #b66d48; }
+#root .atelier-coming-soon { min-height: 100dvh !important; overflow: visible !important; }
+#root .atelier-coming-soon__light { background: linear-gradient(90deg, transparent, #d39770, transparent) !important; }
+#root .atelier-coming-soon section > p { color: #58666a !important; }
+#root .atelier-coming-soon section > p:first-of-type { color: #16776d !important; font-size: 13px !important; line-height: 1.7; letter-spacing: .14em !important; }
+#root .atelier-coming-soon h1 { color: #24343a !important; line-height: 1.05 !important; }
+#root .atelier-coming-soon h1 span { color: #b66d48 !important; }
+#root .atelier-coming-soon section > div a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; color: #24343a !important; border: 1px solid #bcb6a9 !important; font-size: 16px; }
+#root .atelier-coming-soon section > div a:first-child { background: #f2d1af !important; border-color: #b66d48 !important; }
+#root .atelier-coming-soon section > small { color: #58666a !important; font-size: 14px; line-height: 1.6; }
+#root :is(.app-recovery--atelier, .atelier-coming-soon) :is(a, button):focus-visible { outline: 2px solid #16776d !important; outline-offset: 4px; }
+
+html[data-corvia-design="atelier"] #root .investor-demo-banner { color: #28534d; background: #f6f3ebf5; border-color: #b8c5b8; box-shadow: 0 6px 24px #2639361a; line-height: 1.35; }
+html[data-corvia-design="atelier"] #root .investor-demo-banner strong { color: #28534d; }
+html[data-corvia-design="atelier"] #root .investor-demo-banner span:last-child { color: #58666a; }
+html[data-corvia-design="atelier"] #root .investor-demo-banner__dot { background: #16776d; box-shadow: 0 0 0 4px #16776d12; }
+
+@media (max-width: 760px) {
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep-head, .pep-patient, .pep-title, .ia__topo, .cai-submit) { flex-wrap: wrap; }
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content .pep-head > div:first-child { display: block; }
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content .pep-add { min-width: 0; flex-wrap: wrap; }
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content .pep-add input { min-width: 0; flex: 1 1 10rem; }
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.pep-vitals, .ia__sugestoes, .cai-agent-grid) { grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)) !important; }
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.ia-escolha__cartoes, .cai-form-grid--2, .cai-form-grid--3, .cai-case-form, .cai-final-review__checks) { grid-template-columns: 1fr !important; }
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content .ia { height: auto !important; min-height: 0; }
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content .ia__conversa { flex-basis: auto; min-height: 280px; max-height: 60dvh; }
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content .ia__msg { width: 100%; }
+  html[data-corvia-design="atelier"] #root .corvia-chat-panel { right: 10px !important; width: calc(100vw - 20px) !important; }
+  html[data-corvia-design="atelier"] #root .cos-assistant-panel__footer { padding: 12px; }
+  html[data-corvia-design="atelier"] :is(#root, body) .qa-dialog { width: 100%; min-width: 0; }
+}

@@ -26,7 +26,7 @@ from app.services.professional_profile import council_display, professional_name
 # Clientes de e-mail e alguns navegadores bloqueiam SVG remoto dentro de
 # mensagens/assinaturas. Este PNG é uma renderização direta do SVG canônico,
 # não uma marca paralela nem o asset legado.
-LOGO_CORVIA_URL = f"{settings.public_url.rstrip('/')}/corvia-logo-canonical.png"
+LOGO_CORVIA_URL = f"{settings.public_url.rstrip('/')}/atelier/corvia-logo-atelier.png"
 
 
 def _endereco_profissional(user: Any) -> str | None:

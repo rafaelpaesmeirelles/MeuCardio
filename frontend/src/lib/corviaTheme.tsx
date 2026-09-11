@@ -19,12 +19,12 @@ type CorviaThemeContextValue = {
   toggleTheme: () => void;
 };
 
-const DEFAULT_THEME: CorviaTheme = "dark";
+const DEFAULT_THEME: CorviaTheme = "light";
 const THEME_STORAGE_PREFIX = "corvia:cardiology-spaces:theme:v1";
 export const CORVIA_LOGIN_THEME_KEY = "corvia:cardiology-spaces:login-theme";
 const THEME_COLORS: Record<CorviaTheme, string> = {
-  dark: "#03101a",
-  light: "#eef5fb",
+  dark: "#172328",
+  light: "#f7f3e8",
 };
 
 const CorviaThemeContext = createContext<CorviaThemeContextValue | null>(null);
@@ -60,6 +60,7 @@ function consumeLoginThemePreference(): CorviaTheme | null {
 
 function applyDocumentTheme(theme: CorviaTheme) {
   const root = document.documentElement;
+  root.dataset.corviaDesign = "atelier";
   root.dataset.corviaTheme = theme;
   root.style.colorScheme = theme;
 
@@ -71,8 +72,8 @@ function applyDocumentTheme(theme: CorviaTheme) {
  * Aparência global do universo autenticado CorVIA.
  *
  * A preferência é deliberadamente independente dos modos de trabalho e fica
- * vinculada ao assinante. Rotas públicas permanecem sempre no tema escuro de
- * origem; isso também impede que a preferência de um usuário vaze no logout.
+ * vinculada ao assinante. A arquitetura perolada é o padrão; a escolha explícita
+ * de aparência escura continua respeitada. No logout retorna ao padrão público.
  */
 export function CorviaThemeProvider({ children }: { children: ReactNode }) {
   const { usuario } = useAuth();

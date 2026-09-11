@@ -83,15 +83,19 @@ import "./styles/cardiology-spaces-app-frame.css";
 import "./styles/cardiology-spaces-public.css";
 /* Geometria e aparência escura do seletor; o tema claro só troca a paleta. */
 import "./styles/corvia-theme-selector.css";
-/* Correções finais do lote atual. Permanecem antes do contrato escuro e do
-   tema claro, que por segurança precisam encerrar a cascata nesta ordem. */
+/* Correções legadas precedem o par de contraste escuro/claro.
+   As camadas Atelier abaixo são escopadas e verificadas separadamente. */
 import "./styles/cardiology-spaces-pending-fixes.css";
 /* Tokens da paleta diurna; suas regras visuais encerram a folha do tema claro. */
 import "./styles/corvia-daylight-palette.css";
 /* Contrato de segurança visual do universo escuro. */
 import "./styles/clinical-form-control-contrast.css";
-/* Aparência clara opcional: última camada, estritamente sob data-corvia-theme=light. */
+/* Última camada legada: estritamente sob data-corvia-theme=light. */
 import "./styles/cardiology-spaces-light-mode.css";
+/* Approved architectural direction. Scoped to atelier; clinical state colors remain semantic. */
+import "./styles/corvia-atelier.css";
+import "./styles/corvia-atelier-content.css";
+import "./styles/corvia-atelier-surfaces.css";
 
 async function verificarAtualizacaoCompleta(forcar = false) {
   await verificarVersaoAtual(forcar);

@@ -67,7 +67,7 @@ def send_appointment_communication(communication_id: int) -> bool:
         )
         body = (
             "<div style='font-family:Arial,sans-serif;color:#26333b;line-height:1.55;max-width:620px'>"
-            "<div style='padding:18px 20px;background:#0b2e45'>"
+            "<div style='padding:18px 20px;background:#ffffff;border-top:3px solid #b66d48'>"
             "<img src='cid:corvia-logo' alt='CorVIA Cardiology Spaces' style='display:block;width:260px;max-width:100%;height:auto'>"
             "</div><div style='padding:22px 20px;border:1px solid #e4e8ea;border-top:0'>"
             "<h1 style='font-size:22px;color:#0b2e45;margin-top:0'>Agendamento confirmado</h1>"

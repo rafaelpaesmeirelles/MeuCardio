@@ -9,25 +9,24 @@ def _read(path: str) -> str:
 
 
 def test_canonical_brand_assets_exist_and_are_named_explicitly():
-    mark = ROOT / "frontend/public/corvia-mark-canonical.svg"
-    wordmark = ROOT / "frontend/public/corvia-logo-canonical.svg"
-    wordmark_dark = ROOT / "frontend/public/corvia-logo-canonical-dark.svg"
+    mark = ROOT / "frontend/public/atelier/corvia-mark-atelier.svg"
+    wordmark = ROOT / "frontend/public/atelier/corvia-logo-atelier.svg"
     assert mark.is_file()
     assert wordmark.is_file()
-    assert wordmark_dark.is_file()
     assert "CorVIA" in mark.read_text(encoding="utf-8")
     wordmark_source = wordmark.read_text(encoding="utf-8")
     assert "Cardiology Spaces" in wordmark_source
-    assert "#17335D" in wordmark_source
+    for copper_stop in ("#8C4D35", "#B66D48", "#D39770", "#F2D1AF"):
+        assert copper_stop in wordmark_source
     assert "Clinical OS" not in wordmark_source
 
 
 def test_patient_documents_and_welcome_use_canonical_wordmark():
     cabecalho = _read("frontend/src/components/CabecalhoDocumento.tsx")
     boas_vindas = _read("frontend/src/components/BoasVindas.tsx")
-    assert "/corvia-logo-spaces.svg" in cabecalho
+    assert "/atelier/corvia-logo-atelier.svg" in cabecalho
     assert 'alt="CorVIA Cardiology Spaces"' in cabecalho
-    assert "/corvia-logo-spaces.svg" in boas_vindas
+    assert "/atelier/corvia-logo-atelier.svg" in boas_vindas
     assert "CorVIA Cardiology Spaces" in boas_vindas
     assert "O Caminho do Coração" not in boas_vindas
     assert "O caminho do coração" not in boas_vindas
@@ -36,7 +35,7 @@ def test_patient_documents_and_welcome_use_canonical_wordmark():
 def test_transactional_email_template_uses_canonical_identity():
     base = _read("backend/app/templates/emails/_base.html")
     transport = _read("backend/app/services/emails.py")
-    assert "/corvia-logo-canonical.png" in base
+    assert "/atelier/corvia-logo-atelier.png" in base
     assert "CorVIA — Cardiology Spaces" in base
     assert "Clinical OS" not in base
     assert "cid:corvia-logo" not in base
@@ -54,12 +53,12 @@ def test_appointment_confirmation_uses_canonical_identity():
 
 def test_server_generated_documents_do_not_depend_on_legacy_logo_asset():
     marca = _read("backend/app/services/pdf/marca.py")
-    web = ROOT / "frontend/public/corvia-logo-canonical.png"
-    server = ROOT / "backend/app/assets/corvia-logo-canonical.png"
+    web = ROOT / "frontend/public/atelier/corvia-logo-atelier.png"
+    server = ROOT / "backend/app/assets/corvia-logo-atelier.png"
     assert web.is_file()
     assert server.is_file()
     assert hashlib.sha256(web.read_bytes()).digest() == hashlib.sha256(server.read_bytes()).digest()
-    assert 'assets" / "corvia-logo-canonical.png' in marca
+    assert 'assets" / "corvia-logo-atelier.png' in marca
     assert "/tmp/" not in marca
     assert "_gerar_logo_canonica" not in marca
 
@@ -103,16 +102,18 @@ def test_generated_documents_and_patient_emails_use_cardiology_spaces_identity()
         "backend/app/templates/emails/material_paciente.html",
     ):
         source = _read(path)
-        assert "/corvia-logo-canonical.png" in source, path
+        assert "/atelier/corvia-logo-atelier.png" in source, path
         assert 'alt="CorVIA Cardiology Spaces"' in source, path
 
 
 def test_browser_and_pwa_use_canonical_mark_only():
     index = _read("frontend/index.html")
     vite = _read("frontend/vite.config.ts")
-    assert 'href="/corvia-mark-canonical.svg"' in index
-    assert "corvia-logo-canonical.svg" in index
-    assert 'src: "/corvia-mark-canonical.svg"' in vite
+    assert 'href="/atelier/corvia-mark-atelier.svg"' in index
+    assert "/atelier/corvia-logo-atelier.png" in index
+    assert 'href="/atelier/corvia-mark-atelier-192.png"' in index
+    assert 'src: "/atelier/corvia-mark-atelier-192.png"' in vite
+    assert 'src: "/atelier/corvia-mark-atelier-512.png"' in vite
     active_pwa_identity = vite.split("includeAssets:", 1)[1].split("workbox:", 1)[0]
     for legacy in ("icon-192.png", "icon-512.png", "icon-maskable.png", "favicon.png", "apple-touch-icon.png"):
         assert legacy not in active_pwa_identity

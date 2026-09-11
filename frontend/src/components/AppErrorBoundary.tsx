@@ -44,11 +44,12 @@ export default class AppErrorBoundary extends Component<Props, State> {
 
     return (
       <main
-        className="app-recovery"
+        className="app-recovery app-recovery--atelier"
         role="alert"
         style={{ color: "#eefafb", background: "#071b24", minHeight: "100vh" }}
       >
         <section className="app-recovery__card" style={{ background: "#0b2632" }}>
+          <img className="app-recovery__brand" src="/atelier/corvia-logo-atelier.svg" alt="CorVIA Cardiology Spaces" />
           <p className="eyebrow">Recuperação segura</p>
           <h1 style={{ color: "#eefafb" }}>Não foi possível abrir esta tela.</h1>
           <p style={{ color: "#a9c4ca" }}>Sua sessão foi preservada. Atualize os arquivos do CorVIA e tente novamente.</p>
