@@ -337,8 +337,8 @@ test("o GalaxyThemeToggle mantém a imagem canônica transparente e o canvas da 
 
 test("a paleta textual e os indicadores essenciais mantêm contraste WCAG no canvas claro", () => {
   const lightStyles = readRequired("src/styles/cardiology-spaces-light-mode.css");
-  const textColors = ["#18354b", "#49677b", "#5e687f", "#246ac1", "#7956c8", "#c42068", "#0f727a", "#14764c"];
-  const lightCanvases = ["#e5f3f8", "#e2eff7"];
+  const textColors = ["#202b36", "#4d5b68", "#5e687f", "#246ac1", "#7956c8", "#c42068", "#0f727a", "#14764c"];
+  const lightCanvases = ["#f5f6f5", "#f0f2f1"];
   for (const color of textColors) {
     assert.ok(lightStyles.includes(color), `${color} precisa continuar declarado na paleta clara`);
     for (const canvas of lightCanvases) {
@@ -350,7 +350,7 @@ test("a paleta textual e os indicadores essenciais mantêm contraste WCAG no can
   assert.match(lightStyles, /textarea\s*\{[^}]*background-color:\s*#ffffff\s*!important/s);
   assert.match(lightStyles, /textarea::placeholder\s*\{[^}]*color:\s*#626c82\s*!important/s);
   assert.ok(contrastRatio("#626c82", "#ffffff") >= 4.5, "placeholders precisam atingir 4,5:1 sobre o fundo branco efetivo");
-  assert.ok(lightStyles.includes("#e2eff7"), "o canvas diurno aprovado precisa permanecer na paleta clara");
+  assert.ok(lightStyles.includes("#f0f2f1"), "o canvas neutro precisa permanecer na paleta clara");
   for (const decorativeColor of ["#d12870", "#137a80", "#b78a52"]) {
     assert.ok(lightStyles.includes(decorativeColor), `${decorativeColor} precisa permanecer restrito a detalhes decorativos do tema claro`);
   }

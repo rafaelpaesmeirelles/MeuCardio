@@ -9,7 +9,7 @@
   background: rgba(9,18,34,.95);
   border-bottom-color: rgba(161,124,245,.10);
 }
-.cos-assistant-panel__brand small { color:#7e6fa6!important; font-size:.47rem; }
+.cos-assistant-panel__brand small { color:#a99bbf!important; font-size:.47rem; }
 .cos-assistant-panel__brand strong { color:#e9e1ff; font-size:.67rem; }
 .cos-assistant-panel__spark { color:#bea1ff; }
 .cos-assistant-panel__body { gap:8px; padding:9px; }
@@ -44,7 +44,7 @@
   border:1px solid rgba(161,124,245,.06);
   border-radius:7px;
 }
-.cos-assistant-route--board small { color:#7b6a9c!important; font-size:.42rem; text-transform:uppercase; }
+.cos-assistant-route--board small { color:#a99bbf!important; font-size:.42rem; text-transform:uppercase; }
 .cos-assistant-route--board strong { overflow:hidden; color:#e2d7ff; font-size:.64rem; text-overflow:ellipsis; white-space:nowrap; }
 .cos-assistant-destination { background:rgba(161,124,245,.035); border-color:rgba(161,124,245,.075); }
 .cos-assistant-route-button { border-color:rgba(161,124,245,.12); background:rgba(161,124,245,.06); color:#d8c8ff; }
@@ -55,3 +55,32 @@
   .cos-assistant-map .deslocamento-mapa svg,
   .cos-assistant-map .deslocamento-mapa__google { min-height:180px; height:180px; max-height:180px; }
 }
+
+/* A light shell must not inherit this drawer's navy board or pale ink. */
+html[data-corvia-theme="light"] .cos-assistant-panel {
+  --cos-text: var(--corvia-daylight-text);
+  --cos-line: var(--corvia-daylight-line);
+  --cos-line-strong: var(--corvia-daylight-line);
+  --cos-cyan: #12666a;
+  color: var(--corvia-daylight-text);
+  background: var(--corvia-daylight-panel);
+  border-left-color: var(--corvia-daylight-line);
+  box-shadow: -22px 0 64px rgba(24, 32, 44, .16);
+}
+html[data-corvia-theme="light"] .cos-assistant-panel :is(.cos-assistant-panel__head, .cos-assistant-panel__footer) {
+  background: #fff; border-color: var(--corvia-daylight-line);
+}
+html[data-corvia-theme="light"] .cos-assistant-panel :is(.cos-assistant-briefing, .cos-assistant-card, .cos-assistant-briefing__summary > div, .cos-assistant-next, .cos-assistant-destination, .cos-assistant-route > div, .cos-assistant-empty, .cos-assistant-actions a, .cos-assistant-panel__footer a) {
+  background: #f5f6f7; border-color: var(--corvia-daylight-line);
+}
+html[data-corvia-theme="light"] .cos-assistant-panel :is(.cos-assistant-panel__brand strong, .cos-assistant-briefing__summary strong, .cos-assistant-next strong, .cos-assistant-card__head h3, .cos-assistant-destination strong, .cos-assistant-route strong, .cos-assistant-empty strong, .cos-assistant-actions strong, .cos-assistant-panel__footer strong) { color: var(--corvia-daylight-text); }
+html[data-corvia-theme="light"] .cos-assistant-panel :is(.cos-assistant-briefing__summary span, .cos-assistant-next small, .cos-assistant-next p, .cos-assistant-state, .cos-assistant-destination small, .cos-assistant-destination span, .cos-assistant-hint, .cos-assistant-empty small, .cos-assistant-actions small, .cos-assistant-panel__footer small, .cos-assistant-panel__head > button) { color: var(--corvia-daylight-muted); }
+/* These two legacy declarations already carry important; retain a local,
+   theme-specific exception rather than overriding every drawer descendant. */
+html[data-corvia-theme="light"] .cos-assistant-panel .cos-assistant-panel__brand small,
+html[data-corvia-theme="light"] .cos-assistant-panel .cos-assistant-route--board small { color: var(--corvia-daylight-muted) !important; }
+html[data-corvia-theme="light"] .cos-assistant-panel :is(.eyebrow, .cos-assistant-link, .cos-assistant-empty a, .cos-assistant-route-button) { color: #12666a; }
+html[data-corvia-theme="light"] .cos-assistant-panel .cos-assistant-route-button { background: #eef4f1; border-color: var(--corvia-daylight-line); }
+html[data-corvia-theme="light"] .cos-assistant-panel .cos-assistant-panel__spark { color: #12666a; background: #e9f2ee; box-shadow: none; }
+html[data-corvia-theme="light"] .cos-assistant-panel .cos-assistant-warning { color: #9c213e !important; }
+html[data-corvia-theme="light"] .cos-assistant-panel .cos-assistant-map .deslocamento-painel { background: #f5f6f7; }
