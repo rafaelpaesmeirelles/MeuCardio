@@ -68,6 +68,27 @@ def baseline_evidence():
     return run, job, log
 
 
+def completed_release_evidence():
+    run, _, _ = baseline_evidence()
+    run.update(id=FOLLOWUP.CERTIFIED_RUN_ID, head_sha=FOLLOWUP.CERTIFIED_SHA,
+               conclusion="success", pull_requests=[])
+    backend = {
+        "id": FOLLOWUP.CERTIFIED_JOB_ID, "run_id": FOLLOWUP.CERTIFIED_RUN_ID,
+        "head_sha": FOLLOWUP.CERTIFIED_SHA, "name": "Backend tests",
+        "status": "completed", "conclusion": "success",
+        "steps": [{"name": name, "status": "completed", "conclusion": "success"}
+                  for name in ("Run pytest", "Exercise live HTTP release flow",
+                               "Prove PostgreSQL backup and restore",
+                               "Backend suite certificate " + FOLLOWUP.REPAIRED_SUITE_KEY)],
+    }
+    gate = {
+        "id": FOLLOWUP.CERTIFIED_GATE_JOB_ID, "run_id": FOLLOWUP.CERTIFIED_RUN_ID,
+        "head_sha": FOLLOWUP.CERTIFIED_SHA, "name": "Backend risk gate",
+        "status": "completed", "conclusion": "success",
+    }
+    return run, [backend, gate]
+
+
 def zip_report(*members):
     buffer = io.BytesIO()
     with zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED) as bundle:
@@ -188,6 +209,27 @@ class BaselineProvenanceTests(unittest.TestCase):
         run["pull_requests"][0]["head"]["sha"] = "b" * 40
         self.assertEqual(FOLLOWUP.validate_baseline(run, job, log), hashlib.sha256(log.encode()).hexdigest())
 
+    def test_empty_association_requires_verified_closed_release(self):
+        run, job, log = baseline_evidence()
+        run["pull_requests"] = []
+        with self.assertRaises(ValueError):
+            FOLLOWUP.validate_baseline(run, job, log)
+        self.assertEqual(FOLLOWUP.validate_baseline(run, job, log, closed_release_verified=True),
+                         hashlib.sha256(log.encode()).hexdigest())
+
+    def test_closed_release_flag_never_relaxes_immutable_sha_or_wrong_association(self):
+        for change in ("run", "job", "association"):
+            run, job, log = baseline_evidence()
+            run["pull_requests"] = []
+            if change == "run":
+                run["head_sha"] = "0" * 40
+            elif change == "job":
+                job["head_sha"] = "0" * 40
+            else:
+                run["pull_requests"] = [{"number": 918}]
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                FOLLOWUP.validate_baseline(run, job, log, closed_release_verified=True)
+
     def test_job_identity_must_match(self):
         for key, value in {
             "id": FOLLOWUP.JOB_ID + 1, "run_id": FOLLOWUP.RUN_ID + 1,
@@ -264,6 +306,7 @@ class DiffScopeTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.paths = sorted(FOLLOWUP.ALLOWED_PATHS)
+        self.ci_delta = sorted(FOLLOWUP.CI_ONLY_PATHS)
         self.fixture = b"synthetic reviewed fixture\n"
         for name in self.paths:
             path = self.root / name
@@ -271,6 +314,7 @@ class DiffScopeTests(unittest.TestCase):
             path.write_bytes(self.fixture if name == FOLLOWUP.FIXTURE_PATH else b"reviewed CI file\n")
         self.mode = "100644"
         self.baseline_blob = "e41def371f97ece2b6523cc135e55260c0484a1e"
+        self.certified_blob = "0dae85a5600b2c343aff750a7a90ce19cfa9e36e"
         self.dirty = ""
         self.addCleanup(patch.stopall)
         patch.object(FOLLOWUP, "FIXTURE_SHA256", hashlib.sha256(self.fixture).hexdigest()).start()
@@ -282,20 +326,32 @@ class DiffScopeTests(unittest.TestCase):
         args = command[3:]
         if args == ["diff", "--no-renames", "--name-only", f"{FOLLOWUP.BASELINE_SHA}..HEAD"]:
             return "\n".join(self.paths) + "\n"
+        if args == ["diff", "--no-renames", "--name-only", f"{FOLLOWUP.CERTIFIED_SHA}..HEAD"]:
+            return "\n".join(self.ci_delta)
         if args[:3] == ["ls-tree", "HEAD", "--"]:
             return f"{self.mode} blob {'1' * 40}\t{args[3]}\n"
         if args == ["rev-parse", f"{FOLLOWUP.BASELINE_SHA}:{FOLLOWUP.FIXTURE_PATH}"]:
             return self.baseline_blob
+        if args == ["rev-parse", f"{FOLLOWUP.CERTIFIED_SHA}:{FOLLOWUP.FIXTURE_PATH}"]:
+            return self.certified_blob
         if args == ["status", "--porcelain", "--untracked-files=no"]:
             return self.dirty
         self.fail(f"Unexpected git command: {args!r}")
 
     def test_exact_reviewed_diff_requires_baseline_ancestry(self):
         self.assertEqual(FOLLOWUP.validate_diff(self.root), self.paths)
-        self.run.assert_called_once_with(
-            ["git", "-C", str(self.root), "merge-base", "--is-ancestor", FOLLOWUP.BASELINE_SHA, "HEAD"],
-            check=True, capture_output=True,
-        )
+        self.assertEqual(self.run.call_count, 2)
+        for sha in (FOLLOWUP.BASELINE_SHA, FOLLOWUP.CERTIFIED_SHA):
+            self.run.assert_any_call(
+                ["git", "-C", str(self.root), "merge-base", "--is-ancestor", sha, "HEAD"],
+                check=True, capture_output=True,
+            )
+
+    def test_ci_delta_must_be_nonempty_and_exclude_even_the_passed_fixture(self):
+        for delta in ([], [FOLLOWUP.FIXTURE_PATH], ["backend/app/main.py"], ["frontend/src/App.tsx"]):
+            self.ci_delta = delta
+            with self.subTest(delta=delta), self.assertRaises(ValueError):
+                FOLLOWUP.validate_diff(self.root)
 
     def test_external_manifest_cannot_expand_scope(self):
         with self.assertRaises(ValueError):
@@ -331,6 +387,11 @@ class DiffScopeTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             FOLLOWUP.validate_diff(self.root)
 
+    def test_successfully_tested_fixture_blob_is_sealed(self):
+        self.certified_blob = "2" * 40
+        with self.assertRaises(ValueError):
+            FOLLOWUP.validate_diff(self.root)
+
     def test_deleted_non_regular_and_symlinked_files_are_rejected(self):
         for mode in ("120000", "160000", "100755"):
             self.mode = mode
@@ -353,6 +414,44 @@ class DiffScopeTests(unittest.TestCase):
             FOLLOWUP.validate_diff(self.root)
 
 
+class CompletedReleaseTests(unittest.TestCase):
+    def test_exact_completed_release_is_valid_without_live_pr_associations(self):
+        run, jobs = completed_release_evidence()
+        FOLLOWUP.validate_completed_release(run, jobs)
+
+    def test_completed_run_identity_and_success_are_required(self):
+        for key, value in {"id": FOLLOWUP.CERTIFIED_RUN_ID + 1, "head_sha": "0" * 40,
+                           "head_branch": "other", "path": ".github/workflows/other.yml",
+                           "event": "push", "status": "in_progress", "conclusion": "failure",
+                           "run_attempt": 2, "repository": {"full_name": "fork/MeuCardio"}}.items():
+            run, jobs = completed_release_evidence()
+            run[key] = value
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                FOLLOWUP.validate_completed_release(run, jobs)
+
+    def test_both_unique_successful_jobs_must_match_the_certified_run_and_sha(self):
+        for index in (0, 1):
+            for key, value in {"id": 0, "run_id": 0, "head_sha": "0" * 40, "name": "other",
+                               "status": "in_progress", "conclusion": "skipped"}.items():
+                run, jobs = completed_release_evidence()
+                jobs[index][key] = value
+                with self.subTest(index=index, key=key), self.assertRaises(ValueError):
+                    FOLLOWUP.validate_completed_release(run, jobs)
+            run, jobs = completed_release_evidence()
+            jobs.append(deepcopy(jobs[index]))
+            with self.subTest(index=index, duplicate=True), self.assertRaises(ValueError):
+                FOLLOWUP.validate_completed_release(run, jobs)
+
+    def test_pytest_http_backup_and_named_certificate_must_all_be_successful(self):
+        run, jobs = completed_release_evidence()
+        for index in range(len(jobs[0]["steps"])):
+            for status, conclusion in (("in_progress", "success"), ("completed", "skipped")):
+                altered = deepcopy(jobs)
+                altered[0]["steps"][index].update(status=status, conclusion=conclusion)
+                with self.subTest(index=index, status=status, conclusion=conclusion), self.assertRaises(ValueError):
+                    FOLLOWUP.validate_completed_release(run, altered)
+
+
 class DecisionContextTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -360,20 +459,26 @@ class DecisionContextTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         self.candidate = "d" * 40
         self.candidate_tree = "f" * 40
-        self.head_tree = "a" * 40
+        self.active_number = FOLLOWUP.PR_NUMBER + 1
+        self.ci_delta = sorted(FOLLOWUP.CI_ONLY_PATHS)
         self.pr = {
-            "number": FOLLOWUP.PR_NUMBER,
+            "number": self.active_number,
             "head": {"sha": self.candidate, "ref": FOLLOWUP.BRANCH,
                      "repo": {"full_name": FOLLOWUP.REPOSITORY}},
             "base": {"ref": "main", "repo": {"full_name": FOLLOWUP.REPOSITORY}},
-            "merge_commit_sha": None,
+            "merge_commit_sha": self.candidate, "merged": True,
         }
+        self.original_pr = deepcopy(self.pr)
+        self.original_pr.update(number=FOLLOWUP.PR_NUMBER, merge_commit_sha=FOLLOWUP.CERTIFIED_SHA)
+        self.original_pr["head"]["sha"] = FOLLOWUP.CERTIFIED_SHA
         self.run, self.job, self.log = baseline_evidence()
+        self.run["pull_requests"] = []
+        self.completed_run, self.completed_jobs = completed_release_evidence()
         self.archive = zip_report(("pytest-output.txt", self.log))
         self.artifact = artifact_evidence(self.archive)
         self.artifacts = {"artifacts": [self.artifact]}
         self.jobs = {"jobs": [self.job]}
-        self.associated = [{"number": FOLLOWUP.PR_NUMBER}]
+        self.associated = [{"number": self.active_number, "head": deepcopy(self.pr["head"])}]
         self.main_sha = self.candidate
         self.addCleanup(patch.stopall)
         patch.dict(FOLLOWUP.os.environ, {"RUNNER_TEMP": str(self.root)}).start()
@@ -381,6 +486,7 @@ class DecisionContextTests(unittest.TestCase):
         self.git = patch.object(FOLLOWUP, "_git", side_effect=self.git_value).start()
         self.api = patch.object(FOLLOWUP, "_github", side_effect=self.github).start()
         self.binary_api = patch.object(FOLLOWUP, "_github_binary", return_value=self.archive).start()
+        self.ancestry = patch.object(FOLLOWUP.subprocess, "run", return_value=subprocess.CompletedProcess([], 0)).start()
         self.diff = patch.object(FOLLOWUP, "validate_diff", return_value=sorted(FOLLOWUP.ALLOWED_PATHS)).start()
 
     def git_value(self, root, *args):
@@ -389,15 +495,19 @@ class DecisionContextTests(unittest.TestCase):
             return self.candidate
         if args == ("rev-parse", "HEAD^{tree}"):
             return self.candidate_tree
+        if args == ("diff", "--no-renames", "--name-only", f"{FOLLOWUP.CERTIFIED_SHA}..HEAD"):
+            return "\n".join(self.ci_delta)
         self.fail(f"Unexpected git operation: {args!r}")
 
     def github(self, path, *, raw=False):
         base = f"repos/{FOLLOWUP.REPOSITORY}"
         payloads = {
-            f"{base}/pulls/{FOLLOWUP.PR_NUMBER}": self.pr,
+            f"{base}/pulls/{FOLLOWUP.PR_NUMBER}": self.original_pr,
+            f"{base}/pulls/{self.active_number}": self.pr,
             f"{base}/git/ref/heads/main": {"object": {"sha": self.main_sha}},
             f"{base}/commits/{self.candidate}/pulls": self.associated,
-            f"{base}/git/commits/{self.pr['head']['sha']}": {"tree": {"sha": self.head_tree}},
+            f"{base}/actions/runs/{FOLLOWUP.CERTIFIED_RUN_ID}": self.completed_run,
+            f"{base}/actions/runs/{FOLLOWUP.CERTIFIED_RUN_ID}/jobs?filter=all&per_page=100": {"jobs": self.completed_jobs},
             f"{base}/actions/runs/{FOLLOWUP.RUN_ID}": self.run,
             f"{base}/actions/runs/{FOLLOWUP.RUN_ID}/jobs?filter=all&per_page=100": self.jobs,
             f"{base}/actions/runs/{FOLLOWUP.RUN_ID}/artifacts": self.artifacts,
@@ -407,15 +517,15 @@ class DecisionContextTests(unittest.TestCase):
         return deepcopy(payloads[path])
 
     def resolve(self, **overrides):
-        context = {"event": "pull_request", "number": str(FOLLOWUP.PR_NUMBER),
+        context = {"event": "pull_request", "number": str(self.active_number),
                    "head_ref": FOLLOWUP.BRANCH, "repository": FOLLOWUP.REPOSITORY}
         context.update(overrides)
         return FOLLOWUP.resolve_decision(self.root, **context)
 
-    def test_exact_pr_emits_explicit_composed_evidence_not_a_full_pass(self):
+    def test_exact_pr_emits_ci_continuity_without_any_backend_test_to_run(self):
         decision = self.resolve()
-        self.assertEqual(decision.backend_mode, "failed-test-followup")
-        self.assertEqual(decision.focused_tests, (FOLLOWUP.TEST_NODE,))
+        self.assertEqual(decision.backend_mode, "ci-only-continuation")
+        self.assertEqual(decision.focused_tests, ())
         self.assertEqual(decision.suite_key, FOLLOWUP.SUITE_KEY)
         proof = json.loads((self.root / "backend-failed-test-followup.json").read_text())
         self.assertEqual(proof["candidate_sha"], self.candidate)
@@ -424,15 +534,20 @@ class DecisionContextTests(unittest.TestCase):
         self.assertEqual(proof["baseline_run_id"], FOLLOWUP.RUN_ID)
         self.assertEqual(proof["baseline_job_id"], FOLLOWUP.JOB_ID)
         self.assertEqual(proof["baseline_result"], {"failed": 1, "passed": 3673, "skipped": 4})
-        self.assertEqual(proof["test_to_run"], FOLLOWUP.TEST_NODE)
+        self.assertEqual(proof["test_already_passed"], FOLLOWUP.TEST_NODE)
+        self.assertEqual(proof["backend_tests_to_run"], [])
+        self.assertEqual(proof["certified_application_sha"], FOLLOWUP.CERTIFIED_SHA)
+        self.assertEqual(proof["certified_run_id"], FOLLOWUP.CERTIFIED_RUN_ID)
+        self.assertEqual(proof["certified_backend_job_id"], FOLLOWUP.CERTIFIED_JOB_ID)
+        self.assertEqual(proof["active_pull_request"], self.active_number)
         self.assertEqual(proof["baseline_report_sha256"], hashlib.sha256(self.log.encode()).hexdigest())
         self.assertEqual(proof["baseline_artifact_id"], FOLLOWUP.ARTIFACT_ID)
         self.assertEqual(proof["baseline_artifact_sha256"], hashlib.sha256(self.archive).hexdigest())
         self.binary_api.assert_called_once_with(
             f"repos/{FOLLOWUP.REPOSITORY}/actions/artifacts/{FOLLOWUP.ARTIFACT_ID}/zip"
         )
-        self.assertEqual(proof["pending_operational_gates"], ["HTTP release flow", "PostgreSQL backup and restore"])
-        self.assertIn("not-a-full-suite-certificate", decision.reasons)
+        self.assertEqual(proof["completed_operational_gates"], ["HTTP release flow", "PostgreSQL backup and restore"])
+        self.assertIn("not-a-full-suite-or-exact-SHA-reuse-certificate", decision.reasons)
 
     def test_unrelated_pr_and_unsupported_event_do_not_apply(self):
         self.assertIsNone(self.resolve(number="933", head_ref="other"))
@@ -441,7 +556,8 @@ class DecisionContextTests(unittest.TestCase):
         self.diff.assert_not_called()
 
     def test_relevant_pr_with_wrong_context_fails_closed(self):
-        for override in ({"number": "918"}, {"head_ref": "other"}, {"repository": "fork/MeuCardio"}):
+        for override in ({"number": "918"}, {"number": str(FOLLOWUP.PR_NUMBER), "head_ref": "other"},
+                         {"repository": "fork/MeuCardio"}):
             with self.subTest(override=override), self.assertRaises(ValueError):
                 self.resolve(**override)
 
@@ -458,7 +574,7 @@ class DecisionContextTests(unittest.TestCase):
                 self.resolve()
 
     def test_exact_main_push_needs_same_head_and_associated_pr(self):
-        self.assertEqual(self.resolve(event="push").backend_mode, "failed-test-followup")
+        self.assertEqual(self.resolve(event="push").backend_mode, "ci-only-continuation")
         self.main_sha = "e" * 40
         with self.assertRaises(ValueError):
             self.resolve(event="push")
@@ -478,16 +594,27 @@ class DecisionContextTests(unittest.TestCase):
     def test_unrelated_push_does_not_borrow_this_baseline(self):
         self.pr["head"]["sha"] = "e" * 40
         self.associated = [{"number": 918}]
+        self.ci_delta = ["frontend/src/App.tsx"]
         self.assertIsNone(self.resolve(event="push"))
         self.diff.assert_not_called()
 
-    def test_different_sha_same_tree_is_rejected_even_without_pr_association(self):
-        self.pr["head"]["sha"] = "e" * 40
+    def test_ci_only_descendant_is_rejected_when_pr_association_disappears(self):
         self.associated = []
-        self.head_tree = self.candidate_tree
         with self.assertRaises(ValueError):
             self.resolve(event="push")
         self.diff.assert_not_called()
+
+    def test_original_merge_or_completed_release_cannot_be_borrowed(self):
+        original = deepcopy(self.original_pr)
+        for key, value in (("merged", False), ("merge_commit_sha", "0" * 40)):
+            self.original_pr = deepcopy(original)
+            self.original_pr[key] = value
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                self.resolve()
+        self.original_pr = original
+        self.completed_run["head_sha"] = "0" * 40
+        with self.assertRaises(ValueError):
+            self.resolve()
 
     def test_missing_or_duplicated_baseline_job_is_rejected(self):
         for jobs in ([], [deepcopy(self.job), deepcopy(self.job)]):

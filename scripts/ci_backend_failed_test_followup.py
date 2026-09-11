@@ -1,8 +1,9 @@
-"""PR932's single failed-test continuation; never a full-suite certificate.
+"""PR932 evidence and its CI-only repair; never a new full-suite certificate.
 
-The unchanged runtime retains the observed baseline result. Only the reviewed
-fixture repair is exercised again, followed by the previously skipped HTTP and
-backup gates. Any scope/provenance mismatch stops CI rather than running full.
+The repaired test, HTTP flow and backup already passed on certified 5279d677.
+The later policy-only correction retains that proof only when all application
+bytes and the passed fixture remain unchanged. Missing evidence stops CI rather
+than repeating the backend suite or silently broadening an exception.
 """
 from __future__ import annotations
 
@@ -24,12 +25,17 @@ PR_NUMBER = 932
 BASELINE_SHA = "efb10e02e0237daacfe2054e5afca200dee62804"
 RUN_ID = 34593060917
 JOB_ID = 103242658960
+CERTIFIED_SHA = "5279d677190b042a16a7806181fff1cad1fdf01b"
+CERTIFIED_RUN_ID = 34598249285
+CERTIFIED_JOB_ID = 103259140812
+CERTIFIED_GATE_JOB_ID = 103259547272
 ARTIFACT_ID = 10261753294
 ARTIFACT_SHA256 = "09c7664412d15bcccfcb1bbeaa4de7750142cc68a4246072b9b934adba3f6225"
 TEST_NODE = "backend/tests/test_reconcile_rag_pipeline.py::test_reconcile_nunca_chama_rag"
 FIXTURE_PATH = TEST_NODE.split("::")[0]
 FIXTURE_SHA256 = "d6bfe40112c759cfe60e4795a1ab42af4404d8b5c27143b7c00aad9a52f212d1"
-SUITE_KEY = "backend-risk-v1-failed-test-followup-pr932-efb10e02"
+REPAIRED_SUITE_KEY = "backend-risk-v1-failed-test-followup-pr932-efb10e02"
+SUITE_KEY = "backend-risk-v1-ci-only-continuation-pr932-5279d677"
 ALLOWED_PATHS = frozenset({
     FIXTURE_PATH,
     ".github/workflows/ci.yml",
@@ -37,6 +43,7 @@ ALLOWED_PATHS = frozenset({
     "scripts/ci_backend_failed_test_followup.py",
     "scripts/tests/test_ci_failed_test_followup.py",
 })
+CI_ONLY_PATHS = ALLOWED_PATHS - {FIXTURE_PATH}
 RETAINED_SUCCESS_STEPS = (
     "Enforce Node 24 action runtimes", "Validate operational shell scripts",
     "Audit Python production dependencies", "Apply migrations through the operational command",
@@ -93,7 +100,7 @@ def validate_artifact(artifact: dict, archive: bytes) -> str:
         return content.decode("utf-8")
 
 
-def validate_baseline(run: dict, job: dict, log: str) -> str:
+def validate_baseline(run: dict, job: dict, log: str, *, closed_release_verified: bool = False) -> str:
     expected_run = {"id": RUN_ID, "head_sha": BASELINE_SHA, "head_branch": BRANCH,
                     "path": ".github/workflows/ci.yml", "event": "pull_request",
                     "status": "completed", "conclusion": "failure", "run_attempt": 1}
@@ -103,9 +110,10 @@ def validate_baseline(run: dict, job: dict, log: str) -> str:
         raise ValueError("Unexpected baseline repository")
     # pull_requests[].head.sha is live PR metadata, not the run's snapshot.
     # Immutable run.head_sha and job.head_sha above/below bind the actual code.
-    if not any(pr.get("number") == PR_NUMBER and pr.get("head", {}).get("ref") == BRANCH
+    associations = run.get("pull_requests", [])
+    if not (closed_release_verified and associations == []) and not any(pr.get("number") == PR_NUMBER and pr.get("head", {}).get("ref") == BRANCH
                and pr.get("base", {}).get("ref") == "main"
-               for pr in run.get("pull_requests", [])):
+               for pr in associations):
         raise ValueError("Baseline run is not associated with the exact PR932 head")
     expected_job = {"id": JOB_ID, "run_id": RUN_ID, "head_sha": BASELINE_SHA,
                     "name": "Backend tests", "status": "completed", "conclusion": "failure"}
@@ -141,6 +149,11 @@ def validate_diff(root: Path, manifest: dict | None = None) -> list[str]:
         raise ValueError("External scope overrides are not supported")
     subprocess.run(["git", "-C", str(root), "merge-base", "--is-ancestor", BASELINE_SHA, "HEAD"],
                    check=True, capture_output=True)
+    subprocess.run(["git", "-C", str(root), "merge-base", "--is-ancestor", CERTIFIED_SHA, "HEAD"],
+                   check=True, capture_output=True)
+    ci_delta = set(_git(root, "diff", "--no-renames", "--name-only", f"{CERTIFIED_SHA}..HEAD").splitlines())
+    if not ci_delta or not ci_delta.issubset(CI_ONLY_PATHS):
+        raise ValueError("Certified application changed; CI-only continuation is forbidden")
     paths = _git(root, "diff", "--no-renames", "--name-only", f"{BASELINE_SHA}..HEAD").splitlines()
     if set(paths) != ALLOWED_PATHS:
         raise ValueError("Follow-up changed paths differ from the reviewed test/CI-only correction")
@@ -153,9 +166,31 @@ def validate_diff(root: Path, manifest: dict | None = None) -> list[str]:
         raise ValueError("Unexpected baseline fixture blob")
     if hashlib.sha256(fixture).hexdigest() != FIXTURE_SHA256:
         raise ValueError("Fixture differs from the reviewed single-test repair")
+    if _git(root, "rev-parse", f"{CERTIFIED_SHA}:{FIXTURE_PATH}") != "0dae85a5600b2c343aff750a7a90ce19cfa9e36e":
+        raise ValueError("Certified fixture blob is not the passed repair")
     if _git(root, "status", "--porcelain", "--untracked-files=no"):
         raise ValueError("Follow-up checkout contains uncommitted changes")
     return paths
+
+
+def validate_completed_release(run: dict, jobs: list[dict]) -> None:
+    expected = {"id": CERTIFIED_RUN_ID, "head_sha": CERTIFIED_SHA, "head_branch": BRANCH,
+                "path": ".github/workflows/ci.yml", "event": "pull_request",
+                "status": "completed", "conclusion": "success", "run_attempt": 1}
+    if any(run.get(key) != value for key, value in expected.items()) or run.get("repository", {}).get("full_name") != REPOSITORY:
+        raise ValueError("Completed release CI evidence is invalid")
+    for job_id, job_name in ((CERTIFIED_JOB_ID, "Backend tests"), (CERTIFIED_GATE_JOB_ID, "Backend risk gate")):
+        found = [job for job in jobs if job.get("id") == job_id]
+        if len(found) != 1 or any(found[0].get(key) != value for key, value in
+            {"run_id": CERTIFIED_RUN_ID, "head_sha": CERTIFIED_SHA, "name": job_name,
+             "status": "completed", "conclusion": "success"}.items()):
+            raise ValueError("Completed release job evidence is invalid")
+        if job_id == CERTIFIED_JOB_ID:
+            steps = {step.get("name"): step for step in found[0].get("steps", [])}
+            for name in ("Run pytest", "Exercise live HTTP release flow", "Prove PostgreSQL backup and restore",
+                         "Backend suite certificate " + REPAIRED_SUITE_KEY):
+                if steps.get(name, {}).get("status") != "completed" or steps[name].get("conclusion") != "success":
+                    raise ValueError("Completed release is missing a required successful gate")
 
 
 def validate_followup_junit(path: Path) -> None:
@@ -183,30 +218,44 @@ def resolve_decision(root: Path, *, event: str, number: str, head_ref: str, repo
             raise ValueError("Follow-up repository mismatch")
         return None
     candidate = _git(root, "rev-parse", "HEAD")
-    pr = _github(f"repos/{REPOSITORY}/pulls/{PR_NUMBER}")
-    if event == "push" and candidate not in {pr.get("head", {}).get("sha"), pr.get("merge_commit_sha")}:
+    if event == "pull_request":
+        if not number.isdigit() or int(number) < PR_NUMBER or head_ref != BRANCH:
+            raise ValueError("Follow-up event identity mismatch")
+        active_number = int(number)
+    else:
         associated = _github(f"repos/{REPOSITORY}/commits/{candidate}/pulls")
-        pr_head = pr.get("head", {}).get("sha", "")
-        if not re.fullmatch(r"[0-9a-f]{40}", pr_head):
-            raise ValueError("Cannot identify the follow-up head")
-        head_commit = _github(f"repos/{REPOSITORY}/git/commits/{pr_head}")
-        same_tree = _git(root, "rev-parse", "HEAD^{tree}") == head_commit.get("tree", {}).get("sha")
-        if same_tree or any(item.get("number") == PR_NUMBER for item in associated):
-            raise ValueError("Follow-up integration is not the exact tested PR head; no full fallback")
-        return None
-    if (pr.get("number") != PR_NUMBER or pr.get("base", {}).get("ref") != "main"
+        related = [item for item in associated if item.get("head", {}).get("ref") == BRANCH]
+        exact = [item for item in related if item.get("head", {}).get("sha") == candidate]
+        if not exact:
+            ancestry = subprocess.run(["git", "-C", str(root), "merge-base", "--is-ancestor", CERTIFIED_SHA, "HEAD"], capture_output=True)
+            delta = set(_git(root, "diff", "--no-renames", "--name-only", f"{CERTIFIED_SHA}..HEAD").splitlines()) if ancestry.returncode == 0 else None
+            if related or (delta is not None and delta.issubset(CI_ONLY_PATHS)):
+                raise ValueError("CI continuation PR association incomplete; no full fallback")
+            return None
+        if len(exact) != 1 or not isinstance(exact[0].get("number"), int) or exact[0]["number"] < PR_NUMBER:
+            raise ValueError("CI continuation PR association is ambiguous")
+        active_number = exact[0]["number"]
+    pr = _github(f"repos/{REPOSITORY}/pulls/{active_number}")
+    if (pr.get("number") != active_number or pr.get("base", {}).get("ref") != "main"
             or pr.get("base", {}).get("repo", {}).get("full_name") != REPOSITORY
             or pr.get("head", {}).get("repo", {}).get("full_name") != REPOSITORY
             or pr.get("head", {}).get("ref") != BRANCH or pr.get("head", {}).get("sha") != candidate):
         raise ValueError("Follow-up PR/head identity mismatch; no full fallback")
-    if relevant_pr and (number != str(PR_NUMBER) or head_ref != BRANCH):
-        raise ValueError("Follow-up event identity mismatch")
     if event == "push":
         current_main = _github(f"repos/{REPOSITORY}/git/ref/heads/main")
-        associated = _github(f"repos/{REPOSITORY}/commits/{candidate}/pulls")
-        if current_main.get("object", {}).get("sha") != candidate or not any(item.get("number") == PR_NUMBER for item in associated):
+        if current_main.get("object", {}).get("sha") != candidate or not pr.get("merged") or pr.get("merge_commit_sha") != candidate:
             raise ValueError("Follow-up main promotion evidence incomplete; no full fallback")
+    original = _github(f"repos/{REPOSITORY}/pulls/{PR_NUMBER}")
+    if (original.get("number") != PR_NUMBER or original.get("merged") is not True
+            or original.get("merge_commit_sha") != CERTIFIED_SHA
+            or original.get("base", {}).get("repo", {}).get("full_name") != REPOSITORY
+            or original.get("head", {}).get("repo", {}).get("full_name") != REPOSITORY
+            or original.get("head", {}).get("ref") != BRANCH or original.get("base", {}).get("ref") != "main"):
+        raise ValueError("Original merged release identity is not verified")
     paths = validate_diff(root)
+    certified_run = _github(f"repos/{REPOSITORY}/actions/runs/{CERTIFIED_RUN_ID}")
+    certified_jobs = _github(f"repos/{REPOSITORY}/actions/runs/{CERTIFIED_RUN_ID}/jobs?filter=all&per_page=100")
+    validate_completed_release(certified_run, certified_jobs.get("jobs", []))
     run = _github(f"repos/{REPOSITORY}/actions/runs/{RUN_ID}")
     jobs = _github(f"repos/{REPOSITORY}/actions/runs/{RUN_ID}/jobs?filter=all&per_page=100")
     matching = [job for job in jobs.get("jobs", []) if job.get("id") == JOB_ID]
@@ -218,24 +267,26 @@ def resolve_decision(root: Path, *, event: str, number: str, head_ref: str, repo
         raise ValueError("Unique original pytest report artifact is missing")
     archive = _github_binary(f"repos/{REPOSITORY}/actions/artifacts/{ARTIFACT_ID}/zip")
     log = validate_artifact(matching_artifacts[0], archive)
-    log_hash = validate_baseline(run, matching[0], log)
+    log_hash = validate_baseline(run, matching[0], log, closed_release_verified=True)
     summary = {
-        "scope": "single failed-test continuation, not a full-suite pass or waiver",
+        "scope": "CI-only repair; unchanged application retains completed release evidence; not a full-suite pass or exact-SHA reuse",
         "instruction": "Se houver falha, corrija e refaca somente o teste que falhou",
         "candidate_sha": candidate, "candidate_tree": _git(root, "rev-parse", "HEAD^{tree}"), "baseline_sha": BASELINE_SHA,
         "baseline_run_id": RUN_ID, "baseline_job_id": JOB_ID, "baseline_report_sha256": log_hash,
         "baseline_artifact_id": ARTIFACT_ID, "baseline_artifact_sha256": ARTIFACT_SHA256,
         "baseline_result": {"failed": 1, "passed": 3673, "skipped": 4},
-        "test_to_run": TEST_NODE, "changed_paths": paths,
-        "pending_operational_gates": ["HTTP release flow", "PostgreSQL backup and restore"],
+        "certified_application_sha": CERTIFIED_SHA, "certified_run_id": CERTIFIED_RUN_ID,
+        "certified_backend_job_id": CERTIFIED_JOB_ID, "active_pull_request": active_number,
+        "test_already_passed": TEST_NODE, "backend_tests_to_run": [], "changed_paths": paths,
+        "completed_operational_gates": ["HTTP release flow", "PostgreSQL backup and restore"],
         "retained_success_steps": list(RETAINED_SUCCESS_STEPS),
     }
     Path(os.environ.get("RUNNER_TEMP", "/tmp"), "backend-failed-test-followup.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n")
-    return PolicyDecision(backend_mode="failed-test-followup", suite_key=SUITE_KEY,
-        focused_tests=(TEST_NODE,), reasons=(f"baseline:{BASELINE_SHA}", "3673-passed-4-skipped-retained",
-            "single-reviewed-test-fixture-repair", "runtime-corpus-dependencies-unchanged",
-            "pending-http-and-backup-gates-required", "not-a-full-suite-certificate"))
+    return PolicyDecision(backend_mode="ci-only-continuation", suite_key=SUITE_KEY,
+        focused_tests=(), reasons=(f"baseline:{BASELINE_SHA}", f"completed-ci:{CERTIFIED_RUN_ID}",
+            "CI-only-repair-after-PR932-merge", "application-and-passed-test-fixture-unchanged",
+            "HTTP-and-backup-gates-already-passed", "not-a-full-suite-or-exact-SHA-reuse-certificate"))
 
 
 if __name__ == "__main__":

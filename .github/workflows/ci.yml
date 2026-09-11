@@ -96,7 +96,7 @@ jobs:
         run: python -m unittest scripts.tests.test_ci_backend_policy scripts.tests.test_ci_section_owner_decision scripts.tests.test_ci_editorial_owner_decision scripts.tests.test_ci_feature_owner_decision scripts.tests.test_ci_favorites_owner_decision scripts.tests.test_ci_http_retry_owner_decision scripts.tests.test_ci_failed_test_followup -v
 
       - name: Record verified baseline and single failed-test continuation
-        if: steps.classify.outputs.backend_mode == 'failed-test-followup'
+        if: steps.classify.outputs.backend_mode == 'failed-test-followup' || steps.classify.outputs.backend_mode == 'ci-only-continuation'
         uses: actions/upload-artifact@v6
         with:
           name: backend-failed-test-followup
@@ -131,6 +131,7 @@ jobs:
           # baseline never becomes an identical successful full certificate.
           [[ "$BACKEND_MODE" != "authorized-followup" ]] || exit 0
           [[ "$BACKEND_MODE" != "authorized-no-backend-ci" ]] || exit 0
+          [[ "$BACKEND_MODE" != "ci-only-continuation" ]] || exit 0
 
           expected_job="Backend tests"
           if [[ "$BACKEND_MODE" == "focused" ]]; then
@@ -619,6 +620,13 @@ jobs:
               }
               [[ "$SUITE_KEY" == backend-risk-v1-authorized-followup-pr918-* ]] || exit 1
               echo "Authorized follow-up passed with operational gates; this is not a full-suite pass or full-suite reuse."
+              ;;
+            ci-only-continuation)
+              [[ "$SUITE_KEY" == backend-risk-v1-ci-only-continuation-pr932-5279d677 &&
+                 "$REUSE_BACKEND" != "true" && "$FULL_RESULT" == "skipped" && "$FOCUSED_RESULT" == "skipped" ]] || exit 1
+              echo "CI-only correction: application bytes match certified 5279d677, including the passed test fixture."
+              echo "Prior successful CI 34598249285 supplies test, HTTP and backup proof. No backend tests were repeated."
+              echo "This is verified evidence continuity, not an identical-SHA reuse or a new full-suite pass."
               ;;
             failed-test-followup)
               [[ "$SUITE_KEY" == backend-risk-v1-failed-test-followup-pr932-efb10e02 && "$FOCUSED_RESULT" == "skipped" ]] || exit 1
