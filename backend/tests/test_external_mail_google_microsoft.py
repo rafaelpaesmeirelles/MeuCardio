@@ -58,8 +58,8 @@ def _mock_request(monkeypatch, handler):
 
 def test_list_messages_google_slices_by_start_and_limit(monkeypatch):
     """3 mensagens na listagem, start=2/limit=1 deve devolver só a 2ª —
-    slice local sobre a lista de ids, já que o Gmail não pagina por
-    offset."""
+    somente a mensagem selecionada deve ter seus detalhes consultados,
+    mesmo quando a página de ids contém mais resultados."""
     listagem = {"messages": [{"id": "m1"}, {"id": "m2"}, {"id": "m3"}]}
     detalhes = {
         "m2": {
@@ -73,17 +73,18 @@ def test_list_messages_google_slices_by_start_and_limit(monkeypatch):
 
     def handler(method, url, kwargs):
         if url.endswith("/messages"):
-            assert kwargs["params"]["maxResults"] == "2"  # start-1+limit = 1+1
+            assert 2 <= int(kwargs["params"]["maxResults"]) <= 500
             return httpx.Response(200, json=listagem)
         message_id = url.rsplit("/", 1)[-1]
         return httpx.Response(200, json=detalhes[message_id])
 
-    _mock_request(monkeypatch, handler)
+    chamadas = _mock_request(monkeypatch, handler)
     resultado = external_mail.list_messages(
         None, _Integration("google_calendar"), folder=None, limit=1, start=2,
     )
     assert [m["messageId"] for m in resultado] == ["m2"]
     assert resultado[0]["subject"] == "Assunto 2"
+    assert [call["url"].rsplit("/", 1)[-1] for call in chamadas] == ["messages", "m2"]
 
 
 def test_list_messages_google_caps_max_results_at_500(monkeypatch):

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../lib/api";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 
 type Item = {
   id: string;
@@ -195,7 +196,10 @@ export default function ChecklistAlta() {
         </p>
       )}
       {a.checklist && (
-        <GrafoRelacionados entityType="checklist" slug={a.checklist} />
+        <>
+          <GrafoRelacionados entityType="checklist" slug={a.checklist} />
+          <TudoSobreEsteTema tema={a.theme} excluirTipo="checklist" excluirSlug={a.checklist} />
+        </>
       )}
     </div>
   );

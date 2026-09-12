@@ -39,6 +39,7 @@ def no_email(monkeypatch):
         (emails, "enviar_troca_email"), (emails, "enviar_solicitacao_recebida"),
         (account_recovery, "enviar_confirmacao_canal_recuperacao"),
         (account_recovery, "enviar_acesso_aprovado"),
+        (account_recovery, "enviar_confirmacao_convite"),
         (notificar, "notificar_admins_nova_solicitacao"),
     ):
         monkeypatch.setattr(module, name, lambda *args, _name=name: calls.append((_name, args)))
@@ -150,23 +151,24 @@ def test_public_signup_commits_complete_state_before_any_notification(
         with SessionLocal() as observer:
             user = observer.query(User).filter(User.email == "new@example.invalid").one()
             assert observer.get(AccountRecoveryEmail, user.id).email == "new-channel@example.invalid"
-            assert (user.status, user.is_active, user.convidado) == (
-                ("aprovado", True, True) if guest else ("pendente", False, False))
+            assert (user.status, user.is_active, user.convidado) == ("pendente", False, False)
             if guest:
                 pre = observer.query(ConvidadoPreAutorizado).filter(ConvidadoPreAutorizado.email == user.email).one()
-                assert pre.usado_em is not None and pre.usado_por_user_id == user.id
-                assert observer.query(AuditLog).filter(AuditLog.action == "convidado_via_pre_autorizacao").count() == 1
+                assert pre.usado_em is None and pre.usado_por_user_id is None
+                assert observer.query(AuditLog).filter(AuditLog.action.in_(
+                    ["convidado_via_pre_autorizacao", "convidado_email_confirmado"])).count() == 0
         calls.append(True)
 
     for module, name in ((notificar, "notificar_admins_nova_solicitacao"),
                          (emails, "enviar_solicitacao_recebida"),
                          (account_recovery, "enviar_confirmacao_canal_recuperacao"),
-                         (account_recovery, "enviar_acesso_aprovado")):
+                         (account_recovery, "enviar_acesso_aprovado"),
+                         (account_recovery, "enviar_confirmacao_convite")):
         monkeypatch.setattr(module, name, observe)
     response = client.post("/api/auth/solicitar-acesso-com-recuperacao", json=_payload())
     assert response.status_code == 201, response.text
-    assert bool(response.json().get("acesso_imediato")) is guest
-    assert len(calls) == (2 if guest else 3)
+    assert not response.json().get("acesso_imediato")
+    assert len(calls) == (1 if guest else 3)
 
 
 @pytest.mark.parametrize("first", ["login", "recovery"])

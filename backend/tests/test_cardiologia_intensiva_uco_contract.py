@@ -73,7 +73,11 @@ def test_cockpit_expoe_dupla_conferencia_sem_confundir_com_prescricao():
 def test_formulario_generico_respeita_campos_numericos_opcionais():
     pagina = _texto("pages/Calculadora.tsx")
 
-    assert "f.required !== false" in pagina
+    validation = _texto("lib/calculatorValidation.ts")
+    assert "field.required !== false" in validation
+    assert "calculatorFieldRequired(f, valores)" in pagina
+    assert "validateCalculatorFields(calc.fields, valores)" in pagina
+    assert "if (calculatorFieldRequired(field, values))" in validation
     assert "(opcional)" in pagina
 
 

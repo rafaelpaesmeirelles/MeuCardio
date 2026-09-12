@@ -240,22 +240,54 @@ class AccessNotificationTransportTest(unittest.TestCase):
 class EmailRecoveryContractTest(unittest.TestCase):
     def setUp(self):
         self.events = []
-        self.user = SimpleNamespace(id=23, email="primary@example.test", investidor=False)
-        self.account = SimpleNamespace(user_id=23, email_address="locked@corvia.example.test")
+        self.user = SimpleNamespace(id=23, email="primary@example.test", investidor=False, is_active=True)
+        self.account = SimpleNamespace(user_id=23, email_address="locked@corvia.example.test", status="ativa")
         self.db = Mock()
-        self.db.query.return_value.filter.return_value.first.return_value = self.account
-        self.db.get.return_value = self.user
         self.db.commit.side_effect = lambda: self.events.append("token_commit")
         self.send = Mock(side_effect=lambda **_: self.events.append("send") or True)
         field = Mock()
         field.__eq__ = Mock(return_value="normalized address condition")
+        status_field = Mock()
+        status_field.__eq__ = Mock(return_value="active account condition")
+        user_id_field = Mock()
+        user_id_field.__eq__ = Mock(return_value="owner condition")
+        token_created_at = Mock()
+        token_created_at.__gt__ = Mock(return_value="cooldown condition")
+        token_user_id, token_target = Mock(), Mock()
+        token_user_id.__eq__ = Mock(return_value="token owner condition")
+        token_target.__eq__ = Mock(return_value="token target condition")
+        class ResetToken(SimpleNamespace):
+            id = object()
+            user_id, alvo, created_at = token_user_id, token_target, token_created_at
+
+            def __init__(self, **values):
+                super().__init__(token="DEMO-ONLY", **values)
+
+        account_model = SimpleNamespace(email_address=field, status=status_field)
+        user_model = SimpleNamespace(id=user_id_field)
+        account_query, user_query, recent_query = Mock(), Mock(), Mock()
+        account_query.filter.return_value.first.side_effect = lambda: self.account
+        user_query.filter.return_value.with_for_update.return_value.populate_existing.return_value.first.side_effect = lambda: self.user
+        self.recent = None
+        recent_query.filter.return_value.first.side_effect = lambda: self.recent
+
+        def query(model):
+            if model is account_model:
+                return account_query
+            if model is user_model:
+                return user_query
+            self.assertIs(model, ResetToken.id)
+            return recent_query
+
+        self.db.query.side_effect = query
         self.namespace = load_functions(EMAIL_API, {"esqueci_senha_email"}, {
             "Depends": lambda _: None, "get_db": None,
-            "EmailAccount": SimpleNamespace(email_address=field), "User": object(),
-            "PasswordResetToken": lambda **values: SimpleNamespace(token="DEMO-ONLY", **values),
+            "EmailAccount": account_model, "User": user_model,
+            "PasswordResetToken": ResetToken,
             "tentar_enviar_email_transacional": self.send,
         })
         self.address_field = field
+        self.status_field = status_field
         self.recovery_address = None
         channel = load_functions(BACKEND / "app/services/account_recovery.py", {"destinatario_seguro"}, {
             "obter_email_recuperacao": lambda _db, _id: self.recovery_address,
@@ -271,6 +303,7 @@ class EmailRecoveryContractTest(unittest.TestCase):
         result = self.recover()
         self.assertEqual(self.events, ["token_commit", "send"])
         self.address_field.__eq__.assert_called_once_with("locked@corvia.example.test")
+        self.status_field.__eq__.assert_called_once_with("ativa")
         token = self.db.add.call_args.args[0]
         self.assertEqual((token.user_id, token.alvo), (23, "email"))
         self.send.assert_called_once()
@@ -283,7 +316,7 @@ class EmailRecoveryContractTest(unittest.TestCase):
         self.assertEqual(result, {"nota": "Se o endereço existir e estiver ativo, um link de redefinição foi gerado."})
 
     def test_missing_account_keeps_same_response_without_token_or_send(self):
-        self.db.query.return_value.filter.return_value.first.return_value = None
+        self.account = None
         result = self.recover()
         self.assertEqual(result, {"nota": "Se o endereço existir e estiver ativo, um link de redefinição foi gerado."})
         self.db.add.assert_not_called()
@@ -314,7 +347,7 @@ class EmailRecoveryContractTest(unittest.TestCase):
                 self.send.assert_not_called()
 
     def test_missing_owner_keeps_same_response_without_token_or_send(self):
-        self.db.get.return_value = None
+        self.user = None
         result = self.recover()
         self.assertEqual(result, {"nota": "Se o endereço existir e estiver ativo, um link de redefinição foi gerado."})
         self.db.add.assert_not_called()
@@ -340,6 +373,17 @@ class EmailRecoveryContractTest(unittest.TestCase):
         self.assertEqual(result, {"nota": "Se o endereço existir e estiver ativo, um link de redefinição foi gerado."})
         self.send.assert_called_once()
         self.db.commit.assert_called_once()
+
+    def test_recent_token_or_inactive_owner_keeps_neutral_response_without_dispatch(self):
+        for recent, active in ((SimpleNamespace(id=1), True), (None, False)):
+            with self.subTest(recent=recent is not None, active=active):
+                self.recent, self.user.is_active = recent, active
+                self.assertEqual(self.recover(), {
+                    "nota": "Se o endereço existir e estiver ativo, um link de redefinição foi gerado.",
+                })
+                self.db.add.assert_not_called()
+                self.db.commit.assert_not_called()
+                self.send.assert_not_called()
 
     def test_http_contract_remains_202_and_router_import_uses_scoped_adapter(self):
         tree = ast.parse(EMAIL_API.read_text(encoding="utf-8"))

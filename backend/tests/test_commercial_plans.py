@@ -125,12 +125,16 @@ def test_entitlements_mail_gate_legacy_and_addon_on_real_subscriptions(db, criar
     ("admin", False, False, True), ("medico", True, False, True),
     ("medico", False, True, False),
 ])
-def test_special_access_retains_existing_capabilities(role, guest, investor, mail):
-    user = SimpleNamespace(role=role, convidado=guest, investidor=investor, is_active=True)
-    result = require_ai_entitlement(None, user)
+def test_special_access_retains_existing_capabilities(role, guest, investor, mail, db, criar_usuario):
+    # Legacy guests without a preferred plan consult consumed invitations;
+    # a real database proves the direct administrative grant fallback.
+    user, _ = criar_usuario(role=role)
+    user.convidado, user.investidor = guest, investor
+    db.commit()
+    result = require_ai_entitlement(db, user)
     assert result["tudo_com_tudo"] and result["mail"] is mail
     user.is_active = False
-    assert not resolve_entitlements(None, user)["ai"]
+    assert not resolve_entitlements(db, user)["ai"]
 
 
 def test_checkout_requests_new_version_but_does_not_migrate_pending_contract(db, criar_usuario, monkeypatch):

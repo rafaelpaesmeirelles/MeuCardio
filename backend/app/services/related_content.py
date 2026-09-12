@@ -48,15 +48,18 @@ esse tipo de anomalia acontecer na origem dos dados, **fica invisível para
 este cruzamento** — é exatamente o efeito que a regra permanente do
 CLAUDE.md existe para prevenir daqui para frente.
 
-**Não fabrica relação nenhuma**: cada consulta é `campo == tema` (exato, só
-`strip()`), item publicado, limite razoável por categoria. Sem busca textual,
-sem "parecido com", sem heurística de palavra-chave — a v1 documentada em
-CLAUDE.md é deliberadamente simples.
+**Não fabrica relação nenhuma**: cada consulta é `campo IN (temas)` — valores
+exatos, só `strip()` —, item publicado, limite razoável por categoria. Sem
+busca textual, sem "parecido com", sem heurística de palavra-chave. Aceitar um
+conjunto de valores (o tema canônico mais seus rótulos históricos) em vez de um
+só existe por custo, não por semântica: casa exatamente as mesmas linhas que N
+chamadas de valor único casariam, numa consulta por frente em vez de N.
 """
 
+from collections.abc import Sequence
 from dataclasses import dataclass
 
-from sqlalchemy import select
+from sqlalchemy import case, select
 from sqlalchemy.orm import Session
 
 from app.models.checklist import DischargeChecklist
@@ -90,6 +93,36 @@ class ItemRelacionado:
     rota: str
 
 
+def _valores_de_tema(tema: str | Sequence[str]) -> tuple[str, ...]:
+    """Normaliza um tema — ou o conjunto canônico + aliases — em valores exatos.
+
+    Aceitar vários valores numa chamada só é o que permite trocar N consultas
+    por frente (uma por rótulo histórico) por UMA consulta com ``IN (...)``.
+    O casamento continua exato, item por item: nenhuma normalização de acento,
+    caixa ou espaço é introduzida aqui — só `strip()`, como antes.
+    """
+    valores = (tema,) if isinstance(tema, str) else tuple(tema or ())
+    return tuple(dict.fromkeys(
+        limpo for valor in valores if (limpo := (valor or "").strip())
+    ))
+
+
+def _ordem_por_tema(coluna, temas: tuple[str, ...]):
+    """Mantém a ordem histórica: tema canônico primeiro, rótulos antigos depois.
+
+    Antes de agrupar tudo numa consulta só, cada rótulo era consultado em
+    separado e os resultados eram concatenados na ordem dos rótulos — então o
+    tema canônico sempre preenchia as vagas antes de um alias. Com `IN (...)`
+    essa prioridade deixaria de existir e um item de rótulo histórico poderia
+    empurrar um item canônico para fora do limite. Este critério de desempate
+    restaura exatamente a ordem anterior; com um único valor ele é constante e
+    não entra na consulta.
+    """
+    if len(temas) <= 1:
+        return ()
+    return (case({valor: indice for indice, valor in enumerate(temas)}, value=coluna),)
+
+
 def _pular(tipo: str, slug: str, excluir_tipo: str | None, excluir_slug: str | None) -> bool:
     return excluir_tipo == tipo and excluir_slug == slug
 
@@ -119,7 +152,7 @@ def _aplicar_limite(statement, limite: int | None):
 
 def buscar_relacionados(
     db: Session,
-    tema: str,
+    tema: str | Sequence[str],
     excluir_tipo: str | None = None,
     excluir_slug: str | None = None,
     limite_por_categoria: int | None = LIMITE_POR_CATEGORIA,
@@ -129,20 +162,24 @@ def buscar_relacionados(
     detalhe. Nunca lança exceção por tema sem correspondência: cada grupo
     apenas vem com `itens: []`."""
 
-    tema = (tema or "").strip()
+    # Um único tema ou o conjunto canônico + aliases históricos. Ver
+    # `_valores_de_tema`: é o que permite uma consulta por frente em vez de
+    # uma por rótulo, sem alterar quais linhas casam.
+    temas = _valores_de_tema(tema)
+    tema = temas[0] if temas else ""
     grupos: list[dict] = []
 
-    if not tema:
+    if not temas:
         return {"tema": tema, "grupos": [], "total": 0}
 
     # --- documentos e fluxogramas (mesma tabela, categorias separadas) -----
     docs_q = select(Document).where(
-        Document.theme == tema, Document.published.is_(True), Document.kind != "fluxograma"
+        Document.theme.in_(temas), Document.published.is_(True), Document.kind != "fluxograma"
     )
     if excluir_tipo == "documento" and excluir_slug:
         docs_q = docs_q.where(Document.slug != excluir_slug)
     docs = db.execute(_aplicar_limite(
-        docs_q.order_by(Document.updated_at.desc()), limite_por_categoria,
+        docs_q.order_by(*_ordem_por_tema(Document.theme, temas), Document.updated_at.desc()), limite_por_categoria,
     )).scalars().all()
     grupos.append(_grupo(
         "documento", "Documentos e protocolos", "/biblioteca",
@@ -150,12 +187,12 @@ def buscar_relacionados(
     ))
 
     fluxos_q = select(Document).where(
-        Document.theme == tema, Document.published.is_(True), Document.kind == "fluxograma"
+        Document.theme.in_(temas), Document.published.is_(True), Document.kind == "fluxograma"
     )
     if excluir_tipo == "fluxograma" and excluir_slug:
         fluxos_q = fluxos_q.where(Document.slug != excluir_slug)
     fluxos = db.execute(_aplicar_limite(
-        fluxos_q.order_by(Document.updated_at.desc()), limite_por_categoria,
+        fluxos_q.order_by(*_ordem_por_tema(Document.theme, temas), Document.updated_at.desc()), limite_por_categoria,
     )).scalars().all()
     grupos.append(_grupo(
         "fluxograma", "Fluxogramas", "/fluxogramas",
@@ -164,12 +201,12 @@ def buscar_relacionados(
 
     # --- evidências ---------------------------------------------------------
     ev_q = select(EvidenceRecord).where(
-        EvidenceRecord.theme == tema, EvidenceRecord.published.is_(True)
+        EvidenceRecord.theme.in_(temas), EvidenceRecord.published.is_(True)
     )
     if excluir_tipo == "evidencia" and excluir_slug:
         ev_q = ev_q.where(EvidenceRecord.slug != excluir_slug)
     evidencias = db.execute(_aplicar_limite(
-        ev_q.order_by(EvidenceRecord.created_at.desc()), limite_por_categoria,
+        ev_q.order_by(*_ordem_por_tema(EvidenceRecord.theme, temas), EvidenceRecord.created_at.desc()), limite_por_categoria,
     )).scalars().all()
     grupos.append(_grupo(
         "evidencia", "Evidências", "/evidencias",
@@ -186,12 +223,12 @@ def buscar_relacionados(
 
     # --- estudos -------------------------------------------------------------
     est_q = select(ScientificStudy).where(
-        ScientificStudy.theme == tema, ScientificStudy.published.is_(True)
+        ScientificStudy.theme.in_(temas), ScientificStudy.published.is_(True)
     )
     if excluir_tipo == "estudo" and excluir_slug:
         est_q = est_q.where(ScientificStudy.slug != excluir_slug)
     estudos = db.execute(_aplicar_limite(
-        est_q.order_by(ScientificStudy.created_at.desc()), limite_por_categoria,
+        est_q.order_by(*_ordem_por_tema(ScientificStudy.theme, temas), ScientificStudy.created_at.desc()), limite_por_categoria,
     )).scalars().all()
     grupos.append(_grupo(
         "estudo", "Estudos", "/estudos",
@@ -200,7 +237,7 @@ def buscar_relacionados(
 
     # --- medicamentos (via convenção Farmacologia, ver nota de módulo) ------
     medicamentos: list[ItemRelacionado] = []
-    if tema == TEMA_MEDICAMENTOS:
+    if TEMA_MEDICAMENTOS in temas:
         drug_q = select(Drug).where(Drug.published.is_(True))
         if excluir_tipo == "medicamento" and excluir_slug:
             drug_q = drug_q.where(Drug.slug != excluir_slug)
@@ -214,11 +251,11 @@ def buscar_relacionados(
     grupos.append(_grupo("medicamento", "Medicamentos", "/medicamentos", medicamentos))
 
     # --- exames ----------------------------------------------------------------
-    ex_q = select(LabTest).where(LabTest.theme == tema, LabTest.published.is_(True))
+    ex_q = select(LabTest).where(LabTest.theme.in_(temas), LabTest.published.is_(True))
     if excluir_tipo == "exame" and excluir_slug:
         ex_q = ex_q.where(LabTest.slug != excluir_slug)
     exames = db.execute(_aplicar_limite(
-        ex_q.order_by(LabTest.name), limite_por_categoria,
+        ex_q.order_by(*_ordem_por_tema(LabTest.theme, temas), LabTest.name), limite_por_categoria,
     )).scalars().all()
     grupos.append(_grupo(
         "exame", "Exames", "/exames",
@@ -226,11 +263,11 @@ def buscar_relacionados(
     ))
 
     # --- casos clínicos ----------------------------------------------------
-    cc_q = select(ClinicalCase).where(ClinicalCase.tema == tema, ClinicalCase.published.is_(True))
+    cc_q = select(ClinicalCase).where(ClinicalCase.tema.in_(temas), ClinicalCase.published.is_(True))
     if excluir_tipo == "caso_clinico" and excluir_slug:
         cc_q = cc_q.where(ClinicalCase.slug != excluir_slug)
     casos = db.execute(_aplicar_limite(
-        cc_q.order_by(ClinicalCase.created_at.desc()), limite_por_categoria,
+        cc_q.order_by(*_ordem_por_tema(ClinicalCase.tema, temas), ClinicalCase.created_at.desc()), limite_por_categoria,
     )).scalars().all()
     grupos.append(_grupo(
         "caso_clinico", "Casos clínicos", "/casos-clinicos",
@@ -238,11 +275,11 @@ def buscar_relacionados(
     ))
 
     # --- trilhas de estudo ---------------------------------------------------
-    tr_q = select(StudyTrack).where(StudyTrack.tema == tema, StudyTrack.published.is_(True))
+    tr_q = select(StudyTrack).where(StudyTrack.tema.in_(temas), StudyTrack.published.is_(True))
     if excluir_tipo == "trilha" and excluir_slug:
         tr_q = tr_q.where(StudyTrack.slug != excluir_slug)
     trilhas = db.execute(_aplicar_limite(
-        tr_q.order_by(StudyTrack.created_at.desc()), limite_por_categoria,
+        tr_q.order_by(*_ordem_por_tema(StudyTrack.tema, temas), StudyTrack.created_at.desc()), limite_por_categoria,
     )).scalars().all()
     grupos.append(_grupo(
         "trilha", "Trilhas de estudo", "/trilhas",
@@ -250,11 +287,11 @@ def buscar_relacionados(
     ))
 
     # --- galeria de imagens --------------------------------------------------
-    gal_q = select(GalleryImage).where(GalleryImage.theme == tema, GalleryImage.published.is_(True))
+    gal_q = select(GalleryImage).where(GalleryImage.theme.in_(temas), GalleryImage.published.is_(True))
     if excluir_tipo == "galeria" and excluir_slug:
         gal_q = gal_q.where(GalleryImage.slug != excluir_slug)
     imagens = db.execute(_aplicar_limite(
-        gal_q.order_by(GalleryImage.created_at.desc()), limite_por_categoria,
+        gal_q.order_by(*_ordem_por_tema(GalleryImage.theme, temas), GalleryImage.created_at.desc()), limite_por_categoria,
     )).scalars().all()
     grupos.append(_grupo(
         "galeria", "Galeria de imagens", "/galeria",
@@ -265,7 +302,7 @@ def buscar_relacionados(
     calculadoras = [
         ItemRelacionado("calculadora", c.slug, c.name, c.purpose, f"/calculadoras/{c.slug}")
         for c in sorted(calc.REGISTRY.values(), key=lambda c: c.name)
-        if c.theme == tema and c.status == "implementada"
+        if c.theme in temas and c.status == "implementada"
         and not _pular("calculadora", c.slug, excluir_tipo, excluir_slug)
     ][:limite_por_categoria]
     grupos.append(_grupo("calculadora", "Calculadoras", "/calculadoras", calculadoras))
@@ -274,12 +311,12 @@ def buscar_relacionados(
     prot_q = (
         select(EmergencyProtocol, Document.theme)
         .join(Document, Document.slug == EmergencyProtocol.documento_slug)
-        .where(Document.theme == tema, EmergencyProtocol.published.is_(True))
+        .where(Document.theme.in_(temas), EmergencyProtocol.published.is_(True))
     )
     if excluir_tipo == "protocolo_emergencia" and excluir_slug:
         prot_q = prot_q.where(EmergencyProtocol.slug != excluir_slug)
     protocolos = db.execute(
-        prot_q.order_by(EmergencyProtocol.ordem)
+        prot_q.order_by(*_ordem_por_tema(Document.theme, temas), EmergencyProtocol.ordem)
     ).all()
     grupos.append(_grupo(
         "protocolo_emergencia", "Modo Emergência", "/emergencia",
@@ -294,12 +331,12 @@ def buscar_relacionados(
 
     # --- checklists de alta --------------------------------------------------
     chk_q = select(DischargeChecklist).where(
-        DischargeChecklist.theme == tema, DischargeChecklist.published.is_(True)
+        DischargeChecklist.theme.in_(temas), DischargeChecklist.published.is_(True)
     )
     if excluir_tipo == "checklist" and excluir_slug:
         chk_q = chk_q.where(DischargeChecklist.slug != excluir_slug)
     checklists = db.execute(_aplicar_limite(
-        chk_q.order_by(DischargeChecklist.condicao), limite_por_categoria,
+        chk_q.order_by(*_ordem_por_tema(DischargeChecklist.theme, temas), DischargeChecklist.condicao), limite_por_categoria,
     )).scalars().all()
     grupos.append(_grupo(
         "checklist", "Checklists de alta", "/checklists",
@@ -313,12 +350,12 @@ def buscar_relacionados(
 
     # --- materiais do paciente ------------------------------------------------
     mat_q = select(PatientMaterial).where(
-        PatientMaterial.tema == tema, PatientMaterial.published.is_(True)
+        PatientMaterial.tema.in_(temas), PatientMaterial.published.is_(True)
     )
     if excluir_tipo == "material_paciente" and excluir_slug:
         mat_q = mat_q.where(PatientMaterial.slug != excluir_slug)
     materiais = db.execute(_aplicar_limite(
-        mat_q.order_by(PatientMaterial.titulo), limite_por_categoria,
+        mat_q.order_by(*_ordem_por_tema(PatientMaterial.tema, temas), PatientMaterial.titulo), limite_por_categoria,
     )).scalars().all()
     grupos.append(_grupo(
         "material_paciente", "Material para o paciente", "/material-paciente",

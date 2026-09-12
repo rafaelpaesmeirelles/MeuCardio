@@ -41,6 +41,7 @@ from cryptography.x509.oid import NameOID
 
 from app.core.config import settings
 from app.models.assinatura import DocumentoEmitido
+from app.models.kyc import KycVerification
 from app.models.receituario import PrescriptionType
 from app.models.subscription import Subscription
 from app.services.assinatura import verificacao_pdf
@@ -50,8 +51,11 @@ def _headers(token: str) -> dict[str, str]:
     return {"Authorization": f"Bearer {token}"}
 
 
-def _subscribe(db, user_id: int) -> None:
+def _subscribe(db, user_id: int, *, kyc_aprovado: bool = False) -> None:
     db.add(Subscription(user_id=user_id, kind="meucardio", plano="basico", status="ativo"))
+    # Somente os cenários de emissão partem de identidade já verificada.
+    if kyc_aprovado:
+        db.add(KycVerification(owner_id=user_id, status="aprovado"))
     db.commit()
 
 
@@ -131,9 +135,31 @@ def _baixar_pdf_assinado(client, token: str, gid: int, metodo="A1_ARQUIVO"):
 # --------------------------------------------------------------------------
 
 
-def test_fluxo_completo_emite_e_assina_documento_real_com_a1(client, db, criar_usuario):
+@pytest.mark.parametrize("kyc_status", [None, "aguardando_revisao", "rejeitado"])
+def test_certificado_valido_nao_dispensa_kyc_na_primeira_emissao(
+    client, db, criar_usuario, kyc_status,
+):
     user, token = criar_usuario()
     _subscribe(db, user.id)
+    if kyc_status is not None:
+        db.add(KycVerification(owner_id=user.id, status=kyc_status))
+        db.commit()
+
+    certificado = _conectar_certificado(client, token, _gerar_pfx(), "senha123")
+    assert certificado.status_code == 201, certificado.text
+    gid = _emitir_documento_livre(client, token)
+
+    resposta = _baixar_pdf_assinado(client, token, gid)
+    assert resposta.status_code == 403
+    assert resposta.json()["detail"] == (
+        "Conclua a verificação de identidade antes de emitir documentos clínicos."
+    )
+    assert db.query(DocumentoEmitido).count() == 0
+
+
+def test_fluxo_completo_emite_e_assina_documento_real_com_a1(client, db, criar_usuario):
+    user, token = criar_usuario()
+    _subscribe(db, user.id, kyc_aprovado=True)
 
     pfx = _gerar_pfx(cn="DR FLUXO COMPLETO:11122233344")
     resp_cert = _conectar_certificado(client, token, pfx, "senha123", certificadora="Certisign")
@@ -168,7 +194,7 @@ def test_fluxo_completo_emite_e_assina_documento_real_com_a1(client, db, criar_u
 
 def test_preferencia_a1_e_respeitada_quando_cliente_omite_metodo(client, db, criar_usuario):
     user, token = criar_usuario()
-    _subscribe(db, user.id)
+    _subscribe(db, user.id, kyc_aprovado=True)
     _conectar_certificado(client, token, _gerar_pfx(), "senha123")
     user.assinatura_metodo_preferido = "A1_ARQUIVO"
     db.commit()
@@ -274,7 +300,7 @@ def test_pdf_assinado_com_a1_bate_com_o_conteudo_gravado_no_banco(client, db, cr
     from app.services.assinatura import emissao as assinatura_emissao
 
     user, token = criar_usuario()
-    _subscribe(db, user.id)
+    _subscribe(db, user.id, kyc_aprovado=True)
     _conectar_certificado(client, token, _gerar_pfx(), "senha123")
     gid = _emitir_documento_livre(client, token)
 
@@ -298,7 +324,7 @@ def test_pdf_assinado_com_a1_bate_com_o_conteudo_gravado_no_banco(client, db, cr
 
 def test_senha_nunca_aparece_em_log_no_fluxo_completo(client, db, criar_usuario, caplog):
     user, token = criar_usuario()
-    _subscribe(db, user.id)
+    _subscribe(db, user.id, kyc_aprovado=True)
 
     senha_secreta = "SenhaSuperSecretaNaoDeveVazar!42"
     with caplog.at_level(logging.DEBUG):
@@ -370,7 +396,7 @@ def test_certificado_que_vence_entre_cadastro_e_assinatura_bloqueia_emissao(clie
     que `disponivel()` (chamado antes de assinar) recusa, e que a rota HTTP
     devolve 409 com o motivo, "nada foi simulado", sem gerar PDF nenhum."""
     user, token = criar_usuario()
-    _subscribe(db, user.id)
+    _subscribe(db, user.id, kyc_aprovado=True)
     # válido por só 1 dia a partir de "agora - 1 dia" => já vencido daqui a
     # poucos segundos de folga não é confiável para teste; em vez disso,
     # cadastra um válido e depois o substitui, no banco, por um já vencido
@@ -451,7 +477,7 @@ def test_arquivo_vazio_e_422_nao_500(client, db, criar_usuario):
 
 def test_troca_de_certificado_reflete_no_proximo_documento_assinado(client, db, criar_usuario):
     user, token = criar_usuario()
-    _subscribe(db, user.id)
+    _subscribe(db, user.id, kyc_aprovado=True)
 
     _conectar_certificado(client, token, _gerar_pfx(cn="DR CERTIFICADO ANTIGO:11111111111"), "senha123")
     gid_antes = _emitir_documento_livre(client, token, titulo="Documento antes da troca")
@@ -483,7 +509,7 @@ def test_troca_de_certificado_reflete_no_proximo_documento_assinado(client, db, 
 
 def test_remover_certificado_bloqueia_emissao_seguinte_ate_conectar_outro(client, db, criar_usuario):
     user, token = criar_usuario()
-    _subscribe(db, user.id)
+    _subscribe(db, user.id, kyc_aprovado=True)
     _conectar_certificado(client, token, _gerar_pfx(), "senha123")
     gid1 = _emitir_documento_livre(client, token)
     assert _baixar_pdf_assinado(client, token, gid1).status_code == 200
@@ -507,9 +533,9 @@ def test_usuario_b_nao_consegue_assinar_documento_de_a_com_certificado_de_a(clie
     """B não tem certificado próprio e não pode, de forma alguma, usar o de
     A — nem ler o documento de A (404, não 403 nem 200 com dado de outro)."""
     userA, tokenA = criar_usuario(email="medico-a@teste.local")
-    _subscribe(db, userA.id)
+    _subscribe(db, userA.id, kyc_aprovado=True)
     userB, tokenB = criar_usuario(email="medico-b@teste.local")
-    _subscribe(db, userB.id)
+    _subscribe(db, userB.id, kyc_aprovado=True)
 
     _conectar_certificado(client, tokenA, _gerar_pfx(cn="DR A:12312312300"), "senha123")
     gid_de_a = _emitir_documento_livre(client, tokenA, titulo="Documento do médico A")
@@ -531,9 +557,9 @@ def test_usuario_b_nao_consegue_assinar_documento_de_a_com_certificado_de_a(clie
 
 def test_dois_certificados_de_usuarios_diferentes_nao_se_misturam_na_assinatura(client, db, criar_usuario):
     userA, tokenA = criar_usuario(email="isolamento-a@teste.local")
-    _subscribe(db, userA.id)
+    _subscribe(db, userA.id, kyc_aprovado=True)
     userB, tokenB = criar_usuario(email="isolamento-b@teste.local")
-    _subscribe(db, userB.id)
+    _subscribe(db, userB.id, kyc_aprovado=True)
 
     _conectar_certificado(client, tokenA, _gerar_pfx(cn="DR ISOLAMENTO A:11111111111", senha="senha123"), "senha123")
     _conectar_certificado(client, tokenB, _gerar_pfx(cn="DR ISOLAMENTO B:22222222222", senha="senha456"), "senha456")

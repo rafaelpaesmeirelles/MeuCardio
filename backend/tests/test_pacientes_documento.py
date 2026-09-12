@@ -13,6 +13,7 @@ import pytest
 from app.models.clinical_docs import DocumentTemplate, GeneratedDocument
 from app.models.patient_profile import PatientProfile
 from app.services.patient_profile_service import montar_endereco_completo
+from app.models.kyc import KycVerification
 from app.models.subscription import Subscription
 
 
@@ -35,8 +36,11 @@ def _headers(token: str) -> dict[str, str]:
     return {"Authorization": f"Bearer {token}"}
 
 
-def _dar_assinatura_principal(db, user) -> None:
+def _dar_assinatura_principal(db, user, *, kyc_aprovado: bool = False) -> None:
     db.add(Subscription(user_id=user.id, kind="meucardio", plano="basico", status="ativo"))
+    # Somente os cenários de emissão partem de identidade já verificada.
+    if kyc_aprovado:
+        db.add(KycVerification(owner_id=user.id, status="aprovado"))
     db.commit()
 
 
@@ -230,7 +234,7 @@ class TestVariaveisDePacienteNoModelo:
 class TestSnapshotCongelado:
     def test_documento_nao_muda_depois_de_editar_o_cadastro(self, client, db, criar_usuario):
         user, token = criar_usuario()
-        _dar_assinatura_principal(db, user)
+        _dar_assinatura_principal(db, user, kyc_aprovado=True)
         paciente = _criar_paciente(client, token, full_name="Nome Original", phone="(16) 90000-0000")
         template = DocumentTemplate(
             owner_id=user.id, title="Declaração", doc_type="outro",
@@ -312,7 +316,7 @@ class TestAtestadoESolicitacaoExamesIdentificacaoNoCorpo:
 
     def test_atestado_com_cadastro_completo_tem_identificacao_no_corpo_e_no_pdf(self, client, db, criar_usuario):
         user, token = criar_usuario()
-        _dar_assinatura_principal(db, user)
+        _dar_assinatura_principal(db, user, kyc_aprovado=True)
         paciente = _criar_paciente(client, token)
 
         resposta = client.post(
@@ -501,7 +505,7 @@ class TestAtestadoESolicitacaoExamesIdentificacaoNoCorpo:
     @pytest.mark.skipif(not _TEM_PDFTOTEXT, reason="pdftotext (poppler-utils) não disponível neste ambiente")
     def test_assinatura_nao_remove_identificacao_do_pdf(self, client, db, criar_usuario):
         user, token = criar_usuario()
-        _dar_assinatura_principal(db, user)
+        _dar_assinatura_principal(db, user, kyc_aprovado=True)
         paciente = _criar_paciente(client, token)
 
         resposta = client.post(
@@ -552,7 +556,7 @@ class TestCorpoFinalDoNavegadorPreservaIdentificacao:
         self, client, db, criar_usuario,
     ):
         user, token = criar_usuario()
-        _dar_assinatura_principal(db, user)
+        _dar_assinatura_principal(db, user, kyc_aprovado=True)
         paciente = _criar_paciente(client, token)
         corpo_final = _corpo_final_exames_como_o_navegador_envia(
             "Fulano de Tal da Silva", ["Hemograma completo"],
@@ -657,7 +661,7 @@ class TestCorpoFinalDoNavegadorPreservaIdentificacao:
         self, client, db, criar_usuario,
     ):
         user, token = criar_usuario()
-        _dar_assinatura_principal(db, user)
+        _dar_assinatura_principal(db, user, kyc_aprovado=True)
         paciente = _criar_paciente(client, token)
         corpo_final = _corpo_final_atestado_como_o_navegador_envia("Fulano de Tal da Silva", 3)
 
@@ -912,7 +916,7 @@ class TestDocumentoLivreIdentificacaoNoCorpo:
     @pytest.mark.skipif(not _TEM_PDFTOTEXT, reason="pdftotext (poppler-utils) não disponível neste ambiente")
     def test_pdf_real_contem_a_identificacao_do_paciente(self, client, db, criar_usuario):
         user, token = criar_usuario()
-        _dar_assinatura_principal(db, user)
+        _dar_assinatura_principal(db, user, kyc_aprovado=True)
         paciente = _criar_paciente(client, token)
 
         resposta = client.post(
@@ -939,7 +943,7 @@ class TestDocumentoLivreIdentificacaoNoCorpo:
     @pytest.mark.skipif(not _TEM_PDFTOTEXT, reason="pdftotext (poppler-utils) não disponível neste ambiente")
     def test_pdf_real_sem_paciente_nao_contem_identificacao(self, client, db, criar_usuario):
         user, token = criar_usuario()
-        _dar_assinatura_principal(db, user)
+        _dar_assinatura_principal(db, user, kyc_aprovado=True)
 
         resposta = client.post(
             "/api/document-templates/gerar-livre", headers=_headers(token),

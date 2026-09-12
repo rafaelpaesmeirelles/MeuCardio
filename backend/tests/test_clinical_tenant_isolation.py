@@ -326,12 +326,16 @@ def test_prescriptions_route_denies_admin_reading_and_writing_another_doctors_pa
     assert listar.status_code == 404
     assert "PRESCRICAO-ISOLAMENTO-1" not in listar.text
 
+    # Payload válido: a recusa precisa vir do isolamento, não da validação de campos.
     criar = client.post(
         "/api/prescriptions",
         headers=_headers(intruso_token),
         json={
             "patient_id": patient_id,
-            "items": [{"drug_name": "Losartana 50mg", "posology": "1 cp/dia"}],
+            "items": [{
+                "drug_name": "Losartana", "presentation": "50 mg, comprimido",
+                "posology": "1 cp/dia",
+            }],
         },
     )
     assert criar.status_code == 404

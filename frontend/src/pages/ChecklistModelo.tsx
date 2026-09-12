@@ -3,6 +3,7 @@ import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import { Carregando, Erro } from "../components/Estado";
 import ClinicalUpdates, { type ClinicalUpdate } from "../components/ClinicalUpdates";
 import { api } from "../lib/api";
@@ -111,6 +112,8 @@ export default function ChecklistModelo() {
       <ScientificReadingAccess entityType="checklist" slug={modelo.slug} />
 
       <GrafoRelacionados entityType="checklist" slug={modelo.slug} />
+
+      <TudoSobreEsteTema tema={modelo.theme} excluirTipo="checklist" excluirSlug={modelo.slug} />
     </article>
   );
 }

@@ -10,7 +10,10 @@ def _read(relative: str) -> str:
 
 def test_anonymous_root_enters_canonical_login_not_legacy_marketing_landing():
     app = _read("App.tsx")
-    assert '<Route path="/" element={<Navigate to="/entrar" replace />} />' in app
+    assert '<Route path="/" element={<LoginRedirect />} />' in app
+    redirect = _read("components/LoginReturn.tsx").split("export function ResumeLogin", 1)[0]
+    assert 'return <Navigate to="/entrar" replace />;' in redirect
+    assert "saveLoginReturn(destination)" in redirect
     assert '<Route path="/produto" element={<Produto />} />' in app
     assert '<Route path="/" element={<Produto />} />' not in app
 

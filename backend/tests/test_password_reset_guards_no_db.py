@@ -5,7 +5,9 @@ não envia mensagens, não gera tokens reais e não exerce permissões de produ�
 """
 
 import ast
+from datetime import datetime, timezone
 from pathlib import Path
+import secrets
 import sys
 from types import ModuleType, SimpleNamespace
 import unittest
@@ -39,22 +41,48 @@ class Field:
         self.name = name
 
     def __eq__(self, value):
-        return self.name, value
+        return lambda row: getattr(row, self.name) == value
+
+    def is_(self, value):
+        return self == value
+
+    def in_(self, values):
+        return lambda row: getattr(row, self.name) in values
 
 
 class Query:
-    def __init__(self, rows):
-        self.rows = rows
+    def __init__(self, rows, events):
+        self.rows, self.events = rows, events
 
     def filter(self, *conditions):
-        return Query([row for row in self.rows if all(getattr(row, key) == value for key, value in conditions)])
+        return Query([row for row in self.rows if all(condition(row) for condition in conditions)], self.events)
+
+    def with_for_update(self):
+        self.events.append("row_lock")
+        return self
+
+    def populate_existing(self):
+        self.events.append("refresh")
+        return self
 
     def first(self):
         return next(iter(self.rows), None)
 
+    def one(self):
+        assert len(self.rows) == 1
+        return self.rows[0]
+
+    def update(self, values, *, synchronize_session):
+        assert synchronize_session == "fetch"
+        for row in self.rows:
+            for field, value in values.items():
+                setattr(row, field, value)
+        return len(self.rows)
+
 
 class Token(SimpleNamespace):
     token = Field("token")
+    id, user_id, alvo, used = Field("id"), Field("user_id"), Field("alvo"), Field("used")
 
     @property
     def valido(self):
@@ -66,11 +94,16 @@ class PasswordResetGuardsTests(unittest.TestCase):
         self.user = SimpleNamespace(
             id=9002, email="login@example.invalid", full_name="Pessoa de Demonstração",
             is_active=True, status="aprovado", investidor=False, password_hash="HASH-ORIGINAL",
+            role="medico", sessions_valid_after=None,
         )
-        self.User = type("User", (), {"email": Field("email")})
+        self.admin = SimpleNamespace(id=9001, role="admin")
+        self.User = type("User", (), {"email": Field("email"), "id": Field("id")})
         self.Mail = type("EmailAccount", (), {"user_id": Field("user_id")})
-        self.mail = SimpleNamespace(user_id=9002, password_hash="HASH-CAIXA-ORIGINAL")
-        self.token = Token(token="TOKEN-SINTETICO-NAO-REAL", user_id=9002, alvo="ativacao", used=False, expired=False)
+        self.mail = SimpleNamespace(user_id=9002, password_hash="HASH-CAIXA-ORIGINAL", status="ativa", sessions_valid_after=None)
+        self.token = Token(id=99001, token="TOKEN-SINTETICO-NAO-REAL", user_id=9002,
+                           alvo="ativacao", used=False, expired=False, created_at=datetime.now(timezone.utc))
+        self.events = []
+        self.tokens = [self.token]
         self.tasks, self.hashes, self.created_tokens, self.deliveries = [], [], [], []
         self.commits = self.closed = self.channel_updates = self.created_users = 0
         self.background = SimpleNamespace(add_task=lambda fn, *args, **kwargs: self.tasks.append((fn, args, kwargs)))
@@ -80,7 +113,18 @@ class PasswordResetGuardsTests(unittest.TestCase):
             enviar_recuperacao_senha=lambda _id: None,
             enviar_confirmacao_canal_recuperacao=lambda _id: None,
             definir_email_recuperacao=self.define_channel,
+            bloquear_identidades_email=lambda _db: self.events.append("identity_lock"),
         )
+        invitation_module = ModuleType("app.models.convidado_pre_autorizado")
+        invitation_module.ConvidadoPreAutorizado = type("ConvidadoPreAutorizado", (), {
+            "email": Field("email"), "usado_em": Field("usado_em"),
+        })
+        modules = patch.dict(sys.modules, {invitation_module.__name__: invitation_module})
+        modules.start()
+        self.addCleanup(modules.stop)
+        invitation_env = {}
+        load_functions("services/account_recovery.py", {"convite_pendente"}, invitation_env)
+        self.recovery.convite_pendente = invitation_env["convite_pendente"]
         self.env = {
             "User": self.User, "PasswordResetToken": Token,
             "Depends": lambda fn: fn, "get_db": lambda: None,
@@ -88,15 +132,17 @@ class PasswordResetGuardsTests(unittest.TestCase):
             "HTTPException": HTTPException, "hash_password": self.hash_password,
             "account_recovery": self.recovery,
             "emails": SimpleNamespace(enviar_reenvio_ativacao=lambda _id: None, enviar_senha_alterada=lambda _id: None),
+            "secrets": secrets, "settings": SimpleNamespace(admin_email="owner@example.invalid"),
         }
+        load_functions("core/security.py", {"is_owner_admin", "require_manage_account"}, self.env)
         load_functions("api/password_reset.py", {
             "esqueci_senha", "reenviar_ativacao", "_ativacao_permitida", "redefinir_senha",
             "admin_atualizar_email_recuperacao", "admin_criar_usuario_com_recuperacao",
         }, self.env)
 
     def query(self, model):
-        rows = [self.user] if model is self.User else [self.mail] if model is self.Mail else [self.token]
-        return Query([row for row in rows if row is not None])
+        rows = [self.user] if model is self.User else [self.mail] if model is self.Mail else self.tokens if model is Token else []
+        return Query([row for row in rows if row is not None], self.events)
 
     def commit(self):
         self.commits += 1
@@ -163,6 +209,7 @@ class PasswordResetGuardsTests(unittest.TestCase):
         self.assertEqual((self.user.is_active, self.user.status), (True, "aprovado"))
         self.assertEqual(self.commits, 1)
         self.assertEqual(self.tasks, [])
+        self.assertEqual(self.events, ["identity_lock", "row_lock", "refresh", "row_lock", "refresh"])
 
     def test_normal_first_access_and_recovery_token_stay_valid_and_single_use(self):
         self.token.alvo = "conta"
@@ -202,7 +249,7 @@ class PasswordResetGuardsTests(unittest.TestCase):
         self.user.investidor = True
         with self.assertRaises(HTTPException) as caught:
             self.env["admin_atualizar_email_recuperacao"](
-                9002, SimpleNamespace(recovery_email="canal@example.invalid"), self.background, self.db, object(),
+                9002, SimpleNamespace(recovery_email="canal@example.invalid"), self.background, self.db, self.admin,
             )
         self.assertEqual(caught.exception.status_code, 409)
         self.assertEqual(self.channel_updates, 0)
@@ -210,7 +257,7 @@ class PasswordResetGuardsTests(unittest.TestCase):
 
     def test_legacy_admin_recovery_alias_preserves_normal_account_update(self):
         response = self.env["admin_atualizar_email_recuperacao"](
-            9002, SimpleNamespace(recovery_email="canal@example.invalid"), self.background, self.db, object(),
+            9002, SimpleNamespace(recovery_email="canal@example.invalid"), self.background, self.db, self.admin,
         )
         self.assertEqual(response, {"user_id": 9002, "recovery_email": "canal@example.invalid"})
         self.assertEqual(self.channel_updates, 1)
