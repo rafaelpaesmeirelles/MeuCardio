@@ -673,8 +673,8 @@ html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cc-guideline-r
 html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cc-guideline-row, .cc-detail-card, .cc-clinical-list) strong {
   color: var(--atelier-ink) !important;
 }
-.sync-account-identity { min-width: 0; max-width: 100%; flex-wrap: wrap; }
-.sync-account-identity > strong { min-width: 0; overflow-wrap: anywhere; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .sync-account-identity { min-width: 0; max-width: 100%; flex-wrap: wrap; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .sync-account-identity > strong { min-width: 0; overflow-wrap: anywhere; }
 
 html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao-sugestoes :is(button, strong, span) {
   color: var(--atelier-ink) !important;
