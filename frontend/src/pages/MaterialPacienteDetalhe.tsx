@@ -3,6 +3,7 @@ import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import { Carregando, Erro } from "../components/Estado";
 import { api } from "../lib/api";
 
@@ -120,6 +121,8 @@ export default function MaterialPacienteDetalhe() {
       <ScientificReadingAccess entityType="material_paciente" slug={material.slug} />
 
       <GrafoRelacionados entityType="material_paciente" slug={material.slug} />
+
+      <TudoSobreEsteTema tema={material.tema} excluirTipo="material_paciente" excluirSlug={material.slug} />
     </article>
   );
 }

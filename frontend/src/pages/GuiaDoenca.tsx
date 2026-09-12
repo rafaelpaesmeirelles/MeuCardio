@@ -5,6 +5,7 @@ import { useRequestRevision } from "../lib/useRequestRevision";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { Carregando, Erro } from "../components/Estado";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import ClinicalUpdates, { type ClinicalUpdate } from "../components/ClinicalUpdates";
 import { api } from "../lib/api";
 
@@ -384,6 +385,8 @@ export default function GuiaDoenca() {
       <ScientificReadingAccess entityType="doenca" slug={disease.slug} />
 
       <GrafoRelacionados entityType="doenca" slug={disease.slug} />
+
+      <TudoSobreEsteTema doencaSlug={disease.slug} />
 
       <section className="cartao" style={{ marginTop: "1rem" }}>
         <h2>Fontes e revisão</h2>

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../lib/api";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 
 type Etapa = {
   etapa_id: string;
@@ -169,6 +170,8 @@ export default function Trilha() {
       <ScientificReadingAccess entityType="trilha" slug={d.slug} />
 
       <GrafoRelacionados entityType="trilha" slug={d.slug} />
+
+      <TudoSobreEsteTema tema={d.tema} excluirTipo="trilha" excluirSlug={d.slug} />
     </div>
   );
 }

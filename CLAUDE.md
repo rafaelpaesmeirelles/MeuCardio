@@ -1,5 +1,83 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO, 12/09/2026: "Tudo com Tudo" auditado com o corpus real, corrigido e travado em teste
+> Pedido do Rafael: *"analise, entenda e programe/corrija a função Tudo com Tudo... de maneira
+> extremamente precisa e profissional para lançamento definitivo"*.
+>
+> **Método — medido, não inferido.** Subi um Postgres 16 + pgvector local, apliquei `alembic upgrade
+> head` e carreguei o **corpus inteiro de produção** num banco isolado (`meucardio_corpus`:
+> 3.364 documentos, 3.363 evidências, 2.061 estudos, 929 casos, 563 trilhas, 479 checklists, 454
+> materiais, 423 exames, 326 doenças, 281 imagens, 206 fármacos, 77 protocolos, 12.663 entidades e
+> 29.918 relações no grafo). Todos os números abaixo saíram de consulta a esse banco, não de leitura
+> de código. **Banco separado de propósito**: a primeira carga rodou junto com a suíte e morreu em
+> deadlock contra o `TRUNCATE` dos testes — é a mesma contenção já registrada neste arquivo.
+>
+> **Diagnóstico 1 — a função já estava clinicamente saudável.** Amostra de 250 itens publicados
+> (25 por frente), reproduzindo exatamente a chamada que `TudoSobreEsteTema.tsx` faz:
+> **249 devolvem relacionados; 1 órfão (0,4%)**. Não havia problema de cobertura a corrigir nas
+> frentes de conteúdo.
+>
+> **Diagnóstico 2 — o custo por requisição era o problema real.** Abrir UM documento de "Terapia
+> intensiva" disparava **82 consultas SQL e ~205 ms** só para desenhar o painel lateral. Causa
+> provada: `theme_variants()` devolve o tema canônico mais seus rótulos históricos e **cada rótulo
+> era consultado separadamente em cada uma das doze frentes** — e **28 dos 30 aliases não casam com
+> nenhuma linha do acervo** (só "Populações especiais", 29 linhas, e "Cardiomiopatias hereditárias",
+> 13, estão vivos). A maior parte dessas consultas era garantidamente vazia, repetida em toda
+> abertura de página.
+>
+> **Correção.** `buscar_relacionados` passou a aceitar o conjunto de rótulos e consulta com
+> `IN (...)` — uma consulta por frente em vez de uma por rótulo. `_contextual_drugs` deixou de
+> varrer os 206 fármacos em temas que, por construção, nenhum fármaco pode casar (fora de
+> Farmacologia e de `DRUG_TOPIC_PHRASES`) — conferido no corpus: **nenhum tema perde fármaco** com
+> o atalho. Resultado: **Terapia intensiva 82 → 15 consultas (−82%) e 205 → 91 ms (−55%)**;
+> Doença coronariana 71 → 16; a rota da doença 66 → 21. O número de consultas passou a ser
+> constante, independente de quantos rótulos históricos o tema tenha.
+>
+> **A equivalência foi provada, não assumida.** Comparei lista de slugs e ordem, grupo a grupo,
+> entre o fan-out antigo e a consulta única, em **32 temas × 2 modos de limite = 64 comparações**.
+> A primeira rodada acusou **8 divergências reais**: com `IN`, um item de rótulo histórico podia
+> tomar a vaga de um item do tema canônico quando o limite cortava (o fan-out antigo sempre
+> preenchia as vagas na ordem dos rótulos). Corrigido com um desempate explícito por posição do
+> rótulo (`_ordem_por_tema`, constante e fora da consulta quando há um valor só). Segunda rodada:
+> **0 divergências em 64 comparações**.
+>
+> **Diagnóstico 3 — a página da doença não usava o endpoint mais rico, que já existia.**
+> `GET /api/relacionados/doenca/{slug}` (campos estruturados do verbete: fármacos por indicação,
+> exames listados, diferenciais, documentos e material do paciente) era consumido **só pela Busca**;
+> `GuiaDoenca.tsx` mostrava apenas o painel do grafo. Medido em 30 doenças: **4 mostravam painel
+> completamente vazio** (grafo = 0) e o endpoint devolve conteúdo em **todas as 30**
+> (febre-reumatica-cardite 10 → 47 itens; doenca-da-aorta 12 → 37). `TudoSobreEsteTema` ganhou a
+> prop `doencaSlug` e foi instalado na página da doença.
+>
+> **Cobertura de instalação fechada.** O painel de tema estava ausente em cinco páginas de detalhe
+> que tinham o tema à mão — instalado em `GuiaDoenca`, `Trilha`, `ChecklistModelo`, `ChecklistAlta`
+> e `MaterialPacienteDetalhe`. **`Emergencia.tsx` ficou de fora de propósito** (garantia
+> offline-first já documentada); ele mantém só o painel do grafo, que já estava lá.
+>
+> **Corrigido também**: a frase do painel usava `resposta.tema`, que a rota da doença não devolve —
+> renderizaria "relacionados a **undefined**" na tela. Agora o rótulo do assunto vem da rota usada.
+>
+> **Integridade de links verificada no corpus real**: **1.762 rotas distintas** geradas pelos três
+> endpoints a partir de dados reais, cruzadas uma a uma com os `path=` de `App.tsx` —
+> **zero links mortos**.
+>
+> **Verificação**: `tests/test_tudo_com_tudo_custo_e_aliases.py` (5 testes novos: custo não cresce
+> com rótulos, item sob rótulo histórico continua aparecendo, tema canônico ocupa as vagas antes do
+> alias, tema sem fármaco possível não varre o catálogo, e nenhuma rota gerada leva a página
+> inexistente). O teste de link morto foi **mutado para confirmar que falha** quando uma rota quebra.
+> **403 testes passando** em toda a família `tudo_com_tudo|relacionados|connected_content|knowledge`.
+> `tsc --noEmit` limpo, `npm run build` completo, `check-rendering-security.mjs` e
+> `check-route-splitting.mjs` OK. Os quatro endpoints exercitados por HTTP real contra o corpus de
+> produção (200 com conteúdo; 404 para doença inexistente; 401 sem token). **Nenhuma migração** —
+> a mudança é de consulta e de UI.
+>
+> **Achado registrado, NÃO corrigido por ser decisão editorial do Rafael**: nove temas do registro
+> de calculadoras não existem como tema em nenhuma frente de conteúdo — `Síndrome coronariana
+> aguda` (GRACE, TIMI UA/NSTEMI, TIMI STEMI, CRUSADE), `Dor torácica`, `Função renal` e os seis
+> `Doses — …`. Para essas calculadoras o cruzamento por tema não contribui (o grafo compensa, e por
+> isso o painel não fica vazio). Reetiquetá-las mudaria quais calculadoras aparecem em cada tema
+> clínico — é curadoria, não código, e não foi feito por conta própria.
+
 > ## ✅ CONCLUÍDO, 09/08/2026: exclusão definitiva dos 34+1 duplicados/órfãos acumulados no dia
 > Pedido do Rafael: **"o que for conteudo cientifico repetido, errado e inutil pode apagar"** —
 > primeira autorização deste tipo no dia (até aqui, duplicata só era despublicada/marcada

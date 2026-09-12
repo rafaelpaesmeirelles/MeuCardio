@@ -34,7 +34,11 @@ from app.models.knowledge import (
 )
 from app.models.specialty_guide import SpecialtyDisease
 from app.models.study import ScientificStudy
-from app.services.related_content import LIMITE_POR_CATEGORIA, buscar_relacionados as _base
+from app.services.related_content import (
+    LIMITE_POR_CATEGORIA,
+    TEMA_MEDICAMENTOS,
+    buscar_relacionados as _base,
+)
 from app.services.knowledge_graph import ROTA_LISTA_POR_TIPO, _rota_item, relacionados_de
 from app.services.topic_relevance import (
     CONTEXT_MIN_RELEVANCE_SCORE,
@@ -172,6 +176,13 @@ def _contextual_drugs(
     db: Session, theme: str, excluir_tipo: str | None, excluir_slug: str | None,
     *, limit: int | None = LIMITE_POR_CATEGORIA,
 ) -> list[dict]:
+    # `drug_matches_theme` só pode aceitar um fármaco em Farmacologia ou num
+    # tópico com frase de indicação declarada. Fora desses, nenhuma linha
+    # passaria no filtro — carregar o catálogo inteiro para descartá-lo por
+    # completo é trabalho garantidamente perdido, em toda requisição.
+    canonical = canonical_theme(theme)
+    if canonical != TEMA_MEDICAMENTOS and canonical not in SUPPORTED_DRUG_TOPICS:
+        return []
     query = select(Drug).where(Drug.published.is_(True)).order_by(Drug.generic_name)
     drugs = db.execute(query).scalars().all()
     items: list[dict] = []
@@ -554,12 +565,15 @@ def buscar_relacionados_contextuais(
     # older item can be discarded before it receives a score. Theme catalogues
     # retain the normal bounded query because no item-level ranking is claimed.
     candidate_limit = None if assunto else limite_por_categoria
+    # One query per front covering every historical label of this topic, not
+    # one query per label. `buscar_relacionados` matches the same rows either
+    # way (exact `IN`), but 28 of the 30 aliases carry no row at all, so the
+    # per-label fan-out spent ~6x the queries of a page view to return nothing.
     responses = [
         _base(
-            db, variant, excluir_tipo=excluir_tipo, excluir_slug=excluir_slug,
+            db, variants, excluir_tipo=excluir_tipo, excluir_slug=excluir_slug,
             limite_por_categoria=candidate_limit,
         )
-        for variant in variants
     ]
     groups = _merge_groups(responses, limit=candidate_limit)
     origin_context = _origin_context(

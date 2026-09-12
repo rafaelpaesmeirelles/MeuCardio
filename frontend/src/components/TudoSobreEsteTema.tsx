@@ -36,6 +36,7 @@ type Grupo = {
 type Resposta = {
   tema?: string;
   medicamento?: { slug: string; titulo: string };
+  doenca?: { slug: string; titulo: string };
   temas?: string[];
   grupos: Grupo[];
   total: number;
@@ -50,6 +51,13 @@ type Props = {
    * estruturadas do próprio fármaco.
    */
   medicamentoSlug?: string;
+  /**
+   * Doença que ancora o painel. A rota dedicada da doença reúne, além do
+   * tema, os campos estruturados já revisados do verbete (medicamentos por
+   * indicação, exames listados, diferenciais, documentos e material do
+   * paciente) — por isso ela não é substituível pelo cruzamento por tema.
+   */
+  doencaSlug?: string;
   /** Tipo e slug do próprio item, para nunca aparecer na sua própria lista. */
   excluirTipo?: string;
   excluirSlug?: string;
@@ -57,13 +65,13 @@ type Props = {
   titulo?: string;
 };
 
-export default function TudoSobreEsteTema({ tema, medicamentoSlug, excluirTipo, excluirSlug, titulo }: Props) {
+export default function TudoSobreEsteTema({ tema, medicamentoSlug, doencaSlug, excluirTipo, excluirSlug, titulo }: Props) {
   const [resposta, setResposta] = useState<Resposta | null>(null);
 
   useEffect(() => {
     setResposta(null);
     const t = (tema ?? "").trim();
-    if (!t && !medicamentoSlug) return;
+    if (!t && !medicamentoSlug && !doencaSlug) return;
     let ativo = true;
     const params = new URLSearchParams({ tema: t });
     if (excluirTipo) params.set("excluir_tipo", excluirTipo);
@@ -73,7 +81,9 @@ export default function TudoSobreEsteTema({ tema, medicamentoSlug, excluirTipo, 
     }
     const endpoint = medicamentoSlug
       ? `/relacionados/medicamento/${encodeURIComponent(medicamentoSlug)}`
-      : `/relacionados?${params.toString()}`;
+      : doencaSlug
+        ? `/relacionados/doenca/${encodeURIComponent(doencaSlug)}`
+        : `/relacionados?${params.toString()}`;
     api
       .get<Resposta>(endpoint)
       .then((dados) => { if (ativo) setResposta(dados); })
@@ -83,18 +93,22 @@ export default function TudoSobreEsteTema({ tema, medicamentoSlug, excluirTipo, 
         // item que o médico já abriu.
       });
     return () => { ativo = false; };
-  }, [tema, medicamentoSlug, excluirTipo, excluirSlug]);
+  }, [tema, medicamentoSlug, doencaSlug, excluirTipo, excluirSlug]);
 
   if (!resposta || resposta.total === 0) return null;
   const grupos = resposta.grupos.filter((g) => g.itens.length > 0);
   if (grupos.length === 0) return null;
+  // O rótulo do assunto vem da rota usada. Sem este encadeamento, a rota da
+  // doença — que não devolve `tema` — imprimiria "relacionados a undefined".
+  const assunto =
+    resposta.medicamento?.titulo ?? resposta.doenca?.titulo ?? resposta.tema ?? "este assunto";
 
   return (
     <section className="cartao" style={{ marginTop: "1.2rem" }}>
       <p className="eyebrow">{titulo ?? "Tudo com Tudo"}</p>
       <p style={{ fontSize: "0.86rem", color: "var(--texto-secundario)", marginTop: "-0.2rem" }}>
         {resposta.total} {resposta.total === 1 ? "item publicado" : "itens publicados"} relacionado{resposta.total === 1 ? "" : "s"} a{" "}
-        <strong>{resposta.medicamento?.titulo ?? resposta.tema}</strong> em áreas separadas do ecossistema — acesse direto.
+        <strong>{assunto}</strong> em áreas separadas do ecossistema — acesse direto.
       </p>
 
       {!!resposta.temas?.length && (
