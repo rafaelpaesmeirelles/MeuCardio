@@ -14,10 +14,11 @@ type Status = { enabled:boolean; exam_types:Record<string,string>; supported_med
 
 function messageOf(error:unknown){return error instanceof ApiError?error.message:error instanceof Error?error.message:"Não foi possível concluir a operação.";}
 function when(value:string){return new Intl.DateTimeFormat("pt-BR",{dateStyle:"short",timeStyle:"short"}).format(new Date(value));}
+function localDateTime(value = new Date()) { return new Date(value.getTime() - value.getTimezoneOffset() * 60000).toISOString().slice(0,16); }
 
 export default function PatientMultimodalAssistant({patientId,currentEncounterId,onChanged}:{patientId:number;currentEncounterId:number|null;onChanged?:()=>void}){
   const [status,setStatus]=useState<Status|null>(null),[exams,setExams]=useState<Exam[]>([]),[selected,setSelected]=useState<Exam|null>(null);
-  const [file,setFile]=useState<File|null>(null),[examType,setExamType]=useState("echocardiogram"),[performedAt,setPerformedAt]=useState(()=>new Date().toISOString().slice(0,16));
+  const [file,setFile]=useState<File|null>(null),[examType,setExamType]=useState("echocardiogram"),[performedAt,setPerformedAt]=useState(()=>localDateTime());
   const [notes,setNotes]=useState(""),[question,setQuestion]=useState(""),[finalInterpretation,setFinalInterpretation]=useState(""),[reviewNote,setReviewNote]=useState("");
   const [busy,setBusy]=useState(false),[error,setError]=useState(""),[info,setInfo]=useState("");
   const suggestion=selected?.latest_suggestion??null;

@@ -276,6 +276,16 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
     }
   }
 
+  async function baixarOriginal() {
+    if (emitindo) return;
+    setEmitindo(true); setErro("");
+    try {
+      const blob = await api.blob(`/receituario/documentos/${doc.id}/pdf`);
+      baixarBlob(blob, `receituario-${doc.id}.pdf`);
+    } catch (e) { setErro(e instanceof Error ? e.message : "Não foi possível recuperar o PDF original."); }
+    finally { setEmitindo(false); }
+  }
+
   return (
     <div className="cartao" style={{ marginTop: "0.8rem", borderLeft: `3px solid ${doc.cor === "amarela" ? "#c9a227" : doc.cor === "azul" ? "#1c7293" : "var(--linha)"}` }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -330,8 +340,8 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
             </p>
           ) : (
             <>
-              <label>Endereço no cabeçalho/rodapé (opcional)</label>
-              <select value={endereco} onChange={(e) => setEndereco(e.target.value as typeof endereco)}>
+              <label htmlFor={`rx-doc-${doc.id}-field-1`}>Endereço no cabeçalho/rodapé (opcional)</label>
+              <select id={`rx-doc-${doc.id}-field-1`} value={endereco} onChange={(e) => setEndereco(e.target.value as typeof endereco)}>
                 <option value="">Nenhum</option>
                 <option value="profissional">Profissional (consultório)</option>
                 <option value="residencial">Residencial</option>
@@ -342,8 +352,8 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
             </>
           )}
 
-          <label style={{ marginTop: "0.5rem" }}>Método de assinatura</label>
-          <select value={metodo} onChange={(e) => setMetodo(e.target.value)}>
+          <label style={{ marginTop: "0.5rem" }} htmlFor={`rx-doc-${doc.id}-field-2`}>Método de assinatura</label>
+          <select id={`rx-doc-${doc.id}-field-2`} value={metodo} onChange={(e) => setMetodo(e.target.value)}>
             {(provedores ?? []).map((p) => {
               const invalidoParaRce = doc.tipo === "RCE" && p.codigo !== "MANUAL" && p.nivel !== "qualificada";
               return (
@@ -382,16 +392,16 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
 
       {doc.status === "rascunho" && (
         <div style={{ marginTop: "0.6rem" }}>
-          <label>Tipo de receita</label>
-          <select value={corrigirPara} onChange={(e) => setCorrigirPara(e.target.value)}>
+          <label htmlFor={`rx-doc-${doc.id}-field-3`}>Tipo de receita</label>
+          <select id={`rx-doc-${doc.id}-field-3`} value={corrigirPara} onChange={(e) => setCorrigirPara(e.target.value)}>
             {(tipos ?? []).map((t) => (
               <option key={t.codigo} value={t.codigo}>{t.nome}{!t.ativo ? " (indisponível hoje)" : ""}</option>
             ))}
           </select>
           {corrigirPara !== doc.tipo && (
             <>
-              <label style={{ marginTop: "0.4rem" }}>Motivo da correção</label>
-              <input value={motivoCorrecao} onChange={(e) => setMotivoCorrecao(e.target.value)}
+              <label style={{ marginTop: "0.4rem" }} htmlFor={`rx-doc-${doc.id}-field-4`}>Motivo da correção</label>
+              <input id={`rx-doc-${doc.id}-field-4`} value={motivoCorrecao} onChange={(e) => setMotivoCorrecao(e.target.value)}
                      placeholder="Por que este tipo é o correto, não o classificado automaticamente" />
             </>
           )}
@@ -410,6 +420,7 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
             {emitindo ? "Emitindo…" : "Emitir e baixar PDF"}
           </button>
         )}
+        {doc.status === "emitido" && <button className="botao botao--secundario" onClick={baixarOriginal} disabled={emitindo}>{emitindo ? "Baixando…" : "Baixar PDF original"}</button>}
       </div>
 
       {doc.status === "emitido" && doc.aguardando_assinatura_externa && doc.metodo_emitido && (
@@ -443,8 +454,8 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
 
       {doc.status === "emitido" && doc.pode_enviar_email && (
         <div style={{ marginTop: "0.8rem" }}>
-          <label>Enviar por e-mail ao paciente (link seguro, válido por 7 dias)</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+          <label htmlFor={`rx-doc-${doc.id}-field-5`}>Enviar por e-mail ao paciente (link seguro, válido por 7 dias)</label>
+          <input id={`rx-doc-${doc.id}-field-5`} type="email" value={email} onChange={(e) => setEmail(e.target.value)}
                  placeholder="paciente@exemplo.com" />
           <button className="botao" style={{ marginTop: "0.4rem" }} onClick={enviar} disabled={enviando || !email}>
             {enviando ? "Enviando…" : "Enviar por e-mail"}
@@ -538,8 +549,8 @@ function HistoricoReceituario({ onAbrir, onRecriar }: {
   return (
     <div style={{ maxWidth: "76ch" }}>
       <div className="grade grade--2" style={{ marginBottom: "0.8rem" }}>
-        <div><label>Procurar pelo nome do paciente</label><input value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Nome completo ou parte do nome" /></div>
-        <div><label>Tipo de receita</label><select value={tipo} onChange={(e) => setTipo(e.target.value)}><option value="">Todos</option>{tiposDisponiveis.map(([codigo, rotulo]) => <option key={codigo} value={codigo}>{rotulo}</option>)}</select></div>
+        <div><label htmlFor="rx-field-6">Procurar pelo nome do paciente</label><input id="rx-field-6" value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Nome completo ou parte do nome" /></div>
+        <div><label htmlFor="rx-field-7">Tipo de receita</label><select id="rx-field-7" value={tipo} onChange={(e) => setTipo(e.target.value)}><option value="">Todos</option>{tiposDisponiveis.map(([codigo, rotulo]) => <option key={codigo} value={codigo}>{rotulo}</option>)}</select></div>
       </div>
       {erro && <Erro mensagem={erro} />}
       {!itens ? <Carregando /> : itens.length === 0 ? <Vazio titulo="Nenhuma receita encontrada" /> : (
@@ -623,11 +634,53 @@ export default function Receituario() {
   const navigate = useNavigate();
   const prescricaoLegadaId = location.state?.prescricaoLegadaId;
   const [avisoOrigem, setAvisoOrigem] = useState("");
+  const parametros = new URLSearchParams(location.search);
+  const pacienteOrigem = Number(parametros.get("paciente")) || null;
+  const atendimentoOrigem = Number(parametros.get("atendimento")) || null;
+  const prescricaoOrigem = Number(parametros.get("prescricao")) || null;
+  const [contextoClinico, setContextoClinico] = useState<{pid:number;eid:number|null;nome:string;status:string}|null>(null);
+  const [carregandoContexto, setCarregandoContexto] = useState(Boolean(pacienteOrigem || prescricaoOrigem));
+  const [erroContexto, setErroContexto] = useState("");
+  const [vinculando, setVinculando] = useState(false), [vinculado, setVinculado] = useState<number|null>(null);
+
+  useEffect(() => {
+    let ativo = true;
+    setContextoClinico(null); setErroContexto(""); setVinculado(null);
+    if (!pacienteOrigem && !prescricaoOrigem) { setCarregandoContexto(false); return; }
+    setCarregandoContexto(true);
+    async function carregarContexto() {
+      if (prescricaoOrigem) {
+        const detalhe = await api.get<PrescricaoDetalhe>(`/receituario/${prescricaoOrigem}`);
+        if (ativo) abrirDoHistorico(detalhe);
+        return;
+      }
+      const perfil = await api.get<{id:number;full_name:string;cpf:string|null;endereco:Record<string,string>|null}>(`/pacientes/${pacienteOrigem}`);
+      const atendimento = atendimentoOrigem ? await api.get<{id:number;status:string}>(`/pacientes/${pacienteOrigem}/atendimentos/${atendimentoOrigem}`) : null;
+      if (!ativo) return;
+      setNome(perfil.full_name); setDocumento(perfil.cpf || "");
+      const end=perfil.endereco || {};
+      setCep(end.cep||""); setLogradouro(end.logradouro||""); setNumero(end.numero||""); setComplemento(end.complemento||""); setBairro(end.bairro||""); setCidade(end.cidade||""); setUf(end.uf||"");
+      setContextoClinico({pid:perfil.id,eid:atendimento?.id||null,nome:perfil.full_name,status:atendimento?.status||""});
+      setAvisoOrigem("Dados do paciente carregados do prontuário. Revise o destinatário antes de criar a receita.");
+    }
+    void carregarContexto().catch(e=>{if(ativo)setErroContexto(e instanceof Error?e.message:"Não foi possível carregar o contexto do prontuário.");}).finally(()=>{if(ativo)setCarregandoContexto(false);});
+    return()=>{ativo=false;};
+  },[pacienteOrigem,atendimentoOrigem,prescricaoOrigem]);
+
+  async function vincularAoAtendimento() {
+    if (!criado || !contextoClinico?.eid || vinculando) return;
+    setVinculando(true); setErro("");
+    try {
+      await api.post(`/pacientes/${contextoClinico.pid}/atendimentos/${contextoClinico.eid}/artefatos`,{tipo:"prescricao",artifact_id:criado.prescricao_id});
+      setVinculado(criado.prescricao_id);
+    } catch (e) { setErro(e instanceof Error?e.message:"Não foi possível vincular a receita ao atendimento."); }
+    finally { setVinculando(false); }
+  }
 
   useEffect(() => {
     if (!Number.isInteger(prescricaoLegadaId) || prescricaoLegadaId <= 0) return;
     let ativo = true;
-    api.get<{ prescricao: { items: { drug_name: string; presentation: string; posology: string; orientation: string; brand_name?: string; manufacturer?: string; ggrem?: string }[]; notes: string | null } }>(`/prescriptions/${prescricaoLegadaId}/imprimir`)
+    api.get<{ prescricao: { items: { drug_name: string; presentation: string; posology: string; orientation: string; brand_name?: string; manufacturer?: string; ggrem?: string }[]; notes: string | null } }>(`/prescriptions/${prescricaoLegadaId}/revisao`)
       .then(({ prescricao }) => {
         if (!ativo) return;
         recriarDoHistorico({
@@ -1052,12 +1105,15 @@ export default function Receituario() {
     setAba("nova");
   }
 
+  if (erroContexto) return <Erro mensagem={erroContexto} />;
+  if (carregandoContexto) return <Carregando />;
   if (erroCarregar) return <Erro mensagem={erroCarregar} />;
   if (!farmacos) return <Carregando />;
 
   return (
     <div className="prescricao">
       {avisoOrigem && <p role="status" className="cartao">{avisoOrigem}</p>}
+      {contextoClinico&&<div className="cartao"><strong>Prontuário: {contextoClinico.nome}</strong><p><a href={`/prontuario?paciente=${contextoClinico.pid}`}>Voltar ao prontuário</a></p>{criado&&contextoClinico.eid&&!['finalized','amended','cancelled'].includes(contextoClinico.status)&&(vinculado===criado.prescricao_id?<p role="status">Receita vinculada ao atendimento #{contextoClinico.eid}.</p>:<button className="botao botao--secundario" disabled={vinculando} onClick={vincularAoAtendimento}>{vinculando?"Vinculando…":`Vincular esta receita ao atendimento #${contextoClinico.eid}`}</button>)}{criado&&erro&&<p role="alert">{erro}</p>}</div>}
       <header className="prescricao__cabecalho">
         <div>
           <p className="eyebrow">Documentos clínicos</p>
@@ -1092,48 +1148,48 @@ export default function Receituario() {
             </div>
             <div className="prescricao-paciente__grade">
               <div className="prescricao-campo prescricao-campo--largo">
-                <label>Nome completo</label>
-                <input value={nome} onChange={(e) => setNome(e.target.value)} autoComplete="name" />
+                <label htmlFor="rx-field-8">Nome completo</label>
+                <input id="rx-field-8" value={nome} onChange={(e) => setNome(e.target.value)} autoComplete="name" />
               </div>
               <div className="prescricao-campo">
-                <label>CPF do Paciente</label>
-                <input value={documento} onChange={(e) => setDocumento(e.target.value)} />
+                <label htmlFor="rx-field-9">CPF do Paciente</label>
+                <input id="rx-field-9" value={documento} onChange={(e) => setDocumento(e.target.value)} />
               </div>
               <div className="prescricao-campo">
-                <label>CID <small>Obrigatório para anabolizantes/Lista C5</small></label>
-                <input value={cid} onChange={(e) => setCid(e.target.value.toUpperCase())}
+                <label htmlFor="rx-field-10">CID <small>Obrigatório para anabolizantes/Lista C5</small></label>
+                <input id="rx-field-10" value={cid} onChange={(e) => setCid(e.target.value.toUpperCase())}
                        placeholder="Ex.: E29.1" maxLength={10} />
               </div>
               <div className="prescricao-campo">
-                <label>CEP <small>Preenche o endereço automaticamente</small></label>
-                <input value={cep} onChange={(e) => void atualizarCep(e.target.value)}
+                <label htmlFor="rx-field-11">CEP <small>Preenche o endereço automaticamente</small></label>
+                <input id="rx-field-11" value={cep} onChange={(e) => void atualizarCep(e.target.value)}
                        inputMode="numeric" autoComplete="postal-code" placeholder="00000-000" />
                 {consultandoCep && <small className="prescricao-campo__estado">Consultando CEP…</small>}
                 {erroCep && <small className="prescricao-campo__erro">{erroCep}</small>}
               </div>
               <div className="prescricao-campo prescricao-campo--largo">
-                <label>Logradouro <small>Obrigatório para controle especial</small></label>
-                <input value={logradouro} onChange={(e) => setLogradouro(e.target.value)} autoComplete="address-line1" />
+                <label htmlFor="rx-field-12">Logradouro <small>Obrigatório para controle especial</small></label>
+                <input id="rx-field-12" value={logradouro} onChange={(e) => setLogradouro(e.target.value)} autoComplete="address-line1" />
               </div>
               <div className="prescricao-campo">
-                <label>Número <small>Obrigatório para controle especial</small></label>
-                <input value={numero} onChange={(e) => setNumero(e.target.value)} autoComplete="address-line2" />
+                <label htmlFor="rx-field-13">Número <small>Obrigatório para controle especial</small></label>
+                <input id="rx-field-13" value={numero} onChange={(e) => setNumero(e.target.value)} autoComplete="address-line2" />
               </div>
               <div className="prescricao-campo">
-                <label>Complemento <small>Opcional</small></label>
-                <input value={complemento} onChange={(e) => setComplemento(e.target.value)} autoComplete="address-line3" />
+                <label htmlFor="rx-field-14">Complemento <small>Opcional</small></label>
+                <input id="rx-field-14" value={complemento} onChange={(e) => setComplemento(e.target.value)} autoComplete="address-line3" />
               </div>
               <div className="prescricao-campo">
-                <label>Bairro <small>Obrigatório para controle especial</small></label>
-                <input value={bairro} onChange={(e) => setBairro(e.target.value)} />
+                <label htmlFor="rx-field-15">Bairro <small>Obrigatório para controle especial</small></label>
+                <input id="rx-field-15" value={bairro} onChange={(e) => setBairro(e.target.value)} />
               </div>
               <div className="prescricao-campo">
-                <label>Cidade <small>Obrigatório para controle especial</small></label>
-                <input value={cidade} onChange={(e) => setCidade(e.target.value)} autoComplete="address-level2" />
+                <label htmlFor="rx-field-16">Cidade <small>Obrigatório para controle especial</small></label>
+                <input id="rx-field-16" value={cidade} onChange={(e) => setCidade(e.target.value)} autoComplete="address-level2" />
               </div>
               <div className="prescricao-campo">
-                <label>Estado (UF) <small>Obrigatório para controle especial</small></label>
-                <input value={uf} onChange={(e) => setUf(e.target.value.replace(/[^a-z]/gi, "").slice(0, 2).toUpperCase())}
+                <label htmlFor="rx-field-17">Estado (UF) <small>Obrigatório para controle especial</small></label>
+                <input id="rx-field-17" value={uf} onChange={(e) => setUf(e.target.value.replace(/[^a-z]/gi, "").slice(0, 2).toUpperCase())}
                        autoComplete="address-level1" maxLength={2} placeholder="SP" />
               </div>
             </div>
@@ -1155,8 +1211,8 @@ export default function Receituario() {
                   <button type="button" className="prescricao-item__remover" onClick={() => removerItem(i)}>Remover</button>
                 )}
               </div>
-              <label>Medicamento <small>nome genérico ou comercial</small></label>
-              <input
+              <label htmlFor={`rx-item-${i}-field-18`}>Medicamento <small>nome genérico ou comercial</small></label>
+              <input id={`rx-item-${i}-field-18`}
                 value={buscaFarmaco[i] ?? ""}
                 onChange={(e) => buscarMedicamentos(i, e.target.value)}
                 placeholder="Digite o nome genérico ou comercial"
@@ -1234,8 +1290,8 @@ export default function Receituario() {
                   </div>
                 );
               })()}
-              <label style={{ marginTop: "0.4rem" }}>Apresentação (ex.: 500mg, comprimido)</label>
-              <input value={it.apresentacao} onChange={(e) => atualizarItem(i, "apresentacao", e.target.value)} />
+              <label style={{ marginTop: "0.4rem" }} htmlFor={`rx-item-${i}-field-19`}>Apresentação (ex.: 500mg, comprimido)</label>
+              <input id={`rx-item-${i}-field-19`} value={it.apresentacao} onChange={(e) => atualizarItem(i, "apresentacao", e.target.value)} />
 
               {it.drug_slug && (() => {
                 const resp = apresentacoes[i];
@@ -1371,14 +1427,14 @@ export default function Receituario() {
 
               <div className="grade grade--2" style={{ marginTop: "0.4rem" }}>
                 <div>
-                  <label>Quantidade em algarismos</label>
-                  <input value={it.quantidade} disabled={it.uso_continuo}
+                  <label htmlFor={`rx-item-${i}-field-20`}>Quantidade em algarismos</label>
+                  <input id={`rx-item-${i}-field-20`} value={it.quantidade} disabled={it.uso_continuo}
                          onChange={(e) => atualizarItem(i, "quantidade", e.target.value)}
                          placeholder="Ex.: 60 comprimidos" />
                 </div>
                 <div>
-                  <label>Quantidade por extenso</label>
-                  <input value={it.quantidade_extenso} disabled={it.uso_continuo}
+                  <label htmlFor={`rx-item-${i}-field-21`}>Quantidade por extenso</label>
+                  <input id={`rx-item-${i}-field-21`} value={it.quantidade_extenso} disabled={it.uso_continuo}
                          onChange={(e) => atualizarItem(i, "quantidade_extenso", e.target.value)}
                          placeholder="Ex.: sessenta comprimidos" />
                 </div>
@@ -1414,10 +1470,10 @@ export default function Receituario() {
                 Os dois campos são obrigatórios para Receita de Controle Especial. A RCE aceita
                 no máximo três substâncias C1 e, em regra, quantidade para até 60 dias de tratamento.
               </p>
-              <label style={{ marginTop: "0.4rem" }}>Posologia</label>
-              <input value={it.posologia} onChange={(e) => atualizarItem(i, "posologia", e.target.value)} />
-              <label style={{ marginTop: "0.4rem" }}>Orientação (opcional)</label>
-              <input value={it.orientacao} onChange={(e) => atualizarItem(i, "orientacao", e.target.value)} />
+              <label style={{ marginTop: "0.4rem" }} htmlFor={`rx-item-${i}-field-22`}>Posologia</label>
+              <input id={`rx-item-${i}-field-22`} value={it.posologia} onChange={(e) => atualizarItem(i, "posologia", e.target.value)} />
+              <label style={{ marginTop: "0.4rem" }} htmlFor={`rx-item-${i}-field-23`}>Orientação (opcional)</label>
+              <input id={`rx-item-${i}-field-23`} value={it.orientacao} onChange={(e) => atualizarItem(i, "orientacao", e.target.value)} />
             </article>
           ))}
           <button type="button" className="botao botao--secundario" style={{ marginTop: "0.6rem" }} onClick={adicionarItem}>
@@ -1429,8 +1485,8 @@ export default function Receituario() {
             <div className="prescricao-bloco__titulo">
               <span>3</span><div><p className="eyebrow">Finalização</p><h2>Revisar e gerar</h2></div>
             </div>
-            <label>Observações <small>Opcional</small></label>
-            <textarea rows={3} value={observacoes} onChange={(e) => setObservacoes(e.target.value)} />
+            <label htmlFor="rx-field-24">Observações <small>Opcional</small></label>
+            <textarea id="rx-field-24" rows={3} value={observacoes} onChange={(e) => setObservacoes(e.target.value)} />
 
           {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
 

@@ -15,6 +15,15 @@ readonly CORVIA_SCOPED_RELEASE_MODE
 # Só é ativado por commit explicitamente marcado com [rdc-recovery]; não toca
 # frontend, backend, banco, migrations ou conteúdo científico.
 COMMIT_MESSAGE="$(git log -1 --pretty=%B 2>/dev/null || true)"
+CORVIA_CODE_ONLY_RELEASE_MODE=0
+if [[ "$COMMIT_MESSAGE" == *"[code-only-deploy]"* ]]; then
+  CORVIA_CODE_ONLY_RELEASE_MODE=1
+  if [[ -n "$CORVIA_SCOPED_RELEASE_MODE" ]]; then
+    echo "[code-only-deploy] é incompatível com CORVIA_SCOPED_RELEASE: uma release só de código não publica pacotes científicos." >&2
+    exit 1
+  fi
+fi
+readonly CORVIA_CODE_ONLY_RELEASE_MODE
 if [[ "$COMMIT_MESSAGE" == *"[rdc-recovery]"* ]]; then
   echo "[RDC] Reativando agente remoto sem redeploy da aplicação."
   command -v systemctl >/dev/null || { echo "systemctl ausente" >&2; exit 1; }
@@ -499,7 +508,9 @@ done
 
 log "Confirmando migrations de forma idempotente."
 backend_exec python -m app.commands.migrate
-if [[ "$CORVIA_SCOPED_RELEASE_MODE" == "scientific-20260910" ]]; then
+if [[ "$CORVIA_CODE_ONLY_RELEASE_MODE" == "1" ]]; then
+  log "Release só de código: corpus preservado; reconciliação, publicação e reclassificações editoriais não serão executadas."
+elif [[ "$CORVIA_SCOPED_RELEASE_MODE" == "scientific-20260910" ]]; then
   log "Publicando somente o pacote revisado scientific-20260910, com guardas por registro."
   validar_checkout_imutavel
   "${COMPOSE[@]}" cp "$SCOPED_RELEASE_PACK" backend:/tmp/corvia-scientific-20260910-publication-package.json
@@ -640,7 +651,9 @@ validar_checkout_imutavel
 # Responsável único pela indexação incremental: `app.commands.
 # reindex_rag_completo_20260902` — cobre documentos E as 12 frentes de
 # `rag_sources` + calculadoras num só comando, idempotente por content_hash.
-if [[ "$CORVIA_SCOPED_RELEASE_MODE" == "scientific-20260910" ]]; then
+if [[ "$CORVIA_CODE_ONLY_RELEASE_MODE" == "1" ]]; then
+  log "Release só de código: indexação RAG não disparada; conteúdo científico existente preservado."
+elif [[ "$CORVIA_SCOPED_RELEASE_MODE" == "scientific-20260910" ]]; then
   log "Indexação global não disparada neste modo; o pacote scientific-20260910 terá indexação específica após o deploy."
 elif [[ "${AI_ENABLED:-false}" == "true" ]]; then
   log "Disparando indexação RAG incremental em segundo plano (não bloqueia nem reverte o deploy)."
@@ -650,7 +663,9 @@ fi
 
 "${COMPOSE[@]}" ps
 TRAFEGO_ABERTO=0
-if [[ "$CORVIA_SCOPED_RELEASE_MODE" == "scientific-20260910" ]]; then
+if [[ "$CORVIA_CODE_ONLY_RELEASE_MODE" == "1" ]]; then
+  log "Deploy só de código concluído: commit $COMMIT_ATUAL, migrations aplicadas e HTTPS pronto; corpus sem publicação, reconciliação, reclassificação ou reindexação."
+elif [[ "$CORVIA_SCOPED_RELEASE_MODE" == "scientific-20260910" ]]; then
   log "Deploy certificado concluído: commit $COMMIT_ATUAL, migrations aplicadas, pacote scientific-20260910 publicado e HTTPS pronto."
 else
   log "Deploy certificado concluído: commit $COMMIT_ATUAL, migrations aplicadas, corpus reconciliado e HTTPS pronto."

@@ -118,6 +118,8 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
   const [enviando, setEnviando] = useState(false);
   const [erro, setErro] = useState("");
 
+  const messagesRef = useRef(mensagens);
+  messagesRef.current = mensagens;
   const wsRef = useRef<WebSocket | null>(null);
   const fimRef = useRef<HTMLDivElement | null>(null);
   const launcherRef = useRef<HTMLButtonElement | null>(null);
@@ -181,53 +183,68 @@ export default function ChatFlutuante({ placement = "floating" }: { placement?: 
     };
   }, [usuario, carregarNaoLidas]);
 
-  // Socket: abre na primeira vez que o widget é aberto e fica vivo daí em diante.
+  // Reconnect while open; close on minimization/logout and recover gaps when
+  // reopening. Drafts remain local and are never resent automatically.
   useEffect(() => {
-    if (!aberto || wsRef.current) return;
-    const t = token.get();
-    if (!t) return;
-    const protocolo = window.location.protocol === "https:" ? "wss" : "ws";
-    const ws = new WebSocket(`${protocolo}://${window.location.host}/api/chat/ws?token=${encodeURIComponent(t)}`);
-    wsRef.current = ws;
-
-    ws.onmessage = (ev) => {
-      let dados: any;
-      try { dados = JSON.parse(ev.data); } catch { return; }
-      if (dados?.tipo !== "mensagem") return;
-
-      const meu = usuario?.id;
-      const outro = dados.sender_id === meu ? dados.recipient_id : dados.sender_id;
-
-      if (openRef.current && ativoRef.current === outro) {
-        setMensagens((atual) =>
-          atual.some((m) => m.id === dados.id) ? atual : [...atual, dados as Mensagem]
-        );
-        if (dados.sender_id !== meu) {
-          api.post(`/chat/mensagens/${outro}/marcar-lidas`).then(carregarNaoLidas).catch(() => {});
-        }
-      } else if (dados.sender_id !== meu) {
-        carregarNaoLidas();
-      }
-      carregarConversas();
-    };
-    ws.onclose = () => { if (wsRef.current === ws) wsRef.current = null; };
-
-    // Keepalive: o handler do backend fica em `receive_text()`, então um ping
-    // periódico é o que faz uma desconexão silenciosa aparecer de imediato.
-    const ping = setInterval(() => {
-      if (ws.readyState === WebSocket.OPEN) ws.send("ping");
-    }, 30000);
-
+    if (!aberto || !usuario || usuario.investidor) return;
+    let disposed = false, attempt = 0;
+    let retry: ReturnType<typeof setTimeout> | undefined;
+    let ping: ReturnType<typeof setInterval> | undefined;
+    const mine = usuario.id;
+    async function recover() {
+      carregarNaoLidas(); carregarConversas();
+      const id = ativoRef.current;
+      if (id === null) return;
+      const request = ++historyRequest.current;
+      const valid = () => !disposed && ativoRef.current === id && historyRequest.current === request;
+      let after = Math.max(0, ...messagesRef.current.filter(m => m.sender_id === id || m.recipient_id === id).map(m => m.id));
+      try {
+        do {
+          const batch = await api.get<Mensagem[]>(`/chat/mensagens/${id}?limite=100${after ? `&depois_de=${after}` : ""}`);
+          if (!valid()) return;
+          setMensagens(previous => [...new Map([...previous, ...batch].map(m => [m.id, m])).values()].sort((a, b) => a.id - b.id));
+          const next = Math.max(after, ...batch.map(m => m.id));
+          if (batch.length < 100 || next <= after) break;
+          after = next;
+        } while (valid());
+        if (valid()) await api.post(`/chat/mensagens/${id}/marcar-lidas`);
+        if (valid()) carregarNaoLidas();
+      } catch { if (valid()) setErro("A conexão voltou, mas faltou atualizar o histórico. Reabra a conversa para tentar novamente."); }
+    }
+    function connect() {
+      if (disposed || !token.get()) return;
+      const protocol = window.location.protocol === "https:" ? "wss" : "ws";
+      const ws = new WebSocket(`${protocol}://${window.location.host}/api/chat/ws?token=${encodeURIComponent(token.get() ?? "")}`);
+      wsRef.current = ws;
+      ws.onopen = () => { if (disposed) { ws.close(); return; } attempt = 0; void recover(); };
+      ws.onmessage = ev => {
+        if (disposed) return;
+        let data: any;
+        try { data = JSON.parse(ev.data); } catch { return; }
+        if (data?.tipo !== "mensagem") return;
+        const other = data.sender_id === mine ? data.recipient_id : data.sender_id;
+        if (openRef.current && ativoRef.current === other) {
+          setMensagens(previous => previous.some(m => m.id === data.id) ? previous : [...previous, data as Mensagem]);
+          if (data.sender_id !== mine) api.post(`/chat/mensagens/${other}/marcar-lidas`).then(carregarNaoLidas).catch(() => {});
+        } else if (data.sender_id !== mine) carregarNaoLidas();
+        carregarConversas();
+      };
+      ws.onclose = event => {
+        if (wsRef.current === ws) wsRef.current = null;
+        if (ping) clearInterval(ping);
+        if (disposed || [1008, 4401, 4403].includes(event.code)) return;
+        retry = setTimeout(connect, Math.min(30000, 1000 * 2 ** attempt++));
+      };
+      ping = setInterval(() => { if (ws.readyState === WebSocket.OPEN) ws.send("ping"); }, 25000);
+    }
+    connect();
     return () => {
-      clearInterval(ping);
-      // Não fecha o socket aqui: o efeito roda de novo quando `aberto` muda,
-      // e fechar a cada fechamento do painel derrubaria a entrega em tempo real
-      // de quem só minimizou a janela.
+      disposed = true; historyRequest.current++;
+      if (retry) clearTimeout(retry);
+      if (ping) clearInterval(ping);
+      wsRef.current?.close(); wsRef.current = null;
     };
-  }, [aberto, usuario, carregarNaoLidas, carregarConversas]);
-
-  // Fecha o socket de vez quando o componente sai (logout, troca de rota raiz).
-  useEffect(() => () => { wsRef.current?.close(); wsRef.current = null; }, []);
+  }, [aberto, usuario?.id, usuario?.investidor, carregarNaoLidas, carregarConversas]);
 
   useEffect(() => {
     if (!aberto) return;

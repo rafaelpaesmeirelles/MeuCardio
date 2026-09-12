@@ -261,3 +261,68 @@ def enviar_teste_transacional(destinatario: str, admin_user_id: int | None = Non
         )
     finally:
         db.close()
+
+
+def convite_pendente(db, user):
+    """An unused invitation is not an entitlement until its owner follows the link."""
+    from app.models.convidado_pre_autorizado import ConvidadoPreAutorizado
+    if user is None or user.is_active or user.status != "pendente" or user.investidor:
+        return None
+    return db.query(ConvidadoPreAutorizado).filter(
+        ConvidadoPreAutorizado.email == user.email,
+        ConvidadoPreAutorizado.usado_em.is_(None),
+    ).first()
+
+
+def enviar_confirmacao_convite(user_id: int) -> bool:
+    db = SessionLocal()
+    try:
+        user = db.query(User).filter(User.id == user_id).with_for_update().first()
+        if not convite_pendente(db, user):
+            return False
+        now = datetime.now(timezone.utc)
+        recent = db.query(PasswordResetToken.id).filter(
+            PasswordResetToken.user_id == user_id, PasswordResetToken.alvo == "convite",
+            PasswordResetToken.created_at > now - timedelta(minutes=5),
+        ).first()
+        if recent:
+            return False
+        token = PasswordResetToken(user_id=user_id, alvo="convite", expires_at=now + timedelta(hours=48))
+        db.add(token)
+        db.commit()
+        db.refresh(token)
+        # Never use the recovery address entered by an unauthenticated claimant.
+        return emails._enviar(
+            db, tipo="confirmar_convite", destinatario=user.email,
+            assunto="CorVIA — confirme seu convite e configure seu acesso",
+            template="primeiro_acesso", user_id=user.id,
+            contexto={"nome": user.full_name, "email_login": user.email,
+                      "link": f"{settings.public_url}/redefinir-senha?token={token.token}&alvo=convite"},
+        )
+    finally:
+        db.close()
+
+
+def confirmar_convite(db, user, recovery_email: str | None) -> None:
+    from fastapi import HTTPException
+    from app.models.audit import AuditLog
+    from app.models.convidado_pre_autorizado import ConvidadoPreAutorizado
+    from app.models.subscription import PLANO_BASICO, PLANO_COMPLETO
+    if not convite_pendente(db, user):
+        raise HTTPException(status_code=400, detail="Convite inválido ou revogado. Solicite apoio à administração.")
+    convite = db.query(ConvidadoPreAutorizado).filter(
+        ConvidadoPreAutorizado.email == user.email,
+        ConvidadoPreAutorizado.usado_em.is_(None),
+    ).with_for_update().populate_existing().first()
+    if convite is None:
+        raise HTTPException(status_code=400, detail="Convite inválido ou já utilizado.")
+    try:
+        definir_email_recuperacao(db, user, recovery_email or "")
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    user.role, user.status, user.is_active, user.convidado = "medico", "aprovado", True, True
+    user.convidado_plano_preferido = PLANO_COMPLETO if convite.incluir_corvia_mail else PLANO_BASICO
+    user.reviewed_at = datetime.now(timezone.utc)
+    convite.usado_em, convite.usado_por_user_id = user.reviewed_at, user.id
+    db.add(AuditLog(user_id=user.id, action="convidado_email_confirmado", entity="user", entity_id=str(user.id),
+                    detail={"pre_autorizacao_id": convite.id, "incluir_corvia_mail": convite.incluir_corvia_mail}))

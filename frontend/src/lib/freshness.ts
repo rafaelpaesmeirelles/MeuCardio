@@ -6,23 +6,13 @@ const INTERVALO_MINIMO_CHECK_MS = 60_000;
 let verificando = false;
 let ultimoCheckEm = 0;
 
-async function limparCachesDoApp() {
-  if (!("caches" in window)) return;
-  const nomes = await caches.keys();
-  await Promise.all(
-    nomes
-      .filter((nome) => nome.startsWith("corvia-") || nome.startsWith("workbox-"))
-      .map((nome) => caches.delete(nome)),
-  );
-}
-
 async function prepararNovaVersao(commit: string) {
   // Nunca interrompe uma consulta, digitação ou fluxo clínico com reload automático.
   // A nova versão será usada na próxima navegação/reabertura normal da página.
   if (sessionStorage.getItem(CHAVE_ATUALIZACAO_PENDENTE) === commit) return;
   sessionStorage.setItem(CHAVE_ATUALIZACAO_PENDENTE, commit);
   try {
-    await limparCachesDoApp();
+    // A página aberta ainda depende dos chunks desta versão. Preserve seu cache.
     if ("serviceWorker" in navigator) {
       const registro = await navigator.serviceWorker.getRegistration();
       await registro?.update().catch(() => undefined);

@@ -20,7 +20,7 @@ async function recuperarAplicacao() {
       await registro?.update().catch(() => undefined);
     }
   } finally {
-    const url = new URL(window.location.origin);
+    const url = new URL(window.location.href);
     url.searchParams.set("recuperacao", String(Date.now()));
     window.location.replace(url.toString());
   }

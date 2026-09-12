@@ -14,6 +14,8 @@ const source = readFileSync(new URL('../src/pages/Prontuario.tsx', import.meta.u
 const compiled = ts.transpileModule(source, { compilerOptions: {
   module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX,
 } }).outputText;
+const inputModule = {exports:{}};
+vm.runInNewContext(ts.transpileModule(readFileSync(new URL('../src/lib/clinicalInput.ts',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,{module:inputModule,exports:inputModule.exports});
 const deferred = () => { let resolve, reject; const promise = new Promise((a, b) => { resolve = a; reject = b; }); return { promise, resolve, reject }; };
 const encounter = (id, title) => ({ id, encounter_type: 'consulta', status: 'draft', started_at: '2026-09-11T12:00:00Z', chief_complaint: title, vital_signs: {} });
 const patients = [701, 702].map(id => ({ id, full_name: `Paciente fictício ${id}` }));
@@ -29,9 +31,11 @@ function setup(overrides = {}) {
     return Promise.reject(new Error(`Unexpected request ${path}`));
   }]));
   const module = { exports: {} };
-  const context = vm.createContext({ module, exports: module.exports, URLSearchParams, Error,
-    window: { addEventListener: (name, fn) => events.set(name, fn), removeEventListener: (name, fn) => { if (events.get(name) === fn) events.delete(name); } },
-    require: name => name === '../lib/api' ? { api } : name === 'react-router-dom' ? {
+  const browserEvents={addEventListener:(name,fn)=>events.set(name,fn),removeEventListener:(name,fn)=>{if(events.get(name)===fn)events.delete(name);}};
+  const context = vm.createContext({ module, exports: module.exports, URLSearchParams, URL, Error,
+    document:browserEvents,
+    window: {...browserEvents,confirm:()=>overrides.confirm?.()??true,location:{pathname:'/prontuario'}},
+    require: name => name === '../lib/clinicalInput' ? inputModule.exports : name === '../lib/api' ? { api } : name === 'react-router-dom' ? {
       useSearchParams: () => {
         const [qs, set] = React.useState(new URLSearchParams('paciente=701'));
         route.set = value => set(typeof value === 'function' ? value : new URLSearchParams(value));
@@ -79,7 +83,7 @@ test('prontuario: delayed save/finalize cannot reopen another patient or finaliz
   try {
     await act(async () => { r = TestRenderer.create(React.createElement(Component)); });
     await click(r, '+ Iniciar atendimento');
-    const field = r.root.findAllByType('input').find(node => node.props.value === '' && !node.props['aria-label']);
+    const field = r.root.findAllByType('textarea')[0];
     await act(async () => { field.props.onChange({ target: { value: 'ANOTACAO A DEMO' } }); });
     await click(r, 'Finalizar');
     await act(async () => { route.set('paciente=702'); });
@@ -205,4 +209,41 @@ test('prontuario: queue start in the selected patient refreshes history and allo
     assert.match(visible(r.toJSON()), /ATENDIMENTO FILA DEMO/);
     assert.ok(button(r, 'Continuar'));
   } finally { if (r) act(() => r.unmount()); }
+});
+
+test('prontuario: sealed encounter exposes full text without editing and creates a separate amendment', async () => {
+  const sealed={...encounter(31,'QUEIXA SELADA'),status:'finalized',anamnesis:'ANAMNESE COMPLETA DEMO',physical_exam:'EXAME COMPLETO DEMO',assessment:'AVALIACAO COMPLETA DEMO',plan:'PLANO COMPLETO DEMO',finalized_at:'2026-09-11T13:00:00Z'};
+  const {Component,calls}=setup({get:path=>path==='/pacientes/701/atendimentos'?Promise.resolve([sealed]):undefined,
+    post:(path,payload)=>path==='/pacientes/701/atendimentos'?Promise.resolve({...encounter(32,'ADENDO NOVO'),...payload}):undefined});
+  let r;
+  try {
+    await act(async()=>{r=TestRenderer.create(React.createElement(Component));});
+    await click(r,'Ver atendimento completo');
+    for(const text of ['ANAMNESE COMPLETA DEMO','EXAME COMPLETO DEMO','AVALIACAO COMPLETA DEMO','PLANO COMPLETO DEMO'])assert.match(visible(r.toJSON()),new RegExp(text));
+    assert.equal(button(r,'Salvar rascunho'),undefined);assert.equal(button(r,'Finalizar'),undefined);
+    await click(r,'Registrar adendo');
+    await click(r,'Salvar rascunho');assert.match(visible(r.toJSON()),/Informe o motivo do adendo/);
+    await act(async()=>r.root.findAllByType('textarea').find(n=>n.props.required).props.onChange({target:{value:'Complementar informação clínica sintética'}}));
+    await click(r,'Salvar rascunho');
+    const save=calls.find(c=>c.method==='post');assert.equal(save.payload.amendment_of_id,31);assert.equal(save.payload.encounter_type,'adendo');
+    assert.equal(calls.filter(c=>c.method==='patch').length,0);
+  } finally {if(r)act(()=>r.unmount());}
+});
+
+test('prontuario: declining discard preserves patient, editor and unsaved text', async () => {
+  const {Component,route,events}=setup({confirm:()=>false});let r;
+  try {
+    await act(async()=>{r=TestRenderer.create(React.createElement(Component));});
+    await click(r,'+ Iniciar atendimento');
+    await act(async()=>r.root.findAllByType('textarea')[0].props.onChange({target:{value:'RASCUNHO NAO SALVO DEMO'}}));
+    await click(r,'Fechar');await click(r,'+ Iniciar atendimento');
+    await act(async()=>r.root.findAllByType('button').find(b=>b.props.className===''&&visible({children:b.children}).includes('702')).props.onClick());
+    assert.equal(route.qs.get('paciente'),'701');
+    assert.ok(r.root.findAllByType('textarea').some(n=>n.props.value==='RASCUNHO NAO SALVO DEMO'));
+    assert.ok(events.has('beforeunload'));
+    let blocked=false;events.get('beforeunload')({preventDefault:()=>{blocked=true;}});assert.equal(blocked,true);
+    await act(async()=>route.set('paciente=702'));
+    assert.equal(route.qs.get('paciente'),'701');
+    assert.ok(r.root.findAllByType('textarea').some(n=>n.props.value==='RASCUNHO NAO SALVO DEMO'));
+  } finally {if(r)act(()=>r.unmount());}
 });

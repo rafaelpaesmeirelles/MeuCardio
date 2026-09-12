@@ -9,6 +9,7 @@ import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
 import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import { calculatorFieldRequired, validateCalculatorFields } from "../lib/calculatorValidation";
 
 /**
  * Página de calculadora única — usada pelas 32 calculadoras do catálogo
@@ -32,6 +33,7 @@ type Campo = {
   name: string; label: string; type: string; unit: string | null;
   options: { value: string | number | boolean; label: string }[];
   min: number | null; max: number | null; help: string | null; required: boolean;
+  required_when?: Record<string, (string | number | boolean)[]> | null;
 };
 type Calc = {
   slug: string; name: string; theme: string; purpose: string; kind: string;
@@ -139,6 +141,11 @@ export default function Calculadora() {
 
   async function calcular() {
     if (!calc || calc.slug !== slug || calc.status === "referencia_externa") return;
+    if (Object.keys(validateCalculatorFields(calc.fields, valores)).length) {
+      setSaida(null);
+      setErro("Revise os campos indicados antes de calcular.");
+      return;
+    }
     const revisao = ++revisaoFormulario.current;
     setErro("");
     try {
@@ -207,10 +214,8 @@ export default function Calculadora() {
 
   const externa = calc.status === "referencia_externa";
 
-  const faltando = calc.fields.some(
-    (f) => f.required !== false && f.type !== "boolean"
-      && (valores[f.name] === undefined || valores[f.name] === "")
-  );
+  const errosCampos = validateCalculatorFields(calc.fields, valores);
+  const faltando = Object.keys(errosCampos).length > 0;
 
   return (
     <div style={{ maxWidth: 720 }}>
@@ -274,7 +279,7 @@ export default function Calculadora() {
             ) : (
               <>
                 <label htmlFor={f.name}>
-                  {f.label} {f.required === false && <span className="eyebrow">(opcional)</span>} {f.unit && <span className="eyebrow">({f.unit})</span>}
+                  {f.label} {!calculatorFieldRequired(f, valores) && <span className="eyebrow">(opcional)</span>} {f.unit && <span className="eyebrow">({f.unit})</span>}
                 </label>
                 <input
                   id={f.name}
@@ -283,12 +288,15 @@ export default function Calculadora() {
                   step="any"
                   min={f.min ?? undefined}
                   max={f.max ?? undefined}
+                  aria-invalid={Boolean(errosCampos[f.name] && valores[f.name] !== undefined && valores[f.name] !== "")}
+                  aria-describedby={errosCampos[f.name] && valores[f.name] !== undefined && valores[f.name] !== "" ? `${f.name}-erro` : undefined}
                   value={String(valores[f.name] ?? "")}
                   onChange={(e) => atualizarCampo(f.name, e.target.value)}
                 />
               </>
             )}
             {f.type !== "boolean" && f.help && <p style={{ fontSize: "0.8rem", color: "var(--texto-secundario)", margin: "0.3rem 0 0" }}>{f.help}</p>}
+            {errosCampos[f.name] && valores[f.name] !== undefined && valores[f.name] !== "" && <p id={`${f.name}-erro`} role="alert" style={{ margin: "0.3rem 0 0", color: "var(--perigo)", fontSize: "0.86rem" }}>{errosCampos[f.name]}</p>}
           </div>
         ))}
 

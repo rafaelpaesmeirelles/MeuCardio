@@ -78,7 +78,7 @@ def acesso_administrativo_sem_pagamento(user) -> bool:
     ("Acesso concedido administrativamente" em vez de "Assine agora").
     Nunca usar isto como gate de rota — para isso, `tem_acesso_ao_produto`.
     """
-    return bool(getattr(user, "is_active", True) and (user.convidado or user.investidor))
+    return bool(getattr(user, "is_active", True) and (user.role == "admin" or user.convidado or user.investidor))
 
 
 # --------------------------------------------------------------------------
@@ -117,3 +117,10 @@ def investidor_em_modo_demonstracao(user) -> bool:
     vez de consultar caixa real — hoje, só investidor. Convidado nunca cai
     aqui, porque tem caixa real."""
     return bool(getattr(user, "investidor", False))
+
+
+def tem_acesso_ao_chat(db, user) -> bool:
+    """Real communication is available to active product members, not demos."""
+    return bool(user and user.is_active and not user.investidor
+                and (user.role == "admin" or user.status == "aprovado")
+                and tem_acesso_ao_produto(db, user))

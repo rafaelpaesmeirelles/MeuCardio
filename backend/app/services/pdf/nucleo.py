@@ -232,6 +232,7 @@ class PDF:
         self.atual: list[bytes] = []
         self.imagens: dict[str, dict] = {}
         self.metadados = {"titulo": "", "autor": "", "assunto": ""}
+        self.links: dict[int, list[bytes]] = {}
 
     # -- página ------------------------------------------------------------
 
@@ -317,6 +318,13 @@ class PDF:
             f"q {larg:.2f} 0 0 {alt:.2f} {x:.2f} {y:.2f} cm /{nome} Do Q".encode()
         )
 
+    def link(self, x: float, y: float, largura: float, altura: float, url: str) -> None:
+        if not url.startswith(("https://", "http://")):
+            return
+        annotation = (f"<< /Type /Annot /Subtype /Link /Rect [{x:.2f} {y:.2f} {x + largura:.2f} {y + altura:.2f}] "
+                      "/Border [0 0 0] /A << /S /URI /URI ").encode() + _literal(url) + b" >> >>"
+        self.links.setdefault(len(self.paginas), []).append(annotation)
+
     # -- serialização ------------------------------------------------------
 
     def salvar(self, caminho: str) -> None:
@@ -375,9 +383,10 @@ class PDF:
 
         # As páginas precisam saber o número do /Pages e vice-versa; reservo o
         # número do /Pages antes de criar as páginas.
-        n_pages = len(objetos) + 2 * len(self.paginas) + 1
+        n_pages = add(b"")
         refs_pagina = []
-        for ops in self.paginas:
+        for indice_pagina, ops in enumerate(self.paginas):
+            annotations = [add(value) for value in self.links.get(indice_pagina, [])]
             fluxo = zlib.compress(b"\n".join(ops), 9)
             n_conteudo = add(
                 b"<< /Filter /FlateDecode /Length " + str(len(fluxo)).encode()
@@ -387,12 +396,12 @@ class PDF:
                 b"<< /Type /Page /Parent " + str(n_pages).encode() + b" 0 R"
                 + f" /MediaBox [0 0 {self.largura:.2f} {self.altura:.2f}]".encode()
                 + b" /Resources " + recursos
+                + (b" /Annots [" + b" ".join(f"{n} 0 R".encode() for n in annotations) + b"]" if annotations else b"")
                 + b" /Contents " + str(n_conteudo).encode() + b" 0 R >>"
             ))
 
-        add(b"<< /Type /Pages /Count " + str(len(refs_pagina)).encode()
+        objetos[n_pages - 1] = (b"<< /Type /Pages /Count " + str(len(refs_pagina)).encode()
             + b" /Kids [" + b" ".join(f"{n} 0 R".encode() for n in refs_pagina) + b"] >>")
-        assert len(objetos) == n_pages, "número do /Pages não bateu"
 
         n_info = add(
             b"<< /Title " + _literal(self.metadados["titulo"])

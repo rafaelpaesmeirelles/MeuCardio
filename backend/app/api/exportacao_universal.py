@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
+from html import escape
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Response
 from pydantic import BaseModel, Field, field_validator
@@ -20,7 +21,10 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.core.security import assinatura_email_ativa, current_user
 from app.models.audit import AuditLog
-from app.services import anexo_email_proprio, mail360
+from app.models.agenda import CalendarIntegration
+from app.services import anexo_email_proprio, mail360, external_mail, apple_mail, yahoo_mail
+from app.services.agenda_integrada.domain import integration_credentials
+from app.services.mail_attachments import MailAttachment
 from app.services.email_signature import montar_assinatura_html, montar_corpo_com_assinatura
 from app.services.exportacao_conteudo import TIPOS_EXPORTAVEIS, catalogo, gerar_pdf, resolver_conteudo
 from app.services.exportacao_office import gerar_docx, gerar_pptx
@@ -86,6 +90,7 @@ class PedidoExportacao(BaseModel):
 
 
 class PedidoEnvioEmail(PedidoExportacao):
+    conta_id: str = Field(default="corvia", min_length=1, max_length=40)
     para: str = Field(min_length=5, max_length=320)
     assunto: str | None = Field(default=None, max_length=240)
     mensagem: str | None = Field(default=None, max_length=5000)
@@ -241,31 +246,42 @@ def disponibilidade_corvia_mail(
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
-    """Estado mínimo para a UI da exportação, sem abrir sessão da caixa.
-
-    A exportação usa a sessão principal do CorVIA e pode enviar diretamente
-    apenas pela caixa nativa do próprio usuário. A senha/sessão específica da
-    caixa continua necessária para abrir e navegar no cliente de e-mail, mas
-    não para anexar/enviar um arquivo que o próprio backend acabou de gerar.
-    """
+    """Contas próprias com envio habilitado, sem expor credenciais nem enviar."""
     if getattr(user, "investidor", False):
-        return {"disponivel": False, "motivo": "Recurso indisponível no modo investidor.", "email_address": None}
+        return {"disponivel": False, "motivo": "Recurso indisponível no modo investidor.", "email_address": None, "contas": []}
     if not assinatura_email_ativa(db, user):
-        return {"disponivel": False, "motivo": "O envio direto exige assinatura ativa do CorVIA Mail.", "email_address": None}
-    if user.email_assinatura_digital_ativa:
-        return {
-            "disponivel": False,
-            "motivo": (
-                "A caixa nativa não suporta assinatura digital S/MIME. "
-                "Envie por uma conta Google, Microsoft, Yahoo ou iCloud conectada."
-            ),
-            "email_address": None,
-        }
-    try:
-        conta = anexo_email_proprio.obter_conta_nativa_ativa(db, user)
-    except anexo_email_proprio.AnexoIndisponivel as exc:
-        return {"disponivel": False, "motivo": str(exc), "email_address": None}
-    return {"disponivel": True, "motivo": None, "email_address": conta.email_address}
+        return {"disponivel": False, "motivo": "O envio direto exige assinatura ativa do CorVIA Mail.", "email_address": None, "contas": []}
+    contas = []
+    if not user.email_assinatura_digital_ativa:
+        try:
+            nativa = anexo_email_proprio.obter_conta_nativa_ativa(db, user)
+            if nativa.mail360_account_key:
+                contas.append({"id": "corvia", "provider": "CorVIA Mail", "email_address": nativa.email_address, "limite_anexo_mb": 15})
+        except anexo_email_proprio.AnexoIndisponivel:
+            pass
+    nomes = {"google_calendar": "Google", "microsoft_365": "Microsoft", "apple_icloud": "iCloud", "yahoo_mail": "Yahoo"}
+    for integracao in _integracoes_de_envio(db, user).order_by(CalendarIntegration.id.asc()).all():
+        if not (integracao.capabilities or {}).get("send_mail"):
+            continue
+        try:
+            endereco = external_mail._sender_address(integracao)
+        except external_mail.ExternalMailError:
+            continue
+        contas.append({"id": str(integracao.id), "provider": nomes[integracao.provider], "email_address": endereco,
+                       "limite_anexo_mb": 2 if integracao.provider == "microsoft_365" else 15})
+    motivo = None if contas else (
+        "Conecte uma conta com permissão de envio em Contas conectadas. "
+        + ("Com a assinatura S/MIME ativa, use Google, Microsoft, Yahoo ou iCloud." if user.email_assinatura_digital_ativa else "Você também pode ativar sua caixa nativa CorVIA Mail.")
+    )
+    return {"disponivel": bool(contas), "motivo": motivo, "email_address": contas[0]["email_address"] if contas else None, "contas": contas}
+
+
+def _integracoes_de_envio(db: Session, user):
+    return db.query(CalendarIntegration).filter(
+        CalendarIntegration.owner_id == user.id,
+        CalendarIntegration.enabled.is_(True), CalendarIntegration.status == "connected",
+        CalendarIntegration.provider.in_(("google_calendar", "microsoft_365", "apple_icloud", "yahoo_mail")),
+    )
 
 
 @router.post("/conteudo")
@@ -302,7 +318,7 @@ def enviar_conteudo_por_email(
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
-    """Gera e envia o formato escolhido diretamente pela caixa nativa CorVIA Mail.
+    """Gera e envia o formato escolhido pela caixa própria selecionada.
 
     O arquivo é regenerado no servidor no momento do envio. Portanto não existe um
     caminho em que o cliente possa trocar o binário por outro arquivo ou mandar
@@ -312,49 +328,57 @@ def enviar_conteudo_por_email(
         raise HTTPException(status_code=403, detail="Recurso indisponível no modo investidor.")
     if not assinatura_email_ativa(db, user):
         raise HTTPException(status_code=409, detail="O envio direto exige assinatura ativa do CorVIA Mail.")
-    if user.email_assinatura_digital_ativa:
-        raise HTTPException(
-            status_code=409,
-            detail=(
-                "A caixa nativa não suporta assinatura digital S/MIME. "
-                "Envie por uma conta Google, Microsoft, Yahoo ou iCloud conectada."
-            ),
-        )
-
-    try:
-        conta = anexo_email_proprio.obter_conta_nativa_ativa(db, user)
-    except anexo_email_proprio.AnexoIndisponivel as exc:
-        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    integracao = None
+    conta = None
+    if dados.conta_id == "corvia":
+        if user.email_assinatura_digital_ativa:
+            raise HTTPException(status_code=409, detail="Selecione uma conta conectada para enviar com assinatura S/MIME.")
+        try:
+            conta = anexo_email_proprio.obter_conta_nativa_ativa(db, user)
+        except anexo_email_proprio.AnexoIndisponivel as exc:
+            raise HTTPException(status_code=409, detail=str(exc)) from exc
+        if not conta.mail360_account_key:
+            raise HTTPException(status_code=409, detail="Sua caixa do CorVIA Mail ainda não está pronta para envio.")
+        remetente = conta.email_address
+    else:
+        if not dados.conta_id.isascii() or not dados.conta_id.isdigit() or int(dados.conta_id) > 9223372036854775807:
+            raise HTTPException(status_code=422, detail="Selecione uma conta de envio válida.")
+        integracao = _integracoes_de_envio(db, user).filter(CalendarIntegration.id == int(dados.conta_id)).first()
+        if integracao is None or not (integracao.capabilities or {}).get("send_mail"):
+            raise HTTPException(status_code=409, detail="A conta selecionada está desconectada ou sem permissão de envio. Atualize suas contas conectadas.")
+        try:
+            remetente = external_mail._sender_address(integracao)
+        except external_mail.ExternalMailError as exc:
+            raise HTTPException(status_code=409, detail=str(exc)) from exc
 
     arquivo = _gerar_do_pedido(dados, db, user)
-    if len(arquivo.conteudo) > 15 * 1024 * 1024:
-        raise HTTPException(status_code=413, detail="O arquivo gerado excede o limite de 15 MB para anexos do CorVIA Mail.")
-
-    try:
-        anexo = anexo_email_proprio.preparar(
-            db,
-            user,
-            nome_arquivo=arquivo.nome,
-            conteudo=arquivo.conteudo,
-        )
-    except anexo_email_proprio.AnexoIndisponivel as exc:
-        raise HTTPException(status_code=502, detail=str(exc)) from exc
+    limite_mb = 2 if integracao and integracao.provider == "microsoft_365" else 15
+    if len(arquivo.conteudo) > limite_mb * 1024 * 1024:
+        raise HTTPException(status_code=413, detail=f"O arquivo excede o limite de {limite_mb} MB para envio direto pela conta selecionada. Baixe o arquivo para compartilhar pelo seu cliente de e-mail.")
 
     assunto = re.sub(r"[\r\n]+", " ", (dados.assunto or f"{arquivo.titulo} — CorVIA")).strip()
     mensagem = (dados.mensagem or "Segue em anexo o conteúdo exportado do CorVIA.").strip()
     corpo, formato = montar_corpo_com_assinatura(mensagem, montar_assinatura_html(user))
+    anexo_file_id = None
     try:
-        resultado = mail360.enviar_mensagem(
-            conta.mail360_account_key,
-            conta.email_address,
-            dados.para,
-            assunto,
-            corpo,
-            anexos=[anexo.file_id],
-            cc=dados.cc,
-            cco=dados.cco,
-            mail_format=formato,
-        )
+        if integracao:
+            opcoes = dict(to=dados.para, subject=assunto, html=corpo if formato == "html" else escape(corpo).replace("\n", "<br>"),
+                          cc=dados.cc, bcc=dados.cco, user=user, assinar_smime=user.email_assinatura_digital_ativa,
+                          attachments=[MailAttachment(arquivo.nome, arquivo.conteudo, arquivo.media_type)])
+            if integracao.provider in {"apple_icloud", "yahoo_mail"}:
+                modulo = apple_mail if integracao.provider == "apple_icloud" else yahoo_mail
+                resultado = modulo.send_message(integration_credentials(integracao), db=db, **opcoes)
+            else:
+                resultado = external_mail.send_message(db, integracao, **opcoes)
+        else:
+            anexo = anexo_email_proprio.preparar(db, user, nome_arquivo=arquivo.nome, conteudo=arquivo.conteudo)
+            anexo_file_id = anexo.file_id
+            resultado = mail360.enviar_mensagem(conta.mail360_account_key, conta.email_address, dados.para, assunto, corpo,
+                                               anexos=[anexo.file_id], cc=dados.cc, cco=dados.cco, mail_format=formato)
+    except anexo_email_proprio.AnexoIndisponivel as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+    except (external_mail.ExternalMailError, apple_mail.AppleMailError, yahoo_mail.YahooMailError) as exc:
+        raise HTTPException(status_code=exc.status_code, detail=str(exc)) from exc
     except Mail360Error as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
@@ -373,7 +397,9 @@ def enviar_conteudo_por_email(
             "bytes": len(arquivo.conteudo),
             "formato": arquivo.formato,
             "assinado_digitalmente": arquivo.assinado_digitalmente,
-            "anexo_file_id": anexo.file_id,
+            "anexo_file_id": anexo_file_id,
+            "conta_id": dados.conta_id,
+            "assinado_smime": bool(user.email_assinatura_digital_ativa),
             "com_cc": bool(dados.cc),
             "com_cco": bool(dados.cco),
         },
@@ -381,9 +407,9 @@ def enviar_conteudo_por_email(
     db.commit()
     return {
         "enviado": True,
-        "remetente": conta.email_address,
+        "remetente": remetente,
         "para": dados.para,
         "assunto": assunto,
         "arquivo": arquivo.nome,
-        "message_id": resultado.get("messageId") if isinstance(resultado, dict) else None,
+        "message_id": (resultado.get("messageId") or resultado.get("id")) if isinstance(resultado, dict) else None,
     }

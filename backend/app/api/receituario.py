@@ -38,6 +38,8 @@ from app.services.classificacao_receituario import (
     ItemPrescrito, Regra, Substancia, classificar, normalizar,
 )
 from app.services.kyc import escopo_profissional
+from app.services.kyc.access import exigir_liberacao_emissao
+from app.services.clinical_ownership import patient_for_user
 from app.services import emails, envio_documento_email
 from app.services.assinatura import divulgacao_email
 from app.services.professional_profile import (
@@ -377,6 +379,8 @@ def classificar_previa(dados: ReceituarioIn, db: Session = Depends(get_db),
 
 @router.post("", status_code=201)
 def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(current_user)):
+    if dados.patient_id is not None:
+        patient_for_user(dados.patient_id, db, user)
     subs, regras, versao = _carregar_regras(db)
     resultado = classificar(_resolver(db, dados.itens), subs, regras)
 
@@ -602,6 +606,27 @@ class EmitirIn(BaseModel):
     metodo: str | None = None
 
 
+@router.get("/documentos/{documento_id}/pdf")
+def baixar_original(documento_id: int, db: Session = Depends(get_db), user=Depends(current_user)):
+    """Recupera os bytes emitidos; não regenera nem assina novamente."""
+    doc = db.get(PrescriptionDocument, documento_id)
+    presc = db.get(Prescription, doc.prescription_id) if doc else None
+    if not presc or presc.created_by != user.id:
+        raise HTTPException(status_code=404, detail="Documento não encontrado.")
+    registro = assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_RECEITA, referencia_id=doc.id)
+    if doc.status != "emitido" or not registro or registro.criado_por != user.id:
+        raise HTTPException(status_code=404, detail="PDF original não disponível para este documento.")
+    try:
+        pdf = assinatura_emissao.ler_bytes(registro)
+    except FileNotFoundError as error:
+        raise HTTPException(status_code=404, detail="Arquivo original não encontrado no armazenamento.") from error
+    return Response(content=pdf, media_type="application/pdf", headers={
+        "Content-Disposition": f'attachment; filename="receituario-{doc.id}.pdf"',
+        "Cache-Control": "private, no-store",
+        "X-Corvia-Assinatura": "assinada" if registro.assinado_em else "nao-assinada",
+    })
+
+
 @router.post("/documentos/{documento_id}/emitir")
 def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depends(get_db),
           user=Depends(current_user)):
@@ -611,6 +636,8 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
     presc = db.get(Prescription, doc.prescription_id)
     if not presc or presc.created_by != user.id:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
+
+    exigir_liberacao_emissao(db, user)
 
     if dados.endereco not in (None, "residencial", "profissional"):
         raise HTTPException(

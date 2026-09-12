@@ -39,7 +39,11 @@ def _linked_accounts(db: Session, conta: EmailAccount) -> list[EmailAccount]:
     )
     if not ids:
         return []
-    contas = db.query(EmailAccount).filter(EmailAccount.id.in_(ids)).all()
+    contas = db.query(EmailAccount).join(User, User.id == EmailAccount.user_id).filter(
+        EmailAccount.id.in_(ids), EmailAccount.status == "ativa",
+        EmailAccount.mail360_account_key.isnot(None), User.is_active.is_(True),
+        User.investidor.is_(False),
+    ).all()
     por_id = {item.id: item for item in contas}
     return [por_id[item_id] for item_id in ids if item_id in por_id and item_id != conta.id]
 
@@ -54,6 +58,9 @@ def _linked_account(db: Session, conta: EmailAccount, account_id: int) -> EmailA
     ).scalar_one_or_none()
     alvo = db.get(EmailAccount, account_id) if permitido else None
     if alvo is None or alvo.id == conta.id:
+        raise HTTPException(status_code=404, detail="Caixa delegada não encontrada.")
+    owner = db.get(User, alvo.user_id)
+    if alvo.status != "ativa" or owner is None or not owner.is_active or owner.investidor:
         raise HTTPException(status_code=404, detail="Caixa delegada não encontrada.")
     if not alvo.mail360_account_key:
         raise HTTPException(status_code=503, detail="Caixa delegada ainda não está disponível.")

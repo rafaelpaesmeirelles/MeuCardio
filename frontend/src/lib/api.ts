@@ -1,4 +1,5 @@
 import { clearLegacyClinicalCaches } from "./clinicalCache";
+import { clearLoginReturn, saveLoginReturn } from "./loginReturn";
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 const LEGACY_TOKEN_KEY = "meucardio.token";
 
@@ -130,6 +131,7 @@ async function erroDaResposta(res: Response, fallback: string): Promise<ApiError
 function redirecionarSessaoExpirada() {
   removerTokenLegado();
   if (!window.location.pathname.startsWith("/entrar")) {
+    saveLoginReturn(window.location.pathname + window.location.search + window.location.hash);
     window.location.assign("/entrar");
   }
 }
@@ -364,6 +366,7 @@ export const api = {
         credentials: "include",
       });
     } finally {
+      clearLoginReturn();
       removerTokenLegado();
       try {
         await clearLegacyClinicalCaches();

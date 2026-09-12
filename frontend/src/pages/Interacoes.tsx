@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useRequestRevision } from "../lib/useRequestRevision";
 import { api, todasAsPaginas } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import ClinicalText from "../components/ClinicalText";
@@ -69,6 +70,7 @@ export default function Interacoes() {
   const [resultado, setResultado] = useState<Resultado | null>(null);
   const [erro, setErro] = useState("");
   const [checando, setChecando] = useState(false);
+  const checkRequests = useRequestRevision(JSON.stringify(escolhidos));
 
   useEffect(() => {
     todasAsPaginas<{ slug: string; generic_name: string; brand_names: string[]; commercial_names: string[] }>("/drugs")
@@ -88,19 +90,25 @@ export default function Interacoes() {
   }
 
   function alternar(slug: string) {
+    checkRequests.invalidate();
+    setChecando(false);
+    setErro("");
     setResultado(null);
     setEscolhidos((atual) => atual.includes(slug) ? atual.filter((s) => s !== slug) : [...atual, slug]);
   }
 
   async function checar() {
+    const isCurrent = checkRequests.begin();
     setChecando(true);
+    setResultado(null);
     setErro("");
     try {
-      setResultado(await api.post<Resultado>("/drugs/interacoes", { slugs: escolhidos }));
+      const response = await api.post<Resultado>("/drugs/interacoes", { slugs: escolhidos });
+      if (isCurrent()) setResultado(response);
     } catch (e: unknown) {
-      setErro(e instanceof Error ? e.message : "Não foi possível verificar as interações.");
+      if (isCurrent()) setErro(e instanceof Error ? e.message : "Não foi possível verificar as interações.");
     } finally {
-      setChecando(false);
+      if (isCurrent()) setChecando(false);
     }
   }
 

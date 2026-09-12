@@ -586,10 +586,21 @@ def esqueci_senha_email(dados: EsqueciSenhaEmail, db: Session = Depends(get_db))
     independente, não cria token nem envia um link para a própria caixa."""
     resposta = {"nota": "Se o endereço existir e estiver ativo, um link de redefinição foi gerado."}
     endereco = dados.endereco.strip().lower()
-    conta = db.query(EmailAccount).filter(EmailAccount.email_address == endereco).first()
+    # Per-identifier serialization and cooldown works across workers, including
+    # attempts from different IPs. The HTTP middleware also bounds each IP.
+    from datetime import datetime, timedelta, timezone
+    conta = db.query(EmailAccount).filter(
+        EmailAccount.email_address == endereco, EmailAccount.status == "ativa",
+    ).first()
     if conta:
-        user = db.get(User, conta.user_id)
-        if user and not user.investidor:
+        user = db.query(User).filter(User.id == conta.user_id).with_for_update().populate_existing().first()
+        if user and user.is_active and not user.investidor:
+            recent = db.query(PasswordResetToken.id).filter(
+                PasswordResetToken.user_id == user.id, PasswordResetToken.alvo == "email",
+                PasswordResetToken.created_at > datetime.now(timezone.utc) - timedelta(minutes=15),
+            ).first()
+            if recent:
+                return resposta
             destino = (destinatario_seguro(db, user) or "").strip().lower()
             if not destino or destino == conta.email_address.strip().lower():
                 return resposta

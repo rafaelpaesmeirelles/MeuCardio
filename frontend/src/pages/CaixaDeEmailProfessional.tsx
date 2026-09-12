@@ -266,32 +266,77 @@ export default function CaixaDeEmailProfessional() {
   const [busca, setBusca] = useState(""); const [filtro, setFiltro] = useState<Filtro>("todas"); const [selecionadas, setSelecionadas] = useState<Set<string>>(new Set());
   const [carregandoContexto, setCarregandoContexto] = useState(false); const [atualizando, setAtualizando] = useState(false); const [erro, setErro] = useState<string | null>(null); const [aviso, setAviso] = useState<string | null>(null);
   const [compondo, setCompondo] = useState(false); const [rascunho, setRascunho] = useState<Rascunho>(RASCUNHO_VAZIO); const [mostrarCopias, setMostrarCopias] = useState(false); const [anexos, setAnexos] = useState<AnexoEnviado[]>([]); const [verificacoes, setVerificacoes] = useState<Record<string, Verificacao>>({}); const [enviando, setEnviando] = useState(false); const [enviandoAnexo, setEnviandoAnexo] = useState(false); const [contatos, setContatos] = useState<Contato[]>([]);
+  const paginas = useRef<Record<string, { inicio: number; mais: boolean }>>({});
+  const [temMais, setTemMais] = useState(false);
+  const [carregandoMais, setCarregandoMais] = useState(false);
   const contextoSeq = useRef(0);
   const leituraSeq = useRef(0);
 
   function falha(e: unknown, fallback: string) { if (e instanceof ApiEmailError && e.status === 401) { setSemSessao(true); return "Sua sessão expirou. Entre novamente."; } return e instanceof ApiEmailError ? e.message : fallback; }
   function sair() { tokenEmail.clear(); navigate("/corvia-mail"); }
 
-  async function carregarCombinada(ids: Set<string>, seq = contextoSeq.current) {
-    const params = new URLSearchParams({ limite: "50", contas: [...ids].join(",") });
-    const r = await apiEmail.get<CaixaCombinada>(`/email/mensagens/todas?${params}`);
+  const nativa = (id: string) => contas.find(c => c.id === id)?.native === true;
+  function invalidarContexto() {
+    ++contextoSeq.current; ++leituraSeq.current;
+    setMensagens([]); setSelecionadas(new Set()); setAberta(null); setAnexosRecebidos([]);
+    setCarregandoMais(false); setAtualizando(false); paginas.current = {}; setTemMais(false);
+  }
+
+  async function carregarPagina(ids: string[], pasta: string | undefined, seq: number, append = false) {
+    const results = await Promise.allSettled(ids.map(async id => {
+      const cursor = append ? paginas.current[id] : { inicio: 1, mais: true };
+      if (!cursor?.mais) return { id, lista: [] as Mensagem[], cursor };
+      const params = new URLSearchParams({ limite: "100", inicio: String(cursor.inicio) });
+      if (pasta) params.set("pasta", pasta);
+      const lista = await apiEmail.get<Mensagem[]>(`${prefixo(id)}/mensagens?${params}`);
+      return { id, lista: lista.map(m => ({ ...m, origem: id })),
+        cursor: { inicio: cursor.inicio + lista.length, mais: lista.length === 100 } };
+    }));
     if (seq !== contextoSeq.current) return;
-    setMensagens(r.mensagens); setFontesComErro(r.fontes_com_erro ?? []); setPastas([]); setPastaId(undefined);
+    const novos: Mensagem[] = [], errors: CaixaCombinada["fontes_com_erro"] = [];
+    results.forEach((result, index) => {
+      const id = ids[index];
+      if (result.status === "fulfilled") {
+        novos.push(...result.value.lista);
+        if (result.value.cursor) paginas.current[id] = result.value.cursor;
+      } else {
+        if (!paginas.current[id]) paginas.current[id] = { inicio: 1, mais: true };
+        errors.push({ origem: id, provider: contas.find(c => c.id === id)?.provider ?? "corvia", erro: falha(result.reason, "Conta indisponível.") });
+      }
+    });
+    setMensagens(previous => {
+      const unique = new Map((append ? [...previous, ...novos] : novos).map(m => [`${m.origem}:${idMensagem(m)}`, m]));
+      return [...unique.values()].sort((a, b) => (dataObj(b)?.getTime() ?? 0) - (dataObj(a)?.getTime() ?? 0));
+    });
+    setFontesComErro(errors);
+    setTemMais(Object.values(paginas.current).some(p => p.mais));
   }
 
-  async function carregarConta(id: string, seq = contextoSeq.current) {
-    const p = prefixo(id); const listaPastas = await apiEmail.get<Pasta[]>(`${p}/pastas`); if (seq !== contextoSeq.current) return;
-    setPastas(listaPastas);
-    const inbox = listaPastas.find((x) => nomePasta(x) === "Entrada") ?? listaPastas[0]; const alvo = inbox ? idPasta(inbox) : undefined; setPastaId(alvo);
-    const params = new URLSearchParams({ limite: "100", inicio: "1" }); if (alvo) params.set("pasta", alvo);
-    const lista = await apiEmail.get<Mensagem[]>(`${p}/mensagens?${params}`); if (seq !== contextoSeq.current) return; setMensagens(lista); setFontesComErro([]);
-  }
-
-  async function carregarContexto() {
-    if (!endereco) return; const seq = ++contextoSeq.current; setCarregandoContexto(true); setErro(null); setAberta(null); setAnexosRecebidos([]); setSelecionadas(new Set());
-    try { if (combinadas?.size) await carregarCombinada(combinadas, seq); else await carregarConta(contaId, seq); }
-    catch (e) { if (seq === contextoSeq.current) { setMensagens([]); setErro(falha(e, "Não foi possível carregar esta caixa.")); } }
+  async function carregarContexto(preferida?: string) {
+    if (!endereco) return;
+    invalidarContexto(); const seq = contextoSeq.current; setCarregandoContexto(true); setErro(null);
+    try {
+      if (combinadas?.size) {
+        setPastas([]); setPastaId(undefined);
+        await carregarPagina([...combinadas], undefined, seq);
+      } else {
+        const lista = await apiEmail.get<Pasta[]>(`${prefixo(contaId)}/pastas`);
+        if (seq !== contextoSeq.current) return;
+        setPastas(lista);
+        const anterior = preferida ?? pastaId;
+        const pasta = lista.find(p => idPasta(p) === anterior) ?? lista.find(p => nomePasta(p) === "Entrada") ?? lista[0];
+        const id = pasta ? idPasta(pasta) : undefined;
+        setPastaId(id); await carregarPagina([contaId], id, seq);
+      }
+    } catch (e) { if (seq === contextoSeq.current) setErro(falha(e, "Não foi possível carregar esta caixa.")); }
     finally { if (seq === contextoSeq.current) setCarregandoContexto(false); }
+  }
+
+  async function carregarMais() {
+    if (carregandoMais || carregandoContexto || !temMais) return;
+    const seq = contextoSeq.current; setCarregandoMais(true);
+    try { await carregarPagina(combinadas ? [...combinadas] : [contaId], combinadas ? undefined : pastaId, seq, true); }
+    finally { if (seq === contextoSeq.current) setCarregandoMais(false); }
   }
 
   useEffect(() => {
@@ -308,23 +353,22 @@ export default function CaixaDeEmailProfessional() {
 
   useEffect(() => {
     if (semSessao) return; const bruto = sessionStorage.getItem(CHAVE_PENDING_COMPOSE); if (!bruto) return; sessionStorage.removeItem(CHAVE_PENDING_COMPOSE);
-    try { const p = JSON.parse(bruto) as { para: string; assunto: string; corpo: string; anexos: AnexoEnviado[] }; setRascunho({ ...RASCUNHO_VAZIO, de: contas.find((c) => c.padrao)?.id ?? "corvia", para: p.para, assunto: p.assunto, corpo: p.corpo }); setAnexos(p.anexos ?? []); setCompondo(true); } catch { /* ignora payload inválido */ }
+    try { const p = JSON.parse(bruto) as { para: string; assunto: string; corpo: string; anexos: AnexoEnviado[] }; setRascunho({ ...RASCUNHO_VAZIO, de: p.anexos?.length ? "corvia" : contas.find((c) => c.padrao)?.id ?? "corvia", para: p.para, assunto: p.assunto, corpo: p.corpo }); setAnexos(p.anexos ?? []); setCompondo(true); } catch { /* ignora payload inválido */ }
   }, [semSessao, contas]);
 
   async function mudarPasta(id: string) {
-    if (combinadas) return; setPastaId(id); setAberta(null); setSelecionadas(new Set()); setAtualizando(true); setErro(null);
-    ++leituraSeq.current;
-    try { const params = new URLSearchParams({ limite: "100", inicio: "1", pasta: id }); setMensagens(await apiEmail.get<Mensagem[]>(`${prefixo(contaId)}/mensagens?${params}`)); }
-    catch (e) { setErro(falha(e, "Não foi possível carregar a pasta.")); }
-    finally { setAtualizando(false); }
+    if (combinadas) return;
+    invalidarContexto(); const seq = contextoSeq.current; setPastaId(id); setCarregandoContexto(true); setErro(null);
+    try { await carregarPagina([contaId], id, seq); }
+    finally { if (seq === contextoSeq.current) setCarregandoContexto(false); }
   }
 
-  function selecionarConta(id: string) { setCombinadas(null); localStorage.removeItem(CHAVE_COMBINADAS); setContaId(id); localStorage.setItem(CHAVE_CONTA, id); }
-  function selecionarTodas() { const ids = new Set(contas.filter((c) => c.read_mail).map((c) => c.id)); if (ids.size < 2) return; setCombinadas(ids); localStorage.setItem(CHAVE_COMBINADAS, JSON.stringify([...ids])); }
+  function selecionarConta(id: string) { if (id === contaId && !combinadas) return; invalidarContexto(); setPastaId(undefined); setCombinadas(null); localStorage.removeItem(CHAVE_COMBINADAS); setContaId(id); localStorage.setItem(CHAVE_CONTA, id); }
+  function selecionarTodas() { const ids = new Set(contas.filter((c) => c.read_mail).map((c) => c.id)); if (ids.size < 2 || (combinadas && [...ids].every(id => combinadas.has(id)) && ids.size === combinadas.size)) return; invalidarContexto(); setCombinadas(ids); localStorage.setItem(CHAVE_COMBINADAS, JSON.stringify([...ids])); }
 
   async function abrirMensagem(m: Mensagem) {
     readerReturnRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    const origem = combinadas ? (m.origem ?? "corvia") : contaId; const id = idMensagem(m); if (!id) return; setErro(null);
+    const origem = m.origem ?? contaId; const id = idMensagem(m); if (!id) return; setErro(null);
     const current = ++leituraSeq.current;
     const context = contextoSeq.current;
     const isCurrent = () => current === leituraSeq.current && context === contextoSeq.current;
@@ -333,8 +377,8 @@ export default function CaixaDeEmailProfessional() {
       const completa = await apiEmail.get<Mensagem>(`${prefixo(origem)}/mensagens/${encodeURIComponent(id)}`);
       if (!isCurrent()) return;
       completa.origem = origem; setAberta(completa); setMensagens((ls) => ls.map((x) => idMensagem(x) === id && (!combinadas || x.origem === origem) ? { ...x, status: "1" } : x));
-      if (origem === "corvia" && temAnexo(completa)) {
-        const attachments = await apiEmail.get<AnexoRecebido[]>(`/email/mensagens/${encodeURIComponent(id)}/anexos`).catch(() => []);
+      if (nativa(origem) && temAnexo(completa)) {
+        const attachments = await apiEmail.get<AnexoRecebido[]>(`${prefixo(origem)}/mensagens/${encodeURIComponent(id)}/anexos`).catch(() => []);
         if (isCurrent()) setAnexosRecebidos(attachments);
       }
     } catch (e) { if (isCurrent()) setErro(falha(e, "Não foi possível abrir a mensagem.")); }
@@ -348,42 +392,59 @@ export default function CaixaDeEmailProfessional() {
   }
 
   async function agir(acao: "lida" | "nao_lida" | "mover" | "sinalizar", ids: string[], extras: Record<string, string> = {}) {
-    if (!ids.length || combinadas) return; setAtualizando(true); try { await apiEmail.put(`${prefixo(contaId)}/mensagens/acoes`, { message_ids: ids, acao, ...extras }); await carregarContexto(); setAviso("Ação aplicada."); } catch (e) { setErro(falha(e, "Não foi possível atualizar as mensagens.")); } finally { setAtualizando(false); }
+    if (!ids.length || combinadas || atualizando || carregandoContexto) return;
+    const seq = contextoSeq.current, origem = contaId;
+    setAtualizando(true);
+    try {
+      await apiEmail.put(`${prefixo(origem)}/mensagens/acoes`, { message_ids: ids, acao, ...extras });
+      if (seq !== contextoSeq.current) return;
+      setAviso("Ação aplicada."); await carregarContexto(pastaId);
+    } catch (e) { if (seq === contextoSeq.current) setErro(falha(e, "Não foi possível atualizar as mensagens.")); }
+    finally { if (seq === contextoSeq.current) setAtualizando(false); }
   }
 
   async function excluirMensagem(m: Mensagem) {
-    const origem = m.origem ?? contaId; const id = idMensagem(m); if (!id || !window.confirm("Mover esta mensagem para a lixeira?")) return; setAtualizando(true);
-    try { await apiEmail.delete(`${prefixo(origem)}/mensagens/${encodeURIComponent(id)}`); setMensagens((ls) => ls.filter((x) => !(idMensagem(x) === id && (!combinadas || (x.origem ?? "corvia") === origem)))); if (aberta && idMensagem(aberta) === id) setAberta(null); setSelecionadas((ids) => { const n = new Set(ids); n.delete(id); return n; }); setAviso("Mensagem removida."); }
-    catch (e) { setErro(falha(e, "Não foi possível remover a mensagem.")); } finally { setAtualizando(false); }
+    const origem = m.origem ?? contaId, id = idMensagem(m);
+    if (!id || atualizando || !window.confirm("Mover esta mensagem para a lixeira?")) return;
+    const seq = contextoSeq.current; setAtualizando(true);
+    try {
+      await apiEmail.delete(`${prefixo(origem)}/mensagens/${encodeURIComponent(id)}`);
+      if (seq !== contextoSeq.current) return;
+      setMensagens(ls => ls.filter(x => !(idMensagem(x) === id && (x.origem ?? contaId) === origem)));
+      if (aberta && idMensagem(aberta) === id && (aberta.origem ?? contaId) === origem) fecharMensagem();
+      setSelecionadas(ids => { const next = new Set(ids); next.delete(id); return next; });
+      setAviso("Mensagem removida.");
+    } catch (e) { if (seq === contextoSeq.current) setErro(falha(e, "Não foi possível remover a mensagem.")); }
+    finally { if (seq === contextoSeq.current) setAtualizando(false); }
   }
 
   async function excluirSelecionadas() {
-    if (combinadas || selecionadas.size === 0) return;
-    const ids = [...selecionadas];
-    if (!window.confirm(`Mover ${ids.length} ${ids.length === 1 ? "mensagem" : "mensagens"} para a lixeira?`)) return;
+    if (combinadas || selecionadas.size === 0 || atualizando || carregandoContexto) return;
+    const ids = [...selecionadas], origem = contaId, seq = contextoSeq.current;
+    if (!window.confirm(`Mover ${ids.length} mensagens para a lixeira?`)) return;
     setAtualizando(true); setErro(null);
-    try {
-      await Promise.all(ids.map((id) => apiEmail.delete(`${prefixo(contaId)}/mensagens/${encodeURIComponent(id)}`)));
-      const removidas = new Set(ids);
-      setMensagens((ls) => ls.filter((m) => !removidas.has(idMensagem(m))));
-      if (aberta && removidas.has(idMensagem(aberta))) setAberta(null);
-      setSelecionadas(new Set());
-      setAviso(`${ids.length} ${ids.length === 1 ? "mensagem removida" : "mensagens removidas"}.`);
-    } catch (e) { setErro(falha(e, "Não foi possível remover todas as mensagens selecionadas.")); }
-    finally { setAtualizando(false); }
+    const results = await Promise.allSettled(ids.map(id => apiEmail.delete(`${prefixo(origem)}/mensagens/${encodeURIComponent(id)}`)));
+    if (seq !== contextoSeq.current) return;
+    const removed = new Set(ids.filter((_, i) => results[i].status === "fulfilled"));
+    setMensagens(ls => ls.filter(m => !removed.has(idMensagem(m))));
+    if (aberta && removed.has(idMensagem(aberta))) fecharMensagem();
+    setSelecionadas(new Set(ids.filter(id => !removed.has(id))));
+    setAtualizando(false);
+    if (removed.size !== ids.length) setErro(`${removed.size} mensagem(ns) removida(s); as demais continuam selecionadas para uma nova tentativa.`);
+    else setAviso(`${removed.size} mensagem(ns) removida(s).`);
   }
 
   function novaMensagem() { setErro(null); const de = contas.find((c) => c.padrao && c.send_mail)?.id ?? contas.find((c) => c.send_mail)?.id ?? "corvia"; setRascunho({ ...RASCUNHO_VAZIO, de }); setAnexos([]); setVerificacoes({}); setMostrarCopias(false); setCompondo(true); }
-  function responder(modo: "reply" | "replyall" | "forward") { if (!aberta) return; setErro(null); const origem = aberta.origem ?? contaId; const assunto = aberta.subject ?? "(sem assunto)"; setRascunho({ ...RASCUNHO_VAZIO, modo, origem, messageId: idMensagem(aberta), de: origem, para: modo === "forward" ? "" : extrairEmail(remetente(aberta)), cc: modo === "replyall" ? (aberta.ccAddress ?? "") : "", assunto: /^(re:|enc:)/i.test(assunto) ? assunto : `${modo === "forward" ? "Enc:" : "Re:"} ${assunto}` }); setAnexos([]); setMostrarCopias(modo === "replyall"); setCompondo(true); }
+  function responder(modo: "reply" | "replyall" | "forward") { if (!aberta) return; setErro(null); const origem = aberta.origem ?? contaId; const assunto = aberta.subject ?? "(sem assunto)"; setRascunho({ ...RASCUNHO_VAZIO, modo, origem, messageId: idMensagem(aberta), de: origem, para: modo === "forward" ? "" : extrairEmail(remetente(aberta)), cc: modo === "replyall" ? (aberta.ccAddress ?? "") : "", assunto: /^(re:|enc:)/i.test(assunto) ? assunto : `${modo === "forward" ? "Enc:" : "Re:"} ${assunto}`, corpo: nativa(origem) ? "" : `\n\n--- Mensagem original ---\nDe: ${remetente(aberta)}\nAssunto: ${assunto}\n${new DOMParser().parseFromString(aberta.content ?? aberta.htmlContent ?? aberta.summary ?? "", "text/html").body.textContent ?? ""}` }); setAnexos([]); setMostrarCopias(modo === "replyall"); setCompondo(true); }
 
-  async function anexar(file: File) { if (rascunho.de !== "corvia") { setErro("Anexos em contas externas ainda não são suportados com segurança. Selecione CorvIA Mail no campo De."); return; } setEnviandoAnexo(true); try { const r = await apiEmail.uploadAnexo(file); setAnexos((a) => [...a, r]); apiEmail.verificarAssinaturaAnexo(file).then((v) => setVerificacoes((x) => ({ ...x, [r.file_id]: v }))).catch(() => {}); } catch (e) { setErro(falha(e, "Não foi possível anexar o arquivo.")); } finally { setEnviandoAnexo(false); } }
+  async function anexar(file: File) { if (!nativa(rascunho.de)) { setErro("Anexos em contas externas ainda não são suportados com segurança. Selecione CorvIA Mail no campo De."); return; } setEnviandoAnexo(true); try { const r = await apiEmail.uploadAnexo(file, prefixo(rascunho.de)); setAnexos((a) => [...a, r]); apiEmail.verificarAssinaturaAnexo(file, prefixo(rascunho.de)).then((v) => setVerificacoes((x) => ({ ...x, [r.file_id]: v }))).catch(() => {}); } catch (e) { setErro(falha(e, "Não foi possível anexar o arquivo.")); } finally { setEnviandoAnexo(false); } }
 
   async function enviar() {
     if (!rascunho.para.trim()) { setErro("Informe ao menos um destinatário."); return; } setEnviando(true); setErro(null);
     try {
       const origem = rascunho.de;
-      if (rascunho.modo === "nova" || origem !== "corvia") await apiEmail.post(`${prefixo(origem)}/mensagens`, { para: rascunho.para, cc: rascunho.cc || null, cco: rascunho.cco || null, assunto: rascunho.assunto, corpo_html: rascunho.corpo, anexos: origem === "corvia" ? anexos.map((a) => a.file_id) : [] });
-      else await apiEmail.post(`/email/mensagens/${encodeURIComponent(rascunho.messageId ?? "")}/responder`, { acao: rascunho.modo, para: rascunho.modo === "forward" ? rascunho.para : null, cc: rascunho.cc || null, cco: rascunho.cco || null, assunto: rascunho.assunto, conteudo: rascunho.corpo, anexos: anexos.map((a) => a.file_id) });
+      if (rascunho.modo === "nova" || !nativa(origem) || origem !== rascunho.origem) await apiEmail.post(`${prefixo(origem)}/mensagens`, { para: rascunho.para, cc: rascunho.cc || null, cco: rascunho.cco || null, assunto: rascunho.assunto, corpo_html: rascunho.corpo, anexos: nativa(origem) ? anexos.map((a) => a.file_id) : [] });
+      else await apiEmail.post(`${prefixo(origem)}/mensagens/${encodeURIComponent(rascunho.messageId ?? "")}/responder`, { acao: rascunho.modo, para: rascunho.modo === "forward" ? rascunho.para : null, cc: rascunho.cc || null, cco: rascunho.cco || null, assunto: rascunho.assunto, conteudo: rascunho.corpo, anexos: anexos.map((a) => a.file_id) });
       setCompondo(false); setRascunho(RASCUNHO_VAZIO); setAnexos([]); setAviso("Mensagem enviada.");
     } catch (e) { setErro(falha(e, "Não foi possível enviar a mensagem.")); } finally { setEnviando(false); }
   }
@@ -408,7 +469,7 @@ export default function CaixaDeEmailProfessional() {
   return <main className="cmp-shell">
     <header className="cmp-topbar">
       <div className="cmp-brand"><LogoCorviaMail tamanho="compacto" /><span><strong>CorvIA Mail</strong><small>{combinadas ? `${combinadas.size} contas unificadas` : `${NOMES_PROVEDOR[contaAtual?.provider ?? "corvia"]} · ${contaAtual?.email_address ?? endereco}`}</small></span></div>
-      <label className="cmp-global-search"><span aria-hidden="true">⌕</span><input aria-label="Pesquisar nesta caixa" value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Pesquisar nesta caixa" /></label>
+      <label className="cmp-global-search"><span aria-hidden="true">⌕</span><input aria-label="Pesquisar nas mensagens carregadas" value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Pesquisar nas mensagens carregadas" /></label>
       <div className="cmp-user">{usuario?.photo_url ? <img src={usuario.photo_url} alt="" /> : <span style={{ background: corAvatar(usuario?.full_name || usuario?.email || endereco) }}>{iniciais(usuario?.full_name || usuario?.email || endereco)}</span>}<div><strong>{usuario?.full_name || "Minha conta"}</strong><small>{usuario?.email}</small></div><button onClick={sair} title="Sair">⏻</button></div>
     </header>
 
@@ -439,17 +500,18 @@ export default function CaixaDeEmailProfessional() {
       </aside>
 
       <section className="cmp-list">
-        <div className="cmp-list__header"><div><p>{combinadas ? "Caixa unificada" : nomePasta(pastaAtual ?? {})}</p><h2>{filtradas.length} mensagens</h2></div><button onClick={() => void carregarContexto()} disabled={atualizando || carregandoContexto} title="Atualizar">↻</button></div>
+        <div className="cmp-list__header"><div><p>{combinadas ? "Caixa unificada" : nomePasta(pastaAtual ?? {})}</p><h2>{filtradas.length} mensagens</h2><small>{mensagens.length} carregadas · {temMais ? "há mensagens anteriores" : "fim das páginas consultadas"}</small></div><button onClick={() => void carregarContexto()} disabled={atualizando || carregandoContexto} title="Atualizar">↻</button></div>
         {!combinadas && selecionadas.size > 0 && <div className="cmp-bulk"><strong>{selecionadas.size}</strong><button onClick={() => void agir("lida", [...selecionadas])}>Lida</button><button onClick={() => void agir("nao_lida", [...selecionadas])}>Não lida</button><button className="danger" disabled={atualizando} onClick={() => void excluirSelecionadas()}>Excluir</button></div>}
         <div className="cmp-list__filters"><button className={filtro === "todas" ? "is-active" : ""} onClick={() => setFiltro("todas")}>Todas</button><button className={filtro === "nao_lidas" ? "is-active" : ""} onClick={() => setFiltro("nao_lidas")}>Não lidas</button><button className={filtro === "favoritas" ? "is-active" : ""} onClick={() => setFiltro("favoritas")}>Favoritas</button></div>
-        <div className="cmp-list__scroll">{carregandoContexto ? <div className="cmp-state"><Carregando /></div> : filtradas.length === 0 ? <div className="cmp-state"><Vazio titulo="Nenhuma mensagem encontrada" /></div> : filtradas.map((m) => { const id = idMensagem(m); const origem = m.origem ?? contaId; const ativa = aberta && idMensagem(aberta) === id && (aberta.origem ?? contaId) === origem; return <article key={`${origem}-${id}`} className={`cmp-message ${naoLida(m) ? "is-unread" : ""} ${ativa ? "is-active" : ""}`}><label className="cmp-message__check"><input aria-label={`Selecionar mensagem: ${m.subject || "sem assunto"}`} type="checkbox" disabled={!!combinadas} checked={selecionadas.has(id)} onChange={() => setSelecionadas((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; })} /></label><button className="cmp-message__open" onClick={() => void abrirMensagem(m)}><span className="cmp-avatar" style={{ background: corAvatar(remetente(m)) }}>{iniciais(remetente(m))}</span><span className="cmp-message__body"><span className="cmp-message__meta"><strong>{remetente(m)}</strong><time>{dataCurta(m)}</time></span><b>{m.subject ?? "(sem assunto)"}</b><small>{m.summary || "Sem prévia disponível"}</small><span className="cmp-message__tags">{combinadas && <i>{NOMES_PROVEDOR[contas.find((c) => c.id === origem)?.provider ?? m.provider ?? "corvia"]}</i>}{temAnexo(m) && <i>⌕ Anexo</i>}</span></span></button>{!combinadas && contaId === "corvia" && <button aria-label={`${favorita(m) ? "Remover dos favoritos" : "Favoritar"}: ${m.subject || "sem assunto"}`} className={`cmp-star ${favorita(m) ? "is-active" : ""}`} onClick={() => void agir("sinalizar", [id], { sinalizador: favorita(m) ? "flag_not_set" : "followup" })}>{favorita(m) ? "★" : "☆"}</button>}</article>; })}</div>
+        <div className="cmp-list__scroll">{carregandoContexto ? <div className="cmp-state"><Carregando /></div> : filtradas.length === 0 ? <div className="cmp-state"><Vazio titulo="Nenhuma mensagem encontrada" /></div> : filtradas.map((m) => { const id = idMensagem(m); const origem = m.origem ?? contaId; const ativa = aberta && idMensagem(aberta) === id && (aberta.origem ?? contaId) === origem; return <article key={`${origem}-${id}`} className={`cmp-message ${naoLida(m) ? "is-unread" : ""} ${ativa ? "is-active" : ""}`}><label className="cmp-message__check"><input aria-label={`Selecionar mensagem: ${m.subject || "sem assunto"}`} type="checkbox" disabled={!!combinadas} checked={selecionadas.has(id)} onChange={() => setSelecionadas((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; })} /></label><button className="cmp-message__open" onClick={() => void abrirMensagem(m)}><span className="cmp-avatar" style={{ background: corAvatar(remetente(m)) }}>{iniciais(remetente(m))}</span><span className="cmp-message__body"><span className="cmp-message__meta"><strong>{remetente(m)}</strong><time>{dataCurta(m)}</time></span><b>{m.subject ?? "(sem assunto)"}</b><small>{m.summary || "Sem prévia disponível"}</small><span className="cmp-message__tags">{combinadas && <i>{NOMES_PROVEDOR[contas.find((c) => c.id === origem)?.provider ?? m.provider ?? "corvia"]}</i>}{temAnexo(m) && <i>⌕ Anexo</i>}</span></span></button>{!combinadas && nativa(contaId) && <button aria-label={`${favorita(m) ? "Remover dos favoritos" : "Favoritar"}: ${m.subject || "sem assunto"}`} className={`cmp-star ${favorita(m) ? "is-active" : ""}`} onClick={() => void agir("sinalizar", [id], { sinalizador: favorita(m) ? "flag_not_set" : "followup" })}>{favorita(m) ? "★" : "☆"}</button>}</article>; })}</div>
+        <div className="cmp-list__filters"><button type="button" disabled={!temMais || carregandoMais || carregandoContexto} onClick={() => void carregarMais()}>{carregandoMais ? "Carregando…" : fontesComErro.length ? "Carregar mais / tentar fontes novamente" : temMais ? "Carregar mensagens anteriores" : "Todas as mensagens carregadas"}</button></div>
       </section>
 
       <section className={`cmp-reader ${aberta ? "has-message" : ""}`}>
-        {!aberta ? <div className="cmp-reader__empty"><span>✉</span><h2>Selecione uma mensagem</h2><p>Leia, responda e organize seu correio sem sair desta tela.</p></div> : <><div className="cmp-reader__toolbar"><button type="button" onClick={fecharMensagem}>← Voltar à lista</button><button onClick={() => responder("reply")}>↩ Responder</button><button onClick={() => responder("replyall")}>↩ Todos</button><button onClick={() => responder("forward")}>↗ Encaminhar</button><span /><button onClick={() => void excluirMensagem(aberta)} className="danger">⌫ Excluir</button></div><header className="cmp-reader__header"><p>{NOMES_PROVEDOR[contas.find((c) => c.id === (aberta.origem ?? contaId))?.provider ?? aberta.provider ?? "corvia"]}</p><h1>{aberta.subject ?? "(sem assunto)"}</h1><div className="cmp-reader__sender"><span className="cmp-avatar cmp-avatar--large" style={{ background: corAvatar(remetente(aberta)) }}>{iniciais(remetente(aberta))}</span><div><strong>{remetente(aberta)}</strong><small>Para: {aberta.toAddress ?? contaAtual?.email_address ?? endereco}</small></div><time>{dataCompleta(aberta)}</time></div></header>{anexosRecebidos.length > 0 && <div className="cmp-attachments"><strong>Anexos</strong>{anexosRecebidos.map((a) => { const aid = a.attachmentId ?? a.attachId ?? ""; const nome = a.attachmentName ?? a.fileName ?? "anexo"; return <button key={aid} onClick={() => void apiEmail.baixarAnexo(idMensagem(aberta), aid, nome)}><span>▱</span><span>{nome}<small>{formatarTamanho(a.attachmentSize ?? a.size)}</small></span><b>Baixar</b></button>; })}</div>}<div className="cmp-reader__content"><CorpoMensagem mensagem={aberta} /></div><footer className="cmp-reader__footer"><button className="cmp-reply" onClick={() => responder("reply")}>↩ Responder</button><button className="cmp-reply cmp-reply--secondary" onClick={() => responder("forward")}>↗ Encaminhar</button></footer></>}
+        {!aberta ? <div className="cmp-reader__empty"><span>✉</span><h2>Selecione uma mensagem</h2><p>Leia, responda e organize seu correio sem sair desta tela.</p></div> : <><div className="cmp-reader__toolbar"><button type="button" onClick={fecharMensagem}>← Voltar à lista</button><button onClick={() => responder("reply")}>↩ Responder</button><button onClick={() => responder("replyall")}>↩ Todos</button><button onClick={() => responder("forward")}>↗ Encaminhar</button><span /><button onClick={() => void excluirMensagem(aberta)} className="danger">⌫ Excluir</button></div><header className="cmp-reader__header"><p>{NOMES_PROVEDOR[contas.find((c) => c.id === (aberta.origem ?? contaId))?.provider ?? aberta.provider ?? "corvia"]}</p><h1>{aberta.subject ?? "(sem assunto)"}</h1><div className="cmp-reader__sender"><span className="cmp-avatar cmp-avatar--large" style={{ background: corAvatar(remetente(aberta)) }}>{iniciais(remetente(aberta))}</span><div><strong>{remetente(aberta)}</strong><small>Para: {aberta.toAddress ?? contaAtual?.email_address ?? endereco}</small></div><time>{dataCompleta(aberta)}</time></div></header>{anexosRecebidos.length > 0 && <div className="cmp-attachments"><strong>Anexos</strong>{anexosRecebidos.map((a) => { const aid = a.attachmentId ?? a.attachId ?? ""; const nome = a.attachmentName ?? a.fileName ?? "anexo"; return <button key={aid} onClick={() => void apiEmail.baixarAnexo(idMensagem(aberta), aid, nome, prefixo(aberta.origem ?? contaId)).catch(e => setErro(falha(e, "Não foi possível baixar o anexo.")))}><span>▱</span><span>{nome}<small>{formatarTamanho(a.attachmentSize ?? a.size)}</small></span><b>Baixar</b></button>; })}</div>}<div className="cmp-reader__content"><CorpoMensagem mensagem={aberta} /></div><footer className="cmp-reader__footer"><button className="cmp-reply" onClick={() => responder("reply")}>↩ Responder</button><button className="cmp-reply cmp-reply--secondary" onClick={() => responder("forward")}>↗ Encaminhar</button></footer></>}
       </section>
     </section>
 
-    {compondo && <MailComposerDialog busy={enviando} error={erro} onClose={() => setCompondo(false)}><section className="cmp-composer"><header><div><small>NOVA MENSAGEM</small><h2 id="cmp-composer-title">{rascunho.modo === "nova" ? "Escrever" : rascunho.modo === "forward" ? "Encaminhar" : "Responder"}</h2></div><button aria-label="Fechar mensagem" disabled={enviando} onClick={() => setCompondo(false)}>×</button></header>{erro && <p className="cmp-composer__error" role="alert" tabIndex={-1}>{erro}</p>}<div className="cmp-from"><span>De</span><select aria-label="De" value={rascunho.de} onChange={(e) => { const de = e.target.value; setRascunho((r) => ({ ...r, de })); if (de !== "corvia") setAnexos([]); }}>{contas.filter((c) => c.send_mail).map((c) => <option key={c.id} value={c.id}>{c.email_address} — {NOMES_PROVEDOR[c.provider]}{c.padrao ? " (padrão)" : ""}</option>)}</select></div><div className="cmp-field"><label>Para</label><input aria-label="Para" value={rascunho.para} onChange={(e) => setRascunho((r) => ({ ...r, para: e.target.value }))} placeholder="nome@exemplo.com" /><button onClick={() => setMostrarCopias((v) => !v)}>Cc/Cco</button></div>{mostrarCopias && <div className="cmp-copy-grid"><label>Cc<input value={rascunho.cc} onChange={(e) => setRascunho((r) => ({ ...r, cc: e.target.value }))} /></label><label>Cco<input value={rascunho.cco} onChange={(e) => setRascunho((r) => ({ ...r, cco: e.target.value }))} /></label></div>}<div className="cmp-field cmp-field--subject"><label>Assunto</label><input aria-label="Assunto" value={rascunho.assunto} onChange={(e) => setRascunho((r) => ({ ...r, assunto: e.target.value }))} /></div>{contatos.length > 0 && <div className="cmp-contacts"><span>Contatos</span>{contatos.slice(0, 8).map((c) => <button key={c.id} onClick={() => setRascunho((r) => ({ ...r, para: c.emails[0] || r.para }))}><b>{c.name}</b><small>{c.emails[0]}</small></button>)}</div>}<textarea className="cmp-compose-body" aria-label="Mensagem" value={rascunho.corpo} onChange={(e) => setRascunho((r) => ({ ...r, corpo: e.target.value }))} placeholder="Escreva sua mensagem..." />{rascunho.de === "corvia" && <div className="cmp-compose-attachments"><label>▱ {enviandoAnexo ? "Anexando…" : "Anexar arquivo"}<input type="file" disabled={enviandoAnexo} onChange={(e) => { const f = e.target.files?.[0]; if (f) void anexar(f); e.currentTarget.value = ""; }} /></label>{anexos.map((a) => <span key={a.file_id}>{a.nome}{verificacoes[a.file_id]?.assinado && <em>✓ assinatura verificada</em>}<button onClick={() => setAnexos((xs) => xs.filter((x) => x.file_id !== a.file_id))}>×</button></span>)}</div>}<footer><button className="cmp-send" onClick={() => void enviar()} disabled={enviando}>{enviando ? "Enviando…" : "Enviar"}</button><span>{rascunho.de !== "corvia" ? "Envio pela conta externa selecionada" : "Envio pelo CorvIA Mail"}</span></footer></section></MailComposerDialog>}
+    {compondo && <MailComposerDialog busy={enviando || enviandoAnexo} error={erro} onClose={() => setCompondo(false)}><section className="cmp-composer"><header><div><small>NOVA MENSAGEM</small><h2 id="cmp-composer-title">{rascunho.modo === "nova" ? "Escrever" : rascunho.modo === "forward" ? "Encaminhar" : "Responder"}</h2></div><button aria-label="Fechar mensagem" disabled={enviando || enviandoAnexo} onClick={() => setCompondo(false)}>×</button></header>{erro && <p className="cmp-composer__error" role="alert" tabIndex={-1}>{erro}</p>}<div className="cmp-from"><span>De</span><select aria-label="De" disabled={enviando || enviandoAnexo || rascunho.modo !== "nova"} value={rascunho.de} onChange={(e) => { const de = e.target.value; setRascunho((r) => ({ ...r, de })); if (de !== rascunho.de) setAnexos([]); }}>{contas.filter((c) => c.send_mail).map((c) => <option key={c.id} value={c.id}>{c.email_address} — {NOMES_PROVEDOR[c.provider]}{c.padrao ? " (padrão)" : ""}</option>)}</select></div><div className="cmp-field"><label>Para</label><input aria-label="Para" value={rascunho.para} onChange={(e) => setRascunho((r) => ({ ...r, para: e.target.value }))} placeholder="nome@exemplo.com" /><button onClick={() => setMostrarCopias((v) => !v)}>Cc/Cco</button></div>{mostrarCopias && <div className="cmp-copy-grid"><label>Cc<input value={rascunho.cc} onChange={(e) => setRascunho((r) => ({ ...r, cc: e.target.value }))} /></label><label>Cco<input value={rascunho.cco} onChange={(e) => setRascunho((r) => ({ ...r, cco: e.target.value }))} /></label></div>}<div className="cmp-field cmp-field--subject"><label>Assunto</label><input aria-label="Assunto" value={rascunho.assunto} onChange={(e) => setRascunho((r) => ({ ...r, assunto: e.target.value }))} /></div>{contatos.length > 0 && <div className="cmp-contacts"><span>Contatos</span>{contatos.slice(0, 8).map((c) => <button key={c.id} onClick={() => setRascunho((r) => ({ ...r, para: c.emails[0] || r.para }))}><b>{c.name}</b><small>{c.emails[0]}</small></button>)}</div>}<textarea className="cmp-compose-body" aria-label="Mensagem" value={rascunho.corpo} onChange={(e) => setRascunho((r) => ({ ...r, corpo: e.target.value }))} placeholder="Escreva sua mensagem..." />{nativa(rascunho.de) && <div className="cmp-compose-attachments"><label>▱ {enviandoAnexo ? "Anexando…" : "Anexar arquivo"}<input type="file" disabled={enviandoAnexo} onChange={(e) => { const f = e.target.files?.[0]; if (f) void anexar(f); e.currentTarget.value = ""; }} /></label>{anexos.map((a) => <span key={a.file_id}>{a.nome}{verificacoes[a.file_id]?.assinado && <em>✓ assinatura verificada</em>}<button onClick={() => setAnexos((xs) => xs.filter((x) => x.file_id !== a.file_id))}>×</button></span>)}</div>}<footer><button className="cmp-send" onClick={() => void enviar()} disabled={enviando || enviandoAnexo}>{enviando ? "Enviando…" : "Enviar"}</button><span>{!nativa(rascunho.de) ? "Envio pela conta externa selecionada" : "Envio pelo CorvIA Mail"}</span></footer></section></MailComposerDialog>}
   </main>;
 }

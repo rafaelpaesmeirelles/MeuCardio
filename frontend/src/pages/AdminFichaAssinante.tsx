@@ -1,3 +1,4 @@
+import { formatCivilDate } from "../lib/civilDate";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
@@ -481,7 +482,7 @@ function AbaDadosPessoais({ d }: { d: DadosPessoais }) {
     <dl className="admin-ficha__grade">
       <Campo rotulo="Nome completo" valor={d.full_name} />
       <Campo rotulo="CPF" valor={formatarCpf(d.cpf)} />
-      <Campo rotulo="Nascimento" valor={formatarData(d.birth_date)} />
+      <Campo rotulo="Nascimento" valor={formatCivilDate(d.birth_date)} />
       <Campo rotulo="E-mail" valor={d.email} />
       <Campo rotulo="Endereço residencial" valor={enderecoTexto(d.endereco_residencial)} />
     </dl>

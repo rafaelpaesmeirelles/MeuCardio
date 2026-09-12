@@ -1,0 +1,2426 @@
+[
+  {
+    "slug": "acidose-metabolica-winter-anion-gap-uco",
+    "nome": "Acidose metabólica — Winter e ânion gap corrigido",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 9,
+    "erros_de_contrato": [],
+    "cenario": {
+      "ph": 7.8,
+      "paco2_mmhg": 70,
+      "bicarbonato_meq_l": 24,
+      "sodio_meq_l": 80,
+      "cloro_meq_l": 70,
+      "albumina_referencia_g_dl": 4.0,
+      "referencia_ag_sem_potassio_confirmada": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "acidose-metabolica-winter-anion-gap-uco",
+      "name": "Acidose metabólica — Winter e ânion gap corrigido",
+      "result": {
+        "estado_do_ph": "alcalemia (pH >7,45); revisar distúrbio misto antes de interpretar",
+        "paco2_esperada_winter_mmhg": "42.0–46.0",
+        "paco2_observada_mmhg": 70.0,
+        "avaliacao_da_compensacao": "PaCO₂ acima da faixa esperada: considerar acidose respiratória associada, após confirmar amostra, tempo e contexto clínico",
+        "anion_gap_sem_potassio_meq_l": -14.0,
+        "anion_gap_corrigido_albumina_meq_l": "não calculado — albumina não informada",
+        "comparacao_com_referencia_do_laboratorio": "ânion gap observado sem classificação automática — compare com o intervalo do laboratório e confirme se o método inclui potássio",
+        "fora_da_faixa": true
+      },
+      "interpretation": "alcalemia (pH >7,45); revisar distúrbio misto antes de interpretar. PaCO₂ esperada por Winter: 42.0–46.0 mmHg; observada: 70.0 mmHg. PaCO₂ acima da faixa esperada: considerar acidose respiratória associada, após confirmar amostra, tempo e contexto clínico. Ânion gap sem K: -14.0 mEq/L; corrigido por albumina: não calculado — albumina não informada. ânion gap observado sem classificação automática — compare com o intervalo do laboratório e confirme se o método inclui potássio.",
+      "reference": "Albert MS, Dell RB, Winters RW. Quantitative displacement of acid-base equilibrium in metabolic acidosis. Ann Intern Med. 1967;66:312-322. doi:10.7326/0003-4819-66-2-312. PMID:6016545; Figge J, Jabor A, Kazda A, Fencl V. Anion gap and hypoalbuminemia. Crit Care Med. 1998;26:1807-1810. doi:10.1097/00003246-199811000-00019. PMID:9824071; American Thoracic Society. Interpretation of Arterial Blood Gases (ABGs), clinical education resource, consulted 2026-08-27. https://www.thoracic.org/professionals/clinical-resources/critical-care/clinical-education/abgs.php.",
+      "limitations": [
+        "Use somente quando a acidose metabólica estiver clinicamente estabelecida; a ferramenta não define o distúrbio primário a partir de um único número.",
+        "Compensação esperada não é diagnóstico. PaCO₂ fora da faixa apenas sinaliza que distúrbio respiratório associado, erro pré-analítico, diferença temporal ou mudança ventilatória devem ser considerados.",
+        "Use eletrólitos e albumina obtidos no mesmo momento da gasometria sempre que possível; diferenças de amostra e tempo podem produzir relações artificiais.",
+        "O ânion gap é calculado sem potássio. Intervalos variam por analisador; a classificação automática só ocorre quando o usuário informa o limite superior do próprio laboratório.",
+        "A correção de Figge ajusta o efeito da albumina, mas não identifica o ânion não medido nem substitui lactato, cetonas, função renal, toxicologia e avaliação da causa.",
+        "Ventilação mecânica, dor, sepse, gestação, hepatopatia e intoxicações podem modificar a PaCO₂; correlacione com o momento clínico e parâmetros ventilatórios."
+      ]
+    }
+  },
+  {
+    "slug": "acls-pcr-adulto-doses-fixas-2025",
+    "nome": "ACLS 2025 — PCR adulta: epinefrina e amiodarona",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 1,
+    "erros_de_contrato": [],
+    "cenario": {
+      "terapia": "epinefrina"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "acls-pcr-adulto-doses-fixas-2025",
+      "name": "ACLS 2025 — PCR adulta: epinefrina e amiodarona",
+      "result": {
+        "farmaco": "Epinefrina",
+        "dose": "1 mg IV/IO",
+        "intervalo": "a cada 3-5 min"
+      },
+      "interpretation": "Epinefrina 1 mg IV/IO a cada 3-5 minutos durante a PCR adulta. Não usar dose alta de rotina; em ritmo chocável, priorizar as tentativas iniciais de desfibrilação antes da epinefrina.",
+      "reference": "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. doi:10.1161/CIR.0000000000001376.",
+      "limitations": [
+        "Amiodarona é opção para FV/TV sem pulso refratária à desfibrilação; não é fármaco de rotina para assistolia/AESP.",
+        "A dose de epinefrina não substitui desfibrilação precoce em FV/TV sem pulso."
+      ]
+    }
+  },
+  {
+    "slug": "adenosina-tsv-adulto-2025",
+    "nome": "Adenosina — TSV regular no adulto (ACLS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 1,
+    "erros_de_contrato": [],
+    "cenario": {
+      "etapa": "primeira"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "adenosina-tsv-adulto-2025",
+      "name": "Adenosina — TSV regular no adulto (ACLS 2025)",
+      "result": {
+        "farmaco": "Adenosina",
+        "etapa": "primeira",
+        "dose_mg": 6
+      },
+      "interpretation": "Adenosina — 1ª dose: 6 mg em push IV rápido, seguida imediatamente de flush com solução salina.",
+      "reference": "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. doi:10.1161/CIR.0000000000001376.",
+      "limitations": [
+        "Não administrar em taquicardia de QRS largo instável, irregularmente irregular ou polimórfica.",
+        "Em QRS largo, só considerar quando o ritmo for estável, regular e monomórfico.",
+        "A AHA 2025 alerta para efeito muito intenso em acesso central ou pós-transplante cardíaco; 1 mg pode ser suficiente nesses cenários, portanto a sequência padrão 6/12 mg não deve ser aplicada automaticamente.",
+        "Adenosina é contraindicada em asma por risco de broncoespasmo grave segundo a AHA 2025."
+      ]
+    }
+  },
+  {
+    "slug": "adenosina-tsv-pediatrica",
+    "nome": "Adenosina — TSV pediátrica (PALS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 2,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "numero_dose": 1
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "adenosina-tsv-pediatrica",
+      "name": "Adenosina — TSV pediátrica (PALS 2025)",
+      "result": {
+        "farmaco": "Adenosina",
+        "numero_dose": 1,
+        "dose_mg": 6.0,
+        "teto_mg": 6.0
+      },
+      "interpretation": "Adenosina — 1ª dose: 6.0 mg IV/IO em push rápido, seguido de flush; teto desta etapa 6.0 mg.",
+      "reference": "Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S479-S537. doi:10.1161/CIR.0000000000001368.",
+      "limitations": [
+        "Em taquiarritmia com comprometimento cardiopulmonar, cardioversão sincronizada não deve ser atrasada.",
+        "Em QRS largo, só considerar adenosina quando o ritmo for regular e monomórfico."
+      ]
+    }
+  },
+  {
+    "slug": "adrenalina-pcr-pediatrica",
+    "nome": "Epinefrina — parada cardiorrespiratória pediátrica (PALS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 1,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "adrenalina-pcr-pediatrica",
+      "name": "Epinefrina — parada cardiorrespiratória pediátrica (PALS 2025)",
+      "result": {
+        "farmaco": "Epinefrina",
+        "dose_mg": 0.7,
+        "volume_ml_0_1mg_ml": 7.0,
+        "intervalo": "a cada 3-5 min durante a PCR"
+      },
+      "interpretation": "Epinefrina 0.7 mg IV/IO (7.0 mL da concentração 0,1 mg/mL), a cada 3-5 min durante a PCR. Dose máxima por administração: 1 mg.",
+      "reference": "Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S479-S537. doi:10.1161/CIR.0000000000001368.",
+      "limitations": [
+        "Em ritmo não chocável, a dose inicial deve ser administrada tão cedo quanto possível; em ritmo chocável, priorizar desfibrilação.",
+        "Não usar esta calculadora como substituto do algoritmo completo de PCR pediátrica."
+      ]
+    }
+  },
+  {
+    "slug": "alteplase-stemi-esquema-acelerado-90min-2025",
+    "nome": "Alteplase — STEMI, esquema acelerado de 90 minutos (ACC/AHA 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 1,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "alteplase-stemi-esquema-acelerado-90min-2025",
+      "name": "Alteplase — STEMI, esquema acelerado de 90 minutos (ACC/AHA 2025)",
+      "result": {
+        "farmaco": "Alteplase (tPA)",
+        "peso_kg": 70.0,
+        "bolus_iv_mg": 15.0,
+        "infusao_primeiros_30min_mg": 50.0,
+        "infusao_30_a_90min_mg": 35.0,
+        "dose_total_mg": 100.0,
+        "peso_ge_67": true
+      },
+      "interpretation": "Alteplase no STEMI: 15 mg IV em bolus, depois 50.0 mg nos primeiros 30 min e 35.0 mg nos 60 min seguintes. Dose total: 100.0 mg em 90 min.",
+      "reference": "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. doi:10.1016/j.jacc.2024.11.009.",
+      "limitations": [
+        "Uso exclusivo para fibrinólise de STEMI; não usar este regime para AVC isquêmico ou TEP.",
+        "Em adultos ≥67 kg, o esquema é fixo e resulta em 100 mg totais: 15 mg bolus + 50 mg/30 min + 35 mg/60 min.",
+        "Em adultos <67 kg, usar 15 mg bolus + 0,75 mg/kg (máx 50 mg) em 30 min + 0,5 mg/kg (máx 35 mg) nos 60 min seguintes.",
+        "A calculadora não decide indicação de fibrinólise nem verifica contraindicações hemorrágicas."
+      ]
+    }
+  },
+  {
+    "slug": "amiodarona-pcr-pediatrica",
+    "nome": "Amiodarona — FV/TV sem pulso pediátrica refratária (PALS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 2,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "numero_dose": 1
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "amiodarona-pcr-pediatrica",
+      "name": "Amiodarona — FV/TV sem pulso pediátrica refratária (PALS 2025)",
+      "result": {
+        "farmaco": "Amiodarona",
+        "numero_dose": 1,
+        "dose_mg": 300.0,
+        "dose_por_peso": "5 mg/kg",
+        "teto_desta_dose_mg": 300.0
+      },
+      "interpretation": "Amiodarona — 1ª dose: 300.0 mg IV/IO em bolus (5 mg/kg; teto desta dose 300.0 mg). O PALS 2025 permite até 3 doses no algoritmo de FV/TV sem pulso refratária.",
+      "reference": "Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S479-S537. doi:10.1161/CIR.0000000000001368.",
+      "limitations": [
+        "Somente para FV/TV sem pulso refratária à desfibrilação.",
+        "Lidocaína é alternativa aceita pelo PALS 2025; não administrar múltiplos antiarrítmicos empiricamente sem contexto especializado."
+      ]
+    }
+  },
+  {
+    "slug": "amiodarona-tv-estavel-adulto-2025",
+    "nome": "Amiodarona — taquicardia de QRS largo estável (ACLS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 1,
+    "erros_de_contrato": [],
+    "cenario": {
+      "etapa": "carga"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "amiodarona-tv-estavel-adulto-2025",
+      "name": "Amiodarona — taquicardia de QRS largo estável (ACLS 2025)",
+      "result": {
+        "farmaco": "Amiodarona",
+        "dose": "150 mg IV",
+        "tempo": "10 min"
+      },
+      "interpretation": "Amiodarona 150 mg IV em 10 minutos; pode repetir se a TV recorrer.",
+      "reference": "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. doi:10.1161/CIR.0000000000001376.",
+      "limitations": [
+        "Taquicardia de QRS largo instável exige cardioversão sincronizada imediata.",
+        "Evitar associação empírica de múltiplos antiarrítmicos por risco pró-arrítmico."
+      ]
+    }
+  },
+  {
+    "slug": "antiagregante-oral-sca-acc-aha-2025",
+    "nome": "Antiagregantes orais na SCA — AAS, clopidogrel, prasugrel e ticagrelor (ACC/AHA 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 5,
+    "erros_de_contrato": [],
+    "cenario": {
+      "farmaco": "aas",
+      "fibrinolise": false,
+      "pci": false,
+      "idade": 70,
+      "peso": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "antiagregante-oral-sca-acc-aha-2025",
+      "name": "Antiagregantes orais na SCA — AAS, clopidogrel, prasugrel e ticagrelor (ACC/AHA 2025)",
+      "result": {
+        "farmaco": "AAS",
+        "carga": "162-325 mg VO",
+        "administracao_carga": "preferir comprimido não entérico e mastigar quando possível",
+        "manutencao": "75-100 mg VO 1x/dia"
+      },
+      "interpretation": "AAS: carga 162-325 mg VO; manutenção 75-100 mg VO 1x/dia. Carga: preferir comprimido não entérico e mastigar quando possível.",
+      "reference": "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. doi:10.1016/j.jacc.2024.11.009. Table 7 and Section 4.3.2.",
+      "limitations": [
+        "Esta calculadora reproduz doses da Tabela 7 e texto de suporte ACC/AHA 2025; não decide qual P2Y12 é preferível para cada paciente.",
+        "Clopidogrel + fibrinólise aos exatos 75 anos retorna VERIFICAÇÃO HUMANA NECESSÁRIA pela discrepância interna da diretriz no sinal de igualdade do corte etário.",
+        "Prasugrel aqui é modelado apenas em SCA sem fibrinolítico e com PCI, como na Tabela 7.",
+        "Contraindicações individuais, história de sangramento, AVC/AIT, anticoagulação concomitante, necessidade de cirurgia e interações devem ser checadas fora desta calculadora.",
+        "Para ticagrelor, a diretriz consultada recomenda AAS de manutenção <=100 mg/dia quando usados em conjunto."
+      ]
+    }
+  },
+  {
+    "slug": "apixabana-dose-bula-brasil-2025",
+    "nome": "Apixabana — dose por indicação, idade, peso e função renal (bula Brasil 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 6,
+    "erros_de_contrato": [],
+    "cenario": {
+      "indicacao": "fa_nvalvular",
+      "idade": 70,
+      "peso": 70,
+      "creatinina": 20,
+      "clcr": 70,
+      "dialise": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "apixabana-dose-bula-brasil-2025",
+      "name": "Apixabana — dose por indicação, idade, peso e função renal (bula Brasil 2025)",
+      "result": {
+        "farmaco": "Apixabana",
+        "indicacao": "FA não valvular — prevenção de AVC/embolia sistêmica",
+        "dose": "5 mg VO 2x/dia",
+        "criterios_reducao_presentes": 1,
+        "criterios": {
+          "idade_ge_80": false,
+          "peso_le_60": false,
+          "creatinina_ge_1_5": true
+        },
+        "cautela_clcr_15_29": false
+      },
+      "interpretation": "Apixabana — FA não valvular — prevenção de AVC/embolia sistêmica: 5 mg VO 2x/dia. Critérios de redução presentes: 1/3.",
+      "reference": "Eliquis® (apixabana). Bula profissional Pfizer Brasil. LLD_Bra_CCDS_27Jun2019_SMPC_17May2021_v13_ELICOR_33_VPS. 22/Out/2025.",
+      "limitations": [
+        "Na FA não valvular, reduzir de 5 mg 2x/dia para 2,5 mg 2x/dia apenas quando pelo menos 2 de 3 critérios estiverem presentes: idade ≥80 anos, peso ≤60 kg, creatinina sérica ≥1,5 mg/dL.",
+        "ClCr 15-29 mL/min: a bula brasileira mantém os esquemas de TVP/EP e prevenção de recorrência, mas orienta uso com cautela.",
+        "ClCr <15 mL/min ou diálise: apixabana não é recomendada pela bula profissional brasileira consultada.",
+        "Interações fortes CYP3A4/gpP, sangramento ativo, doença hepática e outros modificadores não são resolvidos apenas por esta calculadora."
+      ]
+    }
+  },
+  {
+    "slug": "atropina-bradicardia-adulto-2025",
+    "nome": "Atropina — bradicardia sintomática no adulto (ACLS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 1,
+    "erros_de_contrato": [],
+    "cenario": {
+      "doses_previas": 0
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "atropina-bradicardia-adulto-2025",
+      "name": "Atropina — bradicardia sintomática no adulto (ACLS 2025)",
+      "result": {
+        "farmaco": "Atropina",
+        "doses_previas_de_1mg": 0,
+        "proxima_dose_mg": 1.0,
+        "total_apos_mg": 1.0,
+        "maximo_total_mg": 3.0
+      },
+      "interpretation": "Atropina 1 mg IV em bolus agora; repetir a cada 3-5 min se necessário. Após esta dose, total acumulado = 1.0 mg; máximo total = 3 mg.",
+      "reference": "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. doi:10.1161/CIR.0000000000001376.",
+      "limitations": [
+        "Aplicar apenas quando a bradicardia estiver associada a comprometimento cardiopulmonar e após avaliação de causas reversíveis.",
+        "Não atrasar pacing ou suporte vasoativo quando a resposta à atropina for inadequada."
+      ]
+    }
+  },
+  {
+    "slug": "atropina-bradicardia-pediatrica",
+    "nome": "Atropina — bradicardia pediátrica (PALS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 1,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "atropina-bradicardia-pediatrica",
+      "name": "Atropina — bradicardia pediátrica (PALS 2025)",
+      "result": {
+        "farmaco": "Atropina",
+        "dose_mg": 0.5,
+        "pode_repetir": "1 vez"
+      },
+      "interpretation": "Atropina 0.5 mg IV/IO (0,02 mg/kg; mínimo 0,1 mg; máximo por dose 0,5 mg). Pode repetir uma vez.",
+      "reference": "Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S479-S537. doi:10.1161/CIR.0000000000001368.",
+      "limitations": [
+        "No algoritmo de bradicardia pediátrica, atropina é indicada para aumento de tônus vagal ou bloqueio AV primário; hipóxia exige correção de via aérea/ventilação.",
+        "O mínimo de 0,1 mg aplica-se ao algoritmo de bradicardia; a AHA/AAP 2025 não estabelece mínimo quando atropina é usada como pré-medicação para intubação."
+      ]
+    }
+  },
+  {
+    "slug": "aub-has2",
+    "nome": "AUB-HAS2 — Risco cardiovascular pré-operatório",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 6,
+    "erros_de_contrato": [],
+    "cenario": {
+      "historia_doenca_cardiaca": false,
+      "sintomas_cardiacos": false,
+      "idade_maior_igual_75": false,
+      "hemoglobina_menor_12": false,
+      "cirurgia_vascular": false,
+      "cirurgia_emergencia": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "aub-has2",
+      "name": "AUB-HAS2 — Risco cardiovascular pré-operatório",
+      "result": {
+        "score": 0,
+        "max": 6,
+        "categoria": "baixo"
+      },
+      "interpretation": "AUB-HAS2 0/6 — risco baixo. No estudo original, 0–1 ponto foi classificado como baixo risco, 2–3 como intermediário e >3 como alto risco para o composto de morte, infarto do miocárdio ou AVC em 30 dias. O escore não substitui avaliação de doença cardiovascular ativa, capacidade funcional ou modificadores de risco.",
+      "reference": "Dakik HA, Chehab O, Eldirani M, et al. J Am Coll Cardiol. 2019;73(24):3067-3078. PMID 31221255. DOI 10.1016/j.jacc.2019.04.023.",
+      "limitations": [
+        "O desfecho do modelo é morte, IAM ou AVC em 30 dias; não é idêntico aos desfechos do RCRI ou Gupta MICA.",
+        "Não indicar teste cardíaco apenas pela categoria do escore.",
+        "Anemia é definida no modelo por hemoglobina <12 g/dL, independentemente do sexo."
+      ]
+    }
+  },
+  {
+    "slug": "bivalirudina-pci-acc-aha-2025",
+    "nome": "Bivalirudina — PCI e ajuste renal (ACC/AHA 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 2,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "clcr": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "bivalirudina-pci-acc-aha-2025",
+      "name": "Bivalirudina — PCI e ajuste renal (ACC/AHA 2025)",
+      "result": {
+        "farmaco": "Bivalirudina",
+        "bolus_mg": 52.5,
+        "bolus_por_peso": "0,75 mg/kg IV",
+        "infusao_mg_kg_h": 1.75,
+        "infusao_mg_h": 122.5,
+        "duracao_pci": "durante a PCI",
+        "pos_pci_ppci": "manter 2-4 h após PCI primária quando aplicável",
+        "clcr_menor_30": false
+      },
+      "interpretation": "Bivalirudina: bolus 52.5 mg IV (0,75 mg/kg), seguido de 122.5 mg/h (1.75 mg/kg/h) durante a PCI. Na PCI primária, a Tabela 10 descreve manter a infusão por 2-4 h após o procedimento.",
+      "reference": "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. doi:10.1016/j.jacc.2024.11.009. Table 10.",
+      "limitations": [
+        "Bolus 0,75 mg/kg e infusão 1,75 mg/kg/h durante a PCI.",
+        "ClCr <30 mL/min: reduzir a infusão para 1 mg/kg/h segundo a Tabela 10; o bolus permanece 0,75 mg/kg.",
+        "Na PCI primária, a diretriz descreve infusão pós-PCI de 1,75 mg/kg/h por 2-4 h; em ClCr <30, preserve o ajuste renal e valide o protocolo institucional."
+      ]
+    }
+  },
+  {
+    "slug": "brash-reconhecimento-padrao-uco",
+    "nome": "BRASH — reconhecimento de padrão e diferenciais",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 9,
+    "erros_de_contrato": [],
+    "cenario": {
+      "frequencia_cardiaca_bpm": 70,
+      "potassio_mmol_l": 9.0,
+      "lra_ou_agudizacao_drc": false,
+      "uso_bloqueador_nodal_av": false,
+      "choque_ou_hipoperfusao": false,
+      "dose_excessiva_ou_overdose_suspeita": false,
+      "ecg_compativel_hipercalemia": false,
+      "oliguria": false,
+      "gatilho_agudo_desidratacao_infeccao_ou_nefrotoxico": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "brash-reconhecimento-padrao-uco",
+      "name": "BRASH — reconhecimento de padrão e diferenciais",
+      "result": {
+        "risco": "constelacao_incompleta",
+        "prioridade": "Constelação incompleta para BRASH; interpretar cada componente e seus diferenciais de forma independente.",
+        "constelacao_completa": false,
+        "nucleo_brash": false,
+        "bradicardia": false,
+        "hipercalemia": true,
+        "gatilhos": [
+          "hipercalemia (K 9.00 mmol/L)"
+        ],
+        "diferencial_farmacologico": "Sem dose excessiva declarada. BRASH pode ocorrer em uso terapêutico de bloqueador nodal quando disfunção renal e hipercalemia amplificam a bradicardia.",
+        "ecg": "ECG típico de hipercalemia não foi declarado; isso não exclui BRASH nem risco relacionado ao potássio.",
+        "nodos_relacionados": [
+          "sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia",
+          "fluxograma-sindrome-brash",
+          "fluxograma-bradicardia-sintomatica-manejo-agudo",
+          "fluxograma-hipercalemia-grave",
+          "fluxograma-intoxicacao-por-betabloqueador-ou-antagonista-de-calcio"
+        ]
+      },
+      "interpretation": "Constelação incompleta para BRASH; interpretar cada componente e seus diferenciais de forma independente. Gatilhos: hipercalemia (K 9.00 mmol/L). ECG típico de hipercalemia não foi declarado; isso não exclui BRASH nem risco relacionado ao potássio. Sem dose excessiva declarada. BRASH pode ocorrer em uso terapêutico de bloqueador nodal quando disfunção renal e hipercalemia amplificam a bradicardia.",
+      "reference": "Farkas JD et al. BRASH Syndrome: Bradycardia, Renal Failure, AV Blockade, Shock, and Hyperkalemia. J Emerg Med. 2020;59:216-223. doi:10.1016/j.jemermed.2020.05.001. PMID:32565167; Shah P et al. Clinical characteristics of BRASH syndrome: systematic scoping review. Eur J Intern Med. 2022;103:57-61. doi:10.1016/j.ejim.2022.06.002. PMID:35676108; Majeed H et al. BRASH Syndrome: A Systematic Review of Reported Cases. Curr Probl Cardiol. 2023;48:101663. doi:10.1016/j.cpcardiol.2023.101663. PMID:36842470.",
+      "limitations": [
+        "BRASH não possui escore diagnóstico universalmente validado; esta ferramenta reconhece padrão clínico e não confirma diagnóstico.",
+        "Instabilidade hemodinâmica e bradicardia sintomática devem ser manejadas sem aguardar a rotulagem sindrômica.",
+        "A ferramenta não calcula dose, concentração, diluição, energia, frequência de pacing ou parâmetros de suporte.",
+        "Não seleciona antídoto, cronotrópico, vasopressor, diálise ou terapia para hipercalemia.",
+        "Uso de bloqueador nodal não autoriza suspensão definitiva ou reintrodução automática; revisar indicação, função renal e contexto após estabilização.",
+        "Hipercalemia isolada e intoxicação por bloqueador nodal permanecem diferenciais concorrentes e podem exigir fluxos próprios em paralelo."
+      ]
+    }
+  },
+  {
+    "slug": "cha2ds2-vasc",
+    "nome": "CHA₂DS₂-VASc",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 7,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "sexo": "M",
+      "ic_disfuncao_ve": false,
+      "hipertensao": false,
+      "diabetes": false,
+      "avc_ait_tromboembolismo": false,
+      "doenca_vascular": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "cha2ds2-vasc",
+      "name": "CHA₂DS₂-VASc",
+      "result": {
+        "score": 1,
+        "max": 9
+      },
+      "interpretation": "Pontuação 1/9. O escore estratifica risco tromboembólico na fibrilação atrial não valvar. A decisão de anticoagular deve considerar o escore, o risco hemorrágico, preferência do paciente e a diretriz adotada pelo serviço — os pontos de corte diferem entre ESC, AHA/ACC/HRS e SBC.",
+      "reference": "Lip GYH et al. Chest. 2010;137(2):263-72.",
+      "limitations": [
+        "Validado para fibrilação atrial não valvar.",
+        "Não se aplica a estenose mitral reumática moderada/grave ou prótese mecânica."
+      ]
+    }
+  },
+  {
+    "slug": "choque-eletrico-pediatrico",
+    "nome": "Desfibrilação e cardioversão pediátrica — PALS 2025",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 2,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "tipo": "desfibrilacao"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "choque-eletrico-pediatrico",
+      "name": "Desfibrilação e cardioversão pediátrica — PALS 2025",
+      "result": {
+        "tipo": "desfibrilacao",
+        "primeiro_j": 140.0,
+        "segundo_j": 280.0,
+        "subsequente_min_j": 280.0,
+        "teto_peso_j": 700.0
+      },
+      "interpretation": "Desfibrilação: 1º choque 140.0 J (2 J/kg); 2º 280.0 J (4 J/kg); subsequentes ≥280.0 J (≥4 J/kg), até 10 J/kg ou a dose de adulto.",
+      "reference": "Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S479-S537. doi:10.1161/CIR.0000000000001368.",
+      "limitations": [
+        "Na cardioversão instável, sedar se necessário e possível, mas não atrasar o choque.",
+        "Na desfibrilação, o PALS 2025 estabelece para choques subsequentes ≥4 J/kg, máximo 10 J/kg ou dose de adulto."
+      ]
+    }
+  },
+  {
+    "slug": "ckd-epi-2021",
+    "nome": "CKD-EPI 2021 (TFG estimada)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 3,
+    "erros_de_contrato": [],
+    "cenario": {
+      "creatinina": 25,
+      "idade": 70,
+      "sexo": "M"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "ckd-epi-2021",
+      "name": "CKD-EPI 2021 (TFG estimada)",
+      "result": {
+        "egfr": 1.7,
+        "unidade": "mL/min/1,73 m²"
+      },
+      "interpretation": "TFG estimada 1.7 mL/min/1,73 m² — categoria G5 (<15) (KDIGO). Equação CKD-EPI 2021 sem coeficiente de raça. Para ajuste de dose de anticoagulantes orais diretos, a bula e os ensaios pivotais usam Cockcroft-Gault, não CKD-EPI.",
+      "reference": "Inker LA et al. N Engl J Med. 2021;385(19):1737-49.",
+      "limitations": [
+        "Validada em adultos; não usar em menores de 18 anos.",
+        "Não confiável em função renal instável (lesão renal aguda)."
+      ]
+    }
+  },
+  {
+    "slug": "cockcroft-gault",
+    "nome": "Cockcroft-Gault (clearance de creatinina)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 4,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "peso": 70,
+      "creatinina": 25,
+      "sexo": "M"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "cockcroft-gault",
+      "name": "Cockcroft-Gault (clearance de creatinina)",
+      "result": {
+        "clearance": 2.7,
+        "unidade": "mL/min"
+      },
+      "interpretation": "Clearance de creatinina estimado 2.7 mL/min. É a equação usada nos ensaios pivotais e nas bulas dos anticoagulantes orais diretos para ajuste de dose. Perde acurácia em obesidade, caquexia e função renal instável.",
+      "reference": "Cockcroft DW, Gault MH. Nephron. 1976;16(1):31-41.",
+      "limitations": [
+        "Superestima em obesidade; considerar peso ajustado conforme protocolo."
+      ]
+    }
+  },
+  {
+    "slug": "conferencia-bomba-infusao-uco",
+    "nome": "Dupla conferência da bomba — dose entregue versus prescrita",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 8,
+    "erros_de_contrato": [],
+    "cenario": {
+      "agente": "norepinefrina",
+      "dose_pretendida": 0.1,
+      "quantidade_soluto": 4,
+      "volume_total_ml": 250,
+      "velocidade_bomba_ml_h": 26.25,
+      "tolerancia_percentual": "5",
+      "contexto_choque_cardiogenico": false,
+      "peso_kg": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "conferencia-bomba-infusao-uco",
+      "name": "Dupla conferência da bomba — dose entregue versus prescrita",
+      "result": {
+        "status_conferencia": "CONFERÊNCIA MATEMÁTICA DENTRO DA TOLERÂNCIA",
+        "agente": "Norepinefrina",
+        "concentracao_calculada": "16.00 mcg/mL",
+        "dose_pretendida": 0.1,
+        "dose_entregue_calculada": 0.1,
+        "unidade_dose": "mcg/kg/min",
+        "velocidade_programada_ml_h": 26.25,
+        "velocidade_esperada_ml_h": 26.25,
+        "desvio_percentual_absoluto": 0.0,
+        "tolerancia_operacional_percentual": 5.0,
+        "faixa_acc_2025": "não aplicada — contexto de choque cardiogênico não selecionado",
+        "alerta_contextual": "Faixa terapêutica não avaliada; a tolerância escolhida compara apenas números.",
+        "fora_da_faixa": false
+      },
+      "interpretation": "CONFERÊNCIA MATEMÁTICA DENTRO DA TOLERÂNCIA. Norepinefrina: a bomba a 26.25 mL/h, na concentração calculada de 16.00 mcg/mL, entrega 0.1 mcg/kg/min; a dose pretendida é 0.1 mcg/kg/min. Desvio absoluto 0.0% (tolerância operacional selecionada 5.0%). Velocidade matematicamente esperada: 26.25 mL/h. Faixa terapêutica não avaliada; a tolerância escolhida compara apenas números.",
+      "reference": "Institute for Safe Medication Practices (ISMP). Guidelines for Optimizing Safe Implementation and Use of Smart Infusion Pumps. 2020. https://www.ismp.org/system/files?file=resources%2F2020-10%2FISMP176C-Smart+Infusion+Pumps-100620.pdf; ISMP. List of High-Alert Medications in Acute Care Settings. 2024. https://www.ismp.org/Tools/institutionalhighAlert.asp; Sinha SS et al. 2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on the Evaluation and Management of Cardiogenic Shock. J Am Coll Cardiol. 2025;85:1618-1641. doi:10.1016/j.jacc.2025.02.018. https://www.jacc.org/doi/10.1016/j.jacc.2025.02.018; DailyMed. Norepinephrine Bitartrate in Sodium Chloride Injection, prescribing information, consulted 2026-08-27. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6363e9b4-29df-4553-904d-a563e5adda6e.",
+      "limitations": [
+        "A conferência só é independente se os dados forem obtidos novamente da prescrição, do rótulo da solução e da bomba, sem copiar o resultado de outro cálculo.",
+        "Tolerância operacional não é margem terapêutica. Mesmo dentro da tolerância, confirme paciente, fármaco, concentração, dose, canal, linha e resposta clínica.",
+        "Não verifica identidade, diluente, compatibilidade, estabilidade, validade, via/acesso, volume residual, peso desatualizado ou biblioteca de limites da bomba inteligente.",
+        "Não fornece diluição padrão: apresentações prontas e concentrações variam por produto e instituição; valide bula, farmácia e protocolo local.",
+        "As faixas de dose do ACC 2025 são exibidas somente quando o usuário declara contexto de choque cardiogênico; não são limites universais nem substituem titulação hemodinâmica.",
+        "Dupla conferência manual seletiva não substitui código de barras, biblioteca de redução de erros de dose, integração bomba-prontuário e outras barreiras sistêmicas."
+      ]
+    }
+  },
+  {
+    "slug": "controle-frequencia-fa-flutter-agudo-adulto-2025",
+    "nome": "FA/flutter com resposta rápida — doses IV e bloqueios de segurança (AHA 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 5,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "farmaco": "diltiazem",
+      "instavel": false,
+      "preexcitacao": false,
+      "ic_sistolica_descompensada": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "controle-frequencia-fa-flutter-agudo-adulto-2025",
+      "name": "FA/flutter com resposta rápida — doses IV e bloqueios de segurança (AHA 2025)",
+      "result": {
+        "farmaco": "Diltiazem",
+        "bolus_mg": 17.5,
+        "administracao": "IV em 2 min",
+        "infusao": "5-10 mg/h"
+      },
+      "interpretation": "Diltiazem — bolus mg: 17.5; administracao: IV em 2 min; infusao: 5-10 mg/h.",
+      "reference": "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. doi:10.1161/CIR.0000000000001376.",
+      "limitations": [
+        "Diltiazem e verapamil devem ser evitados também em hipotensão, cardiomiopatia e síndrome coronariana aguda conforme a tabela AHA 2025; esses três modificadores adicionais não estão automatizados nesta versão.",
+        "Digoxina tem início de ação lento e exige cautela em disfunção renal.",
+        "Amiodarona IV pode ser útil para controle de frequência no paciente criticamente enfermo sem pré-excitação quando bloqueadores beta/cálcio não são apropriados.",
+        "Não utilizar bloqueadores nodais nem amiodarona IV em FA/flutter pré-excitada."
+      ]
+    }
+  },
+  {
+    "slug": "crusade",
+    "nome": "CRUSADE",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 8,
+    "erros_de_contrato": [],
+    "cenario": {
+      "hematocrito": 60,
+      "clearance_creatinina": 70,
+      "frequencia_cardiaca": 70,
+      "sexo": "M",
+      "sinais_chf": false,
+      "doenca_vascular_previa": false,
+      "diabetes": false,
+      "pas": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "crusade",
+      "name": "CRUSADE",
+      "result": {
+        "score": 27,
+        "max": 100,
+        "categoria": "baixo"
+      },
+      "interpretation": "Pontuação 27/100. Risco de sangramento maior intra-hospitalar: baixo (muito baixo ≤20, baixo 21-30, moderado 31-40, alto 41-50, muito alto >50 — quintis da coorte de derivação, Subherwal et al. 2009). Clearance de creatinina pela fórmula de Cockcroft-Gault, não CKD-EPI.",
+      "reference": "Subherwal S et al. Circulation. 2009;119(14):1873-1882.",
+      "limitations": [
+        "Usa especificamente a fórmula de Cockcroft-Gault para clearance de creatinina, não CKD-EPI — usar a calculadora de Cockcroft-Gault desta base antes.",
+        "Desenvolvido e validado em síndrome coronariana SEM supra de ST."
+      ]
+    }
+  },
+  {
+    "slug": "dapt-score",
+    "nome": "DAPT score",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 9,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "tabagismo_atual": false,
+      "diabetes": false,
+      "iam_na_apresentacao": false,
+      "icp_ou_iam_previo": false,
+      "diametro_stent_menor_3mm": false,
+      "stent_paclitaxel": false,
+      "ic_ou_feve_menor_30": false,
+      "icp_em_enxerto_venoso": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "dapt-score",
+      "name": "DAPT score",
+      "result": {
+        "score": -1,
+        "min": -2,
+        "max": 10,
+        "favorece_dapt_prolongada": false
+      },
+      "interpretation": "Pontuação -1 (variando de -2 a 10). Escore <2 — o risco de sangramento da dapt prolongada tende a superar o benefício isquêmico; favorece duração padrão (12 meses). Aplicável a pacientes que completaram 12 meses de DAPT sem evento isquêmico ou hemorrágico maior, para decidir prolongar ou não. Yeh et al., JAMA 2016.",
+      "reference": "Yeh RW et al. JAMA. 2016;315(16):1735-1749.",
+      "limitations": [
+        "Aplicável só a quem completou 12 meses de DAPT sem sangramento maior nem evento isquêmico — não é ferramenta para decidir a duração inicial da DAPT.",
+        "Derivado majoritariamente de população com stent farmacológico de 1ª/2ª geração; aplicação a stents mais recentes exige julgamento clínico adicional."
+      ]
+    }
+  },
+  {
+    "slug": "dasi",
+    "nome": "DASI — Duke Activity Status Index",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 12,
+    "erros_de_contrato": [],
+    "cenario": {
+      "autocuidado": false,
+      "caminhar_casa": false,
+      "caminhar_quarteiroes": false,
+      "escada_ladeira": false,
+      "correr_curto": false,
+      "trabalho_domestico_leve": false,
+      "trabalho_domestico_moderado": false,
+      "trabalho_domestico_pesado": false,
+      "quintal_jardim": false,
+      "relacoes_sexuais": false,
+      "recreacao_moderada": false,
+      "esporte_extenuante": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "dasi",
+      "name": "DASI — Duke Activity Status Index",
+      "result": {
+        "score": 0,
+        "max": 58.2,
+        "capacidade_funcional": "ruim",
+        "ponto_decisao": 34
+      },
+      "interpretation": "DASI 0/58,2 — capacidade funcional ruim pelo ponto de decisão DASI ≤34 do algoritmo AHA/ACC 2024. Esse resultado não indica teste isquêmico automaticamente: deve ser integrado ao risco perioperatório e à possibilidade de o exame adicional modificar a conduta.",
+      "reference": "Hlatky MA, Boineau RE, Higginbotham MB, et al. Am J Cardiol. 1989;64:651-654. PMID 2782256. DOI 10.1016/0002-9149(89)90496-7. Ponto de decisão perioperatório: 2024 AHA/ACC Guideline, PMID 39316661, DOI 10.1161/CIR.0000000000001285.",
+      "limitations": [
+        "Autorrelato; limitações ortopédicas/neurológicas podem reduzir o escore sem refletir reserva cardiovascular isoladamente.",
+        "Não diagnostica isquemia e não deve disparar teste de estresse automaticamente.",
+        "Usar a pontuação DASI diretamente; conversões históricas para METs/VO2 não são necessárias para o ponto de decisão AHA/ACC 2024."
+      ]
+    }
+  },
+  {
+    "slug": "digoxina-dose",
+    "nome": "Digoxina — impregnação e manutenção",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 2,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "clcr_reduzido": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "digoxina-dose",
+      "name": "Digoxina — impregnação e manutenção",
+      "result": {
+        "peso": 70.0,
+        "impregnacao_min_mcg": 560.0,
+        "impregnacao_max_mcg": 840.0,
+        "manutencao_min_mcg": 210.0,
+        "manutencao_max_mcg": 350.0,
+        "clcr_reduzido": false
+      },
+      "interpretation": "Dose de impregnação total: 560.0–840.0 mcg, fracionada (50% na primeira dose, 25% + 25% a cada 6–8 horas, com reavaliação clínica entre as doses). Manutenção diária: 210.0–350.0 mcg/dia. Monitorizar nível sérico e sinais de toxicidade — janela terapêutica estreita.",
+      "reference": "Bula profissional de digoxina — esquema clássico de impregnação e manutenção por peso.",
+      "limitations": [
+        "Janela terapêutica estreita — o cálculo é ponto de partida, não substitui nível sérico (alvo geralmente 0,5–0,9 ng/mL na insuficiência cardíaca) e avaliação clínica.",
+        "Ajuste renal aqui é uma redução simplificada de 50%; a bula recomenda calcular por clearance de creatinina real — usar como estimativa inicial, não valor final.",
+        "Interações relevantes (amiodarona, verapamil, claritromicina, entre outras) elevam o nível sérico e não estão incorporadas neste cálculo."
+      ]
+    }
+  },
+  {
+    "slug": "dopamina-bradicardia-adulto-infusao-2025",
+    "nome": "Dopamina — infusão na bradicardia adulta (ACLS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 4,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "dose_alvo": 70,
+      "quantidade_mg": 70,
+      "volume_ml": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "dopamina-bradicardia-adulto-infusao-2025",
+      "name": "Dopamina — infusão na bradicardia adulta (ACLS 2025)",
+      "result": {
+        "farmaco": "Dopamina",
+        "dose_alvo_mcg_kg_min": 70.0,
+        "ml_h": 294.0,
+        "faixa_aha_2025": "5-20 mcg/kg/min",
+        "fora_da_faixa": true
+      },
+      "interpretation": "Dopamina: 294.0 mL/h para 70.0 mcg/kg/min. ⚠️ Dose-alvo fora da faixa AHA 2025 de 5-20 mcg/kg/min.",
+      "reference": "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. doi:10.1161/CIR.0000000000001376.",
+      "limitations": [
+        "Usar quando atropina for ineficaz e como ponte para pacing/avaliação especializada quando indicado.",
+        "Titrar à resposta clínica e reduzir gradualmente, conforme o algoritmo AHA 2025."
+      ]
+    }
+  },
+  {
+    "slug": "enoxaparina-dose",
+    "nome": "Enoxaparina — dose terapêutica ou profilática",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 3,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "indicacao": "tratamento_tev_sca",
+      "clcr_menor_30": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "enoxaparina-dose",
+      "name": "Enoxaparina — dose terapêutica ou profilática",
+      "result": {
+        "peso": 70.0,
+        "indicacao": "tratamento_tev_sca",
+        "dose_mg": 70.0,
+        "texto": "70.0 mg SC a cada 12 horas.",
+        "clcr_baixo": false
+      },
+      "interpretation": "70.0 mg SC a cada 12 horas.",
+      "reference": "Bula profissional de enoxaparina sódica (ex.: Versa®, Eurofarma) e literatura de ajuste antitrombótico em insuficiência renal.",
+      "limitations": [
+        "Em ClCr 30–50 mL/min a bula não recomenda ajuste de dose por rotina, mas orienta vigilância clínica cuidadosa — não reproduzido no cálculo, aplicar critério clínico.",
+        "Dose de SCA com fibrinolítico em IAMCSST tem componente de bolus IV inicial (30 mg em menores de 75 anos) não incluído neste cálculo — confira o protocolo específico de reperfusão.",
+        "Não ajustado para obesidade extrema nem para gestação."
+      ]
+    }
+  },
+  {
+    "slug": "enoxaparina-sca-idade-renal-bula-brasil",
+    "nome": "Enoxaparina — SCA por idade, peso e função renal (Clexane Brasil)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 4,
+    "erros_de_contrato": [],
+    "cenario": {
+      "indicacao": "ua_nstemi",
+      "idade": 70,
+      "peso": 70,
+      "clcr": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "enoxaparina-sca-idade-renal-bula-brasil",
+      "name": "Enoxaparina — SCA por idade, peso e função renal (Clexane Brasil)",
+      "result": {
+        "farmaco": "Enoxaparina",
+        "indicacao": "Angina instável/IAM sem supra de ST",
+        "dose_sc_mg": 70.0,
+        "dose_por_peso": "1 mg/kg SC",
+        "intervalo": "a cada 12 h",
+        "renal_severa": false
+      },
+      "interpretation": "Enoxaparina 70.0 mg SC (1 mg/kg SC) a cada 12 h. Na bula, usar concomitantemente AAS oral 100-325 mg/dia; duração usual 2-8 dias.",
+      "reference": "Clexane® (enoxaparina sódica). Bula Sanofi Medley Farmacêutica Ltda., MS 1.8326.0336, IB100619; aprovada pela Anvisa em 10/06/2019. · Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. doi:10.1016/j.jacc.2024.11.009. Table 10.",
+      "limitations": [
+        "No STEMI <75 anos: bolus IV 30 mg + 1 mg/kg SC; com ClCr ≥30, q12h e teto 100 mg nas duas primeiras doses SC; com ClCr <30, q24h e teto 100 mg na primeira dose SC.",
+        "No STEMI ≥75 anos: NÃO administrar bolus IV inicial. Com ClCr ≥30, 0,75 mg/kg q12h, teto 75 mg nas duas primeiras doses; com ClCr <30, 1 mg/kg q24h, teto 100 mg na primeira dose.",
+        "Na angina instável/IAM sem supra: 1 mg/kg q12h; se ClCr <30, 1 mg/kg q24h.",
+        "ClCr 30-50 mL/min não exige ajuste na bula consultada, mas requer monitorização clínica cuidadosa.",
+        "A calculadora não substitui avaliação de sangramento, peso extremo, trombocitopenia/HIT, anestesia neuraxial ou estratégia de reperfusão."
+      ]
+    }
+  },
+  {
+    "slug": "enoxaparina-stemi-dose-adicional-icp",
+    "nome": "Enoxaparina — dose IV adicional para suporte da ICP (ACC/AHA 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 3,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "horas_desde_ultima_sc": 48,
+      "apenas_uma_dose_sc_previa": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "enoxaparina-stemi-dose-adicional-icp",
+      "name": "Enoxaparina — dose IV adicional para suporte da ICP (ACC/AHA 2025)",
+      "result": {
+        "conduta": "VERIFICAÇÃO HUMANA NECESSÁRIA",
+        "motivo": "a Tabela 10 ACC/AHA 2025 explicita <8 h sem dose e 8-12 h com 0,3 mg/kg; para >12 h após múltiplas doses prévias, a estratégia deve ser definida pelo contexto anticoagulante/ACT"
+      },
+      "interpretation": "VERIFICAÇÃO HUMANA NECESSÁRIA — a Tabela 10 ACC/AHA 2025 explicita <8 h sem dose e 8-12 h com 0,3 mg/kg; para >12 h após múltiplas doses prévias, a estratégia deve ser definida pelo contexto anticoagulante/ACT.",
+      "reference": "Clexane® (enoxaparina sódica). Bula Sanofi Medley Farmacêutica Ltda., MS 1.8326.0336, IB100619; aprovada pela Anvisa em 10/06/2019. · Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. doi:10.1016/j.jacc.2024.11.009. Table 10.",
+      "limitations": [
+        "ACC/AHA 2025: se a última dose SC foi <8 h antes da PCI, não administrar dose adicional.",
+        "Se a última dose foi 8-12 h antes, ou se apenas 1 dose SC foi administrada, usar 0,3 mg/kg IV.",
+        "Após >12 h e múltiplas doses prévias, a tabela consultada não fornece um único bolus automático; a calculadora retorna VERIFICAÇÃO HUMANA NECESSÁRIA."
+      ]
+    }
+  },
+  {
+    "slug": "entresto-dose-inicial-bula-brasil-2025",
+    "nome": "Entresto® — dose inicial, washout de IECA e titulação (bula Brasil)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 7,
+    "erros_de_contrato": [],
+    "cenario": {
+      "terapia_sraa": "nenhum",
+      "horas_desde_ieca": 70,
+      "tfge": 70,
+      "potassio": 10,
+      "pas": 70,
+      "child_pugh": "normal",
+      "doenca_renal_terminal": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "entresto-dose-inicial-bula-brasil-2025",
+      "name": "Entresto® — dose inicial, washout de IECA e titulação (bula Brasil)",
+      "result": {
+        "conduta": "nao_iniciar",
+        "motivo": "potássio sérico >5,4 mmol/L"
+      },
+      "interpretation": "Entresto®: não iniciar/não recomendado neste cenário — potássio sérico >5,4 mmol/L.",
+      "reference": "Entresto® (sacubitril valsartana sódica hidratada). Bula profissional Novartis Brasil, VPS15 Entresto_Bula_Profissional, portal NovartisPro Brasil, versão publicada em 2025.",
+      "limitations": [
+        "A bula brasileira usa apresentações nominais de Entresto 50/100/200 mg; não confundir com a nomenclatura internacional que frequentemente escreve os componentes como 24/26, 49/51 e 97/103 mg.",
+        "Dose inicial padrão: 100 mg 2x/dia; alvo: 200 mg 2x/dia; dobrar a cada 2-4 semanas conforme tolerância.",
+        "Considerar/iniciar 50 mg 2x/dia se sem IECA/BRA, uso prévio de baixa dose, TFGe <60, Child-Pugh B ou PAS 100-110 mmHg, conforme as respectivas seções da bula.",
+        "Não iniciar se K >5,4 mmol/L ou PAS <100 mmHg.",
+        "Após IECA, inclusive em baixa dose, respeitar pelo menos 36 h antes de iniciar Entresto; a terapia com IECA também só deve ser reiniciada 36 h após a última dose de Entresto.",
+        "Child-Pugh C, cirrose biliar ou colestase são contraindicações. A calculadora só codifica Child-Pugh C; cirrose biliar/colestase devem ser verificadas clinicamente.",
+        "A calculadora não substitui avaliação de hipovolemia, hipotensão sintomática, angioedema prévio, gravidez, alisquireno no diabetes, interações e monitorização de K/creatinina."
+      ]
+    }
+  },
+  {
+    "slug": "epinefrina-bradicardia-adulto-infusao-2025",
+    "nome": "Epinefrina — infusão na bradicardia adulta (ACLS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 3,
+    "erros_de_contrato": [],
+    "cenario": {
+      "dose_alvo": 70,
+      "quantidade_mg": 70,
+      "volume_ml": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "epinefrina-bradicardia-adulto-infusao-2025",
+      "name": "Epinefrina — infusão na bradicardia adulta (ACLS 2025)",
+      "result": {
+        "farmaco": "Epinefrina",
+        "dose_alvo_mcg_min": 70.0,
+        "ml_h": 4.2,
+        "faixa_aha_2025": "2-10 mcg/min",
+        "fora_da_faixa": true
+      },
+      "interpretation": "Epinefrina: 4.2 mL/h para 70.0 mcg/min. ⚠️ Dose-alvo fora da faixa AHA 2025 de 2-10 mcg/min.",
+      "reference": "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. doi:10.1161/CIR.0000000000001376.",
+      "limitations": [
+        "A dose de bradicardia é fixa em mcg/min; não confundir com esquemas mcg/kg/min usados em outros tipos de choque.",
+        "Usar quando atropina for ineficaz e como ponte para pacing/avaliação especializada quando indicado."
+      ]
+    }
+  },
+  {
+    "slug": "estadiamento-scai-choque-cardiogenico",
+    "nome": "Choque cardiogênico — estadiamento SCAI e reavaliação seriada",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 11,
+    "erros_de_contrato": [],
+    "cenario": {
+      "em_risco_sem_instabilidade": true,
+      "instabilidade_sem_hipoperfusao": false,
+      "hipoperfusao_requer_intervencao": false,
+      "deterioracao_apos_intervencao": false,
+      "colapso_extremis": false,
+      "parada_com_risco_anoxico": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "estadiamento-scai-choque-cardiogenico",
+      "name": "Choque cardiogênico — estadiamento SCAI e reavaliação seriada",
+      "result": {
+        "estagio_sugerido": "A — em risco",
+        "rotulo_para_documentacao": "SCAI A",
+        "criterio_determinante": "risco de choque sem instabilidade ou hipoperfusão atuais",
+        "modificador_a": "não aplicado",
+        "medidas_de_apoio": "não informadas",
+        "alerta_de_consistencia": "sem conflito explícito entre o padrão clínico selecionado e as medidas informadas",
+        "reavaliacao": "Registrar horário e repetir o estágio após intervenção, mudança de suporte ou deterioração; documentar estágio inicial e máximo.",
+        "fora_da_faixa": false
+      },
+      "interpretation": "SCAI A — A — em risco. Critério determinante: risco de choque sem instabilidade ou hipoperfusão atuais. Modificador de parada: não aplicado. Medidas de apoio: não informadas. Consistência: sem conflito explícito entre o padrão clínico selecionado e as medidas informadas. Registrar horário e repetir o estágio após intervenção, mudança de suporte ou deterioração; documentar estágio inicial e máximo.",
+      "reference": "Naidu SS et al. SCAI SHOCK Stage Classification Expert Consensus Update: A Review and Incorporation of Validation Studies. J Soc Cardiovasc Angiogr Interv. 2022;1(1):100008. doi:10.1016/j.jscai.2021.100008. https://www.scai.org/publications/clinical-documents/scai-shock-stages-classification-expert-consensus-update-review-and; Kapur NK et al. Criteria for Defining Stages of Cardiogenic Shock Severity. J Am Coll Cardiol. 2022;80:185-198. doi:10.1016/j.jacc.2022.04.049. https://pubmed.ncbi.nlm.nih.gov/35835491/; Sinha SS et al. 2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on the Evaluation and Management of Cardiogenic Shock. J Am Coll Cardiol. 2025;85:1618-1641. doi:10.1016/j.jacc.2025.02.018; Ton VK et al. Serial Shock Severity Assessment Within 72 Hours After Admission Predicts Hospital Mortality in Cardiogenic Shock. J Am Coll Cardiol. 2024;84:123-136. doi:10.1016/j.jacc.2024.04.069.",
+      "limitations": [
+        "Assistente de documentação, não escore prognóstico nem indicação automática de vasoativo, revascularização ou suporte circulatório mecânico.",
+        "O SCAI 2022 é consenso multissocietário; seus critérios foram validados sobretudo em coortes observacionais, não em ensaio randomizado de estratégia terapêutica.",
+        "O padrão clínico predominante determina o estágio; lactato, pH e pressão isolados apenas apoiam ou sinalizam discordância e podem refletir outras causas.",
+        "O estágio é dinâmico. Registrar momento inicial, reavaliar após intervenções e mudanças clínicas e documentar o estágio máximo alcançado.",
+        "O modificador +A não significa qualquer parada: aplica-se quando há potencial lesão cerebral anóxica, como coma ou ausência de resposta a comandos após RCE.",
+        "Etiologia, fenótipo hemodinâmico, idade, fragilidade e falência não cardíaca modificam risco fora do eixo A–E e exigem avaliação separada.",
+        "A proposta SCAI 2026 em consulta pública não foi usada como padrão final; a ferramenta segue o consenso publicado e endossado de 2022, validado em 27/08/2026."
+      ]
+    }
+  },
+  {
+    "slug": "fondaparinux-sca-fibrinolise-pci-2025",
+    "nome": "Fondaparinux — SCA/fibrinólise e bloqueio na PCI (ACC/AHA 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 2,
+    "erros_de_contrato": [],
+    "cenario": {
+      "cenario": "inicial",
+      "clcr": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "fondaparinux-sca-fibrinolise-pci-2025",
+      "name": "Fondaparinux — SCA/fibrinólise e bloqueio na PCI (ACC/AHA 2025)",
+      "result": {
+        "farmaco": "Fondaparinux",
+        "dose": "2,5 mg SC 1x/dia"
+      },
+      "interpretation": "Fondaparinux: 2,5 mg SC 1x/dia.",
+      "reference": "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. doi:10.1016/j.jacc.2024.11.009. Table 10.",
+      "limitations": [
+        "Terapia inicial: 2,5 mg SC 1x/dia.",
+        "Com fibrinólise: 2,5 mg IV, depois 2,5 mg SC 1x/dia a partir do dia seguinte.",
+        "Contraindicado se ClCr <30 mL/min na Tabela 10 consultada.",
+        "Não usar fondaparinux isoladamente para suporte da PCI devido ao risco de trombose de cateter."
+      ]
+    }
+  },
+  {
+    "slug": "frail-scale-perioperatorio",
+    "nome": "FRAIL Scale — fragilidade perioperatória",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 5,
+    "erros_de_contrato": [],
+    "cenario": {
+      "fadiga": false,
+      "resistencia": false,
+      "deambulacao": false,
+      "cinco_ou_mais_doencas": false,
+      "perda_peso_5pct": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "frail-scale-perioperatorio",
+      "name": "FRAIL Scale — fragilidade perioperatória",
+      "result": {
+        "score": 0,
+        "max": 5,
+        "categoria": "robusto"
+      },
+      "interpretation": "FRAIL Scale 0/5 — robusto. A AHA/ACC 2024 considera útil a avaliação pré-operatória de fragilidade com instrumento validado em pacientes ≥65 anos e em pacientes mais jovens com fragilidade percebida submetidos a cirurgia não cardíaca de risco elevado. Fragilidade modifica o planejamento perioperatório, mas não é equivalente a uma probabilidade percentual de MACE.",
+      "reference": "Morley JE, Malmstrom TK, Miller DK. A simple frailty questionnaire (FRAIL) predicts outcomes in middle aged African Americans. J Nutr Health Aging. 2012;16(7):601-608. PMID 22836700. PMCID PMC4515112. DOI 10.1007/s12603-012-0084-2. Aplicação perioperatória: Thompson A, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150:e351-e442. PMID 39316661. DOI 10.1161/CIR.0000000000001285.",
+      "limitations": [
+        "É instrumento de triagem de fragilidade, não calculadora de MACE ou mortalidade cirúrgica percentual.",
+        "O artigo de validação original não foi uma coorte cirúrgica; seu uso perioperatório decorre da recomendação de avaliar fragilidade com instrumento validado.",
+        "Resultados pré-frágil/frágil devem levar à avaliação clínica do impacto funcional, cognitivo, nutricional e dos objetivos do cuidado, não ao cancelamento automático da cirurgia."
+      ]
+    }
+  },
+  {
+    "slug": "framingham-global",
+    "nome": "Framingham — risco cardiovascular global em 10 anos",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 9,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "sexo": "M",
+      "doenca_cardiovascular_previa": false,
+      "pas": 120,
+      "tratamento_hipertensao": true,
+      "tabagismo": true,
+      "diabetes": true,
+      "colesterol_total": 180,
+      "hdl": 50
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "framingham-global",
+      "name": "Framingham — risco cardiovascular global em 10 anos",
+      "result": {
+        "risco_pct": 58.3,
+        "horizonte_anos": 10,
+        "desfecho": "doença cardiovascular global: morte coronariana, infarto, insuficiência coronariana, angina, AVC isquêmico ou hemorrágico, AIT, doença arterial periférica e insuficiência cardíaca",
+        "modelo": "Framingham 2008 — lipídios",
+        "populacao": "Prevenção primária; 30–74 anos; sem doença cardiovascular prévia"
+      },
+      "interpretation": "Framingham 2008 — lipídios: risco estimado de doença cardiovascular global em 10 anos de 58.30%. Inclui insuficiência cardíaca, angina e AIT, além de eventos ateroscleróticos. Este percentual não equivale ao de PREVENT-ASCVD, PCE ou SCORE2 e não define, isoladamente, uma prescrição ou meta terapêutica.",
+      "reference": "D'Agostino RB et al. General cardiovascular risk profile for use in primary care. Circulation. 2008;117:743–753. DOI: 10.1161/CIRCULATIONAHA.107.699579. Coeficientes e sobrevivência basal: https://www.framinghamheartstudy.org/fhs-for-researchers/fhs-risk-functions/cardiovascular-disease-10-year-risk/",
+      "limitations": [
+        "Modelo histórico/comparativo de 2008, para pessoas de 30–74 anos sem doença cardiovascular estabelecida; não usar em prevenção secundária nem extrapolar idades.",
+        "Desfecho de DCV global mais amplo que ASCVD. Não transferir pontos de corte de PREVENT, PCE ou SCORE2.",
+        "Derivado de uma coorte norte-americana; calibração e transportabilidade para o Brasil são limitadas. Não equivale a recomendação preferencial atual da SBC, AHA/ACC ou ESC. A SBC 2025 recomenda PREVENT-ASCVD para pessoas de 30–79 anos sem DCV prévia (recomendação forte; certeza alta; DOI: 10.36660/abc.20250640).",
+        "Faixas numéricas do formulário são barreiras operacionais de entrada, não intervalos de validação da coorte. Resultados extremos exigem julgamento clínico; não truncamos entradas para obter um risco.",
+        "Diabetes pode ser informado, mas doença renal, hipercolesterolemia familiar e outros modificadores podem definir risco e tratamento independentemente deste percentual.",
+        "Sexo binário conforme a derivação original; desempenho não estabelecido para todas as identidades e situações de terapia hormonal. A equação não substitui avaliação individual."
+      ]
+    }
+  },
+  {
+    "slug": "framingham-imc",
+    "nome": "Framingham — risco cardiovascular global com IMC",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 8,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "sexo": "M",
+      "doenca_cardiovascular_previa": false,
+      "pas": 120,
+      "tratamento_hipertensao": true,
+      "tabagismo": true,
+      "diabetes": true,
+      "imc": 25
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "framingham-imc",
+      "name": "Framingham — risco cardiovascular global com IMC",
+      "result": {
+        "risco_pct": 70.8,
+        "horizonte_anos": 10,
+        "desfecho": "doença cardiovascular global: morte coronariana, infarto, insuficiência coronariana, angina, AVC isquêmico ou hemorrágico, AIT, doença arterial periférica e insuficiência cardíaca",
+        "modelo": "Framingham 2008 — IMC",
+        "populacao": "Prevenção primária; 30–74 anos; sem doença cardiovascular prévia"
+      },
+      "interpretation": "Framingham 2008 — IMC: risco estimado de doença cardiovascular global em 10 anos de 70.80%. Inclui insuficiência cardíaca, angina e AIT, além de eventos ateroscleróticos. Este percentual não equivale ao de PREVENT-ASCVD, PCE ou SCORE2 e não define, isoladamente, uma prescrição ou meta terapêutica.",
+      "reference": "D'Agostino RB et al. General cardiovascular risk profile for use in primary care. Circulation. 2008;117:743–753. DOI: 10.1161/CIRCULATIONAHA.107.699579. Coeficientes e sobrevivência basal: https://www.framinghamheartstudy.org/fhs-for-researchers/fhs-risk-functions/cardiovascular-disease-10-year-risk/",
+      "limitations": [
+        "Modelo histórico/comparativo de 2008, para pessoas de 30–74 anos sem doença cardiovascular estabelecida; não usar em prevenção secundária nem extrapolar idades.",
+        "Desfecho de DCV global mais amplo que ASCVD. Não transferir pontos de corte de PREVENT, PCE ou SCORE2.",
+        "Derivado de uma coorte norte-americana; calibração e transportabilidade para o Brasil são limitadas. Não equivale a recomendação preferencial atual da SBC, AHA/ACC ou ESC. A SBC 2025 recomenda PREVENT-ASCVD para pessoas de 30–79 anos sem DCV prévia (recomendação forte; certeza alta; DOI: 10.36660/abc.20250640).",
+        "Faixas numéricas do formulário são barreiras operacionais de entrada, não intervalos de validação da coorte. Resultados extremos exigem julgamento clínico; não truncamos entradas para obter um risco.",
+        "Diabetes pode ser informado, mas doença renal, hipercolesterolemia familiar e outros modificadores podem definir risco e tratamento independentemente deste percentual.",
+        "Sexo binário conforme a derivação original; desempenho não estabelecido para todas as identidades e situações de terapia hormonal. A equação não substitui avaliação individual.",
+        "Modelo distinto da versão laboratorial; não preencher IMC como colesterol ou combinar os percentuais."
+      ]
+    }
+  },
+  {
+    "slug": "furosemida-iv-ic-aguda-estrategia-dose-trial",
+    "nome": "Furosemida IV na IC aguda — estratégias do ensaio DOSE",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 4,
+    "erros_de_contrato": [],
+    "cenario": {
+      "farmaco_casa": "furosemida",
+      "dose_oral_dia": 70,
+      "estrategia": "baixa",
+      "modo": "bolus_q12"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "furosemida-iv-ic-aguda-estrategia-dose-trial",
+      "name": "Furosemida IV na IC aguda — estratégias do ensaio DOSE",
+      "result": {
+        "farmaco": "Furosemida IV",
+        "equivalente_furosemida_oral_mg_dia": 70.0,
+        "estrategia": "1x dose oral equivalente",
+        "total_iv_furosemida_mg_dia": 70.0,
+        "dentro_populacao_dose_trial": false,
+        "bolus_mg_q12h": 35.0,
+        "modo": "bolus IV a cada 12 h"
+      },
+      "interpretation": "Estratégia DOSE: equivalente domiciliar 70.0 mg/dia de furosemida; braço 1x dose oral equivalente = 70.0 mg/dia IV, administrados como 35.0 mg IV a cada 12 h. ⚠️ A dose oral equivalente informada está fora de 80-240 mg/dia, faixa de elegibilidade do DOSE; a extrapolação quantitativa não reproduz diretamente a população do ensaio.",
+      "reference": "Felker GM, Lee KL, Bull DA, et al. Diuretic Strategies in Patients with Acute Decompensated Heart Failure. N Engl J Med. 2011;364:797-805. PMID: 21366472. doi:10.1056/NEJMoa1005419.",
+      "limitations": [
+        "Esta é uma calculadora de METODOLOGIA DO ENSAIO, não uma recomendação de dose universal.",
+        "O DOSE incluiu pacientes com IC aguda que já usavam diurético de alça por pelo menos 1 mês, equivalentes a 80-240 mg/dia de furosemida.",
+        "Equivalências usadas no estudo: 20 mg de torsemida ou 1 mg de bumetanida = 40 mg de furosemida.",
+        "Pacientes com PAS <90 mmHg, creatinina >3,0 mg/dL ou necessidade de vasodilatador/inotrópico IV foram excluídos do ensaio.",
+        "Bolus versus infusão contínua não diferiu nos endpoints coprimários. A estratégia de 2,5x produziu maior diurese, mas maior proporção de aumento transitório da creatinina >0,3 mg/dL (23% vs 14%).",
+        "A resposta clínica deve ser reavaliada por diurese, peso, congestão, eletrólitos, PA e função renal; resistência diurética exige estratégia clínica além desta fórmula."
+      ]
+    }
+  },
+  {
+    "slug": "geneva-revisado",
+    "nome": "Genebra revisado",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 8,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade_maior_65": false,
+      "tvp_tep_previo": false,
+      "cirurgia_ou_fratura_1_mes": false,
+      "neoplasia_ativa": false,
+      "dor_unilateral_mmii": false,
+      "hemoptise": false,
+      "frequencia_cardiaca": 70,
+      "dor_palpacao_profunda_e_edema_unilateral": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "geneva-revisado",
+      "name": "Genebra revisado",
+      "result": {
+        "score": 0,
+        "max": 22,
+        "categoria": "baixa"
+      },
+      "interpretation": "Pontuação 0/22. Probabilidade clínica: baixa (baixa 0-3: prevalência de TEP <10% na coorte de validação; intermediária 4-10: ~20-30%; alta ≥11: ~74%). Le Gal et al., Ann Intern Med 2006.",
+      "reference": "Le Gal G et al. Ann Intern Med. 2006;144(3):165-171.",
+      "limitations": [
+        "Diferente do Wells, todos os itens são objetivos — útil quando se quer reduzir variabilidade entre avaliadores.",
+        "Sempre combinar com D-dímero e/ou exame de imagem."
+      ]
+    }
+  },
+  {
+    "slug": "geneva-simplificado",
+    "nome": "Genebra simplificado",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 8,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade_maior_65": false,
+      "tvp_tep_previo": false,
+      "cirurgia_ou_fratura_1_mes": false,
+      "neoplasia_ativa": false,
+      "dor_unilateral_mmii": false,
+      "hemoptise": false,
+      "frequencia_cardiaca": 70,
+      "dor_palpacao_profunda_e_edema_unilateral": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "geneva-simplificado",
+      "name": "Genebra simplificado",
+      "result": {
+        "score": 0,
+        "max": 9,
+        "categoria_3_niveis": "baixa",
+        "categoria_2_niveis": "TEP improvável"
+      },
+      "interpretation": "Pontuação 0/9. Classificação de 3 níveis: baixa. Classificação dicotômica (corte em 3): TEP improvável. Klok et al., Arch Intern Med 2008 — versão simplificada do Genebra revisado, mesmos 8 critérios.",
+      "reference": "Klok FA et al. Arch Intern Med. 2008;168(19):2131-2136.",
+      "limitations": [
+        "Mesmos 8 critérios do Genebra revisado, com pontuação uniforme (1 ponto cada, exceto FC ≥95 bpm com 2 pontos) — não confundir os dois totais."
+      ]
+    }
+  },
+  {
+    "slug": "grace",
+    "nome": "GRACE",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 9,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "frequencia_cardiaca": 70,
+      "pas": 70,
+      "creatinina": 15,
+      "killip": "I",
+      "parada_cardiaca": false,
+      "desvio_st": false,
+      "marcadores_elevados": false,
+      "tipo_sca": "nste"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "grace",
+      "name": "GRACE",
+      "result": {
+        "score": 170,
+        "max": 372,
+        "categoria_hospitalar": "alto",
+        "mortalidade_hospitalar": "> 3%",
+        "categoria_6_meses": "alto",
+        "mortalidade_6_meses": "> 8%"
+      },
+      "interpretation": "170 pontos. Mortalidade hospitalar: risco alto (> 3%). Mortalidade em 6 meses: risco alto (> 8%). As faixas de risco vêm da tabela publicada — não são um percentual exato calculado por regressão contínua, que exigiria o nomograma original completo. Uma diferença de poucos pontos perto do limite de uma faixa não muda a conduta sozinha; use em conjunto com o quadro clínico.",
+      "reference": "Fox KA, Dabbous OH, Goldberg RJ et al. Prediction of risk of death and myocardial infarction in the six months after presentation with acute coronary syndrome: prospective multinational observational study (GRACE). BMJ. 2006;333(7578):1091. Derivado de: Granger CB, Goldberg RJ, Dabbous O et al. Predictors of hospital mortality in the Global Registry of Acute Coronary Events. Arch Intern Med. 2003;163(19):2345-2353.",
+      "limitations": [
+        "As faixas de mortalidade vêm de categorias publicadas em tabela, não de um percentual contínuo por regressão — não dá o mesmo número que a calculadora oficial da GRACE (que usa o nomograma completo), mas a categoria de risco bate.",
+        "Desenvolvido e validado em população adulta com síndrome coronariana aguda confirmada; não usar para dor torácica indiferenciada sem diagnóstico de SCA.",
+        "Não incorpora variáveis adicionais de escores mais recentes (GRACE 2.0)."
+      ]
+    }
+  },
+  {
+    "slug": "gscri",
+    "nome": "GSCRI — Geriatric-Sensitive Cardiac Risk Index",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 8,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "avc_previo": false,
+      "asa": 1,
+      "tipo_procedimento": "hernia",
+      "status_funcional": "independente",
+      "creatinina_maior_1_5": false,
+      "insuficiencia_cardiaca": false,
+      "diabetes": "nao"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "gscri",
+      "name": "GSCRI — Geriatric-Sensitive Cardiac Risk Index",
+      "result": {
+        "risco_pct": 0.11,
+        "endpoint": "infarto do miocardio ou parada cardiaca perioperatoria",
+        "idade_minima_validacao": 65,
+        "procedimento": "Hérnia"
+      },
+      "interpretation": "GSCRI: risco estimado de IAM ou parada cardíaca perioperatória de 0.11%. O modelo foi derivado especificamente em pacientes ≥65 anos. No conjunto de validação geriátrico, apresentou AUC 0,76, superior ao RCRI (0,63) e ao Gupta MICA (0,70) no mesmo subconjunto. O percentual não deve ser usado isoladamente para indicar teste isquêmico, coronariografia ou adiamento cirúrgico.",
+      "reference": "Alrezk R, Jackson N, Al Rezk M, et al. Derivation and Validation of a Geriatric-Sensitive Perioperative Cardiac Risk Index. J Am Heart Assoc. 2017;6(11):e006648. PMID: 29146612. PMCID: PMC5721761. DOI: 10.1161/JAHA.117.006648. Coeficientes: Table 3.",
+      "limitations": [
+        "Validado especificamente para idade ≥65 anos; não usar em pacientes mais jovens.",
+        "O endpoint é IAM ou parada cardíaca, não mortalidade global nem o composto do RCRI clássico.",
+        "A classificação ASA e a categoria do procedimento precisam ser definidas de forma consistente.",
+        "Não substitui capacidade funcional, fragilidade, doença cardiovascular ativa ou julgamento clínico."
+      ]
+    }
+  },
+  {
+    "slug": "gupta-mica",
+    "nome": "Gupta MICA — risco de infarto ou parada cardíaca perioperatória",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 5,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "status_funcional": "independente",
+      "asa": 1,
+      "creatinina_maior_1_5": false,
+      "tipo_procedimento": "hernia"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "gupta-mica",
+      "name": "Gupta MICA — risco de infarto ou parada cardíaca perioperatória",
+      "result": {
+        "risco_pct": 0.01,
+        "procedimento": "Hérnia"
+      },
+      "interpretation": "Risco estimado de infarto do miocárdio ou parada cardíaca em até 30 dias: 0.01% (procedimento: Hérnia) — risco baixo pelo corte de 1% usado na validação original.",
+      "reference": "Gupta PK et al. Development and validation of a risk calculator for prediction of cardiac risk after surgery. Circulation. 2011;124(4):381-387. doi:10.1161/CIRCULATIONAHA.110.015701. Fonte primária: Tabela 1 (definição das categorias cirúrgicas) e Tabela 2 (coeficientes do modelo).",
+      "limitations": [
+        "Enquadrar o procedimento apenas em uma categoria definida na Tabela 1 original. Sem categoria correspondente, não estimar o MICA: não aproximar automaticamente pelo tipo mais semelhante nem atribuir coeficiente a 'Outras (Baixo Risco)'.",
+        "Desenvolvido e validado em cirurgia não cardíaca; não usar para cirurgia cardíaca eletiva (a categoria 'Cardíaca' aqui refere-se a procedimentos card­íacos dentro do escopo NSQIP geral, não à cirurgia cardíaca de rotina avaliada por outros escores).",
+        "Desempenho superior ao RCRI em coortes de validação (estatística C 0,87 vs 0,75), mas ainda é estimativa populacional — não substitui julgamento clínico individual."
+      ]
+    }
+  },
+  {
+    "slug": "has-bled",
+    "nome": "HAS-BLED",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 9,
+    "erros_de_contrato": [],
+    "cenario": {
+      "hipertensao_nao_controlada": false,
+      "funcao_renal_alterada": false,
+      "funcao_hepatica_alterada": false,
+      "avc_previo": false,
+      "sangramento_previo_ou_predisposicao": false,
+      "inr_labil": false,
+      "idade_maior_65": false,
+      "farmacos_de_risco": false,
+      "alcool": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "has-bled",
+      "name": "HAS-BLED",
+      "result": {
+        "score": 0,
+        "max": 9
+      },
+      "interpretation": "Pontuação 0/9. Escore alto não contraindica anticoagulação: sinaliza fatores de risco hemorrágico modificáveis (PA, INR lábil, AINE/antiagregante, álcool) que devem ser corrigidos e reavaliados.",
+      "reference": "Pisters R et al. Chest. 2010;138(5):1093-100.",
+      "limitations": [
+        "O item INR lábil não se aplica a anticoagulantes orais diretos."
+      ]
+    }
+  },
+  {
+    "slug": "heart",
+    "nome": "HEART score",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 5,
+    "erros_de_contrato": [],
+    "cenario": {
+      "historia": 0,
+      "ecg": 0,
+      "idade_pts": 0,
+      "fatores_risco": 0,
+      "troponina": 0
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "heart",
+      "name": "HEART score",
+      "result": {
+        "score": 0,
+        "max": 10
+      },
+      "interpretation": "Pontuação 0/10. Escore desenvolvido para dor torácica indiferenciada no pronto-socorro. A classificação de risco (baixo / intermediário / alto) e a conduta correspondente devem seguir o protocolo institucional de dor torácica.",
+      "reference": "Six AJ et al. Neth Heart J. 2008;16(6):191-6.",
+      "limitations": [
+        "Não se aplica a supradesnivelamento de ST ou instabilidade hemodinâmica.",
+        "Desenvolvido com troponina convencional; protocolos com troponina ultrassensível usam algoritmos próprios."
+      ]
+    }
+  },
+  {
+    "slug": "heparina-nao-fracionada-nomograma",
+    "nome": "Heparina não fracionada — dose inicial peso-ajustada",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 1,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "heparina-nao-fracionada-nomograma",
+      "name": "Heparina não fracionada — dose inicial peso-ajustada",
+      "result": {
+        "peso": 70.0,
+        "bolus_ui": 5600,
+        "infusao_ui_h": 1260
+      },
+      "interpretation": "Bolus inicial: 5600 UI IV. Infusão de manutenção inicial: 1260 UI/h. Colher TTPa em 6 horas e ajustar pelo nomograma do seu serviço, visando TTPa 1,5–2,3× o controle (faixa do nomograma original de Raschke) — os incrementos de ajuste por faixa de TTPa variam por protocolo institucional e não estão reproduzidos aqui por não terem sido confirmados contra a tabela original nesta rodada de revisão.",
+      "reference": "Raschke RA et al. The weight-based heparin dosing nomogram compared with a standard care nomogram: a randomized controlled trial. Ann Intern Med. 1993;119(9):874-881.",
+      "limitations": [
+        "Calcula só a dose INICIAL (bolus + infusão de partida) — o ajuste subsequente por faixa de TTPa segue o nomograma/protocolo do seu serviço, não reproduzido aqui.",
+        "Em obesidade importante, o nomograma peso-ajustado pode superestimar a dose — muitos serviços usam peso ajustado ou tetos de bolus/infusão; confira o protocolo local.",
+        "Não usar em suspeita de trombocitopenia induzida por heparina (HIT)."
+      ]
+    }
+  },
+  {
+    "slug": "hipercalemia-seguranca-uco",
+    "nome": "Hipercalemia na UCO — gravidade, ECG e gates de segurança",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 12,
+    "erros_de_contrato": [],
+    "cenario": {
+      "potassio_mmol_l": 10.0,
+      "qualidade_amostra": "desconhecida",
+      "ecg_realizado": false,
+      "alteracao_ecg_compativel": false,
+      "instabilidade_ou_arritmia_grave": false,
+      "parada_cardiorrespiratoria": false,
+      "forte_suspeita_hipercalemia_na_parada": false,
+      "lra_oliguria_ou_anuria": false,
+      "insulina_glicose_administrada": false,
+      "glicemia_seriada_programada": false,
+      "potassio_seriado_programado": false,
+      "suspeita_toxicidade_digitalica": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "hipercalemia-seguranca-uco",
+      "name": "Hipercalemia na UCO — gravidade, ECG e gates de segurança",
+      "result": {
+        "faixa": "hipercalemia grave (≥6,5 mmol/L)",
+        "nivel": "emergencia",
+        "prioridade": "EMERGÊNCIA: K ≥6,5 mmol/L permanece hipercalemia grave mesmo sem alteração marcante no ECG. Ativar avaliação/tratamento emergencial conforme protocolo local; a estação não calcula doses.",
+        "conferencia_amostra": "Qualidade da amostra ainda não conferida: verificar hemólise, método, coleta e horário; não assumir amostra confiável por padrão.",
+        "avaliacao_ecg": "ECG de 12 derivações não realizado: não inferir ausência de alterações eletrocardiográficas.",
+        "alertas_seguranca": [
+          "Potássio seriado não está programado: documentar trajetória/resposta e vigiar rebote, independentemente do uso de insulina/glicose."
+        ],
+        "fora_da_faixa": true
+      },
+      "interpretation": "hipercalemia grave (≥6,5 mmol/L). EMERGÊNCIA: K ≥6,5 mmol/L permanece hipercalemia grave mesmo sem alteração marcante no ECG. Ativar avaliação/tratamento emergencial conforme protocolo local; a estação não calcula doses. Qualidade da amostra ainda não conferida: verificar hemólise, método, coleta e horário; não assumir amostra confiável por padrão. ECG de 12 derivações não realizado: não inferir ausência de alterações eletrocardiográficas. Alertas: Potássio seriado não está programado: documentar trajetória/resposta e vigiar rebote, independentemente do uso de insulina/glicose.",
+      "reference": "UK Kidney Association. Clinical Practice Guideline: Management of Hyperkalaemia in Adults. Hospital section updated 19 Dec 2023. https://www.ukkidney.org/health-professionals/guidelines/treatment-acute-hyperkalaemia-adults-0; American Heart Association. 2025 Guidelines for CPR and ECC, Part 10: Adult and Pediatric Special Circumstances of Resuscitation. https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-and-pediatric-special-circumstances-of-resuscitation; Durfey N et al. Severe Hyperkalemia: Can the Electrocardiogram Risk Stratify for Short-term Adverse Events? West J Emerg Med. 2017;18:963-971. PMID:28874951; Montague BT et al. Retrospective Review of the Frequency of ECG Changes in Hyperkalemia. Clin J Am Soc Nephrol. 2008;3:324-330. PMID:18235147.",
+      "limitations": [
+        "Ferramenta adulta de triagem/conferência; não seleciona nem calcula tratamento, dose, concentração, diluição ou indicação individual de diálise.",
+        "Faixas 5,5–5,9, 6,0–6,4 e ≥6,5 mmol/L seguem a UK Kidney Association 2023; contexto pode exigir resposta mais precoce.",
+        "ECG tem sensibilidade insuficiente para excluir hipercalemia e ECG ausente nunca é interpretado como normal.",
+        "Hemólise exige repetição, mas não rebaixa automaticamente K ≥6,5 mmol/L.",
+        "Parada cardíaca recebe ALS padrão; o fluxo específico de hipercalemia só é aberto quando há forte suspeita/atribuição clínica declarada."
+      ]
+    }
+  },
+  {
+    "slug": "hnf-sca-pci-fibrinolise-acc-aha-2025",
+    "nome": "Heparina não fracionada — SCA, fibrinólise e PCI (ACC/AHA 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 3,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "cenario": "terapia_inicial",
+      "anticoagulante_previo": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "hnf-sca-pci-fibrinolise-acc-aha-2025",
+      "name": "Heparina não fracionada — SCA, fibrinólise e PCI (ACC/AHA 2025)",
+      "result": {
+        "farmaco": "Heparina não fracionada",
+        "cenario": "terapia_inicial",
+        "bolus_ui": 4000,
+        "infusao_ui_h": 840,
+        "alvo_aptt": "60-80 s"
+      },
+      "interpretation": "HNF: bolus 4000 UI IV (60 UI/kg, máx 4.000 UI), seguido de 840 UI/h (12 UI/kg/h, máx 1.000 UI/h), ajustar para aPTT 60-80 s.",
+      "reference": "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. doi:10.1016/j.jacc.2024.11.009. Table 10.",
+      "limitations": [
+        "Na terapia inicial/fibrinólise: 60 UI/kg, máximo 4.000 UI, seguida de 12 UI/kg/h, máximo 1.000 UI/h, ajustada para aPTT 60-80 s.",
+        "Na PCI sem anticoagulação prévia: 70-100 U/kg IV para ACT 250-300 s.",
+        "Na PCI após anticoagulação prévia, a diretriz não fornece um bolus fixo universal; titular HNF adicional ao ACT.",
+        "Protocolos institucionais podem usar alvos de ACT diferentes conforme uso de GP IIb/IIIa; não foram extrapolados nesta calculadora."
+      ]
+    }
+  },
+  {
+    "slug": "icfer-doses-iniciais-e-alvo-aha-2022",
+    "nome": "ICFER — doses iniciais e alvo da terapia farmacológica",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 1,
+    "erros_de_contrato": [],
+    "cenario": {
+      "farmaco": "sacubitril_valsartana"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "icfer-doses-iniciais-e-alvo-aha-2022",
+      "name": "ICFER — doses iniciais e alvo da terapia farmacológica",
+      "result": {
+        "farmaco": "Sacubitril/valsartana",
+        "dose_inicial": "49/51 mg VO 2x/dia; pode iniciar 24/26 mg 2x/dia",
+        "dose_alvo": "97/103 mg VO 2x/dia",
+        "nota": "Use a calculadora específica de Entresto/Brasil para seleção da dose inicial e bloqueios de segurança."
+      },
+      "interpretation": "Sacubitril/valsartana: dose inicial 49/51 mg VO 2x/dia; pode iniciar 24/26 mg 2x/dia; dose-alvo 97/103 mg VO 2x/dia. Use a calculadora específica de Entresto/Brasil para seleção da dose inicial e bloqueios de segurança.",
+      "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145:e895-e1032. doi:10.1161/CIR.0000000000001063. Table 14.",
+      "limitations": [
+        "É uma tabela de doses de referência, não um prescritor automático.",
+        "A diretriz recomenda iniciar em doses baixas e titular às doses-alvo dos ensaios conforme tolerância; não é necessário atingir a dose-alvo de uma classe antes de iniciar outra classe fundamental.",
+        "Se a dose-alvo não for tolerada, usar a maior dose tolerada.",
+        "Pressão arterial, frequência cardíaca, eletrólitos, função renal, congestão e sintomas precisam ser integrados antes de cada titulação.",
+        "Para sacubitril/valsartana, use a calculadora específica da bula brasileira para definir 50 versus 100 mg 2x/dia e washout de IECA."
+      ]
+    }
+  },
+  {
+    "slug": "infusao-continua-peso",
+    "nome": "Infusão contínua — vasopressores, inotrópicos e sedativos",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 5,
+    "erros_de_contrato": [],
+    "cenario": {
+      "droga": "noradrenalina",
+      "peso": 70,
+      "dose_alvo": 70,
+      "quantidade_no_frasco": 70,
+      "volume_da_solucao": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "infusao-continua-peso",
+      "name": "Infusão contínua — vasopressores, inotrópicos e sedativos",
+      "result": {
+        "farmaco": "Noradrenalina (norepinefrina)",
+        "dose_alvo": 70.0,
+        "unidade_dose": "mcg/kg/min",
+        "ml_h": 294.0,
+        "gotas_min": 98.0,
+        "faixa_usual_min": 0.01,
+        "faixa_usual_max": 0.5,
+        "fora_da_faixa": true
+      },
+      "interpretation": "Noradrenalina (norepinefrina): 294.0 mL/h (≈ 98.0 gotas/min em equipo macrogotas, 20 gtt/mL) para 70.0 mcg/kg/min. ⚠️ Dose informada (70.0 mcg/kg/min) está FORA da faixa usual (0.01–0.5 mcg/kg/min) — confira antes de prescrever; pode ser intencional em cenário clínico específico, mas confirme.",
+      "reference": "Faixas de dose por fármaco, fonte a fonte: noradrenalina/adrenalina/vasopressina — Surviving Sepsis Campaign 2021 (Evans L et al. Crit Care Med. 2021;49(11):e1063-e1143) e Russell JA et al. N Engl J Med. 2008;358(9):877-887 (VASST); dobutamina/dopamina/milrinona/nitroglicerina/nitroprussiato — bula do fabricante e cartões de referência de UTI (LITFL Critical Care Compendium, Drugs.com Professional Monograph — fontes secundárias, não a bula/diretriz original, declarado aqui de propósito); propofol/fentanil — Drugs.com Professional Monograph e protocolo de sedação de UTI publicado (Rozendaal FW et al. Intensive Care Med. 2009;35(2):291-8, para a taxa inicial de fentanil).",
+      "limitations": [
+        "As faixas são de uso HABITUAL, não limites farmacológicos absolutos — a calculadora avisa quando a dose sai da faixa, mas nunca bloqueia: a decisão clínica é do médico.",
+        "Concentração da solução deve ser exatamente a que foi preparada — confira o rótulo da bomba antes de aceitar o resultado.",
+        "Não substitui o protocolo institucional de diluição padrão do seu serviço, quando existir um.",
+        "A faixa de fentanil e a de vasopressina vêm de fonte mais limitada que as demais — revisão adicional prevista nas próximas rodadas de conteúdo desta calculadora."
+      ]
+    }
+  },
+  {
+    "slug": "lesao-renal-aguda-kdigo-uco",
+    "nome": "Lesão renal aguda na UCO — critérios KDIGO",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 9,
+    "erros_de_contrato": [],
+    "cenario": {
+      "creatinina_atual_mg_dl": 30,
+      "creatinina_baseline_confiavel": false,
+      "intervalo_creatinina_baseline": "ate_48h",
+      "anuria_12h_confirmada": false,
+      "trr_aguda_iniciada": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "lesao-renal-aguda-kdigo-uco",
+      "name": "Lesão renal aguda na UCO — critérios KDIGO",
+      "result": {
+        "estagio_kdigo": "indeterminado",
+        "componente_creatinina": "não avaliável sem basal confiável dentro da janela de até 7 dias",
+        "componente_diurese": "não avaliável sem peso, volume e duração completos",
+        "relacao_creatinina_baseline": "não calculada",
+        "delta_creatinina_mg_dl": "não calculada",
+        "diurese_ml_kg_h": "não calculada",
+        "status": "NÃO ESTADIÁVEL: faltam dados válidos de creatinina ou diurese. Não interpretar ausência de estágio como ausência de lesão renal.",
+        "fora_da_faixa": true
+      },
+      "interpretation": "Estágio KDIGO: indeterminado. Creatinina: não avaliável sem basal confiável dentro da janela de até 7 dias. Diurese: não avaliável sem peso, volume e duração completos. NÃO ESTADIÁVEL: faltam dados válidos de creatinina ou diurese. Não interpretar ausência de estágio como ausência de lesão renal.",
+      "reference": "Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group. KDIGO Clinical Practice Guideline for Acute Kidney Injury. Kidney Int Suppl. 2012;2:1-138. https://kdigo.org/wp-content/uploads/2016/10/KDIGO-2012-AKI-Guideline-English.pdf. A atualização KDIGO 2026 permanecia em revisão pública em 2026-08-27 e não foi usada como fonte normativa.",
+      "limitations": [
+        "A calculadora é para adultos e não implementa os critérios pediátricos de queda da TFG.",
+        "Creatinina é marcador tardio, depende de produção e diluição e pode ser enganosa em baixa massa muscular, sobrecarga volêmica e mudança rápida de função renal.",
+        "Diurese exige período contínuo e medida confiável; obstrução do cateter, perdas não registradas e peso inadequado alteram o estágio.",
+        "Use o componente mais grave, mas registre C e U separadamente. O estágio não define etiologia nem substitui exame de urina, imagem, revisão hemodinâmica e de nefrotóxicos.",
+        "A classificação não indica automaticamente fluido, diurético, suspensão de fármaco ou terapia renal substitutiva.",
+        "O KDIGO 2026 disponível em 27/08/2026 era rascunho para revisão pública e não foi usado como norma clínica neste lote."
+      ]
+    }
+  },
+  {
+    "slug": "lidocaina-pcr-adulto-2025",
+    "nome": "Lidocaína — FV/TV sem pulso no adulto (ACLS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 2,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "etapa": "primeira"
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "lidocaina-pcr-adulto-2025",
+      "name": "Lidocaína — FV/TV sem pulso no adulto (ACLS 2025)",
+      "result": {
+        "farmaco": "Lidocaína",
+        "etapa": "primeira",
+        "dose_min_mg": 70.0,
+        "dose_max_mg": 105.0,
+        "faixa_por_peso": "1-1,5 mg/kg"
+      },
+      "interpretation": "Lidocaína — 1ª dose: 70.0-105.0 mg IV/IO (1-1,5 mg/kg) para FV/TV sem pulso refratária à desfibrilação.",
+      "reference": "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. doi:10.1161/CIR.0000000000001376.",
+      "limitations": [
+        "Usar como alternativa à amiodarona na FV/TV sem pulso refratária; a AHA 2025 não demonstra superioridade definitiva entre as duas.",
+        "Esta calculadora não estabelece dose cumulativa máxima porque o algoritmo AHA 2025 consultado não fornece esse número na caixa de doses."
+      ]
+    }
+  },
+  {
+    "slug": "lidocaina-pcr-pediatrica-2025",
+    "nome": "Lidocaína — FV/TV sem pulso pediátrica (PALS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 1,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "lidocaina-pcr-pediatrica-2025",
+      "name": "Lidocaína — FV/TV sem pulso pediátrica (PALS 2025)",
+      "result": {
+        "farmaco": "Lidocaína",
+        "dose_mg": 70.0,
+        "dose_por_peso": "1 mg/kg"
+      },
+      "interpretation": "Lidocaína 70.0 mg IV/IO (1 mg/kg) para FV/TV sem pulso refratária à desfibrilação.",
+      "reference": "Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S479-S537. doi:10.1161/CIR.0000000000001368.",
+      "limitations": [
+        "Somente para FV/TV sem pulso refratária à desfibrilação."
+      ]
+    }
+  },
+  {
+    "slug": "mra-icfer-egfr-potassio-aha-2022",
+    "nome": "MRA na ICFER — espironolactona/eplerenona por eGFR e potássio",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 3,
+    "erros_de_contrato": [],
+    "cenario": {
+      "farmaco": "espironolactona",
+      "egfr": 70,
+      "potassio": 10
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "mra-icfer-egfr-potassio-aha-2022",
+      "name": "MRA na ICFER — espironolactona/eplerenona por eGFR e potássio",
+      "result": {
+        "conduta": "nao_iniciar",
+        "motivo": "K >=5,0 mEq/L — contraindicação à iniciação de MRA na diretriz AHA/ACC/HFSA 2022"
+      },
+      "interpretation": "MRA: NÃO iniciar — K >=5,0 mEq/L — contraindicação à iniciação de MRA na diretriz AHA/ACC/HFSA 2022.",
+      "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145:e895-e1032. doi:10.1161/CIR.0000000000001063. Section 7.3.3 and Table 14.",
+      "limitations": [
+        "Não iniciar MRA se eGFR <=30 mL/min/1,73 m² ou K >=5,0 mEq/L.",
+        "O texto de suporte recomenda iniciar espironolactona/eplerenona em 25 mg/dia e dobrar para 50 mg após um mês; em eGFR 31-49, reduzir a dose pela metade.",
+        "Para espironolactona, a Tabela 14 também aceita 12,5-25 mg/dia como faixa inicial.",
+        "A apresentação prática de eplerenona que permita 12,5 mg deve ser conferida no produto disponível; esta calculadora expressa a metade matemática da dose da diretriz, não uma apresentação comercial.",
+        "Durante tratamento, a diretriz recomenda descontinuar MRA se o potássio não puder ser mantido <5,5 mEq/L; isso exige avaliação seriada e não é automatizado aqui a partir de um único valor."
+      ]
+    }
+  },
+  {
+    "slug": "orbit",
+    "nome": "ORBIT",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 5,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade_maior_74": false,
+      "hemoglobina_baixa_ou_anemia": false,
+      "historia_sangramento": false,
+      "tfg_menor_60": false,
+      "uso_antiagregante": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "orbit",
+      "name": "ORBIT",
+      "result": {
+        "score": 0,
+        "max": 7,
+        "categoria": "baixo"
+      },
+      "interpretation": "Pontuação 0/7. Risco hemorrágico baixo (baixo 0-2, médio 3, alto ≥4 — ORBIT-AF registry, O'Brien et al. 2015). Desenvolvido especificamente para fibrilação atrial em uso de anticoagulante oral; anemia definida por hemoglobina <13 g/dL (homem) ou <12 g/dL (mulher), ou hematócrito <40%/<36%, ou história de anemia.",
+      "reference": "O'Brien EC et al. Eur Heart J. 2015;36(46):3258-3264.",
+      "limitations": [
+        "Desenvolvido especificamente para fibrilação atrial em anticoagulante oral — não validado para outras indicações de anticoagulação.",
+        "Derivado do registro ORBIT-AF, predominantemente pacientes em uso de varfarina; desempenho em DOAC foi avaliado em coortes de validação posteriores, não na derivação original."
+      ]
+    }
+  },
+  {
+    "slug": "oxigenacao-pao2-fio2-sdra-uco",
+    "nome": "Oxigenação na UCO — PaO₂/FiO₂ e gates para SDRA",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 13,
+    "erros_de_contrato": [],
+    "cenario": {
+      "pao2_mmhg": 70,
+      "fio2_percentual": 70,
+      "suporte_respiratorio": "invasiva",
+      "altitude_maior_1000m": false,
+      "fator_predisponente_agudo": false,
+      "inicio_ate_uma_semana_do_fator": false,
+      "inicio_ate_uma_semana_dos_sintomas": false,
+      "opacidades_bilaterais": false,
+      "edema_nao_primariamente_cardiogenico": false,
+      "hipoxemia_nao_primariamente_atelectasia": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "oxigenacao-pao2-fio2-sdra-uco",
+      "name": "Oxigenação na UCO — PaO₂/FiO₂ e gates para SDRA",
+      "result": {
+        "relacao_pao2_fio2_observada_mmhg": 100.0,
+        "relacao_pao2_fio2_mmhg": 100.0,
+        "correcao_altitude": "não aplicada (altitude até 1.000 m)",
+        "faixa_da_relacao_pf": "≤100 mmHg — faixa grave apenas na categoria intubada",
+        "suporte_avaliado": "ventilação invasiva sem PEEP informada",
+        "categoria_global_avaliada": "intubada",
+        "status_dos_criterios": "GATE DE SUPORTE NÃO PREENCHIDO: ventilação invasiva sem PEEP informada; para esta categoria, a definição global requer PEEP ≥5 cmH₂O. Não classificar SDRA por esta ferramenta.",
+        "alerta_edema_cardiogenico": "BLOQUEIO CARDIOGÊNICO: não foi confirmado que insuficiência cardíaca/sobrecarga deixam de ser a explicação exclusiva ou principal. Não rotular SDRA.",
+        "criterios_ausentes": [
+          "fator predisponente agudo",
+          "início ou piora em até 1 semana do fator ou de sintomas respiratórios",
+          "opacidades bilaterais compatíveis",
+          "edema não primariamente cardiogênico/sobrecarga",
+          "hipoxemia não primariamente por atelectasia"
+        ],
+        "fora_da_faixa": true
+      },
+      "interpretation": "Razão PaO₂/FiO₂ usada nos limiares = 100.0 mmHg (observada: 100.0 mmHg; correção de altitude não aplicada (altitude até 1.000 m)). ≤100 mmHg — faixa grave apenas na categoria intubada. Suporte: ventilação invasiva sem PEEP informada. GATE DE SUPORTE NÃO PREENCHIDO: ventilação invasiva sem PEEP informada; para esta categoria, a definição global requer PEEP ≥5 cmH₂O. Não classificar SDRA por esta ferramenta. BLOQUEIO CARDIOGÊNICO: não foi confirmado que insuficiência cardíaca/sobrecarga deixam de ser a explicação exclusiva ou principal. Não rotular SDRA.",
+      "reference": "Matthay MA et al. A New Global Definition of Acute Respiratory Distress Syndrome. Am J Respir Crit Care Med. 2024;209:37-47. doi:10.1164/rccm.202303-0558WS. PMID:37487152; ARDS Definition Task Force. Acute respiratory distress syndrome: the Berlin Definition. JAMA. 2012;307:2526-2533. doi:10.1001/jama.2012.5669. PMID:22797452; Qadir N et al. An Update on Management of Adult Patients with ARDS: An Official ATS Clinical Practice Guideline. Am J Respir Crit Care Med. 2024;209:24-36. doi:10.1164/rccm.202311-2011ST. PMID:38032683.",
+      "limitations": [
+        "A razão P/F isolada não diagnostica SDRA e pode variar com FiO₂, PEEP, recrutamento, posição e momento da coleta.",
+        "Para classificação, registre a medida em repouso e, quando clinicamente possível, após pelo menos 30 minutos sem mudança de posição, FiO₂ ou fluxo; isso nunca deve atrasar estabilização urgente.",
+        "Acima de 1.000 m, os limiares usam P/F corrigida = P/F observada × (pressão barométrica local/760). Pressão incorreta pode mudar artificialmente a categoria.",
+        "PaO₂ e FiO₂ precisam representar o mesmo momento. FiO₂ estimada em oxigênio convencional/baixo fluxo é imprecisa; por segurança, essa modalidade não preenche o gate de suporte em ambiente com recursos.",
+        "As faixas leve, moderada e grave são exibidas somente como faixas da razão e pertencem à categoria intubada da definição global; não graduam automaticamente o paciente não intubado.",
+        "Insuficiência cardíaca e sobrecarga volêmica precisam de avaliação objetiva quando a origem do edema não está clara. SDRA pode coexistir com edema cardiogênico, mas a relação não deve ser presumida.",
+        "A ferramenta não seleciona FiO₂, PEEP, modo ventilatório, prona, bloqueio neuromuscular ou ECMO; condutas dependem de avaliação clínica e protocolo local.",
+        "A categoria modificada para ambientes com recursos limitados não é automatizada aqui, porque seu contexto e disponibilidade diagnóstica exigem julgamento próprio."
+      ]
+    }
+  },
+  {
+    "slug": "pesi",
+    "nome": "PESI",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 11,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "sexo": "M",
+      "cancer": false,
+      "insuficiencia_cardiaca": false,
+      "doenca_pulmonar_cronica": false,
+      "fc_maior_igual_110": false,
+      "pas_menor_100": false,
+      "fr_maior_igual_30": false,
+      "temperatura_menor_36": false,
+      "alteracao_estado_mental": false,
+      "saturacao_menor_90": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "pesi",
+      "name": "PESI",
+      "result": {
+        "score": 80,
+        "classe": "II (baixo)",
+        "mortalidade_30_dias_faixa": "1,7-3,5%"
+      },
+      "interpretation": "Pontuação 80 (idade em anos + pontos por variável). Classe II (baixo) — mortalidade em 30 dias na faixa de 1,7-3,5% nas coortes de derivação/validação. Classes I-II (baixo risco) são candidatas a tratamento ambulatorial em contexto clínico e social favorável. Aujesky et al. 2005.",
+      "reference": "Aujesky D et al. Am J Respir Crit Care Med. 2005;172(8):1041-1046.",
+      "limitations": [
+        "Diferente de escores de PROBABILIDADE diagnóstica (Wells, Genebra) — o PESI pressupõe TEP já confirmado e estima prognóstico, não probabilidade diagnóstica.",
+        "Não substitui avaliação de disfunção de VD (biomarcador/imagem) na estratificação completa de risco do TEP."
+      ]
+    }
+  },
+  {
+    "slug": "prevent",
+    "nome": "PREVENT — SBC / AHA / ACC",
+    "status_catalogo": "referencia_externa",
+    "quantidade_campos": 0,
+    "erros_de_contrato": [],
+    "cenario": {},
+    "verificacao": "validacao_esperada_ou_cenario_inaplicavel",
+    "resultado": "ValueError: Ferramenta externa: acesse a instituição responsável pela página da calculadora. Não há cálculo local no CorVIA."
+  },
+  {
+    "slug": "procainamida-tv-estavel-adulto-2025",
+    "nome": "Procainamida — taquicardia de QRS largo estável (ACLS 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 2,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "taxa_mg_min": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "procainamida-tv-estavel-adulto-2025",
+      "name": "Procainamida — taquicardia de QRS largo estável (ACLS 2025)",
+      "result": {
+        "farmaco": "Procainamida",
+        "taxa_mg_min": 70.0,
+        "dose_maxima_17mg_kg_mg": 1190.0,
+        "tempo_ate_dose_maxima_min": 17.0,
+        "manutencao": "1-4 mg/min",
+        "fora_da_faixa": true
+      },
+      "interpretation": "Procainamida 70.0 mg/min. Dose máxima pelo peso: 1190.0 mg (17 mg/kg), atingida em ~17.0 min se não houver critério de parada antes. Manutenção: 1-4 mg/min. ⚠️ Taxa fora da faixa AHA 2025 de 20-50 mg/min.",
+      "reference": "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. doi:10.1161/CIR.0000000000001376.",
+      "limitations": [
+        "Interromper antes do teto se a arritmia for suprimida, surgir hipotensão ou o QRS aumentar >50%.",
+        "Evitar procainamida em QT prolongado ou insuficiência cardíaca congestiva, conforme o algoritmo AHA 2025.",
+        "Taquicardia de QRS largo hemodinamicamente instável exige cardioversão sincronizada, não infusão farmacológica prolongada."
+      ]
+    }
+  },
+  {
+    "slug": "qtc",
+    "nome": "QTc (Bazett/Fridericia/Framingham/Hodges)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 2,
+    "erros_de_contrato": [],
+    "cenario": {
+      "qt": 200,
+      "frequencia_cardiaca": 70
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "qtc",
+      "name": "QTc (Bazett/Fridericia/Framingham/Hodges)",
+      "result": {
+        "bazett": 216.0,
+        "fridericia": 210.5,
+        "framingham": 222.0,
+        "hodges": 217.5,
+        "unidade": "ms"
+      },
+      "interpretation": "Bazett: 216.0 ms · Fridericia: 210.5 ms · Framingham: 222.0 ms · Hodges: 217.5 ms. Bazett superestima em frequências altas e subestima em frequências baixas — Fridericia e Framingham são geralmente preferidas fora da faixa de FC 60-100 bpm. QTc prolongado: geralmente ≥450 ms (homem) ou ≥460 ms (mulher); ≥500 ms associa-se a maior risco de torsades.",
+      "reference": "Bazett HC. Heart. 1920;7:353-370. · Fridericia LS. Acta Med Scand. 1920;53:469-486. · Sagie A et al. Am J Cardiol. 1992;70(7):797-801 (fórmula de Framingham). · Hodges M et al. J Electrocardiol. 1983;16(1):17-24.",
+      "limitations": [
+        "Bazett (a mais usada na prática) superestima o QTc em frequências altas e subestima em frequências baixas — fora da faixa de 60-100 bpm, prefira Fridericia ou Framingham.",
+        "Nenhuma fórmula substitui medição cuidadosa do QT (derivação II ou V5, batimento sem onda U proeminente sobreposta)."
+      ]
+    }
+  },
+  {
+    "slug": "rcri",
+    "nome": "RCRI — Índice de Risco Cardíaco Revisado (Lee)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 6,
+    "erros_de_contrato": [],
+    "cenario": {
+      "cirurgia_alto_risco": false,
+      "cardiopatia_isquemica": false,
+      "insuficiencia_cardiaca_congestiva": false,
+      "doenca_cerebrovascular": false,
+      "diabetes_em_uso_de_insulina": false,
+      "creatinina_maior_2": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "rcri",
+      "name": "RCRI — Índice de Risco Cardíaco Revisado (Lee)",
+      "result": {
+        "pontos": 0,
+        "classe": "I",
+        "evento_pct": "0,4"
+      },
+      "interpretation": "0 ponto(s) — Classe I de risco, com taxa de evento cardíaco grave (infarto, edema pulmonar, fibrilação ventricular/parada cardíaca ou bloqueio AV total) de aproximadamente 0,4% na coorte original de derivação/validação. Não substitui a avaliação clínica global nem a capacidade funcional.",
+      "reference": "Lee TH et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999;100(10):1043-1049.",
+      "limitations": [
+        "Validado para cirurgia não cardíaca eletiva/urgência em adultos — desempenho inferior ao Gupta MICA em coortes ACS-NSQIP mais recentes, sobretudo em pacientes de baixo risco.",
+        "Não incorpora capacidade funcional (METs) nem idade como variáveis contínuas."
+      ]
+    }
+  },
+  {
+    "slug": "rivaroxabana-dose-bula-brasil-2025",
+    "nome": "Rivaroxabana — dose por indicação e função renal (bula Brasil 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 3,
+    "erros_de_contrato": [],
+    "cenario": {
+      "indicacao": "fa_nvalvular",
+      "clcr": 70,
+      "risco_sangramento_supera_recorrencia": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "rivaroxabana-dose-bula-brasil-2025",
+      "name": "Rivaroxabana — dose por indicação e função renal (bula Brasil 2025)",
+      "result": {
+        "farmaco": "Rivaroxabana",
+        "indicacao": "FA não valvular — prevenção de AVC/embolia sistêmica",
+        "dose": "20 mg VO 1x/dia com alimento",
+        "cautela_clcr_15_29": false
+      },
+      "interpretation": "Rivaroxabana — FA não valvular — prevenção de AVC/embolia sistêmica: 20 mg VO 1x/dia com alimento.",
+      "reference": "Xarelto® (rivaroxabana). Bula profissional Bayer S.A., Bulário Bayer; 2,5mg/10mg CCDS19 e 15mg/20mg CCDS17, aprovada pela Anvisa em 22/12/2025.",
+      "limitations": [
+        "ClCr <15 mL/min: uso não recomendado pela bula brasileira consultada.",
+        "ClCr 15-29 mL/min: dados clínicos limitados e uso com cautela.",
+        "No tratamento de TVP/EP, a redução de 20 para 15 mg/dia após o dia 21 em ClCr 15-49 mL/min NÃO é automática: só deve ser considerada quando o risco de sangramento supera o de recorrência e é baseada em modelo farmacocinético, não em estudo clínico desse regime.",
+        "Comprimidos de 15 e 20 mg devem ser administrados com alimento; 10 mg pode ser administrado com ou sem alimento.",
+        "Interações, doença hepática, gravidez, próteses valvares e síndrome antifosfolípide exigem avaliação própria além desta calculadora."
+      ]
+    }
+  },
+  {
+    "slug": "s-mpm",
+    "nome": "S-MPM — Surgical Mortality Probability Model",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 3,
+    "erros_de_contrato": [],
+    "cenario": {
+      "asa": 1,
+      "risco_procedimento": "baixo",
+      "emergencia": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "s-mpm",
+      "name": "S-MPM — Surgical Mortality Probability Model",
+      "result": {
+        "score": 0,
+        "max": 9,
+        "classe": "I",
+        "mortalidade_30d": "<0,5%",
+        "endpoint": "mortalidade por todas as causas em 30 dias"
+      },
+      "interpretation": "S-MPM 0/9 — Classe I; mortalidade estimada em 30 dias <0,5% na classificação original. Este é um escore de mortalidade cirúrgica global, não um escore específico de IAM/parada cardíaca. A classe de risco do procedimento deve ser atribuída de forma consistente com a metodologia adotada; a categorização empírica original do S-MPM não é idêntica a todas as tabelas ESC/AHA.",
+      "reference": "Glance LG, Lustik SJ, Hannan EL, et al. The Surgical Mortality Probability Model: derivation and validation of a simple risk prediction rule for noncardiac surgery. Ann Surg. 2012;255(4):696-702. PMID: 22418007. DOI: 10.1097/SLA.0b013e31824b45af.",
+      "limitations": [
+        "Endpoint: mortalidade por todas as causas em 30 dias; não confundir com risco cardíaco específico.",
+        "A classificação do risco do procedimento no estudo foi empiricamente derivada e pode não coincidir com classificações ESC/AHA.",
+        "Não substitui modelos cirúrgicos contemporâneos mais granulares quando estes estão disponíveis."
+      ]
+    }
+  },
+  {
+    "slug": "sbc-risco-cardiovascular",
+    "nome": "SBC — Calculadora para Estratificação de Risco Cardiovascular",
+    "status_catalogo": "verificacao_humana_necessaria",
+    "quantidade_campos": 0,
+    "erros_de_contrato": [],
+    "cenario": {},
+    "verificacao": "validacao_esperada_ou_cenario_inaplicavel",
+    "resultado": "ValueError: Calculadora ainda não liberada: aguarda validação dos coeficientes oficiais."
+  },
+  {
+    "slug": "score2",
+    "nome": "SCORE2 — ESC",
+    "status_catalogo": "referencia_externa",
+    "quantidade_campos": 0,
+    "erros_de_contrato": [],
+    "cenario": {},
+    "verificacao": "validacao_esperada_ou_cenario_inaplicavel",
+    "resultado": "ValueError: Ferramenta externa: acesse a instituição responsável pela página da calculadora. Não há cálculo local no CorVIA."
+  },
+  {
+    "slug": "score2-diabetes",
+    "nome": "SCORE2-Diabetes — ESC",
+    "status_catalogo": "referencia_externa",
+    "quantidade_campos": 0,
+    "erros_de_contrato": [],
+    "cenario": {},
+    "verificacao": "validacao_esperada_ou_cenario_inaplicavel",
+    "resultado": "ValueError: Ferramenta externa: acesse a instituição responsável pela página da calculadora. Não há cálculo local no CorVIA."
+  },
+  {
+    "slug": "score2-op",
+    "nome": "SCORE2-OP — ESC, pessoas idosas",
+    "status_catalogo": "referencia_externa",
+    "quantidade_campos": 0,
+    "erros_de_contrato": [],
+    "cenario": {},
+    "verificacao": "validacao_esperada_ou_cenario_inaplicavel",
+    "resultado": "ValueError: Ferramenta externa: acesse a instituição responsável pela página da calculadora. Não há cálculo local no CorVIA."
+  },
+  {
+    "slug": "sort",
+    "nome": "SORT — Surgical Outcome Risk Tool",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 6,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "asa": 1,
+      "urgencia": "eletiva",
+      "especialidade_alto_risco": false,
+      "xmajor_complexa": false,
+      "cancer": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "sort",
+      "name": "SORT — Surgical Outcome Risk Tool",
+      "result": {
+        "risco_pct": 0.14,
+        "endpoint": "mortalidade por todas as causas em 30 dias"
+      },
+      "interpretation": "SORT: risco estimado de mortalidade por todas as causas em 30 dias de 0.14%. O modelo original apresentou AUROC 0,91 na coorte de validação. O resultado é de mortalidade global, não de MICA/MACE; deve ser apresentado ao lado, e não somado, aos escores cardiovasculares.",
+      "reference": "Protopapa KL, Simpson JC, Smith NCE, Moonesinghe SR. Development and validation of the Surgical Outcome Risk Tool (SORT). Br J Surg. 2014;101(13):1774-1783. PMID: 25388883. PMCID: PMC4240514. DOI: 10.1002/bjs.9638. Coeficientes: Table 4; constante -7.366.",
+      "limitations": [
+        "Endpoint: mortalidade global em 30 dias, não complicação cardíaca específica.",
+        "A categoria 'extra-major/complexa' depende da classificação de severidade cirúrgica usada no estudo original.",
+        "A urgência 'expedited' deve ser diferenciada de urgente e imediata conforme a taxonomia do SORT.",
+        "Não somar ou promediar o percentual com RCRI, Gupta MICA, GSCRI ou AUB-HAS2."
+      ]
+    }
+  },
+  {
+    "slug": "spesi",
+    "nome": "sPESI (simplificado)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 6,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade_maior_80": false,
+      "cancer": false,
+      "doenca_cardiopulmonar_cronica": false,
+      "fc_maior_igual_110": false,
+      "pas_menor_100": false,
+      "saturacao_menor_90": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "spesi",
+      "name": "sPESI (simplificado)",
+      "result": {
+        "score": 0,
+        "risco": "baixo"
+      },
+      "interpretation": "Pontuação 0/6. Risco baixo — sPESI 0 pontos: mortalidade em 30 dias em torno de 1%; ≥1 ponto: em torno de 10,9% (coorte de validação, Jiménez et al. 2010). Versão simplificada do PESI original, mesma finalidade de identificar candidato a tratamento ambulatorial.",
+      "reference": "Jiménez D et al. Arch Intern Med. 2010;170(15):1383-1389.",
+      "limitations": [
+        "0 pontos não significa ausência de qualquer risco — significa risco baixo o suficiente, na coorte de validação, para considerar tratamento ambulatorial.",
+        "Não substitui avaliação de disfunção de VD quando disponível."
+      ]
+    }
+  },
+  {
+    "slug": "tenecteplase-stemi-peso-idoso",
+    "nome": "Tenecteplase (Metalyse) — STEMI por peso e meia-dose no idoso",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 3,
+    "erros_de_contrato": [],
+    "cenario": {
+      "peso": 70,
+      "idade": 70,
+      "usar_meia_dose_idoso": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "tenecteplase-stemi-peso-idoso",
+      "name": "Tenecteplase (Metalyse) — STEMI por peso e meia-dose no idoso",
+      "result": {
+        "farmaco": "Tenecteplase (Metalyse)",
+        "peso_kg": 70.0,
+        "idade_anos": 70.0,
+        "dose_nominal_bula_mg": 40.0,
+        "volume_nominal_bula_ml": 8.0,
+        "unidades_nominais": 8000,
+        "idoso_ge_75_stream": false,
+        "meia_dose_selecionada": false,
+        "dose_a_administrar_mg": 40.0,
+        "volume_a_administrar_ml": 8.0,
+        "unidades_a_administrar": 8000,
+        "administracao": "bolus IV único em aproximadamente 5-10 s"
+      },
+      "interpretation": "Tenecteplase: dose nominal de bula 40.0 mg (8.0 mL; 8000 U) em bolus IV único em aproximadamente 5-10 s.",
+      "reference": "Metalyse® (tenecteplase). Bula profissional Boehringer Ingelheim, código 07-5773227/07-5775310/P23-02; tabela de posologia por peso. A própria bula descreve a redução pela metade em pacientes ≥75 anos no estudo STREAM. · Atualização das Diretrizes em Cardiogeriatria da Sociedade Brasileira de Cardiologia - 2019. Arq Bras Cardiol. 2019. Recomendação: se utilizar tenecteplase em idosos >75 anos, aplicar metade da dose. · Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. doi:10.1016/j.jacc.2024.11.009.",
+      "limitations": [
+        "Uso aqui modelado exclusivamente para fibrinólise de STEMI; não usar este regime para AVC isquêmico ou TEP.",
+        "A meia-dose em ≥75 anos aparece como estratégia de segurança/evidência e não substitui silenciosamente a tabela nominal da seção de posologia da bula brasileira.",
+        "A SBC 2019 usa a redação >75 anos, enquanto o STREAM descrito na bula reduziu a dose em pacientes ≥75 anos; a calculadora permite o protocolo a partir de 75 e deixa a seleção explícita ao médico.",
+        "Antes da fibrinólise, excluir contraindicações absolutas/relativas e confirmar que a estratégia fibrinolítica é apropriada frente ao tempo para ICP primária.",
+        "A solução reconstituída do Metalyse contém 5 mg/mL segundo a bula consultada; incompatível com solução glicosada no mesmo acesso."
+      ]
+    }
+  },
+  {
+    "slug": "timi-stemi",
+    "nome": "TIMI (STEMI)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 8,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "diabetes_hipertensao_ou_angina": false,
+      "pas_menor_100": false,
+      "fc_maior_100": false,
+      "killip_ii_iv": false,
+      "peso_menor_67kg": false,
+      "supra_anterior_ou_bre": false,
+      "tempo_tratamento_maior_4h": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "timi-stemi",
+      "name": "TIMI (STEMI)",
+      "result": {
+        "score": 2,
+        "max": 14,
+        "mortalidade_30_dias": "2,2%"
+      },
+      "interpretation": "Pontuação 2/14. Mortalidade em 30 dias: 2,2% (coorte InTIME II, Morrow et al. Circulation 2000). Validado para IAM com supra de ST — usar o TIMI de UA/NSTEMI para síndrome coronariana sem supra.",
+      "reference": "Morrow DA et al. Circulation. 2000;102(17):2031-2037.",
+      "limitations": [
+        "Validado para IAM com supra de ST — não usar em SCA sem supra.",
+        "Derivado da coorte InTIME II; validação mais recente existe (TIMI dinâmico) mas não é a mesma escala."
+      ]
+    }
+  },
+  {
+    "slug": "timi-ua-nstemi",
+    "nome": "TIMI (UA/NSTEMI)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 7,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade_maior_igual_65": false,
+      "tres_ou_mais_fatores_risco_cad": false,
+      "estenose_conhecida_50": false,
+      "desvio_st": false,
+      "angina_grave": false,
+      "uso_aspirina_7_dias": false,
+      "marcadores_elevados": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "timi-ua-nstemi",
+      "name": "TIMI (UA/NSTEMI)",
+      "result": {
+        "score": 0,
+        "max": 7,
+        "risco_14_dias": "4,7%"
+      },
+      "interpretation": "Pontuação 0/7. Risco de óbito, (re)infarto ou revascularização urgente em 14 dias: 4,7% (coorte de derivação/validação TIMI 11B, Antman et al. JAMA 2000). Escore validado para angina instável/IAM sem supra — não usar em IAM com supra de ST, que tem escore próprio (TIMI STEMI).",
+      "reference": "Antman EM et al. JAMA. 2000;284(7):835-842.",
+      "limitations": [
+        "Validado para angina instável/IAM sem supra de ST — não usar em IAM com supra.",
+        "Derivado das coortes TIMI 11B e ESSENCE, população selecionada de ensaio clínico."
+      ]
+    }
+  },
+  {
+    "slug": "vasoativos-choque-cardiogenico-acc-2025",
+    "nome": "Choque cardiogênico — vasoativos e conversão para mL/h (ACC 2025)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 7,
+    "erros_de_contrato": [],
+    "cenario": {
+      "agente": "norepinefrina",
+      "peso": 70,
+      "dose_alvo": 70,
+      "quantidade_soluto": 70,
+      "volume_ml": 70,
+      "hipotensao": false,
+      "piora_renal": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "vasoativos-choque-cardiogenico-acc-2025",
+      "name": "Choque cardiogênico — vasoativos e conversão para mL/h (ACC 2025)",
+      "result": {
+        "agente": "Norepinefrina",
+        "classe": "inopressor",
+        "dose_alvo": 70.0,
+        "unidade_dose": "mcg/kg/min",
+        "faixa_acc_2025": "0.05-1.0 mcg/kg/min",
+        "fora_da_faixa": true,
+        "concentracao": "1000.0 mcg/mL",
+        "ml_h": 294.0,
+        "alertas": []
+      },
+      "interpretation": "Norepinefrina (inopressor): 70.0 mcg/kg/min = 294.0 mL/h na concentração informada (1000.0 mcg/mL). Faixa ACC 2025: 0.05-1.0 mcg/kg/min. ⚠️ Dose-alvo fora da faixa da Tabela 2 ACC 2025.",
+      "reference": "Sinha SS, Morrow DA, Kapur NK, Kataria R, Roswell RO. 2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on the Evaluation and Management of Cardiogenic Shock. J Am Coll Cardiol. 2025;85(16):1618-1641. doi:10.1016/j.jacc.2025.02.018. Table 2.",
+      "limitations": [
+        "Usar vasoativos na menor dose capaz de sustentar perfusão e pelo menor tempo possível, conforme o consenso ACC 2025.",
+        "Não há um vasoativo com superioridade de mortalidade estabelecida para todos os fenótipos; a seleção deve ser hemodinâmica.",
+        "Norepinefrina é considerada escolha inicial razoável para a maioria dos pacientes hipotensivos.",
+        "Inodilatadores/vasodilatadores podem ser considerados em choque normotensivo, especialmente com resistência vascular sistêmica elevada.",
+        "Fenilefrina isolada como primeira infusão é fortemente desencorajada no choque cardiogênico.",
+        "Milrinona exige cautela na piora renal.",
+        "Levosimendana aparece na tabela ACC 2025, mas não foi incluída aqui porque não é aprovada pelo FDA e a disponibilidade/regulação brasileira exigiria verificação própria."
+      ]
+    }
+  },
+  {
+    "slug": "ventilacao-protetora-uco",
+    "nome": "Ventilação protetora — peso predito, volume corrente e pressões",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 5,
+    "erros_de_contrato": [],
+    "cenario": {
+      "sexo_biologico": "masculino",
+      "altura_cm": 120,
+      "volume_corrente_ml": 70,
+      "pressao_plato_cmh2o": 70,
+      "peep_total_cmh2o": 50
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "ventilacao-protetora-uco",
+      "name": "Ventilação protetora — peso predito, volume corrente e pressões",
+      "result": {
+        "peso_predito_kg": 20.52,
+        "vt_referencia_6_ml_kg": 123.1,
+        "faixa_vt_4_a_8_ml_kg": "82.1–164.1 mL",
+        "vt_atual_ml_kg": 3.41,
+        "pressao_distensao_cmh2o": 20.0,
+        "alerta_volume": "abaixo de 4 mL/kg de peso predito — revisar indicação e medidas",
+        "alerta_plato": "pressão de platô ≥30 cmH2O — reavaliar estratégia e qualidade da medida",
+        "fora_da_faixa": true
+      },
+      "interpretation": "Peso corporal predito 20.52 kg; volume de referência a 6 mL/kg = 123.1 mL e faixa 4–8 mL/kg = 82.1–164.1 mL. O volume informado corresponde a 3.41 mL/kg. Pressão de distensão calculada = 20.0 cmH2O. abaixo de 4 mL/kg de peso predito — revisar indicação e medidas; pressão de platô ≥30 cmH2O — reavaliar estratégia e qualidade da medida.",
+      "reference": "ARDS Network. Ventilation with lower tidal volumes as compared with traditional tidal volumes for acute lung injury and ARDS. N Engl J Med. 2000;342:1301-1308. doi:10.1056/NEJM200005043421801; Fan E et al. ATS/ESICM/SCCM Clinical Practice Guideline: Mechanical Ventilation in Adult Patients with ARDS. Am J Respir Crit Care Med. 2017;195:1253-1263. PMID:28459336; Qadir N et al. An Update on Management of Adult Patients with ARDS: An Official ATS Clinical Practice Guideline. Am J Respir Crit Care Med. 2024;209:24-36. doi:10.1164/rccm.202311-2011ST; Goodfellow LT et al. AARC Clinical Practice Guideline: Patient-Ventilator Assessment. Respir Care. 2024;69:1042-1054. PMID:39048148; Ferreira JC et al. Brazilian guidelines for mechanical ventilation 2024. Crit Care Sci. 2025;37:e20250242en. doi:10.62675/2965-2774.20250242-en.",
+      "limitations": [
+        "Ferramenta educacional e de conferência; não seleciona modo ventilatório, frequência, FiO₂ ou PEEP e não substitui avaliação à beira leito.",
+        "A recomendação forte de 4–8 mL/kg de peso predito e platô <30 cmH₂O provém de pacientes com SDRA; em outros fenótipos, individualizar sem abandonar a prevenção de lesão pulmonar.",
+        "Pressão de distensão é exibida para avaliação. A diretriz AARC 2024 recomenda sua aferição apenas condicionalmente, com baixa certeza; por isso a calculadora não impõe um limiar terapêutico.",
+        "Pressão de platô exige pausa inspiratória adequada e ausência de esforço; assincronia, vazamento e medida inadequada podem invalidar o resultado.",
+        "PEEP deve ser individualizada em instabilidade hemodinâmica, disfunção de ventrículo direito e fisiologia obstrutiva."
+      ]
+    }
+  },
+  {
+    "slug": "vsg-cri",
+    "nome": "VSG-CRI — Cirurgia vascular arterial",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 9,
+    "erros_de_contrato": [],
+    "cenario": {
+      "idade": 70,
+      "doenca_arterial_coronariana": false,
+      "insuficiencia_cardiaca": false,
+      "dpoc": false,
+      "creatinina_maior_1_8": false,
+      "tabagismo": false,
+      "diabetes_insulina": false,
+      "betabloqueador_cronico": false,
+      "revascularizacao_coronaria_previa": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "vsg-cri",
+      "name": "VSG-CRI — Cirurgia vascular arterial",
+      "result": {
+        "score": 3,
+        "categoria": "baixo",
+        "evento_original_pct": 2.6,
+        "evento_original_pct_verificado": true
+      },
+      "interpretation": "VSG-CRI 3 ponto(s) — risco baixo pela classificação adotada pela SBC 2024 (0–4 baixo, 5–6 intermediário, ≥7 alto). Na coorte original, a faixa correspondente teve taxa de complicações cardíacas de aproximadamente 2.6%. Essas taxas históricas não equivalem a probabilidade individual contemporânea e o escore deve ser usado especificamente em cirurgia vascular arterial.",
+      "reference": "Bertges DJ, Goodney PP, Zhao Y, et al. J Vasc Surg. 2010;52(3):674-683.e1-3. PMID 20570467. DOI 10.1016/j.jvs.2010.03.031. Classificação operacional: Diretriz SBC 2024, DOI 10.36660/abc.20240590.",
+      "limitations": [
+        "Usar especificamente em cirurgia vascular arterial; não extrapolar para cirurgia não vascular.",
+        "As taxas absolutas de evento são da coorte original e podem não refletir risco contemporâneo individual.",
+        "Uso crônico de betabloqueador é variável prognóstica do modelo e não implica causalidade."
+      ]
+    }
+  },
+  {
+    "slug": "wells-tep",
+    "nome": "Wells (TEP)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 7,
+    "erros_de_contrato": [],
+    "cenario": {
+      "sinais_clinicos_tvp": false,
+      "diagnostico_alternativo_menos_provavel": false,
+      "fc_maior_100": false,
+      "imobilizacao_ou_cirurgia_4_semanas": false,
+      "tep_tvp_previo": false,
+      "hemoptise": false,
+      "neoplasia": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "wells-tep",
+      "name": "Wells (TEP)",
+      "result": {
+        "score": 0,
+        "categoria_3_niveis": "baixo",
+        "categoria_2_niveis": "TEP improvável"
+      },
+      "interpretation": "Pontuação 0. Classificação de 3 níveis: probabilidade baixo. Classificação dicotômica (a mais usada na prática, com corte em 4): TEP improvável. 'TEP improvável' com D-dímero negativo afasta TEP sem necessidade de imagem; 'TEP provável' ou D-dímero positivo indica angiotomografia.",
+      "reference": "Wells PS et al. Thromb Haemost. 2000;83(3):416-420.",
+      "limitations": [
+        "O item 'diagnóstico alternativo menos provável' depende de julgamento clínico, não de critério objetivo — variabilidade entre avaliadores é esperada.",
+        "Sempre combinar com D-dímero e/ou exame de imagem; não usar isoladamente."
+      ]
+    }
+  },
+  {
+    "slug": "wells-tvp",
+    "nome": "Wells (TVP)",
+    "status_catalogo": "implementada",
+    "quantidade_campos": 10,
+    "erros_de_contrato": [],
+    "cenario": {
+      "cancer_ativo": false,
+      "paralisia_paresia_imobilizacao_gesso": false,
+      "acamado_3_dias_ou_cirurgia_12_semanas": false,
+      "dor_localizada_trajeto_venoso": false,
+      "perna_toda_inchada": false,
+      "panturrilha_maior_3cm": false,
+      "edema_depressivel_perna_sintomatica": false,
+      "veias_colaterais_superficiais": false,
+      "tvp_previa_documentada": false,
+      "diagnostico_alternativo_tao_provavel_quanto_tvp": false
+    },
+    "verificacao": "executou_cenario_sintetico",
+    "resultado": {
+      "slug": "wells-tvp",
+      "name": "Wells (TVP)",
+      "result": {
+        "score": 0,
+        "categoria_3_niveis": "baixa",
+        "categoria_2_niveis": "TVP improvável"
+      },
+      "interpretation": "Pontuação 0. Probabilidade pré-teste (3 níveis): baixa. Classificação dicotômica (corte em 2): TVP improvável. Combinar sempre com D-dímero e/ou ultrassonografia com compressão — não usar isoladamente.",
+      "reference": "Wells PS et al. Lancet. 1997;350(9094):1795-1798.",
+      "limitations": [
+        "O item de diagnóstico alternativo subtrai 2 pontos e depende de julgamento clínico.",
+        "Sempre combinar com D-dímero e/ou ultrassonografia com compressão."
+      ]
+    }
+  }
+]

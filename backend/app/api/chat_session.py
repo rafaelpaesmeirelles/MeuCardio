@@ -5,6 +5,8 @@ navegador envia o cookie no handshake sem expor o JWT na URL, histórico ou logs
 de proxy. A query continua como fallback para clientes não-browser.
 """
 
+import asyncio
+
 from fastapi import APIRouter, Query, WebSocket, WebSocketDisconnect
 
 from app.api.chat import _e_assinante, gerenciador
@@ -35,7 +37,21 @@ async def chat_ws_cookie(
     await gerenciador.conectar(user.id, ws)
     try:
         while True:
-            await ws.receive_text()
+            try:
+                await asyncio.wait_for(ws.receive_text(), timeout=30)
+            except asyncio.TimeoutError:
+                pass
+            # A fresh session avoids a stale ORM identity map. Revalidate even
+            # when the client stops sending pings (maximum interval 30s).
+            check = SessionLocal()
+            try:
+                current = usuario_por_token_app(check, session_token)
+                valid = current is not None and _e_assinante(check, current.id, current.role)
+            finally:
+                check.close()
+            if not valid:
+                await ws.close(code=4401)
+                break
     except WebSocketDisconnect:
         pass
     finally:

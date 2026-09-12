@@ -1,6 +1,7 @@
 import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useState } from "react";
+import { useRequestRevision } from "../lib/useRequestRevision";
 import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
@@ -18,16 +19,21 @@ export default function ImagemGaleria() {
   const { slug } = useParams();
   const [img, setImg] = useState<Detalhe | null>(null);
   const [erro, setErro] = useState("");
+  const detailRequests = useRequestRevision(slug);
 
   useEffect(() => {
-    if (!slug) return;
+    const isCurrent = detailRequests.begin();
+    setImg(null);
+    setErro("");
+    if (!slug) { setErro("Imagem não encontrada."); return; }
     api.get<Detalhe>(`/gallery/images/${slug}`)
-      .then(setImg)
-      .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar a imagem."));
-  }, [slug]);
+      .then((response) => { if (isCurrent()) setImg(response); })
+      .catch((e) => { if (isCurrent()) setErro(e instanceof ApiError ? e.message : "Não foi possível carregar a imagem."); });
+    return () => detailRequests.invalidate();
+  }, [slug, detailRequests]);
 
   if (erro) return <Erro mensagem={erro} />;
-  if (!img) return <Carregando />;
+  if (!img || img.slug !== slug) return <Carregando />;
 
   return (
     <>

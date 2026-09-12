@@ -9,7 +9,7 @@ from sqlalchemy import and_, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
-from app.core.security import require_admin
+from app.core.security import require_admin, require_manage_account
 from app.core.validators import cpf_mascarado, limpar_cpf
 from app.models.agenda import GoogleTestUserRequest
 from app.models.audit import AuditLog
@@ -702,15 +702,12 @@ class NovaPreAutorizacaoConvidado(BaseModel):
 def criar_pre_autorizacao_convidado(
     dados: NovaPreAutorizacaoConvidado, db: Session = Depends(get_db), admin=Depends(require_admin)
 ):
-    """Cadastra a pré-autorização de um convidado por e-mail e/ou nome
-    completo — quando ele se cadastrar em `POST /auth/solicitar-acesso`
-    casando com esta linha, o acesso já libera automaticamente, sem
-    precisar de nenhum clique manual depois. Só admin."""
+    """Pré-autoriza por e-mail; o titular precisa confirmar o link enviado."""
     from app.models.convidado_pre_autorizado import ConvidadoPreAutorizado
 
-    if not dados.email and not dados.nome_completo:
+    if not dados.email:
         raise HTTPException(
-            status_code=422, detail="Informe pelo menos o e-mail ou o nome completo do convidado."
+            status_code=422, detail="Informe o e-mail do convidado; o acesso exige confirmação nesse endereço."
         )
     if dados.email and (
         db.query(ConvidadoPreAutorizado)
@@ -766,7 +763,11 @@ def revogar_pre_autorizacao_convidado(
     histórico de uma conta real, apagar aqui não desfaria o convite."""
     from app.models.convidado_pre_autorizado import ConvidadoPreAutorizado
 
-    linha = db.get(ConvidadoPreAutorizado, pre_autorizacao_id)
+    # Confirmation consumes this same row under lock. Re-read its state after
+    # waiting so revocation cannot delete a concurrently accepted invitation.
+    linha = db.query(ConvidadoPreAutorizado).filter(
+        ConvidadoPreAutorizado.id == pre_autorizacao_id,
+    ).with_for_update().populate_existing().first()
     if not linha:
         raise HTTPException(status_code=404, detail="Pré-autorização não encontrada.")
     if linha.usado_em is not None:
@@ -791,6 +792,7 @@ def redefinir_senha(
     alvo = db.get(User, user_id)
     if not alvo:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    require_manage_account(admin, alvo)
     if len(dados.password) < 8:
         raise HTTPException(status_code=422, detail="A senha precisa ter ao menos 8 caracteres.")
     alvo.password_hash = hash_password(dados.password)

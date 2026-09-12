@@ -1354,7 +1354,10 @@ def list_appointments(
 @router.post("/appointments", status_code=201)
 def create_appointment(data: AppointmentIn, background_tasks: BackgroundTasks, db: Session = Depends(get_db), user: User = Depends(current_user)):
     owner_id = _owner_for(db, user, data.professional_id, "create")
-    if not data.patient_id and not data.patient_name: raise HTTPException(status_code=422, detail="Informe o paciente.")
+    # Tarefas, lembretes e compromissos próprios não são consultas. Mantêm o
+    # mesmo calendário/versão, sem criar ou associar um paciente fictício.
+    if data.appointment_type not in {"tarefa", "lembrete", "compromisso"} and not data.patient_id and not data.patient_name:
+        raise HTTPException(status_code=422, detail="Informe o paciente para o atendimento clínico.")
     if data.patient_email and not data.email_consent: raise HTTPException(status_code=422, detail="Confirme o consentimento para comunicação por e-mail.")
     if data.patient_id and not db.query(Patient).filter(Patient.id == data.patient_id, Patient.created_by == owner_id).first(): raise HTTPException(status_code=404, detail="Paciente não encontrado.")
     service = db.query(SchedulingService).filter(SchedulingService.id == data.service_id, SchedulingService.owner_id == owner_id, SchedulingService.active.is_(True)).first() if data.service_id else None

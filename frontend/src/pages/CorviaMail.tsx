@@ -190,7 +190,7 @@ function AbaAssinar() {
       ) : (
         <p>
           Um endereço de e-mail próprio no domínio <strong>@corvia.med.br</strong>, com
-          webmail integrado — add-on separado da assinatura principal da Corvia, cobrado à parte.
+          webmail integrado. {status?.incluido_no_plano ? "O Mail está incluído no seu acesso atual." : "A contratação avulsa do Mail é cobrada separadamente."}
         </p>
       )}
 
@@ -205,10 +205,12 @@ function AbaAssinar() {
 
       {status?.incluido_no_plano ? (
         <p style={{ color: "var(--sucesso)" }}>
-          {usuario?.convidado ? (
+          {usuario?.role === "admin" ? (
+            <>Acesso administrativo ao CorVIA Mail — nenhuma cobrança adicional.</>
+          ) : usuario?.convidado ? (
             <>Acesso completo e gratuito como <strong>médico convidado</strong> — nenhuma cobrança.</>
           ) : (
-            <>Incluído no seu plano <strong>Assinatura Completa</strong> — nenhuma cobrança adicional.</>
+            <>Incluído no seu plano atual — nenhuma cobrança adicional.</>
           )}
         </p>
       ) : (
@@ -287,7 +289,7 @@ function AbaAssinar() {
         </p>
       )}
 
-      {ativa && (
+      {ativa && !status?.incluido_no_plano && (
         <button className="botao botao--secundario" style={{ width: "100%", marginTop: "0.8rem" }}
                 onClick={abrirPortal} disabled={processando}>
           {processando ? "Abrindo…" : "Gerenciar assinatura (cartão, Pix, cancelar)"}

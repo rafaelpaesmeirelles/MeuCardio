@@ -74,6 +74,8 @@ def run_calculator(slug: str, payload: dict, _=Depends(current_user)):
     try:
         result = calc.run(slug, payload)
         return result
+    except calc.CalculatorInputError as e:
+        raise HTTPException(status_code=422, detail=str(e)) from e
     except ValueError as e:
         raise HTTPException(status_code=409, detail=str(e))
     except (KeyError, TypeError, ZeroDivisionError):
@@ -133,6 +135,8 @@ def gerar_documento(
     # virava 404 por engano (ver mesma correção em run_calculator() acima).
     try:
         r = calc.run(slug, dados.payload)
+    except calc.CalculatorInputError as e:
+        raise HTTPException(status_code=422, detail=str(e)) from e
     except ValueError as e:
         raise HTTPException(status_code=409, detail=str(e))
     except (KeyError, TypeError, ZeroDivisionError):

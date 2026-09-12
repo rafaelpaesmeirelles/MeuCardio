@@ -263,7 +263,7 @@ export default function Sincronizacao() {
           return (
             <div key={item.id} className="cartao" style={{ marginBottom: "0.6rem", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-                <span style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                <span className="sync-account-identity" style={{ display: "flex", gap: 8, alignItems: "center" }}>
                   <LogoProvedor provedor={PROVEDOR_LOGO[item.provider]} />
                   <strong>{item.display_name}</strong>
                   <span className="eyebrow" style={{ margin: 0 }}>{PROVEDOR_NOME[item.provider]}</span>

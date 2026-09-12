@@ -377,6 +377,8 @@ export default function Agenda() {
   const [salvando, setSalvando] = useState(false);
   const [erro, setErro] = useState("");
   const [mensagem, setMensagem] = useState("");
+  const [errosAuxiliares, setErrosAuxiliares] = useState<string[]>([]);
+  const consultaAgenda = useRef(0), consultaCompromissos = useRef(0);
   const [contaEmConexao, setContaEmConexao] = useState<"google" | "microsoft" | null>(null);
   const [integracaoSincronizando, setIntegracaoSincronizando] = useState<number | null>(null);
   const [statusTesteGoogle, setStatusTesteGoogle] = useState<StatusTesteGoogle | null>(null);
@@ -466,20 +468,24 @@ export default function Agenda() {
   }, [configAberta, focarContasExternas]);
 
   async function carregar() {
-    const [appointments, locations, services, integrations, capabilities, mobility, routines, commitmentSeries, testeGoogle] = await Promise.all([
-      api.get<Agendamento[]>("/agenda/appointments"),
-      api.get<LocalAgenda[]>("/agenda/locations"),
-      api.get<Servico[]>("/agenda/services"),
-      api.get<Integracao[]>("/agenda/integrations"),
-      api.get<Capacidades>("/agenda/capabilities"),
-      api.get<PreferenciaMobilidade>("/agenda/mobility/preferences"),
-      api.get<RotinaTrabalho[]>("/agenda/work-routines"),
-      api.get<SerieCompromisso[]>("/agenda/commitment-series"),
-      api.get<StatusTesteGoogle>("/agenda/google-teste/status"),
+    const consulta = ++consultaAgenda.current;
+    setErrosAuxiliares([]);
+    const aplicar = <T,>(setter:(value:T)=>void) => (value:T) => { if(consulta===consultaAgenda.current)setter(value); };
+    const resultados = await Promise.allSettled([
+      api.get<Agendamento[]>("/agenda/appointments").then(aplicar<Agendamento[]>(rows=>setAgendamentos(withoutReservedSmokeTestRecords(rows)))),
+      api.get<LocalAgenda[]>("/agenda/locations").then(aplicar(setLocais)),
+      api.get<Servico[]>("/agenda/services").then(aplicar(setServicos)),
+      api.get<Integracao[]>("/agenda/integrations").then(aplicar(setIntegracoes)),
+      api.get<Capacidades>("/agenda/capabilities").then(aplicar(setCapacidades)),
+      api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").then(aplicar(setMobilidade)),
+      api.get<RotinaTrabalho[]>("/agenda/work-routines").then(aplicar<RotinaTrabalho[]>(rows=>setRotinas(withoutReservedSmokeTestRecords(rows)))),
+      api.get<SerieCompromisso[]>("/agenda/commitment-series").then(aplicar<SerieCompromisso[]>(rows=>setSeries(withoutReservedSmokeTestRecords(rows)))),
+      api.get<StatusTesteGoogle>("/agenda/google-teste/status").then(aplicar(setStatusTesteGoogle)),
     ]);
-    setAgendamentos(withoutReservedSmokeTestRecords(appointments)); setLocais(locations); setServicos(services);
-    setIntegracoes(integrations); setCapacidades(capabilities); setMobilidade(mobility); setRotinas(withoutReservedSmokeTestRecords(routines)); setSeries(withoutReservedSmokeTestRecords(commitmentSeries));
-    setStatusTesteGoogle(testeGoogle);
+    if(consulta!==consultaAgenda.current)return;
+    if(resultados[0].status==="rejected")setErro(resultados[0].reason instanceof Error?resultados[0].reason.message:"Não foi possível carregar os agendamentos.");
+    const nomes=["Agendamentos","Locais","Serviços","Integrações","Recursos disponíveis","Preferências de deslocamento","Rotinas","Séries de compromissos","Conexão com Google"];
+    setErrosAuxiliares(resultados.flatMap((r,i)=>i>0&&r.status==="rejected"?[nomes[i]]:[]));
   }
 
   async function solicitarTesteGoogle() {
@@ -504,20 +510,23 @@ export default function Agenda() {
   }
 
   async function carregarCompromissos(reference = referencia) {
+    const consulta = ++consultaCompromissos.current;
     const start = somaDias(reference, -90);
     const end = somaDias(reference, 300);
-    const [itens, rotinasVisiveis] = await Promise.all([
+    const resultados = await Promise.allSettled([
       api.get<Agendamento[]>(`/agenda/commitments?start=${dataApi(start)}&end=${dataApi(end)}`),
       api.get<Agendamento[]>(`/agenda/work-routines/occurrences?start=${dataApi(start)}&end=${dataApi(end)}`),
     ]);
-    setCompromissos(withoutReservedSmokeTestRecords([...itens, ...rotinasVisiveis]));
+    if(consulta!==consultaCompromissos.current)return;
+    setCompromissos(withoutReservedSmokeTestRecords(resultados.flatMap(r=>r.status==="fulfilled"?r.value:[])));
+    if(resultados.some(r=>r.status==="rejected"))setErro("Não foi possível carregar todos os compromissos e rotinas. Os itens disponíveis continuam visíveis; tente atualizar a agenda.");
   }
 
   async function atualizarAgenda() {
     await Promise.all([carregar(), carregarCompromissos()]);
   }
 
-  useEffect(() => { carregar().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível abrir a agenda.")); }, []);
+  useEffect(() => { carregar().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível abrir a agenda.")); return()=>{consultaAgenda.current++;consultaCompromissos.current++;}; }, []);
   useEffect(() => { carregarCompromissos(referencia).catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os compromissos e rotinas.")); }, [referencia]);
 
   useEffect(() => {
@@ -1061,6 +1070,7 @@ export default function Agenda() {
 
       {mensagem && <div className="agenda-alerta agenda-alerta--sucesso" role="status"><strong>Concluído</strong><span>{mensagem}</span><button onClick={() => setMensagem("")} aria-label="Fechar"><Icone nome="fechar" /></button></div>}
       {erro && !ajustando && <div className="agenda-alerta" role="alert"><strong>Atenção</strong><span>{erro}</span><button onClick={() => setErro("")} aria-label="Fechar"><Icone nome="fechar" /></button></div>}
+      {!!errosAuxiliares.length&&<div className="agenda-alerta" role="status"><span>Não foi possível atualizar: {errosAuxiliares.join(", ")}. Os agendamentos disponíveis continuam visíveis.</span><button onClick={()=>void carregar()}>Tentar novamente</button></div>}
 
       <section className="agenda-ferramentas">
         <div className="agenda-navegacao">
@@ -1115,7 +1125,7 @@ export default function Agenda() {
           tabIndex={0}
           aria-label={`Calendário da agenda em visualização de ${visao}`}
         >
-          {agendamentos === null ? <p className="agenda-carregando">Organizando sua agenda…</p> : visao === "lista" ? (
+          {agendamentos === null ? erro?<div role="alert"><p>Não foi possível abrir os agendamentos.</p><button className="botao" onClick={()=>{setErro("");void carregar();}}>Tentar novamente</button></div>:<p className="agenda-carregando">Organizando sua agenda…</p> : visao === "lista" ? (
             <div className="agenda-lista">
               {proximos.length === 0 ? <p className="agenda-vazio">Nenhum compromisso encontrado.</p> : proximos.slice(0, 100).map((item) => <div key={item.id} className="agenda-lista__linha"><time>{new Date(item.starts_at).toLocaleDateString("pt-BR", { day: "2-digit", month: "short" })}</time><Evento item={item} aoCancelar={setCancelando} aoAjustar={abrirAjusteCompromisso} aoAbrirPaciente={abrirContextoPaciente} /></div>)}
             </div>

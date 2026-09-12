@@ -6,6 +6,7 @@ Escores cujo coeficiente oficial não esteja confirmado ficam com
 """
 
 from dataclasses import dataclass, field
+import math
 from typing import Any, Callable
 
 
@@ -20,6 +21,7 @@ class Field:
     max: float | None = None
     help: str | None = None
     required: bool = True
+    required_when: dict[str, list[Any]] | None = None
 
 
 @dataclass
@@ -1280,6 +1282,70 @@ from .dose_calculators import DOSE_REGISTRY  # noqa: E402
 REGISTRY.update(DOSE_REGISTRY)
 
 
+class CalculatorInputError(ValueError):
+    """Invalid declared input, before any formula or document generation."""
+
+
+def validate_payload(calc: Calculator, payload: dict) -> dict:
+    if not isinstance(payload, dict):
+        raise CalculatorInputError("Informe os campos da calculadora.")
+    normalized = dict(payload)
+    errors = []
+    for definition in calc.fields:
+        value = payload.get(definition.name)
+        required = definition.required
+        if definition.required_when:
+            required = any(payload.get(key) in choices for key, choices in definition.required_when.items())
+        missing = value is None or (isinstance(value, str) and not value.strip())
+        if missing:
+            # An omitted checkbox has always meant unchecked; an explicit
+            # null/string is not a boolean and must not turn into True.
+            if definition.type == "boolean" and definition.name not in payload:
+                normalized[definition.name] = False
+            elif required:
+                errors.append(f"{definition.label}: preenchimento obrigatório.")
+            else:
+                normalized.pop(definition.name, None)
+            continue
+        if definition.type == "number":
+            if isinstance(value, bool) or not isinstance(value, (str, int, float)):
+                errors.append(f"{definition.label}: informe um número válido.")
+                continue
+            try:
+                number = float(value)
+            except (TypeError, ValueError, OverflowError):
+                number = math.nan
+            if not math.isfinite(number):
+                errors.append(f"{definition.label}: informe um número finito.")
+            elif definition.min is not None and number < definition.min:
+                errors.append(f"{definition.label}: mínimo {definition.min:g}{' ' + definition.unit if definition.unit else ''}.")
+            elif definition.max is not None and number > definition.max:
+                errors.append(f"{definition.label}: máximo {definition.max:g}{' ' + definition.unit if definition.unit else ''}.")
+            else:
+                normalized[definition.name] = number
+        elif definition.type == "boolean":
+            if not isinstance(value, bool):
+                errors.append(f"{definition.label}: selecione sim ou não.")
+        elif definition.type == "select":
+            # Python considers True == 1; those are distinct field values.
+            if not any(value == option.get("value") and isinstance(value, bool) == isinstance(option.get("value"), bool)
+                       for option in definition.options):
+                errors.append(f"{definition.label}: selecione uma opção da lista.")
+    if errors:
+        raise CalculatorInputError(" ".join(errors))
+    return normalized
+
+
+def _finite_result(value: Any) -> bool:
+    if isinstance(value, float):
+        return math.isfinite(value)
+    if isinstance(value, dict):
+        return all(_finite_result(item) for item in value.values())
+    if isinstance(value, (list, tuple)):
+        return all(_finite_result(item) for item in value)
+    return True
+
+
 def run(slug: str, payload: dict) -> dict:
     calc = REGISTRY.get(slug)
     if calc is None:
@@ -1290,7 +1356,13 @@ def run(slug: str, payload: dict) -> dict:
         raise ValueError(
             "Calculadora ainda não liberada: aguarda validação dos coeficientes oficiais."
         )
-    result = calc.compute(payload)
+    normalized = validate_payload(calc, payload)
+    try:
+        result = calc.compute(normalized)
+    except OverflowError as exc:
+        raise CalculatorInputError("Os valores informados excedem o domínio numérico do cálculo.") from exc
+    if not _finite_result(result):
+        raise CalculatorInputError("Os valores informados não permitem obter um resultado finito.")
     return {
         "slug": calc.slug,
         "name": calc.name,

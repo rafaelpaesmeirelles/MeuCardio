@@ -14,7 +14,7 @@ const source = await readFile(path.join(root, "src/components/FinalizarDocumento
 // Run the real component and React effects with API/child-widget boundaries stubbed.
 const component = source.slice(source.indexOf("function FinalizarDocumentoGerado("));
 const transformed = await transform(`
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 const METODOS_MANUAL_EXTERNO = new Set(['GOVBR','VIDAAS','BIRDID','SAFEID','NEOID','REMOTEID','A3_TOKEN']);
 const api = {get:(...args)=>globalThis.signatureFixture.get(...args), blob:(...args)=>globalThis.signatureFixture.blob(...args), post:()=>{throw Error('unexpected send')}};
 class ApiError extends Error {}

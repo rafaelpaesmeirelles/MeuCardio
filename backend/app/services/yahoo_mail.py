@@ -39,6 +39,7 @@ from datetime import datetime, timezone
 from email import message_from_bytes
 from email.header import decode_header
 from email.message import EmailMessage
+from app.services.mail_attachments import MailAttachment, add_attachments
 from email.utils import getaddresses, parsedate_to_datetime
 from html import escape
 from typing import TYPE_CHECKING, Any
@@ -256,6 +257,7 @@ def send_message(
     credentials: dict[str, Any], *, to: str, subject: str, html: str,
     cc: str | None = None, bcc: str | None = None,
     db: Session | None = None, user: "User | None" = None, assinar_smime: bool = False,
+    attachments: list[MailAttachment] | None = None,
 ) -> dict[str, Any]:
     """`assinar_smime=True` (pedido do Rafael em 06/08/2026 — "assinar
     digitalmente um email pra enviar") exige `db`/`user`, porque a
@@ -277,6 +279,7 @@ def send_message(
             mensagem_bytes = smime.montar_mensagem_assinada(
                 db, user, remetente=usuario, para=destinatarios, cc=cc_lista or None,
                 assunto=subject, html=html,
+                attachments=attachments,
             )
         except smime.SmimeIndisponivel as exc:
             raise YahooMailError(f"Não foi possível assinar o e-mail: {exc}", status_code=409) from exc
@@ -299,6 +302,7 @@ def send_message(
     mensagem["Subject"] = subject
     mensagem.set_content("Esta mensagem contém conteúdo HTML.")
     mensagem.add_alternative(html, subtype="html")
+    add_attachments(mensagem, attachments)
 
     try:
         with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=15) as smtp:

@@ -35,7 +35,7 @@ def _encounter(pid: int, eid: int, db: Session, user, *, mutacao: bool = False):
     encounter = encounter_for_user(eid, db, user)
     if encounter.patient_profile_id != pid:
         raise HTTPException(status_code=404, detail="Atendimento não encontrado.")
-    if mutacao and encounter.status == "finalized":
+    if mutacao and encounter.status in {"finalized", "amended", "cancelled"}:
         raise HTTPException(
             status_code=409,
             detail="Atendimento finalizado é histórico; novos artefatos devem pertencer a um novo atendimento ou adendo.",

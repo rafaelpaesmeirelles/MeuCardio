@@ -22,6 +22,7 @@ from .marca import (
 )
 from .nucleo import A4, PDF, largura_texto
 from .wrapping import wrap_text
+from app.services.export_links import linked_lines
 
 A4_PAISAGEM = (A4[1], A4[0])
 
@@ -132,12 +133,15 @@ class Documento(_Base):
                 self.pdf.texto(self.margem, self.y - 11, linha, 11, TEAL)
                 self.y -= 16
         if etiqueta:
-            self.y -= 6
-            larg = largura_texto(etiqueta.upper(), 7.5, True) + 22
-            self.pdf.retangulo(self.margem, self.y - 6, larg, 19, TINTA_TEAL)
-            self.pdf.texto(self.margem + 11, self.y, etiqueta.upper(), 7.5, TEAL,
-                           negrito=True, espaco_extra=1.1)
-            self.y -= 16
+            self.y -= 7
+            for linha in wrap_text(etiqueta.upper(), self.util - 22,
+                                   lambda texto: largura_texto(texto, 7.5, True) + len(texto) * 1.1):
+                self._garantir(23)
+                larg = largura_texto(linha, 7.5, True) + len(linha) * 1.1 + 22
+                self.pdf.retangulo(self.margem, self.y - 19, larg, 19, TINTA_TEAL)
+                self.pdf.texto(self.margem + 11, self.y - 13, linha, 7.5, TEAL,
+                               negrito=True, espaco_extra=1.1)
+                self.y -= 23
         self.y -= 14
 
     def titulo(self, texto: str) -> None:
@@ -172,11 +176,30 @@ class Documento(_Base):
             self.y -= 3
         self.y -= 5
 
+    def paragrafo_com_links(self, texto: str, *, item: bool = False, tamanho: float = 10.2) -> None:
+        recuo = 16 if item else 0
+        x = self.margem + recuo
+        entrelinha = tamanho * (1.5 if item else 1.58)
+        primeira = True
+        for linha, spans in linked_lines(texto, lambda valor: quebrar(valor, self.util - recuo, tamanho)):
+            self._garantir(entrelinha)
+            if item and primeira:
+                self.pdf.texto(self.margem + 3, self.y - tamanho, "•", tamanho, TEAL, negrito=True)
+            primeira = False
+            self.pdf.texto(x, self.y - tamanho, linha, tamanho, TINTA)
+            for a, b, url in spans:
+                inicio = x + largura_texto(linha[:a], tamanho)
+                largura = largura_texto(linha[a:b], tamanho)
+                self.pdf.linha(inicio, self.y - tamanho - 1, inicio + largura, self.y - tamanho - 1, TEAL, .4)
+                self.pdf.link(inicio, self.y - tamanho - 2, largura, tamanho + 3, url)
+            self.y -= entrelinha
+        self.y -= 3 if item else 6
+
     def destaque(self, texto: str, cor_fundo=TINTA_TEAL, cor_barra=TEAL,
-                 rotulo: str = "") -> None:
+                 rotulo: str = "", links: bool = False) -> None:
         tamanho = 10.0
         entrelinha = tamanho * 1.5
-        linhas = quebrar(texto, self.util - 44, tamanho)
+        linhas = list(linked_lines(texto, lambda valor: quebrar(valor, self.util - 44, tamanho))) if links else [(linha, []) for linha in quebrar(texto, self.util - 44, tamanho)]
         rotulos = quebrar(rotulo.upper(), self.util - 44, 7.5, True) if rotulo else []
         reserva = 26 + 15 * len(rotulos)
         while linhas:
@@ -191,8 +214,13 @@ class Documento(_Base):
             for linha in rotulos:
                 self.pdf.texto(self.margem + 18, y - 7.5, linha, 7.5, cor_barra, negrito=True)
                 y -= 15
-            for linha in trecho:
+            for linha, spans in trecho:
                 self.pdf.texto(self.margem + 18, y - tamanho, linha, tamanho, TINTA)
+                for a, b, url in spans:
+                    inicio = self.margem + 18 + largura_texto(linha[:a], tamanho)
+                    largura = largura_texto(linha[a:b], tamanho)
+                    self.pdf.linha(inicio, y - tamanho - 1, inicio + largura, y - tamanho - 1, TEAL, .4)
+                    self.pdf.link(inicio, y - tamanho - 2, largura, tamanho + 3, url)
                 y -= entrelinha
             self.y = topo - alt - 12
 

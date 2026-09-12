@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRequestRevision } from "../lib/useRequestRevision";
 import { api, todasAsPaginas } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 
@@ -36,6 +37,7 @@ export default function Condicoes() {
   const [resultado, setResultado] = useState<Resultado | null>(null);
   const [erro, setErro] = useState("");
   const [checando, setChecando] = useState(false);
+  const checkRequests = useRequestRevision(JSON.stringify([farmacos, condicoes]));
 
   useEffect(() => {
     todasAsPaginas<{ slug: string; generic_name: string; brand_names: string[]; commercial_names: string[] }>("/drugs")
@@ -44,21 +46,25 @@ export default function Condicoes() {
   }, []);
 
   function alternar(lst: string[], set: (v: string[]) => void, v: string) {
+    checkRequests.invalidate();
+    setChecando(false);
+    setErro("");
     setResultado(null);
     set(lst.includes(v) ? lst.filter((x) => x !== v) : [...lst, v]);
   }
 
   async function checar() {
+    const isCurrent = checkRequests.begin();
     setChecando(true);
+    setResultado(null);
     setErro("");
     try {
-      setResultado(
-        await api.post<Resultado>("/drugs/condicoes", { slugs: farmacos, condicoes }),
-      );
+      const response = await api.post<Resultado>("/drugs/condicoes", { slugs: farmacos, condicoes });
+      if (isCurrent()) setResultado(response);
     } catch (e: any) {
-      setErro(e.message);
+      if (isCurrent()) setErro(e.message);
     } finally {
-      setChecando(false);
+      if (isCurrent()) setChecando(false);
     }
   }
 

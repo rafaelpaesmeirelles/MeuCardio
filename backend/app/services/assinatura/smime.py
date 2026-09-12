@@ -43,6 +43,7 @@ from cryptography.hazmat.primitives.serialization import pkcs7
 from sqlalchemy.orm import Session
 
 from app.models.user import User
+from app.services.mail_attachments import MailAttachment, add_attachments
 from app.services.assinatura.certificado_a1 import CertificadoInvalido, carregar_para_assinar, obter
 
 
@@ -78,7 +79,7 @@ def preparar_assinante(db: Session, user: User) -> AssinanteSmime:
     )
 
 
-def montar_corpo_assinado(db: Session, user: User, *, html: str) -> bytes:
+def montar_corpo_assinado(db: Session, user: User, *, html: str, attachments: list[MailAttachment] | None = None) -> bytes:
     """Devolve só o CORPO assinado (multipart/signed completo, com seus
     próprios `MIME-Version`/`Content-Type`) — sem nenhum cabeçalho de
     envelope. `enviar_email_smime()` concatena o envelope por fora.
@@ -94,6 +95,7 @@ def montar_corpo_assinado(db: Session, user: User, *, html: str) -> bytes:
     conteudo = EmailMessage()
     conteudo.set_content("Esta mensagem contém conteúdo HTML.")
     conteudo.add_alternative(html, subtype="html")
+    add_attachments(conteudo, attachments)
     dados = conteudo.as_bytes()
 
     construtor = pkcs7.PKCS7SignatureBuilder().set_data(dados).add_signer(
@@ -107,11 +109,12 @@ def montar_corpo_assinado(db: Session, user: User, *, html: str) -> bytes:
 def montar_mensagem_assinada(
     db: Session, user: User, *, remetente: str, para: list[str], cc: list[str] | None,
     assunto: str, html: str, bcc: list[str] | None = None,
+    attachments: list[MailAttachment] | None = None,
 ) -> bytes:
     """Mensagem crua (bytes), pronta para `smtplib.SMTP.sendmail()` —
     envelope concatenado por fora do corpo assinado, como manda a RFC 1847
     (a parte assinada nunca inclui From/To/Subject)."""
-    corpo_assinado = montar_corpo_assinado(db, user, html=html)
+    corpo_assinado = montar_corpo_assinado(db, user, html=html, attachments=attachments)
     campos = [remetente, *para, *(cc or []), *(bcc or []), assunto]
     if any("\r" in valor or "\n" in valor for valor in campos):
         raise SmimeIndisponivel("Cabeçalho de e-mail inválido.")

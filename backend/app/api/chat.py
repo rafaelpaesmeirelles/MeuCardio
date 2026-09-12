@@ -28,15 +28,14 @@ class NovaMensagem(BaseModel):
 
 
 def _e_assinante(db: Session, user_id: int, role: str) -> bool:
-    if role == "admin":
-        return True
-    sub = (
-        db.query(Subscription)
-        .filter(Subscription.user_id == user_id, Subscription.kind == TIPO_MEUCARDIO)
-        .order_by(Subscription.id)
-        .first()
-    )
-    return sub is not None and sub.status in ACESSO_LIBERADO
+    from app.services.entitlement import tem_acesso_ao_chat
+    return tem_acesso_ao_chat(db, db.get(User, user_id))
+
+
+def _chat_user(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    if not _e_assinante(db, user.id, user.role):
+        raise HTTPException(status_code=403, detail="Chat disponível para membros ativos; contas de demonstração não enviam nem recebem mensagens reais.")
+    return user
 
 
 def _dump_usuario_busca(u: User) -> dict:
@@ -58,7 +57,7 @@ def buscar_usuarios(
     q: str = Query(..., min_length=2),
     conselho: str | None = None,
     db: Session = Depends(get_db),
-    user: User = Depends(current_user),
+    user: User = Depends(_chat_user),
 ):
     """Busca por nome, e-mail ou número de registro — com filtro opcional de
     órgão de classe. Só retorna usuários que também são assinantes."""
@@ -80,7 +79,7 @@ def buscar_usuarios(
 
 
 @router.get("/orgaos-de-classe")
-def orgaos_de_classe(db: Session = Depends(get_db), _: User = Depends(current_user)):
+def orgaos_de_classe(db: Session = Depends(get_db), _: User = Depends(_chat_user)):
     """Lista órgãos de classe distintos já cadastrados."""
     linhas = (
         db.query(User.council_name)
@@ -93,7 +92,7 @@ def orgaos_de_classe(db: Session = Depends(get_db), _: User = Depends(current_us
 
 
 @router.get("/suporte")
-def contato_de_suporte(db: Session = Depends(get_db), user: User = Depends(current_user)):
+def contato_de_suporte(db: Session = Depends(get_db), user: User = Depends(_chat_user)):
     """Retorna o administrador principal para o atalho de suporte."""
     admin = (
         db.query(User)
@@ -113,7 +112,7 @@ def contato_de_suporte(db: Session = Depends(get_db), user: User = Depends(curre
 
 
 @router.get("/conversas")
-def listar_conversas(db: Session = Depends(get_db), user: User = Depends(current_user)):
+def listar_conversas(db: Session = Depends(get_db), user: User = Depends(_chat_user)):
     """Uma linha por interlocutor, com última mensagem e contagem de não lidas."""
     mensagens = (
         db.query(ChatMessage)
@@ -157,7 +156,7 @@ def listar_conversas(db: Session = Depends(get_db), user: User = Depends(current
 
 
 @router.get("/nao-lidas")
-def contar_nao_lidas(db: Session = Depends(get_db), user: User = Depends(current_user)):
+def contar_nao_lidas(db: Session = Depends(get_db), user: User = Depends(_chat_user)):
     """Retorna o total de mensagens não lidas para o badge do chat."""
     total = (
         db.query(func.count(ChatMessage.id))
@@ -171,9 +170,10 @@ def contar_nao_lidas(db: Session = Depends(get_db), user: User = Depends(current
 def historico(
     outro_id: int,
     antes_de: int | None = None,
+    depois_de: int | None = None,
     limite: int = 50,
     db: Session = Depends(get_db),
-    user: User = Depends(current_user),
+    user: User = Depends(_chat_user),
 ):
     outro = db.get(User, outro_id)
     if not outro:
@@ -187,8 +187,12 @@ def historico(
     )
     if antes_de:
         consulta = consulta.filter(ChatMessage.id < antes_de)
-    mensagens = consulta.order_by(ChatMessage.id.desc()).limit(min(limite, 100)).all()
-    mensagens.reverse()
+    if depois_de is not None:
+        consulta = consulta.filter(ChatMessage.id > depois_de)
+        mensagens = consulta.order_by(ChatMessage.id.asc()).limit(max(1, min(limite, 100))).all()
+    else:
+        mensagens = consulta.order_by(ChatMessage.id.desc()).limit(max(1, min(limite, 100))).all()
+        mensagens.reverse()
 
     return [
         {
@@ -208,7 +212,7 @@ async def enviar_mensagem(
     outro_id: int,
     dados: NovaMensagem,
     db: Session = Depends(get_db),
-    user: User = Depends(current_user),
+    user: User = Depends(_chat_user),
 ):
     corpo = dados.body.strip()
     if not corpo:
@@ -242,7 +246,7 @@ async def enviar_mensagem(
 
 
 @router.post("/mensagens/{outro_id}/marcar-lidas")
-def marcar_lidas(outro_id: int, db: Session = Depends(get_db), user: User = Depends(current_user)):
+def marcar_lidas(outro_id: int, db: Session = Depends(get_db), user: User = Depends(_chat_user)):
     agora = datetime.now(timezone.utc)
     atualizadas = (
         db.query(ChatMessage)

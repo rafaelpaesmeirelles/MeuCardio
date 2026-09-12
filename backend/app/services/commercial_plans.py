@@ -73,7 +73,27 @@ def resolve_entitlements(db, user) -> dict:
         return result
     investor = bool(getattr(user, "investidor", False))
     if getattr(user, "role", None) == "admin" or getattr(user, "convidado", False) or investor:
-        result.update(tudo_com_tudo=True, ai=True, mail=not investor,
+        preferred = getattr(user, "convidado_plano_preferido", None)
+        invited_mail = preferred in {None, PLANO_COMPLETO, PLANO_BASICO_MAIL}
+        if getattr(user, "convidado", False) and preferred is None and user.role != "admin":
+            # Existing consumed invitations predate the corrected activation
+            # flow; honor their saved choice without rewriting user records.
+            from app.models.convidado_pre_autorizado import ConvidadoPreAutorizado
+            invitation = db.query(ConvidadoPreAutorizado).filter(
+                ConvidadoPreAutorizado.usado_por_user_id == user.id,
+                ConvidadoPreAutorizado.usado_em.isnot(None),
+            ).order_by(ConvidadoPreAutorizado.id.desc()).first()
+            if invitation is not None:
+                invited_mail = bool(invitation.incluir_corvia_mail)
+        mail = not investor and (getattr(user, "role", None) == "admin" or invited_mail)
+        # Direct administrative grants retain their legacy Mail benefit;
+        # invitations carry the explicit choice in the existing plan field.
+        if not mail and not investor:
+            mail = db.query(Subscription.id).filter(
+                Subscription.user_id == user.id, Subscription.kind == TIPO_EMAIL,
+                Subscription.status.in_(ACESSO_LIBERADO),
+            ).first() is not None
+        result.update(tudo_com_tudo=True, ai=True, mail=mail,
                       source="investor" if investor else "administrative")
         return result
     sub = db.query(Subscription).filter(

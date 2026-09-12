@@ -1,6 +1,7 @@
 import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useMemo, useState } from "react";
+import { useRequestRevision } from "../lib/useRequestRevision";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { Carregando, Erro } from "../components/Estado";
 import GrafoRelacionados from "../components/GrafoRelacionados";
@@ -175,17 +176,24 @@ export default function GuiaDoenca() {
   const [assessing, setAssessing] = useState(false);
   const [error, setError] = useState("");
   const assistantMode = params.get("modo") === "assistente";
+  const assessmentRequests = useRequestRevision(JSON.stringify([slug, context, answers]));
 
   useEffect(() => {
     let active = true;
     setLoading(true);
+    setDisease(null);
+    setAnswers({});
+    setContext("ambulatorio");
+    setAssessment(null);
+    setAssessing(false);
+    assessmentRequests.invalidate();
     setError("");
     api.get<Disease>(`/specialty-guides/diseases/${slug}`)
       .then((response) => { if (active) setDisease(response); })
       .catch((cause) => { if (active) setError(cause.message); })
       .finally(() => { if (active) setLoading(false); });
     return () => { active = false; };
-  }, [slug]);
+  }, [slug, assessmentRequests]);
 
   const sections = useMemo(() => {
     const grouped = new Map<string, Question[]>();
@@ -197,6 +205,9 @@ export default function GuiaDoenca() {
   }, [disease]);
 
   function updateAnswer(question: Question, value: unknown) {
+    assessmentRequests.invalidate();
+    setAssessing(false);
+    setError("");
     setAssessment(null);
     setAnswers((previous) => {
       const next = { ...previous };
@@ -207,6 +218,9 @@ export default function GuiaDoenca() {
   }
 
   function changeContext(next: "ambulatorio" | "emergencia") {
+    assessmentRequests.invalidate();
+    setAssessing(false);
+    setError("");
     setAssessment(null);
     setContext(next);
   }
@@ -217,19 +231,22 @@ export default function GuiaDoenca() {
   }
 
   async function assess() {
-    if (!disease) return;
+    if (!disease || disease.slug !== slug) return;
+    const isCurrent = assessmentRequests.begin();
     setAssessing(true);
+    setAssessment(null);
     setError("");
     try {
-      setAssessment(await api.post<Assessment>(`/specialty-guides/diseases/${disease.slug}/assess`, { context, answers }));
+      const response = await api.post<Assessment>(`/specialty-guides/diseases/${disease.slug}/assess`, { context, answers });
+      if (isCurrent()) setAssessment(response);
     } catch (cause: any) {
-      setError(cause.message);
+      if (isCurrent()) setError(cause.message);
     } finally {
-      setAssessing(false);
+      if (isCurrent()) setAssessing(false);
     }
   }
 
-  if (loading) return <Carregando />;
+  if (loading || (disease && disease.slug !== slug)) return <Carregando />;
   if (error && !disease) return <Erro mensagem={error} />;
   if (!disease) return <Erro mensagem="Doença não encontrada." />;
 

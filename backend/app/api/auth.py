@@ -89,21 +89,8 @@ _cpf_mascarado = cpf_mascarado
 
 
 def _kyc_required(db: Session, user: User) -> bool:
-    """Gate de KYC obrigatório.
-
-    Investidor é uma conta global de demonstração somente leitura: não
-    informa documentos, selfie, CPF, nascimento ou credenciais profissionais
-    e portanto nunca entra no fluxo de KYC. Convidado e assinante normal
-    mantêm o gate real, calculado a cada requisição.
-    """
-    from app.services.entitlement import eh_socio, tem_acesso_ao_produto
-    from app.services.kyc import verificacao as kyc_verificacao
-
-    if (user.role == "admin" and not eh_socio(user)) or user.investidor:
-        return False
-    if not tem_acesso_ao_produto(db, user):
-        return False
-    return not kyc_verificacao.liberado_para_uso(kyc_verificacao.obter(db, user))
+    from app.services.kyc.access import kyc_required
+    return kyc_required(db, user)
 
 
 def _onboarding_pendente(db: Session, user: User) -> bool:
@@ -802,11 +789,8 @@ def _preparar_solicitacao_acesso(dados: SolicitacaoAcesso, db: Session) -> tuple
     if db.query(User).filter(User.cpf == cpf_limpo).first():
         raise HTTPException(status_code=409, detail="Já existe uma solicitação ou conta com este CPF.")
 
-    # Pré-autorização de convidado por e-mail (08/08/2026, pedido do Rafael):
-    # um admin já cadastrou este e-mail em ConvidadoPreAutorizado ANTES do
-    # cadastro acontecer — quando ele bate aqui, o usuário nasce já aprovado
-    # e marcado como convidado, sem precisar de nenhum clique manual depois.
-    # Consumo é único: `usado_em` trava a linha contra reaproveitamento.
+    # The address identifies an invitation, but does not prove ownership.
+    # Keep the account pending and send the challenge after this transaction.
     from app.models.convidado_pre_autorizado import ConvidadoPreAutorizado
 
     pre_autorizacao = (
@@ -831,30 +815,11 @@ def _preparar_solicitacao_acesso(dados: SolicitacaoAcesso, db: Session) -> tuple
         workplace_notes=(dados.workplace_notes or "").strip() or None,
         include_workplace_on_documents=dados.include_workplace_on_documents,
         password_hash=hash_password(dados.password),
-        role="leitor" if not convidado_via_pre_autorizacao else "medico",
-        status="pendente" if not convidado_via_pre_autorizacao else "aprovado",
-        is_active=convidado_via_pre_autorizacao,
-        convidado=convidado_via_pre_autorizacao,
+        role="leitor", status="pendente", is_active=False, convidado=False,
     )
-    if convidado_via_pre_autorizacao:
-        novo.reviewed_at = datetime.now(timezone.utc)
     db.add(novo)
     db.flush()
-
-    if convidado_via_pre_autorizacao:
-        pre_autorizacao.usado_em = datetime.now(timezone.utc)
-        pre_autorizacao.usado_por_user_id = novo.id
-        db.add(AuditLog(
-            user_id=novo.id, action="convidado_via_pre_autorizacao", entity="user",
-            entity_id=str(novo.id),
-            detail={
-                "email": novo.email,
-                "pre_autorizacao_id": pre_autorizacao.id,
-                "observacao": pre_autorizacao.observacao,
-                "nota": "Cadastro aprovado e marcado convidado automaticamente — e-mail já "
-                        "pré-autorizado por um admin antes do cadastro acontecer.",
-            },
-        ))
+    # The invitation remains unused until possession of its email is proved.
     return novo, convidado_via_pre_autorizacao
 
 
@@ -864,9 +829,10 @@ def _concluir_solicitacao_acesso(
 ):
     """Notifica apenas depois de o chamador confirmar todo o cadastro."""
     if convidado_via_pre_autorizacao:
+        background_tasks.add_task(account_recovery.enviar_confirmacao_convite, novo.id)
         return {
-            "nota": "Cadastro concluído! Seu acesso já está liberado — você pode entrar agora.",
-            "acesso_imediato": True,
+            "nota": "Confirme o link enviado ao e-mail convidado para definir sua senha e seu canal de recuperação. O acesso permanece pendente até essa confirmação.",
+            "acesso_imediato": False,
         }
 
     from app.services.notificar import notificar_admins_nova_solicitacao

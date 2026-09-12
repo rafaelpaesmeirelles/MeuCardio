@@ -61,7 +61,7 @@ const FERRAMENTAS_PRODUTIVIDADE: NavItem[] = [
   { to: "/busca?modo=tudo-com-tudo", label: "Tudo com Tudo", icon: "sincronizar", featured: true },
   { to: "/calculadoras", label: "Calculadoras avançadas", icon: "calculadora" },
   { to: "/indicadores", label: "Indicadores & Métricas", icon: "indicadores" },
-  { to: "/favoritos", label: "Notas & Favoritos", icon: "favorito" },
+  { to: "/favoritos", label: "Favoritos", icon: "favorito" },
   { to: "/busca", label: "Busca avançada", icon: "busca" },
 ];
 

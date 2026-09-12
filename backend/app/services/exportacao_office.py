@@ -16,6 +16,7 @@ from docx import Document as WordDocument
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
+from docx.opc.constants import RELATIONSHIP_TYPE as RT
 from docx.shared import Inches as DocxInches
 from docx.shared import Pt as DocxPt
 from docx.shared import RGBColor as DocxRGBColor
@@ -34,6 +35,7 @@ from app.services.professional_profile import (
     rendered_logo_png,
 )
 from app.services.pdf.wrapping import wrap_text
+from app.services.export_links import link_runs, plain_text, fragment_linked
 
 from .apresentacao import _fragmentar
 from .exportacao_conteudo import (
@@ -147,26 +149,30 @@ def _slide_conteudo(prs: Presentation, titulo: str, blocos: list[tuple[str, str]
     tf = _caixa(slide, MARGEM, Inches(1.2), LARGURA - 2 * MARGEM, ALTURA - Inches(1.9))
     for indice, (tipo, texto) in enumerate(blocos):
         p = tf.paragraphs[0] if indice == 0 else tf.add_paragraph()
-        p.text = texto
+        for value, url in link_runs(("•  " if tipo == "item" else "") + texto):
+            run = p.add_run()
+            run.text = value
+            if url:
+                run.hyperlink.address = url
         p.level = 0
         p.font.size = Pt(19 if tipo == "item" else 18)
         p.font.color.rgb = TINTA
         p.space_after = Pt(9)
-        if tipo == "item":
-            p.text = f"•  {texto}"
     _rodape_slide(slide, rodape)
 
 
 def _blocos_secao(paragrafos: list[str], itens: list[str], destaque: str | None) -> list[tuple[str, str]]:
+    def fragmentar(texto, limite):
+        return fragment_linked(texto, lambda plain: _fragmentar(plain, limite))
     blocos: list[tuple[str, str]] = []
     if destaque:
-        blocos.extend(("paragrafo", parte) for parte in _fragmentar(_sem_markdown(destaque), 260))
+        blocos.extend(("paragrafo", parte) for parte in fragmentar(_sem_markdown(destaque), 260))
     for paragrafo in paragrafos:
-        blocos.extend(("paragrafo", parte) for parte in _fragmentar(_sem_markdown(paragrafo), 260))
+        blocos.extend(("paragrafo", parte) for parte in fragmentar(_sem_markdown(paragrafo), 260))
     for item in itens:
         texto = _sem_markdown(item)
         if texto:
-            blocos.extend(("item", parte) for parte in _fragmentar(texto, 230))
+            blocos.extend(("item", parte) for parte in fragmentar(texto, 230))
     return blocos
 
 
@@ -179,7 +185,7 @@ def _paginar_blocos_pptx(blocos: list[tuple[str, str]]) -> list[list[tuple[str, 
         # A caixa útil comporta ~14 linhas a 18–19 pt. Itens têm recuo/bullet
         # e usam um pouco menos de largura que parágrafos.
         caracteres_por_linha = 72 if tipo == "item" else 78
-        linhas = max(1, math.ceil(len(texto) / caracteres_por_linha))
+        linhas = max(1, math.ceil(len(plain_text(texto)) / caracteres_por_linha))
         if atual and linhas_atuais + linhas > MAX_LINHAS_SLIDE:
             paginas.append(atual)
             atual = []
@@ -287,6 +293,33 @@ def _cabecalho_docx(secao, user: Any, incluir: bool, nome: str, detalhes: list[s
     secao.top_margin = DocxPt(altura_identidade + 55)
 
 
+def _runs_docx(paragrafo, texto: str, *, destaque: bool = False) -> None:
+    for value, url in link_runs(texto):
+        if not url:
+            run = paragrafo.add_run(value)
+            run.bold = destaque
+            if destaque:
+                run.font.color.rgb = DocxRGBColor.from_string(marca.cor_hex(marca.NAVY))
+            continue
+        hyperlink = OxmlElement("w:hyperlink")
+        hyperlink.set(qn("r:id"), paragrafo.part.relate_to(url, RT.HYPERLINK, is_external=True))
+        run = OxmlElement("w:r")
+        props = OxmlElement("w:rPr")
+        color = OxmlElement("w:color")
+        color.set(qn("w:val"), marca.cor_hex(marca.TEAL))
+        underline = OxmlElement("w:u")
+        underline.set(qn("w:val"), "single")
+        props.extend([color, underline])
+        if destaque:
+            props.append(OxmlElement("w:b"))
+        text = OxmlElement("w:t")
+        text.set(qn("xml:space"), "preserve")
+        text.text = value
+        run.extend([props, text])
+        hyperlink.append(run)
+        paragrafo._p.append(hyperlink)
+
+
 def gerar_docx(
     itens: list[ConteudoExportavel],
     *,
@@ -354,17 +387,15 @@ def gerar_docx(
             documento.add_heading(secao_item.titulo, level=2)
             if secao_item.destaque:
                 p = documento.add_paragraph()
-                r = p.add_run(_sem_markdown(secao_item.destaque))
-                r.bold = True
-                r.font.color.rgb = DocxRGBColor.from_string(marca.cor_hex(marca.NAVY))
+                _runs_docx(p, _sem_markdown(secao_item.destaque), destaque=True)
             for paragrafo in secao_item.paragrafos:
                 texto = _sem_markdown(paragrafo)
                 if texto:
-                    documento.add_paragraph(texto)
+                    _runs_docx(documento.add_paragraph(), texto)
             for item_texto in secao_item.itens:
                 texto = _sem_markdown(item_texto)
                 if texto:
-                    documento.add_paragraph(texto, style="List Bullet")
+                    _runs_docx(documento.add_paragraph(style="List Bullet"), texto)
 
     for secao_doc in documento.sections:
         footer = secao_doc.footer.paragraphs[0]

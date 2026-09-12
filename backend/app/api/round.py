@@ -163,6 +163,12 @@ def update_patient(
     user=Depends(current_user),
 ):
     patient = _patient_for_user(patient_id, db, user)
+    if "vital_signs" in payload:
+        from app.services.clinical_vitals import validar_sinais_vitais
+        try:
+            payload["vital_signs"] = validar_sinais_vitais(payload["vital_signs"])
+        except ValueError as error:
+            raise HTTPException(status_code=422, detail=str(error)) from error
     for field in (
         "bed", "unit", "status", "labs", "medications", "plan", "pending",
         "chief_complaint", "anamnesis", "physical_exam", "cardiac_exam",

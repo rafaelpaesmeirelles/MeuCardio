@@ -287,6 +287,18 @@ def is_owner_admin(user) -> bool:
     return bool(expected and user.role == "admin" and secrets.compare_digest(actual, expected))
 
 
+def require_manage_account(actor, target) -> None:
+    """Administrative credential paths use the same protected-target policy.
+
+    Self service requires the current password; administrative routes cannot
+    be used to bypass that requirement or alter another administrator.
+    """
+    if getattr(actor, "role", None) != "admin":
+        raise HTTPException(status_code=403, detail="Ação restrita a administradores.")
+    if target.id == actor.id or getattr(target, "role", None) == "admin" or is_owner_admin(target):
+        raise HTTPException(status_code=403, detail="Use a recuperação pessoal ou o fluxo próprio da conta administrativa.")
+
+
 def require_owner_admin(user=Depends(current_user)):
     if not is_owner_admin(user):
         raise HTTPException(status_code=403, detail="Histórico de acessos restrito ao proprietário do CorVIA.")

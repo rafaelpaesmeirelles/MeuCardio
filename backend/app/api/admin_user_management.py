@@ -10,7 +10,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
-from app.core.security import hash_password, is_owner_admin, require_admin, require_owner_admin
+from app.core.security import hash_password, is_owner_admin, require_admin, require_owner_admin, require_manage_account
 from app.models.audit import AuditLog
 from app.models.email_account import EmailAccount
 from app.models.subscription import Subscription
@@ -311,8 +311,7 @@ def atualizar_usuario(
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
     account_recovery.bloquear_identidades_email(db)
     db.refresh(alvo)
-    if alvo.id == admin.id or alvo.role == "admin":
-        raise HTTPException(status_code=409, detail="Use o fluxo administrativo próprio para contas de administrador.")
+    require_manage_account(admin, alvo)
 
     if account_recovery.email_ja_em_uso(db, dados.email, ignorar_user_id=alvo.id):
         raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail.")
@@ -387,8 +386,7 @@ def redefinir_senha_corvia_mail(
     alvo = db.get(User, user_id)
     if not alvo:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
-    if alvo.id == admin.id or alvo.role == "admin":
-        raise HTTPException(status_code=409, detail="Use o fluxo próprio da conta administrativa.")
+    require_manage_account(admin, alvo)
     conta = db.query(EmailAccount).filter(EmailAccount.user_id == user_id).first()
     if not conta:
         raise HTTPException(status_code=404, detail="Este usuário não possui uma caixa CorVIA Mail nativa.")

@@ -1,5 +1,6 @@
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useState } from "react";
+import { useRequestRevision } from "../lib/useRequestRevision";
 import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
@@ -22,16 +23,21 @@ export default function Exame() {
   const { slug } = useParams();
   const [t, setT] = useState<Detalhe | null>(null);
   const [erro, setErro] = useState("");
+  const detailRequests = useRequestRevision(slug);
 
   useEffect(() => {
-    if (!slug) return;
+    const isCurrent = detailRequests.begin();
+    setT(null);
+    setErro("");
+    if (!slug) { setErro("Exame não encontrado."); return; }
     api.get<Detalhe>(`/lab-tests/${slug}`)
-      .then(setT)
-      .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar."));
-  }, [slug]);
+      .then((response) => { if (isCurrent()) setT(response); })
+      .catch((e) => { if (isCurrent()) setErro(e instanceof ApiError ? e.message : "Não foi possível carregar."); });
+    return () => detailRequests.invalidate();
+  }, [slug, detailRequests]);
 
   if (erro) return <Erro mensagem={erro} />;
-  if (!t) return <Carregando />;
+  if (!t || t.slug !== slug) return <Carregando />;
 
   return (
     <>

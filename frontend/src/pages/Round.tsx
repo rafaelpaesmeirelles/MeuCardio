@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
+import { parseVitalSigns } from "../lib/clinicalInput";
 import { Carregando, Vazio } from "../components/Estado";
 import PatientPrescricao from "../components/PatientPrescricao";
 import PatientDocumentos from "../components/PatientDocumentos";
@@ -45,11 +46,23 @@ export default function Round() {
   const [sugestoes, setSugestoes] = useState<Sugestao[] | null>(null);
   const [gerando, setGerando] = useState(false);
   const [erroIA, setErroIA] = useState("");
+  const [erro, setErro] = useState("");
+  const [adicionando, setAdicionando] = useState(false);
+  const contexto = useRef(0), consultaLista = useRef(0), consultaIA = useRef(0);
+  const montado = useRef(false), adicionandoRef = useRef(false), salvandoRef = useRef(false), gerandoRef = useRef(false);
 
-  const recarregar = () => api.get<Paciente[]>("/round/patients").then(setLista);
-  useEffect(() => { recarregar(); }, []);
+  async function recarregar() {
+    const consulta = ++consultaLista.current;
+    try { const rows = await api.get<Paciente[]>("/round/patients"); if (montado.current && consulta === consultaLista.current) setLista(rows); }
+    catch (e) { if (montado.current && consulta === consultaLista.current) setErro(e instanceof Error ? e.message : "Não foi possível carregar o round."); }
+  }
+  useEffect(() => { montado.current = true; void recarregar(); return () => { montado.current = false; contexto.current++; consultaLista.current++; }; }, []);
 
   function abrir(p: Paciente) {
+    if (salvandoRef.current) return;
+    const token = ++contexto.current;
+    const consulta = ++consultaIA.current;
+    setSugestoes(null); setErroIA(""); setErro(""); setResumo(null); setGerando(false); gerandoRef.current = false;
     if (aberto === p.id) { setAberto(null); return; }
     setAberto(p.id);
     setForm({
@@ -74,17 +87,19 @@ export default function Round() {
     });
     setSugestoes(null);
     setErroIA("");
-    api.get<Sugestao[]>(`/round/patients/${p.id}/ai-assist`).then(setSugestoes).catch(() => setSugestoes([]));
+    api.get<Sugestao[]>(`/round/patients/${p.id}/ai-assist`)
+      .then(rows => { if (montado.current && token === contexto.current && consulta === consultaIA.current) setSugestoes(rows); })
+      .catch(e => { if (montado.current && token === contexto.current && consulta === consultaIA.current) { setSugestoes([]); setErroIA(e instanceof Error ? e.message : "Não foi possível carregar o histórico da IA."); } });
   }
 
   async function salvarClinico(id: number) {
+    if (salvandoRef.current) return;
+    salvandoRef.current = true;
+    const token = contexto.current;
     setSalvando(true);
-    const vital_signs: Record<string, number> = {};
-    for (const campo of ["pa_sistolica", "pa_diastolica", "fc", "fr", "temperatura", "spo2"] as const) {
-      const valor = form[campo];
-      if (valor.trim()) vital_signs[campo] = Number(valor);
-    }
+    setErro("");
     try {
+      const vital_signs = parseVitalSigns(Object.fromEntries(Object.entries(form).filter(([,v]) => typeof v === "string")) as Record<string,string>);
       const labs: Record<string, string> = {};
       form.labs_texto.split("\n").forEach((linha) => {
         const [nome, ...resto] = linha.split(":");
@@ -109,47 +124,61 @@ export default function Round() {
         labs,
         diagnostic_hypothesis,
       });
-      recarregar();
+      await recarregar();
+    } catch (e) {
+      if (montado.current && token === contexto.current) setErro(e instanceof Error ? e.message : "Não foi possível salvar os dados clínicos.");
     } finally {
-      setSalvando(false);
+      salvandoRef.current = false;
+      if (montado.current) setSalvando(false);
     }
   }
 
   async function pedirAuxilioIA(id: number) {
+    if (gerandoRef.current) return;
+    gerandoRef.current = true;
+    const token = contexto.current;
+    ++consultaIA.current;
     setGerando(true);
     setErroIA("");
     try {
       const nova = await api.post<Sugestao>(`/round/patients/${id}/ai-assist`, {});
-      setSugestoes((s) => [nova, ...(s ?? [])]);
+      if (montado.current && token === contexto.current) setSugestoes((s) => [nova, ...(s ?? [])]);
     } catch (e) {
-      setErroIA(e instanceof Error ? e.message : "Não foi possível gerar o auxílio de IA agora.");
+      if (montado.current && token === contexto.current) setErroIA(e instanceof Error ? e.message : "Não foi possível gerar o auxílio de IA agora.");
     } finally {
-      setGerando(false);
+      if (montado.current && token === contexto.current) { gerandoRef.current = false; setGerando(false); }
     }
   }
 
   async function adicionar() {
-    await api.post("/round/patients", {
+    if (adicionandoRef.current) return;
+    adicionandoRef.current = true; setAdicionando(true); setErro("");
+    try { await api.post("/round/patients", {
       record_number: novo.record_number.trim(),
       initials: novo.initials.trim().toUpperCase(),
       bed: novo.bed || null,
       unit: novo.unit || null,
     });
     setNovo({ record_number: "", initials: "", bed: "", unit: "" });
-    recarregar();
+    await recarregar();
+    } catch (e) { if (montado.current) setErro(e instanceof Error ? e.message : "Não foi possível adicionar o paciente."); }
+    finally { adicionandoRef.current = false; if (montado.current) setAdicionando(false); }
   }
 
   async function gerarResumo(id: number) {
-    const r = await api.get<{ text: string }>(`/round/patients/${id}/summary`);
-    setResumo(r.text);
+    const token = contexto.current;
+    try { const r = await api.get<{ text: string }>(`/round/patients/${id}/summary`);
+      if (montado.current && token === contexto.current) setResumo(r.text);
+    } catch (e) { if (montado.current && token === contexto.current) setErro(e instanceof Error ? e.message : "Não foi possível gerar o resumo."); }
   }
 
-  if (!lista) return <Carregando />;
+  if (!lista) return erro ? <div><p role="alert">{erro}</p><button className="botao" onClick={() => { setErro(""); void recarregar(); }}>Tentar novamente</button></div> : <Carregando />;
 
   return (
     <>
       <p className="eyebrow">Round hospitalar</p>
       <h1>Pacientes internados</h1>
+      {erro && <p role="alert">{erro}</p>}
       <p className="aviso" style={{ borderTop: "none", marginTop: 0 }}>
         Registre apenas iniciais e número de prontuário. Nome completo não é armazenado.
       </p>
@@ -179,8 +208,8 @@ export default function Round() {
           </div>
         </div>
         <button className="botao" style={{ marginTop: "0.9rem" }} onClick={adicionar}
-                disabled={!novo.record_number || !novo.initials}>
-          Adicionar
+                disabled={adicionando || !novo.record_number.trim() || !novo.initials.trim()}>
+          {adicionando ? "Adicionando…" : "Adicionar"}
         </button>
       </div>
 

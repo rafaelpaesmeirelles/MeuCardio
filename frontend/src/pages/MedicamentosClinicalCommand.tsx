@@ -1,4 +1,5 @@
 import BotaoFavorito from "../components/BotaoFavorito";
+import { useRequestRevision } from "../lib/useRequestRevision";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -285,6 +286,7 @@ export default function MedicamentosClinicalCommand() {
   const [comparacao, setComparacao] = useState<Comparacao | null>(null);
   const [carregando, setCarregando] = useState(false);
   const [erro, setErro] = useState("");
+  const insightRequests = useRequestRevision(JSON.stringify([searchParams.get("slug"), selecionados]));
 
   useEffect(() => {
     todasAsPaginas<Item>("/drugs").then(setLista).catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os medicamentos."));
@@ -305,14 +307,16 @@ export default function MedicamentosClinicalCommand() {
   }, [lista, busca, grupo]);
 
   async function visualizar(slug: string) {
-    setCarregando(true); setErro(""); setComparacao(null);
+    const isCurrent = insightRequests.begin();
+    setCarregando(true); setErro(""); setComparacao(null); setDetalhe(null);
     try {
       const resposta = await api.get<Insight>(`/drug-insights/${slug}`);
+      if (!isCurrent()) return;
       setDetalhe(resposta);
-      requestAnimationFrame(() => document.getElementById(`medicamento-${slug}`)?.scrollIntoView({ behavior: "smooth", block: "start" }));
+      requestAnimationFrame(() => { if (isCurrent()) document.getElementById(`medicamento-${slug}`)?.scrollIntoView({ behavior: "smooth", block: "start" }); });
     } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível abrir o medicamento.");
-    } finally { setCarregando(false); }
+      if (isCurrent()) setErro(e instanceof ApiError ? e.message : "Não foi possível abrir o medicamento.");
+    } finally { if (isCurrent()) setCarregando(false); }
   }
 
   useEffect(() => {
@@ -322,6 +326,9 @@ export default function MedicamentosClinicalCommand() {
   }, [searchParams]);
 
   function alternarComparacao(slug: string) {
+    insightRequests.invalidate();
+    setCarregando(false);
+    setErro("");
     setSelecionados((atuais) => {
       if (atuais.includes(slug)) return atuais.filter((item) => item !== slug);
       if (atuais.length >= 4) return atuais;
@@ -332,20 +339,22 @@ export default function MedicamentosClinicalCommand() {
 
   async function comparar() {
     if (selecionados.length < 2) return;
+    const isCurrent = insightRequests.begin();
     setCarregando(true); setErro(""); setDetalhe(null);
     try {
       const resposta = await api.post<Comparacao>("/drug-insights/compare", { slugs: selecionados });
+      if (!isCurrent()) return;
       setComparacao(resposta);
-      requestAnimationFrame(() => document.getElementById("comparacao-medicamentos")?.scrollIntoView({ behavior: "smooth", block: "start" }));
+      requestAnimationFrame(() => { if (isCurrent()) document.getElementById("comparacao-medicamentos")?.scrollIntoView({ behavior: "smooth", block: "start" }); });
     } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível comparar os medicamentos.");
-    } finally { setCarregando(false); }
+      if (isCurrent()) setErro(e instanceof ApiError ? e.message : "Não foi possível comparar os medicamentos.");
+    } finally { if (isCurrent()) setCarregando(false); }
   }
 
   if (!lista && !erro) return <Carregando texto="Abrindo farmacologia…" />;
 
   if (detalhe) {
-    return <div className="cc-page cc-drugs-page cc-drugs-page--detail">{erro && <div className="cc-inline-alert" role="alert">{erro}</div>}<DetalheMedicamento drug={detalhe} onClose={() => setDetalhe(null)} />{carregando && <Carregando texto="Conectando dados farmacológicos…" />}</div>;
+    return <div className="cc-page cc-drugs-page cc-drugs-page--detail">{erro && <div className="cc-inline-alert" role="alert">{erro}</div>}<DetalheMedicamento drug={detalhe} onClose={() => { insightRequests.invalidate(); setCarregando(false); setDetalhe(null); }} />{carregando && <Carregando texto="Conectando dados farmacológicos…" />}</div>;
   }
 
   return (

@@ -1,3 +1,4 @@
+import { formatCivilDate } from "../lib/civilDate";
 import { useEffect, useRef, useState } from "react";
 import { api } from "../lib/api";
 import { checkoutLocation, formatBRL, type AIWallet } from "../lib/commercialPlans";
@@ -94,7 +95,7 @@ export default function AIWalletCard({ subscriptionsEnabled }: { subscriptionsEn
             ["Seu limite no ciclo", wallet.budget_credit_centavos],
           ].map(([label, value]) => <div key={label}><dt style={{ color: "var(--texto-secundario)" }}>{label}</dt><dd style={{ margin: "0.2rem 0", fontWeight: 700 }}>{value === null ? "Todo o saldo disponível" : formatBRL(value as number)}</dd></div>)}
         </dl>
-        <p style={{ fontSize: "0.85rem", color: "var(--texto-secundario)" }}>Ciclo: {new Date(wallet.period_start).toLocaleDateString("pt-BR")} a {new Date(wallet.period_end).toLocaleDateString("pt-BR")}. Créditos reservados ficam separados enquanto uma tarefa está em andamento. Em upgrades durante o ciclo, cobrança e franquia de IA são proporcionais ao período restante.</p>
+        <p style={{ fontSize: "0.85rem", color: "var(--texto-secundario)" }}>Ciclo: de {formatCivilDate(wallet.period_start)} até antes de {formatCivilDate(wallet.period_end)} (início do próximo ciclo). Créditos reservados ficam separados enquanto uma tarefa está em andamento. Em upgrades durante o ciclo, cobrança e franquia de IA são proporcionais ao período restante.</p>
         {!wallet.enabled && <p role="status">O uso de IA por esta carteira está indisponível no momento.</p>}
         {wallet.billing_blocked && <p role="status">Novas tarefas de IA estão pausadas. Consulte o saldo e as condições de acesso da sua assinatura.</p>}
         {wallet.enabled && <form onSubmit={(event) => { event.preventDefault(); void saveBudget(); }}>

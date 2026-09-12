@@ -175,7 +175,7 @@ export const CLINICAL_ROUTES = [
   route({ path: "/estudos", name: "Estudos clínicos", shortName: "Estudos", space: "pesquisa", group: "conhecimento", icon: "evidencia", layout: "data", intelligence: true, catalog: true }),
   route({ path: "/estudos/:slug", name: "Estudo clínico", shortName: "Estudo", space: "pesquisa", group: "conhecimento", icon: "evidencia", layout: "reading", intelligence: true, kind: "detail", parent: "/estudos" }),
   route({ path: "/exportar", name: "Exportar conteúdo", shortName: "Exportar", space: "pesquisa", group: "ferramentas", icon: "documento", layout: "focus", intelligence: false, catalog: true }),
-  route({ path: "/favoritos", name: "Notas & Favoritos", shortName: "Favoritos", space: "pesquisa", group: "conhecimento", icon: "favorito", layout: "data", intelligence: true, catalog: true }),
+  route({ path: "/favoritos", name: "Favoritos", shortName: "Favoritos", space: "pesquisa", group: "conhecimento", icon: "favorito", layout: "data", intelligence: true, catalog: true }),
 
   // Gestão
   route({ path: "/indicadores", name: "Indicadores & Métricas", shortName: "Indicadores", space: "gestao", group: "conta", icon: "indicadores", layout: "data", intelligence: false, catalog: true }),

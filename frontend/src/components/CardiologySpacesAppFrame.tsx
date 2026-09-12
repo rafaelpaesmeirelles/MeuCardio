@@ -439,7 +439,7 @@ export default function CardiologySpacesAppFrame() {
                   <CorviaThemeSelector variant="menu" />
                   <NavLink to="/minha-conta"><Icone nome="conta" />Minha conta</NavLink>
                   <NavLink to="/sincronizacao"><Icone nome="sincronizar" />Contas conectadas</NavLink>
-                  <NavLink to="/favoritos"><Icone nome="favorito" />Notas & Favoritos</NavLink>
+                  <NavLink to="/favoritos"><Icone nome="favorito" />Favoritos</NavLink>
                   {isAdmin && <NavLink to="/admin"><Icone nome="gestao" />Administração{adminPending > 0 && <span>{adminPending}</span>}</NavLink>}
                   {isAdmin && <NavLink to="/admin/atividade"><Icone nome="indicadores" />Atividade e crescimento</NavLink>}
                   <button type="button" onClick={() => void signOut()}><Icone nome="sair" />Sair</button>

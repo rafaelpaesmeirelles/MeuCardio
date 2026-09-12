@@ -15,7 +15,7 @@ from sqlalchemy.orm import Session
 from app.api import admin as admin_api
 from app.core.config import settings
 from app.core.db import get_db
-from app.core.security import require_admin
+from app.core.security import require_admin, require_manage_account
 from app.models.email_log import EmailLog
 from app.models.user import User
 from app.services import account_recovery
@@ -71,6 +71,7 @@ def admin_obter_recovery_email(
     user = db.get(User, user_id)
     if user is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    require_manage_account(_admin, user)
     return {
         "user_id": user.id,
         "login_email": user.email,
@@ -89,6 +90,7 @@ def admin_definir_recovery_email(
     user = db.get(User, user_id)
     if user is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    require_manage_account(_admin, user)
     if user.investidor:
         raise HTTPException(
             status_code=409,
@@ -182,6 +184,7 @@ def admin_enviar_recuperacao(
     user = db.get(User, user_id)
     if user is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    require_manage_account(_admin, user)
     if user.investidor:
         raise HTTPException(status_code=409, detail="Investidor não possui recuperação pessoal.")
     if not user.is_active:
@@ -207,6 +210,7 @@ def admin_reenviar_acesso(
     user = db.get(User, user_id)
     if user is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    require_manage_account(_admin, user)
     if user.investidor:
         raise HTTPException(status_code=409, detail="Investidor usa a credencial global de demonstração.")
     if not user.is_active or user.status != "aprovado":

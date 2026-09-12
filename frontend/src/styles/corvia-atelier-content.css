@@ -635,6 +635,70 @@ html[data-corvia-design="atelier"] #root .cv-app .cv-content .ceai__urgent:not(.
   html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cv-tool-card, .learning-card, .research-evidence-card, .cc-entity-card) { transition: none; }
 }
 
+/* Labels inherit the actual panel surface, including the locally dark panels. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cartao, .cv-section, .cc-section, .cc-detail-card, .cc-filterbar, .cv-calculator-finder, .filtros-conteudo, .prescricao-campo, .agenda-integrada) :is(label, legend, label > strong) {
+  color: var(--atelier-ink) !important;
+}
+
+/* Page headings outside the paper panels sit directly on the dark frame. */
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content :is(.conteudo, .cos-content, .pagina) > :is(h1, h2, h3) {
+  color: #f4f1e7 !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content .conteudo > section#documentos > h2 {
+  color: #f4f1e7 !important;
+}
+
+/* Intrinsic grid and flex widths must not enlarge the whole viewport. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cartao, .cc-section, .cc-detail-card, .cc-entity-card, .cc-guideline-card, .cc-guideline-list, .cc-clinical-list) {
+  min-width: 0;
+  max-width: 100%;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cc-clinical-list {
+  grid-template-columns: minmax(0, 1fr);
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cc-clinical-list, .cc-guideline-list) > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cartao, .cc-section, .cc-detail-card, .cc-entity-card, .cc-guideline-card) p {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cartao, .cc-section, .cc-detail-card, .cc-entity-card, .cc-guideline-card) p:not(.eyebrow):not([role="alert"]) {
+  color: var(--atelier-muted) !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cc-guideline-row, .cc-clinical-list) :is(span:not([class]), small) {
+  color: var(--atelier-muted) !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cc-guideline-row, .cc-detail-card, .cc-clinical-list) strong {
+  color: var(--atelier-ink) !important;
+}
+.sync-account-identity { min-width: 0; max-width: 100%; flex-wrap: wrap; }
+.sync-account-identity > strong { min-width: 0; overflow-wrap: anywhere; }
+
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao-sugestoes :is(button, strong, span) {
+  color: var(--atelier-ink) !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao-sugestoes :is(small, .prescricao-sugestao__rotulo, .prescricao-sugestoes__cabecalho) {
+  color: var(--atelier-muted) !important;
+}
+@media (max-width: 600px) {
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao-sugestoes button {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .35rem;
+  }
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao-sugestao__preco {
+    grid-column: 1;
+    grid-row: auto;
+    align-items: flex-start;
+    text-align: left;
+  }
+  html[data-corvia-design="atelier"] #root .cv-app .cv-content .prescricao-sugestao__principal strong {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
 /* Favorites and editorial decisions retain their dark preference. Declare
    aliases locally: inherited custom properties were resolved on the light
    .cv-content surface before these lazy scientific components mounted. */

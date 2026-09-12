@@ -542,7 +542,7 @@ def status_email(db: Session = Depends(get_db), user: User = Depends(current_use
     # resposta que a tela usa pra decidir entre mostrar "Assinar" e o
     # formulário de ativação direto. Sem isto, a tela mostraria "Assine o
     # CorvIA Mail" para quem já pode ativar a caixa de graça.
-    if getattr(user, "convidado", False):
+    if getattr(user, "convidado", False) and resolve_entitlements(db, user)["mail"]:
         return {
             "status": "ativo", "current_period_end": None,
             "preco_definido": (mail_addon_price() > 0),
@@ -621,68 +621,71 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
             detail="O preço do CorvIA Mail ainda não foi definido. Assinatura indisponível no momento.",
         )
 
-    principal = _assinatura_meucardio(db, user.id)
-    if principal and principal.status in ACESSO_LIBERADO and plan_features(principal.plano, getattr(principal, "commercial_version", None))["mail"]:
-        raise HTTPException(
-            status_code=409,
-            detail="Seu plano atual já inclui o CorvIA Mail — não é preciso assinar separadamente.",
-        )
-
     sub = _obter_ou_criar_assinatura_email(db, user)
-    if sub.status in ACESSO_LIBERADO:
-        raise HTTPException(status_code=409, detail="Você já assina o CorvIA Mail.")
-
-    # Reaproveita o cliente Stripe da assinatura principal quando existir —
-    # dois clientes para a mesma pessoa quebram o portal de cobrança e o
-    # histórico de faturas (mesmo cuidado já tomado nos cursos parceiros).
+    sub = db.query(Subscription).filter(Subscription.id == sub.id).with_for_update().populate_existing().one()
+    if sub.status in ACESSO_LIBERADO or resolve_entitlements(db, user)["mail"]:
+        raise HTTPException(status_code=409, detail="Seu acesso já inclui o CorVIA Mail. Não é preciso assinar novamente.")
+    last = db.query(AuditLog).filter(
+        AuditLog.user_id == user.id, AuditLog.action == "mail_checkout_created",
+        AuditLog.entity == "subscription", AuditLog.entity_id == str(sub.id),
+    ).order_by(AuditLog.id.desc()).first()
+    previous = dict(last.detail or {}) if last else {}
+    client = _stripe_client()
+    amount = mail_addon_price()
+    if previous.get("session_id"):
+        old = client.v1.checkout.sessions.retrieve(previous["session_id"])
+        if _campo(old, "status") == "complete":
+            old_subscription = _campo(old, "subscription")
+            old_subscription_id = old_subscription if isinstance(old_subscription, str) else _campo(old_subscription or {}, "id")
+            # A completed Checkout stays complete after its subscription ends.
+            # Allow a new contract only for the exact subscription whose
+            # cancellation is known locally AND terminal at the provider.
+            # A newly completed Checkout still awaits its own webhook even
+            # when this local row retains an older canceled subscription id.
+            ended = False
+            if (sub.status == "cancelado" and old_subscription_id
+                    and old_subscription_id == sub.stripe_subscription_id):
+                previous_subscription = client.v1.subscriptions.retrieve(old_subscription_id)
+                ended = _campo(previous_subscription, "status") in {"canceled", "incomplete_expired"}
+            if not ended:
+                raise HTTPException(status_code=409, detail="Pagamento em confirmação. Aguarde antes de iniciar outra assinatura.")
+        if _campo(old, "status") == "open":
+            if previous.get("amount") == amount:
+                return {"checkout_url": _campo(old, "url") or previous["url"]}
+            client.v1.checkout.sessions.expire(previous["session_id"])
     if not sub.stripe_customer_id:
         principal = _assinatura_meucardio(db, user.id)
-        sub.stripe_customer_id = (
-            principal.stripe_customer_id if principal and principal.stripe_customer_id
-            else stripe.Customer.create(email=user.email, name=user.full_name)["id"]
-        )
-        db.commit()
-
-    session = stripe.checkout.Session.create(
-        customer=sub.stripe_customer_id,
-        mode="subscription",
-        # Pedido do Rafael em 30/07/2026: cobrar em Pix OU cartão. Pix
-        # recorrente no Stripe (Pix Automático) exige mandate_options com
-        # amount_type="fixed" — sem isso, o padrão é "maximum" (um TETO de
-        # cobrança variável, não o valor fixo mensal que queremos). O mandato
-        # do Pix leva alguns dias pra ser autorizado pelo banco do assinante
-        # antes da primeira cobrança recorrente valer — diferente do cartão,
-        # que cobra na hora. Depende também de o Pix estar habilitado nas
-        # configurações de pagamento da conta Stripe (fora do código).
-        payment_method_options={
-            "pix": {
-                "mandate_options": {
-                    "amount_type": "fixed",
-                    "amount": mail_addon_price(),
-                    "payment_schedule": "monthly",
-                    "reference": "CorvIA Mail",
-                },
-            },
-        },
-        # Mesmo motivo do checkout principal, 08/08/2026: habilita o campo de
-        # cupom na tela do Stripe — os cupons são criados pelo Rafael.
-        allow_promotion_codes=True,
-        line_items=[{
-            "price_data": {
-                "currency": "brl",
-                "unit_amount": mail_addon_price(),
-                "recurring": {"interval": "month"},
-                "product_data": {"name": "CorvIA Mail"},
-            },
-            "quantity": 1,
-        }],
-        subscription_data={"metadata": {"tipo": "email", "user_id": str(user.id)}},
-        # O metadata da sessão e o da assinatura são campos diferentes; o
-        # webhook de customer.subscription.* só enxerga o da assinatura.
-        metadata={"tipo": "email", "user_id": str(user.id)},
-        success_url=f"{settings.public_url}/corvia-mail?status=sucesso",
-        cancel_url=f"{settings.public_url}/corvia-mail?status=cancelado",
-    )
+        sub.stripe_customer_id = principal.stripe_customer_id if principal and principal.stripe_customer_id else None
+        if not sub.stripe_customer_id:
+            customer = client.v1.customers.create(
+                params={"email": user.email, "name": user.full_name},
+                options={"idempotency_key": f"corvia-customer:{user.id}"},
+            )
+            sub.stripe_customer_id = customer["id"]
+    # No commit between row lock and persisted provider session. A lost reply
+    # retries the same Stripe operation, including customer creation.
+    attempt = f"corvia-mail-checkout:{sub.id}:{amount}:{last.id if last else 0}"
+    session = client.v1.checkout.sessions.create(params={
+        "customer": sub.stripe_customer_id, "mode": "subscription",
+        "integration_identifier": _checkout_tracking(attempt),
+        "payment_method_options": {"pix": {"mandate_options": {
+            "amount_type": "fixed", "amount": amount,
+            "payment_schedule": "monthly", "reference": "CorvIA Mail",
+        }}},
+        "allow_promotion_codes": True,
+        "line_items": [{"price_data": {
+            "currency": "brl", "unit_amount": amount, "recurring": {"interval": "month"},
+            "product_data": {"name": "CorvIA Mail"},
+        }, "quantity": 1}],
+        "subscription_data": {"metadata": {"tipo": "email", "user_id": str(user.id)}},
+        "metadata": {"tipo": "email", "user_id": str(user.id)},
+        "success_url": f"{settings.public_url}/corvia-mail?status=sucesso",
+        "cancel_url": f"{settings.public_url}/corvia-mail?status=cancelado",
+    }, options={"idempotency_key": attempt})
+    db.add(AuditLog(user_id=user.id, action="mail_checkout_created", entity="subscription", entity_id=str(sub.id),
+                    detail={"session_id": session["id"], "url": session["url"],
+                            "expires_at": session["expires_at"], "amount": amount}))
+    db.commit()
     return {"checkout_url": session["url"]}
 
 

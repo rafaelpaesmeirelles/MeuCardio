@@ -56,7 +56,7 @@ const FERRAMENTAS: LinkItem[] = [
   { to: "/indicadores", label: "Indicadores", icon: "indicadores" },
   { to: "/apresentacao", label: "Apresentação", icon: "documento" },
   { to: "/exportar", label: "Exportar PDF", icon: "documento" },
-  { to: "/favoritos", label: "Notas & Favoritos", icon: "favorito" },
+  { to: "/favoritos", label: "Favoritos", icon: "favorito" },
   { to: "/busca", label: "Busca avançada", icon: "busca" },
 ];
 

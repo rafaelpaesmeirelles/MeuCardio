@@ -1,5 +1,5 @@
 import io,json,re,time,unicodedata,hashlib
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from fastapi import HTTPException
@@ -165,11 +165,15 @@ def _execute(db,user,cmd,payload):
   return result
  if kind in {"reminder_create","task_create","appointment_create"}:
   if not a.get("inicio"):return {"erro":"data_required"}
-  return executar_tool_assistente("agenda_criar_compromisso_inteligente",{"inicio":a["inicio"],"duracao_minutos":a.get("duracao_minutos",15),"tipo":"lembrete" if kind=="reminder_create" else "tarefa" if kind=="task_create" else "consulta","observacoes":a.get("descricao") or payload.get("text")},db,user)
+  tipo="lembrete" if kind=="reminder_create" else "tarefa" if kind=="task_create" else a.get("tipo") or ("consulta" if a.get("paciente_id") or a.get("paciente_nome") else "compromisso")
+  if tipo not in {"tarefa","lembrete","compromisso"} and not (a.get("paciente_id") or a.get("paciente_nome")):return {"erro":"patient_required","mensagem":"Informe o paciente para agendar o atendimento clínico. Para um compromisso pessoal, use o tipo compromisso."}
+  arguments={"inicio":a["inicio"],"duracao_minutos":a.get("duracao_minutos",15),"tipo":tipo,"observacoes":a.get("descricao") or payload.get("text")}
+  if kind=="appointment_create":arguments.update({key:a[key] for key in ("paciente_id","paciente_nome") if a.get(key) is not None})
+  return executar_tool_assistente("agenda_criar_compromisso_inteligente",arguments,db,user)
  if kind=="appointment_update":
   if not a.get("appointment_id") or not a.get("novo_inicio"):return {"erro":"data_required","mensagem":"Informe compromisso e novo horário."}
   from app.models.clinical_docs import Appointment
-  current=db.query(Appointment).filter(Appointment.id==int(a["appointment_id"]),Appointment.owner_id==user.id).first()
+  current=db.query(Appointment).filter(Appointment.id==int(a["appointment_id"]),Appointment.owner_id==user.id).populate_existing().with_for_update().first()
   if not current:return {"erro":"appointment_not_found"}
   previous={"appointment_id":current.id,"inicio":current.scheduled_at.isoformat(),"duracao_minutos":current.duration_minutes}
   result=executar_tool_assistente("agenda_reagendar_compromisso",{"appointment_id":a["appointment_id"],"novo_inicio":a["novo_inicio"],"duracao_minutos":a.get("duracao_minutos")},db,user)
@@ -208,7 +212,7 @@ def _execute(db,user,cmd,payload):
   drafts=db.query(func.count(WhatsAppDraft.id)).filter(WhatsAppDraft.owner_id==user.id,WhatsAppDraft.status=="active").scalar() or 0
   unsigned=db.query(func.count(DocumentoEmitido.id)).filter(DocumentoEmitido.criado_por==user.id,DocumentoEmitido.assinado_em.is_(None)).scalar() or 0
   scientific=db.query(func.count(ScientificUserDocument.id)).filter(ScientificUserDocument.owner_id==user.id,ScientificUserDocument.analysis_status.in_({"pendente","processando"})).scalar() or 0
-  return {"status":"ok","mensagem":"Resumo diário autorizado." if kind=="daily_summary" else "Pendências autorizadas consultadas." if kind=="pending_items" else "Status autorizado consultado.","agenda":agenda,"drafts":drafts,"documents_awaiting_signature":unsigned,"scientific_processes_pending":scientific,"full_result_url":f"{settings.public_url}/conta/integracoes"}
+  return {"status":"ok","mensagem":"Resumo diário autorizado." if kind=="daily_summary" else "Pendências autorizadas consultadas." if kind=="pending_items" else "Status autorizado consultado.","agenda":agenda,"drafts":drafts,"documents_awaiting_signature":unsigned,"scientific_processes_pending":scientific,"full_result_url":f"{settings.public_url}/whatsapp-assistant"}
  if kind in {"draft_save","list_create","patient_material_draft"}:
   if not a.get("corpo"):return {"erro":"content_required","mensagem":"Informe o conteúdo."}
   draft=WhatsAppDraft(owner_id=user.id,link_id=cmd.link_id,kind="list" if kind=="list_create" else "patient_material" if kind=="patient_material_draft" else "draft",title_cipher=_encrypt(a.get("titulo"),user.id) if a.get("titulo") else None,body_cipher=_encrypt(a.get("corpo"),user.id),status="active",expires_at=utcnow()+timedelta(days=(_link(db,user,cmd).retention_days)))
@@ -252,14 +256,83 @@ def create_command(db,user,link,*,text,idempotency_key,explicit_kind,arguments,p
  _audit(db,user.id,"whatsapp_command_created","whatsapp_command",cmd.id,detail={"kind":kind,"level":level,"status":status})
  if status=="awaiting_confirmation":confirm=random_token();cmd.confirmation_token_hash=token_hash(confirm,"confirm");cmd.confirmation_expires_at=utcnow()+timedelta(seconds=settings.whatsapp_confirmation_ttl_seconds)
  if level==2 and status=="pending":undo=random_token();cmd.undo_token_hash=token_hash(undo,"undo");cmd.undo_expires_at=utcnow()+timedelta(seconds=settings.whatsapp_confirmation_ttl_seconds)
- if status=="pending":result=_execute(db,user,cmd,payload);cmd.status="failed" if "erro" in result else "completed"
+ if status=="pending":result=_execute_reversible(db,user,cmd,payload) if level==2 else _execute(db,user,cmd,payload);cmd.status="failed" if "erro" in result else "completed"
  elif status=="awaiting_confirmation":result=_prepare_heart_team_budget(db,user,cmd,payload) if kind=="heart_team_start" else {"mensagem":"Confirmação explícita necessária."}
  else:result={"erro":status,"mensagem":p.clarification or "Bloqueado."}
  cmd.result_cipher=_encrypt(result,user.id);db.add(WhatsAppUsageMetric(owner_id=user.id,link_id=link.id,idempotency_key=idempotency_key,operation=kind,provider=settings.whatsapp_provider,success="erro" not in result,blocked_reason=result.get("erro")));return cmd,result,confirm,undo
+class _DeferredCommandSession:
+ """Keep local tools' commits inside the command transaction and its row locks."""
+ def __init__(self,db):self._db=db;self.rollback_requested=False
+ def _check(self):
+  if self.rollback_requested:raise RuntimeError("A ferramenta solicitou rollback")
+ def commit(self):self._check();self._db.flush()
+ def rollback(self):self.rollback_requested=True
+ def __getattr__(self,name):self._check();return getattr(self._db,name)
+
+class _LocalCommandFailed(Exception):
+ def __init__(self,result):self.result=result
+
+class _UndoStateChanged(Exception):pass
+
+def _undo_targets(db,user,kind,result):
+ """Resolve only this command's owned rows, in a stable locking order."""
+ from app.models.clinical_docs import Appointment
+ from app.models.agenda import AvailabilityRule
+ if kind in {"reminder_create","task_create","appointment_create","appointment_update"}:
+  appointment=result.get("compromisso") or {};ids=[appointment.get("id")];model=Appointment;label="appointment"
+ elif kind=="routine_create":
+  ids=[item.get("id") for item in jsonable_encoder(result.get("rotina") or []) if isinstance(item,dict)];model=AvailabilityRule;label="routine"
+ elif kind in {"draft_save","list_create","patient_material_draft"}:
+  ids=[(result.get("draft") or {}).get("id")];model=WhatsAppDraft;label="draft"
+ else:raise _UndoStateChanged("Tipo sem compensação segura")
+ if not ids or any(isinstance(value,bool) or not isinstance(value,int) or value<=0 for value in ids):raise _UndoStateChanged("Objeto original indisponível")
+ targets=[]
+ for row_id in sorted(set(ids)):
+  row=db.query(model).filter(model.id==row_id,model.owner_id==user.id).populate_existing().with_for_update().first()
+  if row is None:raise _UndoStateChanged("Objeto original indisponível")
+  targets.append((label,row))
+ return targets
+
+def _undo_fingerprint(label,row):
+ # Hash every scalar column, including version, timestamps and encrypted data.
+ # The fingerprint remains inside result_cipher, never in the audit log.
+ state={}
+ for column in row.__table__.columns:
+  value=getattr(row,column.name)
+  if isinstance(value,(bytes,bytearray,memoryview)):value=bytes(value).hex()
+  elif isinstance(value,datetime):value=(value.replace(tzinfo=timezone.utc) if value.tzinfo is None else value.astimezone(timezone.utc)).isoformat()
+  state[column.name]=jsonable_encoder(value)
+ return {"type":label,"id":row.id,"sha256":hashlib.sha256(canonical_json(state).encode("utf-8")).hexdigest()}
+
+def _execute_reversible(db,user,cmd,payload):
+ # Existing agenda tools commit internally. Convert those commits to flushes,
+ # so no other request can edit a row between the effect and its snapshot.
+ try:
+  with db.begin_nested():
+   atomic_db=_DeferredCommandSession(db);result=_execute(atomic_db,user,cmd,payload)
+   if atomic_db.rollback_requested or "erro" in result:raise _LocalCommandFailed(result if "erro" in result else {"erro":"local_transaction_failed"})
+   db.flush()
+   targets=_undo_targets(db,user,cmd.kind,result)
+   result["_undo_expected"]={"schema":1,"targets":[_undo_fingerprint(label,row) for label,row in targets]}
+  return result
+ except _LocalCommandFailed as exc:return exc.result
+
+def _locked_command(db, user, cmd):
+ if not cmd or cmd.owner_id != user.id:raise HTTPException(404,"Comando ausente")
+ current=db.query(WhatsAppCommand).filter(WhatsAppCommand.id==cmd.id,WhatsAppCommand.owner_id==user.id).populate_existing().with_for_update().first()
+ if not current:raise HTTPException(404,"Comando ausente")
+ return current
+
+def _expired(deadline):
+ if deadline is None:return True
+ if deadline.tzinfo is None:deadline=deadline.replace(tzinfo=timezone.utc)
+ return deadline<=utcnow()
+
 def confirm_command(db,user,cmd,*,token,pin):
  feature_guard()
- if cmd.owner_id!=user.id or cmd.status!="awaiting_confirmation":raise HTTPException(409,"Estado inválido")
- if cmd.confirmation_expires_at<=utcnow() or token_hash(token,"confirm")!=cmd.confirmation_token_hash:raise HTTPException(403,"Confirmação inválida")
+ cmd=_locked_command(db,user,cmd)
+ if cmd.status!="awaiting_confirmation":raise HTTPException(409,"Este comando já foi confirmado ou não aguarda confirmação. Consulte o histórico.")
+ if _expired(cmd.confirmation_expires_at) or token_hash(token,"confirm")!=cmd.confirmation_token_hash:raise HTTPException(403,"Confirmação inválida ou expirada")
  l=_link(db,user,cmd)
  if not l or not l.pin_hash or not pin or not verify_password(pin,l.pin_hash):raise HTTPException(403,"PIN inválido")
  payload=decrypt_payload(cmd.payload_cipher,user.id)
@@ -269,31 +342,78 @@ def confirm_command(db,user,cmd,*,token,pin):
   if metric:metric.success=False;metric.blocked_reason="blocked_level_4"
   _audit(db,user.id,"whatsapp_command_blocked_level4","whatsapp_command",cmd.id,detail={"kind":cmd.kind})
   return {"erro":"blocked_level_4"}
- result=_execute(db,user,cmd,payload);cmd.status="failed" if "erro" in result else "completed";cmd.result_cipher=_encrypt(result,user.id);cmd.confirmation_token_hash=None;cmd.executed_at=utcnow()
+ # Persist the claim BEFORE any external effect. Row locks alone are insufficient:
+ # an email can reach its provider before the request transaction commits.
+ cmd.status="executing";cmd.confirmation_token_hash=None;cmd.executed_at=utcnow()
+ _audit(db,user.id,"whatsapp_command_claimed","whatsapp_command",cmd.id,detail={"kind":cmd.kind})
+ db.commit()
+ try:
+  result=_execute(db,user,cmd,payload)
+ except Exception:
+  db.rollback()
+  cmd=_locked_command(db,user,cmd)
+  result={"erro":"execution_uncertain","mensagem":"A execução foi interrompida. Confira o resultado no destino antes de solicitar outra ação. Este comando não será reenviado automaticamente."}
+  cmd.status="execution_uncertain";cmd.result_cipher=_encrypt(result,user.id)
+  _audit(db,user.id,"whatsapp_command_uncertain","whatsapp_command",cmd.id,detail={"kind":cmd.kind})
+  db.commit()
+  return result
+ cmd.status="failed" if "erro" in result else "completed";cmd.result_cipher=_encrypt(result,user.id)
  if metric:metric.success="erro" not in result;metric.blocked_reason=result.get("erro")
  _audit(db,user.id,"whatsapp_command_confirmed","whatsapp_command",cmd.id,detail={"kind":cmd.kind,"success":"erro" not in result})
  return result
 def undo_command(db,user,cmd,*,token):
- if not cmd or cmd.owner_id!=user.id or cmd.level!=2 or cmd.status!="completed" or token_hash(token,"undo")!=cmd.undo_token_hash:raise HTTPException(409,"Não pode desfazer")
+ feature_guard()
+ cmd=_locked_command(db,user,cmd)
+ if cmd.level!=2 or cmd.status!="completed" or _expired(cmd.undo_expires_at) or token_hash(token,"undo")!=cmd.undo_token_hash:raise HTTPException(409,"Não é possível desfazer: prazo expirado ou ação já alterada.")
+ if not user.is_active or not _link(db,user,cmd):raise HTTPException(403,"Vínculo WhatsApp indisponível")
+ permission=PERMISSIONS.get(cmd.kind)
+ if not permission or not _permission(db,user,cmd,permission):raise HTTPException(403,"Permissão ausente")
+ # Retire the token before compensation so a crash cannot trigger a replay.
+ # Tool commits below are deferred until all comparisons and writes finish.
+ cmd.status="undoing";cmd.undo_token_hash=None;db.commit()
+ try:
+  return _undo_claimed(db,user,cmd)
+ except _UndoStateChanged:
+  db.rollback();cmd=_locked_command(db,user,cmd);cmd.status="undo_conflict"
+  _audit(db,user.id,"whatsapp_undo_conflict","whatsapp_command",cmd.id)
+  db.commit()
+  raise HTTPException(409,"A ação foi alterada depois do comando ou não possui uma referência segura para desfazer. O estado atual foi preservado.")
+ except Exception:
+  db.rollback();cmd=_locked_command(db,user,cmd);cmd.status="undo_uncertain"
+  _audit(db,user.id,"whatsapp_undo_uncertain","whatsapp_command",cmd.id)
+  db.commit()
+  raise HTTPException(409,"Não foi possível confirmar o desfazer. Confira o estado atual da ação; ela não será repetida automaticamente.")
+
+def _undo_claimed(db,user,cmd):
  result=decrypt_payload(cmd.result_cipher,user.id) or {};appointment=result.get("compromisso") if isinstance(result,dict) else None;appointment_id=(appointment or {}).get("id") if isinstance(appointment,dict) else None
+ expected=result.get("_undo_expected") if isinstance(result,dict) else None
+ if not isinstance(expected,dict) or expected.get("schema")!=1:raise _UndoStateChanged("Comando antigo sem estado verificável")
+ targets=_undo_targets(db,user,cmd.kind,result)
+ actual=[_undo_fingerprint(label,row) for label,row in targets]
+ if actual!=expected.get("targets"):raise _UndoStateChanged("O objeto mudou após o comando")
+ # All targets have been checked under locks before the first write; internal
+ # commits must not release those locks or leave a partially disabled routine.
+ atomic_db=_DeferredCommandSession(db)
  if cmd.kind in {"reminder_create","task_create","appointment_create"}:
   if not appointment_id:raise HTTPException(409,"A ação não possui compensação segura")
-  compensated=executar_tool_assistente("agenda_cancelar_compromisso",{"appointment_id":appointment_id,"motivo":"Desfeito pelo assinante via CorVIA"},db,user)
+  compensated=executar_tool_assistente("agenda_cancelar_compromisso",{"appointment_id":appointment_id,"motivo":"Desfeito pelo assinante via CorVIA"},atomic_db,user)
   if "erro" in compensated:raise HTTPException(409,"Não foi possível desfazer com segurança")
  if cmd.kind=="routine_create":
   routines=result.get("rotina") if isinstance(result,dict) else None;routine_ids=[item.get("id") for item in jsonable_encoder(routines or []) if isinstance(item,dict) and item.get("id")]
   if not routine_ids:raise HTTPException(409,"Rotina não disponível para desfazer")
   from app.api.agenda_integrada import disable_work_routine
-  for routine_id in routine_ids:disable_work_routine(int(routine_id),professional_id=None,db=db,user=user)
+  for routine_id in routine_ids:disable_work_routine(int(routine_id),professional_id=None,db=atomic_db,user=user)
  if cmd.kind=="appointment_update":
   previous=result.get("_undo") if isinstance(result,dict) else None
   if not previous:raise HTTPException(409,"Horário anterior não disponível para desfazer")
-  compensated=executar_tool_assistente("agenda_reagendar_compromisso",{"appointment_id":previous["appointment_id"],"novo_inicio":previous["inicio"],"duracao_minutos":previous.get("duracao_minutos")},db,user)
+  if int(previous.get("appointment_id") or 0)!=appointment_id:raise _UndoStateChanged("Referência de restauração divergente")
+  compensated=executar_tool_assistente("agenda_reagendar_compromisso",{"appointment_id":previous["appointment_id"],"novo_inicio":previous["inicio"],"duracao_minutos":previous.get("duracao_minutos")},atomic_db,user)
   if "erro" in compensated:raise HTTPException(409,"Não foi possível restaurar o compromisso")
  if cmd.kind in {"draft_save","list_create","patient_material_draft"}:
   draft_id=((result.get("draft") or {}).get("id") if isinstance(result,dict) else None);draft=db.query(WhatsAppDraft).filter(WhatsAppDraft.id==draft_id,WhatsAppDraft.owner_id==user.id,WhatsAppDraft.status=="active").first()
   if not draft:raise HTTPException(409,"Rascunho não disponível para desfazer")
   draft.status="deleted"
+ atomic_db._check();db.flush()
  cmd.status="undone";cmd.undo_token_hash=None;_audit(db,user.id,"whatsapp_command_undone","whatsapp_command",cmd.id);return {"ok":True,"status":"undone"}
 def purge_expired_data(db,owner_id=None):
  now=utcnow();mq=db.query(WhatsAppMessage).filter(WhatsAppMessage.expires_at<=now);oq=db.query(WhatsAppOutboundOutbox).filter(WhatsAppOutboundOutbox.expires_at<=now);cq=db.query(WhatsAppCommand.id).filter(WhatsAppCommand.expires_at<=now)

@@ -610,6 +610,8 @@ def baixar_pdf_gerado(gid: int, metodo: str | None = None, db: Session = Depends
             "X-Corvia-Assinatura": "assinada" if existente.assinado_em is not None else "nao-assinada",
         })
 
+    from app.services.kyc.access import exigir_liberacao_emissao
+    exigir_liberacao_emissao(db, user)
     metodo = metodo or user.assinatura_metodo_preferido or "MANUAL"
     try:
         provedor, info_metodo = assinatura_emissao.preparar(metodo, db=db, user=user)

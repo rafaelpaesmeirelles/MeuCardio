@@ -10,6 +10,9 @@ import { cardiologySpacesEnabled } from "./lib/cardiologySpacesFeature";
 import { heartTeamEnabled, whatsappAssistantEnabled } from "./lib/aiFeatureFlags";
 import { useAuth } from "./lib/auth";
 import { useActivityHeartbeat } from "./lib/useActivityHeartbeat";
+import { LoginRedirect, ResumeLogin } from "./components/LoginReturn";
+import { readLoginReturn } from "./lib/loginReturn";
+import { pageTitle } from "./lib/pageTitle";
 
 const Entrar = lazy(() => import("./pages/Entrar"));
 const Produto = lazy(() => import("./pages/Produto"));
@@ -114,6 +117,7 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
+    document.title = pageTitle(location.pathname);
     (window as unknown as { __corviaVerificarAtualizacao?: () => void })
       .__corviaVerificarAtualizacao?.();
   }, [location.pathname]);
@@ -125,6 +129,7 @@ export default function App() {
         <Routes>
           <Route path="/validar" element={<ValidarDocumento />} />
           <Route path="/validar/:codigo" element={<ValidarDocumento />} />
+          <Route path="*" element={<Navigate to="/validar" replace />} />
         </Routes>
       </RotasSuspensas>
     );
@@ -149,7 +154,7 @@ export default function App() {
     return (
       <RotasSuspensas>
         <Routes>
-          <Route path="/" element={<Navigate to="/entrar" replace />} />
+          <Route path="/" element={<LoginRedirect />} />
           <Route path="/produto" element={<Produto />} />
           <Route path="/entrar" element={<Entrar />} />
           <Route path="/solicitar-acesso" element={<SolicitarAcesso />} />
@@ -158,10 +163,15 @@ export default function App() {
           <Route path="/privacidade" element={<PoliticaPrivacidade />} />
           <Route path="/excluir-conta" element={<ExcluirConta />} />
           <Route path="/termos" element={<TermosUso />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<LoginRedirect />} />
         </Routes>
       </RotasSuspensas>
     );
+  }
+
+  // The product presentation is public even when the visitor has an active session.
+  if (location.pathname.replace(/\/+$/, "") === "/produto") {
+    return <RotasSuspensas><Produto /></RotasSuspensas>;
   }
 
   if (usuario.profile_completion_required && location.pathname !== "/minha-conta") {
@@ -191,6 +201,11 @@ export default function App() {
     !noCardiologySpacesTour
   ) {
     return <Navigate to="/tour?retorno=/" replace />;
+  }
+
+  const loginReturn = readLoginReturn();
+  if (loginReturn && (location.pathname === "/entrar" || location.pathname === "/")) {
+    return <ResumeLogin destination={loginReturn} />;
   }
 
   return (

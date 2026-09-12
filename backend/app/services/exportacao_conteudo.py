@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 from sqlalchemy import or_
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, load_only
 
 from app.models.checklist import DischargeChecklist
 from app.models.clinical_case import ClinicalCase
@@ -35,6 +35,7 @@ from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.services import calculators as calc
 from app.services.clinical_text import clinical_text_without_internal_overrides
+from app.services.export_links import MARKDOWN_LINK, absolute_link
 from app.services.cmed_precos import preco_pmc
 from app.services.pdf.layout import Documento
 from app.services.pdf.marca import FIO, LOGO, NAVY, NEUTRO, TEAL, logo_disponivel
@@ -118,11 +119,18 @@ def _sem_markdown(texto: str | None) -> str:
     valor = re.sub(r"```(?:\w+)?\s*", "", valor)
     valor = valor.replace("```", "")
     valor = re.sub(r"!\[([^\]]*)\]\([^)]*\)", r"\1", valor)
-    valor = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r"\1 (\2)", valor)
+    links = []
+    def guardar_link(match):
+        label = re.sub(r"[*_~`]", "", match[1])
+        target = absolute_link(match[2])
+        links.append(f"[{label}]({target})" if target else label)
+        return f"\ue000{len(links) - 1}\ue001"
+    valor = MARKDOWN_LINK.sub(guardar_link, valor)
     valor = re.sub(r"<[^>]+>", " ", valor)
     valor = re.sub(r"^\s{0,3}#{1,6}\s*", "", valor, flags=re.M)
     valor = re.sub(r"[*_~`]", "", valor)
     valor = re.sub(r"\n{3,}", "\n\n", valor)
+    valor = re.sub(r"\ue000(\d+)\ue001", lambda m: links[int(m[1])], valor)
     return valor.strip()
 
 
@@ -540,44 +548,53 @@ def catalogo(db: Session, *, q: str | None = None, tipo: str | None = None, slug
             return False
         return True
 
-    for d in db.query(Document).filter(Document.published.is_(True)).order_by(Document.title).limit(1200):
+    def registros(kinds, model, query, *fields):
+        # Search every eligible metadata row before limiting the response.
+        # Defer large bodies and stream batches instead of hydrating the corpus.
+        if tipo and tipo not in kinds:
+            return ()
+        if exato:
+            query = query.filter(model.slug == exato)
+        return query.options(load_only(model.slug, *fields)).yield_per(250)
+
+    for d in registros(("documento", "fluxograma"), Document, db.query(Document).filter(Document.published.is_(True)).order_by(Document.title), Document.title, Document.theme, Document.kind):
         kind = "fluxograma" if d.kind == "fluxograma" else "documento"
         item = _catalog_item(kind, d.slug, d.title, d.theme, d.kind)
         if aceita(item): saida.append(item)
-    for e in db.query(EvidenceRecord).filter(EvidenceRecord.published.is_(True)).order_by(EvidenceRecord.theme, EvidenceRecord.year.desc()).limit(2500):
+    for e in registros(("evidencia",), EvidenceRecord, db.query(EvidenceRecord).filter(EvidenceRecord.published.is_(True)).order_by(EvidenceRecord.theme, EvidenceRecord.year.desc()), EvidenceRecord.statement, EvidenceRecord.theme, EvidenceRecord.society, EvidenceRecord.year, EvidenceRecord.recommendation_class, EvidenceRecord.evidence_level):
         item = _catalog_item("evidencia", e.slug, e.statement[:180], e.theme, f"{e.society} {e.year} · Classe {e.recommendation_class}/{e.evidence_level}")
         if aceita(item): saida.append(item)
-    for s in db.query(ScientificStudy).filter(ScientificStudy.published.is_(True)).order_by(ScientificStudy.year.desc(), ScientificStudy.title).limit(1500):
+    for s in registros(("estudo",), ScientificStudy, db.query(ScientificStudy).filter(ScientificStudy.published.is_(True)).order_by(ScientificStudy.year.desc(), ScientificStudy.title), ScientificStudy.title, ScientificStudy.theme, ScientificStudy.journal, ScientificStudy.year):
         item = _catalog_item("estudo", s.slug, s.title, s.theme, f"{s.journal} · {s.year}")
         if aceita(item): saida.append(item)
-    for d in db.query(Drug).filter(Drug.published.is_(True)).order_by(Drug.generic_name).limit(800):
+    for d in registros(("medicamento",), Drug, db.query(Drug).filter(Drug.published.is_(True)).order_by(Drug.generic_name), Drug.generic_name, Drug.drug_class):
         item = _catalog_item("medicamento", d.slug, d.generic_name, "Farmacologia", d.drug_class)
         if aceita(item): saida.append(item)
-    for t in db.query(LabTest).filter(LabTest.published.is_(True)).order_by(LabTest.name).limit(800):
+    for t in registros(("exame",), LabTest, db.query(LabTest).filter(LabTest.published.is_(True)).order_by(LabTest.name), LabTest.name, LabTest.theme, LabTest.category):
         item = _catalog_item("exame", t.slug, t.name, t.theme, t.category)
         if aceita(item): saida.append(item)
-    for g in db.query(Guideline).order_by(Guideline.ano.desc(), Guideline.titulo).limit(600):
+    for g in registros(("guideline",), Guideline, db.query(Guideline).order_by(Guideline.ano.desc(), Guideline.titulo), Guideline.titulo, Guideline.tema, Guideline.org, Guideline.ano):
         item = _catalog_item("guideline", g.slug, g.titulo, g.tema, f"{g.org} · {g.ano}")
         if aceita(item): saida.append(item)
-    for d in db.query(SpecialtyDisease).filter(SpecialtyDisease.published.is_(True)).order_by(SpecialtyDisease.name).limit(1000):
+    for d in registros(("doenca",), SpecialtyDisease, db.query(SpecialtyDisease).filter(SpecialtyDisease.published.is_(True)).order_by(SpecialtyDisease.name), SpecialtyDisease.name, SpecialtyDisease.area, SpecialtyDisease.category):
         item = _catalog_item("doenca", d.slug, d.name, d.area, d.category)
         if aceita(item): saida.append(item)
-    for c in db.query(ClinicalCase).filter(ClinicalCase.published.is_(True)).order_by(ClinicalCase.titulo).limit(1000):
+    for c in registros(("caso_clinico",), ClinicalCase, db.query(ClinicalCase).filter(ClinicalCase.published.is_(True)).order_by(ClinicalCase.titulo), ClinicalCase.titulo, ClinicalCase.tema, ClinicalCase.nivel):
         item = _catalog_item("caso_clinico", c.slug, c.titulo, c.tema, c.nivel)
         if aceita(item): saida.append(item)
-    for t in db.query(StudyTrack).filter(StudyTrack.published.is_(True)).order_by(StudyTrack.titulo).limit(800):
+    for t in registros(("trilha",), StudyTrack, db.query(StudyTrack).filter(StudyTrack.published.is_(True)).order_by(StudyTrack.titulo), StudyTrack.titulo, StudyTrack.tema, StudyTrack.nivel):
         item = _catalog_item("trilha", t.slug, t.titulo, t.tema, t.nivel)
         if aceita(item): saida.append(item)
-    for c in db.query(DischargeChecklist).filter(DischargeChecklist.published.is_(True)).order_by(DischargeChecklist.condicao).limit(800):
+    for c in registros(("checklist",), DischargeChecklist, db.query(DischargeChecklist).filter(DischargeChecklist.published.is_(True)).order_by(DischargeChecklist.condicao), DischargeChecklist.condicao, DischargeChecklist.theme, DischargeChecklist.scope_type):
         item = _catalog_item("checklist", c.slug, c.condicao, c.theme, c.scope_type)
         if aceita(item): saida.append(item)
-    for m in db.query(PatientMaterial).filter(PatientMaterial.published.is_(True)).order_by(PatientMaterial.titulo).limit(800):
+    for m in registros(("material_paciente",), PatientMaterial, db.query(PatientMaterial).filter(PatientMaterial.published.is_(True)).order_by(PatientMaterial.titulo), PatientMaterial.titulo, PatientMaterial.tema, PatientMaterial.subtitulo):
         item = _catalog_item("material_paciente", m.slug, m.titulo, m.tema, m.subtitulo)
         if aceita(item): saida.append(item)
-    for p in db.query(EmergencyProtocol).filter(EmergencyProtocol.published.is_(True)).order_by(EmergencyProtocol.ordem).limit(400):
+    for p in registros(("emergencia",), EmergencyProtocol, db.query(EmergencyProtocol).filter(EmergencyProtocol.published.is_(True)).order_by(EmergencyProtocol.ordem), EmergencyProtocol.titulo, EmergencyProtocol.gatilho):
         item = _catalog_item("emergencia", p.slug, p.titulo, None, p.gatilho)
         if aceita(item): saida.append(item)
-    for g in db.query(GalleryImage).filter(GalleryImage.published.is_(True)).order_by(GalleryImage.title).limit(1000):
+    for g in registros(("galeria",), GalleryImage, db.query(GalleryImage).filter(GalleryImage.published.is_(True)).order_by(GalleryImage.title), GalleryImage.title, GalleryImage.theme, GalleryImage.modality):
         item = _catalog_item("galeria", g.slug, g.title, g.theme, g.modality)
         if aceita(item): saida.append(item)
     for c in sorted(calc.REGISTRY.values(), key=lambda item: item.name):
@@ -681,12 +698,15 @@ def gerar_pdf(
         for secao in item.secoes:
             documento.titulo(secao.titulo)
             if secao.destaque:
-                documento.destaque(secao.destaque, rotulo=secao.titulo)
+                documento.destaque(_sem_markdown(secao.destaque), rotulo=secao.titulo, links=True)
             for paragrafo in secao.paragrafos:
                 if paragrafo:
-                    documento.paragrafo(_sem_markdown(paragrafo))
+                    documento.paragrafo_com_links(_sem_markdown(paragrafo))
             if secao.itens:
-                documento.itens([_sem_markdown(item_texto) for item_texto in secao.itens if item_texto])
+                for item_texto in secao.itens:
+                    if item_texto:
+                        documento.paragrafo_com_links(_sem_markdown(item_texto), item=True)
+                documento.espaco(5)
         if indice < len(itens):
             documento.espaco(12)
 

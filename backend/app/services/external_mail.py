@@ -20,6 +20,7 @@ from app.models.agenda import CalendarIntegration
 from app.services.agenda_integrada.connectors import ConnectorError
 from app.services.agenda_integrada.external_accounts import ensure_fresh_credentials
 from app.services.assinatura import smime
+from app.services.mail_attachments import MailAttachment, add_attachments
 
 
 class ExternalMailError(RuntimeError):
@@ -149,10 +150,26 @@ def list_folders(db: Session, integration: CalendarIntegration) -> list[dict[str
 def list_messages(db: Session, integration: CalendarIntegration, *, folder: str | None, limit: int, start: int) -> list[dict[str, Any]]:
     limit = min(max(limit, 1), 100); start = max(start, 1)
     if integration.provider == "google_calendar":
-        params: dict[str, str] = {"maxResults": str(min(start - 1 + limit, 500))}
+        params: dict[str, str] = {"maxResults": "100"}
         if folder: params["labelIds"] = folder
-        listing = _request(db, integration, "GET", f"{_GMAIL}/messages", params=params).json(); result = []
-        for item in (listing.get("messages") or [])[start - 1 : start - 1 + limit]:
+        # Gmail exposes page tokens, not offsets. Walk metadata ID pages
+        # before fetching only the requested messages; no 500-message ceiling.
+        skipped = 0
+        selected = []
+        seen_pages = set()
+        while len(selected) < limit:
+            listing = _request(db, integration, "GET", f"{_GMAIL}/messages", params=params).json()
+            rows = listing.get("messages") or []
+            offset = max(0, start - 1 - skipped)
+            selected.extend(rows[offset:offset + limit - len(selected)])
+            skipped += len(rows)
+            cursor = listing.get("nextPageToken")
+            if not cursor or cursor in seen_pages:
+                break
+            seen_pages.add(cursor)
+            params["pageToken"] = cursor
+        result = []
+        for item in selected:
             raw = _request(db, integration, "GET", f"{_GMAIL}/messages/{quote(str(item['id']), safe='')}", params={"format": "metadata", "metadataHeaders": ["Subject", "From", "To", "Cc", "Date"]}).json()
             result.append(_gmail_message(raw))
         return result
@@ -198,6 +215,7 @@ def _sender_address(integration: CalendarIntegration) -> str:
 def send_message(
     db: Session, integration: CalendarIntegration, *, to: str, subject: str, html: str,
     cc: str | None = None, bcc: str | None = None, user=None, assinar_smime: bool = False,
+    attachments: list[MailAttachment] | None = None,
 ) -> dict[str, Any]:
     recipients = [address for _, address in getaddresses([to]) if address]; cc_list = [address for _, address in getaddresses([cc or ""]) if address]; bcc_list = [address for _, address in getaddresses([bcc or ""]) if address]
     if not recipients: raise ExternalMailError("Informe ao menos um destinatário válido.", status_code=422)
@@ -208,6 +226,7 @@ def send_message(
             raw_message = smime.montar_mensagem_assinada(
                 db, user, remetente=_sender_address(integration), para=recipients,
                 cc=cc_list or None, bcc=bcc_list or None, assunto=subject, html=html,
+                attachments=attachments,
             )
         except smime.SmimeIndisponivel as exc:
             raise ExternalMailError(f"Não foi possível assinar o e-mail: {exc}", status_code=409) from exc
@@ -226,8 +245,14 @@ def send_message(
         if cc_list: message["Cc"] = ", ".join(cc_list)
         if bcc_list: message["Bcc"] = ", ".join(bcc_list)
         message["Subject"] = subject; message.set_content("Esta mensagem contém conteúdo HTML."); message.add_alternative(html, subtype="html")
+        add_attachments(message, attachments)
         raw = base64.urlsafe_b64encode(message.as_bytes()).rstrip(b"=").decode(); return _request(db, integration, "POST", f"{_GMAIL}/messages/send", json={"raw": raw}).json()
     payload = {"message": {"subject": subject, "body": {"contentType": "HTML", "content": html}, "toRecipients": [{"emailAddress": {"address": item}} for item in recipients], "ccRecipients": [{"emailAddress": {"address": item}} for item in cc_list], "bccRecipients": [{"emailAddress": {"address": item}} for item in bcc_list]}, "saveToSentItems": True}
+    if attachments:
+        payload["message"]["attachments"] = [{
+            "@odata.type": "#microsoft.graph.fileAttachment", "name": item.filename,
+            "contentType": item.content_type, "contentBytes": base64.b64encode(item.content).decode("ascii"),
+        } for item in attachments]
     _request(db, integration, "POST", f"{_GRAPH}/sendMail", json=payload); return {"sent": True}
 
 

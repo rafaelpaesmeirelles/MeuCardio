@@ -33,6 +33,7 @@ from app.services.whatsapp_security import (
     detect_pii,
     payload_hash,
     phone_hash,
+    token_hash,
     trusted_interactive,
     utcnow,
 )

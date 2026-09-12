@@ -198,7 +198,7 @@ const SPACES: Space[] = [
       { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
       { to: "/galeria", label: "Atlas & Galeria", icon: "galeria" },
       { to: "/exportar", label: "Exportar conteúdo", icon: "documento" },
-      { to: "/favoritos", label: "Notas & Favoritos", icon: "favorito" },
+      { to: "/favoritos", label: "Favoritos", icon: "favorito" },
     ],
   },
   {
@@ -356,7 +356,7 @@ const CATALOG: Array<{ title: string; actions: Action[] }> = [
     ["/exportar", "Exportar conteúdo", "documento"],
   ].map(([to, label, icon]) => ({ to, label, icon: icon as NomeIcone, featured: ["/heart-team", "/whatsapp-assistant", "/intelligence"].includes(to) })) },
   { title: "Produtividade & Rede", actions: [
-    ["/indicadores", "Indicadores & Métricas", "indicadores"], ["/favoritos", "Notas & Favoritos", "favorito"],
+    ["/indicadores", "Indicadores & Métricas", "indicadores"], ["/favoritos", "Favoritos", "favorito"],
     ["/busca", "Busca avançada", "busca"], ["/busca?modo=tudo-com-tudo", "Tudo com Tudo", "sincronizar"],
     ["/usuarios-online", "Rede profissional", "pacientes"], ["/sincronizacao", "Contas conectadas", "sincronizar"],
   ].map(([to, label, icon]) => ({ to, label, icon: icon as NomeIcone, featured: ["/heart-team", "/whatsapp-assistant", "/intelligence"].includes(to) })) },

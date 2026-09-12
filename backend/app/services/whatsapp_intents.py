@@ -39,6 +39,14 @@ def parse_intent(text,*,explicit_kind=None,explicit_arguments=None,now,timezone_
  if k in {"reminder_create","task_create","appointment_create"}:
   a.setdefault("inicio",_dt(raw,now,timezone_name))
   if not a.get("inicio"):return ParsedIntent(k,a,"Informe data e hora.")
+  if k=="appointment_create":
+   tipo=_field(raw,"tipo")
+   if tipo:a.setdefault("tipo",tipo.strip().casefold())
+   elif re.search(r"\b(?:consulta|atendimento|retorno)\b",n):a.setdefault("tipo","consulta")
+   paciente_id=_field(raw,"paciente id")
+   if paciente_id and paciente_id.isdigit():a.setdefault("paciente_id",int(paciente_id))
+   if a.get("tipo") not in {None,"tarefa","lembrete","compromisso"} and not (a.get("paciente_id") or a.get("paciente_nome")):
+    return ParsedIntent(k,a,"Informe Paciente ID para o atendimento clínico; para compromisso pessoal, use Tipo: compromisso.")
  if k=="appointment_update":
   a.setdefault("appointment_id",ref);a.setdefault("novo_inicio",_dt(raw,now,timezone_name))
   if not a.get("appointment_id") or not a.get("novo_inicio"):return ParsedIntent(k,a,"Informe ID do compromisso e novo horário.")

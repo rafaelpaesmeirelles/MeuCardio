@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import PublicCardiologyFrame from "../components/PublicCardiologyFrame";
 import "../styles/validar-documento.css";
@@ -87,8 +87,10 @@ export default function ValidarDocumento() {
   const [resultado, setResultado] = useState<Resultado | null>(null);
   const [erro, setErro] = useState("");
   const [carregando, setCarregando] = useState(false);
+  const [tentativa, setTentativa] = useState(0);
+  const request = useRef<AbortController | null>(null);
 
-  async function validar(valor: string) {
+  async function validar(valor: string, controller: AbortController) {
     const codigoFinal = normalizar(valor);
     if (!codigoFinal) return;
     setCarregando(true);
@@ -97,15 +99,17 @@ export default function ValidarDocumento() {
     try {
       const resposta = await fetch(`/api/documentos-publicos/validar/${encodeURIComponent(codigoFinal)}`, {
         headers: { Accept: "application/json" },
+        signal: controller.signal,
       });
       if (!resposta.ok) {
         throw new Error(await mensagemErroValidacao(resposta));
       }
       const corpo = await resposta.json().catch(() => null);
       if (!corpo) throw new Error("O serviço de validação retornou uma resposta inesperada. Tente novamente em instantes.");
+      if (controller.signal.aborted) return;
       setResultado(corpo);
-      if (params.codigo !== codigoFinal) navigate(`/validar/${codigoFinal}`, { replace: true });
     } catch (e) {
+      if (controller.signal.aborted) return;
       setErro(
         e instanceof TypeError
           ? "Não foi possível conectar ao serviço de validação. Verifique sua conexão e tente novamente."
@@ -114,18 +118,28 @@ export default function ValidarDocumento() {
             : "Não foi possível validar o documento.",
       );
     } finally {
-      setCarregando(false);
+      if (!controller.signal.aborted) setCarregando(false);
     }
   }
 
   useEffect(() => {
-    if (params.codigo) void validar(params.codigo);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [params.codigo]);
+    const controller = new AbortController();
+    request.current = controller;
+    setCodigo(params.codigo ? normalizar(params.codigo) : "");
+    setResultado(null);
+    setErro("");
+    setCarregando(false);
+    if (params.codigo) void validar(params.codigo, controller);
+    return () => { controller.abort(); };
+  }, [params.codigo, tentativa]);
 
   function enviar(event: FormEvent) {
     event.preventDefault();
-    void validar(codigo);
+    const normalized = normalizar(codigo);
+    if (!normalized) return;
+    // URL changes drive the request. Retrying the same code is explicit.
+    if (normalizar(params.codigo ?? "") === normalized) setTentativa((value) => value + 1);
+    else navigate(`/validar/${encodeURIComponent(normalized)}`, { replace: true });
   }
 
   const receitaValida = Boolean(
@@ -148,7 +162,13 @@ export default function ValidarDocumento() {
             <input
               id="codigo-validacao"
               value={codigo}
-              onChange={(event) => setCodigo(event.target.value)}
+              onChange={(event) => {
+                request.current?.abort();
+                setCarregando(false);
+                setResultado(null);
+                setErro("");
+                setCodigo(event.target.value);
+              }}
               placeholder="R123-1A2B3C4D5E6F7A8B…"
               autoCapitalize="characters"
               autoComplete="off"

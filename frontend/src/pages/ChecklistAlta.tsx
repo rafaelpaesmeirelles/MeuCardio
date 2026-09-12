@@ -40,6 +40,8 @@ export default function ChecklistAlta() {
   const [erro, setErro] = useState("");
   const [salvando, setSalvando] = useState(false);
   const idAtual = useRef(id);
+  const operacao = useRef<object | null>(null);
+  idAtual.current = id;
 
   useEffect(() => {
     idAtual.current = id;
@@ -47,6 +49,7 @@ export default function ChecklistAlta() {
     setA(null);
     setErro("");
     setSalvando(false);
+    operacao.current = null;
     api
       .get<Aplicacao>(`/checklists/aplicacoes/${id}`)
       .then((r) => {
@@ -62,23 +65,27 @@ export default function ChecklistAlta() {
   }, [id]);
 
   async function salvar(finalizar = false) {
+    if (operacao.current || !a || a.finalizado_em) return;
+    const token = {};
+    operacao.current = token;
     setSalvando(true);
     setErro("");
     const idSolicitado = id;
     try {
-      await api.patch(`/checklists/aplicacoes/${id}`, {
+      const r = await api.patch<Pick<Aplicacao,"id"|"marcados"|"observacoes"|"finalizado_em"|"faltando_obrigatorios">>(`/checklists/aplicacoes/${id}`, {
         marcados,
         observacoes: obs,
         finalizar,
       });
-      const r = await api.get<Aplicacao>(`/checklists/aplicacoes/${id}`);
-      if (idAtual.current === idSolicitado) setA(r);
+      if (idAtual.current === idSolicitado && operacao.current === token) {
+        setA(atual => atual ? {...atual,...r} : atual); setMarcados(r.marcados || []); setObs(r.observacoes || "");
+      }
     } catch (e: any) {
-      if (idAtual.current === idSolicitado) {
+      if (idAtual.current === idSolicitado && operacao.current === token) {
         setErro(e?.message || "Não foi possível salvar.");
       }
     } finally {
-      if (idAtual.current === idSolicitado) setSalvando(false);
+      if (idAtual.current === idSolicitado && operacao.current === token) { operacao.current = null; setSalvando(false); }
     }
   }
 
@@ -133,7 +140,7 @@ export default function ChecklistAlta() {
               <input
                 type="checkbox"
                 checked={marcadoSet.has(i.id)}
-                disabled={finalizado}
+                disabled={finalizado || salvando}
                 onChange={(e) =>
                   setMarcados((m) =>
                     e.target.checked ? [...m, i.id] : m.filter((x) => x !== i.id)
@@ -160,7 +167,7 @@ export default function ChecklistAlta() {
         className="checklist__obs"
         rows={3}
         value={obs}
-        disabled={finalizado}
+        disabled={finalizado || salvando}
         placeholder="Se algum item obrigatório não se aplica a este paciente, registre aqui o motivo."
         onChange={(e) => setObs(e.target.value)}
       />

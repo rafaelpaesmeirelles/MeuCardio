@@ -220,6 +220,8 @@ def marcar(
     return {
         "id": run.id,
         "finalizado": run.finalizado_em is not None,
+        "finalizado_em": run.finalizado_em,
+        "marcados": run.marcados,
         "observacoes": run.observacoes,
         **pendencias,
     }

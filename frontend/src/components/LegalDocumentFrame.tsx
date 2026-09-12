@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../lib/auth";
-import { useCorviaTheme } from "../lib/corviaTheme";
 import PublicCardiologyFrame, { type PublicFrameFeature } from "./PublicCardiologyFrame";
 
 type LegalDocumentFrameProps = {
@@ -31,11 +30,10 @@ export default function LegalDocumentFrame({
   tone = "cyan",
 }: LegalDocumentFrameProps) {
   const { usuario } = useAuth();
-  const { theme } = useCorviaTheme();
 
   if (usuario) {
     return (
-      <main className="legal-page" id="conteudo-principal">
+      <article className="legal-page">
         <header className="legal-page__header">
           <Link to="/" className="legal-page__brand" aria-label="Voltar ao CorVIA">
             <img src={"/atelier/corvia-logo-atelier.svg"} alt="CorVIA Cardiology Spaces" />
@@ -46,7 +44,7 @@ export default function LegalDocumentFrame({
         </header>
         {children}
         <footer>{footer}</footer>
-      </main>
+      </article>
     );
   }
 

@@ -161,10 +161,13 @@ def _process_webhook_messages(db,payload,adapter):
    db.rollback();results.append({"status":"duplicate"})
   except UploadRejected as exc:
    db.rollback()
-   if exc.status_code==503:raise
-   results.append({"status":"failed","error":type(exc).__name__})
+   if exc.status_code>=500:raise
+   results.append({"status":"rejected_media","error":type(exc).__name__})
+  except HTTPException as exc:
+   db.rollback()
+   results.append({"status":"retryable_failure" if exc.status_code>=500 or exc.status_code==429 else "rejected_command","error":type(exc).__name__})
   except Exception as exc:
-   db.rollback();results.append({"status":"failed","error":type(exc).__name__})
+   db.rollback();results.append({"status":"retryable_failure","error":type(exc).__name__})
  return results
 
 async def _await_webhook_processing(db,payload,adapter):
@@ -198,6 +201,10 @@ async def webhook(request:Request,x_hub_signature_256:str|None=Header(None),db:S
  try:results=await _await_webhook_processing(db,payload,adapter)
  except UploadRejected as exc:raise HTTPException(status_code=exc.status_code,detail=exc.detail) from exc
  public_results=[{"status":x.get("status") or "processed"} for x in results]
+ # Failed, rolled-back messages must remain eligible for Meta's retry. Earlier
+ # messages in the same batch are deduplicated by their persisted provider ID.
+ if any(x.get("status") in {"retryable_failure", "rate_limited", "pairing_rate_limited"} for x in results):
+  raise HTTPException(503,"Não foi possível concluir todas as mensagens. Tente novamente.")
  return {"ok":True,"processed":sum(x.get("status") not in {"duplicate","invalid"} for x in results),"results":public_results}
 @admin_router.post("/retention/purge")
 def purge(db:Session=Depends(get_db),admin:User=Depends(require_admin)):

@@ -232,6 +232,8 @@ _INFUSAO_CONTINUA = Calculator(
     fields=[
         Field("droga", "Fármaco", "select", options=_OPCOES_DROGA),
         Field("peso", "Peso do paciente", "number", "kg", min=1, max=300,
+              required=False,
+              required_when={"droga": [key for key, info in INFUSOES.items() if "kg" in info["unidade_dose"]]},
               help="Só necessário para fármacos dosados por peso — deixe em branco para os demais (nitroglicerina, vasopressina)."),
         Field("dose_alvo", "Dose-alvo", "number",
               help="Na unidade do fármaco escolhido — veja a faixa usual mostrada no resultado."),

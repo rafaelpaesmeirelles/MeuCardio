@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useRequestRevision } from "../lib/useRequestRevision";
 import { Link, useSearchParams } from "react-router-dom";
 import { ApiError, api } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
@@ -12,7 +13,8 @@ type CatalogItem = {
   rotulo_tipo: string;
 };
 type CatalogResponse = { total: number; itens: CatalogItem[]; tipos: string[] };
-type MailStatus = { disponivel: boolean; motivo: string | null; email_address: string | null };
+type MailAccount = { id: string; provider: string; email_address: string; limite_anexo_mb: number };
+type MailStatus = { disponivel: boolean; motivo: string | null; email_address: string | null; contas: MailAccount[] };
 type CertificadoA1Status = {
   conectado: boolean;
   titular_cn?: string;
@@ -81,6 +83,7 @@ export default function ExportarConteudo() {
   const [certificadoA1, setCertificadoA1] = useState<CertificadoA1Status | null>(null);
   const [gerando, setGerando] = useState(false);
   const [mail, setMail] = useState<MailStatus | null>(null);
+  const [contaId, setContaId] = useState("corvia");
   const [para, setPara] = useState("");
   const [cc, setCc] = useState("");
   const [cco, setCco] = useState("");
@@ -89,12 +92,17 @@ export default function ExportarConteudo() {
   const [enviando, setEnviando] = useState(false);
   const [envio, setEnvio] = useState<EnvioResponse | null>(null);
   const prefillFeito = useRef(false);
+  const catalogRequests = useRequestRevision(JSON.stringify([busca, tipo]));
 
   useEffect(() => {
-    api.get<MailStatus>("/exportar/corvia-mail").then(setMail).catch(() => setMail({
+    api.get<MailStatus>("/exportar/corvia-mail").then((status) => {
+      setMail(status);
+      setContaId(status.contas[0]?.id ?? "corvia");
+    }).catch(() => setMail({
       disponivel: false,
       motivo: "Não foi possível confirmar o CorVIA Mail agora.",
       email_address: null,
+      contas: [],
     }));
   }, []);
 
@@ -105,20 +113,22 @@ export default function ExportarConteudo() {
   }, []);
 
   useEffect(() => {
+    const isCurrent = catalogRequests.begin();
+    setCarregando(true);
+    setErro("");
+    setCatalogo(null);
     const timer = window.setTimeout(() => {
-      setCarregando(true);
-      setErro("");
       const query = new URLSearchParams();
       if (busca.trim()) query.set("q", busca.trim());
       if (tipo) query.set("tipo", tipo);
       query.set("limite", "120");
       api.get<CatalogResponse>(`/exportar/catalogo?${query.toString()}`)
-        .then(setCatalogo)
-        .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os conteúdos exportáveis."))
-        .finally(() => setCarregando(false));
+        .then((response) => { if (isCurrent()) setCatalogo(response); })
+        .catch((e) => { if (isCurrent()) setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os conteúdos exportáveis."); })
+        .finally(() => { if (isCurrent()) setCarregando(false); });
     }, 220);
-    return () => window.clearTimeout(timer);
-  }, [busca, tipo]);
+    return () => { window.clearTimeout(timer); catalogRequests.invalidate(); };
+  }, [busca, tipo, catalogRequests]);
 
   useEffect(() => {
     if (prefillFeito.current) return;
@@ -134,6 +144,7 @@ export default function ExportarConteudo() {
   }, [params]);
 
   const chavesSelecionadas = useMemo(() => new Set(selecionados.map(chave)), [selecionados]);
+  const contaSelecionada = mail?.contas.find((conta) => conta.id === contaId);
   const payload = useMemo(() => ({
     itens: selecionados.map((item) => ({ tipo: item.tipo, slug: item.slug })),
     incluir_dados_assinante: incluirDados,
@@ -183,13 +194,14 @@ export default function ExportarConteudo() {
   }
 
   async function enviarEmail() {
-    if (!selecionados.length || !mail?.disponivel || !para.trim()) return;
+    if (!selecionados.length || !mail?.disponivel || !contaSelecionada || !para.trim()) return;
     setEnviando(true);
     setErro("");
     setEnvio(null);
     try {
       const resposta = await api.post<EnvioResponse>("/exportar/conteudo/enviar-email", {
         ...payload,
+        conta_id: contaId,
         para: para.trim(),
         cc: cc.trim() || null,
         cco: cco.trim() || null,
@@ -332,10 +344,15 @@ export default function ExportarConteudo() {
           <div>
             <p>{mail.motivo || "O envio direto não está disponível nesta conta."}</p>
             <Link className="botao botao--secundario" to="/corvia-mail">Ver CorVIA Mail</Link>
+            <Link className="botao botao--secundario" to="/sincronizacao">Contas conectadas</Link>
           </div>
         ) : (
           <>
-            <p className="dado">O arquivo em {FORMATOS[formato].nome}{assinarDigitalmente ? " assinado digitalmente" : ""} será regenerado e enviado como anexo pela sua caixa <strong>{mail.email_address}</strong>, sem exigir download prévio. Se sua assinatura profissional de e-mail estiver ativa, ela será incluída normalmente.</p>
+            <label><strong>Enviar pela conta</strong><select value={contaId} onChange={(e) => { setContaId(e.target.value); setEnvio(null); }} disabled={enviando}>
+              {mail.contas.map((conta) => <option key={conta.id} value={conta.id}>{conta.email_address} · {conta.provider}</option>)}
+            </select></label>
+            <p className="dado">O arquivo em {FORMATOS[formato].nome}{assinarDigitalmente ? " assinado digitalmente" : ""} será regenerado e enviado como anexo pela sua caixa <strong>{contaSelecionada?.email_address}</strong>, sem exigir download prévio. Limite de {contaSelecionada?.limite_anexo_mb} MB por envio direto. Sua assinatura profissional de e-mail será incluída conforme a configuração da conta.</p>
+            <Link to="/sincronizacao">Gerenciar contas conectadas</Link>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10, marginTop: 10, minWidth: 0 }}>
               <label style={{ gridColumn: "1 / -1", minWidth: 0 }}><strong>Para</strong><input type="email" value={para} onChange={(e) => setPara(e.target.value)} placeholder="destinatario@exemplo.com" /></label>
               <label style={{ minWidth: 0 }}><strong>CC (opcional)</strong><input type="email" value={cc} onChange={(e) => setCc(e.target.value)} /></label>
@@ -343,7 +360,7 @@ export default function ExportarConteudo() {
               <label style={{ gridColumn: "1 / -1", minWidth: 0 }}><strong>Assunto (opcional)</strong><input value={assunto} onChange={(e) => setAssunto(e.target.value.slice(0, 240))} placeholder="O CorVIA sugere o título do arquivo" /></label>
               <label style={{ gridColumn: "1 / -1", minWidth: 0 }}><strong>Mensagem</strong><textarea rows={4} value={mensagem} onChange={(e) => setMensagem(e.target.value.slice(0, 5000))} /></label>
             </div>
-            <button className="botao botao--acao" type="button" onClick={enviarEmail} disabled={!selecionados.length || !para.trim() || enviando} style={{ marginTop: 14 }}>
+            <button className="botao botao--acao" type="button" onClick={enviarEmail} disabled={!selecionados.length || !contaSelecionada || !para.trim() || enviando} style={{ marginTop: 14 }}>
               {enviando ? "Gerando e enviando…" : `Gerar ${FORMATOS[formato].nome} e enviar pelo CorVIA Mail`}
             </button>
             {envio?.enviado && (

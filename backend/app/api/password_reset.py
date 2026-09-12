@@ -6,7 +6,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
-from app.core.security import current_user, hash_password, require_admin, verify_password
+from app.core.security import current_user, hash_password, require_admin, require_manage_account, verify_password
 from app.models.password_reset import PasswordResetToken
 from app.models.user import User
 from app.services import account_recovery, emails
@@ -42,7 +42,9 @@ def reenviar_ativacao(dados: SolicitacaoReset, background_tasks: BackgroundTasks
     """Item 2 do spec de e-mails transacionais — padrão anti-enumeração."""
     email = dados.email.strip().lower()
     user = db.query(User).filter(User.email == email).first()
-    if _ativacao_permitida(user):
+    if account_recovery.convite_pendente(db, user):
+        background_tasks.add_task(account_recovery.enviar_confirmacao_convite, user.id)
+    elif _ativacao_permitida(user):
         background_tasks.add_task(emails.enviar_reenvio_ativacao, user.id)
     return {"nota": "Se houver uma conta elegível com este e-mail, enviaremos um novo link de acesso."}
 
@@ -109,6 +111,7 @@ def admin_atualizar_email_recuperacao(
     user = db.get(User, user_id)
     if user is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    require_manage_account(_admin, user)
     if user.investidor:
         raise HTTPException(status_code=409, detail="Investidor não possui recuperação pessoal.")
     try:
@@ -175,7 +178,8 @@ def solicitar_acesso_com_recuperacao(
         raise
 
     resultado = _concluir_solicitacao_acesso(user, convidado, background_tasks, db)
-    background_tasks.add_task(account_recovery.enviar_confirmacao_canal_recuperacao, user.id)
+    if not convidado:
+        background_tasks.add_task(account_recovery.enviar_confirmacao_canal_recuperacao, user.id)
     # Convidado pré-autorizado pode sair do cadastro já aprovado. Nesse caso
     # não existe decisão administrativa futura para disparar a boas-vindas.
     if bool(resultado.get("acesso_imediato")):
@@ -245,6 +249,7 @@ def admin_criar_usuario_com_recuperacao(
 class RedefinirSenha(BaseModel):
     token: str
     nova_senha: str
+    recovery_email: str | None = None
 
 
 @router.post("/redefinir-senha")
@@ -252,29 +257,42 @@ def redefinir_senha(dados: RedefinirSenha, background_tasks: BackgroundTasks, db
     """`registro.alvo` decide QUAL senha muda: conta, e-mail ou ativação."""
     if len(dados.nova_senha) < 8:
         raise HTTPException(status_code=422, detail="A senha precisa ter ao menos 8 caracteres.")
-    registro = db.query(PasswordResetToken).filter(PasswordResetToken.token == dados.token).first()
-    if not registro or not registro.valido:
+    # Lock identities first, then user and token: sibling links cannot race,
+    # and invitation recovery updates share the registration lock order.
+    account_recovery.bloquear_identidades_email(db)
+    found = db.query(PasswordResetToken).filter(PasswordResetToken.token == dados.token).first()
+    if found is None:
         raise HTTPException(status_code=400, detail="Link inválido ou expirado. Solicite um novo.")
-
-    user = db.get(User, registro.user_id)
-    if user is None or user.investidor:
+    user = db.query(User).filter(User.id == found.user_id).with_for_update().populate_existing().first()
+    registro = db.query(PasswordResetToken).filter(PasswordResetToken.id == found.id).with_for_update().populate_existing().one()
+    if not registro.valido or user is None or user.investidor:
         raise HTTPException(status_code=400, detail="Link inválido ou expirado. Solicite um novo.")
-    if registro.alvo == "ativacao" and not _ativacao_permitida(user):
+    if registro.alvo == "convite":
+        account_recovery.confirmar_convite(db, user, dados.recovery_email)
+    elif registro.alvo not in {"conta", "ativacao", "email"} or not _ativacao_permitida(user):
         raise HTTPException(status_code=400, detail="Link inválido ou expirado. Solicite um novo.")
 
     if registro.alvo == "email":
         from app.models.email_account import EmailAccount
 
         conta = db.query(EmailAccount).filter(EmailAccount.user_id == registro.user_id).first()
-        if not conta:
+        if not conta or conta.status != "ativa":
             raise HTTPException(status_code=400, detail="Link inválido.")
+        if conta.sessions_valid_after and registro.created_at <= conta.sessions_valid_after:
+            raise HTTPException(status_code=400, detail="Link inválido ou expirado. Solicite um novo.")
         conta.password_hash = hash_password(dados.nova_senha)
     else:
+        if user.sessions_valid_after and registro.created_at <= user.sessions_valid_after:
+            raise HTTPException(status_code=400, detail="Link inválido ou expirado. Solicite um novo.")
         user.password_hash = hash_password(dados.nova_senha)
         if registro.alvo != "ativacao":
             background_tasks.add_task(emails.enviar_senha_alterada, user.id)
 
-    registro.used = True
+    targets = {"email"} if registro.alvo == "email" else {"conta", "ativacao", "convite"}
+    db.query(PasswordResetToken).filter(
+        PasswordResetToken.user_id == user.id, PasswordResetToken.alvo.in_(targets),
+        PasswordResetToken.used.is_(False),
+    ).update({"used": True}, synchronize_session="fetch")
     db.commit()
     return {"nota": "Senha redefinida. Você já pode entrar com a nova senha."}
 
@@ -295,7 +313,7 @@ def listar_resets_pendentes(db: Session = Depends(get_db), admin: User = Depends
     return [
         {
             "email": u.email, "full_name": u.full_name, "alvo": t.alvo,
-            "link": f"/redefinir-senha?token={t.token}" + ("&alvo=email" if t.alvo == "email" else ""),
+            "id": t.id,
             "expira_em": t.expires_at, "solicitado_em": t.created_at,
         }
         for t, u in pendentes

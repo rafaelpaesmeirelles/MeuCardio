@@ -20,7 +20,7 @@ export type HeartTeamCase = {
 };
 
 export type WhatsAppPermissionKey = "read_agenda" | "read_tasks" | "search_science" | "create_reminder" | "create_appointment" | "create_draft" | "external_communication" | "heart_team_draft";
-export type WhatsAppCommandStatus = "pending" | "completed" | "failed" | "blocked_security" | "blocked_pii" | "needs_clarification" | "awaiting_confirmation" | "confirmation_expired" | "undone";
+export type WhatsAppCommandStatus = "pending" | "executing" | "execution_uncertain" | "completed" | "failed" | "blocked_security" | "blocked_pii" | "needs_clarification" | "awaiting_confirmation" | "confirmation_expired" | "undoing" | "undo_uncertain" | "undo_conflict" | "undone";
 export type WhatsAppPendingMessageStatus = "awaiting_transcript_review" | "awaiting_anonymization_confirmation" | "awaiting_media_review" | "transcription_unavailable";
 export type WhatsAppMediaReviewAction = "store_only" | "summarize" | "heart_team";
 export type WhatsAppPendingMessage = { id: number; type: "audio" | "image" | "document" | string; status: WhatsAppPendingMessageStatus; pii_kinds?: string[]; created_at?: string; review_text?: string | null; mime_type?: string | null; filename?: string | null; pii_use_allowed?: boolean };

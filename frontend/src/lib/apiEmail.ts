@@ -139,28 +139,28 @@ export const apiEmail = {
     request<T>(p, { method: "PUT", body: body ? JSON.stringify(body) : undefined }),
   delete: <T>(p: string) => request<T>(p, { method: "DELETE" }),
 
-  uploadAnexo: (arquivo: File) => {
+  uploadAnexo: (arquivo: File, caixa = "/email") => {
     const form = new FormData();
     form.append("arquivo", arquivo);
-    return request<{ file_id: string; nome: string }>("/email/mensagens/anexos", {
+    return request<{ file_id: string; nome: string }>(`${caixa}/mensagens/anexos`, {
       method: "POST", body: form,
     });
   },
 
-  verificarAssinaturaAnexo: (arquivo: File) => {
+  verificarAssinaturaAnexo: (arquivo: File, caixa = "/email") => {
     const form = new FormData();
     form.append("arquivo", arquivo);
     return request<{
       assinado: boolean; intacta?: boolean; titular?: string; emissor?: string;
       assinado_em?: string | null; texto_comprovacao: string | null;
-    }>("/email/mensagens/anexos/verificar-assinatura", { method: "POST", body: form });
+    }>(`${caixa}/mensagens/anexos/verificar-assinatura`, { method: "POST", body: form });
   },
 
-  async baixarAnexo(messageId: string, attachmentId: string, nome: string) {
+  async baixarAnexo(messageId: string, attachmentId: string, nome: string, caixa = "/email") {
     const headers = new Headers();
     const token = tokenEmail.get();
     if (token) headers.set("Authorization", `Bearer ${token}`);
-    const caminho = `/email/mensagens/${encodeURIComponent(messageId)}/anexos/${encodeURIComponent(attachmentId)}?nome=${encodeURIComponent(nome)}`;
+    const caminho = `${caixa}/mensagens/${encodeURIComponent(messageId)}/anexos/${encodeURIComponent(attachmentId)}?nome=${encodeURIComponent(nome)}`;
     const res = await fetch(`${BASE}${caminho}`, { headers, cache: "no-store" });
     if (res.status === 401) {
       tokenEmail.clear();

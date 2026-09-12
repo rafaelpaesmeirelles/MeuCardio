@@ -131,6 +131,7 @@ def _regra_para(method: str, path: str) -> RateLimitRule | None:
         return _LOGIN_RULE
     if method == "POST" and path in {
         "/api/auth/esqueci-senha",
+        "/api/email/esqueci-senha",
         "/api/auth/reenviar-ativacao",
         "/api/auth/redefinir-senha",
         "/api/auth/solicitar-acesso",

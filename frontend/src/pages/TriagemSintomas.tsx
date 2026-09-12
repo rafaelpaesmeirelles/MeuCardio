@@ -1,6 +1,7 @@
 import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
 import { useEffect, useMemo, useState } from "react";
+import { useRequestRevision } from "../lib/useRequestRevision";
 import { useSearchParams } from "react-router-dom";
 import { Carregando, Erro } from "../components/Estado";
 import GrafoRelacionados from "../components/GrafoRelacionados";
@@ -94,6 +95,7 @@ export default function TriagemSintomas() {
   const [error, setError] = useState("");
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [assessing, setAssessing] = useState(false);
+  const assessmentRequests = useRequestRevision(JSON.stringify([selectedSlug, context, answers]));
 
   useEffect(() => {
     let active = true;
@@ -109,8 +111,14 @@ export default function TriagemSintomas() {
   }, [params, selectedSlug]);
 
   useEffect(() => {
+    assessmentRequests.invalidate();
+    setAssessing(false);
+    setDetail(null);
+    setAnswers({});
+    setAssessment(null);
+    setError("");
     if (!selectedSlug) {
-      setDetail(null);
+      setLoadingDetail(false);
       return;
     }
     setLoadingDetail(true);
@@ -123,7 +131,7 @@ export default function TriagemSintomas() {
       .catch((cause) => { if (active) setError(cause.message); })
       .finally(() => { if (active) setLoadingDetail(false); });
     return () => { active = false; };
-  }, [selectedSlug]);
+  }, [selectedSlug, assessmentRequests]);
 
   const filtered = useMemo(() => {
     const term = query.trim().toLowerCase();
@@ -141,13 +149,30 @@ export default function TriagemSintomas() {
   }, [detail]);
 
   function selecionarSintoma(slug: string) {
+    assessmentRequests.invalidate();
     setSelectedSlug(slug);
     setParams({ slug });
   }
 
   function updateAnswer(question: Question, value: unknown) {
+    assessmentRequests.invalidate();
+    setAssessing(false);
+    setError("");
     setAssessment(null);
-    setAnswers((previous) => ({ ...previous, [question.id]: value }));
+    setAnswers((previous) => {
+      const next = { ...previous };
+      if (value === undefined) delete next[question.id];
+      else next[question.id] = value;
+      return next;
+    });
+  }
+
+  function changeContext(next: "ambulatorio" | "emergencia") {
+    assessmentRequests.invalidate();
+    setAssessing(false);
+    setError("");
+    setAssessment(null);
+    setContext(next);
   }
 
   function toggleMultiselect(question: Question, value: string) {
@@ -156,15 +181,18 @@ export default function TriagemSintomas() {
   }
 
   async function assess() {
-    if (!detail) return;
+    if (!detail || detail.slug !== selectedSlug) return;
+    const isCurrent = assessmentRequests.begin();
     setAssessing(true);
+    setAssessment(null);
     setError("");
     try {
-      setAssessment(await api.post<Assessment>(`/specialty-guides/triage/${detail.slug}/assess`, { context, answers }));
+      const response = await api.post<Assessment>(`/specialty-guides/triage/${detail.slug}/assess`, { context, answers });
+      if (isCurrent()) setAssessment(response);
     } catch (cause: any) {
-      setError(cause.message);
+      if (isCurrent()) setError(cause.message);
     } finally {
-      setAssessing(false);
+      if (isCurrent()) setAssessing(false);
     }
   }
 
@@ -182,8 +210,8 @@ export default function TriagemSintomas() {
       <section className="cartao" style={{ marginTop: "1rem" }}>
         <h2>1. Ambiente de atendimento</h2>
         <div className="painel__temas">
-          <button type="button" className="painel__tema" onClick={() => { setContext("ambulatorio"); setAssessment(null); }} style={context === "ambulatorio" ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>Consultório / ambulatório</button>
-          <button type="button" className="painel__tema" onClick={() => { setContext("emergencia"); setAssessment(null); }} style={context === "emergencia" ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>Emergência</button>
+          <button type="button" className="painel__tema" onClick={() => changeContext("ambulatorio")} style={context === "ambulatorio" ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>Consultório / ambulatório</button>
+          <button type="button" className="painel__tema" onClick={() => changeContext("emergencia")} style={context === "emergencia" ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>Emergência</button>
         </div>
       </section>
 
@@ -220,7 +248,7 @@ export default function TriagemSintomas() {
                     <strong>{question.label}{question.required ? " *" : ""}</strong>
                     {question.help && <span style={{ display: "block", fontSize: "0.8rem", color: "var(--texto-secundario)" }}>{question.help}</span>}
                     {question.type === "boolean" && (
-                      <select value={answers[question.id] === undefined ? "" : String(answers[question.id])} onChange={(event) => updateAnswer(question, event.target.value === "true")} style={{ marginTop: "0.35rem" }}>
+                      <select value={answers[question.id] === undefined ? "" : String(answers[question.id])} onChange={(event) => updateAnswer(question, event.target.value === "" ? undefined : event.target.value === "true")} style={{ marginTop: "0.35rem" }}>
                         <option value="">Selecione…</option><option value="true">Sim</option><option value="false">Não</option>
                       </select>
                     )}

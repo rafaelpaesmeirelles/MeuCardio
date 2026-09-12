@@ -2,6 +2,7 @@ import CabecalhoDocumento, { type OperadoraDocumento } from "./CabecalhoDocument
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { api, PaginaDe } from "../lib/api";
+import { incompletePrescription } from "../lib/clinicalInput";
 import { useAuth } from "../lib/auth";
 import { Link } from "react-router-dom";
 
@@ -45,10 +46,23 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
   const [preparandoImpressao, setPreparandoImpressao] = useState(false);
   const consultaImpressao = useRef(0);
   const [escolhendo, setEscolhendo] = useState<{ nome: string; resp: RespostaApresentacoes } | null>(null);
+  const [erro, setErro] = useState("");
+  const [erroHistorico, setErroHistorico] = useState("");
+  const contexto = useRef(0), consultaBusca = useRef(0), consultaHistorico = useRef(0), consultaApresentacao = useRef(0);
+  const salvandoRef = useRef(false);
 
   const { usuario } = useAuth();
-  const recarregar = () => api.get<Prescricao[]>(`/prescriptions/patient/${patientId}`).then(setHistorico);
-  useEffect(() => { recarregar(); }, [patientId]);
+  async function recarregar() {
+    const token = contexto.current, consulta = ++consultaHistorico.current;
+    setErroHistorico("");
+    try { const rows = await api.get<Prescricao[]>(`/prescriptions/patient/${patientId}`); if(token===contexto.current&&consulta===consultaHistorico.current)setHistorico(rows); }
+    catch(e){if(token===contexto.current&&consulta===consultaHistorico.current)setErroHistorico(e instanceof Error?e.message:"Não foi possível carregar as prescrições.");}
+  }
+  useEffect(() => {
+    contexto.current++; setHistorico(null); setItens([]); setNotas(""); setBusca(""); setSugestoes([]); setEscolhendo(null); setErro("");setSalvando(false);salvandoRef.current=false;
+    void recarregar();
+    return()=>{contexto.current++;consultaBusca.current++;consultaApresentacao.current++;};
+  }, [patientId]);
   useEffect(() => {
     consultaImpressao.current += 1;
     setImpressao(null);
@@ -58,23 +72,33 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
   }, [patientId]);
 
   useEffect(() => {
+    const consulta = ++consultaBusca.current;
+    let ativo = true;
     if (busca.trim().length < 2) { setSugestoes([]); return; }
     const atraso = setTimeout(() => {
-      api.get<PaginaDe<SugestaoFarmaco>>(`/drugs?q=${encodeURIComponent(busca)}`).then((r) => setSugestoes(r.items.slice(0, 6)));
+      api.get<PaginaDe<SugestaoFarmaco>>(`/drugs?q=${encodeURIComponent(busca)}`)
+        .then((r) => {if(ativo&&consulta===consultaBusca.current)setSugestoes(r.items.slice(0, 6));})
+        .catch(e=>{if(ativo&&consulta===consultaBusca.current){setSugestoes([]);setErro(e instanceof Error?e.message:"Não foi possível buscar medicamentos.");}});
     }, 250);
-    return () => clearTimeout(atraso);
+    return () => {ativo=false;clearTimeout(atraso);};
   }, [busca]);
 
   async function escolherMedicamento(slug: string, nome: string) {
+    if(salvandoRef.current)return;
+    const consulta=++consultaApresentacao.current,token=contexto.current;
     setBusca("");
     setSugestoes([]);
     const uf = usuario?.council_state;
+    setErro("");
+    try {
     const resp = await api.get<RespostaApresentacoes>(`/drugs/${slug}/apresentacoes${uf ? `?uf=${uf}` : ""}`);
+    if(token!==contexto.current||consulta!==consultaApresentacao.current||salvandoRef.current)return;
     if (resp.apresentacoes.length > 0) {
       setEscolhendo({ nome, resp });
     } else {
       adicionarItem(nome);
     }
+    } catch(e){if(token===contexto.current&&consulta===consultaApresentacao.current)setErro(e instanceof Error?e.message:"Não foi possível carregar as apresentações. Tente selecionar o medicamento novamente.");}
   }
 
   function adicionarComApresentacao(nome: string, ap: ApresentacaoCmed, resp: RespostaApresentacoes) {
@@ -106,15 +130,21 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
   }
 
   async function salvar() {
-    if (itens.length === 0) return;
+    if (salvandoRef.current) return;
+    if (incompletePrescription(itens)) { setErro("Preencha medicamento, apresentação e posologia de todos os itens antes de salvar."); return; }
+    salvandoRef.current=true;
+    const token=contexto.current;
     setSalvando(true);
+    setErro("");
     try {
       await api.post(`/prescriptions`, { patient_id: patientId, items: itens, notes: notas });
+      if(token!==contexto.current)return;
       setItens([]);
       setNotas("");
-      recarregar();
+      await recarregar();
+    } catch(e){if(token===contexto.current)setErro(e instanceof Error?e.message:"Não foi possível salvar a prescrição. Seus itens foram preservados.");
     } finally {
-      setSalvando(false);
+      if(token===contexto.current){salvandoRef.current=false;setSalvando(false);}
     }
   }
 
@@ -126,6 +156,7 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
     try {
       const dados = await api.get<DadosImpressaoPrescricao>(`/prescriptions/${id}/imprimir`);
       if (consulta !== consultaImpressao.current) return;
+      if (incompletePrescription(dados.prescricao.items)) throw new Error("Prescrição incompleta. Revise medicamento, apresentação e posologia antes de imprimir.");
       const campos = ["razao_social", "cnpj", "logradouro", "numero", "bairro", "cidade", "uf", "cep"] as const;
       if (!dados.operadora || campos.some((campo) => !dados.operadora?.[campo]?.trim())) {
         throw new Error("A identificação institucional está incompleta. A impressão não foi aberta; tente novamente após atualizar a página.");
@@ -152,9 +183,12 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
       <Suspense fallback={null}><PrescricaoLivreEspecial /></Suspense>
       <div className="cartao" style={{ background: "var(--fundo)" }}>
         <p className="eyebrow patient-round-heading" style={{ margin: 0 }}>Prescrição</p>
+        {erro&&<p role="alert">{erro}</p>}
+        <fieldset disabled={salvando} style={{border:0,padding:0,margin:0,minWidth:0}} aria-label="Itens da prescrição hospitalar">
 
         <div style={{ position: "relative", marginTop: "0.5rem" }}>
           <input
+            aria-label="Buscar medicamento para prescrição hospitalar"
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
             placeholder="Buscar medicamento pra adicionar…"
@@ -162,10 +196,10 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
           {sugestoes.length > 0 && (
             <div className="cartao" style={{ position: "absolute", zIndex: 5, width: "100%", padding: "0.3rem" }}>
               {sugestoes.map((s) => (
-                <div key={s.slug} onClick={() => escolherMedicamento(s.slug, s.generic_name)}
-                     style={{ padding: "0.4rem", cursor: "pointer", fontSize: "0.88rem" }}>
+                <button type="button" key={s.slug} onClick={() => escolherMedicamento(s.slug, s.generic_name)}
+                     style={{ display:"block",width:"100%",textAlign:"left",border:0,background:"transparent",padding: "0.4rem", cursor: "pointer", fontSize: "0.88rem" }}>
                   {s.generic_name}
-                </div>
+                </button>
               ))}
             </div>
           )}
@@ -212,13 +246,13 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
               <strong style={{ fontSize: "0.9rem" }}>{item.drug_name}</strong>
               <button className="botao botao--secundario" style={{ padding: "0.1rem 0.4rem" }} onClick={() => removerItem(i)}>✕</button>
             </div>
-            <input placeholder="Apresentação (ex.: comp. 40mg)" value={item.presentation}
+            <input aria-label={`Apresentação do item ${i+1}`} required placeholder="Apresentação (ex.: comp. 40mg)" value={item.presentation}
                    onChange={(e) => atualizarItem(i, "presentation", e.target.value)}
                    style={{ marginTop: "0.3rem" }} />
-            <input placeholder="Posologia (ex.: 1 comprimido, 1x ao dia)" value={item.posology}
+            <input aria-label={`Posologia do item ${i+1}`} required placeholder="Posologia (ex.: 1 comprimido, 1x ao dia)" value={item.posology}
                    onChange={(e) => atualizarItem(i, "posology", e.target.value)}
                    style={{ marginTop: "0.3rem" }} />
-            <input placeholder="Orientação (opcional)" value={item.orientation}
+            <input aria-label={`Orientação do item ${i+1}`} placeholder="Orientação (opcional)" value={item.orientation}
                    onChange={(e) => atualizarItem(i, "orientation", e.target.value)}
                    style={{ marginTop: "0.3rem" }} />
           </div>
@@ -226,7 +260,7 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
 
         {itens.length > 0 && (
           <>
-            <textarea placeholder="Observações gerais (opcional)" rows={2} value={notas}
+            <textarea aria-label="Observações gerais da prescrição" placeholder="Observações gerais (opcional)" rows={2} value={notas}
                       onChange={(e) => setNotas(e.target.value)} style={{ marginTop: "0.6rem" }} />
             <button className="botao" style={{ marginTop: "0.5rem" }} onClick={salvar} disabled={salvando}>
               {salvando ? "Salvando…" : "Salvar prescrição"}
@@ -234,6 +268,8 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
           </>
         )}
 
+        </fieldset>
+        {erroHistorico&&<div role="alert"><p>{erroHistorico}</p><button className="botao botao--secundario" onClick={()=>void recarregar()}>Recarregar prescrições</button></div>}
         {historico && historico.length > 0 && (
           <div style={{ marginTop: "0.8rem" }}>
             <p className="eyebrow">Histórico</p>

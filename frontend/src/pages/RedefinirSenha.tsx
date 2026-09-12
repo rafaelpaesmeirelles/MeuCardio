@@ -17,6 +17,8 @@ export default function RedefinirSenha() {
   const navigate = useNavigate();
   const token = params.get("token") ?? "";
   const alvo = params.get("alvo") === "email" ? "email" : "conta";
+  const convite = params.get("alvo") === "convite";
+  const [recuperacao, setRecuperacao] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmacao, setConfirmacao] = useState("");
   const [erro, setErro] = useState("");
@@ -32,7 +34,7 @@ export default function RedefinirSenha() {
   async function enviar() {
     setErro(""); setEnviando(true);
     try {
-      await api.post("/auth/redefinir-senha", { token, nova_senha: senha });
+      await api.post("/auth/redefinir-senha", { token, nova_senha: senha, ...(convite ? { recovery_email: recuperacao } : {}) });
       setFeito(true);
       setTimeout(() => navigate(alvo === "email" ? "/corvia-mail" : "/entrar"), 2500);
     } catch (e) { setErro(e instanceof ApiError ? e.message : "Não foi possível redefinir a senha."); }
@@ -45,6 +47,7 @@ export default function RedefinirSenha() {
     <div className="prehome-confirmation" role="status"><div className="prehome-confirmation__icon"><Icone nome="check" /></div><h2>Senha atualizada</h2><p>Pronto. Você será levado para {alvo === "email" ? "o CorVIA Mail" : "o login do Cardiology Spaces"}.</p></div>
   ) : (
     <form className="login-formulario" onSubmit={(e) => { e.preventDefault(); void enviar(); }}>
+      {convite && <div className="login-campo"><label htmlFor="recuperacao">Seu e-mail secundário de recuperação</label><input id="recuperacao" type="email" required autoComplete="email" value={recuperacao} onChange={(e) => setRecuperacao(e.target.value)} /><p className="login-formulario__secao-nota">Escolha um endereço seu, diferente do e-mail convidado. Ele substituirá o canal informado antes da confirmação.</p></div>}
       <div className="login-campo"><label htmlFor="senha">Nova senha</label><CampoSenha id="senha" autoComplete="new-password" value={senha} onChange={(e) => setSenha(e.target.value)} autoFocus /><div className="prehome-password-meter" data-level={nivelForca} aria-label={`Força da senha: ${rotuloForca}`}><i /><i /><i /><i /><span>{senha ? rotuloForca : ""}</span></div></div>
       <div className="login-campo"><label htmlFor="confirmacao">Confirmar nova senha</label><CampoSenha id="confirmacao" autoComplete="new-password" value={confirmacao} onChange={(e) => setConfirmacao(e.target.value)} />{confirmacao.length > 0 && !senhasBatem && <p className="login-formulario__secao-nota" style={{ color: "#ff9bad" }}>As senhas não coincidem.</p>}</div>
       <div><p className="prehome-card__eyebrow" style={{ marginBottom: 9 }}>Sua senha</p><ul className="prehome-password-rules"><li data-ok={regras.tamanho}><Icone nome="check" /> Mínimo de 8 caracteres</li><li data-ok={regras.maiuscula}><Icone nome="check" /> Letra maiúscula — recomendado</li><li data-ok={regras.minuscula}><Icone nome="check" /> Letra minúscula — recomendado</li><li data-ok={regras.numero}><Icone nome="check" /> Número — recomendado</li><li data-ok={regras.especial}><Icone nome="check" /> Caractere especial — recomendado</li></ul></div>
