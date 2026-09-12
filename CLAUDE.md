@@ -8,14 +8,19 @@
 > head` e carreguei o **corpus inteiro de produção** num banco isolado (`meucardio_corpus`:
 > 3.364 documentos, 3.363 evidências, 2.061 estudos, 929 casos, 563 trilhas, 479 checklists, 454
 > materiais, 423 exames, 326 doenças, 281 imagens, 206 fármacos, 77 protocolos, 12.663 entidades e
-> 29.918 relações no grafo). Todos os números abaixo saíram de consulta a esse banco, não de leitura
-> de código. **Banco separado de propósito**: a primeira carga rodou junto com a suíte e morreu em
-> deadlock contra o `TRUNCATE` dos testes — é a mesma contenção já registrada neste arquivo.
+> 29.918 relações no grafo). Os números da execução original abaixo foram registrados pelo autor
+> como resultados de consultas a esse banco. **Banco separado de propósito**: a primeira carga
+> rodou junto com a suíte e morreu em deadlock contra o `TRUNCATE` dos testes — é a mesma
+> contenção já registrada neste arquivo.
 >
-> **Diagnóstico 1 — a função já estava clinicamente saudável.** Amostra de 250 itens publicados
-> (25 por frente), reproduzindo exatamente a chamada que `TudoSobreEsteTema.tsx` faz:
-> **249 devolvem relacionados; 1 órfão (0,4%)**. Não havia problema de cobertura a corrigir nas
-> frentes de conteúdo.
+> **Diagnóstico 1 — cobertura funcional na amostra.** O commit original registrou uma amostra de
+> 250 itens publicados (25 por frente), reproduzindo a chamada de `TudoSobreEsteTema.tsx`:
+> **249/250 devolveram relacionados; 1 órfão (0,4%)**. No relatório final informado ao usuário,
+> o autor comunicou **399/400 itens com relacionados**. Este segundo resultado é um relato do
+> autor; esta revisão não o reproduziu de forma independente nem localizou o artefato dessa execução.
+> Essas contagens medem a presença de relacionados na amostra, sem demonstrar cobertura integral
+> do acervo ou pertinência clínica dos vínculos. Encontrar ao menos um relacionado não valida a
+> correção clínica de cada relação nem a ausência de relações indevidas.
 >
 > **Diagnóstico 2 — o custo por requisição era o problema real.** Abrir UM documento de "Terapia
 > intensiva" disparava **82 consultas SQL e ~205 ms** só para desenhar o painel lateral. Causa

@@ -27,7 +27,7 @@ from app.core.db import SessionLocal, engine
 from app.models.clinical_case import ClinicalCase
 from app.models.content import Document
 from app.models.drug import Drug
-from app.services.connected_content import buscar_relacionados_contextuais
+from app.services.connected_content import _contextual_drugs, buscar_relacionados_contextuais
 from app.services.related_content import buscar_relacionados
 from app.services.topic_relevance import (
     SUPPORTED_DRUG_TOPICS,
@@ -163,14 +163,13 @@ def test_tema_canonico_ocupa_as_vagas_antes_do_rotulo_historico(db):
 
 
 def test_tema_sem_farmaco_possivel_nao_varre_o_catalogo(db):
-    """Só Farmacologia e tópicos com indicação declarada admitem fármaco."""
+    """Tema não suportado não consulta o banco; temas suportados ainda consultam."""
     _limpar(db)
     db.add(Drug(
         slug="tct-farmaco", generic_name="Fármaco de teste",
         drug_class="classe", indications=["insuficiencia cardiaca"],
         review_status="revisado", published=True,
     ))
-    db.add(_documento("tct-sem-farmaco", TEMA_SEM_ALIAS))
     db.commit()
 
     assert TEMA_SEM_ALIAS not in SUPPORTED_DRUG_TOPICS
@@ -178,27 +177,27 @@ def test_tema_sem_farmaco_possivel_nao_varre_o_catalogo(db):
     sessao = SessionLocal()
     try:
         with _ContadorDeConsultas() as contador:
-            resposta = buscar_relacionados_contextuais(
-                sessao, TEMA_SEM_ALIAS,
-                excluir_tipo="documento", excluir_slug="tct-sem-farmaco",
-                assunto="tct-sem-farmaco",
+            medicamentos = _contextual_drugs(
+                sessao, TEMA_SEM_ALIAS, None, None,
             )
-        consultas_do_tema = contador.total
-        with _ContadorDeConsultas() as contador_farmacologia:
-            buscar_relacionados_contextuais(
-                sessao, "Farmacologia",
-                excluir_tipo="documento", excluir_slug="tct-sem-farmaco",
-                assunto="tct-sem-farmaco",
-            )
+        assert medicamentos == []
+        # Comparar apenas com Farmacologia não detecta a regressão: o serviço
+        # base já consulta drugs uma vez a mais nesse tema. O contrato deste
+        # atalho é absoluto: nenhum SELECT antes de retornar a lista vazia.
+        assert contador.total == 0, (
+            "o catálogo de medicamentos foi consultado num tema que não "
+            "pode conter nenhum fármaco"
+        )
+
+        # Controle positivo: o contador está ativo e a otimização não pode
+        # suprimir a indicação válida, inclusive sob seu rótulo histórico.
+        for tema in ("Farmacologia", "Insuficiência cardíaca", "insuficiencia-cardiaca"):
+            with _ContadorDeConsultas() as contador_suportado:
+                relacionados = _contextual_drugs(sessao, tema, None, None)
+            assert contador_suportado.total == 1
+            assert [item["slug"] for item in relacionados] == ["tct-farmaco"]
     finally:
         sessao.close()
-
-    medicamentos = next(g for g in resposta["grupos"] if g["tipo"] == "medicamento")
-    assert medicamentos["itens"] == []
-    assert consultas_do_tema < contador_farmacologia.total, (
-        "o catálogo de medicamentos continua sendo varrido num tema que não "
-        "pode conter nenhum fármaco"
-    )
 
 
 def test_nenhuma_rota_gerada_leva_a_pagina_inexistente(db):
