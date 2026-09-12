@@ -15,7 +15,11 @@ def test_mail_navigation_has_one_user_facing_entry():
 def test_mail_bulk_delete_is_real():
     src = text("frontend/src/pages/CaixaDeEmailProfessional.tsx")
     assert "async function excluirSelecionadas" in src
-    assert "Promise.all(ids.map" in src
+    bulk_delete = src.split("async function excluirSelecionadas()", 1)[1].split("function novaMensagem", 1)[0]
+    assert "Promise.allSettled(ids.map(id => apiEmail.delete(" in bulk_delete
+    assert 'results[i].status === "fulfilled"' in bulk_delete
+    assert "setSelecionadas(new Set(ids.filter(id => !removed.has(id))))" in bulk_delete
+    assert "if (seq !== contextoSeq.current) return;" in bulk_delete
     assert "if (ids.length === 1)" not in src
 
 def test_connected_accounts_are_automatic_and_removable():

@@ -5,6 +5,7 @@ verifica ordem e rollback, não certifica locks PostgreSQL (cobertos na CI).
 """
 import ast
 import copy
+import secrets
 from datetime import date, datetime, timezone
 from pathlib import Path
 import sys
@@ -155,13 +156,15 @@ class LoginIdentityTests(unittest.TestCase):
             cpf_valido=lambda _: True, limpar_cpf=lambda value: value,
             _tipo_acesso=lambda _: "normal", _resumo=lambda user, *_: vars(user),
             SolicitacaoAcesso=lambda **values: SimpleNamespace(**values),
+            secrets=secrets, settings=SimpleNamespace(admin_email="owner@example.invalid"),
         )
+        load("core/security.py", {"is_owner_admin", "require_manage_account"}, self.env)
         load("services/account_recovery.py", {
             "normalizar_email", "validar_email_basico", "bloquear_identidades_email",
             "email_ja_em_uso", "definir_email_recuperacao", "obter_email_recuperacao",
         }, self.env)
         self.recovery = SimpleNamespace(**{key: value for key, value in self.env.items() if callable(value)})
-        for name in ("enviar_confirmacao_canal_recuperacao", "enviar_acesso_aprovado"):
+        for name in ("enviar_confirmacao_canal_recuperacao", "enviar_acesso_aprovado", "enviar_confirmacao_convite"):
             setattr(self.recovery, name, name)
         self.env["account_recovery"] = self.recovery
         self.env["emails"] = SimpleNamespace(enviar_troca_email="changed", enviar_solicitacao_recebida="received")
@@ -221,7 +224,7 @@ class LoginIdentityTests(unittest.TestCase):
                     elif path == "self":
                         self.env["trocar_email"](SimpleNamespace(senha_atual="correct", novo_email="occupied@example.invalid"), self.background, db, target)
                     elif path == "admin":
-                        self.env["atualizar_usuario"](2, SimpleNamespace(email="occupied@example.invalid"), db, SimpleNamespace(id=3))
+                        self.env["atualizar_usuario"](2, SimpleNamespace(email="occupied@example.invalid"), db, SimpleNamespace(id=3, role="admin"))
                     elif path == "bootstrap":
                         self.env["create_admin_if_absent"](db, email="occupied@example.invalid", password="demo")
                     else:
@@ -286,7 +289,7 @@ class LoginIdentityTests(unittest.TestCase):
         db = Transaction(user, channel)
         data = self.payload(email=user.email, full_name="Nome fictício atualizado")
         data.role, data.is_active, data.tipo_acesso, data.rqe = "medico", True, "normal", None
-        result = self.env["atualizar_usuario"](1, data, db, SimpleNamespace(id=2))
+        result = self.env["atualizar_usuario"](1, data, db, SimpleNamespace(id=2, role="admin"))
         self.assertEqual(result["full_name"], "Nome fictício atualizado")
         self.assertEqual(user.email, "self@example.invalid")
         self.assertEqual(channel.email, "channel@example.invalid")
@@ -348,15 +351,17 @@ class LoginIdentityTests(unittest.TestCase):
                 self.assertEqual(len(users), 1)
                 user = users[0]
                 self.assertEqual((user.status, user.is_active, user.convidado),
-                                 ("aprovado", True, True) if guest else ("pendente", False, False))
+                                 ("pendente", False, False))
                 self.assertEqual(db.events.count("commit"), 1)
                 self.assertEqual(db.get(Recovery, user.id).email, "recovery@example.invalid")
-                self.assertEqual(bool(result.get("acesso_imediato")), guest)
+                self.assertFalse(result.get("acesso_imediato"))
                 self.assertEqual(len(self.notifications), 0 if guest else 1)
-                self.assertEqual(len(self.tasks), 2)
+                self.assertEqual(len(self.tasks), 1 if guest else 2)
                 if guest:
-                    self.assertEqual(pre.usado_por_user_id, user.id)
-                    self.assertTrue(any(isinstance(row, Audit) for row in db.rows))
+                    self.assertEqual(self.tasks, [("enviar_confirmacao_convite", user.id)])
+                    self.assertIsNone(pre.usado_em)
+                    self.assertIsNone(pre.usado_por_user_id)
+                    self.assertFalse(any(isinstance(row, Audit) for row in db.rows))
 
 
 if __name__ == "__main__":

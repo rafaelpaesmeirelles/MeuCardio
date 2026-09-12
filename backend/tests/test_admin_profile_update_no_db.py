@@ -4,6 +4,7 @@ Run directly: python -B backend/tests/test_admin_profile_update_no_db.py
 The fake unit of work cannot query a database or execute background email work.
 """
 import ast
+import secrets
 from datetime import date
 from pathlib import Path
 from types import SimpleNamespace
@@ -39,7 +40,9 @@ def real_handlers():
     ns = {"BaseModel": BaseModel, "Field": Field, "field_validator": field_validator,
           "model_validator": model_validator, "date": date, "HTTPException": HttpFailure,
           "Depends": lambda dependency: None, "get_db": object(), "require_admin": object(),
-          "current_user": object(), "User": object, "re": __import__("re")}
+          "current_user": object(), "User": object, "re": __import__("re"),
+          "secrets": secrets, "settings": SimpleNamespace(admin_email="owner@example.invalid")}
+    load_nodes(APP / "core/security.py", {"is_owner_admin", "require_manage_account"}, ns)
     ns["account_recovery"] = SimpleNamespace(
         bloquear_identidades_email=lambda db: None,
         email_ja_em_uso=lambda db, email, *, ignorar_user_id=None: False,
@@ -127,7 +130,7 @@ class AdminProfileUpdateTest(unittest.TestCase):
                         role="medico", is_active=False, tipo_acesso="investidor")
                 with self.assertRaises(HttpFailure) as raised:
                     self.real["atualizar_usuario"](user.id, data, db, SimpleNamespace(id=actor_id, role="admin"))
-                self.assertEqual(raised.exception.status_code, 409)
+                self.assertEqual(raised.exception.status_code, 403)
                 self.assertEqual(vars(user), before)
                 self.assertEqual(db.commits, 0)
 

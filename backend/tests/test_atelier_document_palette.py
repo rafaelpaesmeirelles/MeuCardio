@@ -18,6 +18,7 @@ from docx import Document as WordDocument
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
+from docx.opc.constants import RELATIONSHIP_TYPE as RT
 from docx.shared import Inches as DocxInches, Pt as DocxPt, RGBColor as DocxRGBColor
 from pptx import Presentation
 from pptx.dml.color import RGBColor
@@ -25,6 +26,7 @@ from pptx.util import Inches, Pt
 
 from app.services.pdf import marca
 from app.services.pdf.layout import Apresentacao, Documento
+from app.services.export_links import MARKDOWN_LINK, absolute_link, link_runs
 
 ROOT = Path(__file__).resolve().parents[2]
 SERVICES = ROOT / "backend/app/services"
@@ -58,6 +60,7 @@ def _render_namespace(filename, functions, extra=None):
         "DocxInches": DocxInches, "DocxPt": DocxPt,
         "WD_ALIGN_PARAGRAPH": WD_ALIGN_PARAGRAPH, "OxmlElement": OxmlElement, "qn": qn,
         "datetime": datetime, "timezone": timezone, "BytesIO": BytesIO,
+        "link_runs": link_runs, "RT": RT,
     }
     namespace.update(extra or {})
     exec(compile(ast.fix_missing_locations(ast.Module(body=nodes, type_ignores=[])), str(SERVICES / filename), "exec"), namespace)
@@ -158,10 +161,10 @@ def test_word_generator_serializes_paper_copper_border_and_dark_text():
     selected = [node for node in content_tree.body if (
         isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == "ROTULOS_TIPO" for target in node.targets)
     ) or (isinstance(node, ast.FunctionDef) and node.name == "_sem_markdown")]
-    content = {"re": re}
+    content = {"re": re, "MARKDOWN_LINK": MARKDOWN_LINK, "absolute_link": absolute_link}
     exec(compile(ast.Module(body=selected, type_ignores=[]), "isolated_content_formatting", "exec"), content)
     render = _render_namespace("exportacao_office.py", (
-        "_titulo_exportacao", "_identificacao", "_cabecalho_docx", "_definir_borda_inferior", "gerar_docx",
+        "_titulo_exportacao", "_identificacao", "_cabecalho_docx", "_definir_borda_inferior", "_runs_docx", "gerar_docx",
     ), content)
     section = SimpleNamespace(titulo="Seção de teste", destaque="Realce visual", paragrafos=["Texto de verificação visual."], itens=["Item de teste"])
     item = SimpleNamespace(tipo="documento", titulo="Verificação visual", tema="Paleta", subtitulo=None, secoes=[section])

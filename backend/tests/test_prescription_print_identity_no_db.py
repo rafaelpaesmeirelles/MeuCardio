@@ -6,9 +6,10 @@ application, ORM, database, PDF renderer or patient data are loaded.
 """
 import ast
 from pathlib import Path
-from types import SimpleNamespace
+import sys
+from types import ModuleType, SimpleNamespace
 import unittest
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -32,26 +33,30 @@ def canonical_operator():
     return ast.literal_eval(assignments[0].value)
 
 
-def print_endpoint(namespace):
-    tree = ast.parse(SOURCE.read_text(encoding="utf-8"))
+def load_functions(source, names, namespace):
+    tree = ast.parse(source.read_text(encoding="utf-8"))
     functions = [node for node in tree.body if isinstance(node, ast.FunctionDef)
-                 and node.name == "dados_para_impressao"]
-    assert len(functions) == 1
-    functions[0].decorator_list = []
+                 and node.name in names]
+    assert {node.name for node in functions} == set(names)
+    for node in functions:
+        node.decorator_list = []
     module = ast.Module(body=functions, type_ignores=[])
-    exec(compile(module, str(SOURCE), "exec"), namespace)
-    return namespace["dados_para_impressao"]
+    exec(compile(module, str(source), "exec"), namespace)
+    return namespace
 
 
 class PrescriptionPrintIdentityTest(unittest.TestCase):
     def setUp(self):
         self.events = []
         self.prescription_model = object()
-        self.prescription = SimpleNamespace(id=-501, patient_id=-901)
-        self.user = SimpleNamespace(id=-701, operadora={"cnpj": "NOT-CANONICAL"})
+        self.prescription = SimpleNamespace(id=-501, patient_id=-901, created_by=-701)
+        self.user = SimpleNamespace(id=-701, investidor=False, operadora={"cnpj": "NOT-CANONICAL"})
         self.patient = SimpleNamespace(initials="QA", record_number="FICTICIO-901")
         self.company = canonical_operator()
-        self.expected_prescription = {"id": -501, "items": []}
+        self.expected_prescription = {"id": -501, "items": [{
+            "drug_name": "Medicamento demonstrativo", "presentation": "Apresentação demonstrativa",
+            "posology": "Posologia demonstrativa",
+        }]}
         self.expected_doctor = {"full_name": "Profissional demonstrativo"}
 
         def lookup(model, record_id):
@@ -74,7 +79,16 @@ class PrescriptionPrintIdentityTest(unittest.TestCase):
         self.ownership = Mock(side_effect=authorize)
         self.dump = Mock(side_effect=dump)
         self.identity = Mock(side_effect=identity)
-        self.endpoint = print_endpoint({
+        self.kyc_required = Mock(return_value=False)
+        kyc = ModuleType("app.services.kyc.access")
+        kyc.exigir_liberacao_emissao = load_functions(
+            ROOT / "backend/app/services/kyc/access.py", {"exigir_liberacao_emissao"},
+            {"HTTPException": HTTPException, "kyc_required": self.kyc_required},
+        )["exigir_liberacao_emissao"]
+        modules = patch.dict(sys.modules, {kyc.__name__: kyc})
+        modules.start()
+        self.addCleanup(modules.stop)
+        self.endpoint = load_functions(SOURCE, {"dados_para_impressao", "dados_para_revisao"}, {
             "Prescription": self.prescription_model,
             "Session": object,
             "Depends": lambda dependency: None,
@@ -85,7 +99,7 @@ class PrescriptionPrintIdentityTest(unittest.TestCase):
             "_dump": self.dump,
             "document_identity": self.identity,
             "EMPRESA": self.company,
-        })
+        })["dados_para_impressao"]
 
     def test_authorized_response_copies_canonical_operator_after_ownership_check(self):
         expected_company = canonical_operator()
@@ -95,6 +109,7 @@ class PrescriptionPrintIdentityTest(unittest.TestCase):
         self.ownership.assert_called_once_with(-901, self.db, self.user)
         self.dump.assert_called_once_with(self.prescription)
         self.identity.assert_called_once_with(self.user)
+        self.kyc_required.assert_called_once_with(self.db, self.user)
         self.assertEqual(self.events, ["lookup", "ownership", "dump", "identity"])
         self.assertEqual(response["prescricao"], self.expected_prescription)
         self.assertEqual(response["paciente"], {"initials": "QA", "record_number": "FICTICIO-901"})
@@ -122,6 +137,7 @@ class PrescriptionPrintIdentityTest(unittest.TestCase):
         self.ownership.assert_not_called()
         self.dump.assert_not_called()
         self.identity.assert_not_called()
+        self.kyc_required.assert_not_called()
 
     def test_denied_patient_ownership_propagates_without_serializing_any_document(self):
         denied = HTTPException(status_code=404, detail="Paciente não encontrado.")
@@ -135,7 +151,35 @@ class PrescriptionPrintIdentityTest(unittest.TestCase):
         self.ownership.assert_called_once_with(-901, self.db, self.user)
         self.dump.assert_not_called()
         self.identity.assert_not_called()
+        self.kyc_required.assert_not_called()
         self.assertEqual(self.company, canonical_operator())
+
+    def test_another_authors_prescription_is_404_before_patient_or_identity_lookup(self):
+        self.prescription.created_by = -702
+        with self.assertRaises(HTTPException) as raised:
+            self.endpoint(-501, self.db, self.user)
+        self.assertEqual(raised.exception.status_code, 404)
+        self.ownership.assert_not_called()
+        self.dump.assert_not_called()
+        self.identity.assert_not_called()
+        self.kyc_required.assert_not_called()
+
+    def test_pending_kyc_and_investor_cannot_print(self):
+        for investor in (False, True):
+            with self.subTest(investor=investor):
+                self.user.investidor = investor
+                self.kyc_required.return_value = not investor
+                with self.assertRaises(HTTPException) as raised:
+                    self.endpoint(-501, self.db, self.user)
+                self.assertEqual(raised.exception.status_code, 403)
+
+    def test_incomplete_prescription_cannot_print(self):
+        for items in ([], [{"drug_name": "DEMO", "presentation": "DEMO", "posology": " "}]):
+            with self.subTest(items=items):
+                self.expected_prescription["items"] = items
+                with self.assertRaises(HTTPException) as raised:
+                    self.endpoint(-501, self.db, self.user)
+                self.assertEqual(raised.exception.status_code, 409)
 
 
 if __name__ == "__main__":

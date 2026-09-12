@@ -6,6 +6,7 @@ comportamento genuinamente novo aqui é a montagem do corpo a partir das
 calculadoras (RCRI/Gupta MICA) recalculadas no servidor.
 """
 
+from app.models.kyc import KycVerification
 from app.models.subscription import Subscription
 
 
@@ -13,14 +14,17 @@ def _headers(token: str) -> dict[str, str]:
     return {"Authorization": f"Bearer {token}"}
 
 
-def _subscribe(db, user_id: int) -> None:
+def _subscribe(db, user_id: int, *, kyc_aprovado: bool = False) -> None:
     db.add(Subscription(user_id=user_id, kind="meucardio", plano="basico", status="ativo"))
+    # Somente os cenários de emissão partem de identidade já verificada.
+    if kyc_aprovado:
+        db.add(KycVerification(owner_id=user_id, status="aprovado"))
     db.commit()
 
 
 def test_gerar_documento_com_rcri_e_gupta(client, db, criar_usuario):
     user, token = criar_usuario()
-    _subscribe(db, user.id)
+    _subscribe(db, user.id, kyc_aprovado=True)
 
     payload = {
         "patient_name": "Paciente de Teste",

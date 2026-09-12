@@ -1,4 +1,5 @@
 from datetime import timedelta
+from contextlib import nullcontext
 import asyncio,json
 import threading
 from types import SimpleNamespace
@@ -11,6 +12,7 @@ from app.api import whatsapp as api
 from app.core.config import settings
 from app.core.uploads import UploadRejected
 from app.models.user import User
+from app.models.clinical_docs import Appointment
 from app.models.whatsapp import (
     WhatsAppCommand, WhatsAppHeartTeamJob, WhatsAppLink, WhatsAppMessage,
     WhatsAppOutboundOutbox, WhatsAppPairing, WhatsAppSummaryCache, WhatsAppUsageMetric, WhatsAppWebhookEvent,
@@ -30,6 +32,7 @@ class Query:
         self.values = list(values or [])
     def filter(self, *args, **kwargs): return self
     def filter_by(self, **kwargs): return self
+    def populate_existing(self): return self
     def with_for_update(self): return self
     def order_by(self, *args): return self
     def limit(self, *args): return self
@@ -52,6 +55,14 @@ class DB:
     def rollback(self): self.rollbacks+=1
     def delete(self,value):self.deleted.append(value)
     def close(self):pass
+
+
+class ReversibleDB(DB):
+    """Persist local mock-tool rows so real snapshot/undo guards can inspect them."""
+    def begin_nested(self): return nullcontext()
+    def add(self, value):
+        super().add(value)
+        self.scripted.setdefault(type(value), []).append(value)
 
 
 def link_user():
@@ -131,7 +142,7 @@ def test_webhook_worker_preserves_message_commit_and_rollback_order(monkeypatch)
         return {"status": "processed"}
     monkeypatch.setattr(api, "process_meta_message", process)
     assert api._process_webhook_messages(db, ["first", "invalid", "last"], None) == [
-        {"status": "processed"}, {"status": "failed", "error": "ValueError"}, {"status": "processed"}]
+        {"status": "processed"}, {"status": "retryable_failure", "error": "ValueError"}, {"status": "processed"}]
     assert events == ["first", "commit", "invalid", "rollback", "last", "commit"]
 
 
@@ -290,7 +301,7 @@ def test_granular_permission_denies_write_when_only_read_is_allowed(monkeypatch)
 
 def test_confirm_rechecks_nested_n4_and_never_calls_tool(monkeypatch):
     user=SimpleNamespace(id=7);link=SimpleNamespace(pin_hash="hash");cmd=SimpleNamespace(id=3,owner_id=7,status="awaiting_confirmation",confirmation_expires_at=utcnow()+timedelta(minutes=1),confirmation_token_hash=token_hash("token-long-enough","confirm"),kind="email_send",level=3,idempotency_key="key",payload_cipher=b"x",result_cipher=None)
-    metric=SimpleNamespace(success=True,blocked_reason=None);db=DB({WhatsAppUsageMetric:[metric]});tool=Mock()
+    metric=SimpleNamespace(success=True,blocked_reason=None);db=DB({WhatsAppCommand:[cmd],WhatsAppUsageMetric:[metric]});tool=Mock()
     monkeypatch.setattr(svc,"_link",lambda *a:link);monkeypatch.setattr(svc,"verify_password",lambda *a:True);monkeypatch.setattr(svc,"decrypt_payload",lambda *a:{"text":"administrativo","arguments":{"corpo":{"nested":"T.O.M.E 10mg"}}});monkeypatch.setattr(svc,"_execute",tool);monkeypatch.setattr(settings,"whatsapp_assistant_enabled",True)
     result=svc.confirm_command(db,user,cmd,token="token-long-enough",pin="123456")
     assert result["erro"]=="blocked_level_4" and cmd.status=="blocked_security" and metric.success is False;tool.assert_not_called()
@@ -298,7 +309,7 @@ def test_confirm_rechecks_nested_n4_and_never_calls_tool(monkeypatch):
 
 def test_confirm_rechecks_semantic_clinical_payload_and_never_calls_tool(monkeypatch):
     user=SimpleNamespace(id=7);link=SimpleNamespace(pin_hash="hash");cmd=SimpleNamespace(id=3,owner_id=7,status="awaiting_confirmation",confirmation_expires_at=utcnow()+timedelta(minutes=1),confirmation_token_hash=token_hash("token-long-enough","confirm"),kind="email_send",level=3,idempotency_key="semantic",payload_cipher=b"x",result_cipher=None)
-    metric=SimpleNamespace(success=True,blocked_reason=None);db=DB({WhatsAppUsageMetric:[metric]});tool=Mock()
+    metric=SimpleNamespace(success=True,blocked_reason=None);db=DB({WhatsAppCommand:[cmd],WhatsAppUsageMetric:[metric]});tool=Mock()
     payload={"text":"administrativo","arguments":{"assunto":"Retorno","corpo":"O paciente tem infarto e precisa de AAS"}}
     monkeypatch.setattr(svc,"_link",lambda *a:link);monkeypatch.setattr(svc,"verify_password",lambda *a:True);monkeypatch.setattr(svc,"decrypt_payload",lambda *a:payload);monkeypatch.setattr(svc,"_execute",tool);monkeypatch.setattr(settings,"whatsapp_assistant_enabled",True)
     result=svc.confirm_command(db,user,cmd,token="token-long-enough",pin="123456")
@@ -306,14 +317,23 @@ def test_confirm_rechecks_semantic_clinical_payload_and_never_calls_tool(monkeyp
 
 
 def test_level2_uses_canonical_agenda_tool_and_undo_compensates(monkeypatch):
-    user=SimpleNamespace(id=7);cmd=SimpleNamespace(kind="reminder_create",level=2,link_id=9,id=3,owner_id=7,status="completed",undo_token_hash=token_hash("undo-token-long-enough","undo"),result_cipher=b"x")
+    user=SimpleNamespace(id=7,is_active=True);cmd=SimpleNamespace(kind="reminder_create",level=2,link_id=9,id=3,owner_id=7,status="completed",undo_token_hash=token_hash("undo-token-long-enough","undo"),undo_expires_at=utcnow()+timedelta(minutes=1),result_cipher=b"x")
+    appointment=Appointment(id=55,owner_id=7,scheduled_at=utcnow(),status="confirmado")
+    db=ReversibleDB({WhatsAppCommand:[cmd],Appointment:[appointment]})
     calls=[]
     def tool(name,args,db,user):calls.append((name,args));return {"criado":True,"compromisso":{"id":55}} if "criar" in name else {"cancelado":True}
-    monkeypatch.setattr(svc,"_permission",lambda *a:True);monkeypatch.setattr(svc,"executar_tool_assistente",tool);monkeypatch.setattr(svc,"decrypt_payload",lambda *a:{"compromisso":{"id":55}});monkeypatch.setattr(svc,"_audit",lambda *a,**k:None)
-    created=svc._execute(DB(),user,cmd,{"text":"lembrete","arguments":{"inicio":"2026-09-01T08:00:00-03:00"}})
-    undone=svc.undo_command(DB(),user,cmd,token="undo-token-long-enough")
+    monkeypatch.setattr(settings,"whatsapp_assistant_enabled",True)
+    monkeypatch.setattr(svc,"_link",lambda *a:SimpleNamespace(status="active"))
+    monkeypatch.setattr(svc,"_permission",lambda *a:True);monkeypatch.setattr(svc,"executar_tool_assistente",tool);monkeypatch.setattr(svc,"_audit",lambda *a,**k:None)
+    created=svc._execute_reversible(db,user,cmd,{"text":"lembrete","arguments":{"inicio":"2026-09-01T08:00:00-03:00"}})
+    monkeypatch.setattr(svc,"decrypt_payload",lambda *a:created)
+    undone=svc.undo_command(db,user,cmd,token="undo-token-long-enough")
     assert created["compromisso"]["id"]==55 and undone["status"]=="undone"
     assert calls[0][0]=="agenda_criar_compromisso_inteligente" and calls[1][0]=="agenda_cancelar_compromisso"
+    assert cmd.undo_token_hash is None and db.commits == 1
+    with pytest.raises(HTTPException) as exc:
+        svc.undo_command(db,user,cmd,token="undo-token-long-enough")
+    assert exc.value.status_code == 409 and len(calls) == 2
 
 
 def test_zero_tariff_fails_closed_before_provider_call():
@@ -352,10 +372,12 @@ def test_manual_pairing_is_unreachable_with_meta_provider(monkeypatch):
 
 
 def test_bad_pin_blocks_n3_before_any_side_effect(monkeypatch):
-    user=SimpleNamespace(id=7);link=SimpleNamespace(pin_hash="hash");cmd=SimpleNamespace(owner_id=7,status="awaiting_confirmation",confirmation_expires_at=utcnow()+timedelta(minutes=1),confirmation_token_hash=token_hash("token-long-enough","confirm"),kind="message_send",level=3,idempotency_key="key",payload_cipher=b"x")
+    user=SimpleNamespace(id=7);link=SimpleNamespace(pin_hash="hash");cmd=SimpleNamespace(id=3,owner_id=7,status="awaiting_confirmation",confirmation_expires_at=utcnow()+timedelta(minutes=1),confirmation_token_hash=token_hash("token-long-enough","confirm"),kind="message_send",level=3,idempotency_key="key",payload_cipher=b"x")
     tool=Mock();monkeypatch.setattr(svc,"_link",lambda *a:link);monkeypatch.setattr(svc,"verify_password",lambda *a:False);monkeypatch.setattr(svc,"_execute",tool);monkeypatch.setattr(settings,"whatsapp_assistant_enabled",True)
-    with pytest.raises(HTTPException) as exc:svc.confirm_command(DB(),user,cmd,token="token-long-enough",pin="bad-pin")
+    db=DB({WhatsAppCommand:[cmd]})
+    with pytest.raises(HTTPException) as exc:svc.confirm_command(db,user,cmd,token="token-long-enough",pin="bad-pin")
     assert exc.value.status_code==403;tool.assert_not_called()
+    assert db.commits == 0 and cmd.status == "awaiting_confirmation"
 
 
 def test_heart_ready_outside_meta_window_without_template_is_retained(monkeypatch):
@@ -415,12 +437,15 @@ def test_all_critical_actions_are_level4_regardless_of_explicit_kind(text):
 
 
 def test_draft_and_list_are_persisted_and_reversibly_deleted(monkeypatch):
-    link,user=link_user();db=DB();cmd=SimpleNamespace(kind="draft_save",level=2,link_id=9,id=12,owner_id=7,status="completed",undo_token_hash=token_hash("undo-token-long-enough","undo"),result_cipher=b"x")
+    link,user=link_user();user.is_active=True;cmd=SimpleNamespace(kind="draft_save",level=2,link_id=9,id=12,owner_id=7,status="completed",undo_token_hash=token_hash("undo-token-long-enough","undo"),undo_expires_at=utcnow()+timedelta(minutes=1),result_cipher=b"x")
+    db=ReversibleDB({WhatsAppCommand:[cmd]})
+    monkeypatch.setattr(settings,"whatsapp_assistant_enabled",True)
     monkeypatch.setattr(svc,"_permission",lambda *a:True);monkeypatch.setattr(svc,"_link",lambda *a:link);monkeypatch.setattr(svc,"_encrypt",lambda *a:b"encrypted");monkeypatch.setattr(svc,"_audit",lambda *a,**k:None)
-    result=svc._execute(db,user,cmd,{"text":"rascunho","arguments":{"titulo":"Plantão","corpo":"Itens administrativos"}})
+    result=svc._execute_reversible(db,user,cmd,{"text":"rascunho","arguments":{"titulo":"Plantão","corpo":"Itens administrativos"}})
     draft=next(x for x in db.added if x.__class__.__name__=="WhatsAppDraft");cmd.result_cipher=b"result";monkeypatch.setattr(svc,"decrypt_payload",lambda *a:result);db.scripted[draft.__class__]=[draft]
     undone=svc.undo_command(db,user,cmd,token="undo-token-long-enough")
     assert result["draft"]["id"]==draft.id and draft.status=="deleted" and undone["status"]=="undone"
+    assert cmd.undo_token_hash is None and db.commits == 1
 
 
 def test_pdf_extract_uses_installed_pymupdf_runtime():

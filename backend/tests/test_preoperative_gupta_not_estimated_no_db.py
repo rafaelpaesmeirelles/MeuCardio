@@ -5,9 +5,12 @@ persistência, autenticação e resolução de identidade são substituídos em 
 """
 
 import ast
+from dataclasses import dataclass, field
+import math
 from pathlib import Path
 from types import SimpleNamespace
 import unittest
+from typing import Any, Callable
 
 
 APP = Path(__file__).resolve().parents[1] / "app"
@@ -15,7 +18,7 @@ APP = Path(__file__).resolve().parents[1] / "app"
 
 def compile_nodes(nodes, path, env):
     for node in nodes:
-        if isinstance(node, (ast.FunctionDef, ast.ClassDef)):
+        if isinstance(node, ast.FunctionDef):
             node.decorator_list = []
     module = ast.Module(body=[
         ast.ImportFrom(module="__future__", names=[ast.alias(name="annotations")], level=0), *nodes,
@@ -26,13 +29,14 @@ def compile_nodes(nodes, path, env):
 def load_calculators():
     path = APP / "services/calculators.py"
     tree = ast.parse(path.read_text())
-    env = {
-        "Field": lambda *_args, **_kwargs: None,
-        "Calculator": lambda **kwargs: SimpleNamespace(status="implementada", **kwargs),
-    }
-    functions = {"_rcri", "_rcri_txt", "_gupta_mica", "_gupta_mica_txt", "run"}
+    env = {"__name__": __name__, "dataclass": dataclass, "field": field,
+           "math": math, "Any": Any, "Callable": Callable}
+    functions = {"_rcri", "_rcri_txt", "_gupta_mica", "_gupta_mica_txt", "run",
+                 "validate_payload", "_finite_result"}
     nodes = [node for node in tree.body if (
         isinstance(node, ast.FunctionDef) and node.name in functions
+    ) or (
+        isinstance(node, ast.ClassDef) and node.name in {"Field", "Calculator", "CalculatorInputError"}
     ) or (
         isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == "_GUPTA_PROCEDIMENTOS" for target in node.targets)
     )]

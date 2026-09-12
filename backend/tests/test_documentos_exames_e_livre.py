@@ -10,6 +10,7 @@ tipo em `/gerados`, e que `GET /gerados/{id}` devolve o suficiente
 o formulário em "recriar baseado neste"."""
 from app.models.audit import AuditLog
 from app.models.clinical_docs import GeneratedDocument
+from app.models.kyc import KycVerification
 from app.models.subscription import Subscription
 
 
@@ -17,11 +18,14 @@ def _headers(token: str) -> dict[str, str]:
     return {"Authorization": f"Bearer {token}"}
 
 
-def _dar_assinatura_principal(db, user) -> None:
+def _dar_assinatura_principal(db, user, *, kyc_aprovado: bool = False) -> None:
     """`documents.router` está atrás de `assinante_ativo` (app/main.py) —
     exige `Subscription(kind='meucardio')` ativa, mesmo padrão já usado em
     `test_envio_paciente_documento_gerado.py`."""
     db.add(Subscription(user_id=user.id, kind="meucardio", plano="basico", status="ativo"))
+    # Somente os cenários de emissão partem de identidade já verificada.
+    if kyc_aprovado:
+        db.add(KycVerification(owner_id=user.id, status="aprovado"))
     db.commit()
 
 
@@ -228,7 +232,7 @@ class TestGerarAtestadoRapido:
 class TestPdfDosTiposNovos:
     def test_pdf_da_solicitacao_de_exames_e_um_pdf_real(self, client, db, criar_usuario):
         user, token = criar_usuario()
-        _dar_assinatura_principal(db, user)
+        _dar_assinatura_principal(db, user, kyc_aprovado=True)
         criado = client.post(
             "/api/document-templates/gerar-exames",
             headers=_headers(token),
@@ -244,7 +248,7 @@ class TestPdfDosTiposNovos:
 
     def test_pdf_do_documento_livre_e_um_pdf_real(self, client, db, criar_usuario):
         user, token = criar_usuario()
-        _dar_assinatura_principal(db, user)
+        _dar_assinatura_principal(db, user, kyc_aprovado=True)
         criado = client.post(
             "/api/document-templates/gerar-livre",
             headers=_headers(token),
@@ -259,7 +263,7 @@ class TestPdfDosTiposNovos:
 
     def test_pdf_do_atestado_rapido_e_um_pdf_real(self, client, db, criar_usuario):
         user, token = criar_usuario()
-        _dar_assinatura_principal(db, user)
+        _dar_assinatura_principal(db, user, kyc_aprovado=True)
         criado = client.post(
             "/api/document-templates/gerar-atestado",
             headers=_headers(token),

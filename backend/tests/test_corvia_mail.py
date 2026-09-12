@@ -881,9 +881,15 @@ class TestCheckoutEmail:
         assert corpo["preco_centavos"] == 2000
         assert corpo["status"] == "inativo"
 
-    def test_ja_assinante_devolve_409_no_checkout(self, client, db, criar_usuario):
+    def test_ja_assinante_devolve_409_no_checkout(self, client, db, criar_usuario, monkeypatch):
+        from unittest.mock import Mock
+        from app.api import billing
+
         user, token = criar_usuario()
         _dar_assinatura_email_ativa(db, user, status="ativo")
+        checkout = Mock(side_effect=AssertionError("Assinante ativo não deve acessar o provedor de pagamento"))
+        monkeypatch.setattr(billing, "_stripe_client", checkout)
         resp = client.post("/api/billing/checkout-email", headers={"Authorization": f"Bearer {token}"})
         assert resp.status_code == 409
-        assert "já assina" in resp.json()["detail"]
+        assert resp.json()["detail"] == "Seu acesso já inclui o CorVIA Mail. Não é preciso assinar novamente."
+        checkout.assert_not_called()

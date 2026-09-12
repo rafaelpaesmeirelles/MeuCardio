@@ -6,6 +6,7 @@ Os únicos efeitos são sobre objetos em memória; não usa conftest ou transpor
 
 import ast
 import logging
+import secrets
 from pathlib import Path
 from types import SimpleNamespace
 import unittest
@@ -68,8 +69,9 @@ class AccessResendTests(unittest.TestCase):
     def setUp(self):
         self.user = SimpleNamespace(
             id=9001, email="login@example.invalid", full_name="Pessoa de Demonstração",
-            is_active=True, status="aprovado", investidor=False,
+            is_active=True, status="aprovado", investidor=False, role="medico",
         )
+        self.admin = SimpleNamespace(id=9000, role="admin")
         self.channel = "recuperacao@example.invalid"
         self.logs = []
         self.deliveries = []
@@ -84,6 +86,7 @@ class AccessResendTests(unittest.TestCase):
         env = {
             "EmailLog": EmailLog, "settings": SimpleNamespace(
                 email_transacional_configurado=True, public_url="https://example.invalid",
+                admin_email="owner@example.invalid",
             ), "log": logging.getLogger("isolated-resend"),
             "_normalizar_branding": lambda value: value,
             "_renderizar": lambda _template, context: (context["link_login"], "texto demonstrativo"),
@@ -105,7 +108,9 @@ class AccessResendTests(unittest.TestCase):
             "HTTPException": HTTPException, "Depends": lambda dependency: dependency,
             "get_db": lambda: None, "require_admin": lambda: None,
             "admin_api": SimpleNamespace(decidir_solicitacao=lambda *_args: {"status": "aprovado"}),
+            "secrets": secrets,
         })
+        load_functions("core/security.py", {"is_owner_admin", "require_manage_account"}, env)
         load_functions("api/account_access_admin.py", {
             "admin_reenviar_acesso", "decidir_solicitacao_com_notificacao",
         }, env)
@@ -135,7 +140,7 @@ class AccessResendTests(unittest.TestCase):
 
     def test_manual_resend_dispatches_after_previous_success(self):
         self.prior_success()
-        self.assertEqual(self.resend(9001, self.db, object()), {"ok": True})
+        self.assertEqual(self.resend(9001, self.db, self.admin), {"ok": True})
         self.assertEqual(len(self.deliveries), 1)
         self.assertEqual(self.deliveries[0][0], self.channel)
         self.assertIsNone(self.logs[-1].chave_idempotencia)
@@ -161,7 +166,7 @@ class AccessResendTests(unittest.TestCase):
     def test_manual_resend_uses_current_recovery_channel(self):
         self.assertTrue(self.send(9001))
         self.channel = "canal-corrigido@example.invalid"
-        self.resend(9001, self.db, object())
+        self.resend(9001, self.db, self.admin)
         self.assertEqual([row[0] for row in self.deliveries], [
             "recuperacao@example.invalid", "canal-corrigido@example.invalid",
         ])
@@ -170,7 +175,7 @@ class AccessResendTests(unittest.TestCase):
         self.prior_success()
         self.provider_ok = False
         with self.assertRaises(HTTPException) as caught:
-            self.resend(9001, self.db, object())
+            self.resend(9001, self.db, self.admin)
         self.assertEqual(caught.exception.status_code, 502)
         self.assertEqual(len(self.deliveries), 1)
         self.assertFalse(self.logs[-1].sucesso)
@@ -189,7 +194,7 @@ class AccessResendTests(unittest.TestCase):
             with self.subTest(label=label):
                 self.user = None if changes is None else SimpleNamespace(**{**vars(original), **changes})
                 with self.assertRaises(HTTPException) as caught:
-                    self.resend(9001, self.db, object())
+                    self.resend(9001, self.db, self.admin)
                 self.assertEqual(caught.exception.status_code, status)
                 self.assertEqual(self.deliveries, [])
 

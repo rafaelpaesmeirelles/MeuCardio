@@ -329,6 +329,10 @@ class TestCorviaMail:
             "disponivel": True,
             "motivo": None,
             "email_address": "medico-export@corvia.med.br",
+            "contas": [{
+                "id": "corvia", "provider": "CorVIA Mail",
+                "email_address": "medico-export@corvia.med.br", "limite_anexo_mb": 15,
+            }],
         }
 
         resposta = client.post(

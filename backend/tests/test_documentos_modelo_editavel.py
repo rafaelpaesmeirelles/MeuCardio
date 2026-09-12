@@ -6,6 +6,7 @@ voltar a passar pela substituição de `{{variavel}}` — e o `DocumentTemplate`
 salvo nunca é alterado por isso (a edição vale só para aquele documento).
 """
 from app.models.clinical_docs import DocumentTemplate, GeneratedDocument
+from app.models.kyc import KycVerification
 from app.models.subscription import Subscription
 
 
@@ -13,15 +14,18 @@ def _headers(token: str) -> dict[str, str]:
     return {"Authorization": f"Bearer {token}"}
 
 
-def _dar_assinatura_principal(db, user) -> None:
+def _dar_assinatura_principal(db, user, *, kyc_aprovado: bool = False) -> None:
     db.add(Subscription(user_id=user.id, kind="meucardio", plano="basico", status="ativo"))
+    # Somente os cenários de emissão partem de identidade já verificada.
+    if kyc_aprovado:
+        db.add(KycVerification(owner_id=user.id, status="aprovado"))
     db.commit()
 
 
 class TestCorpoFinalNoFluxoDeModelo:
     def test_texto_editado_na_emissao_e_o_que_vale_no_pdf(self, client, db, criar_usuario):
         user, token = criar_usuario()
-        _dar_assinatura_principal(db, user)
+        _dar_assinatura_principal(db, user, kyc_aprovado=True)
         template = DocumentTemplate(
             owner_id=user.id, title="Solicitação de Exames Complementares", doc_type="laudo",
             body="Solicito {{exame}} para o(a) paciente {{nome}}.",
