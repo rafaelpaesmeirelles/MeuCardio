@@ -97,7 +97,7 @@ jobs:
 
       - name: Record failed PR935 baseline and pending bounded continuation
         if: steps.classify.outputs.backend_mode == 'pr935-failed-test-followup'
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: backend-pr935-continuation
           path: ${{ runner.temp }}/backend-pr935-continuation.json
@@ -106,7 +106,7 @@ jobs:
 
       - name: Record failed PR934 baseline and pending bounded continuation
         if: steps.classify.outputs.backend_mode == 'pr934-failed-tests-followup'
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: backend-pr934-continuation
           path: ${{ runner.temp }}/backend-pr934-continuation.json
@@ -115,7 +115,7 @@ jobs:
 
       - name: Record verified baseline and single failed-test continuation
         if: steps.classify.outputs.backend_mode == 'failed-test-followup' || steps.classify.outputs.backend_mode == 'ci-only-continuation'
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: backend-failed-test-followup
           path: ${{ runner.temp }}/backend-failed-test-followup.json
@@ -124,7 +124,7 @@ jobs:
 
       - name: Record the release owner decision without a backend test certificate
         if: steps.classify.outputs.backend_mode == 'authorized-no-backend-ci'
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: backend-no-ci-owner-decision
           path: ${{ runner.temp }}/backend-no-ci-owner-decision.json
@@ -377,7 +377,7 @@ jobs:
 
       - name: Upload pytest failure report
         if: failure()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: backend-pytest-failure
           path: backend/pytest-output.txt
@@ -386,7 +386,7 @@ jobs:
 
       - name: Preserve the single-test continuation result
         if: always() && needs.backend-risk-policy.outputs.backend_mode == 'failed-test-followup' && steps.pytest.outcome != 'skipped'
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: backend-single-test-result
           path: ${{ runner.temp }}/backend-single-test.xml
@@ -395,7 +395,7 @@ jobs:
 
       - name: Preserve the exact PR934 continuation result
         if: always() && needs.backend-risk-policy.outputs.backend_mode == 'pr934-failed-tests-followup' && steps.pytest.outcome != 'skipped'
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: backend-pr934-followup-result
           path: ${{ runner.temp }}/backend-pr934-followup.xml
@@ -404,7 +404,7 @@ jobs:
 
       - name: Preserve the exact PR935 continuation result
         if: always() && needs.backend-risk-policy.outputs.backend_mode == 'pr935-failed-test-followup' && steps.pytest.outcome != 'skipped'
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: backend-pr935-followup-result
           path: ${{ runner.temp }}/backend-pr935-followup.xml
@@ -581,7 +581,7 @@ jobs:
 
       - name: Upload focused pytest failure report
         if: failure()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: backend-focused-pytest-failure-${{ needs.backend-risk-policy.outputs.suite_key }}
           path: backend/pytest-focused-output.txt
