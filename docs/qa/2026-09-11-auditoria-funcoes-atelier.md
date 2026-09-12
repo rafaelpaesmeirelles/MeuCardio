@@ -1228,3 +1228,37 @@ aplicada exceção antiga, alterada política, repetida a suíte completa nem
 promovido main. A correção fica local enquanto se decide autorizar uma nova
 continuação auditável restrita ao teste corrigido, retendo a evidência dos
 3.879 aprovados e executando os controles operacionais ainda pendentes.
+
+**Continuação PR935 autorizada pelo responsável:** o novo "Prossiga" aprovou
+explicitamente adaptar esta publicação ao teste corrigido e aos controles
+operacionais pendentes. O perfil `pr935-failed-test-followup` é independente
+das exceções anteriores; a classificação geral de risco permanece intacta.
+Ele exige o run 34657383923, tentativa 1, job 103452690228, cinco jobs com
+identidades e conclusões exatas e o único artefato 10287131424. Os bytes do
+ZIP foram baixados e medidos: 985 bytes, SHA256
+`68156a5abed3dcd8bfe1128149c73042fb63cf9aac3fa34666b33048f95da613`.
+O validador aceitou os metadados reais e o relatório original: 1 falha,
+3.879 aprovações, 4 skips, 1 warning; o certificado full continua ausente.
+
+O delta permitido desde `5cc9ddb2` contém somente o contrato corrigido, este
+registro e quatro arquivos da continuação CI, todos selados por hash; qualquer
+alteração adicional de aplicação, migration, dependência ou configuração
+produtiva bloqueia o perfil. O runner executa o nó literal único, neutraliza
+opções extras do pytest e exige JUnit novo com exatamente uma aprovação,
+sem skip, erro, caso adicional ou relatório reaproveitado. O PostgreSQL da
+CI continua isolado, com migrations para preparar a instância nova. HTTP e
+backup/restauração continuam obrigatórios antes do certificado restrito.
+
+O certificado terá chave própria, derivada da evidência e do delta exato;
+não será identificado como uma nova aprovação full. A promoção fast-forward
+deverá manter o SHA e reutilizar apenas esse certificado exato, preservando
+os gates oficiais de publicação. Nenhuma alteração de layout ou regra clínica
+foi acrescentada nesta continuação. Publicação real permanece pendente até
+terminarem os gates e ser comprovada a versão nos serviços de produção.
+
+Os 35 testes unitários adversariais do novo perfil passaram em 0,103 s,
+com Git/GitHub/subprocessos simulados; não representam pytest ou gates reais.
+A revisão independente identificou a necessidade de disponibilizar o
+histórico no checkout do runner de backend, separado do classificador.
+O checkout completo fica restrito ao novo modo para permitir revalidar a
+ancestralidade e os blobs pinados antes do único teste, sem fallback amplo.

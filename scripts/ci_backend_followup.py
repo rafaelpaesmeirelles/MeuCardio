@@ -21,6 +21,12 @@ except ModuleNotFoundError as exc:
     if exc.name != "ci_backend_pr934_continuation":
         raise
     from scripts.ci_backend_pr934_continuation import resolve_decision as pr934_continuation
+try:
+    from ci_backend_pr935_continuation import resolve_decision as pr935_continuation
+except ModuleNotFoundError as exc:
+    if exc.name != "ci_backend_pr935_continuation":
+        raise
+    from scripts.ci_backend_pr935_continuation import resolve_decision as pr935_continuation
 
 
 def github(path: str, *, raw: bool = False):
@@ -370,6 +376,8 @@ def main() -> int:
         decision = failed_test_followup(root, **context)
     if decision is None:
         decision = pr934_continuation(root, **context)
+    if decision is None:
+        decision = pr935_continuation(root, **context)
     if decision is None:
         decision = classify_paths(original_paths, repo_root=root)
     if args.github_output:

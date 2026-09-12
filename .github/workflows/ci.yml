@@ -93,7 +93,16 @@ jobs:
 
       - name: Test risk classification and exact-suite reuse before trusting them
         if: steps.classify.outputs.backend_mode != 'authorized-no-backend-ci'
-        run: python -m unittest scripts.tests.test_ci_backend_policy scripts.tests.test_ci_section_owner_decision scripts.tests.test_ci_editorial_owner_decision scripts.tests.test_ci_feature_owner_decision scripts.tests.test_ci_favorites_owner_decision scripts.tests.test_ci_http_retry_owner_decision scripts.tests.test_ci_failed_test_followup scripts.tests.test_ci_pr934_continuation -v
+        run: python -m unittest scripts.tests.test_ci_backend_policy scripts.tests.test_ci_section_owner_decision scripts.tests.test_ci_editorial_owner_decision scripts.tests.test_ci_feature_owner_decision scripts.tests.test_ci_favorites_owner_decision scripts.tests.test_ci_http_retry_owner_decision scripts.tests.test_ci_failed_test_followup scripts.tests.test_ci_pr934_continuation scripts.tests.test_ci_pr935_continuation -v
+
+      - name: Record failed PR935 baseline and pending bounded continuation
+        if: steps.classify.outputs.backend_mode == 'pr935-failed-test-followup'
+        uses: actions/upload-artifact@v6
+        with:
+          name: backend-pr935-continuation
+          path: ${{ runner.temp }}/backend-pr935-continuation.json
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Record failed PR934 baseline and pending bounded continuation
         if: steps.classify.outputs.backend_mode == 'pr934-failed-tests-followup'
@@ -211,6 +220,7 @@ jobs:
       (needs.backend-risk-policy.outputs.backend_mode == 'full' ||
        needs.backend-risk-policy.outputs.backend_mode == 'authorized-followup' ||
        needs.backend-risk-policy.outputs.backend_mode == 'pr934-failed-tests-followup' ||
+       needs.backend-risk-policy.outputs.backend_mode == 'pr935-failed-test-followup' ||
        needs.backend-risk-policy.outputs.backend_mode == 'failed-test-followup') &&
       needs.backend-risk-policy.outputs.reuse_backend != 'true'
     runs-on: ubuntu-latest
@@ -267,6 +277,8 @@ jobs:
         uses: actions/checkout@v7
         with:
           ref: ${{ needs.backend-risk-policy.outputs.candidate_sha }}
+          # PR935 revalidates baseline ancestry and pinned blobs on this runner.
+          fetch-depth: ${{ needs.backend-risk-policy.outputs.backend_mode == 'pr935-failed-test-followup' && '0' || '1' }}
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -291,7 +303,7 @@ jobs:
         run: python -m pip install --upgrade pip && pip install -r requirements-dev.txt
 
       - name: Audit Python production dependencies
-        if: needs.backend-risk-policy.outputs.backend_mode != 'failed-test-followup' && needs.backend-risk-policy.outputs.backend_mode != 'pr934-failed-tests-followup'
+        if: needs.backend-risk-policy.outputs.backend_mode != 'failed-test-followup' && needs.backend-risk-policy.outputs.backend_mode != 'pr934-failed-tests-followup' && needs.backend-risk-policy.outputs.backend_mode != 'pr935-failed-test-followup'
         working-directory: backend
         run: python -m pip_audit -r requirements.txt --progress-spinner=off --strict
 
@@ -300,12 +312,12 @@ jobs:
         run: python -m app.commands.migrate
 
       - name: Verify migration command is idempotent
-        if: needs.backend-risk-policy.outputs.backend_mode != 'failed-test-followup' && needs.backend-risk-policy.outputs.backend_mode != 'pr934-failed-tests-followup'
+        if: needs.backend-risk-policy.outputs.backend_mode != 'failed-test-followup' && needs.backend-risk-policy.outputs.backend_mode != 'pr934-failed-tests-followup' && needs.backend-risk-policy.outputs.backend_mode != 'pr935-failed-test-followup'
         working-directory: backend
         run: python -m app.commands.migrate
 
       - name: Smoke test explicit administrator bootstrap
-        if: needs.backend-risk-policy.outputs.backend_mode != 'failed-test-followup' && needs.backend-risk-policy.outputs.backend_mode != 'pr934-failed-tests-followup'
+        if: needs.backend-risk-policy.outputs.backend_mode != 'failed-test-followup' && needs.backend-risk-policy.outputs.backend_mode != 'pr934-failed-tests-followup' && needs.backend-risk-policy.outputs.backend_mode != 'pr935-failed-test-followup'
         working-directory: backend
         run: |
           python -m app.commands.create_admin --email ci-admin@teste.local --password admin-ci-seguro-123
@@ -322,7 +334,7 @@ jobs:
           PY
 
       - name: Compile Python modules
-        if: needs.backend-risk-policy.outputs.backend_mode != 'failed-test-followup'
+        if: needs.backend-risk-policy.outputs.backend_mode != 'failed-test-followup' && needs.backend-risk-policy.outputs.backend_mode != 'pr935-failed-test-followup'
         working-directory: backend
         run: python -m compileall -q app tests migrations
 
@@ -348,6 +360,10 @@ jobs:
             cd ..
             python scripts/ci_backend_pr934_continuation.py --run-followup \
               --junit "$RUNNER_TEMP/backend-pr934-followup.xml" 2>&1 | tee backend/pytest-output.txt
+          elif [[ "$BACKEND_MODE" == "pr935-failed-test-followup" ]]; then
+            cd ..
+            python scripts/ci_backend_pr935_continuation.py --run-followup \
+              --junit "$RUNNER_TEMP/backend-pr935-followup.xml" 2>&1 | tee backend/pytest-output.txt
           elif [[ "$BACKEND_MODE" == "authorized-followup" ]]; then
             [[ -n "$FOCUSED_TESTS" ]] || { echo "Authorized follow-up test list is empty." >&2; exit 64; }
             read -r -a tests <<< "$FOCUSED_TESTS"
@@ -383,6 +399,15 @@ jobs:
         with:
           name: backend-pr934-followup-result
           path: ${{ runner.temp }}/backend-pr934-followup.xml
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Preserve the exact PR935 continuation result
+        if: always() && needs.backend-risk-policy.outputs.backend_mode == 'pr935-failed-test-followup' && steps.pytest.outcome != 'skipped'
+        uses: actions/upload-artifact@v6
+        with:
+          name: backend-pr935-followup-result
+          path: ${{ runner.temp }}/backend-pr935-followup.xml
           if-no-files-found: error
           retention-days: 30
 
@@ -678,6 +703,20 @@ jobs:
               fi
               echo "PR934 baseline remains 6 failed, 3810 passed, 4 skipped."
               echo "Six repaired nodes, 32 pricing cases and previously pending HTTP/backup gates are certified separately."
+              echo "This is an exact-SHA bounded continuation certificate, not a new full-suite pass."
+              ;;
+            pr935-failed-test-followup)
+              [[ "$SUITE_KEY" =~ ^backend-risk-v1-failed-test-pr935-5cc9ddb2-[0-9a-f]{16}$ && "$FOCUSED_RESULT" == "skipped" ]] || exit 1
+              if [[ "$REUSE_BACKEND" == "true" ]]; then
+                [[ "$REUSE_SOURCE_RUN" =~ ^[0-9]+$ && "$FULL_RESULT" == "skipped" ]] || exit 1
+              else
+                [[ "$FULL_RESULT" == "success" ]] || {
+                  echo "PR935 repaired test or pending HTTP/backup gates failed." >&2
+                  exit 1
+                }
+              fi
+              echo "PR935 baseline remains 1 failed, 3879 passed, 4 skipped."
+              echo "One repaired contract test and previously pending HTTP/backup gates are certified separately."
               echo "This is an exact-SHA bounded continuation certificate, not a new full-suite pass."
               ;;
             focused)
