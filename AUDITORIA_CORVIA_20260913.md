@@ -12,6 +12,34 @@ suspeitas iniciais foram **descartadas** por verificação (registradas no fim).
 
 ---
 
+## 📊 Placar final
+
+**45 defeitos diretos** (coisa quebrada) — **todos no frontend; o backend não contribuiu com nenhum**.
+
+| Defeito | Qtd | Item |
+|---|---:|---|
+| Asserções de teste vermelhas | 18 | 1 |
+| Classes sem regra de CSS em tela viva (→ 32 elementos) | 22 | 2 |
+| Itens de menu "Cursos" que só redirecionam | 2 | 3 |
+| Corridas de requisição sem cancelamento | 2 | 4 |
+| Item de menu duplicado com rótulo idêntico | 1 | 6 |
+
+**135 itens de dívida** (funciona, mas não está ligado):
+
+| Dívida | Qtd | Item |
+|---|---:|---|
+| Suítes de contrato fora da CI | 41 | 1 |
+| Rotas de API sem porta de entrada na UI | 68 | 5 |
+| Artefatos de código morto (18 CSS + 6 componentes + 2 páginas) | 26 | 6 |
+
+**O que NÃO foi inflado na conta:** dos 124 elementos sem CSS que o detector achou, 91
+estão em arquivos que ninguém renderiza e 1 é falso positivo (`.mermaid`) — por isso a
+linha diz 32, e os 91 aparecem uma vez só, como código morto. Os 7.075 `!important` não
+entram em nenhuma coluna: não são erro, são o fator de risco que explica por que uma
+classe como `.subtitulo` some sem ninguém notar.
+
+---
+
 ## 🔴 1. 76% das suítes de contrato do frontend nunca são executadas — e 18 asserções estão vermelhas há um dia
 
 O achado mais importante da auditoria, porque explica todos os outros.
@@ -208,22 +236,22 @@ as duas levando ao aviso de indisponível.
 
 ---
 
-## ⏳ Suíte backend — execução em andamento quando este arquivo foi commitado
+## ✅ Suíte backend — 3.912 testes, zero defeito
 
-A suíte de 3.912 testes do backend está rodando em banco dedicado (`meucardio_audit`),
-sem concorrência. O que já se pode afirmar com segurança:
+Corrida única em banco dedicado, sem concorrência: **3.908 passam, 4 skipped, 0 falha**
+(53 min). Também: coleta limpa (0 erro de import em 75 módulos de API), as 103 migrações
+aplicadas do zero sem erro e **0 drift** entre modelos e schema.
 
-- **coleta limpa**: 3.912 testes coletados, **0 erro de import** em 75 módulos de API;
-- `alembic upgrade head` aplicou as 103 migrações do zero, sem erro;
-- **0 drift** entre os modelos e o schema migrado.
+**Os 31 resultados vermelhos da primeira leitura eram do meu ambiente, não do produto** —
+verificado um a um, e o registro fica aqui porque é fácil repetir o engano:
 
-O número final de passa/falha será acrescentado aqui quando a corrida terminar. Há um
-bloco de erros reincidente por volta de 9% da execução (região de
-`test_apresentacao_pptx` / `test_aprofundamento_*`) que **reaparece na corrida limpa** —
-ou seja, não é artefato da contaminação descrita na nota de método. Ainda não
-diagnosticado; não afirmo causa sem medir.
+| Sintoma | Causa real | Depois de corrigir |
+|---|---|---|
+| 28 `ERROR at setup` em `test_apply_editorial_classifications` e `test_clinical_change_approvals` | `tests/_database_guard.py` exige `ENVIRONMENT=test` **e** nome de banco na lista branca (`meucardio_test` ou namespace prefixado). Eu rodei em `meucardio_audit`. | **30/30 passam** |
+| 3 falhas em `test_readiness` (503 em `/api/ready`) | `settings.redis_url` aponta para o host `redis` (nome do serviço no Compose); não resolve fora do Docker. | **5/5 passam** com `REDIS_URL=redis://localhost:6379/0` |
 
----
+O guard de banco **funcionou como projetado**: recusou rodar fixture destrutiva contra um
+banco fora da lista branca. Não é defeito — é a proteção certa, e vale mantê-la.
 
 ## ✅ O que foi auditado e está saudável (verificado, não presumido)
 
