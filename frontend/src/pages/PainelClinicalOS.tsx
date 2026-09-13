@@ -84,7 +84,6 @@ const MODULOS: ModuloGrupo[] = [
       { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
       { to: "/biblioteca", label: "Biblioteca científica", icon: "conhecimento" },
       { to: "/galeria", label: "Atlas & Galeria", icon: "galeria" },
-      { to: "/cursos", label: "Cursos & Atualizações", icon: "curso" },
       { to: "/apresentacao", label: "Modo apresentação", icon: "documento" },
     ],
   },
@@ -106,7 +105,6 @@ const MODULOS: ModuloGrupo[] = [
       { to: "/busca?modo=tudo-com-tudo", label: "Tudo com Tudo", icon: "busca" },
       { to: "/calculadoras", label: "Calculadoras avançadas", icon: "calculadora" },
       { to: "/indicadores", label: "Indicadores & Métricas", icon: "indicadores" },
-      { to: "/apresentacao", label: "Modo apresentação", icon: "documento" },
       { to: "/exportar", label: "Exportar conteúdo (PDF)", icon: "documento" },
       { to: "/favoritos", label: "Favoritos", icon: "favorito" },
       { to: "/busca", label: "Busca avançada", icon: "busca" },
@@ -117,7 +115,6 @@ const MODULOS: ModuloGrupo[] = [
     title: "Rede & Conectividade", tone: "teal", icon: "sincronizar", items: [
       { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
       { to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" },
-      { to: "/telediagnostico", label: "Consultoria / Telediagnóstico", icon: "evidencia" },
       { to: "/material-paciente", label: "Compartilhamento com paciente", icon: "documento" },
     ],
   },

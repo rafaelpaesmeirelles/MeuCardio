@@ -41,12 +41,13 @@ function harness(fetcher) {
     const compiled = ts.transpileModule(source, { fileName: relative, compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true } }).outputText;
     const module = { exports: {} };
     vm.runInNewContext(compiled, {
-      module, exports: module.exports, window, Headers, Response, FormData, AbortController, DOMException, URLSearchParams,
+      module, exports: module.exports, window, Headers, Response, FormData, AbortController, DOMException, URL, URLSearchParams,
       setTimeout: window.setTimeout, clearTimeout: window.clearTimeout, fetch: fetcher,
       require: name => {
         if (stubs[name]) return { __esModule: true, ...stubs[name] };
         if (name.endsWith('.css')) return {};
         if (name === '../lib/api') return load('lib/api.ts');
+        if (name === './loginReturn') return load('lib/loginReturn.ts');
         if (name === '../lib/commercialPlans') return load('lib/commercialPlans.ts');
         if (name === '../lib/taxonomiaCardiologia') return load('lib/taxonomiaCardiologia.ts');
         if (name === '../components/Estado') return load('components/Estado.tsx');

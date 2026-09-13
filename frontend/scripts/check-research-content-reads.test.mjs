@@ -40,7 +40,7 @@ function harness(fetcher) {
   });
   const passthrough = ({ children, title, description }) => React.createElement('section', null,
     title && React.createElement('h2', null, title), description && React.createElement('p', null, description), children);
-  const noSideEffects = new Set(['BotaoFavorito', 'ScientificReadingAccess', 'TudoSobreEsteTema', 'GrafoRelacionados',
+  const noSideEffects = new Set(['BotaoFavorito', 'AlertasDiretrizesFavoritas', 'ScientificReadingAccess', 'TudoSobreEsteTema', 'GrafoRelacionados',
     'Fluxograma', 'ExportarApresentacao', 'ClinicalUpdates', 'PrivateScientificOriginal']);
   function load(relative) {
     if (cache.has(relative)) return cache.get(relative);

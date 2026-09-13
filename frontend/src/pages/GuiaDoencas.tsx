@@ -119,13 +119,18 @@ export default function GuiaDoencas() {
   }, [serializedParams, setParams, tab]);
 
   useEffect(() => {
+    let active = true;
+    const controller = new AbortController();
     const facetParams = new URLSearchParams();
     if (GENERAL_FILTER_TABS.has(tab) && area) facetParams.set("area", area);
     if (GENERAL_FILTER_TABS.has(tab) && clinicalDomain) facetParams.set("clinical_domain", clinicalDomain);
     const search = facetParams.toString();
-    api.get<DiseaseFacetsResponse>(`/specialty-guides/disease-facets${search ? `?${search}` : ""}`)
-      .then(setDiseaseFacets)
-      .catch(() => setDiseaseFacets({ areas: [], clinical_domains: [], categories: [] }));
+    api.get<DiseaseFacetsResponse>(`/specialty-guides/disease-facets${search ? `?${search}` : ""}`, { signal: controller.signal })
+      .then((response) => { if (active) setDiseaseFacets(response); })
+      .catch(() => {
+        if (active) setDiseaseFacets({ areas: [], clinical_domains: [], categories: [] });
+      });
+    return () => { active = false; controller.abort(); };
   }, [area, clinicalDomain, tab]);
 
   const filters = useMemo(() => {
@@ -146,10 +151,11 @@ export default function GuiaDoencas() {
 
   useEffect(() => {
     let active = true;
+    const controller = new AbortController();
     setLoading(true);
     setError("");
     const search = new URLSearchParams(filters).toString();
-    api.get<Response>(`/specialty-guides/diseases?${search}`)
+    api.get<Response>(`/specialty-guides/diseases?${search}`, { signal: controller.signal })
       .then((response) => {
         if (!active) return;
         setItems((previous) => page === 1 ? response.items : [...previous, ...response.items]);
@@ -158,7 +164,7 @@ export default function GuiaDoencas() {
       })
       .catch((cause) => { if (active) setError(cause.message); })
       .finally(() => { if (active) setLoading(false); });
-    return () => { active = false; };
+    return () => { active = false; controller.abort(); };
   }, [filters, page]);
 
   function changeTab(next: Tab) {

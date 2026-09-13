@@ -23,6 +23,14 @@ function constant(source, name, next) {
 }
 const home = await read("pages/CardiologySpacesHome.tsx");
 const catalog = JSON.parse(constant(home, "CATALOG", "const ESSENTIAL_DEFAULTS"));
+const panel = JSON.parse(constant(await read('pages/PainelClinicalOS.tsx'), 'MODULOS', 'const CONTEXTOS_INICIAIS'));
+
+test('legacy panel retains one presentation and one telediagnosis access', () => {
+  const items = panel.flatMap(group => group.items);
+  for (const destination of ['/apresentacao', '/telediagnostico']) {
+    assert.equal(items.filter(item => item.to === destination).length, 1, destination);
+  }
+});
 
 test("requested functions stay discoverable in their categories when installation flags are off", () => {
   for (const [title, destination] of [["Clínica & Decisão", "/heart-team"], ["Assistência", "/whatsapp-assistant"], ["Ciência & Ensino", "/intelligence"]]) {

@@ -240,7 +240,7 @@ function ScientificDocumentWorkspace() {
   }
 
   return (
-    <div className="cc-page">
+    <div className="cc-page scientific-document-page">
       <ClinicalPageHeader
         eyebrow="Conhecimento privado + IA clínica"
         title="Análise de documento científico"
@@ -263,7 +263,7 @@ function ScientificDocumentWorkspace() {
           {listError && <div role="alert"><p>{listError}</p><button type="button" className="btn" onClick={() => setListAttempt(value => value + 1)}>Tentar carregar biblioteca novamente</button></div>}
           <div className="lista-simples">
             {items.map((item) => (
-              <button key={item.id} type="button" className="item-lista" disabled={busy} onClick={() => void selectDocument(item.id)}>
+              <button key={item.id} type="button" className="item-lista" aria-current={requestedDocument === item.id ? "true" : undefined} disabled={busy} onClick={() => void selectDocument(item.id)}>
                 <strong>{item.title}</strong>
                 <small>{item.document_type} · {item.analysis_status}{item.incorporation_status === "incorporado" ? " · incorporado" : ""}</small>
               </button>

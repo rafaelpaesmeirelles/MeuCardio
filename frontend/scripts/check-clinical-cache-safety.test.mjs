@@ -201,26 +201,43 @@ for (const failNetwork of [false, true]) {
   test(`API logout clears clinical caches even when network fails: ${failNetwork}`, async () => {
     let purged = 0;
     const removed = [];
+    const sessionRemoved = [];
+    const window = {
+      localStorage: { removeItem: (key) => removed.push(key) },
+      sessionStorage: { removeItem: (key) => sessionRemoved.push(key) },
+    };
     const { api } = load("src/lib/api.ts", {
-      window: { localStorage: { removeItem: (key) => removed.push(key) } },
+      window,
       fetch: async () => { if (failNetwork) throw new Error("offline"); return { ok: true }; },
-    }, () => ({ clearLegacyClinicalCaches: async () => { purged += 1; } }));
+    }, (name) => {
+      if (name === './loginReturn') return load('src/lib/loginReturn.ts', { window, URL });
+      if (name === './clinicalCache') return { clearLegacyClinicalCaches: async () => { purged += 1; } };
+      throw new Error(`Unexpected import: ${name}`);
+    });
     if (failNetwork) await assert.rejects(api.logout(), /offline/);
     else await api.logout();
     assert.equal(purged, 1);
     assert.ok(removed.includes("meucardio.token"));
+    assert.deepEqual(sessionRemoved, ['corvia:login-return:v1']);
   });
 }
 
 test("Cache Storage errors do not prevent local logout", async () => {
   const warnings = [];
+  const sessionRemoved = [];
+  const window = { localStorage: { removeItem() {} }, sessionStorage: { removeItem: key => sessionRemoved.push(key) } };
   const { api } = load("src/lib/api.ts", {
-    window: { localStorage: { removeItem() {} } },
+    window,
     fetch: async () => ({ ok: true }),
     console: { warn: (message) => warnings.push(message) },
-  }, () => ({ clearLegacyClinicalCaches: async () => { throw new Error("unavailable"); } }));
+  }, (name) => {
+    if (name === './loginReturn') return load('src/lib/loginReturn.ts', { window, URL });
+    if (name === './clinicalCache') return { clearLegacyClinicalCaches: async () => { throw new Error("unavailable"); } };
+    throw new Error(`Unexpected import: ${name}`);
+  });
   await api.logout();
   assert.equal(warnings.length, 1);
+  assert.deepEqual(sessionRemoved, ['corvia:login-return:v1']);
 });
 
 test("failed server logout still clears the current user's React state", async () => {
