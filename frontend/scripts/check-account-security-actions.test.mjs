@@ -252,14 +252,67 @@ test('confirmed revocation still returns to login if the extra logout transport 
   assert.equal(h.route.state.todasSessoesEncerradas, true);
 });
 
-test('login displays the confirmed-session notice and MinhaConta mounts both controls', async t => {
+test('login displays the confirmed-session notice', async t => {
   const h = harness(() => { throw Error('No request expected'); });
   const r = await h.mount(t, 'pages/Entrar.tsx', 'default', {}, { pathname: '/entrar', state: { todasSessoesEncerradas: true } });
   assert.match(visible(r), /Todas as sessões da conta foram encerradas/);
   assert.equal(r.root.findAllByProps({ role: 'status' }).length, 1);
-  const account = source('pages/MinhaConta.tsx');
-  assert.match(account, /<EmailRecuperacao key=\{usuario.id\} loginEmail=\{usuario.email\}/);
-  assert.match(account, /<SessoesConta key=\{usuario.id\}/);
+});
+
+test('MinhaConta keeps one recovery and session section across profile and identity refreshes', async t => {
+  const profile = deferred();
+  const h = harness(async (url, init) => {
+    assert.equal(init.method, undefined, 'the account integration fixture only reads data');
+    if (url === '/api/auth/me') return profile.promise;
+    if (url === '/api/auth/email-recuperacao') return json({ recovery_email: `recovery-${h.auth.usuario.id}@example.test` });
+    if (['/api/agenda/integrations', '/api/assinatura/provedores', '/api/assinatura/certificadoras'].includes(url)) return json([]);
+    if (url === '/api/assinatura/certificado-a1') return json({ conectado: false });
+    if (url === '/api/email/assinatura') return json({ ativa: false });
+    if (url === '/api/billing/status') return json({ status: 'ativo', current_period_end: null, plano: null });
+    if (url === '/api/billing/faturas') return json({ faturas: [] });
+    throw Error('Unexpected account request: ' + url);
+  });
+  h.auth.usuario = { ...h.auth.usuario, full_name: 'QA account A' };
+  const r = await h.mount(t, 'pages/MinhaConta.tsx');
+  // Inspect rendered host output, including any orphan left by duplicate-key
+  // reconciliation, instead of only inspecting the current component fibers.
+  function expectSections(recoveryCount = 1) {
+    const nodes = [];
+    function visit(node) {
+      if (!node || typeof node === 'string') return;
+      if (Array.isArray(node)) { node.forEach(visit); return; }
+      nodes.push(node);
+      node.children?.forEach(visit);
+    }
+    visit(r.toJSON());
+    const count = (type, property, value) => nodes.filter(node => node.type === type && node.props[property] === value).length;
+    assert.equal(count('section', 'aria-labelledby', 'email-recuperacao-titulo'), recoveryCount, 'one visible recovery section for the current identity');
+    assert.equal(count('h2', 'id', 'email-recuperacao-titulo'), recoveryCount, 'recovery heading IDs must be unique');
+    assert.equal(count('input', 'id', 'email-recuperacao'), recoveryCount, 'recovery inputs must not accumulate');
+    assert.equal(count('section', 'aria-labelledby', 'sessoes-conta-titulo'), 1, 'one visible session section');
+    assert.equal(count('h2', 'id', 'sessoes-conta-titulo'), 1, 'session heading IDs must be unique');
+  }
+  expectSections();
+  await changed(r, 'email-recuperacao', 'draft@example.test');
+  await changed(r, 'email-recuperacao-senha', 'SYNTHETIC-CURRENT-PASSWORD');
+  await act(async () => profile.resolve(json({ ...h.auth.usuario, full_name: 'QA updated profile' })));
+  h.auth.usuario = { ...h.auth.usuario, full_name: 'QA refreshed identity' };
+  await r.refreshIdentity();
+  expectSections();
+  assert.equal(r.root.findByProps({ id: 'email-recuperacao' }).props.value, 'draft@example.test', 'same-account refresh preserves the pending form');
+
+  h.auth.usuario = { id: 900002, email: 'account-b@example.test' };
+  await r.refreshIdentity();
+  expectSections();
+  assert.equal(r.root.findByProps({ id: 'email-recuperacao' }).props.value, 'recovery-900002@example.test');
+  assert.equal(r.root.findByProps({ id: 'email-recuperacao-senha' }).props.value, '', 'a different identity starts with an empty password');
+
+  h.auth.usuario = { ...h.auth.usuario, investidor: true };
+  await r.refreshIdentity();
+  expectSections(0);
+  h.auth.usuario = { ...h.auth.usuario, investidor: false };
+  await r.refreshIdentity();
+  expectSections();
 });
 
 for (const outcome of ['success', 'error']) {
