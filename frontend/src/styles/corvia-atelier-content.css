@@ -647,6 +647,12 @@ html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-c
 html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content .conteudo > section#documentos > h2 {
   color: #f4f1e7 !important;
 }
+/* These error-state labels sit directly on the dark frame, outside paper
+   cards. Keep the card text and the light theme on their existing palettes. */
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content > .function-favorite-context .favorite-control > [role="alert"],
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content > .cos-content > section.ia > h1 {
+  color: #f4f1e7 !important;
+}
 
 /* Intrinsic grid and flex widths must not enlarge the whole viewport. */
 html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.cartao, .cc-section, .cc-detail-card, .cc-entity-card, .cc-guideline-card, .cc-guideline-list, .cc-clinical-list) {
@@ -778,6 +784,32 @@ html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-c
    legacy command-board hid them and its off-card circles enlarged scrollWidth. */
 html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page > h1 + p {
   color: var(--atelier-muted) !important;
+}
+html[data-corvia-design="atelier"][data-corvia-theme="dark"] #root .cv-app .cv-content .documents-page > h1 + p {
+  color: #b8c3b8 !important;
+}
+/* Saved templates and related-function cards remain paper surfaces even
+   when the surrounding frame is dark. Match their directly colored copy. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page #modelos-salvos > h2 {
+  color: var(--atelier-ink) !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page a.cartao > .eyebrow {
+  color: #736346 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page .corvia-loading-state > p {
+  color: var(--atelier-muted) !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page #modelos-salvos > .cartao[role="alert"] > p {
+  color: var(--alerta) !important;
+}
+/* Nested labels miss the legacy direct-child correction. Limit the repair
+   to these paper forms; clinical state colors and document markup keep theirs. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .export-content-page .cartao label span > strong,
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .preop-page > .cartao > p > strong:not([style]) {
+  color: var(--atelier-ink) !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content :is(.export-content-page, .preop-page) .cartao p > a:not(.botao) {
+  color: var(--atelier-teal) !important;
 }
 html[data-corvia-design="atelier"] #root .cv-app .cv-content .documents-page > .grade > button.cartao {
   display: flex;

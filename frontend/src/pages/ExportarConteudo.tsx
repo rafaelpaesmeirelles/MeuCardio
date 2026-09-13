@@ -217,7 +217,7 @@ export default function ExportarConteudo() {
   }
 
   return (
-    <div style={{ maxWidth: 1080, minWidth: 0 }}>
+    <div className="export-content-page" style={{ maxWidth: 1080, minWidth: 0 }}>
       <p className="eyebrow">Produção clínica e científica</p>
       <h1>Exportar conteúdo</h1>
       <p className="subtitulo" style={{ maxWidth: "76ch" }}>

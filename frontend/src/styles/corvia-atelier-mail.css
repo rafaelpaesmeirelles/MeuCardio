@@ -15,6 +15,22 @@ html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell :is(.cmp
   font-size: 14px !important;
 }
 html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell :is(.cmp-reader__header > p, .cmp-composer header small, .cmp-global-search > span, .cmp-star, .cmp-sidebar__section > p) { color: #8b4b32 !important; }
+/* These controls sit on the pearl sidebar in both themes. The legacy dark
+   skin assigns foregrounds directly, so changing only the parent is not enough. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell .cmp-user strong { color: #263936 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell .cmp-sidebar__section > button { color: #53615a !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell .cmp-sidebar__section > button:is(:hover, .is-active) {
+  color: #713c28 !important;
+  background: #f6eee7 !important;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell .cmp-sidebar__section > button > span { color: inherit !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell .cmp-sidebar__section > button > b { color: #53615a !important; background: #eee6dc !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell .cmp-account-card { color: #263936 !important; background: #fffdfa !important; border-color: #d8c7b9 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell :is(.cmp-account-card > span, .cmp-account-card small, .cmp-sidebar__privacy) { color: #53615a !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell .cmp-account-card em { color: #146349 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell .cmp-account-card button { color: #8b4b32 !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell .cmp-message { background: #fffdfa !important; }
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell .cmp-message:is(:hover, .is-active) { background: #f6eee7 !important; }
 html[data-corvia-design="atelier"] #root .cv-app .cv-content .cmp-shell :is(.cmp-compose-primary, .cmp-send, .cmp-reply) {
   color: #fffdf8 !important;
   background: #8b4b32 !important;
