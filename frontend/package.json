@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "test:document-signature-flow": "node --test scripts/check-document-signature-flow.test.mjs",
+    "test:internal-functions": "node --test scripts/check-document-signature-flow.test.mjs scripts/check-internal-functions-flow.test.mjs",
+    "prebuild": "npm run test:internal-functions",
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0",

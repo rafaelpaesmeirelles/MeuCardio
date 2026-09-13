@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { api, ApiError, todasAsPaginas } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS, todasAsPaginas } from "../lib/api";
 import { Carregando, Vazio } from "../components/Estado";
 
 type Resumo = {
@@ -37,12 +37,31 @@ export default function Checklists() {
   const [busca, setBusca] = useState("");
   const [tipo, setTipo] = useState<"" | "doenca" | "procedimento">("");
   const [erro, setErro] = useState("");
+  const [erroHistorico, setErroHistorico] = useState("");
+  const [carregandoHistorico, setCarregandoHistorico] = useState(true);
+  const [tentativaHistorico, setTentativaHistorico] = useState(0);
+  const [iniciando, setIniciando] = useState<string | null>(null);
+  const inicioEmAndamento = useRef(false);
+  const montado = useRef(true);
 
   useEffect(() => {
-    api.get<Aplicacao[]>("/checklists/aplicacoes/minhas")
-      .then(setMinhas)
-      .catch(() => setMinhas([]));
+    montado.current = true;
+    return () => { montado.current = false; };
   }, []);
+
+  useEffect(() => {
+    let ativo = true;
+    const controller = new AbortController();
+    setErroHistorico("");
+    setCarregandoHistorico(true);
+    api.get<Aplicacao[]>("/checklists/aplicacoes/minhas", { signal: controller.signal, timeoutMs: READ_TIMEOUT_MS })
+      .then((itens) => { if (ativo) setMinhas(itens); })
+      .catch(() => {
+        if (ativo) setErroHistorico("Não foi possível carregar seu histórico de checklists. Tente novamente.");
+      })
+      .finally(() => { if (ativo) setCarregandoHistorico(false); });
+    return () => { ativo = false; controller.abort(); };
+  }, [tentativaHistorico]);
 
   useEffect(() => {
     let ativo = true;
@@ -67,18 +86,26 @@ export default function Checklists() {
   }, [busca, tipo]);
 
   async function iniciar(slug: string) {
-    const identificacao = window.prompt(
-      "Identificação desta alta (opcional — leito, iniciais ou referência do caso):",
-    );
-    if (identificacao === null) return;
+    // Lock before prompting and before React commits the disabled state.
+    if (inicioEmAndamento.current) return;
+    inicioEmAndamento.current = true;
+    setIniciando(slug);
+    setErro("");
     try {
+      const identificacao = window.prompt(
+        "Identificação desta alta (opcional — leito, iniciais ou referência do caso):",
+      );
+      if (identificacao === null) return;
       const resposta = await api.post<{ id: number }>("/checklists/aplicacoes", {
         checklist_slug: slug,
         identificacao_livre: identificacao || null,
       });
-      window.location.assign(`/checklists/alta/${resposta.id}`);
+      if (montado.current) window.location.assign(`/checklists/alta/${resposta.id}`);
     } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar o checklist.");
+      if (montado.current) setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar o checklist.");
+    } finally {
+      inicioEmAndamento.current = false;
+      if (montado.current) setIniciando(null);
     }
   }
 
@@ -104,6 +131,13 @@ export default function Checklists() {
         dos protocolos da Biblioteca. Cada item mantém a seção de origem.
       </p>
       {erro && <p role="alert" className="erro">{erro}</p>}
+      {carregandoHistorico && <p role="status">Carregando seu histórico de checklists…</p>}
+      {erroHistorico && <div role="alert" className="cartao">
+        <p>{erroHistorico}</p>
+        <button className="botao botao--secundario" type="button" onClick={() => setTentativaHistorico((atual) => atual + 1)}>
+          Tentar carregar histórico novamente
+        </button>
+      </div>}
 
       {emAndamento.length > 0 && (
         <section>
@@ -173,8 +207,8 @@ export default function Checklists() {
                   <span className="dado">
                     {modelo.total_itens} itens · {modelo.obrigatorios} obrigatórios
                   </span>
-                  <button className="botao botao--acao" onClick={() => iniciar(modelo.slug)}>
-                    Usar nesta alta
+                  <button className="botao botao--acao" onClick={() => iniciar(modelo.slug)} disabled={iniciando !== null}>
+                    {iniciando === modelo.slug ? "Iniciando…" : "Usar nesta alta"}
                   </button>
                   <Link className="botao" to={`/checklists/${modelo.slug}`}>
                     Abrir e ver conexões
