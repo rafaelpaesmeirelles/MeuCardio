@@ -1244,8 +1244,8 @@ export default function MinhaConta() {
           }}
         />
         <TrocarSenha />
-        {usuario && !usuario.investidor && <EmailRecuperacao key={usuario.id} loginEmail={usuario.email} />}
-        {usuario && <SessoesConta key={usuario.id} />}
+        {usuario && !usuario.investidor && <EmailRecuperacao key={`email-recuperacao-${usuario.id}`} loginEmail={usuario.email} />}
+        {usuario && <SessoesConta key={`sessoes-conta-${usuario.id}`} />}
         <Assinatura />
         <HistoricoCobrancas />
       </div>
