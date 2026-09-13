@@ -260,16 +260,23 @@ def _search_sql(match_predicate: str, *, disease: bool = False, include_counts: 
   WHERE CAST(:secao AS text) IS NULL OR secao = CAST(:secao AS text)
 )""" if paged else "")
     section_column = "secao, " if paged else ""
-    relevance_columns = ("""relevance_order, clinical_role, clinical_context,
+    # Generic text retrieval can match body/theme alone. Clinical roles are
+    # exposed only after the API resolves a disease or drug identity.
+    clinical_columns = "clinical_role, clinical_context, " if disease else ""
+    relevance_columns = (f"""relevance_order, {clinical_columns}
        match_reasons, relation_type, context_only, """ if paged else "")
-    metadata_columns = ("""
+    default_role = "'direct'" if disease else "NULL"
+    reason_source = "identity" if disease else "text_search"
+    reason_description = ("Correspondência com a consulta no catálogo publicado." if disease else
+                          "Correspondência textual com a consulta; não estabelece relação clínica.")
+    metadata_columns = (f"""
          coalesce((metadata->>'priority')::integer,
            CASE WHEN metadata->>'clinical_role' = 'mention' THEN 800 ELSE 250 END
          ) AS clinical_priority,
-         coalesce(metadata->>'clinical_role', 'direct') AS clinical_role,
+         coalesce(metadata->>'clinical_role', {default_role}) AS clinical_role,
          metadata->>'clinical_context' AS clinical_context,
          coalesce(metadata->'match_reasons', jsonb_build_array(jsonb_build_object(
-           'source', 'identity', 'description', 'Correspondência com a consulta no catálogo publicado.'
+           'source', '{reason_source}', 'description', '{reason_description}'
          ))) AS match_reasons,
          metadata->>'relation_type' AS relation_type,
          coalesce((metadata->>'context_only')::boolean, false) AS context_only,""" if paged else "")

@@ -59,15 +59,30 @@ def test_calculator_editorial_section_includes_documents_without_changing_identi
     result = api_search(client, headers, 'score', secao='calculadora', limit=100)
     assert result['por_secao']['calculadora'] == len(calculators) + 1
     assert result['por_frente'] == {'calculadora': len(calculators), 'documento': 1}
-    identities = {(row['frente'], row['slug']) for row in result['results']}
-    assert len(identities) == len(calculators) + 1
+    ordered_identities = [(row['frente'], row['slug']) for row in result['results']]
+    identities = set(ordered_identities)
+    assert len(ordered_identities) == len(identities) == result['total'] == len(calculators) + 1
+    assert result['next_offset'] is None
+    assert identities == {('calculadora', item['slug']) for item in calculators} | {
+        ('documento', calculators[0]['slug']),
+    }
     only_document = api_search(client, headers, 'score', frente='documento', secao='calculadora')
     assert only_document['por_frente'] == {'documento': 1}
     only_tools = api_search(client, headers, 'score', frente='calculadora', secao='calculadora')
     assert only_tools['por_frente'] == {'calculadora': len(calculators)}
     assert api_search(client, headers, 'score', frente='calculadora', secao='geral')['total'] == 0
-    boundary = api_search(client, headers, 'score', secao='calculadora', offset=len(calculators)-1, limit=2)
-    assert [row['frente'] for row in boundary['results']] == ['calculadora', 'documento']
+    # Global relevance determines the namespace boundary; calculators are not a prefix.
+    namespace_boundary = next(
+        index - 1 for index in range(1, len(ordered_identities))
+        if ordered_identities[index - 1][0] != ordered_identities[index][0]
+    )
+    for offset in sorted({len(calculators) - 1, namespace_boundary}):
+        boundary = api_search(client, headers, 'score', secao='calculadora', offset=offset, limit=2)
+        assert [(row['frente'], row['slug']) for row in boundary['results']] == ordered_identities[offset:offset + 2]
+        assert boundary['total'] == result['total']
+        assert boundary['por_frente'] == result['por_frente']
+        assert boundary['por_secao'] == result['por_secao']
+        assert boundary['next_offset'] == (offset + 2 if offset + 2 < result['total'] else None)
 
 
 def test_formal_studies_are_visible_as_guidance_without_promoting_trial_titles(client, db, criar_usuario):

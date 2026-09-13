@@ -53,6 +53,54 @@ def request(client, auth, **params):
     return payload
 
 
+@pytest.mark.parametrize("query,expected", [
+    ("sentinelalexical", {"lexical-title", "lexical-body"}),
+    ("nelalexi", {"lexical-title", "lexical-body", "lexical-theme"}),
+])
+def test_generic_text_matches_do_not_claim_a_clinical_role(client, db, criar_usuario, query, expected):
+    # The full word uses FTS; its middle substring requires the literal fallback.
+    # A textual occurrence in any searchable field is not a clinical relation.
+    db.add_all([
+        Document(slug="lexical-title", title="Sentinelalexical", kind="artigo",
+                 theme="Teste", body_md="Conteúdo", published=True, review_status="revisado"),
+        Document(slug="lexical-body", title="Revisão geral", kind="artigo",
+                 theme="Teste", body_md="Menção incidental a sentinelalexical.",
+                 published=True, review_status="revisado"),
+        Document(slug="lexical-theme", title="Outro documento", kind="artigo",
+                 theme="Sentinelalexical", body_md="Conteúdo", published=True, review_status="revisado"),
+    ])
+    db.commit()
+    _, token = criar_usuario(role="admin")
+    payload = request(client, {"Authorization": f"Bearer {token}"}, q=query)
+    assert payload["primary_disease"] is None and payload["primary_drug"] is None
+    assert {row["slug"] for row in payload["results"]} == expected
+    for row in payload["results"]:
+        assert "clinical_role" not in row and "clinical_context" not in row
+        assert row["match_reasons"] == [{"source": "text_search", "description":
+            "Correspondência textual com a consulta; não estabelece relação clínica."}]
+
+
+def test_identified_disease_and_drug_keep_clinical_identity_metadata(client, db, criar_usuario, monkeypatch):
+    disease(db)
+    db.add(Drug(slug="varfarina", generic_name="Varfarina", drug_class="AVK",
+                published=True, review_status="revisado"))
+    monkeypatch.setattr(search_api, "buscar_relacionados_do_medicamento", lambda *_, **__: {"grupos": []})
+    db.commit()
+    _, token = criar_usuario(role="admin")
+    for query, front, slug, primary in (
+        ("estenose mitral", "doenca", "estenose-mitral", "primary_disease"),
+        ("varfarina", "medicamento", "varfarina", "primary_drug"),
+    ):
+        payload = request(client, {"Authorization": f"Bearer {token}"}, q=query, frente=front)
+        assert payload[primary]["slug"] == slug
+        assert payload["total"] == 1
+        row = payload["results"][0]
+        assert row["slug"] == slug and row["clinical_role"] == "direct"
+        assert row["clinical_context"] is None
+        assert row["match_reasons"] == [{"source": "identity", "description":
+            "Correspondência com a consulta no catálogo publicado."}]
+
+
 def test_reviewed_tags_recover_invictus_ben_farhat_and_planimetry_without_graph(client, db, criar_usuario):
     disease(db)
     db.add_all([
