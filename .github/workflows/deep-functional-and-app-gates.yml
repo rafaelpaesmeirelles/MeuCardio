@@ -7,6 +7,10 @@ on:
       - "backend/app/**"
       - "frontend/src/**"
       - "scripts/deep_feature_inventory.py"
+      - "scripts/tests/test_deep_feature_inventory.py"
+      - "scripts/audit_search_clinical_relevance.py"
+      - "scripts/tests/test_audit_search_clinical_relevance.py"
+      - "scripts/fixtures/tudo_com_tudo_search_mitral.json"
       - "scripts/validate_public_app_artifacts.py"
       - ".github/workflows/deep-functional-and-app-gates.yml"
   schedule:
@@ -34,6 +38,8 @@ jobs:
         run: |
           if [ "$EVENT_NAME" = "pull_request" ]; then echo "ref=$PR_BASE_SHA" >> "$GITHUB_OUTPUT";
           else echo "ref=" >> "$GITHUB_OUTPUT"; fi
+      - name: Test inventory analysis and clinical relevance auditor
+        run: python3 -m unittest scripts.tests.test_deep_feature_inventory scripts.tests.test_audit_search_clinical_relevance
       - name: Validate deep functional inventory
         env:
           BASE_REF: ${{ steps.baseline.outputs.ref }}

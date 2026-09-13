@@ -201,6 +201,48 @@ class ClinicalSearchAuditTests(unittest.TestCase):
         self.assertIsNone(comparison["required_positions"][0]["before"])
         self.assertEqual(comparison["required_positions"][0]["after"], 1)
 
+    def test_versioned_curation_profile_satisfies_independent_gold_and_rejects_mutations(self):
+        """Curation contract only: does not establish SQL selection or item existence."""
+        profile = json.loads((ROOT / "backend/app/data/search_clinical_context.json").read_text(
+            encoding="utf-8"))
+        gold = json.loads((ROOT / "scripts/fixtures/tudo_com_tudo_search_mitral.json").read_text(
+            encoding="utf-8"))
+        items = profile["diseases"][gold["disease_slug"]]["items"]
+        projection = {
+            "query": gold["query"], "primary_disease": {"slug": gold["disease_slug"]},
+            "results": [
+                {"frente": item["frente"], "slug": item["slug"],
+                 "clinical_role": item["role"], "clinical_context": item["context"]}
+                for item in sorted(items, key=lambda item: item["priority"])
+            ],
+        }
+        # The gold is an independent clinical judgment, never derived from the
+        # profile being tested. Lock the approved scope as well as its outcome.
+        self.assertEqual(len(gold["required"]), 11)
+        self.assertEqual(len(gold["qualified"]), 24)
+        report = AUDITOR.evaluate_response(projection, gold)
+        self.assertTrue(report["passed"], report["failures"])
+        self.assertEqual(report["top_20"]["returned_count"], 20)
+        self.assertEqual(report["top_20"]["judged_count"], 20)
+        self.assertTrue(report["top_20"]["clinical_review_complete"])
+
+        mutations = [
+            ("medicamento:varfarina-sodica", "clinical_role", "direct", "qualified_role"),
+            ("evidencia:geriatria-varfarina-indefinida-na-estenose-mitral-com-fa",
+             "clinical_context", "Orientação de anticoagulação na estenose mitral.",
+             "qualified_context"),
+        ]
+        for key, field, value, expected_failure in mutations:
+            with self.subTest(key=key, field=field):
+                mutated = deepcopy(projection)
+                row = next(row for row in mutated["results"] if AUDITOR.identity(row) == key)
+                row[field] = value
+                failed = AUDITOR.evaluate_response(mutated, gold)
+                self.assertFalse(failed["passed"])
+                self.assertTrue(any(failure["code"] == expected_failure
+                                    and failure.get("key") == key
+                                    for failure in failed["failures"]), failed["failures"])
+
     def test_cli_returns_nonzero_json_for_failed_gold_without_importing_backend(self):
         with tempfile.TemporaryDirectory() as tmp:
             gold_path = Path(tmp) / "gold.json"
