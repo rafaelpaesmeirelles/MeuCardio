@@ -17,7 +17,9 @@ ENV VITE_DEPLOY_COMMIT=${VITE_DEPLOY_COMMIT}
 ENV VITE_CARDIOLOGY_SPACES_ENABLED=${VITE_CARDIOLOGY_SPACES_ENABLED}
 ENV VITE_HEART_TEAM_ENABLED=${VITE_HEART_TEAM_ENABLED}
 ENV VITE_WHATSAPP_ASSISTANT_ENABLED=${VITE_WHATSAPP_ASSISTANT_ENABLED}
-RUN npm run build
+# Repository contracts run in CI through prebuild and need backend/infra files
+# outside this frontend-only Docker context. Compile the certified assets here.
+RUN npm run build:assets
 
 FROM node:22-alpine
 COPY --from=build /app/dist /dist
