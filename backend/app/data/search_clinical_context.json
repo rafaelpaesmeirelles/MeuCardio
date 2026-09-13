@@ -1,0 +1,1117 @@
+{
+  "schema_version": 1,
+  "diseases": {
+    "estenose-mitral": {
+      "references": [
+        "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+        "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051",
+        "https://pubmed.ncbi.nlm.nih.gov/9462525/",
+        "https://pubmed.ncbi.nlm.nih.gov/487543/",
+        "https://doi.org/10.1038/s41569-023-00940-9",
+        "https://doi.org/10.1093/eurheartj/ehaa605",
+        "https://doi.org/10.5935/abc.20190086",
+        "https://doi.org/10.36660/abc.20240590",
+        "https://doi.org/10.36660/abc.20240110",
+        "https://doi.org/10.36660/abc.20201047"
+      ],
+      "items": [
+        {
+          "frente": "doenca",
+          "slug": "estenose-mitral",
+          "role": "direct",
+          "priority": 0,
+          "context": "Verbete da doença: causas, diagnóstico, gravidade e manejo.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "documento",
+          "slug": "estenose-mitral-diagnostico-e-manejo-esc-eacts-2025",
+          "role": "direct",
+          "priority": 10,
+          "context": "Referência geral de diagnóstico e manejo; distinguir etiologia reumática e degenerativa.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "documento",
+          "slug": "fluxograma-estenose-mitral-grave-comissurotomia-vs-cirurgia-esc-eacts-2025",
+          "role": "direct",
+          "priority": 20,
+          "context": "Decisão de intervenção na forma reumática conforme sintomas e anatomia.",
+          "relation_type": "uses_flowchart",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "exame",
+          "slug": "planimetria-da-area-valvar-mitral",
+          "role": "direct",
+          "priority": 30,
+          "context": "Quantificação ecocardiográfica da área mitral; interpretar conforme etiologia.",
+          "relation_type": "diagnosed_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/40878295/",
+            "https://doi.org/10.1093/eurheartj/ehaf194",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "estudo",
+          "slug": "invictus-rivaroxabana-na-fibrilacao-atrial-da-valvopatia-reumatica",
+          "role": "direct",
+          "priority": 40,
+          "context": "INVICTUS: FA associada à cardiopatia reumática; AVK superou rivaroxabana.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://doi.org/10.1056/NEJMoa2209051",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "estudo",
+          "slug": "ben-farhat-valvoplastia-mitral-por-balao-versus-comissurotomia-cirurgica",
+          "role": "direct",
+          "priority": 50,
+          "context": "Comparação de procedimentos em estenose reumática grave com valva pliável.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://doi.org/10.1161/01.cir.97.3.245",
+            "https://pubmed.ncbi.nlm.nih.gov/9462525/"
+          ]
+        },
+        {
+          "frente": "checklist",
+          "slug": "estenose-mitral-indicacao-de-intervencao-cmp-ou-cirurgia",
+          "role": "direct",
+          "priority": 60,
+          "context": "Revisão dos critérios antes de escolher comissurotomia ou cirurgia.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "material_paciente",
+          "slug": "estenose-mitral-entendendo-a-valvula-estreitada",
+          "role": "direct",
+          "priority": 70,
+          "context": "Explicação da doença e do acompanhamento para pacientes.",
+          "relation_type": "patient_education_for",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "exame",
+          "slug": "tempo-de-meia-pressao-na-estenose-mitral",
+          "role": "direct",
+          "priority": 80,
+          "context": "Método Doppler complementar; não substituir avaliação integrada por uma medida isolada.",
+          "relation_type": "diagnosed_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/42510148/",
+            "https://pubmed.ncbi.nlm.nih.gov/42292499/",
+            "https://pubmed.ncbi.nlm.nih.gov/487543/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "material_paciente",
+          "slug": "valvuloplastia-mitral-por-balao-o-que-esperar-do-procedimento",
+          "role": "direct",
+          "priority": 90,
+          "context": "Orientação ao paciente sobre a intervenção por balão.",
+          "relation_type": "patient_education_for",
+          "evidence_sources": [
+            "https://doi.org/10.1038/s41569-023-00940-9",
+            "https://pubmed.ncbi.nlm.nih.gov/9462525/"
+          ]
+        },
+        {
+          "frente": "medicamento",
+          "slug": "varfarina-sodica",
+          "role": "conditional",
+          "priority": 100,
+          "context": "Anticoagulação na FA com estenose mitral reumática moderada/grave; não é indicação universal.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "documento",
+          "slug": "fibrilacao-atrial-valvar-reumatica-e-escolha-do-anticoagulante-invictus",
+          "role": "direct",
+          "priority": 110,
+          "context": "Aplicação do INVICTUS à escolha de anticoagulante na FA reumática.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "caso_clinico",
+          "slug": "fa-com-estenose-mitral-moderada-a-grave-doac-ou-varfarina",
+          "role": "conditional",
+          "priority": 120,
+          "context": "Caso com FA: a escolha do anticoagulante depende da lesão valvar.",
+          "relation_type": "used_in_case",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33111877/",
+            "https://doi.org/10.1093/eurheartj/ehab395",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "exame",
+          "slug": "ecocardiografia-de-estresse-na-doenca-valvar",
+          "role": "conditional",
+          "priority": 130,
+          "context": "Na discordância clínico-ecocardiográfica mitral, selecionar o protocolo de esforço apropriado.",
+          "relation_type": "diagnosed_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/42307309/",
+            "https://doi.org/10.36660/abc.20260223",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://doi.org/10.36660/abc.20240110"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "comissurotomia-mitral-percutanea-na-estenose-mitral-sintomatica-sem-caracteristicas-desfavoraveis",
+          "role": "conditional",
+          "priority": 140,
+          "context": "Aplicável à estenose reumática sintomática com anatomia favorável.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://doi.org/10.1093/eurheartj/ehab395",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "documento",
+          "slug": "rastreamento-ecocardiografico-whf-e-valvuloplastia-por-balao-na-estenose-mitral-reumatica",
+          "role": "direct",
+          "priority": 150,
+          "context": "Doença reumática: diagnóstico por imagem e seleção para balão.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://doi.org/10.1038/s41569-023-00940-9",
+            "https://pubmed.ncbi.nlm.nih.gov/9462525/"
+          ]
+        },
+        {
+          "frente": "documento",
+          "slug": "doenca-valvar-mitral-degenerativa-no-idoso-calcificacao-anular-e-opcoes-percutaneas",
+          "role": "conditional",
+          "priority": 160,
+          "context": "Forma degenerativa com calcificação anular; não extrapolar a seleção para balão reumático.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "galeria",
+          "slug": "estenose-mitral-reumatica-sinal-hockey-stick",
+          "role": "direct",
+          "priority": 170,
+          "context": "Imagem da morfologia reumática para reconhecimento ecocardiográfico.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC10896727/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "caso_clinico",
+          "slug": "estenose-mitral-reumatica-jovem-valvuloplastia-por-balao-versus-comissurotomia-cirurgica",
+          "role": "conditional",
+          "priority": 180,
+          "context": "Caso de paciente jovem com anatomia favorável ao procedimento.",
+          "relation_type": "used_in_case",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/8084354/",
+            "https://pubmed.ncbi.nlm.nih.gov/9462525/"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "valv-anticoagular-a-estenose-mitral-em-ritmo-sinusal-pelo-atrio-esquerdo",
+          "role": "conditional",
+          "priority": 190,
+          "context": "Em ritmo sinusal, avaliar embolia prévia, trombo e achados atriais; não anticoagular indiscriminadamente.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33111877/",
+            "https://doi.org/10.36660/abc.20201047",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "galeria",
+          "slug": "estenose-mitral-reumatica-patologia",
+          "role": "direct",
+          "priority": 302,
+          "context": "Achado de estenose mitral; correlacionar a imagem com a avaliação clínica.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://commons.wikimedia.org/wiki/File:Mitral_stenosis,_gross_pathology_20G0015_lores.jpg",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "estenose-mitral-importante-assintomatica-com-psap-elevada-tratar-antes-da-cirurgia",
+          "role": "conditional",
+          "priority": 303,
+          "context": "Recorte perioperatório: avaliar cirurgia planejada e repercussão hemodinâmica.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/39442131/",
+            "https://doi.org/10.36660/abc.20240590"
+          ]
+        },
+        {
+          "frente": "caso_clinico",
+          "slug": "estenose-mitral-degenerativa-por-calcificacao-anular-no-muito-idoso-diagnostico-e-conduta",
+          "role": "conditional",
+          "priority": 306,
+          "context": "Forma degenerativa no muito idoso; avaliar calcificação e risco das intervenções.",
+          "relation_type": "used_in_case",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/31587368/",
+            "https://pubmed.ncbi.nlm.nih.gov/32464177/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "trilha",
+          "slug": "trilha-febre-reumatica-estenose-mitral-grave-e-coreia-de-sydenham",
+          "role": "conditional",
+          "priority": 308,
+          "context": "Trilha de doença reumática; inclui também coreia, fora do manejo valvar.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://doi.org/10.1038/s41569-023-00940-9",
+            "https://pubmed.ncbi.nlm.nih.gov/9462525/"
+          ]
+        },
+        {
+          "frente": "estudo",
+          "slug": "amador-2024-seguimento-de-20-anos-apos-comissurotomia-mitral-percutanea-na-estenose-mitral-reumatica",
+          "role": "conditional",
+          "priority": 309,
+          "context": "Seguimento após comissurotomia: população já submetida à intervenção.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/38470469/"
+          ]
+        },
+        {
+          "frente": "galeria",
+          "slug": "estenose-mitral-cardiomegalia-e-congestao-radiografia",
+          "role": "direct",
+          "priority": 311,
+          "context": "Achado de estenose mitral; correlacionar a imagem com a avaliação clínica.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6122908/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "documento",
+          "slug": "estenose-mitral-descompensada-na-gestacao-e-edema-pulmonar",
+          "role": "conditional",
+          "priority": 312,
+          "context": "Aplicável à gestação ou seu planejamento; requer avaliação materna e fetal.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "checklist",
+          "slug": "decisao-entre-valvuloplastia-por-balao-percutanea-e-cirurgia-na-estenose-mitral-reumatica-cronica-grave",
+          "role": "direct",
+          "priority": 313,
+          "context": "Checklist específico de avaliação e decisão na estenose mitral.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-em-reducao-de-fc-alivia-sintoma-mesmo-em-ritmo-sinusal",
+          "role": "conditional",
+          "priority": 315,
+          "context": "Controle sintomático de frequência; não substitui avaliação da intervenção valvar.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "trilha",
+          "slug": "trilha-valvopatias-doenca-reumatica-estenose-mitral-e-anticoagulacao-na-fa",
+          "role": "direct",
+          "priority": 316,
+          "context": "Integra doença reumática e a decisão de anticoagulação quando há FA.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "galeria",
+          "slug": "estenose-mitral-reumatica-boca-de-peixe-ete-3d",
+          "role": "direct",
+          "priority": 317,
+          "context": "Achado de estenose mitral; correlacionar a imagem com a avaliação clínica.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC8329529/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "checklist",
+          "slug": "avaliacao-e-decisao-terapeutica-na-estenose-mitral-reumatica",
+          "role": "direct",
+          "priority": 318,
+          "context": "Checklist específico de avaliação e decisão na estenose mitral.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "caso_clinico",
+          "slug": "estenose-mitral-reumatica-com-valva-pliavel-comissurotomia-fechada-ou-valvuloplastia-por-balao",
+          "role": "conditional",
+          "priority": 319,
+          "context": "Caso de estenose mitral: aplicar a conclusão à anatomia e população apresentadas.",
+          "relation_type": "used_in_case",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/11380088/",
+            "https://pubmed.ncbi.nlm.nih.gov/9462525/"
+          ]
+        },
+        {
+          "frente": "documento",
+          "slug": "estenose-mitral-reumatica-no-idoso-diagnostico-diferencial-e-estrategia-terapeutica-por-faixa-etaria",
+          "role": "conditional",
+          "priority": 320,
+          "context": "Recorte geriátrico: distinguir forma reumática de degenerativa e considerar comorbidades.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://doi.org/10.5935/abc.20190086"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "nao-usar-doac-na-fibrilacao-atrial-com-estenose-mitral-moderada-a-grave",
+          "role": "conditional",
+          "priority": 321,
+          "context": "Anticoagulação condicionada à FA ou ao risco embólico específico descrito no item.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://doi.org/10.1093/eurheartj/ehab395",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "documento",
+          "slug": "estenose-mitral-e-aortica-na-gestacao-limiares-de-intervencao-e-tecnica-percutanea",
+          "role": "conditional",
+          "priority": 323,
+          "context": "Aplicável à gestação ou seu planejamento; requer avaliação materna e fetal.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "checklist",
+          "slug": "avaliacao-diagnostica-e-decisao-de-intervencao-na-estenose-mitral",
+          "role": "direct",
+          "priority": 324,
+          "context": "Checklist específico de avaliação e decisão na estenose mitral.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "caso_clinico",
+          "slug": "estenose-tricuspide-reumatica-concomitante-a-estenose-mitral-operar-junto",
+          "role": "conditional",
+          "priority": 327,
+          "context": "Dupla lesão reumática: avaliar a valva tricúspide na decisão cirúrgica.",
+          "relation_type": "used_in_case",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "esc2020-esporte-estenose-mitral-leve-competitivo-classe-i",
+          "role": "conditional",
+          "priority": 328,
+          "context": "Elegibilidade esportiva: considerar gravidade, sintomas e modalidade; classificação da ESC 2020.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/32860412/",
+            "https://doi.org/10.1093/eurheartj/ehaa605"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "esc2020-esporte-estenose-mitral-leve-recreativo-classe-i",
+          "role": "conditional",
+          "priority": 332,
+          "context": "Elegibilidade esportiva: considerar gravidade, sintomas e modalidade; classificação da ESC 2020.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/32860412/",
+            "https://doi.org/10.1093/eurheartj/ehaa605"
+          ]
+        },
+        {
+          "frente": "caso_clinico",
+          "slug": "gestante-com-estenose-mitral-reumatica-grave-risco-de-descompensacao-ropac",
+          "role": "conditional",
+          "priority": 333,
+          "context": "Aplicável à gestação ou seu planejamento; requer avaliação materna e fetal.",
+          "relation_type": "used_in_case",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/29459466/",
+            "https://doi.org/10.1161/CIRCULATIONAHA.117.032561",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "esc2020-esporte-estenose-mitral-moderada-competitivo-classe-iib",
+          "role": "conditional",
+          "priority": 334,
+          "context": "Elegibilidade esportiva: considerar gravidade, sintomas e modalidade; classificação da ESC 2020.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/32860412/",
+            "https://doi.org/10.1093/eurheartj/ehaa605"
+          ]
+        },
+        {
+          "frente": "caso_clinico",
+          "slug": "colapso-apos-penicilina-benzatina-em-estenose-mitral-grave-risco-de-adrenalina-empirica",
+          "role": "conditional",
+          "priority": 336,
+          "context": "Colapso após penicilina: distinguir reação vasovagal de anafilaxia; não atrasar adrenalina quando esta é indicada.",
+          "relation_type": "used_in_case",
+          "evidence_sources": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9075066/",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509/"
+          ]
+        },
+        {
+          "frente": "documento",
+          "slug": "valvuloplastia-mitral-por-balao-em-pacientes-juvenis-com-estenose-mitral-reumatica-etiopia-2026",
+          "role": "direct",
+          "priority": 337,
+          "context": "Conteúdo de estenose mitral para apoio ao diagnóstico e ao manejo.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "esc2020-esporte-estenose-mitral-moderada-recreativo-classe-iib",
+          "role": "conditional",
+          "priority": 338,
+          "context": "Elegibilidade esportiva: considerar gravidade, sintomas e modalidade; classificação da ESC 2020.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/32860412/",
+            "https://doi.org/10.1093/eurheartj/ehaa605"
+          ]
+        },
+        {
+          "frente": "documento",
+          "slug": "sinalizadores-ambulatoriais-de-estenose-mitral-reumatica-quando-encaminhar",
+          "role": "direct",
+          "priority": 340,
+          "context": "Reconhecer progressão estável e sinais que exigem avaliação urgente.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "varfarina-preferida-na-fa-com-estenose-mitral-moderada-a-grave",
+          "role": "conditional",
+          "priority": 343,
+          "context": "Anticoagulação condicionada à FA ou ao risco embólico específico descrito no item.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/41294177/",
+            "https://doi.org/10.36660/abc.20250618",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "documento",
+          "slug": "fluxograma-estenose-mitral-descompensada-na-gestacao-e-edema-pulmonar",
+          "role": "conditional",
+          "priority": 344,
+          "context": "Aplicável à gestação ou seu planejamento; requer avaliação materna e fetal.",
+          "relation_type": "uses_flowchart",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "sbc2019-profilaxia-secundaria-de-febre-reumatica-nao-indicada-no-idoso-com-estenose-mitral",
+          "role": "conditional",
+          "priority": 346,
+          "context": "Recorte geriátrico: distinguir forma reumática de degenerativa e considerar comorbidades.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/31188969/",
+            "https://doi.org/10.5935/abc.20190086"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "sbc2019-troca-valvar-mitral-razoavel-na-estenose-mitral-degenerativa-refrataria-no-idoso",
+          "role": "conditional",
+          "priority": 347,
+          "context": "Recorte geriátrico: distinguir forma reumática de degenerativa e considerar comorbidades.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/31188969/",
+            "https://doi.org/10.5935/abc.20190086"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "valvuloplastia-mitral-por-balao-no-idoso-com-estenose-mitral-reumatica-sintomatica",
+          "role": "conditional",
+          "priority": 348,
+          "context": "Recorte geriátrico: distinguir forma reumática de degenerativa e considerar comorbidades.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://doi.org/10.5935/abc.20190086"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "esc2020-esporte-estenose-mitral-grave-competitivo-classe-iii",
+          "role": "conditional",
+          "priority": 349,
+          "context": "Elegibilidade esportiva: considerar gravidade, sintomas e modalidade; classificação da ESC 2020.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/32860412/",
+            "https://doi.org/10.1093/eurheartj/ehaa605"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "esc2020-esporte-estenose-mitral-grave-recreativo-classe-iii",
+          "role": "conditional",
+          "priority": 350,
+          "context": "Elegibilidade esportiva: considerar gravidade, sintomas e modalidade; classificação da ESC 2020.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/32860412/",
+            "https://doi.org/10.1093/eurheartj/ehaa605"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "sbc2019-varfarina-indefinida-na-fa-associada-a-estenose-mitral-reumatica-no-idoso",
+          "role": "conditional",
+          "priority": 351,
+          "context": "Recorte geriátrico: distinguir forma reumática de degenerativa e considerar comorbidades.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/31188969/",
+            "https://doi.org/10.5935/abc.20190086"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "gravidez-esc-2018-intervencao-pre-gestacional-na-estenose-mitral-grave",
+          "role": "conditional",
+          "priority": 352,
+          "context": "Aplicável à gestação ou seu planejamento; requer avaliação materna e fetal.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/30165544/",
+            "https://doi.org/10.1093/eurheartj/ehy340",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "eco-estresse-na-estenose-mitral-antes-de-gravidez-ou-cirurgia-de-grande-porte-sbc-2024",
+          "role": "conditional",
+          "priority": 353,
+          "context": "Aplicável à gestação ou seu planejamento; requer avaliação materna e fetal.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/38896581/",
+            "https://doi.org/10.36660/abc.20240110",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "eco-estresse-na-estenose-mitral-assintomatica-com-area-menor-que-1-cm2-sbc-2024",
+          "role": "conditional",
+          "priority": 354,
+          "context": "Indicação de eco de estresse condicionada aos sintomas e à avaliação de repouso.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/38896581/",
+            "https://doi.org/10.36660/abc.20240110"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "geriatria-estenose-mitral-degenerativa-tem-outra-conduta",
+          "role": "conditional",
+          "priority": 356,
+          "context": "Recorte geriátrico: distinguir forma reumática de degenerativa e considerar comorbidades.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/31188969/",
+            "https://doi.org/10.5935/abc.20190086"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "eco-estresse-na-estenose-mitral-com-discordancia-entre-sintomas-e-area-sbc-2024",
+          "role": "conditional",
+          "priority": 357,
+          "context": "Indicação de eco de estresse condicionada aos sintomas e à avaliação de repouso.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/38896581/",
+            "https://doi.org/10.36660/abc.20240110"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "valv-doac-contraindicado-na-estenose-mitral-com-fibrilacao-atrial",
+          "role": "conditional",
+          "priority": 358,
+          "context": "Anticoagulação condicionada à FA ou ao risco embólico específico descrito no item.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33111877/",
+            "https://doi.org/10.36660/abc.20201047",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "geriatria-valvoplastia-no-assintomatico-com-hipertensao-pulmonar",
+          "role": "conditional",
+          "priority": 360,
+          "context": "Recorte geriátrico: distinguir forma reumática de degenerativa e considerar comorbidades.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/31188969/",
+            "https://doi.org/10.5935/abc.20190086"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "geriatria-profilaxia-de-febre-reumatica-nao-recomendada-no-idoso",
+          "role": "conditional",
+          "priority": 361,
+          "context": "Recorte geriátrico: distinguir forma reumática de degenerativa e considerar comorbidades.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/31188969/",
+            "https://doi.org/10.5935/abc.20190086"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "geriatria-valvoplastia-por-balao-na-estenose-mitral-reumatica-do-idoso",
+          "role": "conditional",
+          "priority": 362,
+          "context": "Recorte geriátrico: distinguir forma reumática de degenerativa e considerar comorbidades.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/31188969/",
+            "https://doi.org/10.5935/abc.20190086"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "geriatria-diuretico-de-alca-na-estenose-mitral-sintomatica",
+          "role": "conditional",
+          "priority": 363,
+          "context": "Recorte geriátrico: distinguir forma reumática de degenerativa e considerar comorbidades.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/31188969/",
+            "https://doi.org/10.5935/abc.20190086"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "doac-nao-recomendado-na-fibrilacao-atrial-com-estenose-mitral-moderada-a-grave",
+          "role": "conditional",
+          "priority": 365,
+          "context": "Anticoagulação condicionada à FA ou ao risco embólico específico descrito no item.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/34453165/",
+            "https://doi.org/10.1093/eurheartj/ehab395",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-fa-em-moderada-grave-ou-protese-mecanica-varfarina-sempre",
+          "role": "conditional",
+          "priority": 366,
+          "context": "Anticoagulação condicionada à FA ou ao risco embólico específico descrito no item.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-ritmo-sinusal-considerar-anticoagulacao-se-contraste-espontaneo-ou-atrio-dilatado",
+          "role": "conditional",
+          "priority": 400,
+          "context": "Em ritmo sinusal, considerar anticoagulação conforme contraste espontâneo denso ou aumento atrial relevante; não é indicação universal.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-em-indicacao-de-intervencao-por-sintomas-e-gravidade",
+          "role": "conditional",
+          "priority": 401,
+          "context": "Intervenção na EM reumática conforme sintomas, gravidade e anatomia; integrar área valvar e repercussão hemodinâmica.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-em-substituicao-em-valva-muito-calcificada-ou-doenca-mista",
+          "role": "conditional",
+          "priority": 402,
+          "context": "Cirurgia na EM com calcificação importante ou lesão mitral mista; escolha condicionada à anatomia e à elegibilidade para CMP.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "exame",
+          "slug": "cateterismo-cardiaco-estrutural-na-gestante-protecao-fetal-contra-radiacao",
+          "role": "conditional",
+          "priority": 403,
+          "context": "Recorte gestacional: intervenção percutânea quando indicada, com redução da exposição fetal à radiação.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/28937575/",
+            "https://pubmed.ncbi.nlm.nih.gov/9773312/",
+            "https://academic.oup.com/eurheartj/article/46/43/4462/8234487"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "gravidez-esc-2018-comissurotomia-mitral-percutanea-na-gestante-sintomatica-grave",
+          "role": "conditional",
+          "priority": 404,
+          "context": "CMP na gestante com sintomas graves ou hipertensão pulmonar apesar de terapia clínica; avaliar anatomia e equipe especializada.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/30165544/",
+            "https://academic.oup.com/eurheartj/article/46/43/4462/8234487"
+          ]
+        },
+        {
+          "frente": "estudo",
+          "slug": "dig-rhd-digoxina-na-cardiopatia-reumatica-sintomatica",
+          "role": "conditional",
+          "priority": 405,
+          "context": "Dig-RHD: cardiopatia reumática sintomática; benefício no composto clínico não demonstra redução isolada da mortalidade nem substitui intervenção valvar.",
+          "relation_type": "studied_in",
+          "evidence_sources": [
+            "https://jamanetwork.com/journals/jama/article-abstract/2848973",
+            "https://pubmed.ncbi.nlm.nih.gov/42106990/"
+          ]
+        },
+        {
+          "frente": "doenca",
+          "slug": "valvopatia-elegibilidade-esportiva-atleta",
+          "role": "conditional",
+          "priority": 406,
+          "context": "Recorte esportivo: aplicar a seção de EM segundo sintomas, gravidade e tolerância ao esforço, com avaliação individual do atleta.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/32860412/",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001297"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-em-diureticos-para-congestao-ou-disfuncao-de-camaras-direitas",
+          "role": "conditional",
+          "priority": 407,
+          "context": "Diuréticos para congestão na EM; alívio sintomático sem corrigir a obstrução valvar.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-ritmo-sinusal-anticoagular-se-tev-previo-ou-trombo-atrial",
+          "role": "conditional",
+          "priority": 408,
+          "context": "Anticoagulação em ritmo sinusal se houver embolia sistêmica prévia ou trombo atrial; não é indicação universal.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-em-nao-elegiveis-a-pbmv-preferir-reparo",
+          "role": "conditional",
+          "priority": 409,
+          "context": "Cirurgia quando a CMP não é adequada; reparo depende da anatomia e da experiência do centro, e a troca valvar pode ser necessária.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "teste-ergometrico-contraindicado-na-estenose-aortica-ou-mitral-grave-sintomatica",
+          "role": "conditional",
+          "priority": 410,
+          "context": "Contraindicação do teste ergométrico na EM grave sintomática; distinguir de avaliação selecionada de assintomáticos.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://doi.org/10.36660/abc.20240110"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "erg-ped-teste-ergometrico-contraindicado-na-estenose-grave-sintomatica",
+          "role": "conditional",
+          "priority": 411,
+          "context": "Recorte pediátrico: contraindicação do teste ergométrico na EM grave sintomática para avaliar aptidão cardiorrespiratória.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://doi.org/10.36660/abc.20240525"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-em-pbmv-e-o-tratamento-de-escolha",
+          "role": "conditional",
+          "priority": 412,
+          "context": "CMP na EM reumática com indicação de intervenção e anatomia favorável; excluir trombo atrial e insuficiência mitral relevante.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-em-assintomatico-geralmente-nao-precisa-intervencao",
+          "role": "conditional",
+          "priority": 413,
+          "context": "EM assintomática: avaliar risco tromboembólico e de descompensação antes de optar apenas por seguimento.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-em-tolerancia-limitada-ou-gradiente-alto-pode-indicar-intervencao",
+          "role": "conditional",
+          "priority": 414,
+          "context": "Avaliação funcional selecionada na EM; interpretar sintomas e resposta hemodinâmica ao esforço no contexto da anatomia valvar.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "doenca",
+          "slug": "valvopatias-na-gravidez",
+          "role": "conditional",
+          "priority": 415,
+          "context": "Recorte gestacional e pré-concepcional: aplicar a seção de estenose mitral e avaliar risco materno-fetal com equipe especializada.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/43/4462/8234487",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "trilha",
+          "slug": "trilha-valvopatias-regurgitacao-aortica-protese-mecanica-e-estenose-mitral-reumatica",
+          "role": "comparison",
+          "priority": 722,
+          "context": "Trilha de lesões distintas; aplicar à EM apenas os trechos correspondentes.",
+          "relation_type": "mentioned_in",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "valv-divergencia-valvoplastia-mitral-em-assintomatico-com-complicadores",
+          "role": "comparison",
+          "priority": 726,
+          "context": "Comparação entre sociedades e edições; conferir recomendação atual antes de aplicar.",
+          "relation_type": "mentioned_in",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33111877/",
+            "https://doi.org/10.36660/abc.20201047",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "doac-preferido-ao-avk-na-fibrilacao-atrial-com-valvopatia-que-nao-estenose-mitral",
+          "role": "comparison",
+          "priority": 741,
+          "context": "Contraste: preferência por DOAC em outras valvopatias; EM moderada/grave é exceção.",
+          "relation_type": "mentioned_in",
+          "evidence_sources": [
+            "https://doi.org/10.1093/eurheartj/ehab395",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "acod-preferiveis-a-varfarina-exceto-valva-mecanica-ou-estenose-mitral",
+          "role": "comparison",
+          "priority": 745,
+          "context": "Regra geral de FA com exceção explícita para EM moderada/grave.",
+          "relation_type": "mentioned_in",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/41294177/",
+            "https://doi.org/10.36660/abc.20250618",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "rhd2020-vp-em-noac-so-em-casos-especificos-com-adesao-demonstrada",
+          "role": "comparison",
+          "priority": 764,
+          "context": "Orientação histórica de 2020, anterior ao INVICTUS; não representa a conduta atual para FA reumática.",
+          "relation_type": "mentioned_in",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33190309/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "doac-preferencial-sobre-varfarina-idoso",
+          "role": "comparison",
+          "priority": 767,
+          "context": "Comparação em idosos: a preferência por DOAC exclui EM moderada/grave.",
+          "relation_type": "mentioned_in",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "geriatria-varfarina-indefinida-na-estenose-mitral-com-fa",
+          "role": "comparison",
+          "priority": 769,
+          "context": "Comparação histórica (SBC 2019): a permissão para DOAC precede INVICTUS; na FA com EM reumática moderada/grave, a recomendação atual é AVK.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/31188969/",
+            "https://doi.org/10.5935/abc.20190086",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://www.nejm.org/doi/full/10.1056/NEJMoa2209051"
+          ]
+        },
+        {
+          "frente": "doenca",
+          "slug": "estenose-tricuspide",
+          "role": "comparison",
+          "priority": 770,
+          "context": "Outra lesão valvar, que pode coexistir com EM reumática; critérios e intervenção tricúspides não são intercambiáveis com os mitrais.",
+          "relation_type": "associated_with",
+          "evidence_sources": [
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+            "https://pubmed.ncbi.nlm.nih.gov/33111877/"
+          ]
+        },
+        {
+          "frente": "evidencia",
+          "slug": "valv-intervalos-de-seguimento-por-gravidade-na-estenose-aortica",
+          "role": "comparison",
+          "priority": 771,
+          "context": "Comparação de seguimento aórtico e mitral; aplicar os intervalos específicos da EM, considerando a edição da diretriz.",
+          "relation_type": "supported_by",
+          "evidence_sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33111877/",
+            "https://academic.oup.com/eurheartj/article/46/44/4635/8234488"
+          ]
+        }
+      ]
+    }
+  }
+}

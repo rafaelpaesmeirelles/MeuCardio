@@ -39,14 +39,19 @@ def test_busca_ancora_medicamento_e_abre_cada_frente_na_rota_correta():
     assert '<ClinicalText>{summary}</ClinicalText>' in overview
     assert '<TctDiseaseOverview disease={primaryDisease} />' in fonte
     assert fonte.index('<TctDiseaseOverview disease={primaryDisease} />') < fonte.index('<PainelDrug d={drug} />')
-    assert "ORDEM_DOENCA" in fonte
+    assert "ORDEM_DOENCA" not in fonte
+    assert 'aria-label="Lista de conteúdos por relevância"' in fonte
+    assert 'aria-label="Frente de conhecimento"' in fonte
+    assert 'aria-label="Seção editorial"' in fonte
     assert '["Visão geral e características", "Fundamentos e conteúdo de referência", "/biblioteca"' in fonte
     assert '["Estudos", "Literatura original e trabalhos científicos", "/estudos"' in fonte
     assert '["Evidências", "Recomendações e níveis de evidência", "/evidencias"' in fonte
     assert '["Exames", "Diagnóstico, indicação e interpretação", "/exames"' in fonte
     assert '["Galeria clínica", "Imagens e achados relacionados", "/galeria"' in fonte
-    for topico in ("Características", "Posologia e potência", "Indicações", "Segurança", "Timeline"):
+    for topico in ("Características", "Posologia e potência", "Indicações", "Segurança"):
         assert topico in fonte
+    # A segunda lista cronológica não deve duplicar nem reordenar os resultados.
+    assert "const timeline =" not in fonte
 
 
 def test_qualquer_assunto_e_organizado_sem_expandir_tema_amplo_por_inferencia():
@@ -78,7 +83,11 @@ def test_qualquer_assunto_e_organizado_sem_expandir_tema_amplo_por_inferencia():
     assert "mergeGraphGroups" in fonte
     # Labels now distinguish direct relations, topic context and negative
     # clinical relations instead of presenting every edge as the same claim.
-    assert "connectionLabel(r)" in fonte
+    assert "<ClinicalQualifications item={r} />" in fonte
+    assert fonte.index("<ClinicalQualifications item={r} />") < fonte.index('to={rota(r)}>{r.title}')
+    assert "<MatchReasons item={r} />" in fonte
+    assert 'item.relation_method === "SpecialtyDisease.tests"' in fonte
+    assert "não entram na contagem de resultados" in fonte
     assert 'contraindicated_in: "Contraindicação relacionada — verificar o contexto"' in fonte
     assert 'monitor_with: "Monitorização relacionada"' in fonte
     assert 'x.context_only || x.relation_scope === "structured_clinical_topic"' in fonte

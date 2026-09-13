@@ -128,7 +128,7 @@ def test_literal_fallback_uses_same_section_counts_and_does_not_expand_empty_sec
 
 
 def test_calculator_sections_and_global_offsets_do_not_duplicate_rows(client, db, criar_usuario):
-    db.add(document("score-section-doc", "Score clínico publicado"))
+    db.add(document("score-section-doc", "Score"))
     db.commit()
     _, token = criar_usuario(role="admin")
     headers = {"Authorization": f"Bearer {token}"}
@@ -138,8 +138,15 @@ def test_calculator_sections_and_global_offsets_do_not_duplicate_rows(client, db
     second = api_search(client, headers, "score", secao="calculadora", limit=1, offset=1)
     assert first["por_secao"] == {"calculadora": total_calcs}
     assert first["results"][0]["slug"] != second["results"][0]["slug"]
+    # An exact published title outranks calculators whose names only contain
+    # the term. Calculators share the same global sequence, never a prefix.
+    global_first = api_search(client, headers, "score", limit=1)
+    assert global_first["results"][0]["slug"] == "score-section-doc"
+    assert global_first["results"][0]["relevance_order"] == 1
     boundary = api_search(client, headers, "score", limit=2, offset=total_calcs - 1)
-    assert [r["frente"] for r in boundary["results"]] == ["calculadora", "documento"]
+    assert [r["frente"] for r in boundary["results"]] == ["calculadora", "calculadora"]
+    assert [r["relevance_order"] for r in boundary["results"]] == [total_calcs, total_calcs + 1]
+    assert len({r["slug"] for r in boundary["results"]}) == 2
     assert boundary["next_offset"] is None
     empty = api_search(client, headers, "score", frente="documento", secao="calculadora")
     assert empty["total"] == 0
@@ -150,3 +157,17 @@ def test_calculator_sections_and_global_offsets_do_not_duplicate_rows(client, db
 def test_sql_callers_keep_optional_section_and_rag_bind_contract():
     assert PAGE_SQL._bindparams["secao"].value is None
     assert "secao" not in SQL._bindparams
+
+
+def test_calculator_prefix_does_not_block_literal_document_recovery(client, db, criar_usuario):
+    db.add(document("cha2ds2-vasc-referencia", "CHA2DS2-VASc: referência"))
+    db.commit()
+    _, token = criar_usuario(role="admin")
+    headers = {"Authorization": f"Bearer {token}"}
+    assert calculadoras_encontradas("CHA2D")
+    global_result = api_search(client, headers, "CHA2D")
+    documents = api_search(client, headers, "CHA2D", frente="documento")
+    global_documents = [item["slug"] for item in global_result["results"] if item["frente"] == "documento"]
+    assert global_documents == ["cha2ds2-vasc-referencia"]
+    assert global_documents == [item["slug"] for item in documents["results"]]
+    assert global_result["por_frente"]["calculadora"] > 0
