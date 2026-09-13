@@ -32,7 +32,8 @@ function transpile(source, name) {
   }).outputText;
 }
 let source = await readFile(path.join(root, 'src/components/EditorialDocumentList.tsx'), 'utf8');
-source = source.replace('import { api, ApiError } from "../lib/api";', `
+source = source.replace('import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";', `
+const READ_TIMEOUT_MS = 15000;
 const api = { get: (...args) => globalThis.corviaSearchFixture.get(...args) };
 class ApiError extends Error {}
 `);
@@ -43,7 +44,9 @@ let pageSource = await readFile(path.join(root, 'src/pages/Diretrizes.tsx'), 'ut
 pageSource = pageSource.replace('"../components/EditorialDocumentList"', '"./EditorialDocumentList.mjs"');
 pageSource = pageSource.replace('import ScientificIntelligenceMonitor from "../components/ScientificIntelligenceMonitor";', 'const ScientificIntelligenceMonitor = () => null;');
 pageSource = pageSource.replace('import ScientificReadingAccess from "../components/ScientificReadingAccess";', 'const ScientificReadingAccess = () => null;');
-pageSource = pageSource.replace('import { api, ApiError } from "../lib/api";', `
+pageSource = pageSource.replace('import BotaoFavorito from "../components/BotaoFavorito";', 'const BotaoFavorito = () => null;');
+pageSource = pageSource.replace('import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";', `
+const READ_TIMEOUT_MS = 15000;
 const api = { get: (...args) => globalThis.corviaSearchFixture.get(...args) };
 class ApiError extends Error {}
 `);

@@ -129,6 +129,8 @@ export default function AdminAssinantes() {
   }, [qInput]);
 
   useEffect(() => {
+    let active = true;
+    const controller = new AbortController();
     setCarregando(true);
     setErro("");
     const params = new URLSearchParams();
@@ -141,10 +143,13 @@ export default function AdminAssinantes() {
     params.set("page", String(filtros.page));
     params.set("page_size", String(PAGE_SIZE));
 
-    api.get<ListaResposta>(`/admin/usuarios?${params.toString()}`)
-      .then(setResposta)
-      .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar a lista de assinantes."))
-      .finally(() => setCarregando(false));
+    api.get<ListaResposta>(`/admin/usuarios?${params.toString()}`, { signal: controller.signal })
+      .then((response) => { if (active) setResposta(response); })
+      .catch((e) => {
+        if (active) setErro(e instanceof ApiError ? e.message : "Não foi possível carregar a lista de assinantes.");
+      })
+      .finally(() => { if (active) setCarregando(false); });
+    return () => { active = false; controller.abort(); };
   }, [filtros]);
 
   function aplicar(mudanca: Partial<Omit<Filtros, "page">>) {

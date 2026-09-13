@@ -21,16 +21,24 @@ const deferred = () => {
 class ApiError extends Error { constructor(status, message) { super(message); this.status = status; } }
 const empty = { __esModule: true, default: () => null };
 const wrapper = { __esModule: true, default: ({ children }) => React.createElement('section', null, children) };
+const realModules = {
+  './lib/loginReturn': 'lib/loginReturn.ts', '../lib/loginReturn': 'lib/loginReturn.ts',
+  './lib/pageTitle': 'lib/pageTitle.ts', './clinicalRouteRegistry': 'lib/clinicalRouteRegistry.ts',
+  './components/LoginReturn': 'components/LoginReturn.tsx',
+};
 
 function compile(path, overrides = {}, extra = {}) {
   const compiled = ts.transpileModule(source(path), { compilerOptions: {
     module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX,
   } }).outputText;
   const module = { exports: {} };
+  const globals = { URL, URLSearchParams, Error, setTimeout: () => 0,
+    window: { sessionStorage: { getItem: () => null } }, document: { title: '' }, ...extra };
   vm.runInNewContext(compiled, {
-    module, exports: module.exports, URLSearchParams, Error, setTimeout: () => 0,
-    window: { sessionStorage: { getItem: () => null } }, ...extra,
+    module, exports: module.exports, ...globals,
     require: name => Object.hasOwn(overrides, name) ? overrides[name]
+      : Object.hasOwn(realModules, name) ? compile(realModules[name], overrides, globals)
+      : name === './aiFeatureFlags' ? overrides['./lib/aiFeatureFlags']
       : name.endsWith('.css') ? {} : name.includes('/components/') ? empty
       : name.startsWith('./pages/') ? { __esModule: true, default: () => React.createElement('div', null, name) }
       : require(name),

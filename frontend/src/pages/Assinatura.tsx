@@ -62,7 +62,7 @@ export default function Assinatura() {
   }
 
   return (
-    <div className="pagina">
+    <div className="pagina assinatura-page">
       <h1>Assinatura e uso de IA</h1>
       <p>O Tudo com Tudo, o acervo científico e as calculadoras estão em todos os planos.</p>
       {loading && <p role="status">Carregando seus planos e acesso…</p>}

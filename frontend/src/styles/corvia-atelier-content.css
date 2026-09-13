@@ -317,6 +317,16 @@ html[data-corvia-design="atelier"] #root .cv-app .cv-content .cartao > :is(p, st
 
 html[data-corvia-design="atelier"] #root .cv-app .cv-content .cartao > strong { font-size: 16px !important; }
 
+/* Subscription cards retain their paper surface in both themes. Legacy tag,
+   price and list colors must follow the card's local ink here. */
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .assinatura-page .cartao :is(.tag, p > strong, li) {
+  color: var(--atelier-ink) !important;
+  -webkit-text-fill-color: currentColor;
+}
+html[data-corvia-design="atelier"] #root .cv-app .cv-content .assinatura-page .cartao .tag {
+  background: var(--atelier-soft) !important;
+}
+
 /* Canonical checklist names and summaries can contain long slash-separated
    terms. Let the complete text wrap inside its card instead of extending
    the last catalog column beyond the viewport. */
