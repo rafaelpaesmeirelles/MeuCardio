@@ -18,6 +18,19 @@
 .tct-row { display:grid;gap:.2rem;padding:.7rem 0;color:inherit;border-bottom:1px solid var(--cos-line,var(--borda)) }
 .tct-row small { color:var(--acao);font-size:.65rem;text-transform:uppercase }
 .tct-row mark { color:inherit;background:rgba(37,150,169,.25) }
+.tct-filters { display:flex;flex-wrap:wrap;align-items:end;gap:.75rem;margin-top:1rem }
+.tct-filters label { display:grid;gap:.3rem;flex:1 1 14rem;min-width:0 }
+.tct-filters select { width:100%;min-height:44px }
+.tct-results { list-style:none;margin:0;padding:0;min-width:0 }
+.tct-results > li { min-width:0 }
+.tct-result-title { color:inherit;font-size:1.05rem;font-weight:700;white-space:normal;overflow-wrap:anywhere }
+.tct-qualifications { display:flex;flex-wrap:wrap;gap:.35rem;min-width:0 }
+.tct-qualifications:empty { display:none }
+.tct-qualifications > p { flex-basis:100%;white-space:pre-wrap;overflow-wrap:anywhere }
+.tct-clinical-context { padding:.55rem .7rem;border-left:3px solid var(--acao);background:var(--superficie);font-weight:600 }
+.tct-match-reasons { font-size:.86rem;white-space:normal;overflow-wrap:anywhere }
+.tct-match-reasons ul { margin:.3rem 0;padding-left:1.2rem }
+.tct-pagination { display:flex;justify-content:center;margin-top:1rem }
 .tct-time ol { list-style:none;padding:0 }
 .tct-time li { display:grid;grid-template-columns:55px minmax(0,1fr);gap:.7rem;padding:.45rem 0 }
 .tct-time time { color:var(--acao);font-family:var(--fonte-dados);font-weight:700 }

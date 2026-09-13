@@ -1,3 +1,4 @@
+import json
 from typing import Annotated, Literal
 
 from fastapi import APIRouter, Depends, Query
@@ -22,6 +23,7 @@ from app.services.catalog_search import (
 )
 from app.services.clinical_text import clinical_text_without_internal_overrides
 from app.services.connected_content import buscar_relacionados_da_doenca, buscar_relacionados_do_medicamento
+from app.services.search_relevance import disease_identity_phrases, disease_search_metadata
 
 router = APIRouter(prefix="/api/search", tags=["busca"])
 SearchSection = Literal[
@@ -32,16 +34,7 @@ SearchSection = Literal[
 
 
 def _disease_identity_phrases(disease: SpecialtyDisease) -> tuple[str, ...]:
-    values = [disease.name, disease.slug.replace("-", " "), *(disease.aliases or [])]
-    seen: set[str] = set()
-    phrases: list[str] = []
-    for value in values:
-        phrase = normalizar(str(value or "")).replace("-", " ").strip()
-        if len(phrase.replace(" ", "")) < 2 or phrase in seen:
-            continue
-        seen.add(phrase)
-        phrases.append(phrase)
-    return tuple(sorted(phrases, key=lambda value: (-len(value.split()), -len(value))))
+    return disease_identity_phrases(disease)
 
 
 # A consulta SQL do catálogo (as 13 frentes + calculadoras) mora em
@@ -78,7 +71,8 @@ def search(
                 SpecialtyDisease.published.is_(True),
             )
         ).scalar_one_or_none()
-    primary_disease = resolved if frente in (None, "doenca") else None
+    # The resolved subject remains stable when the reader filters a front.
+    primary_disease = resolved
     if primary_disease is not None:
         primary_disease["summary"] = clinical_text_without_internal_overrides(
             primary_disease.get("summary")
@@ -95,7 +89,7 @@ def search(
                     if drug_model is not None else None)
     query = (disease_model.name if disease_model is not None
              else drug_model.generic_name if drug_model is not None else q)
-    include_calculators = frente in (None, "calculadora") and secao in (None, "calculadora")
+    include_calculators = frente in (None, "calculadora")
     calculadoras = calculadoras_encontradas(query) if include_calculators else []
     if disease_model is not None and include_calculators:
         seen_calculators = {item["slug"] for item in calculadoras}
@@ -119,14 +113,27 @@ def search(
             disease_links.extend(
                 f"{kind}:{item['slug']}" for item in group.get("itens", [])
                 if item.get("slug") and not item.get("context_only")
+                and item.get("relation_method") != "SpecialtyDisease.tests"
             )
             for item in group.get("itens", []):
-                if item.get("slug"):
+                if item.get("slug") and item.get("relation_method") != "SpecialtyDisease.tests":
                     connection_metadata.setdefault(f"{kind}:{item['slug']}", item)
             recommendations = [item for item in group.get("itens", [])
                                if item.get("relation_method") == "SpecialtyDisease.tests"]
             if recommendations:
                 supplementary_groups.append({**group, "itens": recommendations})
+        if disease_model is not None:
+            candidate_metadata = disease_search_metadata(db, disease_model, connection_metadata)
+            disease_links.extend(candidate_metadata)
+        else:
+            candidate_metadata = {
+                key: {"relation_type": item.get("relation_type"),
+                      "context_only": item.get("context_only", False),
+                      "match_reasons": [{"source": item.get("relation_method") or "structured_connection", "description":
+                          item.get("relation_reason") or "Vínculo estruturado com o medicamento."}]}
+                for key, item in connection_metadata.items()
+                if not item.get("context_only")
+            }
         if include_calculators:
             # Retrieve the calculator's actual catalogue row, not a synthetic
             # result or a new clinical indication inferred by the search.
@@ -141,29 +148,30 @@ def search(
                     existing.add(calculator.slug)
         disease_links.append(f"doenca:{disease_model.slug}" if disease_model is not None
                              else f"medicamento:{drug_model.slug}")
+    else:
+        candidate_metadata = {}
+
+    # Context-only connections never recruit a result. If the published row
+    # independently matches its identity, preserve the legacy relation labels.
+    for key, item in connection_metadata.items():
+        if key not in candidate_metadata:
+            candidate_metadata[key] = {
+                "clinical_role": "mention", "clinical_context": None,
+                "relation_type": item.get("relation_type"),
+                "context_only": item.get("context_only", False),
+                "match_reasons": [{"source": item.get("relation_method") or "structured_connection",
+                                   "description": "Contexto relacionado; não constitui indicação clínica."}],
+            }
 
     # The in-memory catalogue is part of the same section/filter contract.
     # Deduplicate by its typed canonical identity before counting or slicing.
     calculadoras = list({item["slug"]: {**item, "secao": "calculadora"}
                          for item in calculadoras}.values())
-    if frente == "calculadora":
-        rows = calculadoras[offset:offset + limit]
-        next_offset = offset + len(rows)
-        return {
-            "query": q, "count": len(rows), "total": len(calculadoras),
-            "limit": limit, "offset": offset,
-            "next_offset": next_offset if next_offset < len(calculadoras) else None,
-            "por_frente": {"calculadora": len(calculadoras)} if calculadoras else {},
-            "por_secao": {"calculadora": len(calculadoras)} if calculadoras else {},
-            "primary_disease": None, "results": rows,
-        }
-
-    calculator_rows = calculadoras[offset:offset + limit] if frente is None else []
-    database_limit = limit - len(calculator_rows)
-    database_offset = max(0, offset - len(calculadoras)) if frente is None else offset
     values = {
         "q": query, "q_like": literal_like(query), "frente": frente, "secao": secao,
-        "limit": database_limit, "offset": database_offset,
+        "limit": limit, "offset": offset,
+        "candidate_metadata": json.dumps(candidate_metadata, ensure_ascii=False),
+        "calculator_candidates": json.dumps(calculadoras, ensure_ascii=False),
     }
     sql = PAGE_SQL
     if disease_model is not None or drug_model is not None:
@@ -193,20 +201,14 @@ def search(
         raw_rows = page["results"]
         por_frente = page["por_frente"]
 
-    rows = calculator_rows + [dict(row) for row in raw_rows]
+    rows = [dict(row) for row in raw_rows]
     for row in rows:
         if isinstance(row.get("snippet"), str):
             row["snippet"] = clinical_text_without_internal_overrides(row["snippet"])
-        relation = connection_metadata.get(f"{row['frente']}:{row['slug']}")
-        if relation is not None:
-            row["relation_type"] = relation.get("relation_type")
-            row["context_only"] = relation.get("context_only", False)
+        if row["frente"] == "evidencia":
+            row["title"] = clinical_text_without_internal_overrides(row["title"])
     por_frente = {str(kind): int(count) for kind, count in por_frente.items()}
-    if calculadoras:
-        por_frente["calculadora"] = len(calculadoras)
     por_secao = {str(section): int(count) for section, count in page["por_secao"].items()}
-    if calculadoras:
-        por_secao["calculadora"] = por_secao.get("calculadora", 0) + len(calculadoras)
     total = sum(por_frente.values())
     next_offset = offset + len(rows)
     return {

@@ -97,7 +97,7 @@ def test_cross_topic_direct_link_appears_without_disease_in_title(client, db, cr
         data = client.get("/api/search", params={"q": query, "frente": "estudo"}, headers=auth).json()
         assert data["total"] == 1
         assert data["results"][0]["slug"] == study.slug
-        assert data["primary_disease"] is None
+        assert data["primary_disease"]["slug"] == record.slug
     study.published = False
     db.commit()
     data = client.get("/api/search", params={"q": "FA", "frente": "estudo"}, headers=auth).json()
@@ -108,6 +108,24 @@ def test_short_acronym_does_not_match_inside_words():
     slugs = {x["slug"] for x in calculadoras_encontradas("FA")}
     assert "controle-frequencia-fa-flutter-agudo-adulto-2025" in slugs
     assert not slugs & {"ventilacao-protetora-uco", "acidose-metabolica-winter-anion-gap-uco", "dapt-score", "geneva-simplificado"}
+
+
+def test_ic_identity_does_not_recruit_statistical_confidence_intervals(client, db, criar_usuario):
+    db.add(SpecialtyDisease(slug="insuficiencia-cardiaca", name="Insuficiência cardíaca",
+        aliases=["IC"], area="geral", category="Síndrome", summary="Definição",
+        published=True, review_status="revisado"))
+    db.add_all([Document(slug=slug, title=title, kind="artigo", theme="Geral",
+                         body_md="Conteúdo", published=True, review_status="revisado")
+                for slug, title in (("ic-descompensada", "IC descompensada"),
+                                    ("intervalo-ic-95", "IC 95% do efeito"),
+                                    ("intervalo-ic-99", "IC 99% do efeito"),
+                                    ("intervalo-ic-90", "IC 90% do efeito"))])
+    db.commit()
+    auth = headers(criar_usuario)
+    for query in ("IC", "insuficiência cardíaca"):
+        response = client.get("/api/search", params={"q": query, "frente": "documento"}, headers=auth)
+        assert response.status_code == 200, response.text
+        assert [row["slug"] for row in response.json()["results"]] == ["ic-descompensada"]
 
 
 def test_identity_is_retrieved_even_with_missing_search_vector(client, db, criar_usuario):

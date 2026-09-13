@@ -31,6 +31,8 @@ function transpile(source, name) {
     },
   }).outputText;
 }
+const resultHelper = await readFile(path.join(root, 'src/lib/searchResults.ts'), 'utf8');
+await writeFile(path.join(temp, 'searchResults.mjs'), transpile(resultHelper, 'searchResults.ts'));
 const anchors = await readFile(path.join(root, 'src/lib/searchAnchors.ts'), 'utf8');
 await writeFile(path.join(temp, 'searchAnchors.mjs'), transpile(anchors, 'searchAnchors.ts'));
 const editorialSections = JSON.parse(await readFile(path.join(root, 'src/lib/documentEditorialTaxonomy.json'), 'utf8'));
@@ -53,13 +55,14 @@ const TctDiseaseOverview = ({ disease }) => <aside>{disease.name}</aside>;
 `);
 source = source.replace('"../lib/documentEditorialTaxonomy"', '"./documentEditorialTaxonomy.mjs"');
 source = source.replace('"../lib/searchAnchors"' , '"./searchAnchors.mjs"');
+source = source.replace('"../lib/searchResults"', '"./searchResults.mjs"');
 await writeFile(path.join(temp, 'Busca.mjs'), transpile(source, 'Busca.tsx'));
 const { default: Busca } = await import(pathToFileURL(path.join(temp, 'Busca.mjs')));
 
 const tick = () => new Promise(resolve => setImmediate(resolve));
 const nodeText = node => typeof node === 'string' ? node : (node.children ?? []).map(nodeText).join('');
 const more = renderer => renderer.root.findAllByType('button')
-  .find(button => /Carregar mais|Conectando mais/.test(nodeText(button)));
+  .find(button => /Carregar mais|Conectando mais|Tentar carregar mais/.test(nodeText(button)));
 const item = (slug, title, frente = 'documento') => ({
   slug, title, frente, kind: 'protocolo', theme: 'Teste', snippet: '',
 });
@@ -72,7 +75,7 @@ function deferred() {
   return { promise, resolve };
 }
 async function mount(t, query, get, initialEntries = [`/busca?q=${encodeURIComponent(query)}`]) {
-  const calls = [];
+  const calls = [], requests = [];
   const navigation = {};
   function NavigationProbe() {
     navigation.navigate = useNavigate();
@@ -80,7 +83,7 @@ async function mount(t, query, get, initialEntries = [`/busca?q=${encodeURICompo
     return null;
   }
   globalThis.corviaSearchFixture = {
-    get: url => { calls.push(url); return get(url); },
+    get: (url, options) => { calls.push(url); requests.push({ url, options }); return get(url, options); },
   };
   let renderer;
   await act(async () => {
@@ -92,7 +95,7 @@ async function mount(t, query, get, initialEntries = [`/busca?q=${encodeURICompo
     await tick();
   });
   t.after(async () => { await act(async () => renderer.unmount()); });
-  return { renderer, calls, location: () => navigation.location,
+  return { renderer, calls, requests, location: () => navigation.location,
     go: async target => act(async () => { navigation.navigate(target); await tick(); }) };
 }
 async function submit(renderer, query) {
@@ -307,148 +310,250 @@ test('a primary drug uses the paginated search and does not request a second eco
   assert.equal(calls.filter(url => url.startsWith('/relacionados/') || url.startsWith('/grafo/')).length, 0);
 });
 
-const section = (renderer, key) => renderer.root.findByProps({ id: `secao-${key}` });
-const sectionMore = (renderer, key) => section(renderer, key).findByType('button');
+const list = renderer => renderer.root.findByProps({ 'aria-label': 'Lista de conteúdos por relevância' });
+const resultLinks = renderer => list(renderer).findAllByType('a');
+const titles = renderer => resultLinks(renderer).map(nodeText);
 const click = async button => act(async () => { void button.props.onClick(); await tick(); });
+const filter = async (renderer, label, value) => act(async () => {
+  renderer.root.findByProps({ 'aria-label': label }).props.onChange({ target: { value } });
+  await tick();
+});
+const disease = { slug: 'estenose-mitral', name: 'Estenose mitral', summary: 'Resumo publicado', area: 'geral', category: 'valvopatia' };
 
-test('principal disease stays in its section and absent initial sections expose their exact totals', async t => {
-  const disease = { slug: 'fibrilacao-atrial', name: 'Fibrilação atrial', summary: 'Resumo', area: 'Arritmias', category: 'Arritmia' };
-  const { renderer, calls } = await mount(t, 'fibrilação atrial', async url => {
-    if (url.startsWith('/drugs?')) return { items: [] };
-    const p = new URL(url, 'https://test.invalid').searchParams;
-    if (p.has('secao')) return page([
-      { ...item('sbc-2025', 'Diretriz brasileira 2025'), secao: 'diretriz' },
-      { ...item('esc-2024', 'ESC 2024'), secao: 'diretriz' },
-    ], 2, null, { por_secao: { diretriz: 2 } });
-    return page([item(disease.slug, disease.name, 'doenca'), item('fa-idoso', 'FA no idoso', 'doenca')], 4, 2,
-      { primary_disease: disease, supplementary_groups: [], por_secao: { doenca: 2, diretriz: 2 } });
-  });
-  assert.equal(section(renderer, 'doenca').findAllByType('a').length, 2);
-  assert.match(nodeText(section(renderer, 'doenca')), /Doença principal/);
-  assert.match(nodeText(section(renderer, 'diretriz')), /0 de 2 resultados carregados/);
-  assert.equal(calls.filter(url => url.includes('secao=')).length, 0, 'sections load only when requested');
-  await click(sectionMore(renderer, 'diretriz'));
-  assert.match(nodeText(section(renderer, 'diretriz')), /2 de 2 resultados carregados/);
-  assert.match(nodeText(section(renderer, 'diretriz')), /ESC 2024/);
-  assert.match(nodeText(section(renderer, 'doenca')), /2 de 2 resultados carregados/);
-  assert.equal(section(renderer, 'diretriz').findAllByType('button').length, 0);
-  assert.ok(calls.some(url => /secao=diretriz/.test(url) && /offset=0/.test(url)));
+test('one list retains backend relevance across fronts, without fixed disease sections or a duplicate timeline', async t => {
+  const ordered = [
+    { ...item('guideline', 'Diretriz mais relevante'), secao: 'diretriz', relevance_order: 0, ano: 2025 },
+    { ...item('evidence', 'Recomendação específica', 'evidencia'), relevance_order: 1, ano: 2024 },
+    { ...item(disease.slug, disease.name, 'doenca'), relevance_order: 2 },
+    { ...item('image', 'Imagem complementar', 'galeria'), relevance_order: 3 },
+  ];
+  const { renderer, calls } = await mount(t, 'Estenose mitral', async url => url.startsWith('/drugs?')
+    ? { items: [] } : page(ordered, 4, null, { primary_disease: disease, supplementary_groups: [] }));
+  assert.deepEqual(titles(renderer), ordered.map(item => item.title));
+  assert.equal(renderer.root.findAllByProps({ 'aria-label': 'Lista de conteúdos por relevância' }).length, 1);
+  assert.match(nodeText(renderer.toJSON()), /Doença principal/);
+  assert.doesNotMatch(nodeText(renderer.toJSON()), /Timeline|Sequência clínica/);
+  assert.equal(calls.filter(url => url.startsWith('/relacionados/') || url.startsWith('/grafo/')).length, 0);
 });
 
-test('section and global pagination merge concurrently without duplicates and keep independent cursors', async t => {
-  const globalPage = deferred(), sectionPage = deferred();
-  const initial = { ...item('a', 'Diretriz inicial'), secao: 'diretriz' };
-  const shared = { ...item('b', 'Diretriz compartilhada'), secao: 'diretriz' };
-  const { renderer, calls } = await mount(t, 'tema', async url => {
+test('front and section filters request the full server set, preserve disease identity and travel with every page', async t => {
+  const { renderer, calls, location } = await mount(t, 'Estenose mitral', async url => {
     if (url.startsWith('/drugs?')) return { items: [] };
     const p = new URL(url, 'https://test.invalid').searchParams;
-    if (p.has('secao')) return p.get('offset') === '0' ? sectionPage.promise
-      : page([{ ...item('c', 'Diretriz final'), secao: 'diretriz' }], 3);
-    if (p.has('offset')) return globalPage.promise;
-    return page([initial], 4, 1, { por_secao: { diretriz: 3, exame: 1 } });
+    const extra = { primary_disease: disease, supplementary_groups: [] };
+    if (p.get('secao') === 'diretriz') return page([{ ...item('guidance', 'Consenso específico', 'estudo'), secao: 'diretriz' }], 1, null, extra);
+    if (p.get('frente') === 'estudo') return p.has('offset')
+      ? page([{ ...item('second-study', 'Segundo estudo', 'estudo'), relevance_order: 1 }], 2, null, extra)
+      : page([{ ...item('unseen-study', 'Estudo fora do primeiro lote', 'estudo'), relevance_order: 0 }], 2, 1, extra);
+    return page([item('doc', 'Documento inicial')], 120, 100, extra);
   });
-  await click(sectionMore(renderer, 'diretriz'));
+  await filter(renderer, 'Frente de conhecimento', 'estudo');
+  assert.deepEqual(titles(renderer), ['Estudo fora do primeiro lote']);
+  assert.match(nodeText(renderer.toJSON()), /1 de 2 resultados carregados/);
+  assert.equal(renderer.root.findByType('aside').children[0], disease.name);
   await click(more(renderer));
-  await act(async () => {
-    globalPage.resolve(page([shared, item('eco', 'Eco', 'exame')], 4, 3));
-    sectionPage.resolve(page([initial, shared], 3, 2, { por_secao: { diretriz: 3 } }));
-    await tick();
-  });
-  assert.equal(section(renderer, 'diretriz').findAllByType('a').length, 2);
-  assert.match(nodeText(section(renderer, 'exame')), /1 de 1 resultados carregados/);
-  assert.match(nodeText(section(renderer, 'diretriz')), /2 de 3 resultados carregados/);
-  await click(sectionMore(renderer, 'diretriz'));
-  assert.equal(section(renderer, 'diretriz').findAllByType('a').length, 3);
-  assert.ok(calls.some(url => url.includes('secao=diretriz') && url.includes('offset=2')));
-  assert.ok(calls.some(url => !url.includes('secao=') && url.includes('offset=1')));
-  assert.equal(more(renderer), undefined, 'all unique results already loaded through either path');
+  assert.deepEqual(titles(renderer), ['Estudo fora do primeiro lote', 'Segundo estudo']);
+  assert.ok(calls.some(url => url.includes('frente=estudo') && url.includes('offset=1')));
+  await filter(renderer, 'Seção editorial', 'diretriz');
+  assert.deepEqual(titles(renderer), ['Consenso específico']);
+  const p = new URLSearchParams(location().search);
+  assert.equal(p.get('q'), 'Estenose mitral');
+  assert.equal(p.get('frente'), 'estudo');
+  assert.equal(p.get('secao'), 'diretriz');
+  assert.ok(calls.some(url => url.includes('frente=estudo') && url.includes('secao=diretriz') && !url.includes('offset=')));
 });
 
-test('a stale section response cannot enter a new subject or unlock its pending section', async t => {
-  const old = deferred(), current = deferred();
-  const { renderer } = await mount(t, 'alfa', async url => {
+test('filter navigation aborts pending pages, rejects stale results and Back/Forward restores filters', async t => {
+  const old = deferred();
+  const { renderer, requests, go } = await mount(t, 'tema', async url => {
     if (url.startsWith('/drugs?')) return { items: [] };
     const p = new URL(url, 'https://test.invalid').searchParams;
-    if (p.has('secao')) return p.get('q') === 'alfa' ? old.promise : current.promise;
-    return page([item(`${p.get('q')}-eco`, 'Ecocardiografia', 'exame')], 2, 1,
-      { por_secao: { exame: 1, diretriz: 1 } });
+    if (p.has('offset')) return old.promise;
+    return p.get('frente') === 'exame' ? page([item('eco', 'Exame filtrado', 'exame')])
+      : page([item('initial', 'Resultado inicial')], 2, 1);
   });
-  await click(sectionMore(renderer, 'diretriz'));
-  await submit(renderer, 'beta');
-  assert.equal(Boolean(sectionMore(renderer, 'diretriz').props.disabled), false);
-  await click(sectionMore(renderer, 'diretriz'));
-  await act(async () => { old.resolve(page([{ ...item('old', 'Diretriz obsoleta'), secao: 'diretriz' }])); await tick(); });
-  assert.doesNotMatch(nodeText(renderer.toJSON()), /Diretriz obsoleta/);
-  assert.equal(sectionMore(renderer, 'diretriz').props.disabled, true);
-  await act(async () => { current.resolve(page([{ ...item('new', 'Diretriz beta'), secao: 'diretriz' }])); await tick(); });
-  assert.match(nodeText(section(renderer, 'diretriz')), /Diretriz beta/);
+  await click(more(renderer));
+  const pending = requests.find(({ url }) => url.includes('offset=1'));
+  await filter(renderer, 'Frente de conhecimento', 'exame');
+  assert.equal(pending.options.signal.aborted, true);
+  await act(async () => { old.resolve(page([item('stale', 'Resultado obsoleto')], 2)); await tick(); });
+  assert.deepEqual(titles(renderer), ['Exame filtrado']);
+  await go(-1);
+  assert.equal(renderer.root.findByProps({ 'aria-label': 'Frente de conhecimento' }).props.value, '');
+  assert.deepEqual(titles(renderer), ['Resultado inicial']);
+  await go(1);
+  assert.equal(renderer.root.findByProps({ 'aria-label': 'Frente de conhecimento' }).props.value, 'exame');
+  assert.deepEqual(titles(renderer), ['Exame filtrado']);
 });
 
-test('server sections take precedence and legacy underscore fronts retain their destinations', async t => {
-  const { renderer } = await mount(t, 'tema', async url => url.startsWith('/drugs?') ? { items: [] } : page([
-    { ...item('classificado', 'Título sem palavras de classificação'), secao: 'diretriz' },
-    item('caso', 'Tratamento em caso clínico', 'caso_clinico'),
-    item('paciente', 'Tratamento para pacientes', 'material_paciente'),
-    item('triagem', 'Protocolo de triagem', 'triagem_sintoma'),
-  ]));
-  assert.equal(section(renderer, 'diretriz').findByType('a').props.href, '/biblioteca/classificado');
-  assert.equal(section(renderer, 'caso_clinico').findByType('a').props.href, '/casos-clinicos/caso');
-  assert.equal(section(renderer, 'material_paciente').findByType('a').props.href, '/material-paciente/paciente');
-  assert.equal(section(renderer, 'triagem_sintoma').findByType('a').props.href, '/triagem-sintomas?slug=triagem');
+test('overlapping pages deduplicate by front and slug, restore backend order, and preserve every qualification', async t => {
+  const first = { ...item('same', 'Conduta original'), relevance_order: 1,
+    clinical_role: 'conditional', clinical_context: 'Somente quando há o critério clínico descrito.',
+    match_reasons: [{ source: 'title', description: 'Assunto no título.' }] };
+  const { renderer } = await mount(t, 'tema', async url => {
+    if (url.startsWith('/drugs?')) return { items: [] };
+    if (url.includes('offset=')) return page([
+      { ...first, clinical_role: 'comparison', clinical_context: 'Não aplicar à população excluída.',
+        match_reasons: [{ source: 'title', description: 'Assunto no título.' }, { source: 'body', description: 'População explicitamente qualificada.' }] },
+      { ...item('same', 'Outro tipo, mesmo slug', 'exame'), relevance_order: 2 },
+      { ...item('before', 'Anterior segundo a ordem do servidor'), relevance_order: 0 },
+    ], 3);
+    return page([first], 3, 1);
+  });
+  await click(more(renderer));
+  assert.deepEqual(titles(renderer), ['Anterior segundo a ordem do servidor', 'Conduta original', 'Outro tipo, mesmo slug']);
+  const text = nodeText(list(renderer));
+  for (const qualification of ['Somente quando há o critério clínico descrito.', 'Não aplicar à população excluída.', 'Relação condicionada ao contexto', 'Comparação ou diagnóstico diferencial', 'População explicitamente qualificada.']) assert.ok(text.includes(qualification));
+  assert.equal(text.split('Assunto no título.').length - 1, 1);
+  assert.equal(more(renderer), undefined);
 });
 
-test('a failed section request keeps its cursor and can retry without duplicate in-flight calls', async t => {
-  let requests = 0;
+test('complete clinical exclusions precede a truncated title and remain visible with the match reason', async t => {
+  // The production example had this geriatric recommendation in an EM query;
+  // the fixture exercises rendering, without asking the client to reinterpret it.
+  const title = 'Em idosos com fibrilação atrial, os anticoagulantes orais diretos são preferíveis…';
+  const context = 'Exceto em pacientes com estenose mitral moderada a grave ou prótese valvar mecânica. Não extrapolar a preferência por DOAC a essa população.';
+  const { renderer } = await mount(t, 'Estenose mitral', async url => url.startsWith('/drugs?') ? { items: [] }
+    : page([{ ...item('doac-preferencial-sobre-varfarina-idoso', title, 'evidencia'),
+      clinical_role: 'conditional', clinical_context: context, context_only: true,
+      relation_type: 'contraindicated_in', match_reasons: [{ source: 'clinical_context', description: 'A população pesquisada é uma exceção explícita.' }],
+    }], 1, null, { primary_disease: disease, supplementary_groups: [] }));
+  const text = nodeText(list(renderer));
+  assert.ok(text.indexOf(context) < text.indexOf(title));
+  assert.match(text, /Contraindicação relacionada/);
+  assert.match(text, /Mesmo tema clínico/);
+  assert.match(text, /A população pesquisada é uma exceção explícita/);
+  assert.equal(resultLinks(renderer).length, 1);
+});
+
+test('guide test suggestions are separate guided searches and never increase the published count', async t => {
+  const { renderer, calls } = await mount(t, 'Estenose mitral', async url => url.startsWith('/drugs?') ? { items: [] }
+    : page([item(disease.slug, disease.name, 'doenca')], 1, null, {
+      primary_disease: disease, supplementary_groups: [{ tipo: 'exame', rotulo: 'Exames', rota_lista: '/exames', itens: [{
+        slug: 'estenose-mitral--teste-estruturado-1', titulo: 'Ecocardiograma transtorácico com Doppler',
+        rota: '/exames?q=Ecocardiograma', context_only: false, relation_method: 'SpecialtyDisease.tests',
+      }] }],
+    }));
+  assert.equal(resultLinks(renderer).length, 1);
+  const guided = renderer.root.findByProps({ 'aria-label': 'Pesquisas orientadas pelo guia' });
+  assert.match(nodeText(guided), /não são verbetes adicionais/);
+  assert.match(nodeText(guided), /Pesquisa orientada/);
+  assert.equal(guided.findByType('a').props.href, '/exames?q=Ecocardiograma');
+  assert.match(nodeText(renderer.toJSON()), /1 de 1 resultados carregados/);
+  assert.equal(calls.filter(url => url.startsWith('/relacionados/')).length, 0);
+});
+
+test('an exact generic identity retains its complement and does not expand lexical neighbours', async t => {
+  const { renderer, calls } = await mount(t, 'Holter 24h', async url => {
+    if (url.startsWith('/drugs?')) return { items: [] };
+    if (url.startsWith('/relacionados/ecossistema?')) return { total: 1, grupos: [{ tipo: 'documento', itens: [{
+      slug: 'monitor', titulo: 'Monitorização complementar', rota: '/biblioteca/monitor',
+      clinical_role: 'conditional', clinical_context: 'Interpretar conforme a apresentação clínica.',
+    }] }] };
+    return page([item('holter-24h', 'Holter 24h', 'exame'), item('sincope', 'Síncope investigada por Holter')]);
+  });
+  assert.equal(resultLinks(renderer).length, 2);
+  const complement = renderer.root.findByProps({ 'aria-label': 'Conexões complementares do item' });
+  assert.match(nodeText(complement), /Monitorização complementar/);
+  assert.match(nodeText(complement), /Interpretar conforme a apresentação clínica/);
+  assert.equal(calls.filter(url => url.startsWith('/relacionados/ecossistema?')).length, 1);
+  assert.equal(calls.filter(url => url.startsWith('/grafo/')).length, 0);
+});
+
+test('a paginated duplicate keeps the clinical reason from an exact-identity complement', async t => {
+  const { renderer } = await mount(t, 'Holter 24h', async url => {
+    if (url.startsWith('/drugs?')) return { items: [] };
+    if (url.startsWith('/relacionados/ecossistema?')) return { total: 1, grupos: [{ tipo: 'documento', itens: [{
+      slug: 'monitor', titulo: 'Monitorização', rota: '/biblioteca/monitor',
+      clinical_context: 'Conexão depende da apresentação clínica.', match_reasons: [{ source: 'graph', description: 'Relação editorial revisada.' }],
+    }] }] };
+    return url.includes('offset=') ? page([item('monitor', 'Monitorização')], 2)
+      : page([item('holter-24h', 'Holter 24h', 'exame')], 2, 1);
+  });
+  await click(more(renderer));
+  assert.equal(renderer.root.findAllByType('a').filter(a => a.props.href === '/biblioteca/monitor').length, 1);
+  assert.match(nodeText(list(renderer)), /Conexão depende da apresentação clínica/);
+  assert.match(nodeText(list(renderer)), /Relação editorial revisada/);
+});
+
+test('failed filtered pagination retains its cursor and retries without simultaneous duplicate calls', async t => {
+  let attempts = 0;
   const { renderer, calls } = await mount(t, 'tema', async url => {
     if (url.startsWith('/drugs?')) return { items: [] };
-    if (url.includes('secao=')) {
-      if (++requests === 1) throw Error('temporary');
-      return page([{ ...item('d', 'Diretriz recuperada'), secao: 'diretriz' }]);
+    if (url.includes('offset=')) {
+      if (++attempts === 1) throw Error('temporary');
+      return page([{ ...item('end', 'Resultado recuperado'), relevance_order: 1 }], 2);
     }
-    return page([], 1, 0, { por_secao: { diretriz: 1 } });
-  });
-  const first = sectionMore(renderer, 'diretriz');
-  await act(async () => { first.props.onClick(); first.props.onClick(); await tick(); });
-  assert.equal(requests, 1);
-  assert.equal(section(renderer, 'diretriz').findAllByProps({ role: 'alert' }).length, 1);
-  await click(sectionMore(renderer, 'diretriz'));
-  assert.match(nodeText(section(renderer, 'diretriz')), /Diretriz recuperada/);
-  assert.equal(calls.filter(url => url.includes('secao=') && url.includes('offset=0')).length, 2);
+    return page([{ ...item('initial', 'Resultado inicial'), relevance_order: 0 }], 2, 1);
+  }, ['/busca?q=tema&frente=documento']);
+  await act(async () => { more(renderer).props.onClick(); more(renderer).props.onClick(); await tick(); });
+  assert.equal(attempts, 1);
+  assert.equal(renderer.root.findAllByProps({ role: 'alert' }).length, 1);
+  assert.deepEqual(titles(renderer), ['Resultado inicial']);
+  await click(more(renderer));
+  assert.deepEqual(titles(renderer), ['Resultado inicial', 'Resultado recuperado']);
+  assert.equal(calls.filter(url => url.includes('frente=documento') && url.includes('offset=1')).length, 2);
 });
 
+test('zero-result filters remain changeable and clearing them restores the complete server list', async t => {
+  const { renderer } = await mount(t, 'tema', async url => url.startsWith('/drugs?') ? { items: [] }
+    : url.includes('secao=') ? page([]) : page([item('all', 'Resultado sem filtro')]));
+  await filter(renderer, 'Seção editorial', 'diretriz');
+  assert.match(nodeText(renderer.toJSON()), /Nenhum conteúdo com estes filtros/);
+  const clear = renderer.root.findAllByType('button').find(button => nodeText(button) === 'Limpar filtros');
+  await click(clear);
+  assert.deepEqual(titles(renderer), ['Resultado sem filtro']);
+});
 
-test('editorial study and calculator documents retain Library routes and neutral titles stay neutral', async t => {
+test('editorial classification never changes a stored document, study or original source destination', async t => {
+  const sourceKey = 'a'.repeat(64);
   const { renderer } = await mount(t, 'tema', async url => url.startsWith('/drugs?') ? { items: [] } : page([
     { ...item('trial', 'Ensaio clínico', 'documento'), kind: 'estudo' },
-    { ...item('neutral', 'Miopatia: comentário sobre consenso', 'documento'), kind: 'documento' },
     { ...item('same-score', 'Documento de escore', 'documento'), kind: 'calculadora', secao: 'calculadora' },
     { ...item('same-score', 'Calculadora executável', 'calculadora'), kind: 'calculadora', secao: 'calculadora' },
+    { ...item('sepsis', 'Sepsis-3', 'estudo'), kind: 'consenso', secao: 'diretriz' },
+    item('case', 'Caso clínico', 'caso_clinico'), item('patient', 'Material para pacientes', 'material_paciente'),
+    item('triage', 'Triagem', 'triagem_sintoma'),
+    { ...item(sourceKey, 'Original armazenado', 'publicacao_original'), secao: 'publicacao_original' },
   ]));
-  assert.equal(section(renderer, 'estudo').findByType('a').props.href, '/biblioteca/trial');
-  assert.equal(section(renderer, 'geral').findByType('a').props.href, '/biblioteca/neutral');
-  assert.deepEqual(section(renderer, 'calculadora').findAllByType('a').map(a => a.props.href).sort(), ['/biblioteca/same-score', '/calculadoras/same-score']);
+  assert.deepEqual(resultLinks(renderer).map(a => a.props.href), [
+    '/biblioteca/trial', '/biblioteca/same-score', '/calculadoras/same-score', '/estudos/sepsis',
+    '/casos-clinicos/case', '/material-paciente/patient', '/triagem-sintomas?slug=triage', `/intelligence?fonte=${sourceKey}`,
+  ]);
+  assert.equal(titles(renderer).filter(title => title.includes('escore') || title.includes('executável')).length, 2);
 });
 
-
-test('formal ScientificStudy in guidance retains its studies URL and trial names do not promote it', async t => {
-  const { renderer } = await mount(t, 'tema', async url => url.startsWith('/drugs?') ? { items: [] } : page([
-    { ...item('sepsis', 'Sepsis-3', 'estudo'), kind: 'consenso' },
-    { ...item('consensus', 'CONSENSUS trial', 'estudo'), kind: 'ensaio_clinico' },
-  ]));
-  assert.equal(section(renderer, 'diretriz').findByType('a').props.href, '/estudos/sepsis');
-  assert.equal(section(renderer, 'estudo').findByType('a').props.href, '/estudos/consensus');
-});
-
-test('stored scientific originals have their own section, pagination and internal source route', async t => {
-  const sourceKey = 'a'.repeat(64);
-  const { renderer, calls } = await mount(t, 'publicacao', async url => {
+test('a scientific original shared with a generic complement appears once and retains its reason', async t => {
+  const original = item('a'.repeat(64), 'Original científico armazenado', 'publicacao_original');
+  const { renderer } = await mount(t, 'Holter 24h', async url => {
     if (url.startsWith('/drugs?')) return { items: [] };
-    if (url.includes('secao=publicacao_original')) return page([{ ...item(sourceKey, 'Original armazenado', 'publicacao_original'), kind: 'original científico', secao: 'publicacao_original' }]);
-    return page([], 1, 0, { por_secao: { publicacao_original: 1 } });
+    if (url.startsWith('/relacionados/ecossistema?')) return { total: 1, grupos: [{ tipo: 'publicacao_original', itens: [{
+      slug: original.slug, titulo: original.title, rota: `/intelligence?fonte=${original.slug}`,
+      clinical_context: 'Original utilizado na fundamentação desta investigação.',
+    }] }] };
+    return page([item('holter-24h', 'Holter 24h', 'exame'), original]);
   });
-  assert.match(nodeText(section(renderer, 'publicacao_original')), /Publicações originais/);
-  await click(sectionMore(renderer, 'publicacao_original'));
-  assert.equal(section(renderer, 'publicacao_original').findByType('a').props.href, `/intelligence?fonte=${sourceKey}`);
-  assert.ok(calls.some(url => url.includes('secao=publicacao_original')));
-  assert.doesNotMatch(nodeText(section(renderer, 'publicacao_original')), /Revisado|revisão clínica/);
+  assert.equal(renderer.root.findAllByType('a').filter(a => a.props.href === `/intelligence?fonte=${original.slug}`).length, 1);
+  assert.match(nodeText(list(renderer)), /Original utilizado na fundamentação desta investigação/);
 });
+
+for (const highlighted of [false, true]) {
+  test(`integral evidence and its context appear once, preserving negation after character 180 (${highlighted ? 'marked' : 'plain'} snippet)`, async t => {
+    const statement = 'Esta recomendação de anticoagulação considera o perfil clínico, a população do estudo, a segurança do tratamento e os critérios de elegibilidade descritos na publicação e deve ser interpretada com esses limites; não se aplica à estenose mitral moderada ou grave.';
+    assert.ok(statement.indexOf('não se aplica') > 180);
+    const context = 'A recomendação exclui pacientes com estenose mitral moderada ou grave.';
+    const distinctReason = 'Tag revisada: estenose mitral.';
+    const { renderer } = await mount(t, 'Estenose mitral', async url => url.startsWith('/drugs?') ? { items: [] }
+      : page([{ ...item('comparacao-integral', statement, 'evidencia'),
+        snippet: highlighted ? statement.replace('estenose mitral', '<mark>estenose mitral</mark>') : statement,
+        clinical_role: 'comparison', clinical_context: context,
+        match_reasons: [{ source: 'clinical_profile', description: context }, { source: 'reviewed_tag', description: distinctReason }],
+      }], 1, null, { primary_disease: disease, supplementary_groups: [] }));
+    assert.equal(nodeText(resultLinks(renderer)[0]), statement);
+    const text = nodeText(list(renderer));
+    assert.equal(text.split(statement).length - 1, 1, 'the complete statement is not repeated as a snippet');
+    assert.equal(text.split(context).length - 1, 1, 'the exact context is not repeated as a match reason');
+    assert.ok(text.includes(distinctReason), 'distinct match reasons remain visible');
+    assert.ok(text.indexOf(context) < text.indexOf(statement));
+  });
+}

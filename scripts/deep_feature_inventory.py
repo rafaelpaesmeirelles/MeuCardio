@@ -24,8 +24,15 @@ PAGE_IMPORT_RE = re.compile(r"(?:from\s+[\"']\./pages/|import\s*\(\s*[\"']\./pag
 CONTROL_RE = re.compile(r"<(?:button|a|input|select|textarea|form|NavLink|Link)\b")
 EVENT_RE = re.compile(r"\bon(?:Click|Submit|Change|Input|KeyDown|KeyUp|PointerDown|TouchStart)\s*=")
 API_LITERAL_RE = re.compile(
-    r"(?:api\.(?:get|post|put|patch|delete)\s*(?:<[^;()]+>)?\s*\(|fetch\s*\()\s*"
+    r"(?:api\s*\.(?:get|post|put|patch|delete)\s*(?:<[^;()]+>)?\s*\(|fetch\s*\()\s*"
     r"[\"'`]([^\"'`]+)"
+)
+API_REFERENCE_RE = re.compile(
+    r"(?:api\s*\.(?:get|post|put|patch|delete)\s*(?:<[^;()]+>)?\s*\(|fetch\s*\()\s*"
+    r"([A-Za-z_$][\w$]*)\s*(\(|(?=[,) ]))"
+)
+JS_TOKEN_RE = re.compile(
+    r'''"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`|//[^\n]*|/\*[\s\S]*?\*/'''
 )
 HANDLER_RE = re.compile(
     r"\b(?:async\s+)?function\s+[A-Za-z_$][\w$]*\s*\(|"
@@ -42,14 +49,97 @@ def read_many(paths: list[Path]) -> str:
         except UnicodeDecodeError: continue
     return "\n".join(chunks)
 
+def _without_comments(source: str) -> str:
+    # Keep offsets and string contents: URLs inside templates are data, while
+    # an API call in a comment is not a live reference.
+    return JS_TOKEN_RE.sub(lambda match: " " * len(match[0])
+                           if match[0].startswith(("//", "/*")) else match[0], source)
+
+def _body_end(source: str, start: int) -> int:
+    depth, position = 1, start + 1
+    while position < len(source):
+        token = JS_TOKEN_RE.match(source, position)
+        if token:
+            position = token.end()
+            continue
+        if source[position] == "{": depth += 1
+        elif source[position] == "}":
+            depth -= 1
+            if depth == 0: return position
+        position += 1
+    return len(source)
+
+def _scope_at(source: str, stop: int) -> tuple[int, ...]:
+    stack, position = [], 0
+    while position < stop:
+        token = JS_TOKEN_RE.match(source, position)
+        if token:
+            position = token.end()
+            continue
+        if source[position] == "{": stack.append(position)
+        elif source[position] == "}" and stack: stack.pop()
+        position += 1
+    return tuple(stack)
+
+def _visible_definitions(source: str, call, definitions):
+    call_scope = _scope_at(source, call.start())
+    visible = [(definition, _scope_at(source, definition.start())) for definition in definitions]
+    visible = [(definition, scope) for definition, scope in visible
+               if call_scope[:len(scope)] == scope]
+    nearest = max((len(scope) for _, scope in visible), default=-1)
+    return [definition for definition, scope in visible if len(scope) == nearest]
+
+def api_references(source: str) -> list[str]:
+    """Resolve literal URLs and small local URL builders at actual call sites.
+
+    No JavaScript is executed. Uncalled helpers and unrelated Link destinations
+    do not create API references. Local declarations must be in a lexical
+    ancestor of the call site; files are never concatenated for name resolution.
+    Unsupported dynamic expressions remain uncounted.
+    """
+    source = _without_comments(source)
+    references = API_LITERAL_RE.findall(source)
+    for call in API_REFERENCE_RE.finditer(source):
+        name, is_helper = call[1], call[2] == "("
+        if is_helper:
+            definitions = re.finditer(r"\bfunction\s+" + re.escape(name)
+                                      + r"\s*\([^)]*\)\s*(?::[^{}]+)?\{", source)
+            for definition in _visible_definitions(source, call, definitions):
+                body = source[definition.end():_body_end(source, definition.end() - 1)]
+                for returned in re.finditer(r"\breturn\s+", body):
+                    literal = JS_TOKEN_RE.match(body, returned.end())
+                    if literal and literal[0][1:].startswith(("/", "https://", "http://")):
+                        references.append(literal[0][1:-1])
+        else:
+            definitions = re.finditer(r"\b(?:const|let|var)\s+" + re.escape(name)
+                                      + r"\s*(?::[^=;\n]+)?=\s*", source)
+            for definition in _visible_definitions(source, call, definitions):
+                position = definition.end()
+                while position < len(source) and source[position] != ";":
+                    literal = JS_TOKEN_RE.match(source, position)
+                    if literal:
+                        if literal[0][1:].startswith(("/", "https://", "http://")):
+                            references.append(literal[0][1:-1])
+                        position = literal.end()
+                    else:
+                        position += 1
+    return references
+
+def canonical_api_path(reference: str) -> str:
+    # Query, cursor and local variable names are request variants, not separate
+    # endpoint paths. Normalize both compared trees with the same rule.
+    reference = re.sub(r"\$\{[^{}]*\}", "{param}", reference)
+    return reference.split("?", 1)[0].rstrip("&")
+
 def inventory(root: Path) -> dict[str, object]:
     backend = read_many(sources(root, "backend/app/**/*.py"))
     frontend_paths = sources(root, "frontend/src/**/*.tsx") + sources(root, "frontend/src/**/*.ts")
     frontend = read_many(frontend_paths)
     app_path = root / "frontend/src/App.tsx"
     app = app_path.read_text(encoding="utf-8") if app_path.is_file() else ""
-    api_references = API_LITERAL_RE.findall(frontend)
-    api_paths = sorted(set(match.rstrip("?&") for match in api_references))
+    references = [reference for path in frontend_paths
+                  for reference in api_references(path.read_text(encoding="utf-8"))]
+    api_paths = sorted(set(canonical_api_path(reference) for reference in references))
     routes = sorted(set(ROUTE_RE.findall(app)))
     pages = sorted(set(PAGE_IMPORT_RE.findall(app)))
     return {
@@ -59,7 +149,7 @@ def inventory(root: Path) -> dict[str, object]:
         "interactive_controls": len(CONTROL_RE.findall(frontend)),
         "event_bindings": len(EVENT_RE.findall(frontend)),
         "named_handlers": len(HANDLER_RE.findall(frontend)),
-        "api_calls": len(api_references),
+        "api_calls": len(references),
         "unique_api_paths": len(api_paths),
         "routes": routes,
         "api_paths": api_paths,

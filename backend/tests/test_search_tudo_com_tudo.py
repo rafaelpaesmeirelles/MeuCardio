@@ -595,7 +595,7 @@ Definição clínica que não pode ser apagada.
     )
 
 
-def test_doenca_principal_respeita_filtro_de_outra_frente(
+def test_doenca_principal_preserva_contexto_sem_atravessar_resultados_filtrados(
     client, db, criar_usuario,
 ):
     db.add(SpecialtyDisease(
@@ -604,7 +604,7 @@ def test_doenca_principal_respeita_filtro_de_outra_frente(
         aliases=["FA"],
         area="arritmias",
         category="taquiarritmia supraventricular",
-        summary="Definição que não pode atravessar um filtro explícito de frente.",
+        summary="Definição que identifica o assunto da consulta mesmo com filtros.",
         review_status="revisado",
         published=True,
     ))
@@ -617,7 +617,8 @@ def test_doenca_principal_respeita_filtro_de_outra_frente(
     )
 
     assert response.status_code == 200
-    assert response.json()["primary_disease"] is None
+    assert response.json()["primary_disease"]["slug"] == "fibrilacao-atrial-filtrada"
+    assert response.json()["results"] == [] and response.json()["total"] == 0
 
 
 def test_alias_ambiguo_nao_e_promovido_a_doenca_principal(client, db, criar_usuario):

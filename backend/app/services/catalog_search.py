@@ -65,9 +65,8 @@ CATALOG_SQL = """
   FROM lab_tests WHERE published = true
 
   UNION ALL
-  -- Evidências não possuem título editorial separado. O statement truncado é
-  -- apenas o rótulo da lista; a declaração completa permanece no snippet.
-  SELECT 'evidencia', slug::text, left(statement, 180)::text,
+  -- Preserve qualificadores e negações da declaração clínica integral.
+  SELECT 'evidencia', slug::text, statement::text,
          ('Classe ' || recommendation_class || ' · nível ' || evidence_level)::text,
          theme::text, NULL::text, year, coalesce(summary, statement, '')::text,
          search_vector,
@@ -248,12 +247,12 @@ def _search_sql(match_predicate: str, *, disease: bool = False, include_counts: 
     candidate_table = "selecionados" if paged else "filtrados"
     selection = f"SELECT * FROM {candidate_table}"
     ordering = "rank DESC, title, frente, slug"
-    if disease:
-        selection = f"""SELECT *, row_number() OVER (
-            PARTITION BY frente ORDER BY rank DESC,
-            array_position(CAST(:disease_links AS text[]), frente || ':' || slug), title, slug
-        ) AS front_position FROM {candidate_table}"""
-        ordering = "front_position, rank DESC, title, frente, slug"
+    if paged:
+        # Editorial priority crosses fronts and roles: an essential conditional
+        # treatment must not fall behind every direct image or incidental title.
+        ordering = "clinical_priority, rank DESC, title, frente, slug"
+        selection = f"""SELECT *, row_number() OVER (ORDER BY {ordering})
+            AS relevance_order FROM {candidate_table}"""
     section_ctes = (f""", classificados AS (
   SELECT *, {DOCUMENT_SECTION_SQL} AS secao FROM filtrados
 ), selecionados AS (
@@ -261,6 +260,54 @@ def _search_sql(match_predicate: str, *, disease: bool = False, include_counts: 
   WHERE CAST(:secao AS text) IS NULL OR secao = CAST(:secao AS text)
 )""" if paged else "")
     section_column = "secao, " if paged else ""
+    # Generic text retrieval can match body/theme alone. Clinical roles are
+    # exposed only after the API resolves a disease or drug identity.
+    clinical_columns = "clinical_role, clinical_context, " if disease else ""
+    relevance_columns = (f"""relevance_order, {clinical_columns}
+       match_reasons, relation_type, context_only, """ if paged else "")
+    default_role = "'direct'" if disease else "NULL"
+    reason_source = "identity" if disease else "text_search"
+    reason_description = ("Correspondência com a consulta no catálogo publicado." if disease else
+                          "Correspondência textual com a consulta; não estabelece relação clínica.")
+    metadata_columns = (f"""
+         coalesce((metadata->>'priority')::integer,
+           CASE WHEN metadata->>'clinical_role' = 'mention' THEN 800 ELSE 250 END
+         ) AS clinical_priority,
+         coalesce(metadata->>'clinical_role', {default_role}) AS clinical_role,
+         metadata->>'clinical_context' AS clinical_context,
+         coalesce(metadata->'match_reasons', jsonb_build_array(jsonb_build_object(
+           'source', '{reason_source}', 'description', '{reason_description}'
+         ))) AS match_reasons,
+         metadata->>'relation_type' AS relation_type,
+         coalesce((metadata->>'context_only')::boolean, false) AS context_only,""" if paged else "")
+    metadata_join = ("""CROSS JOIN LATERAL (SELECT
+      CAST(:candidate_metadata AS jsonb) -> (frente || ':' || slug) AS metadata
+    ) clinical_metadata""" if paged else "")
+    calculator_catalog = ("""
+UNION ALL
+SELECT 'calculadora', slug, title, kind, theme, NULL::text, NULL::integer,
+       snippet, to_tsvector('portuguese', coalesce(title, '') || ' ' || coalesce(snippet, '')),
+       coalesce(title, '') || ' ' || coalesce(snippet, '') || ' ' || slug
+FROM jsonb_to_recordset(CAST(:calculator_candidates AS jsonb)) AS calculators(
+  slug text, title text, kind text, theme text, snippet text
+)
+""" if paged else "")
+    actual_match = f"(frente = 'calculadora' OR ({match_predicate}))" if paged else match_predicate
+    # Disease aliases share one normalized identity per catalogue row. Without
+    # this fence PostgreSQL repeats unaccent/regexp_replace for every alias,
+    # including the complete evidence statement that must retain its qualifiers.
+    raw_identity = """' ' || regexp_replace(unaccent(lower(translate(
+      coalesce(title, '') || ' ' || slug, '₀₁₂₃₄₅₆₇₈₉', '0123456789'
+    ))), '[^a-z0-9]+', ' ', 'g') || ' '"""
+    identity_cte = (f""", identidades AS MATERIALIZED (
+      SELECT frente, slug, title, kind, theme, source_tier, ano, corpo,
+        CASE WHEN CAST(:systemic_hypertension AS boolean)
+          THEN regexp_replace({raw_identity}, 'hipertensao (arterial )?pulmonar', '', 'g')
+          ELSE {raw_identity} END AS identity_text
+      FROM achados
+      WHERE CAST(:frente AS text) IS NULL OR frente = CAST(:frente AS text)
+    )""" if disease else "")
+    match_source = "identidades" if disease else "achados"
     # Clinical RAG keeps its reviewed-source contract; acquired originals are
     # discoverable in the user catalog without becoming clinical guidance.
     original_filter = "" if paged else "AND frente <> 'publicacao_original'"
@@ -272,30 +319,34 @@ WITH cmed_atual AS (
   WHERE apresentacao.cmed_versao_id = (SELECT max(id) FROM cmed_versoes)
     AND apresentacao.drug_id IS NOT NULL
   GROUP BY apresentacao.drug_id
-), achados AS (
+), catalogo AS (
 {CATALOG_SQL}
-), consulta AS (
+), achados AS (
+SELECT * FROM catalogo
+{calculator_catalog}
+){identity_cte}, consulta AS (
   SELECT plainto_tsquery('portuguese', CAST(:q AS text)) AS tsq,
          '%' || CAST(:q_like AS text) || '%' AS trecho
 ), filtrados AS (
   SELECT frente, slug, title, kind, theme, source_tier, ano, corpo,
+         {metadata_columns}
          {rank_base}
            + CASE WHEN unaccent(lower(title)) = unaccent(lower(CAST(:q AS text))) THEN 3.0
                   WHEN unaccent(lower(replace(slug, '-', ' '))) = unaccent(lower(CAST(:q AS text))) THEN 4.0
                   WHEN unaccent(lower(title)) LIKE unaccent(lower(CAST(:q AS text))) || '%' THEN 1.2
                   WHEN unaccent(lower(replace(slug, '-', ' '))) LIKE unaccent(lower(CAST(:q AS text))) || '%' THEN 1.5
                   ELSE 0.0 END AS rank
-  FROM achados CROSS JOIN consulta
+  FROM {match_source} CROSS JOIN consulta {metadata_join}
   WHERE (CAST(:frente AS text) IS NULL OR frente = CAST(:frente AS text))
-    AND ({match_predicate})
+    AND ({actual_match})
     {original_filter}
 ){section_ctes}, ordenados AS (
   {selection}
 ), paginados AS (
   SELECT * FROM ordenados ORDER BY {ordering} LIMIT :limit OFFSET :offset
 ), resultados AS (
-SELECT {section_column}frente, slug, title, kind, theme, source_tier, ano,
-       ts_headline(
+SELECT {section_column}{relevance_columns}frente, slug, title, kind, theme, source_tier, ano,
+       {"CASE WHEN frente = 'evidencia' THEN title ELSE " if paged else ""}ts_headline(
                    'portuguese',
                    regexp_replace(
                      regexp_replace(
@@ -309,7 +360,7 @@ SELECT {section_column}frente, slug, title, kind, theme, source_tier, ano,
                      'gi'
                    ),
                    plainto_tsquery('portuguese', CAST(:q AS text)),
-                   'StartSel=<mark>,StopSel=</mark>,MaxFragments=2,FragmentDelimiter= … ') AS snippet,
+                   'StartSel=<mark>,StopSel=</mark>,MaxFragments=2,FragmentDelimiter= … '){" END" if paged else ""} AS snippet,
        rank
 FROM paginados
 ORDER BY {ordering}
@@ -319,20 +370,23 @@ ORDER BY {ordering}
         # A single candidate set supplies both totals and the page, including
         # empty/out-of-range pages. No second scan and no discarded page slots.
         query += """SELECT
-          coalesce((SELECT jsonb_agg(row_to_json(resultados)) FROM resultados), '[]'::jsonb) AS results,
+          coalesce((SELECT jsonb_agg(row_to_json(resultados) ORDER BY relevance_order) FROM resultados), '[]'::jsonb) AS results,
           coalesce((SELECT jsonb_object_agg(frente, total) FROM
             (SELECT frente, count(*) AS total FROM selecionados GROUP BY frente) counts
           ), '{}'::jsonb) AS por_frente,
           coalesce((SELECT jsonb_object_agg(secao, total) FROM
             (SELECT secao, count(*) AS total FROM selecionados GROUP BY secao) counts
           ), '{}'::jsonb) AS por_secao,
-          (SELECT count(*) FROM filtrados) AS matched_total
+          -- Calculator prefix matching must not suppress the catalogue's
+          -- literal fallback (e.g. CHA2D versus a CHA2DS2-VASc document).
+          (SELECT count(*) FROM filtrados WHERE frente <> 'calculadora') AS matched_total
         """
     else:
         query += "SELECT * FROM resultados"
     # Existing callers of PAGE/DISEASE SQL retain their unfiltered contract;
     # RAG's non-paged SQL is unchanged and has no additional bind parameter.
-    return text(query).bindparams(secao=None) if paged else text(query)
+    return (text(query).bindparams(secao=None, candidate_metadata="{}", calculator_candidates="[]")
+            if paged else text(query))
 
 
 def _count_sql(match_predicate: str):
@@ -393,14 +447,6 @@ DISEASE_MATCH = """
   OR (
     EXISTS (
       SELECT 1 FROM unnest(CAST(:disease_phrases AS text[])) AS phrase
-      CROSS JOIN LATERAL (SELECT
-        ' ' || regexp_replace(unaccent(lower(translate(
-          coalesce(title, '') || ' ' || slug, '₀₁₂₃₄₅₆₇₈₉', '0123456789'
-        ))), '[^a-z0-9]+', ' ', 'g') || ' ' AS raw_identity_text
-      ) identity_raw
-      CROSS JOIN LATERAL (SELECT CASE WHEN CAST(:systemic_hypertension AS boolean)
-        THEN regexp_replace(raw_identity_text, 'hipertensao (arterial )?pulmonar', '', 'g')
-        ELSE raw_identity_text END AS identity_text) identity
       WHERE position(' ' || phrase || ' ' IN CASE
         WHEN phrase = 'has' THEN replace(identity_text, 'has bled', '')
         WHEN phrase = 'ic' THEN regexp_replace(identity_text, 'ic (95|99|90)', '', 'g')
