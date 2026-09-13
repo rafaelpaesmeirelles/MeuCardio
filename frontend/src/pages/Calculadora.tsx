@@ -342,10 +342,16 @@ export default function Calculadora() {
               </button>
             </>
           ) : (
-            <FinalizarDocumentoGerado
-              key={geradoId} geradoId={geradoId} nomeArquivoBase={slug || "calculadora"}
-              provedores={null} onFechar={() => setMostrarDocumento(false)}
-            />
+            <>
+              <FinalizarDocumentoGerado
+                key={geradoId} geradoId={geradoId} nomeArquivoBase={slug || "calculadora"}
+                provedores={null} onFechar={() => setMostrarDocumento(false)}
+              />
+              <button className="botao botao--secundario" type="button" style={{ marginTop: "0.8rem" }}
+                onClick={() => invalidarDocumento("Dados mantidos. Gere um novo documento para escolher o método de assinatura da nova versão.")}>
+                Recriar baseado neste
+              </button>
+            </>
           )}
         </div>
       )}

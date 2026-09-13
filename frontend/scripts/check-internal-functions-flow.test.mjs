@@ -130,6 +130,30 @@ for (const [name, first, second] of [
   assert.match(calls.downloads[1], /gerados\/-902\/pdf\?metodo=MANUAL$/);
 });
 
+test('manual emission can be recreated with identical data and a different signature method', async t => {
+  const { renderer, calls } = await draft(t);
+  await change(renderer, 'patient_name', 'PACIENTE FICTÍCIO');
+  await change(renderer, 'contexto_clinico', 'CONTEXTO FICTÍCIO PRESERVADO');
+  await generate(renderer);
+  await act(async () => { await button(renderer, /Emitir sem assinatura digital e baixar/).props.onClick(); });
+  const original = structuredClone(generated[0]);
+  await act(async () => { button(renderer, /^Recriar baseado neste$/).props.onClick(); });
+  assert.equal(renderer.root.findAllByType(Finalize).length, 0);
+  await generate(renderer);
+  assert.equal(generated.length, 2);
+  assert.deepEqual(generated[0], original);
+  assert.deepEqual(generated[1].body, original.body);
+  assert.notEqual(generated[1].id, original.id);
+  const signature = renderer.root.findAllByType('select').find(s => s.findAllByType('option').some(o => o.props.value === 'A1_ARQUIVO'));
+  assert.equal(signature.props.disabled, false);
+  await act(async () => { signature.props.onChange({ target: { value: 'A1_ARQUIVO' } }); });
+  await act(async () => { await button(renderer, /Assinar digitalmente e baixar PDF/).props.onClick(); });
+  assert.deepEqual(calls.downloads, [
+    '/document-templates/gerados/-901/pdf?metodo=MANUAL',
+    '/document-templates/gerados/-902/pdf?metodo=A1_ARQUIVO',
+  ]);
+});
+
 test('changing a draft while generation is pending discards its obsolete response', async t => {
   const pending = deferred();
   const { renderer, state } = await draft(t);
