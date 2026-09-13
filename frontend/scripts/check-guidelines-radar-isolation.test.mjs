@@ -45,6 +45,7 @@ pageSource = pageSource.replace('"../components/EditorialDocumentList"', '"./Edi
 pageSource = pageSource.replace('import ScientificIntelligenceMonitor from "../components/ScientificIntelligenceMonitor";', 'const ScientificIntelligenceMonitor = () => null;');
 pageSource = pageSource.replace('import ScientificReadingAccess from "../components/ScientificReadingAccess";', 'const ScientificReadingAccess = () => null;');
 pageSource = pageSource.replace('import BotaoFavorito from "../components/BotaoFavorito";', 'const BotaoFavorito = () => null;');
+pageSource = pageSource.replace('import AlertasDiretrizesFavoritas from "../components/AlertasDiretrizesFavoritas";', 'const AlertasDiretrizesFavoritas = () => null;');
 pageSource = pageSource.replace('import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";', `
 const READ_TIMEOUT_MS = 15000;
 const api = { get: (...args) => globalThis.corviaSearchFixture.get(...args) };

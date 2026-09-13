@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Icone from "../components/Icone";
 import { useAuth } from "../lib/auth";
 import { CORVIA_LOGIN_THEME_KEY, type CorviaTheme } from "../lib/corviaTheme";
@@ -44,6 +44,7 @@ const ESPACOS = [
 
 export default function Entrar() {
   const { entrar } = useAuth();
+  const location = useLocation();
   const [temaPublico, setTemaPublico] = useState<TemaPublico>(temaPublicoInicial);
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -135,6 +136,8 @@ export default function Entrar() {
           <h2 id="login-acesso-titulo" tabIndex={-1}>Bem-vindo<br /> ao seu espaço.</h2>
           <p>Conhecimento, cuidado e rotina.<br />Conectados por você.</p>
         </header>
+
+        {location.state?.todasSessoesEncerradas === true && <p role="status" className="atelier-login__security">Todas as sessões da conta foram encerradas. Entre novamente para continuar.</p>}
 
         <form className="login-gateway__form" onSubmit={enviar} aria-busy={enviando}>
           <label className="login-gateway__field" htmlFor="email">

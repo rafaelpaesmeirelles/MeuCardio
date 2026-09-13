@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import CampoSenha from "../components/CampoSenha";
+import { EmailRecuperacao, SessoesConta } from "../components/AccountSecuritySettings";
 import WhatsAppIntegrationCard from "../components/WhatsAppIntegrationCard";
 import { api, ApiError, assetUrl, type Usuario } from "../lib/api";
 import { useAuth } from "../lib/auth";
@@ -1243,6 +1244,8 @@ export default function MinhaConta() {
           }}
         />
         <TrocarSenha />
+        {usuario && !usuario.investidor && <EmailRecuperacao key={usuario.id} loginEmail={usuario.email} />}
+        {usuario && <SessoesConta key={usuario.id} />}
         <Assinatura />
         <HistoricoCobrancas />
       </div>

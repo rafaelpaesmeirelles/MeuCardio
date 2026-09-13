@@ -7,6 +7,7 @@ import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
 import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
 import { nomeComTratamento } from "../lib/clinicalIdentity";
+import "../styles/clinical-desktop-nav.css";
 
 type NavItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; badge?: number; featured?: boolean };
 type NavSection = { title: string; items: NavItem[] };
@@ -180,7 +181,7 @@ function iniciais(nome?: string) {
 
 export default function ClinicalDesktopNav() {
   const { usuario } = useAuth();
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   const catalogRef = useRef<HTMLDetailsElement>(null);
   const pendentesAssinatura = usePrescriptionQueueBadge(usuario?.role === "admin");
   const currentSpace = spaceFor(pathname);
@@ -198,7 +199,7 @@ export default function ClinicalDesktopNav() {
 
   useEffect(() => {
     if (catalogRef.current) catalogRef.current.open = false;
-  }, [pathname]);
+  }, [pathname, search]);
 
   return (
     <aside className={`ccc-nav ccc-nav--reference ccc-nav--space-${currentSpace}`} aria-label={`Ferramentas do espaço ${meta.label}`}>
@@ -213,9 +214,18 @@ export default function ClinicalDesktopNav() {
         <NavLink to="/" end className={({ isActive }) => `ccc-nav__item ccc-nav__home${isActive ? " is-active" : ""}`}><IconeHoje /><span>Página inicial</span></NavLink>
         <div className="ccc-nav__context-actions">{contextual.map((item) => <Item compact key={`${currentSpace}-${item.to}`} item={item} />)}</div>
 
-        <details ref={catalogRef} className="ccc-nav__catalog">
+        <details ref={catalogRef} className="ccc-nav__catalog" onKeyDown={(event) => {
+          if (event.key === "Escape" && event.currentTarget.open) {
+            event.preventDefault();
+            event.stopPropagation();
+            event.currentTarget.open = false;
+            event.currentTarget.querySelector("summary")?.focus();
+          }
+        }}>
           <summary><Icone nome="mais" /><span>Todas as funções</span><Icone nome="chevron" /></summary>
-          <div className="ccc-nav__catalog-panel" role="dialog" aria-label="Todas as funções do CorVIA">
+          <div className="ccc-nav__catalog-panel" role="region" aria-label="Todas as funções do CorVIA" onClick={(event) => {
+            if (event.target instanceof Element && event.target.closest("a") && catalogRef.current) catalogRef.current.open = false;
+          }}>
             <header><div><small>CATÁLOGO COMPLETO</small><strong>Todas as funções</strong><span>O espaço muda; todas as ferramentas continuam acessíveis.</span></div></header>
             <div className="ccc-nav__catalog-grid">{sections.map((section) => <CatalogSection key={section.title} section={section} isAdmin={usuario?.role === "admin"} />)}</div>
           </div>

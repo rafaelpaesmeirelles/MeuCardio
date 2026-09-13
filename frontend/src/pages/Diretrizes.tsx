@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import BotaoFavorito from "../components/BotaoFavorito";
+import AlertasDiretrizesFavoritas from "../components/AlertasDiretrizesFavoritas";
 import EditorialDocumentList from "../components/EditorialDocumentList";
 import ScientificIntelligenceMonitor from "../components/ScientificIntelligenceMonitor";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
@@ -240,6 +241,7 @@ export default function Diretrizes({ intelligenceOnly = false }: { intelligenceO
       />
 
       {intelligenceOnly && <ScientificIntelligenceMonitor />}
+      {!intelligenceOnly && <AlertasDiretrizesFavoritas />}
       {erro && <Erro mensagem={erro} />}
       {erroLeitura && <div><Erro mensagem={erroLeitura} /><button type="button" className="botao botao--secundario" onClick={() => setTentativa(value => value + 1)}>Tentar novamente</button></div>}
 

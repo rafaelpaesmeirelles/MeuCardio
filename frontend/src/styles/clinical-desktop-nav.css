@@ -1,0 +1,109 @@
+/* Only ClinicalDesktopNav imports this sheet. Its selectors require the
+   fallback rail, mounted when VITE_CARDIOLOGY_SPACES_ENABLED=false. */
+@media (min-width: 901px) {
+  .ccc-nav.ccc-nav--reference {
+    --nav-catalog-paper: #071923;
+    --nav-catalog-soft: #0d2936;
+    --nav-catalog-text: var(--ccc-text, #f4fbfc);
+    --nav-catalog-muted: #a7bcc7;
+    --nav-catalog-line: #315266;
+    --nav-catalog-accent: var(--ccc-cyan, #38cad5);
+  }
+
+  html[data-corvia-theme="light"] .ccc-nav.ccc-nav--reference {
+    --nav-catalog-paper: #fffdfa;
+    --nav-catalog-soft: #edf3f5;
+    --nav-catalog-text: #24343a;
+    --nav-catalog-muted: #58666a;
+    --nav-catalog-line: #cbd6db;
+    --nav-catalog-accent: #16776d;
+  }
+
+  .ccc-nav.ccc-nav--reference .ccc-nav__space-head {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    color: var(--nav-catalog-text);
+    border-bottom: 1px solid var(--nav-catalog-line);
+  }
+  .ccc-nav.ccc-nav--reference .ccc-nav__space-head > span { flex: 0 0 20px; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__space-head > div { display: grid; gap: 2px; min-width: 0; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__space-head small { color: var(--nav-catalog-muted); font-size: 12px; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__space-head strong { color: var(--nav-catalog-text); font-size: 14px; }
+
+  .ccc-nav.ccc-nav--reference .ccc-nav__context-actions { display: grid; gap: 4px; margin-block: 8px 12px; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__scroll--context .ccc-nav__item {
+    min-height: 44px !important;
+    padding: 9px 8px !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .ccc-nav.ccc-nav--reference .ccc-nav__scroll--context .ccc-nav__item > span { min-width: 0; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__scroll--context .ccc-nav__item svg { width: 18px !important; height: 18px !important; }
+
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog { color: var(--nav-catalog-text); }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog > summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 9px 8px;
+    color: var(--nav-catalog-text);
+    background: var(--nav-catalog-soft);
+    border: 1px solid var(--nav-catalog-line);
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    list-style: none;
+    cursor: pointer;
+  }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog > summary::-webkit-details-marker { display: none; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog > summary > span { flex: 1; min-width: 0; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog > summary > svg { width: 18px; height: 18px; flex: 0 0 18px; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog[open] > summary > svg:last-child { transform: rotate(90deg); }
+  .ccc-nav.ccc-nav--reference .ccc-nav__scroll--context :is(a, summary):focus-visible {
+    outline: 3px solid var(--nav-catalog-accent);
+    outline-offset: 2px;
+  }
+
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-panel {
+    position: fixed;
+    inset: 16px auto auto calc(var(--ccc-nav-w) + 16px);
+    z-index: 1;
+    box-sizing: border-box;
+    width: min(960px, calc(100vw - var(--ccc-nav-w) - 32px));
+    max-height: calc(100dvh - 32px);
+    padding: 20px;
+    overflow: auto;
+    overscroll-behavior: contain;
+    color: var(--nav-catalog-text);
+    background: var(--nav-catalog-paper);
+    border: 1px solid var(--nav-catalog-line);
+    border-radius: 12px;
+    box-shadow: 0 16px 48px rgb(0 0 0 / .24);
+  }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-panel > header > div { display: grid; gap: 6px; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-panel > header { padding-bottom: 16px; border-bottom: 1px solid var(--nav-catalog-line); }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-panel > header strong { color: var(--nav-catalog-text); font-size: 20px; line-height: 1.3; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-panel > header :is(small, span) { color: var(--nav-catalog-muted); font-size: 14px; line-height: 1.5; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+    align-items: start;
+    gap: 24px 16px;
+    margin-top: 20px;
+  }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-section { min-width: 0; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-section h3 { margin: 0 0 8px; color: var(--nav-catalog-text); font-size: 15px; line-height: 1.4; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-section > div { display: grid; gap: 4px; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-panel .ccc-nav__item,
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-panel .ccc-nav__item svg { color: var(--nav-catalog-text) !important; }
+  .ccc-nav.ccc-nav--reference .ccc-nav__catalog-panel .ccc-nav__item:is(:hover, .is-active) {
+    color: var(--nav-catalog-text) !important;
+    background: var(--nav-catalog-soft) !important;
+  }
+}

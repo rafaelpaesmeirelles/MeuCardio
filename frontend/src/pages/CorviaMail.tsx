@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../lib/auth";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, READ_TIMEOUT_MS } from "../lib/api";
 import { apiEmail, ApiEmailError, tokenEmail } from "../lib/apiEmail";
 import Credito from "../components/Credito";
 import DicaContextual from "../components/DicaContextual";
@@ -405,13 +405,32 @@ export default function CorviaMail() {
   // caixa NUNCA foi ativada, "Entrar"/"Esqueci a senha" não servem pra nada
   // (não existe credencial pra usar ali) — só a aba "Assine já" faz
   // sentido, e ela nasce como a única visível.
-  const [contaAtiva, setContaAtiva] = useState<boolean | null>(null);
+  const usuarioId = usuario?.id ?? null;
+  const identidadeAtual = useRef(usuarioId);
+  identidadeAtual.current = carregando ? null : usuarioId;
+  const [tentativa, setTentativa] = useState(0);
+  const [consulta, setConsulta] = useState<{
+    usuarioId: number;
+    conta: ContaEmail | null;
+    erro: string;
+    sessaoExpirada?: boolean;
+  } | null>(null);
+  // Não renderiza dados/abas de outra identidade nem durante a troca de conta.
+  const consultaAtual = consulta?.usuarioId === usuarioId ? consulta : null;
+  const contaAtiva = consultaAtual?.conta?.ativa ?? null;
 
   useEffect(() => {
-    if (!usuario) return;
-    api.get<ContaEmail>("/email/conta")
+    setConsulta(null);
+    setAba("entrar");
+    if (usuarioId === null || carregando) return;
+    const controller = new AbortController();
+    const vigente = () => !controller.signal.aborted && identidadeAtual.current === usuarioId;
+    api.get<ContaEmail>("/email/conta", {
+      signal: controller.signal, timeoutMs: READ_TIMEOUT_MS, silencioso401: true,
+    })
       .then((c) => {
-        setContaAtiva(c.ativa);
+        if (!vigente()) return;
+        setConsulta({ usuarioId, conta: c, erro: "" });
         if (c.modo_demonstracao) {
           // Investidor: nunca há credencial de mailbox pra logar — pula
           // reto pro modo demonstração, sem passar por "Entrar".
@@ -422,12 +441,19 @@ export default function CorviaMail() {
           setAba("assinar");
         }
       })
-      .catch(() => setContaAtiva(false));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [usuario]);
+      .catch((e) => {
+        if (!vigente()) return;
+        setConsulta({
+          usuarioId, conta: null,
+          erro: e instanceof ApiError ? e.message : "Não foi possível consultar sua caixa de e-mail. Tente novamente.",
+          sessaoExpirada: e instanceof ApiError && e.status === 401,
+        });
+      });
+    return () => controller.abort();
+  }, [usuarioId, carregando, tentativa, navigate]);
 
-  if (carregando || (usuario && contaAtiva === null)) return <p className="eyebrow">Carregando…</p>;
-  if (usuario?.investidor) return <p className="eyebrow">Abrindo o modo demonstração…</p>;
+  if (carregando || (usuario && !consultaAtual)) return <p className="eyebrow" role="status">Carregando…</p>;
+  if (usuario && consultaAtual?.conta?.modo_demonstracao) return <p className="eyebrow">Abrindo o modo demonstração…</p>;
   if (usuario && contaAtiva && tokenEmail.get()) return <p className="eyebrow">Abrindo sua caixa…</p>;
 
   if (!usuario) {
@@ -469,6 +495,22 @@ export default function CorviaMail() {
           <Credito compacto />
         </section>
       </PublicCardiologyFrame>
+    );
+  }
+
+  if (consultaAtual?.erro) {
+    return (
+      <div className="pagina" style={{ maxWidth: "560px" }}>
+        <LogoCorviaMail tamanho="compacto" />
+        <section className="cartao" style={{ marginTop: "1rem" }} aria-labelledby="mail-consulta-titulo">
+          <h1 id="mail-consulta-titulo" style={{ fontSize: "1.25rem" }}>Não foi possível verificar sua caixa</h1>
+          <p role="alert">{consultaAtual.erro}</p>
+          <button className="botao" onClick={() => { setConsulta(null); setTentativa((valor) => valor + 1); }}>
+            Tentar novamente
+          </button>
+          {consultaAtual.sessaoExpirada && <p><Link to="/entrar">Entrar novamente no CorVIA</Link></p>}
+        </section>
+      </div>
     );
   }
 
